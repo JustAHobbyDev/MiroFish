@@ -1,0 +1,50 @@
+{
+  "rows": [
+    {
+      "name": "MU LEAPS on packaging duration",
+      "thesis": "The market is still underestimating how long advanced packaging remains a binding constraint for AI memory demand.",
+      "underlying": "MU",
+      "mispricing_type": "variance_underpricing",
+      "posture": "bullish_long_vol",
+      "preferred_expression": "leaps_call",
+      "time_horizon": "12-24m",
+      "linked_companies": ["MU", "TSM", "SK Hynix"],
+      "catalysts": [
+        "packaging capacity remaining tight through the next product cycle",
+        "continued AI capex guidance",
+        "HBM supply agreements extending further out"
+      ],
+      "invalidations": [
+        "packaging expansion clears faster than expected",
+        "AI demand slows materially",
+        "HBM pricing weakens without offsetting unit growth"
+      ],
+      "structural_reference": {
+        "top_severity_layer": "2.5D / CoWoS-class advanced packaging capacity",
+        "top_value_capture_layer": "HBM memory stack supply"
+      },
+      "mispricing_signals": {
+        "hiddenness": 4,
+        "recognition_gap": 4,
+        "catalyst_clarity": 3,
+        "propagation_asymmetry": 4,
+        "duration_mismatch": 5,
+        "evidence_quality": 4,
+        "crowding_inverse": 3,
+        "valuation_nonlinearity": 4
+      },
+      "options_expression_signals": {
+        "convexity_need": 4,
+        "tenor_alignment": 5,
+        "vol_expansion_potential": 4,
+        "downside_definedness": 4,
+        "liquidity_path": 4,
+        "implementation_simplicity": 4,
+        "catalyst_timing_specificity": 3
+      },
+      "notes": [
+        "Structural screen only; no live options surface used yet."
+      ]
+    }
+  ]
+}

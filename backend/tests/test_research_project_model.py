@@ -28,6 +28,10 @@ def test_research_project_manager_round_trip(tmp_path):
             project.research_project_id,
             [{"candidate_name": "CoWoS", "severity": {"score_0_to_100": 90.8}}],
         )
+        ResearchProjectManager.save_mispricing_candidates(
+            project.research_project_id,
+            [{"candidate_name": "MU LEAPS", "mispricing": {"score_0_to_100": 82.4}}],
+        )
         ResearchProjectManager.save_summary(
             project.research_project_id,
             {"top_severity_layer": "CoWoS-class packaging"},
@@ -40,7 +44,9 @@ def test_research_project_manager_round_trip(tmp_path):
         assert loaded.status == ResearchProjectStatus.REPORTED
         assert loaded.claims_audit_count == 1
         assert loaded.scorecard_count == 1
+        assert loaded.mispricing_candidate_count == 1
         assert artifacts["thesis_intake"]["theme"] == "HBM / advanced packaging"
+        assert artifacts["mispricing_candidates"][0]["candidate_name"] == "MU LEAPS"
         assert artifacts["summary"]["top_severity_layer"] == "CoWoS-class packaging"
 
         csv_path = (

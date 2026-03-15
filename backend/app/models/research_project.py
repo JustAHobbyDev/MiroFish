@@ -25,6 +25,7 @@ class ResearchProjectStatus(str, Enum):
     INTAKE_DEFINED = "intake_defined"
     CLAIMS_AUDITED = "claims_audited"
     SCORED = "scored"
+    MISPRICING_SCREENED = "mispricing_screened"
     REPORTED = "reported"
     FAILED = "failed"
 
@@ -43,6 +44,7 @@ class ResearchProject:
     thesis_intake: Dict[str, Any] = field(default_factory=dict)
     claims_audit_count: int = 0
     scorecard_count: int = 0
+    mispricing_candidate_count: int = 0
     tags: List[str] = field(default_factory=list)
     focus_areas: List[str] = field(default_factory=list)
     source_files: List[Dict[str, Any]] = field(default_factory=list)
@@ -64,6 +66,7 @@ class ResearchProject:
             "thesis_intake": self.thesis_intake,
             "claims_audit_count": self.claims_audit_count,
             "scorecard_count": self.scorecard_count,
+            "mispricing_candidate_count": self.mispricing_candidate_count,
             "tags": self.tags,
             "focus_areas": self.focus_areas,
             "source_files": self.source_files,
@@ -89,6 +92,7 @@ class ResearchProject:
             thesis_intake=data.get("thesis_intake", {}),
             claims_audit_count=data.get("claims_audit_count", 0),
             scorecard_count=data.get("scorecard_count", 0),
+            mispricing_candidate_count=data.get("mispricing_candidate_count", 0),
             tags=data.get("tags", []),
             focus_areas=data.get("focus_areas", []),
             source_files=data.get("source_files", []),
@@ -328,6 +332,35 @@ class ResearchProjectManager:
         return project
 
     @classmethod
+    def save_mispricing_candidates(
+        cls, research_project_id: str, mispricing_candidates: List[Dict[str, Any]]
+    ) -> ResearchProject:
+        project = cls.get_project(research_project_id)
+        if not project:
+            raise ValueError(f"research project not found: {research_project_id}")
+
+        with open(
+            cls._get_artifact_path(research_project_id, "mispricing_candidates.json"),
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(mispricing_candidates, f, ensure_ascii=False, indent=2)
+
+        project.mispricing_candidate_count = len(mispricing_candidates)
+        if mispricing_candidates:
+            project.status = ResearchProjectStatus.MISPRICING_SCREENED
+        cls.save_project(project)
+        return project
+
+    @classmethod
+    def get_mispricing_candidates(cls, research_project_id: str) -> List[Dict[str, Any]]:
+        path = cls._get_artifact_path(research_project_id, "mispricing_candidates.json")
+        if not os.path.exists(path):
+            return []
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    @classmethod
     def get_summary(cls, research_project_id: str) -> Dict[str, Any]:
         path = cls._get_artifact_path(research_project_id, "summary.json")
         if not os.path.exists(path):
@@ -346,5 +379,6 @@ class ResearchProjectManager:
             "thesis_intake": cls.get_thesis_intake(research_project_id) or {},
             "claims_audit": cls.get_claims_audit(research_project_id),
             "scorecards": cls.get_scorecards(research_project_id),
+            "mispricing_candidates": cls.get_mispricing_candidates(research_project_id),
             "summary": cls.get_summary(research_project_id),
         }

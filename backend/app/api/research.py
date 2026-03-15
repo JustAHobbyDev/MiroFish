@@ -11,7 +11,13 @@ from flask import jsonify, request
 
 from . import research_bp
 from ..models.research_project import ResearchProjectManager
-from ..services import build_research_ontology_spec
+from ..services import (
+    MispricingCandidate,
+    MispricingSignals,
+    OptionsExpressionSignals,
+    build_research_ontology_spec,
+    screen_candidates,
+)
 from ..utils.logger import get_logger
 
 logger = get_logger("mirofish.api.research")
@@ -237,6 +243,116 @@ def save_summary(research_project_id: str):
         }), 404
     except Exception as e:
         logger.error(f"保存 summary 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/mispricing-candidates", methods=["POST"])
+def save_mispricing_candidates(research_project_id: str):
+    """Persist already-scored or externally prepared mispricing candidates."""
+    try:
+        payload = request.get_json() or {}
+        candidates = payload.get("rows")
+        if candidates is None:
+            candidates = payload if isinstance(payload, list) else []
+        if not isinstance(candidates, list):
+            return jsonify({
+                "success": False,
+                "error": "mispricing candidates payload must be a list or {\"rows\": [...]}",
+            }), 400
+
+        project = ResearchProjectManager.save_mispricing_candidates(
+            research_project_id, candidates
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "mispricing_candidate_count": len(candidates),
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 mispricing candidates 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route(
+    "/project/<research_project_id>/mispricing-candidates/screen",
+    methods=["POST"],
+)
+def screen_mispricing_candidates(research_project_id: str):
+    """Score structured mispricing candidates and persist the results."""
+    try:
+        payload = request.get_json() or {}
+        rows = payload.get("rows")
+        if rows is None:
+            rows = payload if isinstance(payload, list) else []
+        if not isinstance(rows, list):
+            return jsonify({
+                "success": False,
+                "error": "screen payload must be a list or {\"rows\": [...]}",
+            }), 400
+
+        candidates = []
+        for row in rows:
+            candidates.append(
+                MispricingCandidate(
+                    name=row["name"],
+                    thesis=row["thesis"],
+                    underlying=row["underlying"],
+                    mispricing_type=row["mispricing_type"],
+                    posture=row["posture"],
+                    preferred_expression=row["preferred_expression"],
+                    time_horizon=row["time_horizon"],
+                    mispricing_signals=MispricingSignals(**row["mispricing_signals"]),
+                    options_expression_signals=OptionsExpressionSignals(
+                        **row["options_expression_signals"]
+                    ),
+                    linked_companies=row.get("linked_companies", []),
+                    catalysts=row.get("catalysts", []),
+                    invalidations=row.get("invalidations", []),
+                    structural_reference=row.get("structural_reference", {}),
+                    notes=row.get("notes", []),
+                )
+            )
+
+        results = [scorecard.to_dict() for scorecard in screen_candidates(candidates)]
+        project = ResearchProjectManager.save_mispricing_candidates(
+            research_project_id, results
+        )
+
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "rows": results,
+                "mispricing_candidate_count": len(results),
+            },
+        })
+    except KeyError as e:
+        return jsonify({
+            "success": False,
+            "error": f"missing required field: {str(e)}",
+        }), 400
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"筛选 mispricing candidates 失败: {str(e)}")
         return jsonify({
             "success": False,
             "error": str(e),
