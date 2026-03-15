@@ -1,0 +1,101 @@
+{
+  "generated_from": "public delayed Yahoo Jan 15 2027 chain captures",
+  "records": [
+    {
+      "symbol": "MP",
+      "snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo-2027-01-15.json",
+      "source_page": "https://finance.yahoo.com/quote/MP/options/?date=1799971200",
+      "expiry": "2027-01-15",
+      "reference_spot": {
+        "spot": 63.013,
+        "note": "Recent public delayed reference from ADVFN snapshot noted in the live mispricing memo."
+      },
+      "chain_stats": {
+        "contract_count": 39,
+        "liquid_contract_count": 33,
+        "median_implied_volatility": 0.7518,
+        "median_relative_spread": 0.0839,
+        "max_open_interest": 10067,
+        "max_open_interest_contract": "MP270115C00075000"
+      },
+      "candidate_call": {
+        "option_symbol": "MP270115C00070000",
+        "strike": 70,
+        "target_strike": 69.314,
+        "reference_spot": 63.013,
+        "bid": 10.55,
+        "ask": 11.1,
+        "mid": 10.825,
+        "open_interest": 7947,
+        "volume": 28,
+        "implied_volatility": 0.7214,
+        "relative_spread": 0.0508
+      },
+      "comparison_score": 72.313
+    },
+    {
+      "symbol": "MU",
+      "snapshot_path": "research/options-data/2026-03-15/MU-chain-yahoo-2027-01-15.json",
+      "source_page": "https://finance.yahoo.com/quote/MU/options/?date=1799971200",
+      "expiry": "2027-01-15",
+      "reference_spot": {
+        "spot": 401.1,
+        "note": "Recent public delayed reference from ADVFN snapshot noted in the live mispricing memo."
+      },
+      "chain_stats": {
+        "contract_count": 105,
+        "liquid_contract_count": 98,
+        "median_implied_volatility": 0.7527,
+        "median_relative_spread": 0.0215,
+        "max_open_interest": 4520,
+        "max_open_interest_contract": "MU270115C00090000"
+      },
+      "candidate_call": {
+        "option_symbol": "MU270115C00440000",
+        "strike": 440,
+        "target_strike": 441.21,
+        "reference_spot": 401.1,
+        "bid": 106.05,
+        "ask": 109.1,
+        "mid": 107.575,
+        "open_interest": 892,
+        "volume": 2,
+        "implied_volatility": 0.7356,
+        "relative_spread": 0.0284
+      },
+      "comparison_score": 77.218
+    },
+    {
+      "symbol": "VRT",
+      "snapshot_path": "research/options-data/2026-03-15/VRT-chain-yahoo-2027-01-15.json",
+      "source_page": "https://finance.yahoo.com/quote/VRT/options/?date=1799971200",
+      "expiry": "2027-01-15",
+      "reference_spot": {
+        "spot": 243.0,
+        "note": "Recent public delayed reference from ADVFN snapshot noted in the live mispricing memo."
+      },
+      "chain_stats": {
+        "contract_count": 65,
+        "liquid_contract_count": 48,
+        "median_implied_volatility": 0.7419,
+        "median_relative_spread": 0.0293,
+        "max_open_interest": 20537,
+        "max_open_interest_contract": "VRT270115C00230000"
+      },
+      "candidate_call": {
+        "option_symbol": "VRT270115C00270000",
+        "strike": 270,
+        "target_strike": 267.3,
+        "reference_spot": 243.0,
+        "bid": 56.55,
+        "ask": 59.3,
+        "mid": 57.925,
+        "open_interest": 1040,
+        "volume": 2,
+        "implied_volatility": 0.6647,
+        "relative_spread": 0.0475
+      },
+      "comparison_score": 77.9
+    }
+  ]
+}
