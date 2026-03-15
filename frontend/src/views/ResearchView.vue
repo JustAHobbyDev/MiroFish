@@ -10,11 +10,27 @@
       </div>
 
       <div class="header-right">
+        <div class="language-switcher">
+          <button
+            class="lang-btn"
+            :class="{ active: locale === 'en' }"
+            @click="setLocale('en')"
+          >
+            EN
+          </button>
+          <button
+            class="lang-btn"
+            :class="{ active: locale === 'zh' }"
+            @click="setLocale('zh')"
+          >
+            中文
+          </button>
+        </div>
         <div class="ontology-chip" v-if="ontology">
           {{ ontology.ontology_name }} / {{ ontology.ontology_version }}
         </div>
         <button class="ghost-btn" @click="refreshProjects" :disabled="projectListLoading">
-          {{ projectListLoading ? 'Refreshing...' : 'Refresh Projects' }}
+          {{ projectListLoading ? t('research.refreshingProjects') : t('research.refreshProjects') }}
         </button>
       </div>
     </header>
@@ -343,6 +359,7 @@
 <script setup>
 import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import { useI18n } from '../i18n'
 import {
   createResearchProject,
   deleteResearchProject,
@@ -357,6 +374,7 @@ import {
 
 const route = useRoute()
 const router = useRouter()
+const { locale, setLocale, t } = useI18n()
 
 const ontology = ref(null)
 const projects = ref([])
@@ -836,6 +854,26 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: #6f655b;
+}
+
+.lang-btn.active {
+  background: #111111;
+  color: #ffffff;
 }
 
 .ontology-chip {
