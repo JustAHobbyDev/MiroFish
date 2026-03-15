@@ -149,6 +149,13 @@ The next proof step should be narrower:
 3. Define one concrete candidate expression per name.
 4. Track those expressions forward against thesis milestones.
 
+## TODO
+
+- Investigate official Schwab API access first for options-chain retrieval.
+- If Schwab API access is unavailable or too slow, build a Playwright-assisted manual capture workflow for research-only chain snapshots.
+- Keep any Playwright workflow user-mediated and limited to export/capture, not auto-trading.
+- Normalize captured chain data into dated local JSON or CSV artifacts for `MP`, `MU`, and `VRT`.
+
 ## Source Links
 
 - `MU` AlphaQuery 30-day IV mean: https://www.alphaquery.com/stock/MU/volatility-option-statistics/30-day/iv-mean

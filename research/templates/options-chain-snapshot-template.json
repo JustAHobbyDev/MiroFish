@@ -1,0 +1,47 @@
+{
+  "capture_meta": {
+    "provider": "schwab-playwright-manual",
+    "captured_at": "2026-03-15T20:30:00Z",
+    "underlying": "MU",
+    "underlying_price": 401.1,
+    "currency": "USD",
+    "capture_mode": "user_mediated_playwright",
+    "source_page": "https://client.schwab.com/app/trade/options",
+    "notes": [
+      "User authenticated manually in browser session.",
+      "Snapshot taken from visible options chain page."
+    ]
+  },
+  "expiries": [
+    {
+      "expiry": "2026-06-19",
+      "days_to_expiry": 96,
+      "contracts": [
+        {
+          "option_symbol": "MU260619C00410000",
+          "underlying": "MU",
+          "expiry": "2026-06-19",
+          "right": "call",
+          "strike": 410.0,
+          "bid": 10.15,
+          "ask": 10.5,
+          "last": 10.32,
+          "mark": 10.33,
+          "volume": 248,
+          "open_interest": 913,
+          "implied_volatility": 0.758,
+          "delta": 0.47,
+          "gamma": 0.02,
+          "theta": -0.09,
+          "vega": 0.41,
+          "in_the_money": false,
+          "raw_row": {
+            "bid_text": "10.15",
+            "ask_text": "10.50",
+            "oi_text": "913"
+          }
+        }
+      ]
+    }
+  ]
+}
