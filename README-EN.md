@@ -142,6 +142,31 @@ npm run setup
 
 # Install Python dependencies (backend, auto-creates virtual environment)
 npm run setup:backend
+
+# Install backend dev dependencies (includes pytest, etc.)
+npm run setup:backend:dev
+```
+
+#### 2.1 Local uv Cache
+
+Backend dependencies now use a project-local uv cache at:
+
+- `.uv-cache/`
+
+This keeps backend dependency management:
+
+- independent from any global uv cache path
+- isolated from other repositories
+- easier to clean up or move with the project
+
+If you want to invoke `uv` directly, use the project wrapper so the cache stays local:
+
+```bash
+# Equivalent to running uv sync inside backend/, but pinned to .uv-cache/ at repo root
+bash ./scripts/backend-uv.sh sync
+
+# Run any uv command through the same local cache
+bash ./scripts/backend-uv.sh run python run.py
 ```
 
 #### 3. Start Services
@@ -160,6 +185,7 @@ npm run dev
 ```bash
 npm run backend   # Start backend only
 npm run frontend  # Start frontend only
+npm run backend:test  # Run backend pytest after installing dev dependencies
 ```
 
 ### Option 2: Docker Deployment
@@ -175,6 +201,25 @@ docker compose up -d
 Reads `.env` from root directory by default, maps ports `3000 (frontend) / 5001 (backend)`
 
 > Mirror address for faster pulling is provided as comments in `docker-compose.yml`, replace if needed.
+
+## 🔄 Syncing This Fork
+
+This repository is configured with:
+
+- `origin`: your fork
+- `upstream`: the source repository (`666ghj/MiroFish`)
+
+Recommended habit:
+
+```bash
+# Fetch upstream and show whether you are ahead / behind
+npm run sync:upstream
+
+# Fast-forward to upstream/main when your branch has no local commits
+npm run sync:upstream:ff
+```
+
+If the branch has diverged, resolve it explicitly with `git merge upstream/main` or `git rebase upstream/main`.
 
 ## 📬 Join the Conversation
 

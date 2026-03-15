@@ -142,6 +142,31 @@ npm run setup
 
 # 安装 Python 依赖（后端，自动创建虚拟环境）
 npm run setup:backend
+
+# 安装后端开发依赖（包含 pytest 等）
+npm run setup:backend:dev
+```
+
+#### 2.1 uv 本地缓存
+
+后端依赖现在默认使用项目根目录下的本地 uv 缓存：
+
+- `.uv-cache/`
+
+这意味着：
+
+- 不依赖全局 uv 缓存路径
+- 不同项目之间不会混用缓存状态
+- 清理或迁移项目环境更直接
+
+如果你想直接使用 uv，也建议通过项目脚本包装器执行：
+
+```bash
+# 等价于在 backend/ 下执行 uv sync，但缓存固定到项目根目录 .uv-cache/
+bash ./scripts/backend-uv.sh sync
+
+# 运行任意 uv 命令
+bash ./scripts/backend-uv.sh run python run.py
 ```
 
 #### 3. 启动服务
@@ -160,6 +185,7 @@ npm run dev
 ```bash
 npm run backend   # 仅启动后端
 npm run frontend  # 仅启动前端
+npm run backend:test  # 运行后端 pytest（需先安装 dev 依赖）
 ```
 
 ### 二、Docker 部署
@@ -175,6 +201,25 @@ docker compose up -d
 默认会读取根目录下的 `.env`，并映射端口 `3000（前端）/5001（后端）`
 
 > 在 `docker-compose.yml` 中已通过注释提供加速镜像地址，可按需替换
+
+## 🔄 Fork 同步
+
+当前仓库已配置：
+
+- `origin`：你的 fork
+- `upstream`：源仓库（`666ghj/MiroFish`）
+
+建议养成的同步习惯：
+
+```bash
+# 拉取 upstream 最新状态，并查看当前分支相对 upstream/main 的领先/落后情况
+npm run sync:upstream
+
+# 当当前分支没有本地独有提交时，直接快进到 upstream/main
+npm run sync:upstream:ff
+```
+
+如果已经发生分叉，请显式使用 `git merge upstream/main` 或 `git rebase upstream/main` 处理。
 
 ## 📬 更多交流
 

@@ -19,6 +19,7 @@ __pycache__/
 .venv/
 venv/
 ENV/
+.uv-cache/
 .eggs/
 *.egg-info/
 dist/
