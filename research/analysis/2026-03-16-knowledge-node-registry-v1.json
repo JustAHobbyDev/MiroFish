@@ -1,0 +1,432 @@
+{
+  "registry_version": "v1",
+  "generated_at": "2026-03-16T17:41:25.107108+00:00",
+  "node_type_scope": [
+    "Underlying"
+  ],
+  "row_count": 6,
+  "rows": [
+    {
+      "knowledge_node_id": "kn_underlying_mp",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:MP",
+      "canonical_name": "MP",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "MP",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_mp",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "MP",
+          "local_attributes": {}
+        },
+        {
+          "parse_name": "mp_magnet_sovereignty",
+          "structural_parse_path": "research/analysis/2026-03-16-mp-magnet-sovereignty-structural-parse-v1.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 96.1,
+          "local_entity_id": "ent_publiccompany_mp",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "MP",
+          "local_attributes": {
+            "ticker": "MP",
+            "exposure_type": "pure_play"
+          }
+        }
+      ],
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_mp_robotics_supply_chain_sintered_ndfeb_magnet_manufacturing",
+          "candidate_name": "MP anchor promoted structural pick on Robotics Supply Chain",
+          "market_theme": "Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+          "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86,
+          "company_role": "anchor",
+          "linked_process_layers": [
+            "Sintered NdFeB Magnet Manufacturing",
+            "Neodymium Processing"
+          ],
+          "linked_components": [],
+          "linked_materials": [
+            "Neodymium"
+          ],
+          "market_miss_alignment_score_0_to_100": 96.88,
+          "value_capture_alignment_score_0_to_100": 96.88,
+          "expression_readiness_score_0_to_100": 93.75,
+          "decomposition_confidence": 94.53,
+          "final_expression": "shares",
+          "ranking_score": 81.43,
+          "pick_score": 68.94
+        },
+        {
+          "pointer_id": "ptr_mp_rare_earth_magnet_sovereignty_sintered_ndfeb_magnet_manufacturing",
+          "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+          "market_theme": "Rare Earth Magnet Sovereignty",
+          "thesis": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+          "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+          "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 96.1,
+          "company_role": null,
+          "linked_process_layers": [],
+          "linked_components": [],
+          "linked_materials": [],
+          "market_miss_alignment_score_0_to_100": null,
+          "value_capture_alignment_score_0_to_100": null,
+          "expression_readiness_score_0_to_100": null,
+          "decomposition_confidence": null,
+          "final_expression": "leaps_call",
+          "ranking_score": 74.33,
+          "pick_score": 61.72
+        }
+      ],
+      "linked_themes": [
+        "Robotics Supply Chain",
+        "Rare Earth Magnet Sovereignty"
+      ],
+      "linked_process_layers": [
+        "Sintered NdFeB Magnet Manufacturing",
+        "Neodymium Processing"
+      ],
+      "linked_components": [],
+      "linked_materials": [
+        "Neodymium"
+      ],
+      "expression_views": [
+        "shares",
+        "leaps_call"
+      ],
+      "aggregate_view": {
+        "pointer_count": 2,
+        "parse_binding_count": 2,
+        "theme_count": 2,
+        "themes": [
+          "Rare Earth Magnet Sovereignty",
+          "Robotics Supply Chain"
+        ],
+        "expression_views": [
+          "leaps_call",
+          "shares"
+        ],
+        "max_ranking_score": 81.43,
+        "max_promotion_score_0_to_100": 96.1,
+        "top_pointer_id": "ptr_mp_robotics_supply_chain_sintered_ndfeb_magnet_manufacturing"
+      }
+    },
+    {
+      "knowledge_node_id": "kn_underlying_uuuu",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:UUUU",
+      "canonical_name": "UUUU",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "UUUU",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_uuuu",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "UUUU",
+          "local_attributes": {}
+        }
+      ],
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_uuuu_robotics_supply_chain_neodymium_processing",
+          "candidate_name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+          "market_theme": "Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "bottleneck_layer": "Neodymium Processing",
+          "value_capture_layer": "Neodymium Processing",
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86,
+          "company_role": "satellite",
+          "linked_process_layers": [
+            "Neodymium Processing"
+          ],
+          "linked_components": [],
+          "linked_materials": [
+            "Neodymium"
+          ],
+          "market_miss_alignment_score_0_to_100": 93.75,
+          "value_capture_alignment_score_0_to_100": 81.25,
+          "expression_readiness_score_0_to_100": 81.25,
+          "decomposition_confidence": 84.38,
+          "final_expression": "shares",
+          "ranking_score": 79.95,
+          "pick_score": 67.46
+        }
+      ],
+      "linked_themes": [
+        "Robotics Supply Chain"
+      ],
+      "linked_process_layers": [
+        "Neodymium Processing"
+      ],
+      "linked_components": [],
+      "linked_materials": [
+        "Neodymium"
+      ],
+      "expression_views": [
+        "shares"
+      ],
+      "aggregate_view": {
+        "pointer_count": 1,
+        "parse_binding_count": 1,
+        "theme_count": 1,
+        "themes": [
+          "Robotics Supply Chain"
+        ],
+        "expression_views": [
+          "shares"
+        ],
+        "max_ranking_score": 79.95,
+        "max_promotion_score_0_to_100": 94.86,
+        "top_pointer_id": "ptr_uuuu_robotics_supply_chain_neodymium_processing"
+      }
+    },
+    {
+      "knowledge_node_id": "kn_underlying_neo",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:NEO",
+      "canonical_name": "NEO",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "NEO",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_neo",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "NEO",
+          "local_attributes": {}
+        }
+      ],
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_neo_robotics_supply_chain_ndfeb_magnetic_powders_and_alloys",
+          "candidate_name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+          "market_theme": "Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "bottleneck_layer": "NdFeB Magnetic Powders and Alloys",
+          "value_capture_layer": "NdFeB Magnetic Powders and Alloys",
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86,
+          "company_role": "satellite",
+          "linked_process_layers": [
+            "NdFeB Magnetic Powders and Alloys"
+          ],
+          "linked_components": [],
+          "linked_materials": [],
+          "market_miss_alignment_score_0_to_100": 81.25,
+          "value_capture_alignment_score_0_to_100": 58.33,
+          "expression_readiness_score_0_to_100": 81.25,
+          "decomposition_confidence": 72.4,
+          "final_expression": "shares",
+          "ranking_score": 78.17,
+          "pick_score": 65.68
+        }
+      ],
+      "linked_themes": [
+        "Robotics Supply Chain"
+      ],
+      "linked_process_layers": [
+        "NdFeB Magnetic Powders and Alloys"
+      ],
+      "linked_components": [],
+      "linked_materials": [],
+      "expression_views": [
+        "shares"
+      ],
+      "aggregate_view": {
+        "pointer_count": 1,
+        "parse_binding_count": 1,
+        "theme_count": 1,
+        "themes": [
+          "Robotics Supply Chain"
+        ],
+        "expression_views": [
+          "shares"
+        ],
+        "max_ranking_score": 78.17,
+        "max_promotion_score_0_to_100": 94.86,
+        "top_pointer_id": "ptr_neo_robotics_supply_chain_ndfeb_magnetic_powders_and_alloys"
+      }
+    },
+    {
+      "knowledge_node_id": "kn_underlying_sive",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:SIVE",
+      "canonical_name": "SIVE",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "SIVE",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "sive_photonics_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-sive-photonics-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 92.89,
+          "local_entity_id": "ent_publiccompany_sive",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "SIVE",
+          "local_attributes": {}
+        }
+      ],
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_sive_cpo_silicon_photonics_laser_supply_inp_dfb_laser_production",
+          "candidate_name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+          "market_theme": "CPO / Silicon Photonics Laser Supply",
+          "thesis": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+          "bottleneck_layer": "InP DFB Laser Production",
+          "value_capture_layer": "InP DFB Laser Production",
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 92.89,
+          "company_role": null,
+          "linked_process_layers": [],
+          "linked_components": [],
+          "linked_materials": [],
+          "market_miss_alignment_score_0_to_100": null,
+          "value_capture_alignment_score_0_to_100": null,
+          "expression_readiness_score_0_to_100": null,
+          "decomposition_confidence": null,
+          "final_expression": "shares",
+          "ranking_score": 70.56,
+          "pick_score": 58.27
+        }
+      ],
+      "linked_themes": [
+        "CPO / Silicon Photonics Laser Supply"
+      ],
+      "linked_process_layers": [
+        "InP DFB Laser Production"
+      ],
+      "linked_components": [],
+      "linked_materials": [],
+      "expression_views": [
+        "shares"
+      ],
+      "aggregate_view": {
+        "pointer_count": 1,
+        "parse_binding_count": 1,
+        "theme_count": 1,
+        "themes": [
+          "CPO / Silicon Photonics Laser Supply"
+        ],
+        "expression_views": [
+          "shares"
+        ],
+        "max_ranking_score": 70.56,
+        "max_promotion_score_0_to_100": 92.89,
+        "top_pointer_id": "ptr_sive_cpo_silicon_photonics_laser_supply_inp_dfb_laser_production"
+      }
+    },
+    {
+      "knowledge_node_id": "kn_underlying_ayar_labs",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:AYAR LABS",
+      "canonical_name": "AYAR LABS",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "AYAR LABS",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "sive_photonics_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-sive-photonics-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 92.89,
+          "local_entity_id": "ent_publiccompany_ayar_labs",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "Ayar Labs",
+          "local_attributes": {}
+        }
+      ],
+      "thesis_pointers": [],
+      "linked_themes": [],
+      "linked_process_layers": [],
+      "linked_components": [],
+      "linked_materials": [],
+      "expression_views": [],
+      "aggregate_view": {
+        "pointer_count": 0,
+        "parse_binding_count": 1,
+        "theme_count": 0,
+        "themes": [],
+        "expression_views": [],
+        "max_ranking_score": null,
+        "max_promotion_score_0_to_100": null,
+        "top_pointer_id": null
+      }
+    },
+    {
+      "knowledge_node_id": "kn_underlying_poet",
+      "node_type": "Underlying",
+      "canonical_key": "ticker:POET",
+      "canonical_name": "POET",
+      "aliases": [],
+      "resolution_basis": {
+        "ticker": "POET",
+        "resolver_version": "v1"
+      },
+      "parse_entity_bindings": [
+        {
+          "parse_name": "sive_photonics_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-sive-photonics-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 92.89,
+          "local_entity_id": "ent_publiccompany_poet",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "POET",
+          "local_attributes": {}
+        }
+      ],
+      "thesis_pointers": [],
+      "linked_themes": [],
+      "linked_process_layers": [],
+      "linked_components": [],
+      "linked_materials": [],
+      "expression_views": [],
+      "aggregate_view": {
+        "pointer_count": 0,
+        "parse_binding_count": 1,
+        "theme_count": 0,
+        "themes": [],
+        "expression_views": [],
+        "max_ranking_score": null,
+        "max_promotion_score_0_to_100": null,
+        "top_pointer_id": null
+      }
+    }
+  ],
+  "summary": {
+    "underlying_count": 6,
+    "multi_pointer_underlyings": [
+      "MP"
+    ]
+  }
+}
