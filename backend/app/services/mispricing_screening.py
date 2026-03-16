@@ -16,14 +16,26 @@ from .chokepoint_scoring import classify_score, validate_weights
 
 
 DEFAULT_MISPRICING_WEIGHTS: Dict[str, float] = {
-    "hiddenness": 0.18,
+    "hiddenness": 0.22,
     "recognition_gap": 0.18,
-    "catalyst_clarity": 0.16,
+    "catalyst_clarity": 0.12,
     "propagation_asymmetry": 0.14,
     "duration_mismatch": 0.12,
     "evidence_quality": 0.10,
     "crowding_inverse": 0.06,
     "valuation_nonlinearity": 0.06,
+}
+
+
+AGGRESSIVE_MISPRICING_WEIGHTS: Dict[str, float] = {
+    "hiddenness": 0.24,
+    "recognition_gap": 0.16,
+    "catalyst_clarity": 0.10,
+    "propagation_asymmetry": 0.14,
+    "duration_mismatch": 0.10,
+    "evidence_quality": 0.08,
+    "crowding_inverse": 0.09,
+    "valuation_nonlinearity": 0.09,
 }
 
 DEFAULT_OPTIONS_FIT_WEIGHTS: Dict[str, float] = {

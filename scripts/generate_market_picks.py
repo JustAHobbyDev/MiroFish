@@ -23,14 +23,17 @@ from typing import Any, Dict, List
 
 
 DEFAULT_STOCK_FIT_WEIGHTS: Dict[str, float] = {
-    "market_accessibility": 0.16,
-    "implementation_simplicity": 0.18,
+    "market_accessibility": 0.10,
+    "implementation_simplicity": 0.12,
     "balance_sheet_resilience": 0.14,
-    "dilution_risk_inverse": 0.14,
-    "thesis_linearity": 0.14,
-    "duration_tolerance": 0.14,
-    "listing_quality": 0.10,
+    "dilution_risk_inverse": 0.12,
+    "thesis_linearity": 0.18,
+    "duration_tolerance": 0.22,
+    "listing_quality": 0.12,
 }
+
+
+ASYMMETRY_SIGNAL_KEYS = ("hiddenness", "crowding_inverse", "valuation_nonlinearity")
 
 
 def _load_screening_module():
@@ -109,26 +112,39 @@ def _score_stock_fit(signals: StockExpressionSignals) -> Dict[str, Any]:
 
 
 def _choose_expression(mispricing_score: float, options_fit_score: float, stock_fit_score: float) -> str:
-    if mispricing_score < 65:
+    if mispricing_score < 60:
         return "reject"
-    if stock_fit_score >= 60 and stock_fit_score >= options_fit_score + 8:
+    if stock_fit_score >= 60 and stock_fit_score >= options_fit_score + 10:
         return "shares"
-    if options_fit_score >= 60 and options_fit_score >= stock_fit_score + 8:
+    if options_fit_score >= 58 and options_fit_score >= stock_fit_score + 6:
         return "leaps_call"
     if stock_fit_score >= 60 and options_fit_score < 60:
         return "shares"
-    if options_fit_score >= 60 and stock_fit_score < 60:
+    if options_fit_score >= 58 and stock_fit_score < 60:
         return "leaps_call"
+    if stock_fit_score >= 60 and options_fit_score >= 58:
+        return "shares" if stock_fit_score >= options_fit_score else "leaps_call"
     return "reject"
 
 
-def _pick_score(mispricing_score: float, stock_fit_score: float, options_fit_score: float, expression: str) -> float:
+def _asymmetry_bonus(signal_map: Dict[str, float]) -> float:
+    normalized = sum(_clamp_signal(signal_map.get(key, 0.0)) for key in ASYMMETRY_SIGNAL_KEYS) / (5.0 * len(ASYMMETRY_SIGNAL_KEYS))
+    return round(normalized * 8.0, 2)
+
+
+def _pick_score(
+    mispricing_score: float,
+    stock_fit_score: float,
+    options_fit_score: float,
+    expression: str,
+    asymmetry_bonus: float,
+) -> float:
     expression_bonus = {
-        "shares": 4.0,
-        "leaps_call": 2.0,
-        "reject": -12.0,
+        "shares": 2.0,
+        "leaps_call": 3.0,
+        "reject": -8.0,
     }[expression]
-    return round((mispricing_score * 0.55) + (max(stock_fit_score, options_fit_score) * 0.35) + expression_bonus, 2)
+    return round((mispricing_score * 0.58) + (max(stock_fit_score, options_fit_score) * 0.28) + asymmetry_bonus + expression_bonus, 2)
 
 
 def main() -> int:
@@ -138,6 +154,7 @@ def main() -> int:
     args = parser.parse_args()
 
     module = _load_screening_module()
+    aggressive_mispricing_weights = getattr(module, "AGGRESSIVE_MISPRICING_WEIGHTS", None)
     rows = _load_rows(Path(args.input_json))
 
     ranked = []
@@ -165,12 +182,16 @@ def main() -> int:
             },
             notes=row.get("notes", []),
         )
-        mispricing_scorecard = module.score_mispricing_candidate(candidate)
+        mispricing_scorecard = module.score_mispricing_candidate(
+            candidate,
+            mispricing_weights=aggressive_mispricing_weights,
+        )
         stock_fit = _score_stock_fit(StockExpressionSignals(**row["stock_expression_signals"]))
         mispricing_score = mispricing_scorecard.mispricing.score_0_to_100
         options_fit_score = mispricing_scorecard.options_fit.score_0_to_100
         stock_fit_score = stock_fit["score_0_to_100"]
         final_expression = _choose_expression(mispricing_score, options_fit_score, stock_fit_score)
+        asymmetry_bonus = _asymmetry_bonus(row["mispricing_signals"])
         ranked.append(
             {
                 "name": row["name"],
@@ -186,7 +207,14 @@ def main() -> int:
                 "options_fit": mispricing_scorecard.options_fit.to_dict(),
                 "stock_fit": stock_fit,
                 "final_expression": final_expression,
-                "pick_score": _pick_score(mispricing_score, stock_fit_score, options_fit_score, final_expression),
+                "asymmetry_bonus": asymmetry_bonus,
+                "pick_score": _pick_score(
+                    mispricing_score,
+                    stock_fit_score,
+                    options_fit_score,
+                    final_expression,
+                    asymmetry_bonus,
+                ),
             }
         )
 
