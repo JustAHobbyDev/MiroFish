@@ -21,6 +21,10 @@ The point is to answer:
 This schema is designed for structural information arbitrage, not generic note
 taking.
 
+Companion ranking surface:
+
+- [Source Priority Matrix v1](/home/d/codex/MiroFish/docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md)
+
 ## Design goals
 
 The schema must:
