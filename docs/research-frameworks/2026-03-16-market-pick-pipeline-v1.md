@@ -43,13 +43,29 @@ The output is not an ontology or a memo. The output is a pick list with one of:
 3. `Score expression quality`
    Score both:
    - `options_fit`
+   - `leaps_bias`
    - `stock_fit`
+
+   `options_fit` answers:
+   - are options sensible in principle?
+
+   `leaps_bias` answers:
+   - are long-dated calls actually attractive enough to beat the default stock choice?
+
+   The current LEAPS-bias inputs are:
+   - iv cheapness
+   - surface staleness
+   - pre-expiration repricing potential
+   - stock-vs-call convexity advantage
+   - long-dated liquidity quality
 
 4. `Force expression choice`
    The current rules are:
    - reject if mispricing score is too low
-   - choose `shares` if stock fit clearly beats options fit
-   - choose `leaps_call` if options fit clearly beats stock fit
+   - choose `leaps_call` only if both:
+     - options fit is strong
+     - LEAPS bias is strong
+   - otherwise choose `shares` if stock fit remains stronger
    - otherwise reject
 
 5. `Rank picks`

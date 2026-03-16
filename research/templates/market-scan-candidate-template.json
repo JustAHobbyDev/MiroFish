@@ -40,6 +40,13 @@
         "downstream_valuation_gap": 4.5,
         "microcap_rerating_potential": 5.0
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 1.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,

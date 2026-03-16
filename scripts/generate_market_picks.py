@@ -32,6 +32,14 @@ DEFAULT_STOCK_FIT_WEIGHTS: Dict[str, float] = {
     "listing_quality": 0.12,
 }
 
+DEFAULT_LEAPS_BIAS_WEIGHTS: Dict[str, float] = {
+    "iv_cheapness": 0.24,
+    "surface_staleness": 0.18,
+    "pre_expiration_repricing_potential": 0.24,
+    "stock_vs_call_convexity_advantage": 0.24,
+    "long_dated_liquidity_quality": 0.10,
+}
+
 
 ASYMMETRY_SIGNAL_WEIGHTS: Dict[str, float] = {
     "hiddenness": 0.18,
@@ -100,6 +108,18 @@ class StockExpressionSignals:
         return {key: _clamp_signal(value) for key, value in asdict(self).items()}
 
 
+@dataclass
+class LeapsBiasSignals:
+    iv_cheapness: float
+    surface_staleness: float
+    pre_expiration_repricing_potential: float
+    stock_vs_call_convexity_advantage: float
+    long_dated_liquidity_quality: float
+
+    def normalized(self) -> Dict[str, float]:
+        return {key: _clamp_signal(value) for key, value in asdict(self).items()}
+
+
 def _score_stock_fit(signals: StockExpressionSignals) -> Dict[str, Any]:
     normalized_weights = _validate_weights(DEFAULT_STOCK_FIT_WEIGHTS)
     signal_map = signals.normalized()
@@ -118,19 +138,56 @@ def _score_stock_fit(signals: StockExpressionSignals) -> Dict[str, Any]:
     }
 
 
-def _choose_expression(mispricing_score: float, options_fit_score: float, stock_fit_score: float) -> str:
+def _score_leaps_bias(signals: LeapsBiasSignals) -> Dict[str, Any]:
+    normalized_weights = _validate_weights(DEFAULT_LEAPS_BIAS_WEIGHTS)
+    signal_map = signals.normalized()
+    weighted = {
+        key: signal_map[key] * normalized_weights[key]
+        for key in normalized_weights
+    }
+    score = (sum(weighted.values()) / 5.0) * 100.0
+    strongest = sorted(weighted.items(), key=lambda item: item[1], reverse=True)[:3]
+    weakest = list(reversed(sorted(weighted.items(), key=lambda item: item[1])[:2]))
+    return {
+        "score_0_to_100": round(score, 2),
+        "weighted_signals": {key: round(value, 4) for key, value in weighted.items()},
+        "strongest_drivers": [(key, round(value, 4)) for key, value in strongest],
+        "weakest_drivers": [(key, round(value, 4)) for key, value in weakest],
+    }
+
+
+def _choose_expression(
+    mispricing_score: float,
+    options_fit_score: float,
+    stock_fit_score: float,
+    leaps_bias_score: float,
+) -> str:
     if mispricing_score < 60:
         return "reject"
+    if (
+        mispricing_score >= 80
+        and options_fit_score >= 68
+        and leaps_bias_score >= 78
+    ):
+        return "leaps_call"
+    if (
+        options_fit_score >= 62
+        and leaps_bias_score >= 68
+        and ((options_fit_score * 0.45) + (leaps_bias_score * 0.55)) >= stock_fit_score - 1
+    ):
+        return "leaps_call"
     if stock_fit_score >= 60 and stock_fit_score >= options_fit_score + 10:
         return "shares"
-    if options_fit_score >= 58 and options_fit_score >= stock_fit_score + 6:
+    if options_fit_score >= 58 and leaps_bias_score >= 60 and options_fit_score >= stock_fit_score + 6:
         return "leaps_call"
     if stock_fit_score >= 60 and options_fit_score < 60:
         return "shares"
-    if options_fit_score >= 58 and stock_fit_score < 60:
+    if options_fit_score >= 58 and leaps_bias_score >= 60 and stock_fit_score < 60:
         return "leaps_call"
     if stock_fit_score >= 60 and options_fit_score >= 58:
-        return "shares" if stock_fit_score >= options_fit_score else "leaps_call"
+        if leaps_bias_score >= 70 and options_fit_score >= stock_fit_score - 4:
+            return "leaps_call"
+        return "shares"
     return "reject"
 
 
@@ -152,6 +209,7 @@ def _pick_score(
     mispricing_score: float,
     stock_fit_score: float,
     options_fit_score: float,
+    leaps_bias_score: float,
     expression: str,
     asymmetry_bonus: float,
 ) -> float:
@@ -160,7 +218,8 @@ def _pick_score(
         "leaps_call": 3.0,
         "reject": -8.0,
     }[expression]
-    return round((mispricing_score * 0.58) + (max(stock_fit_score, options_fit_score) * 0.28) + asymmetry_bonus + expression_bonus, 2)
+    expression_strength = max(stock_fit_score, (options_fit_score * 0.55) + (leaps_bias_score * 0.45))
+    return round((mispricing_score * 0.54) + (expression_strength * 0.26) + asymmetry_bonus + expression_bonus, 2)
 
 
 def main() -> int:
@@ -203,10 +262,30 @@ def main() -> int:
             mispricing_weights=aggressive_mispricing_weights,
         )
         stock_fit = _score_stock_fit(StockExpressionSignals(**row["stock_expression_signals"]))
+        leaps_bias = _score_leaps_bias(
+            LeapsBiasSignals(
+                **row.get(
+                    "leaps_bias_signals",
+                    {
+                        "iv_cheapness": 0.0,
+                        "surface_staleness": 0.0,
+                        "pre_expiration_repricing_potential": 0.0,
+                        "stock_vs_call_convexity_advantage": 0.0,
+                        "long_dated_liquidity_quality": 0.0,
+                    },
+                )
+            )
+        )
         mispricing_score = mispricing_scorecard.mispricing.score_0_to_100
         options_fit_score = mispricing_scorecard.options_fit.score_0_to_100
         stock_fit_score = stock_fit["score_0_to_100"]
-        final_expression = _choose_expression(mispricing_score, options_fit_score, stock_fit_score)
+        leaps_bias_score = leaps_bias["score_0_to_100"]
+        final_expression = _choose_expression(
+            mispricing_score,
+            options_fit_score,
+            stock_fit_score,
+            leaps_bias_score,
+        )
         asymmetry_bonus = _asymmetry_bonus(
             row["mispricing_signals"],
             row.get("asymmetry_signals"),
@@ -225,6 +304,7 @@ def main() -> int:
                 "asymmetry_signals": row.get("asymmetry_signals", {}),
                 "mispricing": mispricing_scorecard.mispricing.to_dict(),
                 "options_fit": mispricing_scorecard.options_fit.to_dict(),
+                "leaps_bias": leaps_bias,
                 "stock_fit": stock_fit,
                 "final_expression": final_expression,
                 "asymmetry_bonus": asymmetry_bonus,
@@ -232,6 +312,7 @@ def main() -> int:
                     mispricing_score,
                     stock_fit_score,
                     options_fit_score,
+                    leaps_bias_score,
                     final_expression,
                     asymmetry_bonus,
                 ),

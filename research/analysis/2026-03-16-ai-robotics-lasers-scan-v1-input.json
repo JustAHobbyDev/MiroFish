@@ -40,6 +40,13 @@
         "downstream_valuation_gap": 5.0,
         "microcap_rerating_potential": 5.0
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 0.5,
+        "surface_staleness": 0.5,
+        "pre_expiration_repricing_potential": 0.5,
+        "stock_vs_call_convexity_advantage": 0.5,
+        "long_dated_liquidity_quality": 0.5
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,
@@ -97,6 +104,13 @@
         "ecosystem_centrality": 4.0,
         "downstream_valuation_gap": 3.5,
         "microcap_rerating_potential": 3.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 4.0,
+        "surface_staleness": 4.0,
+        "pre_expiration_repricing_potential": 4.5,
+        "stock_vs_call_convexity_advantage": 4.0,
+        "long_dated_liquidity_quality": 4.0
       },
       "options_expression_signals": {
         "convexity_need": 3.5,
@@ -156,6 +170,13 @@
         "downstream_valuation_gap": 2.0,
         "microcap_rerating_potential": 1.5
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 2.5,
+        "surface_staleness": 2.0,
+        "pre_expiration_repricing_potential": 2.5,
+        "stock_vs_call_convexity_advantage": 1.5,
+        "long_dated_liquidity_quality": 3.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.5,
         "tenor_alignment": 3.0,
@@ -213,6 +234,13 @@
         "ecosystem_centrality": 2.0,
         "downstream_valuation_gap": 1.5,
         "microcap_rerating_potential": 1.5
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.5,
+        "surface_staleness": 1.5,
+        "pre_expiration_repricing_potential": 1.5,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 2.0
       },
       "options_expression_signals": {
         "convexity_need": 2.0,
@@ -272,6 +300,13 @@
         "downstream_valuation_gap": 1.5,
         "microcap_rerating_potential": 1.0
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.5,
+        "stock_vs_call_convexity_advantage": 0.5,
+        "long_dated_liquidity_quality": 4.0
+      },
       "options_expression_signals": {
         "convexity_need": 3.0,
         "tenor_alignment": 4.0,
@@ -330,6 +365,13 @@
         "downstream_valuation_gap": 2.0,
         "microcap_rerating_potential": 2.0
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.5,
+        "surface_staleness": 1.5,
+        "pre_expiration_repricing_potential": 2.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 2.5
+      },
       "options_expression_signals": {
         "convexity_need": 2.5,
         "tenor_alignment": 3.0,
@@ -385,6 +427,13 @@
         "ecosystem_centrality": 3.0,
         "downstream_valuation_gap": 1.0,
         "microcap_rerating_potential": 1.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.5,
+        "stock_vs_call_convexity_advantage": 0.5,
+        "long_dated_liquidity_quality": 4.0
       },
       "options_expression_signals": {
         "convexity_need": 2.5,
@@ -443,6 +492,13 @@
         "downstream_valuation_gap": 4.0,
         "microcap_rerating_potential": 4.5
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 0.5,
+        "surface_staleness": 0.5,
+        "pre_expiration_repricing_potential": 0.5,
+        "stock_vs_call_convexity_advantage": 0.5,
+        "long_dated_liquidity_quality": 0.5
+      },
       "options_expression_signals": {
         "convexity_need": 1.5,
         "tenor_alignment": 2.0,
@@ -500,6 +556,13 @@
         "downstream_valuation_gap": 2.0,
         "microcap_rerating_potential": 1.5
       },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.5,
+        "surface_staleness": 1.5,
+        "pre_expiration_repricing_potential": 2.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 2.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,
@@ -554,6 +617,13 @@
         "ecosystem_centrality": 2.5,
         "downstream_valuation_gap": 1.5,
         "microcap_rerating_potential": 1.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 0.5,
+        "long_dated_liquidity_quality": 2.0
       },
       "options_expression_signals": {
         "convexity_need": 2.0,
