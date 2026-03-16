@@ -35,6 +35,11 @@
         "crowding_inverse": 4.5,
         "valuation_nonlinearity": 4.0
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.5,
+        "downstream_valuation_gap": 5.0,
+        "microcap_rerating_potential": 5.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,
@@ -87,6 +92,11 @@
         "evidence_quality": 4.5,
         "crowding_inverse": 3.5,
         "valuation_nonlinearity": 4.0
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 3.5,
+        "microcap_rerating_potential": 3.0
       },
       "options_expression_signals": {
         "convexity_need": 3.5,
@@ -141,6 +151,11 @@
         "crowding_inverse": 2.5,
         "valuation_nonlinearity": 3.0
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.5,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 1.5
+      },
       "options_expression_signals": {
         "convexity_need": 2.5,
         "tenor_alignment": 3.0,
@@ -193,6 +208,11 @@
         "evidence_quality": 4.5,
         "crowding_inverse": 3.5,
         "valuation_nonlinearity": 3.0
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 2.0,
+        "downstream_valuation_gap": 1.5,
+        "microcap_rerating_potential": 1.5
       },
       "options_expression_signals": {
         "convexity_need": 2.0,
@@ -247,6 +267,11 @@
         "crowding_inverse": 2.5,
         "valuation_nonlinearity": 3.5
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 2.5,
+        "downstream_valuation_gap": 1.5,
+        "microcap_rerating_potential": 1.0
+      },
       "options_expression_signals": {
         "convexity_need": 3.0,
         "tenor_alignment": 4.0,
@@ -300,6 +325,11 @@
         "crowding_inverse": 3.0,
         "valuation_nonlinearity": 3.5
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.5,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 2.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.5,
         "tenor_alignment": 3.0,
@@ -350,6 +380,11 @@
         "evidence_quality": 4.5,
         "crowding_inverse": 1.5,
         "valuation_nonlinearity": 2.5
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 1.0,
+        "microcap_rerating_potential": 1.0
       },
       "options_expression_signals": {
         "convexity_need": 2.5,
@@ -403,6 +438,11 @@
         "crowding_inverse": 3.5,
         "valuation_nonlinearity": 4.0
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 4.0,
+        "microcap_rerating_potential": 4.5
+      },
       "options_expression_signals": {
         "convexity_need": 1.5,
         "tenor_alignment": 2.0,
@@ -455,6 +495,11 @@
         "crowding_inverse": 3.5,
         "valuation_nonlinearity": 3.0
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 1.5
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,
@@ -504,6 +549,11 @@
         "evidence_quality": 4.0,
         "crowding_inverse": 2.5,
         "valuation_nonlinearity": 2.5
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 2.5,
+        "downstream_valuation_gap": 1.5,
+        "microcap_rerating_potential": 1.0
       },
       "options_expression_signals": {
         "convexity_need": 2.0,

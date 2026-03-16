@@ -33,7 +33,14 @@ DEFAULT_STOCK_FIT_WEIGHTS: Dict[str, float] = {
 }
 
 
-ASYMMETRY_SIGNAL_KEYS = ("hiddenness", "crowding_inverse", "valuation_nonlinearity")
+ASYMMETRY_SIGNAL_WEIGHTS: Dict[str, float] = {
+    "hiddenness": 0.18,
+    "crowding_inverse": 0.16,
+    "valuation_nonlinearity": 0.18,
+    "ecosystem_centrality": 0.18,
+    "downstream_valuation_gap": 0.16,
+    "microcap_rerating_potential": 0.14,
+}
 
 
 def _load_screening_module():
@@ -127,9 +134,18 @@ def _choose_expression(mispricing_score: float, options_fit_score: float, stock_
     return "reject"
 
 
-def _asymmetry_bonus(signal_map: Dict[str, float]) -> float:
-    normalized = sum(_clamp_signal(signal_map.get(key, 0.0)) for key in ASYMMETRY_SIGNAL_KEYS) / (5.0 * len(ASYMMETRY_SIGNAL_KEYS))
-    return round(normalized * 8.0, 2)
+def _asymmetry_bonus(mispricing_signal_map: Dict[str, float], asymmetry_signal_map: Dict[str, float] | None = None) -> float:
+    normalized_weights = _validate_weights(ASYMMETRY_SIGNAL_WEIGHTS)
+    blended_signals = {
+        "hiddenness": _clamp_signal(mispricing_signal_map.get("hiddenness", 0.0)),
+        "crowding_inverse": _clamp_signal(mispricing_signal_map.get("crowding_inverse", 0.0)),
+        "valuation_nonlinearity": _clamp_signal(mispricing_signal_map.get("valuation_nonlinearity", 0.0)),
+        "ecosystem_centrality": _clamp_signal((asymmetry_signal_map or {}).get("ecosystem_centrality", 0.0)),
+        "downstream_valuation_gap": _clamp_signal((asymmetry_signal_map or {}).get("downstream_valuation_gap", 0.0)),
+        "microcap_rerating_potential": _clamp_signal((asymmetry_signal_map or {}).get("microcap_rerating_potential", 0.0)),
+    }
+    weighted_total = sum(blended_signals[key] * normalized_weights[key] for key in normalized_weights)
+    return round((weighted_total / 5.0) * 12.0, 2)
 
 
 def _pick_score(
@@ -191,7 +207,10 @@ def main() -> int:
         options_fit_score = mispricing_scorecard.options_fit.score_0_to_100
         stock_fit_score = stock_fit["score_0_to_100"]
         final_expression = _choose_expression(mispricing_score, options_fit_score, stock_fit_score)
-        asymmetry_bonus = _asymmetry_bonus(row["mispricing_signals"])
+        asymmetry_bonus = _asymmetry_bonus(
+            row["mispricing_signals"],
+            row.get("asymmetry_signals"),
+        )
         ranked.append(
             {
                 "name": row["name"],
@@ -203,6 +222,7 @@ def main() -> int:
                 "why_missed": row.get("why_missed", []),
                 "catalysts": row.get("catalysts", []),
                 "invalidations": row.get("invalidations", []),
+                "asymmetry_signals": row.get("asymmetry_signals", {}),
                 "mispricing": mispricing_scorecard.mispricing.to_dict(),
                 "options_fit": mispricing_scorecard.options_fit.to_dict(),
                 "stock_fit": stock_fit,

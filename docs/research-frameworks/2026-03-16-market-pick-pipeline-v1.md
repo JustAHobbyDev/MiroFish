@@ -35,6 +35,11 @@ The output is not an ontology or a memo. The output is a pick list with one of:
    - duration mismatch
    - evidence quality
 
+   For names where hidden-supplier asymmetry matters, optionally add:
+   - ecosystem centrality
+   - downstream valuation gap
+   - microcap rerating potential
+
 3. `Score expression quality`
    Score both:
    - `options_fit`
@@ -51,6 +56,7 @@ The output is not an ontology or a memo. The output is a pick list with one of:
    Rank by:
    - mispricing score
    - best expression score
+   - asymmetry bonus
    - expression bonus / penalty
 
 ## Artifacts

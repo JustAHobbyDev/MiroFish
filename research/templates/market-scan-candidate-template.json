@@ -35,6 +35,11 @@
         "crowding_inverse": 4.5,
         "valuation_nonlinearity": 4.0
       },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.5,
+        "downstream_valuation_gap": 4.5,
+        "microcap_rerating_potential": 5.0
+      },
       "options_expression_signals": {
         "convexity_need": 2.0,
         "tenor_alignment": 2.5,
