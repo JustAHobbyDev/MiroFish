@@ -1,0 +1,322 @@
+{
+  "method": "canonical knowledge-node registry -> node-aware review ranking",
+  "generated_at": "2026-03-16T18:02:48.333435+00:00",
+  "row_count": 4,
+  "rows": [
+    {
+      "underlying": "MP",
+      "knowledge_node_id": "kn_underlying_mp",
+      "node_score": 90.03,
+      "pointer_count": 2,
+      "theme_count": 2,
+      "themes": [
+        "Rare Earth Magnet Sovereignty",
+        "Robotics Supply Chain"
+      ],
+      "primary_expression_view": "shares",
+      "alternate_expression_views": [
+        "leaps_call"
+      ],
+      "expression_conflict": true,
+      "strongest_supporting_process_layers": [
+        "Sintered NdFeB Magnet Manufacturing",
+        "Neodymium Processing"
+      ],
+      "strongest_supporting_components": [],
+      "strongest_supporting_materials": [
+        "Neodymium"
+      ],
+      "top_pointer": {
+        "pointer_id": "ptr_mp_robotics_supply_chain_sintered_ndfeb_magnet_manufacturing",
+        "market_theme": "Robotics Supply Chain",
+        "candidate_name": "MP anchor promoted structural pick on Robotics Supply Chain",
+        "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "company_role": "anchor",
+        "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+        "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+        "linked_process_layers": [
+          "Sintered NdFeB Magnet Manufacturing",
+          "Neodymium Processing"
+        ],
+        "linked_components": [],
+        "linked_materials": [
+          "Neodymium"
+        ],
+        "final_expression": "shares",
+        "ranking_score": 81.43,
+        "promotion_status": "pick_candidate",
+        "promotion_score_0_to_100": 94.86
+      },
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_mp_robotics_supply_chain_sintered_ndfeb_magnet_manufacturing",
+          "market_theme": "Robotics Supply Chain",
+          "candidate_name": "MP anchor promoted structural pick on Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "company_role": "anchor",
+          "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+          "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+          "linked_process_layers": [
+            "Sintered NdFeB Magnet Manufacturing",
+            "Neodymium Processing"
+          ],
+          "linked_components": [],
+          "linked_materials": [
+            "Neodymium"
+          ],
+          "final_expression": "shares",
+          "ranking_score": 81.43,
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86
+        },
+        {
+          "pointer_id": "ptr_mp_rare_earth_magnet_sovereignty_sintered_ndfeb_magnet_manufacturing",
+          "market_theme": "Rare Earth Magnet Sovereignty",
+          "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+          "thesis": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+          "company_role": null,
+          "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+          "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+          "linked_process_layers": [],
+          "linked_components": [],
+          "linked_materials": [],
+          "final_expression": "leaps_call",
+          "ranking_score": 74.33,
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 96.1
+        }
+      ],
+      "parse_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_mp",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "MP",
+          "local_attributes": {}
+        },
+        {
+          "parse_name": "mp_magnet_sovereignty",
+          "structural_parse_path": "research/analysis/2026-03-16-mp-magnet-sovereignty-structural-parse-v1.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 96.1,
+          "local_entity_id": "ent_publiccompany_mp",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "MP",
+          "local_attributes": {
+            "ticker": "MP",
+            "exposure_type": "pure_play"
+          }
+        }
+      ]
+    },
+    {
+      "underlying": "UUUU",
+      "knowledge_node_id": "kn_underlying_uuuu",
+      "node_score": 84.92,
+      "pointer_count": 1,
+      "theme_count": 1,
+      "themes": [
+        "Robotics Supply Chain"
+      ],
+      "primary_expression_view": "shares",
+      "alternate_expression_views": [],
+      "expression_conflict": false,
+      "strongest_supporting_process_layers": [
+        "Neodymium Processing"
+      ],
+      "strongest_supporting_components": [],
+      "strongest_supporting_materials": [
+        "Neodymium"
+      ],
+      "top_pointer": {
+        "pointer_id": "ptr_uuuu_robotics_supply_chain_neodymium_processing",
+        "market_theme": "Robotics Supply Chain",
+        "candidate_name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+        "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "company_role": "satellite",
+        "bottleneck_layer": "Neodymium Processing",
+        "value_capture_layer": "Neodymium Processing",
+        "linked_process_layers": [
+          "Neodymium Processing"
+        ],
+        "linked_components": [],
+        "linked_materials": [
+          "Neodymium"
+        ],
+        "final_expression": "shares",
+        "ranking_score": 79.95,
+        "promotion_status": "pick_candidate",
+        "promotion_score_0_to_100": 94.86
+      },
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_uuuu_robotics_supply_chain_neodymium_processing",
+          "market_theme": "Robotics Supply Chain",
+          "candidate_name": "UUUU satellite promoted structural pick on Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "company_role": "satellite",
+          "bottleneck_layer": "Neodymium Processing",
+          "value_capture_layer": "Neodymium Processing",
+          "linked_process_layers": [
+            "Neodymium Processing"
+          ],
+          "linked_components": [],
+          "linked_materials": [
+            "Neodymium"
+          ],
+          "final_expression": "shares",
+          "ranking_score": 79.95,
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86
+        }
+      ],
+      "parse_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_uuuu",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "UUUU",
+          "local_attributes": {}
+        }
+      ]
+    },
+    {
+      "underlying": "NEO",
+      "knowledge_node_id": "kn_underlying_neo",
+      "node_score": 83.14,
+      "pointer_count": 1,
+      "theme_count": 1,
+      "themes": [
+        "Robotics Supply Chain"
+      ],
+      "primary_expression_view": "shares",
+      "alternate_expression_views": [],
+      "expression_conflict": false,
+      "strongest_supporting_process_layers": [
+        "NdFeB Magnetic Powders and Alloys"
+      ],
+      "strongest_supporting_components": [],
+      "strongest_supporting_materials": [],
+      "top_pointer": {
+        "pointer_id": "ptr_neo_robotics_supply_chain_ndfeb_magnetic_powders_and_alloys",
+        "market_theme": "Robotics Supply Chain",
+        "candidate_name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+        "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+        "company_role": "satellite",
+        "bottleneck_layer": "NdFeB Magnetic Powders and Alloys",
+        "value_capture_layer": "NdFeB Magnetic Powders and Alloys",
+        "linked_process_layers": [
+          "NdFeB Magnetic Powders and Alloys"
+        ],
+        "linked_components": [],
+        "linked_materials": [],
+        "final_expression": "shares",
+        "ranking_score": 78.17,
+        "promotion_status": "pick_candidate",
+        "promotion_score_0_to_100": 94.86
+      },
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_neo_robotics_supply_chain_ndfeb_magnetic_powders_and_alloys",
+          "market_theme": "Robotics Supply Chain",
+          "candidate_name": "NEO satellite promoted structural pick on Robotics Supply Chain",
+          "thesis": "The market may be underweighting Western rare-earth processing and magnet-material names as cleaner robotics-actuation exposure than downstream robot narratives.",
+          "company_role": "satellite",
+          "bottleneck_layer": "NdFeB Magnetic Powders and Alloys",
+          "value_capture_layer": "NdFeB Magnetic Powders and Alloys",
+          "linked_process_layers": [
+            "NdFeB Magnetic Powders and Alloys"
+          ],
+          "linked_components": [],
+          "linked_materials": [],
+          "final_expression": "shares",
+          "ranking_score": 78.17,
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 94.86
+        }
+      ],
+      "parse_bindings": [
+        {
+          "parse_name": "robotics_actuation_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-robotics-actuation-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 94.86,
+          "local_entity_id": "ent_publiccompany_neo",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "NEO",
+          "local_attributes": {}
+        }
+      ]
+    },
+    {
+      "underlying": "SIVE",
+      "knowledge_node_id": "kn_underlying_sive",
+      "node_score": 75.14,
+      "pointer_count": 1,
+      "theme_count": 1,
+      "themes": [
+        "CPO / Silicon Photonics Laser Supply"
+      ],
+      "primary_expression_view": "shares",
+      "alternate_expression_views": [],
+      "expression_conflict": false,
+      "strongest_supporting_process_layers": [
+        "InP DFB Laser Production"
+      ],
+      "strongest_supporting_components": [],
+      "strongest_supporting_materials": [],
+      "top_pointer": {
+        "pointer_id": "ptr_sive_cpo_silicon_photonics_laser_supply_inp_dfb_laser_production",
+        "market_theme": "CPO / Silicon Photonics Laser Supply",
+        "candidate_name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+        "thesis": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+        "company_role": null,
+        "bottleneck_layer": "InP DFB Laser Production",
+        "value_capture_layer": "InP DFB Laser Production",
+        "linked_process_layers": [],
+        "linked_components": [],
+        "linked_materials": [],
+        "final_expression": "shares",
+        "ranking_score": 70.56,
+        "promotion_status": "pick_candidate",
+        "promotion_score_0_to_100": 92.89
+      },
+      "thesis_pointers": [
+        {
+          "pointer_id": "ptr_sive_cpo_silicon_photonics_laser_supply_inp_dfb_laser_production",
+          "market_theme": "CPO / Silicon Photonics Laser Supply",
+          "candidate_name": "SIVE promoted structural pick on CPO / Silicon Photonics Laser Supply",
+          "thesis": "Independent partner and ecosystem evidence suggests the market may still treat Sivers as a messy small Nordic photonics company even though it sits upstream of external-light-source architectures that are technically and commercially moving forward.",
+          "company_role": null,
+          "bottleneck_layer": "InP DFB Laser Production",
+          "value_capture_layer": "InP DFB Laser Production",
+          "linked_process_layers": [],
+          "linked_components": [],
+          "linked_materials": [],
+          "final_expression": "shares",
+          "ranking_score": 70.56,
+          "promotion_status": "pick_candidate",
+          "promotion_score_0_to_100": 92.89
+        }
+      ],
+      "parse_bindings": [
+        {
+          "parse_name": "sive_photonics_v2",
+          "structural_parse_path": "research/analysis/2026-03-16-sive-photonics-structural-parse-v2.json",
+          "graduation_status": "pick_candidate",
+          "graduation_score_0_to_100": 92.89,
+          "local_entity_id": "ent_publiccompany_sive",
+          "local_entity_type": "PublicCompany",
+          "local_canonical_name": "SIVE",
+          "local_attributes": {}
+        }
+      ]
+    }
+  ]
+}
