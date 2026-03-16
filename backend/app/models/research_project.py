@@ -23,6 +23,8 @@ class ResearchProjectStatus(str, Enum):
 
     CREATED = "created"
     INTAKE_DEFINED = "intake_defined"
+    SOURCES_INGESTED = "sources_ingested"
+    STRUCTURE_PARSED = "structure_parsed"
     CLAIMS_AUDITED = "claims_audited"
     SCORED = "scored"
     MISPRICING_SCREENED = "mispricing_screened"
@@ -42,6 +44,11 @@ class ResearchProject:
     ontology_name: str
     ontology_version: str
     thesis_intake: Dict[str, Any] = field(default_factory=dict)
+    source_count: int = 0
+    fragment_count: int = 0
+    relationship_count: int = 0
+    claim_count: int = 0
+    inference_count: int = 0
     claims_audit_count: int = 0
     scorecard_count: int = 0
     mispricing_candidate_count: int = 0
@@ -64,6 +71,11 @@ class ResearchProject:
             "ontology_name": self.ontology_name,
             "ontology_version": self.ontology_version,
             "thesis_intake": self.thesis_intake,
+            "source_count": self.source_count,
+            "fragment_count": self.fragment_count,
+            "relationship_count": self.relationship_count,
+            "claim_count": self.claim_count,
+            "inference_count": self.inference_count,
             "claims_audit_count": self.claims_audit_count,
             "scorecard_count": self.scorecard_count,
             "mispricing_candidate_count": self.mispricing_candidate_count,
@@ -90,6 +102,11 @@ class ResearchProject:
             ontology_name=data.get("ontology_name", "bottleneck_research"),
             ontology_version=data.get("ontology_version", "v1"),
             thesis_intake=data.get("thesis_intake", {}),
+            source_count=data.get("source_count", 0),
+            fragment_count=data.get("fragment_count", 0),
+            relationship_count=data.get("relationship_count", 0),
+            claim_count=data.get("claim_count", 0),
+            inference_count=data.get("inference_count", 0),
             claims_audit_count=data.get("claims_audit_count", 0),
             scorecard_count=data.get("scorecard_count", 0),
             mispricing_candidate_count=data.get("mispricing_candidate_count", 0),
@@ -130,6 +147,11 @@ class ResearchProjectManager:
     @classmethod
     def _get_artifact_path(cls, research_project_id: str, filename: str) -> str:
         return os.path.join(cls._get_artifacts_dir(research_project_id), filename)
+
+    @staticmethod
+    def _count_items(payload: Any, key: str) -> int:
+        value = payload.get(key, []) if isinstance(payload, dict) else []
+        return len(value) if isinstance(value, list) else 0
 
     @classmethod
     def create_project(
@@ -236,6 +258,72 @@ class ResearchProjectManager:
         path = cls._get_artifact_path(research_project_id, "thesis_intake.json")
         if not os.path.exists(path):
             return None
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    @classmethod
+    def save_source_bundle(
+        cls, research_project_id: str, source_bundle: Dict[str, Any]
+    ) -> ResearchProject:
+        project = cls.get_project(research_project_id)
+        if not project:
+            raise ValueError(f"research project not found: {research_project_id}")
+
+        with open(
+            cls._get_artifact_path(research_project_id, "source_bundle.json"),
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(source_bundle, f, ensure_ascii=False, indent=2)
+
+        project.source_count = cls._count_items(source_bundle, "sources")
+        project.fragment_count = cls._count_items(source_bundle, "fragments")
+        if project.source_count or project.fragment_count:
+            project.status = ResearchProjectStatus.SOURCES_INGESTED
+        cls.save_project(project)
+        return project
+
+    @classmethod
+    def get_source_bundle(cls, research_project_id: str) -> Dict[str, Any]:
+        path = cls._get_artifact_path(research_project_id, "source_bundle.json")
+        if not os.path.exists(path):
+            return {}
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    @classmethod
+    def save_structural_parse(
+        cls, research_project_id: str, structural_parse: Dict[str, Any]
+    ) -> ResearchProject:
+        project = cls.get_project(research_project_id)
+        if not project:
+            raise ValueError(f"research project not found: {research_project_id}")
+
+        with open(
+            cls._get_artifact_path(research_project_id, "structural_parse.json"),
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(structural_parse, f, ensure_ascii=False, indent=2)
+
+        project.relationship_count = cls._count_items(structural_parse, "relationships")
+        project.claim_count = cls._count_items(structural_parse, "claims")
+        project.inference_count = cls._count_items(structural_parse, "inferences")
+        if (
+            cls._count_items(structural_parse, "entities")
+            or project.relationship_count
+            or project.claim_count
+            or project.inference_count
+        ):
+            project.status = ResearchProjectStatus.STRUCTURE_PARSED
+        cls.save_project(project)
+        return project
+
+    @classmethod
+    def get_structural_parse(cls, research_project_id: str) -> Dict[str, Any]:
+        path = cls._get_artifact_path(research_project_id, "structural_parse.json")
+        if not os.path.exists(path):
+            return {}
         with open(path, "r", encoding="utf-8") as f:
             return json.load(f)
 
@@ -377,6 +465,8 @@ class ResearchProjectManager:
         return {
             "research_project": project.to_dict(),
             "thesis_intake": cls.get_thesis_intake(research_project_id) or {},
+            "source_bundle": cls.get_source_bundle(research_project_id),
+            "structural_parse": cls.get_structural_parse(research_project_id),
             "claims_audit": cls.get_claims_audit(research_project_id),
             "scorecards": cls.get_scorecards(research_project_id),
             "mispricing_candidates": cls.get_mispricing_candidates(research_project_id),

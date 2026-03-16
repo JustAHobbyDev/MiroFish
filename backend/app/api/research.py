@@ -147,6 +147,76 @@ def save_thesis_intake(research_project_id: str):
         }), 500
 
 
+@research_bp.route("/project/<research_project_id>/source-bundle", methods=["POST"])
+def save_source_bundle(research_project_id: str):
+    """Persist normalized source-ingestion artifacts for a research project."""
+    try:
+        source_bundle = request.get_json() or {}
+        if not isinstance(source_bundle, dict):
+            return jsonify({
+                "success": False,
+                "error": "source bundle payload must be an object",
+            }), 400
+
+        project = ResearchProjectManager.save_source_bundle(
+            research_project_id, source_bundle
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "source_bundle": source_bundle,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 source bundle 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/structural-parse", methods=["POST"])
+def save_structural_parse(research_project_id: str):
+    """Persist structural parsing artifacts for a research project."""
+    try:
+        structural_parse = request.get_json() or {}
+        if not isinstance(structural_parse, dict):
+            return jsonify({
+                "success": False,
+                "error": "structural parse payload must be an object",
+            }), 400
+
+        project = ResearchProjectManager.save_structural_parse(
+            research_project_id, structural_parse
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "structural_parse": structural_parse,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 structural parse 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
 @research_bp.route("/project/<research_project_id>/claims-audit", methods=["POST"])
 def save_claims_audit(research_project_id: str):
     """Persist structured claims-audit rows for a research project."""

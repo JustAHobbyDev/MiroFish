@@ -26,12 +26,29 @@ def test_build_research_ontology_spec_is_stable_and_valid():
         relationship["name"] for relationship in spec["relationship_types"]
     }
 
-    assert {"Theme", "BottleneckLayer", "PublicCompany", "Claim", "Source"}.issubset(
-        entity_names
-    )
-    assert {"DEPENDS_ON", "SUPPLIED_BY", "SUPPORTS_CLAIM", "DESCRIBES"}.issubset(
-        relationship_names
-    )
+    assert {
+        "Theme",
+        "System",
+        "Subsystem",
+        "ProcessLayer",
+        "ExpressionCandidate",
+        "PublicCompany",
+        "Claim",
+        "Source",
+        "SourceFragment",
+        "Inference",
+    }.issubset(entity_names)
+    assert {
+        "PART_OF",
+        "DEPENDS_ON",
+        "PROCESSED_BY",
+        "SUPPLIED_BY",
+        "SUPPORTS_CLAIM",
+        "EVIDENCED_BY",
+        "DESCRIBES",
+        "CANDIDATE_EXPRESSION_FOR",
+        "REPRICES_VIA",
+    }.issubset(relationship_names)
 
     research_ontology.validate_research_ontology_spec(spec)
 
@@ -71,3 +88,19 @@ def test_evidence_requirements_only_reference_supported_claims_and_sources():
         assert set(requirement["required_source_classes"]).issubset(
             supported_source_classes
         )
+
+
+def test_supported_sources_and_artifacts_match_ingestion_and_parse_contract():
+    spec = research_ontology.build_research_ontology_spec()
+
+    supported_source_classes = set(spec["supported_source_classes"])
+    assert {
+        "company_filing",
+        "earnings_transcript",
+        "investor_post",
+        "captured_image",
+        "market_data_snapshot",
+    }.issubset(supported_source_classes)
+
+    artifact_mapping = spec["artifact_mapping"]
+    assert {"source-bundle", "structural-parse"}.issubset(artifact_mapping)

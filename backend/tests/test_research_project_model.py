@@ -20,6 +20,55 @@ def test_research_project_manager_round_trip(tmp_path):
 
         assert project.status == ResearchProjectStatus.INTAKE_DEFINED
 
+        ResearchProjectManager.save_source_bundle(
+            project.research_project_id,
+            {
+                "sources": [
+                    {
+                        "source_id": "src_1",
+                        "source_class": "company_filing",
+                        "usage_mode": "evidence",
+                    }
+                ],
+                "fragments": [
+                    {
+                        "fragment_id": "frag_1",
+                        "source_id": "src_1",
+                        "excerpt": "CoWoS capacity remains constrained.",
+                    }
+                ],
+            },
+        )
+        ResearchProjectManager.save_structural_parse(
+            project.research_project_id,
+            {
+                "entities": [
+                    {
+                        "entity_id": "ent_1",
+                        "entity_type": "ProcessLayer",
+                        "canonical_name": "CoWoS packaging",
+                    }
+                ],
+                "relationships": [
+                    {
+                        "relationship_id": "rel_1",
+                        "relationship_type": "DEPENDS_ON",
+                    }
+                ],
+                "claims": [
+                    {
+                        "claim_id": "claim_1",
+                        "claim_type": "bottleneck_assertion",
+                    }
+                ],
+                "inferences": [
+                    {
+                        "inference_id": "inf_1",
+                        "inference_type": "dependency_bridge",
+                    }
+                ],
+            },
+        )
         ResearchProjectManager.save_claims_audit(
             project.research_project_id,
             [{"claim_text": "CoWoS is constrained", "status": "supported"}],
@@ -42,10 +91,17 @@ def test_research_project_manager_round_trip(tmp_path):
 
         assert loaded is not None
         assert loaded.status == ResearchProjectStatus.REPORTED
+        assert loaded.source_count == 1
+        assert loaded.fragment_count == 1
+        assert loaded.relationship_count == 1
+        assert loaded.claim_count == 1
+        assert loaded.inference_count == 1
         assert loaded.claims_audit_count == 1
         assert loaded.scorecard_count == 1
         assert loaded.mispricing_candidate_count == 1
         assert artifacts["thesis_intake"]["theme"] == "HBM / advanced packaging"
+        assert artifacts["source_bundle"]["sources"][0]["source_id"] == "src_1"
+        assert artifacts["structural_parse"]["claims"][0]["claim_id"] == "claim_1"
         assert artifacts["mispricing_candidates"][0]["candidate_name"] == "MU LEAPS"
         assert artifacts["summary"]["top_severity_layer"] == "CoWoS-class packaging"
 

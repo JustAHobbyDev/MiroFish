@@ -71,21 +71,35 @@ ONTOLOGY_NAME = "bottleneck_research"
 ONTOLOGY_VERSION = "v1"
 
 SUPPORTED_SOURCE_CLASSES: List[str] = [
-    "filing",
-    "government",
-    "industry_body",
+    "company_filing",
     "company_release",
+    "earnings_transcript",
+    "government",
     "policy_tracker",
-    "analysis",
+    "industry_body",
+    "technical_paper",
+    "conference_material",
+    "trade_press",
+    "analyst_note",
+    "investor_post",
+    "forum_post",
+    "user_note",
+    "captured_image",
+    "market_data_snapshot",
 ]
 
 SUPPORTED_CLAIM_TYPES: List[str] = [
+    "component_dependency",
+    "material_or_processing_dependency",
+    "supplier_or_customer_relationship",
     "market_share_or_concentration",
     "capacity_expansion_or_ramp",
     "export_control_or_policy",
     "demand_acceleration",
     "bottleneck_assertion",
-    "value_capture_assertion",
+    "event_translation",
+    "valuation_gap_assertion",
+    "expression_fit_assertion",
 ]
 
 
@@ -115,6 +129,22 @@ RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
         ],
     ),
     OntologyEntityType(
+        name="System",
+        description="Deployed product or infrastructure system being analyzed.",
+        attributes=[
+            OntologyAttribute("system_name", "Canonical system name"),
+            OntologyAttribute("system_scope", "Practical boundary of the system"),
+        ],
+    ),
+    OntologyEntityType(
+        name="Subsystem",
+        description="Cost or function-critical subsystem within a broader system.",
+        attributes=[
+            OntologyAttribute("subsystem_name", "Canonical subsystem name"),
+            OntologyAttribute("bom_weight", "Relative importance in cost or performance"),
+        ],
+    ),
+    OntologyEntityType(
         name="SystemLayer",
         description="Top-level deployed system or infrastructure layer.",
         attributes=[
@@ -139,12 +169,28 @@ RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
         ],
     ),
     OntologyEntityType(
+        name="ProcessLayer",
+        description="Processing or refining stage that converts inputs into usable industrial form.",
+        attributes=[
+            OntologyAttribute("process_name", "Name of the process layer"),
+            OntologyAttribute("process_stage", "Refining, separation, deposition, packaging, or assembly"),
+        ],
+    ),
+    OntologyEntityType(
         name="BottleneckLayer",
         description="Specific layer identified as constrained or strategically important.",
         attributes=[
             OntologyAttribute("layer_name", "Human-readable bottleneck layer name"),
             OntologyAttribute("severity_band", "Low, emerging, moderate, high, or critical"),
             OntologyAttribute("value_capture_band", "Low, emerging, moderate, high, or critical"),
+        ],
+    ),
+    OntologyEntityType(
+        name="ExpressionCandidate",
+        description="Potential public-market expression such as shares, LEAPS, basket, or long-vol setup.",
+        attributes=[
+            OntologyAttribute("expression_type", "Shares, leaps_call, basket, long_vol, or reject"),
+            OntologyAttribute("time_horizon", "Expected holding period or timing window"),
         ],
     ),
     OntologyEntityType(
@@ -180,6 +226,14 @@ RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
         ],
     ),
     OntologyEntityType(
+        name="Event",
+        description="Discrete event or catalyst that can translate structural stress into market repricing.",
+        attributes=[
+            OntologyAttribute("event_name", "Name of the event or catalyst"),
+            OntologyAttribute("event_type", "Earnings, policy, qualification, ramp, disruption, or media recognition"),
+        ],
+    ),
+    OntologyEntityType(
         name="CapacityExpansion",
         description="Project or investment intended to add qualified supply.",
         attributes=[
@@ -201,7 +255,25 @@ RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
         description="Primary or secondary source supporting a claim.",
         attributes=[
             OntologyAttribute("source_url", "Canonical source URL"),
-            OntologyAttribute("source_class", "Filing, company release, government, industry body, or analysis"),
+            OntologyAttribute("source_class", "Normalized source class used for ingestion"),
+            OntologyAttribute("usage_mode", "Evidence, context, hypothesis_seed, or market_signal"),
+        ],
+    ),
+    OntologyEntityType(
+        name="SourceFragment",
+        description="Indexed excerpt or fragment extracted from a source.",
+        attributes=[
+            OntologyAttribute("fragment_id", "Stable source fragment identifier"),
+            OntologyAttribute("fragment_type", "Paragraph, quote, screenshot region, or table row"),
+            OntologyAttribute("section_label", "Local section or heading label"),
+        ],
+    ),
+    OntologyEntityType(
+        name="Inference",
+        description="Explicit inferential bridge from evidence to a structural or market conclusion.",
+        attributes=[
+            OntologyAttribute("inference_type", "Dependency, bottleneck, event translation, or expression inference"),
+            OntologyAttribute("confidence", "Low, medium, or high"),
         ],
     ),
 ]
@@ -209,11 +281,22 @@ RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
 
 RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
     OntologyRelationshipType(
+        name="PART_OF",
+        description="A subsystem, component, or layer is part of a broader system.",
+        source_targets=[
+            {"source": "Subsystem", "target": "System"},
+            {"source": "Component", "target": "Subsystem"},
+            {"source": "SystemLayer", "target": "System"},
+            {"source": "BottleneckLayer", "target": "Subsystem"},
+        ],
+    ),
+    OntologyRelationshipType(
         name="DRIVEN_BY",
         description="Theme or system is driven by a market or policy force.",
         source_targets=[
             {"source": "Theme", "target": "MarketDriver"},
             {"source": "BottleneckLayer", "target": "MarketDriver"},
+            {"source": "System", "target": "MarketDriver"},
         ],
     ),
     OntologyRelationshipType(
@@ -221,6 +304,8 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
         description="Component, material, or bottleneck layer is used in a system or end market.",
         source_targets=[
             {"source": "MaterialInput", "target": "Component"},
+            {"source": "Component", "target": "Subsystem"},
+            {"source": "Subsystem", "target": "System"},
             {"source": "Component", "target": "SystemLayer"},
             {"source": "SystemLayer", "target": "EndMarket"},
             {"source": "BottleneckLayer", "target": "EndMarket"},
@@ -231,10 +316,24 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
         description="A layer or system depends on another layer or input.",
         source_targets=[
             {"source": "SystemLayer", "target": "Component"},
+            {"source": "System", "target": "Subsystem"},
+            {"source": "Subsystem", "target": "Component"},
             {"source": "Component", "target": "MaterialInput"},
+            {"source": "Component", "target": "ProcessLayer"},
+            {"source": "ProcessLayer", "target": "MaterialInput"},
             {"source": "BottleneckLayer", "target": "MaterialInput"},
             {"source": "BottleneckLayer", "target": "Component"},
+            {"source": "BottleneckLayer", "target": "ProcessLayer"},
             {"source": "BottleneckLayer", "target": "SystemLayer"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="PROCESSED_BY",
+        description="A material or component relies on a specific processing layer.",
+        source_targets=[
+            {"source": "MaterialInput", "target": "ProcessLayer"},
+            {"source": "Component", "target": "ProcessLayer"},
+            {"source": "BottleneckLayer", "target": "ProcessLayer"},
         ],
     ),
     OntologyRelationshipType(
@@ -242,8 +341,18 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
         description="A bottleneck layer, component, or material is supplied by a public company.",
         source_targets=[
             {"source": "MaterialInput", "target": "PublicCompany"},
+            {"source": "ProcessLayer", "target": "PublicCompany"},
             {"source": "Component", "target": "PublicCompany"},
             {"source": "BottleneckLayer", "target": "PublicCompany"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="QUALIFIED_BY",
+        description="A component, layer, or supplier is qualified by a customer or ecosystem participant.",
+        source_targets=[
+            {"source": "Component", "target": "PublicCompany"},
+            {"source": "BottleneckLayer", "target": "PublicCompany"},
+            {"source": "PublicCompany", "target": "PublicCompany"},
         ],
     ),
     OntologyRelationshipType(
@@ -261,7 +370,19 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
         source_targets=[
             {"source": "BottleneckLayer", "target": "PolicyAction"},
             {"source": "BottleneckLayer", "target": "CapacityExpansion"},
+            {"source": "ProcessLayer", "target": "PolicyAction"},
+            {"source": "System", "target": "PolicyAction"},
             {"source": "PublicCompany", "target": "PolicyAction"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="AFFECTED_BY_EVENT",
+        description="A market-relevant layer or company is affected by a discrete event or catalyst.",
+        source_targets=[
+            {"source": "Theme", "target": "Event"},
+            {"source": "BottleneckLayer", "target": "Event"},
+            {"source": "PublicCompany", "target": "Event"},
+            {"source": "ExpressionCandidate", "target": "Event"},
         ],
     ),
     OntologyRelationshipType(
@@ -284,13 +405,30 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
         ],
     ),
     OntologyRelationshipType(
+        name="EVIDENCED_BY",
+        description="A claim or inference is directly evidenced by a specific source fragment.",
+        source_targets=[
+            {"source": "Claim", "target": "SourceFragment"},
+            {"source": "Inference", "target": "SourceFragment"},
+        ],
+        attributes=[
+            OntologyAttribute("evidence_role", "direct, contextual, or contradictory"),
+        ],
+    ),
+    OntologyRelationshipType(
         name="DESCRIBES",
         description="A claim describes a specific theme, layer, company, or policy action.",
         source_targets=[
             {"source": "Claim", "target": "Theme"},
+            {"source": "Claim", "target": "System"},
+            {"source": "Claim", "target": "Subsystem"},
+            {"source": "Claim", "target": "Component"},
+            {"source": "Claim", "target": "ProcessLayer"},
             {"source": "Claim", "target": "BottleneckLayer"},
             {"source": "Claim", "target": "PublicCompany"},
             {"source": "Claim", "target": "PolicyAction"},
+            {"source": "Claim", "target": "Event"},
+            {"source": "Claim", "target": "ExpressionCandidate"},
         ],
     ),
     OntologyRelationshipType(
@@ -302,6 +440,49 @@ RESEARCH_RELATIONSHIP_TYPES: List[OntologyRelationshipType] = [
             {"source": "BottleneckLayer", "target": "BottleneckLayer"},
         ],
     ),
+    OntologyRelationshipType(
+        name="ANCHORS",
+        description="An anchor company or bottleneck layer organizes a research universe.",
+        source_targets=[
+            {"source": "Theme", "target": "PublicCompany"},
+            {"source": "BottleneckLayer", "target": "PublicCompany"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="SATELLITE_TO",
+        description="A less-followed company is an asymmetric satellite around a better-known anchor.",
+        source_targets=[
+            {"source": "PublicCompany", "target": "PublicCompany"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="CANDIDATE_EXPRESSION_FOR",
+        description="A proposed expression targets a company or theme.",
+        source_targets=[
+            {"source": "ExpressionCandidate", "target": "PublicCompany"},
+            {"source": "ExpressionCandidate", "target": "Theme"},
+            {"source": "ExpressionCandidate", "target": "BottleneckLayer"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="REPRICES_VIA",
+        description="An expression is expected to reprice through a catalyst or event path.",
+        source_targets=[
+            {"source": "ExpressionCandidate", "target": "Event"},
+            {"source": "ExpressionCandidate", "target": "PolicyAction"},
+            {"source": "ExpressionCandidate", "target": "MarketDriver"},
+        ],
+    ),
+    OntologyRelationshipType(
+        name="INFERRED_FROM",
+        description="An inference bridges multiple claims or entities into a structural conclusion.",
+        source_targets=[
+            {"source": "Inference", "target": "Claim"},
+            {"source": "Inference", "target": "Theme"},
+            {"source": "Inference", "target": "BottleneckLayer"},
+            {"source": "Inference", "target": "ExpressionCandidate"},
+        ],
+    ),
 ]
 
 RESEARCH_EDGE_TYPES: List[OntologyRelationshipType] = RESEARCH_RELATIONSHIP_TYPES
@@ -311,38 +492,68 @@ EVIDENCE_REQUIREMENTS: List[EvidenceRequirement] = [
     EvidenceRequirement(
         claim_type="market_share_or_concentration",
         minimum_sources=1,
-        required_source_classes=["filing", "government", "industry_body"],
+        required_source_classes=["company_filing", "government", "industry_body"],
         notes="Prefer filings or government/industry-body data over media summaries.",
     ),
     EvidenceRequirement(
         claim_type="capacity_expansion_or_ramp",
         minimum_sources=1,
-        required_source_classes=["company_release", "filing", "government"],
+        required_source_classes=["company_release", "company_filing", "government"],
         notes="Company releases are acceptable, but filings or government corroboration are preferred when available.",
     ),
     EvidenceRequirement(
         claim_type="export_control_or_policy",
         minimum_sources=1,
-        required_source_classes=["government", "policy_tracker", "filing"],
+        required_source_classes=["government", "policy_tracker", "company_filing"],
         notes="Must be grounded in a policy or government source, or a filing that quotes the policy directly.",
     ),
     EvidenceRequirement(
         claim_type="demand_acceleration",
         minimum_sources=1,
-        required_source_classes=["filing", "government", "company_release"],
+        required_source_classes=["company_filing", "government", "company_release"],
         notes="Use company or government demand statements, but treat pure narrative extrapolation as insufficient.",
     ),
     EvidenceRequirement(
         claim_type="bottleneck_assertion",
         minimum_sources=2,
-        required_source_classes=["government", "industry_body", "filing"],
+        required_source_classes=["government", "industry_body", "company_filing"],
         notes="At least one source should describe the constraint directly rather than only implying it.",
     ),
     EvidenceRequirement(
-        claim_type="value_capture_assertion",
+        claim_type="component_dependency",
+        minimum_sources=1,
+        required_source_classes=["technical_paper", "company_filing", "conference_material"],
+        notes="Prefer technical or company materials that explicitly tie the component to the system.",
+    ),
+    EvidenceRequirement(
+        claim_type="material_or_processing_dependency",
+        minimum_sources=1,
+        required_source_classes=["technical_paper", "government", "company_filing"],
+        notes="Use sources that explicitly connect the material or process layer to system performance or cost.",
+    ),
+    EvidenceRequirement(
+        claim_type="supplier_or_customer_relationship",
+        minimum_sources=1,
+        required_source_classes=["company_release", "earnings_transcript", "company_filing"],
+        notes="Supplier/customer edges should be backed by direct company statements whenever possible.",
+    ),
+    EvidenceRequirement(
+        claim_type="event_translation",
+        minimum_sources=1,
+        required_source_classes=["government", "company_release", "trade_press"],
+        notes="Use direct event sources or high-quality reporting that makes the event timing explicit.",
+    ),
+    EvidenceRequirement(
+        claim_type="valuation_gap_assertion",
         minimum_sources=2,
-        required_source_classes=["filing", "company_release"],
-        notes="Requires evidence of pricing, margin leverage, scarcity duration, or listed-vehicle purity.",
+        required_source_classes=["company_filing", "analyst_note", "market_data_snapshot"],
+        notes="Requires evidence of valuation mismatch, market misunderstanding, or underfollowed exposure.",
+    ),
+    EvidenceRequirement(
+        claim_type="expression_fit_assertion",
+        minimum_sources=2,
+        required_source_classes=["market_data_snapshot", "company_filing", "analyst_note"],
+        notes="Use chain data plus structural thesis evidence before preferring LEAPS over shares.",
     ),
 ]
 
@@ -353,6 +564,18 @@ CASE_STUDY_TO_ONTOLOGY_MAPPING: Dict[str, Dict[str, List[str]]] = {
         "MarketDriver": ["raw claims", "why it might be mispriced"],
         "EndMarket": ["initial dependency chain"],
         "BottleneckLayer": ["raw claims", "expression candidates"],
+    },
+    "source-bundle": {
+        "Source": ["source_id", "source_class", "usage_mode"],
+        "SourceFragment": ["fragment_id", "section_label", "excerpt"],
+    },
+    "structural-parse": {
+        "System": ["canonical_name", "attributes"],
+        "Subsystem": ["canonical_name", "attributes"],
+        "Component": ["canonical_name", "attributes"],
+        "ProcessLayer": ["canonical_name", "attributes"],
+        "Claim": ["claim_text", "status", "confidence"],
+        "Inference": ["inference_type", "confidence"],
     },
     "claims-audit": {
         "Claim": ["claim_text", "status", "confidence"],
@@ -476,6 +699,8 @@ def validate_research_ontology_spec(spec: Dict[str, object]) -> None:
 
     expected_artifacts = {
         "thesis-intake",
+        "source-bundle",
+        "structural-parse",
         "claims-audit",
         "chokepoint-scores",
         "case-study-summary",
