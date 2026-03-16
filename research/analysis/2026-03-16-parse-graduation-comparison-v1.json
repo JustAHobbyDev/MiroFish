@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-03-16",
+  "rows": [
+    {
+      "pilot": "robotics_actuation",
+      "graduation_status": "exploratory_only",
+      "weighted_score_0_to_100": 58.96,
+      "source_mix_score": 19.0,
+      "structure_quality_score": 93.04,
+      "market_miss_quality_score": 65.0,
+      "expression_readiness_score": 70.0,
+      "gates": {
+        "source_gate": false,
+        "structure_gate": true,
+        "market_miss_gate": true,
+        "expression_gate": true,
+        "high_conviction_source_gate": false
+      }
+    },
+    {
+      "pilot": "mp_magnet_sovereignty",
+      "graduation_status": "pick_candidate",
+      "weighted_score_0_to_100": 96.1,
+      "source_mix_score": 92.0,
+      "structure_quality_score": 100.0,
+      "market_miss_quality_score": 95.0,
+      "expression_readiness_score": 100.0,
+      "gates": {
+        "source_gate": true,
+        "structure_gate": true,
+        "market_miss_gate": true,
+        "expression_gate": true,
+        "high_conviction_source_gate": true
+      }
+    },
+    {
+      "pilot": "sive_photonics",
+      "graduation_status": "watchlist_candidate",
+      "weighted_score_0_to_100": 84.45,
+      "source_mix_score": 69.5,
+      "structure_quality_score": 93.39,
+      "market_miss_quality_score": 84.17,
+      "expression_readiness_score": 100.0,
+      "gates": {
+        "source_gate": true,
+        "structure_gate": true,
+        "market_miss_gate": true,
+        "expression_gate": true,
+        "high_conviction_source_gate": false
+      }
+    }
+  ]
+}

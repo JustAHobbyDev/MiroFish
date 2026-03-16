@@ -1,0 +1,76 @@
+{
+  "graduation_status": "exploratory_only",
+  "weighted_score_0_to_100": 58.96,
+  "gates": {
+    "source_gate": false,
+    "structure_gate": true,
+    "market_miss_gate": true,
+    "expression_gate": true,
+    "high_conviction_source_gate": false
+  },
+  "dimensions": {
+    "source_mix": {
+      "score_0_to_100": 19.0,
+      "detail": {
+        "total_sources": 3,
+        "evidence_count": 0,
+        "high_quality_count": 0,
+        "independent_count": 3,
+        "source_classes": [
+          "investor_post",
+          "user_note"
+        ]
+      }
+    },
+    "structure_quality": {
+      "score_0_to_100": 93.04,
+      "detail": {
+        "entity_count": 19,
+        "relationship_count": 15,
+        "claim_count": 5,
+        "evidence_link_count": 21,
+        "inference_count": 1,
+        "entity_types": [
+          "Component",
+          "ExpressionCandidate",
+          "Geography",
+          "MaterialInput",
+          "ProcessLayer",
+          "PublicCompany",
+          "Subsystem",
+          "System",
+          "Theme"
+        ],
+        "relationship_types": [
+          "ANCHORS",
+          "CANDIDATE_EXPRESSION_FOR",
+          "DEPENDS_ON",
+          "PART_OF",
+          "PROCESSED_BY",
+          "SUPPLIED_BY"
+        ]
+      }
+    },
+    "market_miss_quality": {
+      "score_0_to_100": 65.0,
+      "detail": {
+        "statement": "The market may be underweighting neodymium processing as a cleaner Western proxy for robotics scale-up relative to downstream robot narratives.",
+        "confidence": "medium",
+        "derived_claim_count": 3,
+        "derived_relationship_count": 7
+      }
+    },
+    "expression_readiness": {
+      "score_0_to_100": 70.0,
+      "detail": {
+        "expression_count": 1,
+        "expression_names": [
+          "Equity basket: MP / NEO / UUUU"
+        ],
+        "expression_relationships_present": [
+          "CANDIDATE_EXPRESSION_FOR"
+        ]
+      }
+    }
+  }
+}
