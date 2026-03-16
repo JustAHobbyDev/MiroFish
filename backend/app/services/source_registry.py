@@ -412,6 +412,32 @@ CLASS_PROFILES: Dict[str, SourceClassProfile] = {
 }
 
 
+SYNTHETIC_SOURCE_TARGETS: List[Dict[str, Any]] = [
+    {
+        "name": "Public delayed options chain capture workflow",
+        "profile_key": "market_data_snapshot",
+        "category": "Operational market-data workflows",
+        "tier_section": "Tier 2: High-Value Supporting Sources",
+        "canonical_url": None,
+        "notes": [
+            "Use the local Playwright capture and normalization flow for delayed public chains.",
+            "Primary scripts: scripts/capture_options_chain_playwright.mjs and scripts/normalize_options_chain_snapshot.py.",
+        ],
+    },
+    {
+        "name": "LEAPS watchlist refresh workflow",
+        "profile_key": "market_data_snapshot",
+        "category": "Operational market-data workflows",
+        "tier_section": "Tier 2: High-Value Supporting Sources",
+        "canonical_url": None,
+        "notes": [
+            "Use the local watchlist and resale-scenario tooling for repeated expression checks.",
+            "Primary scripts: scripts/refresh_leaps_watchlist.py and scripts/estimate_leaps_resale_scenarios.py.",
+        ],
+    },
+]
+
+
 CATEGORY_TO_PROFILE: List[tuple[str, str]] = [
     ("Government policy and enforcement sources", "government_policy_enforcement"),
     ("Primary company filings and official disclosures", "company_filing"),
@@ -631,6 +657,44 @@ def build_source_registry_from_docs(
             ],
         }
         rows.append(row)
+
+    for item in SYNTHETIC_SOURCE_TARGETS:
+        profile = CLASS_PROFILES[item["profile_key"]]
+        rows.append(
+            {
+                "source_target_id": f"src_target_{_slugify(item['name'])}",
+                "name": item["name"],
+                "source_family": item["profile_key"],
+                "source_class": profile.source_class,
+                "suggested_ingestion_class": profile.suggested_ingestion_class,
+                "canonical_url": item.get("canonical_url"),
+                "role": profile.role,
+                "priority_tier": profile.priority_tier,
+                "priority_score_0_to_100": profile.priority_score_0_to_100,
+                "authority_score_1_to_5": profile.authority_score_1_to_5,
+                "lead_time_score_1_to_5": profile.lead_time_score_1_to_5,
+                "graph_centrality_score_1_to_5": profile.graph_centrality_score_1_to_5,
+                "market_impact_score_1_to_5": profile.market_impact_score_1_to_5,
+                "parse_utility_score_1_to_5": profile.parse_utility_score_1_to_5,
+                "jurisdiction": "local_workflow",
+                "category": item["category"],
+                "tier_section": item["tier_section"],
+                "target_domains": profile.target_domains,
+                "target_themes": _infer_target_themes(profile, item["category"], item["name"]),
+                "target_systems": [],
+                "ingestion_cadence": profile.ingestion_cadence,
+                "access_mode": "local_workflow",
+                "requires_login": False,
+                "expected_artifact_types": profile.expected_artifact_types,
+                "parser_focus": profile.parser_focus,
+                "status": "candidate",
+                "notes": item.get("notes", []),
+                "source_doc_refs": [
+                    _display_path(investigation_path),
+                    _display_path(matrix_path),
+                ],
+            }
+        )
 
     rows.sort(
         key=lambda row: (
@@ -869,6 +933,115 @@ def _coverage_target_classes(gap_flags: Dict[str, bool]) -> List[str]:
     return ordered
 
 
+def _next_promotion_target(graduation_status: str | None) -> str:
+    if graduation_status == "exploratory_only":
+        return "watchlist_candidate"
+    if graduation_status == "watchlist_candidate":
+        return "pick_candidate"
+    return "maintain_pick_quality"
+
+
+def _infer_target_companies(structural_parse: Dict[str, Any]) -> List[str]:
+    companies: List[str] = []
+    for entity in structural_parse.get("entities", []):
+        if entity.get("entity_type") not in {"PublicCompany", "ExpressionCandidate"}:
+            continue
+        name = entity.get("canonical_name")
+        if isinstance(name, str) and name and name not in companies:
+            companies.append(name)
+    return companies[:6]
+
+
+def _why_class_matters(source_class: str, target_companies: List[str]) -> str:
+    company_phrase = ", ".join(target_companies[:3]) if target_companies else "the current thesis names"
+    messages = {
+        "government_policy_enforcement": "adds policy transmission and export-control context that can change the dependency graph before consensus updates",
+        "government_industrial_base_award": "shows what strategic buyers or the state are funding as real bottlenecks",
+        "company_filing": f"anchors the thesis in formal disclosures from {company_phrase}",
+        "supplier_customer_disclosure": f"confirms supplier, customer, qualification, or production-readiness edges around {company_phrase}",
+        "foreign_exchange_filing": f"improves coverage for non-U.S. names tied to {company_phrase}",
+        "industry_body_and_standards": "validates whether the bottleneck exists at the ecosystem level rather than only in company narratives",
+        "technical_conference_material": "tests whether the architecture and component assumptions are actually showing up in real technical ecosystems",
+        "market_data_snapshot": "checks whether the proposed stock or LEAPS expression is actually tradable and justified",
+        "shipping_trade_flow_data": "validates cross-border concentration and physical flow assumptions",
+    }
+    return messages.get(source_class, "adds corroboration for the missing structural-evidence layer")
+
+
+def build_source_gap_report(
+    source_registry: Dict[str, Any],
+    *,
+    source_bundle: Dict[str, Any] | None = None,
+    structural_parse: Dict[str, Any] | None = None,
+    graduation: Dict[str, Any] | None = None,
+    source_acquisition_plan: Dict[str, Any] | None = None,
+    max_actions: int = 6,
+) -> Dict[str, Any]:
+    source_bundle = source_bundle or {}
+    structural_parse = structural_parse or {}
+    graduation = graduation or {}
+    source_acquisition_plan = source_acquisition_plan or {}
+
+    project_name = source_bundle.get("name") or "unnamed_project"
+    graduation_status = graduation.get("graduation_status")
+    next_target = _next_promotion_target(graduation_status)
+    gap_flags = _gap_flags(source_bundle, structural_parse, graduation)
+    blocking_gates = [
+        gate_name
+        for gate_name, passed in (graduation.get("gates") or {}).items()
+        if not passed
+    ]
+    required_source_classes = _coverage_target_classes(gap_flags)
+    target_companies = _infer_target_companies(structural_parse)
+
+    acquisition_rows = (
+        source_acquisition_plan.get("top_recommendations")
+        or source_acquisition_plan.get("monitoring_queue")
+        or []
+    )
+    if not acquisition_rows:
+        acquisition_rows = list(source_registry.get("rows", []))
+
+    targeted_next_steps: List[Dict[str, Any]] = []
+    for source_class in required_source_classes:
+        match = next(
+            (row for row in acquisition_rows if row.get("source_class") == source_class),
+            None,
+        )
+        if match is None:
+            match = next(
+                (row for row in source_registry.get("rows", []) if row.get("source_class") == source_class),
+                None,
+            )
+        if match is None:
+            continue
+        targeted_next_steps.append(
+            {
+                "source_class": source_class,
+                "recommended_source": match.get("name"),
+                "recommendation": match.get("recommendation", "monitor_weekly"),
+                "expected_artifact_types": match.get("expected_artifact_types", []),
+                "target_companies": target_companies,
+                "why_it_matters": _why_class_matters(source_class, target_companies),
+            }
+        )
+        if len(targeted_next_steps) >= max_actions:
+            break
+
+    return {
+        "report_version": "v1",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "project_name": project_name,
+        "graduation_status": graduation_status,
+        "next_promotion_target": next_target,
+        "blocking_gates": blocking_gates,
+        "gap_flags": gap_flags,
+        "required_source_classes": required_source_classes,
+        "target_companies": target_companies,
+        "targeted_next_steps": targeted_next_steps,
+    }
+
+
 def build_source_acquisition_plan(
     source_registry: Dict[str, Any],
     *,
@@ -986,4 +1159,5 @@ __all__ = [
     "DEFAULT_INVESTIGATION_PATH",
     "build_source_registry_from_docs",
     "build_source_acquisition_plan",
+    "build_source_gap_report",
 ]

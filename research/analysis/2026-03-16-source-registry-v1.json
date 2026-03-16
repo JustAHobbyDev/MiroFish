@@ -1,11 +1,11 @@
 {
   "registry_version": "v1",
-  "generated_at": "2026-03-16T15:14:22.933971+00:00",
+  "generated_at": "2026-03-16T15:25:15.219784+00:00",
   "generated_from": [
     "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
     "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
   ],
-  "row_count": 72,
+  "row_count": 74,
   "rows": [
     {
       "source_target_id": "src_target_arpa_e",
@@ -2690,6 +2690,64 @@
       ]
     },
     {
+      "source_target_id": "src_target_leaps_watchlist_refresh_workflow",
+      "name": "LEAPS watchlist refresh workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local watchlist and resale-scenario tooling for repeated expression checks.",
+        "Primary scripts: scripts/refresh_leaps_watchlist.py and scripts/estimate_leaps_resale_scenarios.py."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ]
+    },
+    {
       "source_target_id": "src_target_procurement_framework_announcements_fedbizopps_legacy_surfaces",
       "name": "Procurement framework announcements / FedBizOpps legacy surfaces",
       "source_family": "procurement_capex_guidance",
@@ -2736,6 +2794,64 @@
       "status": "candidate",
       "notes": [
         "Website listed in source text: <https://www.fbo.gov/>"
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ]
+    },
+    {
+      "source_target_id": "src_target_public_delayed_options_chain_capture_workflow",
+      "name": "Public delayed options chain capture workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local Playwright capture and normalization flow for delayed public chains.",
+        "Primary scripts: scripts/capture_options_chain_playwright.mjs and scripts/normalize_options_chain_snapshot.py."
       ],
       "source_doc_refs": [
         "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",

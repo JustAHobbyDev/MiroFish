@@ -1,0 +1,157 @@
+{
+  "report_version": "v1",
+  "generated_at": "2026-03-16T15:25:31.005310+00:00",
+  "project_name": "robotics_actuation_source_bundle_v1",
+  "graduation_status": "exploratory_only",
+  "next_promotion_target": "watchlist_candidate",
+  "blocking_gates": [
+    "source_gate",
+    "high_conviction_source_gate"
+  ],
+  "gap_flags": {
+    "needs_evidence_upgrade": true,
+    "needs_high_quality_sources": true,
+    "needs_industry_validation": true,
+    "needs_policy_context": true,
+    "needs_company_disclosures": true,
+    "needs_expression_validation": true,
+    "needs_cross_border_coverage": true
+  },
+  "required_source_classes": [
+    "government_policy_enforcement",
+    "government_industrial_base_award",
+    "company_filing",
+    "supplier_customer_disclosure",
+    "foreign_exchange_filing",
+    "industry_body_and_standards",
+    "technical_conference_material",
+    "market_data_snapshot",
+    "shipping_trade_flow_data"
+  ],
+  "target_companies": [
+    "Equity basket: MP / NEO / UUUU",
+    "ATI",
+    "CRS",
+    "MP",
+    "NEO",
+    "UUUU"
+  ],
+  "targeted_next_steps": [
+    {
+      "source_class": "government_policy_enforcement",
+      "recommended_source": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "recommendation": "monitor_event_driven",
+      "expected_artifact_types": [
+        "policy_notice",
+        "enforcement_notice",
+        "rule_update"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "adds policy transmission and export-control context that can change the dependency graph before consensus updates"
+    },
+    {
+      "source_class": "government_industrial_base_award",
+      "recommended_source": "ARPA-E",
+      "recommendation": "monitor_event_driven",
+      "expected_artifact_types": [
+        "award_notice",
+        "grant_announcement",
+        "contract_notice"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "shows what strategic buyers or the state are funding as real bottlenecks"
+    },
+    {
+      "source_class": "company_filing",
+      "recommended_source": "SEC EDGAR Database (10-K, 10-Q, 8-K, 20-F)",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "filing",
+        "annual_report",
+        "quarterly_report",
+        "material_event"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "anchors the thesis in formal disclosures from Equity basket: MP / NEO / UUUU, ATI, CRS"
+    },
+    {
+      "source_class": "supplier_customer_disclosure",
+      "recommended_source": "Partnership announcements",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "partnership_release",
+        "qualification_update",
+        "production_readiness"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "confirms supplier, customer, qualification, or production-readiness edges around Equity basket: MP / NEO / UUUU, ATI, CRS"
+    },
+    {
+      "source_class": "foreign_exchange_filing",
+      "recommended_source": "ASX (Australian Securities Exchange)",
+      "recommendation": "monitor_weekly",
+      "expected_artifact_types": [
+        "exchange_filing",
+        "issuer_disclosure",
+        "market_notice"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "improves coverage for non-U.S. names tied to Equity basket: MP / NEO / UUUU, ATI, CRS"
+    },
+    {
+      "source_class": "industry_body_and_standards",
+      "recommended_source": "Advanced Photonics Coalition",
+      "recommendation": "monitor_event_driven",
+      "expected_artifact_types": [
+        "industry_report",
+        "standard",
+        "roadmap",
+        "commentary"
+      ],
+      "target_companies": [
+        "Equity basket: MP / NEO / UUUU",
+        "ATI",
+        "CRS",
+        "MP",
+        "NEO",
+        "UUUU"
+      ],
+      "why_it_matters": "validates whether the bottleneck exists at the ecosystem level rather than only in company narratives"
+    }
+  ]
+}

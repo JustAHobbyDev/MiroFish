@@ -36,6 +36,10 @@ def test_build_source_registry_from_docs():
     assert linked_in["source_class"] == "job_posting_hiring_signal"
     assert linked_in["requires_login"] is True
 
+    market_data = rows_by_name["Public delayed options chain capture workflow"]
+    assert market_data["source_class"] == "market_data_snapshot"
+    assert market_data["access_mode"] == "local_workflow"
+
     assert Path(payload["generated_from"][0]).name == "2026-03-16-source-investigation-list-v1.md"
 
 
@@ -98,4 +102,69 @@ def test_build_source_acquisition_plan_for_robotics_parse():
     assert any(
         row["source_class"] == "company_filing"
         for row in plan["top_recommendations"]
+    )
+
+
+def test_build_source_gap_report_uses_blocking_gates_and_next_steps():
+    registry = source_registry.build_source_registry_from_docs()
+    source_bundle = {
+        "name": "robotics_actuation_source_bundle_v1",
+        "theme": "robotics_supply_chain",
+        "sources": [
+            {
+                "source_id": "src_alea_post",
+                "source_class": "investor_post",
+                "source_quality": "medium",
+                "usage_mode": "exploration",
+            }
+        ],
+    }
+    structural_parse = {
+        "entities": [
+            {"entity_type": "PublicCompany", "canonical_name": "MP"},
+            {"entity_type": "PublicCompany", "canonical_name": "NEO"},
+            {"entity_type": "ExpressionCandidate", "canonical_name": "MP 2027 call"},
+            {"entity_type": "Geography", "canonical_name": "China"},
+        ],
+        "relationships": [
+            {"relationship_type": "DEPENDS_ON"},
+        ],
+        "inferences": [
+            {"inference_type": "market_miss", "statement": "processing layer is underfollowed"},
+        ],
+    }
+    graduation = {
+        "graduation_status": "exploratory_only",
+        "gates": {
+            "source_gate": False,
+            "structure_gate": True,
+            "market_miss_gate": True,
+            "expression_gate": True,
+            "high_conviction_source_gate": False,
+        },
+    }
+    plan = source_registry.build_source_acquisition_plan(
+        registry,
+        source_bundle=source_bundle,
+        structural_parse=structural_parse,
+        graduation=graduation,
+        limit=8,
+    )
+    report = source_registry.build_source_gap_report(
+        registry,
+        source_bundle=source_bundle,
+        structural_parse=structural_parse,
+        graduation=graduation,
+        source_acquisition_plan=plan,
+    )
+
+    assert report["next_promotion_target"] == "watchlist_candidate"
+    assert "source_gate" in report["blocking_gates"]
+    assert "high_conviction_source_gate" in report["blocking_gates"]
+    assert "company_filing" in report["required_source_classes"]
+    assert "industry_body_and_standards" in report["required_source_classes"]
+    assert report["target_companies"][:2] == ["MP", "NEO"]
+    assert any(
+        step["source_class"] == "company_filing"
+        for step in report["targeted_next_steps"]
     )

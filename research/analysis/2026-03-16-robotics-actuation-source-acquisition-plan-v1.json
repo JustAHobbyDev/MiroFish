@@ -1,6 +1,6 @@
 {
   "plan_version": "v1",
-  "generated_at": "2026-03-16T15:21:32.209539+00:00",
+  "generated_at": "2026-03-16T15:25:31.003861+00:00",
   "project_name": "robotics_actuation_source_bundle_v1",
   "project_theme": "robotics_supply_chain",
   "project_domains": [
@@ -488,6 +488,73 @@
       ]
     },
     {
+      "source_target_id": "src_target_leaps_watchlist_refresh_workflow",
+      "name": "LEAPS watchlist refresh workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local watchlist and resale-scenario tooling for repeated expression checks.",
+        "Primary scripts: scripts/refresh_leaps_watchlist.py and scripts/estimate_leaps_resale_scenarios.py."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 64.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
       "source_target_id": "src_target_ihs_global_trade_atlas",
       "name": "IHS Global Trade Atlas",
       "source_family": "shipping_trade_flow_data",
@@ -615,7 +682,9 @@
         "upgrades exploratory inputs into graph-forming evidence",
         "adds higher-authority corroboration"
       ]
-    },
+    }
+  ],
+  "monitoring_queue": [
     {
       "source_target_id": "src_target_federal_register_notices",
       "name": "Federal Register Notices",
@@ -681,9 +750,7 @@
         "upgrades exploratory inputs into graph-forming evidence",
         "adds higher-authority corroboration"
       ]
-    }
-  ],
-  "monitoring_queue": [
+    },
     {
       "source_target_id": "src_target_government_accountability_office_gao_reports",
       "name": "Government Accountability Office (GAO) Reports",
@@ -691,72 +758,6 @@
       "source_class": "government_policy_enforcement",
       "suggested_ingestion_class": "government",
       "canonical_url": "https://www.gao.gov/",
-      "role": "graph_forming",
-      "priority_tier": "P0",
-      "priority_score_0_to_100": 100.0,
-      "authority_score_1_to_5": 5,
-      "lead_time_score_1_to_5": 5,
-      "graph_centrality_score_1_to_5": 5,
-      "market_impact_score_1_to_5": 5,
-      "parse_utility_score_1_to_5": 5,
-      "jurisdiction": "US",
-      "category": "Government policy and enforcement sources",
-      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
-      "target_domains": [
-        "semiconductors",
-        "ai_infrastructure",
-        "critical_materials",
-        "energy_infrastructure",
-        "robotics"
-      ],
-      "target_themes": [
-        "ai_infrastructure",
-        "critical_materials",
-        "energy_infrastructure",
-        "robotics",
-        "semiconductors"
-      ],
-      "target_systems": [],
-      "ingestion_cadence": "event-driven + weekly sweep",
-      "access_mode": "web_public",
-      "requires_login": false,
-      "expected_artifact_types": [
-        "policy_notice",
-        "enforcement_notice",
-        "rule_update"
-      ],
-      "parser_focus": [
-        "PolicyAction",
-        "Geography",
-        "MaterialInput",
-        "ProcessLayer",
-        "AFFECTED_BY_EVENT",
-        "CONSTRAINED_BY"
-      ],
-      "status": "candidate",
-      "notes": [],
-      "source_doc_refs": [
-        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
-        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
-      ],
-      "project_match_score_0_to_100": 75.0,
-      "gap_closure_score_0_to_100": 58.0,
-      "acquisition_score_0_to_100": 84.35,
-      "recommendation": "monitor_event_driven",
-      "reasons": [
-        "priority tier P0",
-        "targets semiconductors, ai_infrastructure, critical_materials",
-        "upgrades exploratory inputs into graph-forming evidence",
-        "adds higher-authority corroboration"
-      ]
-    },
-    {
-      "source_target_id": "src_target_national_institute_of_standards_and_technology_nist",
-      "name": "National Institute of Standards and Technology (NIST)",
-      "source_family": "government_policy_enforcement",
-      "source_class": "government_policy_enforcement",
-      "suggested_ingestion_class": "government",
-      "canonical_url": "https://www.nist.gov/",
       "role": "graph_forming",
       "priority_tier": "P0",
       "priority_score_0_to_100": 100.0,
@@ -1023,6 +1024,73 @@
       ]
     },
     {
+      "source_target_id": "src_target_public_delayed_options_chain_capture_workflow",
+      "name": "Public delayed options chain capture workflow",
+      "source_family": "market_data_snapshot",
+      "source_class": "market_data_snapshot",
+      "suggested_ingestion_class": "market_data_snapshot",
+      "canonical_url": null,
+      "role": "graph_confirming",
+      "priority_tier": "P1",
+      "priority_score_0_to_100": 80.0,
+      "authority_score_1_to_5": 4,
+      "lead_time_score_1_to_5": 4,
+      "graph_centrality_score_1_to_5": 3,
+      "market_impact_score_1_to_5": 5,
+      "parse_utility_score_1_to_5": 4,
+      "jurisdiction": "local_workflow",
+      "category": "Operational market-data workflows",
+      "tier_section": "Tier 2: High-Value Supporting Sources",
+      "target_domains": [
+        "equities",
+        "options",
+        "ai_infrastructure",
+        "photonics",
+        "critical_materials",
+        "robotics"
+      ],
+      "target_themes": [
+        "ai_infrastructure",
+        "critical_materials",
+        "equities",
+        "options",
+        "photonics",
+        "robotics"
+      ],
+      "target_systems": [],
+      "ingestion_cadence": "daily or multi-weekly for watchlist names",
+      "access_mode": "local_workflow",
+      "requires_login": false,
+      "expected_artifact_types": [
+        "price_snapshot",
+        "options_chain",
+        "liquidity_check"
+      ],
+      "parser_focus": [
+        "ExpressionCandidate",
+        "REPRICES_VIA",
+        "implementation_viability"
+      ],
+      "status": "candidate",
+      "notes": [
+        "Use the local Playwright capture and normalization flow for delayed public chains.",
+        "Primary scripts: scripts/capture_options_chain_playwright.mjs and scripts/normalize_options_chain_snapshot.py."
+      ],
+      "source_doc_refs": [
+        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
+        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
+      ],
+      "project_match_score_0_to_100": 75.0,
+      "gap_closure_score_0_to_100": 10.0,
+      "acquisition_score_0_to_100": 64.75,
+      "recommendation": "monitor_weekly",
+      "reasons": [
+        "priority tier P1",
+        "targets equities, options, ai_infrastructure",
+        "helps validate stock-vs-LEAPS expression quality"
+      ]
+    },
+    {
       "source_target_id": "src_target_mckinsey_on_semiconductors",
       "name": "McKinsey on Semiconductors",
       "source_family": "trade_press_specialist",
@@ -1273,72 +1341,6 @@
         "priority tier P2",
         "targets critical_materials, semiconductors, energy_infrastructure",
         "improves cross-border and concentration coverage"
-      ]
-    },
-    {
-      "source_target_id": "src_target_office_of_foreign_assets_control_ofac_u_s_treasury",
-      "name": "Office of Foreign Assets Control (OFAC), U.S. Treasury",
-      "source_family": "government_policy_enforcement",
-      "source_class": "government_policy_enforcement",
-      "suggested_ingestion_class": "government",
-      "canonical_url": "https://home.treasury.gov/policy-issues/office-of-foreign-assets-control-sanctions-programs-and-information",
-      "role": "graph_forming",
-      "priority_tier": "P0",
-      "priority_score_0_to_100": 100.0,
-      "authority_score_1_to_5": 5,
-      "lead_time_score_1_to_5": 5,
-      "graph_centrality_score_1_to_5": 5,
-      "market_impact_score_1_to_5": 5,
-      "parse_utility_score_1_to_5": 5,
-      "jurisdiction": "US",
-      "category": "Government policy and enforcement sources",
-      "tier_section": "Tier 1: Highest-Value Ingestion Targets",
-      "target_domains": [
-        "semiconductors",
-        "ai_infrastructure",
-        "critical_materials",
-        "energy_infrastructure",
-        "robotics"
-      ],
-      "target_themes": [
-        "ai_infrastructure",
-        "critical_materials",
-        "energy_infrastructure",
-        "robotics",
-        "semiconductors"
-      ],
-      "target_systems": [],
-      "ingestion_cadence": "event-driven + weekly sweep",
-      "access_mode": "web_public",
-      "requires_login": false,
-      "expected_artifact_types": [
-        "policy_notice",
-        "enforcement_notice",
-        "rule_update"
-      ],
-      "parser_focus": [
-        "PolicyAction",
-        "Geography",
-        "MaterialInput",
-        "ProcessLayer",
-        "AFFECTED_BY_EVENT",
-        "CONSTRAINED_BY"
-      ],
-      "status": "candidate",
-      "notes": [],
-      "source_doc_refs": [
-        "docs/research-frameworks/2026-03-16-source-investigation-list-v1.md",
-        "docs/research-frameworks/2026-03-16-source-priority-matrix-v1.md"
-      ],
-      "project_match_score_0_to_100": 75.0,
-      "gap_closure_score_0_to_100": 58.0,
-      "acquisition_score_0_to_100": 84.35,
-      "recommendation": "monitor_event_driven",
-      "reasons": [
-        "priority tier P0",
-        "targets semiconductors, ai_infrastructure, critical_materials",
-        "upgrades exploratory inputs into graph-forming evidence",
-        "adds higher-authority corroboration"
       ]
     }
   ]
