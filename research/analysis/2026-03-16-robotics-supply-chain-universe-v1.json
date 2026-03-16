@@ -1,0 +1,185 @@
+{
+  "name": "robotics_supply_chain_universe_v1",
+  "source": "User-provided AleaBito-style robotics materials list",
+  "notes": [
+    "This is a universe-construction artifact, not a final pick list.",
+    "Anchors are names that make the chain legible; satellites are the more asymmetric supplier candidates.",
+    "Expression suitability is a rough first pass only."
+  ],
+  "anchors": [
+    {
+      "ticker": "MP",
+      "role": "anchor",
+      "chain_bucket": "magnet_metals",
+      "thesis_role": "domestic rare earth and magnet sovereignty anchor",
+      "expression_priority": "options_eligible"
+    },
+    {
+      "ticker": "NEO",
+      "role": "anchor",
+      "chain_bucket": "magnet_metals",
+      "thesis_role": "western NdFeB powder and alloy anchor",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "ATI",
+      "role": "anchor",
+      "chain_bucket": "structural_metallurgy",
+      "thesis_role": "high-performance titanium and specialty alloy anchor",
+      "expression_priority": "options_eligible"
+    },
+    {
+      "ticker": "CRS",
+      "role": "anchor",
+      "chain_bucket": "structural_metallurgy",
+      "thesis_role": "specialty structural alloy anchor",
+      "expression_priority": "options_eligible"
+    }
+  ],
+  "rows": [
+    {
+      "ticker": "UUUU",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "nd_pr_processing",
+      "thesis_role": "monazite processing into high-purity rare-earth products",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "ALOY",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "heavy_rare_earth_alloys",
+      "thesis_role": "heavy rare earth oxide to defense-grade alloy conversion",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "USAR",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "ndfeb_magnet_manufacturing",
+      "thesis_role": "domestic heavy rare earth processing and sintered NdFeB magnet manufacturing",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "LYSDY",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "heavy_rare_earth_separation",
+      "thesis_role": "separated heavy rare earth production outside China",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "ILU",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "rare_earth_refining",
+      "thesis_role": "Australia-linked rare earth refinery exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "ARU",
+      "role": "satellite",
+      "chain_bucket": "magnet_metals",
+      "sub_bucket": "ndpr_oxide",
+      "thesis_role": "ore-to-oxide NdPr development",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "FCX",
+      "role": "anchor",
+      "chain_bucket": "structural_metallurgy",
+      "sub_bucket": "molybdenum_and_copper",
+      "thesis_role": "molybdenum and copper exposure across robotics and electrification hardware",
+      "expression_priority": "options_eligible"
+    },
+    {
+      "ticker": "NB",
+      "role": "satellite",
+      "chain_bucket": "structural_metallurgy",
+      "sub_bucket": "niobium_scandium_titanium",
+      "thesis_role": "domestic niobium, scandium, and titanium project exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "MTRN",
+      "role": "satellite",
+      "chain_bucket": "structural_metallurgy",
+      "sub_bucket": "beryllium",
+      "thesis_role": "beryllium processing exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "LGO",
+      "role": "satellite",
+      "chain_bucket": "structural_metallurgy",
+      "sub_bucket": "vanadium",
+      "thesis_role": "public vanadium processing exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "BMM",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "gallium_germanium",
+      "thesis_role": "onshore supply and processing for gallium and germanium",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "VNP",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "gallium_germanium_indium",
+      "thesis_role": "advanced sensor and electronics exposure through gallium, germanium, and indium",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "TECK",
+      "role": "anchor",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "germanium",
+      "thesis_role": "significant germanium production outside China",
+      "expression_priority": "options_eligible"
+    },
+    {
+      "ticker": "ALB",
+      "role": "anchor",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "lithium",
+      "thesis_role": "lithium extraction exposure for robotics battery systems",
+      "expression_priority": "options_eligible"
+    },
+    {
+      "ticker": "EAF",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "graphite",
+      "thesis_role": "high-purity graphite exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "ALTM",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "lithium",
+      "thesis_role": "western lithium exposure for battery supply",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "SYR",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "graphite",
+      "thesis_role": "Balama graphite exposure",
+      "expression_priority": "equity_first"
+    },
+    {
+      "ticker": "AW1",
+      "role": "satellite",
+      "chain_bucket": "compute_perception_power",
+      "sub_bucket": "gallium_indium",
+      "thesis_role": "domestic geological source exposure for high-grade gallium and indium",
+      "expression_priority": "equity_first"
+    }
+  ]
+}
