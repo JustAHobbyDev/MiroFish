@@ -61,6 +61,19 @@ This is directionally right:
 - `MP` is evidence-strong enough to enter the ranked pick flow directly
 - `SIVE` is promising enough to track, but still flagged by its weaker source mix
 
+After the market-data-aware conversion pass, the handoff no longer treats both
+names the same way:
+
+- `MP` now carries explicit local options evidence:
+  - public chain snapshots
+  - watchlist observations
+  - resale-scenario checks
+  - same-capital strike rescreen data
+- `SIVE` now carries an explicit lack-of-options-evidence penalty because there
+  is no usable long-dated chain data in the repo yet
+
+That makes the expression layer much less heuristic than the original handoff.
+
 ## Why this matters
 
 Before this handoff, the structural parser and the pick engine were still
@@ -79,9 +92,12 @@ This is still an early version of the handoff.
 
 Current limitations:
 
-- signal blocks are derived heuristically from graduation scores and parse shape
-- the handoff currently prefers `shares` by default for both promoted names
-- there is no direct market-data or options-chain feedback in the handoff layer
+- the conversion layer still relies on local research artifacts rather than live
+  market-data ingestion
+- `MP` and `SIVE` are not yet being evaluated against the same breadth of
+  options evidence
+- the handoff can now see market-data checks, but the final ranking still
+  ignores promotion status beyond the candidate-row metadata
 
 That is acceptable for now because the main goal was:
 
@@ -92,7 +108,7 @@ That is acceptable for now because the main goal was:
 
 Use this handoff on future parses by default, then refine the conversion logic:
 
-- make the auto-generated signals more grounded in actual parse content
-- incorporate market-data validation for `pick_candidate` names
+- widen market-data checks beyond the small local watchlist/rescreen set
+- make promotion status a cleaner ranking input instead of metadata only
 - allow watchlist candidates like `SIVE` to auto-upgrade only after a defined
   corroboration step

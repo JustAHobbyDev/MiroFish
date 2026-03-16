@@ -2,187 +2,6 @@
   "method": "market scan -> mispricing score -> stock-vs-LEAPS choice -> ranked picks",
   "rows": [
     {
-      "name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
-      "underlying": "MP",
-      "market_theme": "Rare Earth Magnet Sovereignty",
-      "promotion_status": "pick_candidate",
-      "promotion_score_0_to_100": 96.1,
-      "thesis": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
-      "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
-      "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
-      "why_missed": [
-        "market framing appears stale relative to the structural role",
-        "the market may still anchor on an outdated business description"
-      ],
-      "catalysts": [
-        "MP DoD Mine-to-Magnet Partnership"
-      ],
-      "invalidations": [
-        "MP fails to scale beyond a partial magnet-manufacturing foothold",
-        "non-China capacity expands broadly enough to collapse scarcity value",
-        "policy support does not translate into durable economics"
-      ],
-      "asymmetry_signals": {
-        "ecosystem_centrality": 5.0,
-        "downstream_valuation_gap": 4.8,
-        "microcap_rerating_potential": 3.2
-      },
-      "mispricing": {
-        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
-        "score_type": "mispricing",
-        "score_0_to_100": 83.94,
-        "band": "critical",
-        "weighted_signals": {
-          "hiddenness": 0.624,
-          "recognition_gap": 0.768,
-          "catalyst_clarity": 0.5,
-          "propagation_asymmetry": 0.7,
-          "duration_mismatch": 0.49,
-          "evidence_quality": 0.368,
-          "crowding_inverse": 0.369,
-          "valuation_nonlinearity": 0.378
-        },
-        "strongest_drivers": [
-          [
-            "recognition_gap",
-            0.768
-          ],
-          [
-            "propagation_asymmetry",
-            0.7
-          ],
-          [
-            "hiddenness",
-            0.624
-          ]
-        ],
-        "weakest_drivers": [
-          [
-            "evidence_quality",
-            0.368
-          ],
-          [
-            "crowding_inverse",
-            0.369
-          ]
-        ],
-        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 83.9/100 (critical) on mispricing plausibility. The strongest weighted drivers are recognition gap, propagation asymmetry, hiddenness. The least supportive signals are evidence quality, crowding inverse. This screen is a structural ranking aid, not live options pricing."
-      },
-      "options_fit": {
-        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
-        "score_type": "options_fit",
-        "score_0_to_100": 64.52,
-        "band": "moderate",
-        "weighted_signals": {
-          "convexity_need": 0.504,
-          "tenor_alignment": 0.9,
-          "vol_expansion_potential": 0.45,
-          "downside_definedness": 0.308,
-          "liquidity_path": 0.144,
-          "implementation_simplicity": 0.42,
-          "catalyst_timing_specificity": 0.5
-        },
-        "strongest_drivers": [
-          [
-            "tenor_alignment",
-            0.9
-          ],
-          [
-            "convexity_need",
-            0.504
-          ],
-          [
-            "catalyst_timing_specificity",
-            0.5
-          ]
-        ],
-        "weakest_drivers": [
-          [
-            "liquidity_path",
-            0.144
-          ],
-          [
-            "downside_definedness",
-            0.308
-          ]
-        ],
-        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 64.5/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, catalyst timing specificity. The least supportive signals are liquidity path, downside definedness. This screen helps decide whether options are a sensible expression path."
-      },
-      "leaps_bias": {
-        "score_0_to_100": 24.4,
-        "weighted_signals": {
-          "iv_cheapness": 0.24,
-          "surface_staleness": 0.18,
-          "pre_expiration_repricing_potential": 0.528,
-          "stock_vs_call_convexity_advantage": 0.192,
-          "long_dated_liquidity_quality": 0.08
-        },
-        "strongest_drivers": [
-          [
-            "pre_expiration_repricing_potential",
-            0.528
-          ],
-          [
-            "iv_cheapness",
-            0.24
-          ],
-          [
-            "stock_vs_call_convexity_advantage",
-            0.192
-          ]
-        ],
-        "weakest_drivers": [
-          [
-            "surface_staleness",
-            0.18
-          ],
-          [
-            "long_dated_liquidity_quality",
-            0.08
-          ]
-        ]
-      },
-      "stock_fit": {
-        "score_0_to_100": 91.12,
-        "weighted_signals": {
-          "market_accessibility": 0.42,
-          "implementation_simplicity": 0.504,
-          "balance_sheet_resilience": 0.644,
-          "dilution_risk_inverse": 0.552,
-          "thesis_linearity": 0.9,
-          "duration_tolerance": 1.056,
-          "listing_quality": 0.48
-        },
-        "strongest_drivers": [
-          [
-            "duration_tolerance",
-            1.056
-          ],
-          [
-            "thesis_linearity",
-            0.9
-          ],
-          [
-            "balance_sheet_resilience",
-            0.644
-          ]
-        ],
-        "weakest_drivers": [
-          [
-            "listing_quality",
-            0.48
-          ],
-          [
-            "market_accessibility",
-            0.42
-          ]
-        ]
-      },
-      "final_expression": "shares",
-      "asymmetry_bonus": 9.59,
-      "pick_score": 80.61
-    },
-    {
       "name": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply",
       "underlying": "SIVE",
       "market_theme": "CPO / Silicon Photonics Laser Supply",
@@ -206,136 +25,469 @@
         "Sivers remains unable to scale laser production competitively",
         "balance-sheet improvement proves insufficient and dilution dominates the equity story"
       ],
+      "parse_evidence_summary": {
+        "total_sources": 6,
+        "evidence_sources": 5,
+        "high_quality_sources": 6,
+        "independent_sources": 0,
+        "company_driven_sources": 6,
+        "source_class_diversity": 1,
+        "source_classes": [
+          "company_release"
+        ],
+        "supporting_source_classes": [
+          "company_release"
+        ],
+        "entity_count": 17,
+        "relationship_count": 15,
+        "claim_count": 6,
+        "evidence_link_count": 22,
+        "inference_count": 1,
+        "evidence_links_per_claim": 3.67,
+        "process_layer_count": 2,
+        "event_count": 6,
+        "expression_count": 1,
+        "public_company_count": 2,
+        "related_company_count": 1,
+        "related_companies": [
+          "POET"
+        ],
+        "supplied_by_count": 2,
+        "depends_on_count": 2,
+        "constrained_by_count": 0,
+        "reprices_via_count": 3,
+        "affected_by_event_count": 4,
+        "part_of_count": 2,
+        "market_miss_confidence": "medium",
+        "market_miss_confidence_score_0_to_100": 70.0,
+        "market_miss_derived_claim_count": 5,
+        "market_miss_derived_relationship_count": 10,
+        "catalyst_count": 3,
+        "invalidation_count": 3,
+        "statement": "The market may still treat Sivers as a messy small Nordic photonics company even though it appears to sit upstream of multiple emerging external-light-source and optical-I/O architectures with improving manufacturing and balance-sheet readiness.",
+        "upstream_marker_score_0_to_100": 20.0,
+        "stale_frame_marker_score_0_to_100": 20.0,
+        "messy_small_marker_score_0_to_100": 60.0
+      },
+      "market_data_checks": {
+        "snapshot_count": 0,
+        "latest_snapshot_path": null,
+        "has_long_dated_options": false,
+        "quoted_contract_count": 0,
+        "liquid_contract_count": 0,
+        "best_open_interest": 0,
+        "best_relative_spread": null,
+        "best_implied_volatility": null,
+        "watchlist_entry_present": false,
+        "watchlist_option_symbol": null,
+        "watchlist_mid": null,
+        "watchlist_open_interest": null,
+        "watchlist_relative_spread": null,
+        "watchlist_implied_volatility": null,
+        "resale_scenario_count": 0,
+        "positive_resale_scenario_count": 0,
+        "positive_resale_scenario_ratio": 0.0,
+        "flat_iv_up_positive": false,
+        "best_bullish_return_pct": null,
+        "mean_bullish_return_pct": null,
+        "rescreen_candidate_count": 0,
+        "positive_rescreen_count": 0,
+        "best_bullish_excess_vs_stock_mean": null,
+        "best_same_capital_contract": null,
+        "long_dated_liquidity_quality_score_0_to_100": 0.0
+      },
       "asymmetry_signals": {
-        "ecosystem_centrality": 4.7,
-        "downstream_valuation_gap": 4.2,
-        "microcap_rerating_potential": 4.0
+        "ecosystem_centrality": 3.3,
+        "downstream_valuation_gap": 2.3,
+        "microcap_rerating_potential": 3.9
       },
       "mispricing": {
         "candidate_name": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply",
         "score_type": "mispricing",
-        "score_0_to_100": 78.78,
+        "score_0_to_100": 75.48,
         "band": "high",
         "weighted_signals": {
-          "hiddenness": 0.696,
-          "recognition_gap": 0.672,
-          "catalyst_clarity": 0.5,
-          "propagation_asymmetry": 0.658,
+          "hiddenness": 0.864,
+          "recognition_gap": 0.544,
+          "catalyst_clarity": 0.47,
+          "propagation_asymmetry": 0.476,
           "duration_mismatch": 0.44,
-          "evidence_quality": 0.28,
-          "crowding_inverse": 0.315,
-          "valuation_nonlinearity": 0.378
+          "evidence_quality": 0.368,
+          "crowding_inverse": 0.405,
+          "valuation_nonlinearity": 0.207
         },
         "strongest_drivers": [
           [
             "hiddenness",
-            0.696
+            0.864
           ],
           [
             "recognition_gap",
-            0.672
+            0.544
           ],
           [
             "propagation_asymmetry",
-            0.658
+            0.476
           ]
         ],
         "weakest_drivers": [
           [
-            "evidence_quality",
-            0.28
+            "valuation_nonlinearity",
+            0.207
           ],
           [
-            "crowding_inverse",
-            0.315
+            "evidence_quality",
+            0.368
           ]
         ],
-        "explanation": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply scores 78.8/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are evidence quality, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+        "explanation": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply scores 75.5/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, evidence quality. This screen is a structural ranking aid, not live options pricing."
       },
       "options_fit": {
         "candidate_name": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply",
         "score_type": "options_fit",
-        "score_0_to_100": 64.52,
+        "score_0_to_100": 48.64,
         "band": "moderate",
         "weighted_signals": {
           "convexity_need": 0.504,
-          "tenor_alignment": 0.9,
-          "vol_expansion_potential": 0.45,
-          "downside_definedness": 0.308,
-          "liquidity_path": 0.144,
-          "implementation_simplicity": 0.42,
-          "catalyst_timing_specificity": 0.5
+          "tenor_alignment": 0.63,
+          "vol_expansion_potential": 0.54,
+          "downside_definedness": 0.168,
+          "liquidity_path": 0.06,
+          "implementation_simplicity": 0.05,
+          "catalyst_timing_specificity": 0.48
         },
         "strongest_drivers": [
           [
             "tenor_alignment",
-            0.9
+            0.63
+          ],
+          [
+            "vol_expansion_potential",
+            0.54
           ],
           [
             "convexity_need",
             0.504
-          ],
-          [
-            "catalyst_timing_specificity",
-            0.5
           ]
         ],
         "weakest_drivers": [
           [
-            "liquidity_path",
-            0.144
+            "implementation_simplicity",
+            0.05
           ],
           [
-            "downside_definedness",
-            0.308
+            "liquidity_path",
+            0.06
           ]
         ],
-        "explanation": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply scores 64.5/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, catalyst timing specificity. The least supportive signals are liquidity path, downside definedness. This screen helps decide whether options are a sensible expression path."
+        "explanation": "SIVE structural watchlist on CPO / Silicon Photonics Laser Supply scores 48.6/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, convexity need. The least supportive signals are implementation simplicity, liquidity path. This screen helps decide whether options are a sensible expression path."
       },
       "leaps_bias": {
-        "score_0_to_100": 24.4,
+        "score_0_to_100": 11.44,
         "weighted_signals": {
-          "iv_cheapness": 0.24,
-          "surface_staleness": 0.18,
-          "pre_expiration_repricing_potential": 0.528,
-          "stock_vs_call_convexity_advantage": 0.192,
-          "long_dated_liquidity_quality": 0.08
+          "iv_cheapness": 0.12,
+          "surface_staleness": 0.09,
+          "pre_expiration_repricing_potential": 0.192,
+          "stock_vs_call_convexity_advantage": 0.12,
+          "long_dated_liquidity_quality": 0.05
         },
         "strongest_drivers": [
           [
             "pre_expiration_repricing_potential",
-            0.528
+            0.192
           ],
           [
             "iv_cheapness",
-            0.24
+            0.12
           ],
           [
             "stock_vs_call_convexity_advantage",
-            0.192
+            0.12
           ]
         ],
         "weakest_drivers": [
           [
             "surface_staleness",
-            0.18
+            0.09
           ],
           [
             "long_dated_liquidity_quality",
-            0.08
+            0.05
           ]
         ]
       },
       "stock_fit": {
-        "score_0_to_100": 78.36,
+        "score_0_to_100": 75.04,
         "weighted_signals": {
-          "market_accessibility": 0.42,
-          "implementation_simplicity": 0.504,
-          "balance_sheet_resilience": 0.42,
-          "dilution_risk_inverse": 0.324,
-          "thesis_linearity": 0.846,
+          "market_accessibility": 0.37,
+          "implementation_simplicity": 0.48,
+          "balance_sheet_resilience": 0.448,
+          "dilution_risk_inverse": 0.408,
+          "thesis_linearity": 0.756,
+          "duration_tolerance": 0.858,
+          "listing_quality": 0.432
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.858
+          ],
+          [
+            "thesis_linearity",
+            0.756
+          ],
+          [
+            "implementation_simplicity",
+            0.48
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.408
+          ],
+          [
+            "market_accessibility",
+            0.37
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 7.9,
+      "pick_score": 70.17
+    },
+    {
+      "name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+      "underlying": "MP",
+      "market_theme": "Rare Earth Magnet Sovereignty",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 96.1,
+      "thesis": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+      "bottleneck_layer": "Sintered NdFeB Magnet Manufacturing",
+      "value_capture_layer": "Sintered NdFeB Magnet Manufacturing",
+      "why_missed": [
+        "market framing appears stale relative to the structural role",
+        "the market may still anchor on an outdated business description"
+      ],
+      "catalysts": [
+        "MP DoD Mine-to-Magnet Partnership"
+      ],
+      "invalidations": [
+        "MP fails to scale beyond a partial magnet-manufacturing foothold",
+        "non-China capacity expands broadly enough to collapse scarcity value",
+        "policy support does not translate into durable economics"
+      ],
+      "parse_evidence_summary": {
+        "total_sources": 5,
+        "evidence_sources": 5,
+        "high_quality_sources": 5,
+        "independent_sources": 3,
+        "company_driven_sources": 2,
+        "source_class_diversity": 4,
+        "source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "policy_tracker"
+        ],
+        "supporting_source_classes": [
+          "company_release",
+          "government",
+          "industry_body",
+          "policy_tracker"
+        ],
+        "entity_count": 20,
+        "relationship_count": 15,
+        "claim_count": 7,
+        "evidence_link_count": 23,
+        "inference_count": 1,
+        "evidence_links_per_claim": 3.29,
+        "process_layer_count": 2,
+        "event_count": 3,
+        "expression_count": 1,
+        "public_company_count": 1,
+        "related_company_count": 0,
+        "related_companies": [],
+        "supplied_by_count": 1,
+        "depends_on_count": 1,
+        "constrained_by_count": 2,
+        "reprices_via_count": 1,
+        "affected_by_event_count": 4,
+        "part_of_count": 0,
+        "market_miss_confidence": "high",
+        "market_miss_confidence_score_0_to_100": 100.0,
+        "market_miss_derived_claim_count": 6,
+        "market_miss_derived_relationship_count": 8,
+        "catalyst_count": 1,
+        "invalidation_count": 3,
+        "statement": "The market may still frame MP too narrowly as a mining story even though the company is becoming a policy-backed mine-to-magnet platform tied to the most constrained layers.",
+        "upstream_marker_score_0_to_100": 0.0,
+        "stale_frame_marker_score_0_to_100": 60.0,
+        "messy_small_marker_score_0_to_100": 0.0
+      },
+      "market_data_checks": {
+        "snapshot_count": 2,
+        "latest_snapshot_path": "research/options-data/2026-03-15/MP-chain-yahoo.json",
+        "has_long_dated_options": true,
+        "quoted_contract_count": 97,
+        "liquid_contract_count": 26,
+        "best_open_interest": 10067,
+        "best_relative_spread": 0.0408,
+        "best_implied_volatility": 0.8408,
+        "watchlist_entry_present": true,
+        "watchlist_option_symbol": "MP270115C00070000",
+        "watchlist_mid": 10.825,
+        "watchlist_open_interest": 7947,
+        "watchlist_relative_spread": 0.0508,
+        "watchlist_implied_volatility": 0.7214,
+        "resale_scenario_count": 6,
+        "positive_resale_scenario_count": 4,
+        "positive_resale_scenario_ratio": 0.67,
+        "flat_iv_up_positive": true,
+        "best_bullish_return_pct": 52.44,
+        "mean_bullish_return_pct": 46.71,
+        "rescreen_candidate_count": 8,
+        "positive_rescreen_count": 8,
+        "best_bullish_excess_vs_stock_mean": 820.96,
+        "best_same_capital_contract": {
+          "option_symbol": "MP270115C00030000",
+          "strike": 30.0,
+          "open_interest": 8168,
+          "relative_spread": 0.0762,
+          "bullish_excess_vs_stock_mean": 820.96
+        },
+        "long_dated_liquidity_quality_score_0_to_100": 91.22
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 2.9,
+        "downstream_valuation_gap": 1.8,
+        "microcap_rerating_potential": 1.4
+      },
+      "mispricing": {
+        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+        "score_type": "mispricing",
+        "score_0_to_100": 62.94,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.504,
+          "recognition_gap": 0.608,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.448,
+          "duration_mismatch": 0.49,
+          "evidence_quality": 0.392,
+          "crowding_inverse": 0.171,
+          "valuation_nonlinearity": 0.234
+        },
+        "strongest_drivers": [
+          [
+            "recognition_gap",
+            0.608
+          ],
+          [
+            "hiddenness",
+            0.504
+          ],
+          [
+            "duration_mismatch",
+            0.49
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "crowding_inverse",
+            0.171
+          ],
+          [
+            "valuation_nonlinearity",
+            0.234
+          ]
+        ],
+        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 62.9/100 (moderate) on mispricing plausibility. The strongest weighted drivers are recognition gap, hiddenness, duration mismatch. The least supportive signals are crowding inverse, valuation nonlinearity. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "MP promoted structural pick on Rare Earth Magnet Sovereignty",
+        "score_type": "options_fit",
+        "score_0_to_100": 73.4,
+        "band": "high",
+        "weighted_signals": {
+          "convexity_need": 0.396,
+          "tenor_alignment": 0.72,
+          "vol_expansion_potential": 0.702,
+          "downside_definedness": 0.63,
+          "liquidity_path": 0.552,
+          "implementation_simplicity": 0.44,
+          "catalyst_timing_specificity": 0.23
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.72
+          ],
+          [
+            "vol_expansion_potential",
+            0.702
+          ],
+          [
+            "downside_definedness",
+            0.63
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "catalyst_timing_specificity",
+            0.23
+          ],
+          [
+            "convexity_need",
+            0.396
+          ]
+        ],
+        "explanation": "MP promoted structural pick on Rare Earth Magnet Sovereignty scores 73.4/100 (high) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, downside definedness. The least supportive signals are catalyst timing specificity, convexity need. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 86.0,
+        "weighted_signals": {
+          "iv_cheapness": 1.08,
+          "surface_staleness": 0.648,
+          "pre_expiration_repricing_potential": 0.912,
+          "stock_vs_call_convexity_advantage": 1.2,
+          "long_dated_liquidity_quality": 0.46
+        },
+        "strongest_drivers": [
+          [
+            "stock_vs_call_convexity_advantage",
+            1.2
+          ],
+          [
+            "iv_cheapness",
+            1.08
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.912
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.648
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.46
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 80.04,
+        "weighted_signals": {
+          "market_accessibility": 0.43,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.602,
+          "dilution_risk_inverse": 0.48,
+          "thesis_linearity": 0.522,
           "duration_tolerance": 0.924,
-          "listing_quality": 0.48
+          "listing_quality": 0.504
         },
         "strongest_drivers": [
           [
@@ -343,28 +495,28 @@
             0.924
           ],
           [
-            "thesis_linearity",
-            0.846
+            "balance_sheet_resilience",
+            0.602
           ],
           [
             "implementation_simplicity",
-            0.504
+            0.54
           ]
         ],
         "weakest_drivers": [
           [
-            "market_accessibility",
-            0.42
+            "dilution_risk_inverse",
+            0.48
           ],
           [
-            "dilution_risk_inverse",
-            0.324
+            "market_accessibility",
+            0.43
           ]
         ]
       },
-      "final_expression": "shares",
-      "asymmetry_bonus": 9.4,
-      "pick_score": 74.31
+      "final_expression": "leaps_call",
+      "asymmetry_bonus": 5.17,
+      "pick_score": 62.97
     }
   ]
 }

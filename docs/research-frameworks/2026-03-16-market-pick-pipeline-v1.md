@@ -51,6 +51,12 @@ The output is not an ontology or a memo. The output is a pick list with one of:
    - downstream valuation gap
    - microcap rerating potential
 
+   For auto-generated rows from promoted structural parses, these signals should
+   now be derived from two explicit blocks instead of ad hoc defaults:
+
+   - `parse_evidence_summary`
+   - `market_data_checks`
+
 3. `Score expression quality`
    Score both:
    - `options_fit`
@@ -132,3 +138,6 @@ The new structural-parse graduation layer means breadth does not have to come
 only from manual rows anymore. MiroFish can now promote parses into candidate
 rows automatically when the source mix and market-miss inference are strong
 enough.
+
+The next quality step is making the auto-generated market-data checks broader
+and less dependent on the current small local options-research artifact set.

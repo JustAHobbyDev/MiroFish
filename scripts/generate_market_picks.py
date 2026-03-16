@@ -303,6 +303,8 @@ def main() -> int:
                 "why_missed": row.get("why_missed", []),
                 "catalysts": row.get("catalysts", []),
                 "invalidations": row.get("invalidations", []),
+                "parse_evidence_summary": row.get("parse_evidence_summary", {}),
+                "market_data_checks": row.get("market_data_checks", {}),
                 "asymmetry_signals": row.get("asymmetry_signals", {}),
                 "mispricing": mispricing_scorecard.mispricing.to_dict(),
                 "options_fit": mispricing_scorecard.options_fit.to_dict(),
