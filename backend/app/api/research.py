@@ -6,6 +6,7 @@ research projects, without changing the existing simulation flow.
 """
 
 import traceback
+from pathlib import Path
 
 from flask import jsonify, request
 
@@ -16,6 +17,7 @@ from ..services import (
     MispricingSignals,
     OptionsExpressionSignals,
     build_research_ontology_spec,
+    build_source_registry_from_docs,
     build_structural_parse_from_source_bundle,
     screen_candidates,
 )
@@ -176,6 +178,97 @@ def save_source_bundle(research_project_id: str):
         }), 404
     except Exception as e:
         logger.error(f"保存 source bundle 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/source-registry", methods=["GET"])
+def get_source_registry(research_project_id: str):
+    """Return the saved source registry for a research project."""
+    project = ResearchProjectManager.get_project(research_project_id)
+    if not project:
+        return jsonify({
+            "success": False,
+            "error": f"研究项目不存在: {research_project_id}",
+        }), 404
+
+    return jsonify({
+        "success": True,
+        "data": ResearchProjectManager.get_source_registry(research_project_id),
+    })
+
+
+@research_bp.route("/project/<research_project_id>/source-registry", methods=["POST"])
+def save_source_registry(research_project_id: str):
+    """Persist a structured source registry for a research project."""
+    try:
+        source_registry = request.get_json() or {}
+        if not isinstance(source_registry, dict):
+            return jsonify({
+                "success": False,
+                "error": "source registry payload must be an object",
+            }), 400
+
+        project = ResearchProjectManager.save_source_registry(
+            research_project_id, source_registry
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "source_registry": source_registry,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 source registry 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/source-registry/import", methods=["POST"])
+def import_source_registry(research_project_id: str):
+    """Seed a source registry from the current canonical docs."""
+    try:
+        payload = request.get_json(silent=True) or {}
+        matrix_path = payload.get("matrix_path")
+        investigation_path = payload.get("investigation_path")
+        source_registry = build_source_registry_from_docs(
+            investigation_path=Path(investigation_path) if investigation_path else None,
+            matrix_path=Path(matrix_path) if matrix_path else None,
+        )
+        project = ResearchProjectManager.save_source_registry(
+            research_project_id, source_registry
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "source_registry": source_registry,
+            },
+        })
+    except FileNotFoundError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 400
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"导入 source registry 失败: {str(e)}")
         return jsonify({
             "success": False,
             "error": str(e),

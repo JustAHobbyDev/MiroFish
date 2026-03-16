@@ -85,6 +85,18 @@ def test_research_project_manager_round_trip(tmp_path):
             project.research_project_id,
             [{"candidate_name": "CoWoS", "severity": {"score_0_to_100": 90.8}}],
         )
+        ResearchProjectManager.save_source_registry(
+            project.research_project_id,
+            {
+                "rows": [
+                    {
+                        "source_target_id": "src_target_sec_edgar",
+                        "name": "SEC EDGAR",
+                        "source_class": "company_filing",
+                    }
+                ]
+            },
+        )
         ResearchProjectManager.save_mispricing_candidates(
             project.research_project_id,
             [{"candidate_name": "MU LEAPS", "mispricing": {"score_0_to_100": 82.4}}],
@@ -108,10 +120,12 @@ def test_research_project_manager_round_trip(tmp_path):
         assert loaded.inference_count == 1
         assert loaded.claims_audit_count == 1
         assert loaded.scorecard_count == 1
+        assert loaded.source_registry_count == 1
         assert loaded.mispricing_candidate_count == 1
         assert artifacts["thesis_intake"]["theme"] == "HBM / advanced packaging"
         assert artifacts["source_bundle"]["sources"][0]["source_id"] == "src_1"
         assert artifacts["structural_parse"]["claims"][0]["claim_id"] == "claim_1"
+        assert artifacts["source_registry"]["rows"][0]["source_target_id"] == "src_target_sec_edgar"
         assert artifacts["mispricing_candidates"][0]["candidate_name"] == "MU LEAPS"
         assert artifacts["summary"]["top_severity_layer"] == "CoWoS-class packaging"
 
