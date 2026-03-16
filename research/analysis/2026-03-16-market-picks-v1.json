@@ -1,0 +1,147 @@
+{
+  "method": "market scan -> mispricing score -> stock-vs-LEAPS choice -> ranked picks",
+  "rows": [
+    {
+      "name": "SIVE equity on CPO laser bottleneck",
+      "underlying": "SIVE",
+      "market_theme": "AI photonics / CPO",
+      "thesis": "Sivers may be an underfollowed upstream InP DFB laser supplier to emerging silicon-photonics and external-light-source architectures, with the market still valuing it far below better-known downstream photonics names.",
+      "bottleneck_layer": "InP laser and external light source capacity",
+      "value_capture_layer": "Specialized upstream laser supplier with ecosystem leverage",
+      "why_missed": [
+        "small-cap and underfollowed listing",
+        "market attention focused on larger optical names",
+        "customer and supply-chain links are not obvious from headline financials"
+      ],
+      "catalysts": [
+        "customer qualification progress",
+        "CPO / silicon photonics adoption milestones",
+        "revenue conversion from photonics pipeline"
+      ],
+      "invalidations": [
+        "CPO ramp delays materially",
+        "customer relationships fail to convert into volume",
+        "dilution offsets operating progress"
+      ],
+      "mispricing": {
+        "candidate_name": "SIVE equity on CPO laser bottleneck",
+        "score_type": "mispricing",
+        "score_0_to_100": 81.6,
+        "band": "critical",
+        "weighted_signals": {
+          "hiddenness": 0.81,
+          "recognition_gap": 0.81,
+          "catalyst_clarity": 0.56,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.48,
+          "evidence_quality": 0.35,
+          "crowding_inverse": 0.27,
+          "valuation_nonlinearity": 0.24
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.81
+          ],
+          [
+            "recognition_gap",
+            0.81
+          ],
+          [
+            "catalyst_clarity",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.24
+          ],
+          [
+            "crowding_inverse",
+            0.27
+          ]
+        ],
+        "explanation": "SIVE equity on CPO laser bottleneck scores 81.6/100 (critical) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "SIVE equity on CPO laser bottleneck",
+        "score_type": "options_fit",
+        "score_0_to_100": 44.8,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.36,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.45,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.12,
+          "implementation_simplicity": 0.4,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "vol_expansion_potential",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.4
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.12
+          ],
+          [
+            "downside_definedness",
+            0.21
+          ]
+        ],
+        "explanation": "SIVE equity on CPO laser bottleneck scores 44.8/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, vol expansion potential, implementation simplicity. The least supportive signals are liquidity path, downside definedness. This screen helps decide whether options are a sensible expression path."
+      },
+      "stock_fit": {
+        "score_0_to_100": 60.4,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.81,
+          "balance_sheet_resilience": 0.28,
+          "dilution_risk_inverse": 0.28,
+          "thesis_linearity": 0.49,
+          "duration_tolerance": 0.56,
+          "listing_quality": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "implementation_simplicity",
+            0.81
+          ],
+          [
+            "duration_tolerance",
+            0.56
+          ],
+          [
+            "thesis_linearity",
+            0.49
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "balance_sheet_resilience",
+            0.28
+          ],
+          [
+            "listing_quality",
+            0.2
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "pick_score": 70.02
+    }
+  ]
+}

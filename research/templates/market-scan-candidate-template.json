@@ -1,0 +1,61 @@
+{
+  "rows": [
+    {
+      "name": "SIVE equity on CPO laser bottleneck",
+      "market_theme": "AI photonics / CPO",
+      "thesis": "Sivers may be an underfollowed upstream InP DFB laser supplier to emerging silicon-photonics and external-light-source architectures, with the market still valuing it far below better-known downstream photonics names.",
+      "underlying": "SIVE",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": ["SIVE", "POET", "Ayar Labs", "WIN Semiconductors"],
+      "bottleneck_layer": "InP laser and external light source capacity",
+      "value_capture_layer": "Specialized upstream laser supplier with ecosystem leverage",
+      "why_missed": [
+        "small-cap and underfollowed listing",
+        "market attention focused on larger optical names",
+        "customer and supply-chain links are not obvious from headline financials"
+      ],
+      "catalysts": [
+        "customer qualification progress",
+        "CPO / silicon photonics adoption milestones",
+        "revenue conversion from photonics pipeline"
+      ],
+      "invalidations": [
+        "CPO ramp delays materially",
+        "customer relationships fail to convert into volume",
+        "dilution offsets operating progress"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.5,
+        "recognition_gap": 4.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 3.5,
+        "crowding_inverse": 4.5,
+        "valuation_nonlinearity": 4.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 2.0,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 2.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.0,
+        "implementation_simplicity": 4.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 2.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 2.0,
+        "dilution_risk_inverse": 2.0,
+        "thesis_linearity": 3.5,
+        "duration_tolerance": 4.0,
+        "listing_quality": 2.0
+      },
+      "notes": [
+        "Example row for the pick-pipeline format."
+      ]
+    }
+  ]
+}
