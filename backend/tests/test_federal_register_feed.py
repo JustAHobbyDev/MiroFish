@@ -254,6 +254,28 @@ def test_relevance_scoring_consumer_furnace_is_noise():
     assert result["relevance_class"] == "noise"
 
 
+def test_relevance_scoring_no_substring_false_positive():
+    """Short markers like 'bis' must not match inside words like 'cannabis'."""
+    doc = {
+        "title": "Cannabis Regulation Update",
+        "abstract": "New cannabis dispensary licensing requirements before implementation.",
+        "topics": ["Cannabis"],
+    }
+    result = relevance_module.score_document_relevance(doc)
+    assert result["relevance_class"] == "noise"
+    assert "bis" not in result["positive_markers"]
+
+
+def test_process_layer_no_ore_false_positive():
+    """The word 'before' or 'more' must not trigger the Rare Earth Mining layer."""
+    doc = {
+        "title": "Notice on Compliance Before Enforcement",
+        "abstract": "More details on the compliance timeline will follow.",
+    }
+    layers = relevance_module.match_process_layers(doc, ["Rare Earth Mining"])
+    assert layers == []
+
+
 def test_relevance_scoring_adjacent_document():
     """A doc that mentions supply chain but isn't specifically about critical minerals."""
     doc = {

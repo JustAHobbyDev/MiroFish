@@ -84,7 +84,7 @@ DEFAULT_NEGATIVE_MARKERS: List[str] = [
 # auto-assigned (the caller must explicitly request it).
 
 PROCESS_LAYER_MARKERS: Dict[str, List[str]] = {
-    "Rare Earth Mining": ["rare earth", "mining", "ore", "mine"],
+    "Rare Earth Mining": ["rare earth", "mining", "mine site", "mineral ore"],
     "Rare Earth Separation": ["rare earth", "separation", "solvent extraction"],
     "Neodymium Processing": ["neodymium", "ndfeb", "magnet", "rare earth processing"],
     "Cobalt Refining": ["cobalt", "refining", "refinery", "battery material"],
@@ -117,14 +117,20 @@ def _build_searchable_text(document: Dict[str, Any]) -> str:
     return " ".join(parts).lower()
 
 
+def _word_boundary_match(text: str, marker: str) -> bool:
+    """Check if *marker* appears in *text* at word boundaries."""
+    pattern = r"\b" + re.escape(marker.lower()) + r"\b"
+    return bool(re.search(pattern, text))
+
+
 def _count_marker_hits(
     text: str,
     markers: List[str],
 ) -> Tuple[int, List[str]]:
-    """Return (hit_count, matched_markers)."""
+    """Return (hit_count, matched_markers) using word-boundary matching."""
     hits: List[str] = []
     for marker in markers:
-        if marker.lower() in text:
+        if _word_boundary_match(text, marker):
             hits.append(marker)
     return len(hits), hits
 
@@ -189,7 +195,7 @@ def match_process_layers(
         markers = PROCESS_LAYER_MARKERS.get(layer)
         if not markers:
             continue
-        if any(m.lower() in text for m in markers):
+        if any(_word_boundary_match(text, m) for m in markers):
             matched.append(layer)
     return matched
 
