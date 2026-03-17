@@ -269,7 +269,7 @@ def fetch_federal_register_into_source_bundle(research_project_id: str):
             focus_geographies=payload.get("focus_geographies"),
             ticker_refs=payload.get("ticker_refs"),
             policy_scope=payload.get("policy_scope"),
-            minimum_relevance_score=int(payload.get("minimum_relevance_score", 20)),
+            minimum_relevance_score=int(payload.get("minimum_relevance_score") or 20),
             include_adjacent=payload.get("include_adjacent", True) not in (False, "false", "0", 0),
         )
         source_bundle = build_policy_feed_source_bundle(
