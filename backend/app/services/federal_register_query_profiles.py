@@ -202,7 +202,7 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
         "agencies": ["bureau-of-industry-and-security", "commerce-department"],
         "policy_scope": ["export_control", "entity_list"],
         "positive_markers": [
-            "entity list", "export administration regulations", "EAR",
+            "entity list", "export administration regulations",
             "bureau of industry and security", "bis",
             "export control", "denied persons", "unverified list",
             "military end use",
@@ -234,14 +234,15 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
             "semiconductor",
             "advanced computing",
             "chip export",
-            "EAR",
+            "export administration regulations",
             "entity list",
         ],
         "positive_markers": [
             "semiconductor", "chip", "wafer", "foundry", "fabrication",
             "advanced computing", "integrated circuit", "lithography",
             "eda", "electronic design automation", "advanced packaging",
-            "chiplet", "export control", "entity list", "EAR",
+            "chiplet", "export control", "entity list",
+            "export administration regulations",
             "bureau of industry and security", "bis",
         ],
         "negative_markers": [
