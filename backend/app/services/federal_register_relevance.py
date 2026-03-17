@@ -14,7 +14,7 @@ Relevance classes:
 from __future__ import annotations
 
 import re
-from typing import Any, Dict, List, Tuple
+from typing import Any, Dict, List, Optional, Tuple
 
 # ---------------------------------------------------------------------------
 # Default marker sets (used when a profile does not supply its own)
@@ -84,7 +84,7 @@ DEFAULT_NEGATIVE_MARKERS: List[str] = [
 # auto-assigned (the caller must explicitly request it).
 
 PROCESS_LAYER_MARKERS: Dict[str, List[str]] = {
-    "Rare Earth Mining": ["rare earth", "mining", "mine site", "mineral ore"],
+    "Rare Earth Mining": ["mining", "mine site", "mineral ore"],
     "Rare Earth Separation": ["rare earth", "separation", "solvent extraction"],
     "Neodymium Processing": ["neodymium", "ndfeb", "magnet", "rare earth processing"],
     "Cobalt Refining": ["cobalt", "refining", "refinery", "battery material"],
@@ -183,17 +183,24 @@ def score_document_relevance(
 def match_process_layers(
     document: Dict[str, Any],
     candidate_layers: List[str],
+    *,
+    explicit_layers: Optional[List[str]] = None,
 ) -> List[str]:
-    """Return only those *candidate_layers* whose markers appear in *document*.
+    """Return those *candidate_layers* whose markers appear in *document*.
 
-    If a candidate layer has no entry in ``PROCESS_LAYER_MARKERS``, it is
-    silently excluded (conservative default: require evidence).
+    Layers with no entry in ``PROCESS_LAYER_MARKERS`` are excluded by default
+    (conservative: require evidence).  However, layers listed in
+    *explicit_layers* are preserved even without a marker mapping, since the
+    caller explicitly requested them.
     """
+    explicit = set(explicit_layers or [])
     text = _build_searchable_text(document)
     matched: List[str] = []
     for layer in candidate_layers:
         markers = PROCESS_LAYER_MARKERS.get(layer)
         if not markers:
+            if layer in explicit:
+                matched.append(layer)
             continue
         if any(_word_boundary_match(text, m) for m in markers):
             matched.append(layer)

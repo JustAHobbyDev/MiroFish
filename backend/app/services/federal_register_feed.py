@@ -312,6 +312,10 @@ def fetch_federal_register_policy_feed(
     positive_markers: Iterable[str] | None = None,
     negative_markers: Iterable[str] | None = None,
 ) -> Dict[str, Any]:
+    # Track caller-explicit layers so match_process_layers can preserve
+    # unmapped layers that the caller specifically requested.
+    caller_explicit_layers = list(focus_process_layers) if focus_process_layers else []
+
     # Resolve profile defaults, letting explicit args override.
     resolved = resolve_query_profile(
         query_profile,
@@ -386,7 +390,10 @@ def fetch_federal_register_policy_feed(
     documents = []
     for result in scored_results:
         relevance = result.pop("_relevance", {})
-        doc_layers = match_process_layers(result, effective_process_layers)
+        doc_layers = match_process_layers(
+            result, effective_process_layers,
+            explicit_layers=caller_explicit_layers,
+        )
         documents.append(
             _normalize_document_to_policy_feed(
                 result,

@@ -320,6 +320,64 @@ def test_match_process_layers_empty_for_irrelevant():
     assert layers == []
 
 
+def test_match_process_layers_separation_not_mining():
+    """A separation-only doc mentioning rare earth must NOT match Rare Earth Mining."""
+    doc = {
+        "title": "Rare Earth Separation and Solvent Extraction Advances",
+        "abstract": "New rare earth separation techniques using solvent extraction.",
+    }
+    layers = relevance_module.match_process_layers(
+        doc,
+        ["Rare Earth Mining", "Rare Earth Separation"],
+    )
+    assert "Rare Earth Separation" in layers
+    assert "Rare Earth Mining" not in layers
+
+
+def test_match_process_layers_mining_still_matches():
+    """A mining-specific doc must still match Rare Earth Mining."""
+    doc = {
+        "title": "New Rare Earth Mining Operations in Australia",
+        "abstract": "Expansion of mining and mineral ore extraction.",
+    }
+    layers = relevance_module.match_process_layers(
+        doc,
+        ["Rare Earth Mining", "Rare Earth Separation"],
+    )
+    assert "Rare Earth Mining" in layers
+
+
+def test_match_process_layers_preserves_explicit_unmapped():
+    """Caller-specified layers without marker mappings should be preserved."""
+    doc = {
+        "title": "Some policy notice",
+        "abstract": "General policy update.",
+    }
+    layers = relevance_module.match_process_layers(
+        doc,
+        ["Rare Earth Mining", "Custom Unmapped Layer"],
+        explicit_layers=["Custom Unmapped Layer"],
+    )
+    # Unmapped but explicit: preserved
+    assert "Custom Unmapped Layer" in layers
+    # Mapped but no evidence in text: excluded
+    assert "Rare Earth Mining" not in layers
+
+
+def test_match_process_layers_drops_unmapped_non_explicit():
+    """Unmapped layers that are NOT caller-explicit should still be dropped."""
+    doc = {
+        "title": "Some policy notice",
+        "abstract": "General policy update.",
+    }
+    layers = relevance_module.match_process_layers(
+        doc,
+        ["Rare Earth Mining", "Custom Unmapped Layer"],
+    )
+    assert "Custom Unmapped Layer" not in layers
+    assert "Rare Earth Mining" not in layers
+
+
 def test_match_process_layers_semiconductor():
     doc = {
         "title": "Wafer Fabrication Export Controls",
