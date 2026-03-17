@@ -34,7 +34,7 @@ DEFAULT_POSITIVE_MARKERS: List[str] = [
     "domestic processing",
     "refining",
     "separation",
-    "mining",
+    "mineral mining",
     "smelting",
     "cobalt",
     "lithium",
