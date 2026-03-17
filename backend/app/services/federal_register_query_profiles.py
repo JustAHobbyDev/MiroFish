@@ -122,7 +122,7 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
         "policy_scope": ["export_control", "industrial_policy"],
         "positive_markers": [
             "rare earth", "neodymium", "ndfeb", "magnet",
-            "separation", "mining", "ore processing",
+            "separation", "mineral mining", "ore processing",
             "critical mineral", "critical minerals",
         ],
         "negative_markers": [

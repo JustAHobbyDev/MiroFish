@@ -225,7 +225,7 @@ def filter_documents_by_relevance(
         )
         if scoring["relevance_score"] < minimum_score:
             continue
-        if not include_adjacent and scoring["relevance_class"] == "adjacent":
+        if not include_adjacent and scoring["relevance_class"] != "directly_relevant":
             continue
         doc_copy = dict(doc)
         doc_copy["_relevance"] = scoring
