@@ -105,6 +105,17 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
             "strategic stockpile",
             "mineral security",
         ],
+        "positive_markers": [
+            "critical mineral", "critical minerals", "rare earth",
+            "cobalt", "lithium", "neodymium", "gallium", "germanium",
+            "titanium", "manganese", "tungsten", "stockpile",
+            "section 232", "domestic processing", "refining",
+            "separation", "smelting", "mineral mining",
+        ],
+        "negative_markers": [
+            "marine mammal", "wildlife", "endangered species",
+            "consumer furnace", "incidental take", "fisheries", "habitat",
+        ],
     },
     # --- Narrower decomposed profiles ---
     "rare_earths": {
@@ -226,6 +237,17 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
             "EAR",
             "entity list",
         ],
+        "positive_markers": [
+            "semiconductor", "chip", "wafer", "foundry", "fabrication",
+            "advanced computing", "integrated circuit", "lithography",
+            "eda", "electronic design automation", "advanced packaging",
+            "chiplet", "export control", "entity list", "EAR",
+            "bureau of industry and security", "bis",
+        ],
+        "negative_markers": [
+            "marine mammal", "wildlife", "endangered species",
+            "consumer furnace", "incidental take", "fisheries", "habitat",
+        ],
     },
     "robotics": {
         "query": "robotics automation advanced manufacturing",
@@ -250,6 +272,17 @@ QUERY_PROFILES: Dict[str, Dict[str, Any]] = {
             "automation",
             "advanced manufacturing",
             "industrial base",
+        ],
+        "positive_markers": [
+            "robot", "robotics", "automation", "industrial robot",
+            "servo", "motor", "actuator", "motion control",
+            "precision gear", "gearbox", "advanced manufacturing",
+            "industrial base", "defense production",
+            "export control", "entity list",
+        ],
+        "negative_markers": [
+            "marine mammal", "wildlife", "endangered species",
+            "consumer furnace", "incidental take", "fisheries", "habitat",
         ],
     },
 }
