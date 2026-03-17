@@ -269,8 +269,8 @@ def fetch_federal_register_into_source_bundle(research_project_id: str):
             focus_geographies=payload.get("focus_geographies"),
             ticker_refs=payload.get("ticker_refs"),
             policy_scope=payload.get("policy_scope"),
-            minimum_relevance_score=int(payload["minimum_relevance_score"]) if payload.get("minimum_relevance_score") is not None else 20,
-            include_adjacent=payload.get("include_adjacent", True) not in (False, "false", "0", 0),
+            minimum_relevance_score=int(payload["minimum_relevance_score"]) if payload.get("minimum_relevance_score") not in (None, "") else 20,
+            include_adjacent=str(payload.get("include_adjacent", True)).lower() not in ("false", "0", "no"),
         )
         source_bundle = build_policy_feed_source_bundle(
             policy_feed,
