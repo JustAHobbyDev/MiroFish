@@ -439,6 +439,106 @@
               </div>
             </section>
 
+            <section v-else-if="activeTab === 'candidates'" class="tab-panel">
+              <div class="panel-header split">
+                <span class="panel-kicker">Candidates</span>
+                <button class="primary-btn small" @click="handleGenerateCandidates" :disabled="generatingCandidates">
+                  {{ generatingCandidates ? 'Generating...' : 'Generate Candidates' }}
+                </button>
+              </div>
+
+              <div class="source-bundle-summary">
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Rows</span>
+                  <strong>{{ candidateSummary.rowCount }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Theme</span>
+                  <strong>{{ candidateSummary.theme }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Top Names</span>
+                  <strong>{{ candidateSummary.topUnderlyings.slice(0, 3).join(', ') || 'none' }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Market Miss</span>
+                  <strong>{{ candidateSummary.marketMissStatement ? 'available' : 'none' }}</strong>
+                </div>
+              </div>
+
+              <p v-if="candidateSummary.marketMissStatement" class="candidate-statement">
+                {{ candidateSummary.marketMissStatement }}
+              </p>
+
+              <div v-if="candidateRows.length" class="candidate-list">
+                <article
+                  v-for="row in candidateRows"
+                  :key="row.underlying"
+                  class="candidate-card"
+                >
+                  <div class="candidate-card-top">
+                    <div>
+                      <div class="candidate-symbol">{{ row.underlying }}</div>
+                      <div class="candidate-role">{{ row.company_role }}</div>
+                    </div>
+                    <div class="candidate-confidence">
+                      {{ row.decomposition_confidence }}/100 confidence
+                    </div>
+                  </div>
+
+                  <p class="candidate-summary">{{ row.candidate_summary }}</p>
+
+                  <div class="candidate-score-grid">
+                    <div class="candidate-score">
+                      <span>Market Miss</span>
+                      <strong>{{ row.market_miss_alignment_score_0_to_100 }}</strong>
+                    </div>
+                    <div class="candidate-score">
+                      <span>Value Capture</span>
+                      <strong>{{ row.value_capture_alignment_score_0_to_100 }}</strong>
+                    </div>
+                    <div class="candidate-score">
+                      <span>Readiness</span>
+                      <strong>{{ row.expression_readiness_score_0_to_100 }}</strong>
+                    </div>
+                  </div>
+
+                  <div class="candidate-pill-row" v-if="row.linked_process_layers?.length">
+                    <span
+                      v-for="layer in row.linked_process_layers"
+                      :key="`${row.underlying}-${layer}`"
+                      class="candidate-pill"
+                    >
+                      {{ layer }}
+                    </span>
+                  </div>
+
+                  <div class="candidate-meta-grid">
+                    <div>
+                      <span class="candidate-meta-label">Materials</span>
+                      <div class="candidate-meta-value">{{ row.linked_materials?.join(', ') || 'none' }}</div>
+                    </div>
+                    <div>
+                      <span class="candidate-meta-label">Components</span>
+                      <div class="candidate-meta-value">{{ row.linked_components?.join(', ') || 'none' }}</div>
+                    </div>
+                    <div>
+                      <span class="candidate-meta-label">Direct Expressions</span>
+                      <div class="candidate-meta-value">{{ row.direct_expression_ids?.length || 0 }}</div>
+                    </div>
+                    <div>
+                      <span class="candidate-meta-label">Supporting Claims</span>
+                      <div class="candidate-meta-value">{{ row.supporting_claim_ids?.length || 0 }}</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div v-else class="empty-state compact">
+                No candidate output yet. Generate candidates after source and structural artifacts exist.
+              </div>
+            </section>
+
             <section v-else-if="activeTab === 'claims'" class="tab-panel">
               <div class="panel-header split">
                 <span class="panel-kicker">Claims Audit</span>
@@ -599,6 +699,7 @@ import {
   fetchBisIntoSourceBundle,
   fetchFederalRegisterIntoSourceBundle,
   generateResearchStructuralParse,
+  generateResearchThemeEquityDecomposition,
   getResearchOntology,
   getResearchProjectArtifacts,
   listResearchProjects,
@@ -622,6 +723,7 @@ const savingTab = ref(false)
 const deletingProject = ref(false)
 const fetchingBis = ref(false)
 const fetchingFederalRegister = ref(false)
+const generatingCandidates = ref(false)
 const workspaceError = ref('')
 const workspaceNotice = ref('')
 const activeTab = ref('intake')
@@ -629,6 +731,7 @@ const activeTab = ref('intake')
 const tabs = [
   { key: 'intake', label: 'Thesis Intake' },
   { key: 'sources', label: 'Sources' },
+  { key: 'candidates', label: 'Candidates' },
   { key: 'claims', label: 'Claims Audit' },
   { key: 'scorecards', label: 'Scorecards' },
   { key: 'summary', label: 'Summary' }
@@ -648,6 +751,7 @@ const claimsAuditRows = ref([emptyClaimRow()])
 const scorecardRows = ref([emptyScorecardRow()])
 const summary = reactive(emptySummary())
 const sourceBundle = ref({})
+const themeEquityDecomposition = ref({})
 const bisFetchForm = reactive({
   queryProfile: 'processed_critical_minerals',
   query: '',
@@ -693,6 +797,17 @@ const sourceBundleSummary = computed(() => ({
   fragmentCount: Array.isArray(sourceBundle.value?.fragments) ? sourceBundle.value.fragments.length : 0,
   connectorFamily: sourceBundle.value?.connector_metadata?.connector_family || 'none',
   sourceTargetCount: sourceBundleTargets.value.length
+}))
+const candidateRows = computed(() => (
+  Array.isArray(themeEquityDecomposition.value?.rows) ? themeEquityDecomposition.value.rows : []
+))
+const candidateSummary = computed(() => ({
+  rowCount: candidateRows.value.length,
+  theme: themeEquityDecomposition.value?.theme || 'none',
+  topUnderlyings: Array.isArray(themeEquityDecomposition.value?.summary?.top_underlyings)
+    ? themeEquityDecomposition.value.summary.top_underlyings
+    : [],
+  marketMissStatement: themeEquityDecomposition.value?.market_miss_statement || ''
 }))
 
 function emptyThesisIntake() {
@@ -855,9 +970,18 @@ function hydrateSourceBundle(payload = {}) {
   sourceBundle.value = payload && typeof payload === 'object' ? payload : {}
 }
 
+function hydrateThemeEquityDecomposition(payload = {}) {
+  themeEquityDecomposition.value = payload && typeof payload === 'object' ? payload : {}
+}
+
 async function maybeGenerateStructuralParse(researchProjectId, shouldGenerate) {
   if (!shouldGenerate) return null
   return generateResearchStructuralParse(researchProjectId, {})
+}
+
+async function maybeGenerateCandidateOutput(researchProjectId, shouldGenerate) {
+  if (!shouldGenerate) return null
+  return generateResearchThemeEquityDecomposition(researchProjectId, {})
 }
 
 async function loadProjectBundle(researchProjectId) {
@@ -869,6 +993,7 @@ async function loadProjectBundle(researchProjectId) {
     selectedProject.value = bundle.research_project
     hydrateThesisIntake(bundle.thesis_intake)
     hydrateSourceBundle(bundle.source_bundle)
+    hydrateThemeEquityDecomposition(bundle.theme_equity_decomposition)
     hydrateClaimsAudit(bundle.claims_audit)
     hydrateScorecards(bundle.scorecards)
     hydrateSummary(bundle.summary)
@@ -876,6 +1001,7 @@ async function loadProjectBundle(researchProjectId) {
     workspaceError.value = error.message || 'Failed to load project artifacts.'
     selectedProject.value = null
     hydrateSourceBundle({})
+    hydrateThemeEquityDecomposition({})
   } finally {
     projectLoading.value = false
   }
@@ -1009,11 +1135,16 @@ async function handleFetchBis() {
       selectedProject.value.research_project_id,
       bisFetchForm.generateStructuralParse
     )
+    const candidateRes = await maybeGenerateCandidateOutput(
+      selectedProject.value.research_project_id,
+      bisFetchForm.generateStructuralParse
+    )
     await refreshProjects()
     await loadProjectBundle(selectedProject.value.research_project_id)
     const entityCount = structuralParseRes?.data?.structural_parse?.summary?.entity_count
+    const candidateCount = candidateRes?.data?.theme_equity_decomposition?.row_count
     workspaceNotice.value = bisFetchForm.generateStructuralParse
-      ? `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added and structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}.`
+      ? `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added, structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}, and candidates refreshed${candidateCount != null ? ` (${candidateCount} rows)` : ''}.`
       : `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
   } catch (error) {
     workspaceError.value = error.message || 'Failed to fetch BIS updates.'
@@ -1049,16 +1180,40 @@ async function handleFetchFederalRegister() {
       selectedProject.value.research_project_id,
       federalRegisterFetchForm.generateStructuralParse
     )
+    const candidateRes = await maybeGenerateCandidateOutput(
+      selectedProject.value.research_project_id,
+      federalRegisterFetchForm.generateStructuralParse
+    )
     await refreshProjects()
     await loadProjectBundle(selectedProject.value.research_project_id)
     const entityCount = structuralParseRes?.data?.structural_parse?.summary?.entity_count
+    const candidateCount = candidateRes?.data?.theme_equity_decomposition?.row_count
     workspaceNotice.value = federalRegisterFetchForm.generateStructuralParse
-      ? `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added and structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}.`
+      ? `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added, structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}, and candidates refreshed${candidateCount != null ? ` (${candidateCount} rows)` : ''}.`
       : `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
   } catch (error) {
     workspaceError.value = error.message || 'Failed to fetch Federal Register documents.'
   } finally {
     fetchingFederalRegister.value = false
+  }
+}
+
+async function handleGenerateCandidates() {
+  if (!selectedProject.value) return
+
+  generatingCandidates.value = true
+  resetWorkspaceNotice()
+  try {
+    const res = await generateResearchThemeEquityDecomposition(selectedProject.value.research_project_id, {})
+    hydrateThemeEquityDecomposition(res.data.theme_equity_decomposition || {})
+    await refreshProjects()
+    await loadProjectBundle(selectedProject.value.research_project_id)
+    workspaceNotice.value = `Candidate output generated. ${res.data.theme_equity_decomposition?.row_count || 0} rows available.`
+    activeTab.value = 'candidates'
+  } catch (error) {
+    workspaceError.value = error.message || 'Failed to generate candidate output.'
+  } finally {
+    generatingCandidates.value = false
   }
 }
 
@@ -1138,6 +1293,7 @@ async function handleDeleteProject() {
     selectedProject.value = null
     hydrateThesisIntake({})
     hydrateSourceBundle({})
+    hydrateThemeEquityDecomposition({})
     hydrateClaimsAudit([])
     hydrateScorecards([])
     hydrateSummary({})
@@ -1160,6 +1316,7 @@ watch(
       selectedProject.value = null
       hydrateThesisIntake({})
       hydrateSourceBundle({})
+      hydrateThemeEquityDecomposition({})
       hydrateClaimsAudit([])
       hydrateScorecards([])
       hydrateSummary({})
@@ -1624,6 +1781,101 @@ onMounted(async () => {
   text-decoration: underline;
 }
 
+.candidate-statement {
+  margin: 0 0 16px;
+  padding: 14px;
+  background: #fff8f4;
+  border: 1px solid rgba(217, 75, 17, 0.14);
+  color: #5b4739;
+}
+
+.candidate-list {
+  display: grid;
+  gap: 14px;
+}
+
+.candidate-card {
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fffdf9;
+}
+
+.candidate-card-top,
+.candidate-score-grid,
+.candidate-meta-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.candidate-card-top {
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.candidate-symbol {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.candidate-role,
+.candidate-confidence,
+.candidate-meta-label {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7a7269;
+}
+
+.candidate-summary {
+  margin: 0 0 12px;
+  color: #3d3732;
+}
+
+.candidate-score-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 12px;
+}
+
+.candidate-score {
+  padding: 12px;
+  background: #f6f0e8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.candidate-score span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6f655b;
+}
+
+.candidate-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.candidate-pill {
+  padding: 7px 10px;
+  background: #fff3ec;
+  border: 1px solid rgba(217, 75, 17, 0.18);
+  color: #b33a0d;
+  font-size: 0.82rem;
+}
+
+.candidate-meta-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.candidate-meta-value {
+  margin-top: 4px;
+  color: #2f2a25;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -1700,7 +1952,9 @@ onMounted(async () => {
   .workspace-actions,
   .field-grid,
   .source-fetch-grid,
-  .source-bundle-summary {
+  .source-bundle-summary,
+  .candidate-score-grid,
+  .candidate-meta-grid {
     grid-template-columns: 1fr;
     display: grid;
   }
@@ -1721,6 +1975,10 @@ onMounted(async () => {
   .source-item-meta {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .candidate-card-top {
+    grid-template-columns: 1fr;
   }
 }
 </style>

@@ -520,6 +520,34 @@ class ResearchProjectManager:
             return json.load(f)
 
     @classmethod
+    def save_theme_equity_decomposition(
+        cls, research_project_id: str, decomposition: Dict[str, Any]
+    ) -> ResearchProject:
+        project = cls.get_project(research_project_id)
+        if not project:
+            raise ValueError(f"research project not found: {research_project_id}")
+
+        with open(
+            cls._get_artifact_path(research_project_id, "theme_equity_decomposition.json"),
+            "w",
+            encoding="utf-8",
+        ) as f:
+            json.dump(decomposition, f, ensure_ascii=False, indent=2)
+
+        if cls._count_items(decomposition, "rows") and project.status == ResearchProjectStatus.STRUCTURE_PARSED:
+            project.status = ResearchProjectStatus.SCORED
+        cls.save_project(project)
+        return project
+
+    @classmethod
+    def get_theme_equity_decomposition(cls, research_project_id: str) -> Dict[str, Any]:
+        path = cls._get_artifact_path(research_project_id, "theme_equity_decomposition.json")
+        if not os.path.exists(path):
+            return {}
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    @classmethod
     def get_summary(cls, research_project_id: str) -> Dict[str, Any]:
         path = cls._get_artifact_path(research_project_id, "summary.json")
         if not os.path.exists(path):
@@ -540,6 +568,7 @@ class ResearchProjectManager:
             "structural_parse": cls.get_structural_parse(research_project_id),
             "claims_audit": cls.get_claims_audit(research_project_id),
             "scorecards": cls.get_scorecards(research_project_id),
+            "theme_equity_decomposition": cls.get_theme_equity_decomposition(research_project_id),
             "mispricing_candidates": cls.get_mispricing_candidates(research_project_id),
             "source_registry": cls.get_source_registry(research_project_id),
             "source_acquisition_plan": cls.get_source_acquisition_plan(research_project_id),

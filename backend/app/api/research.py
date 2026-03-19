@@ -16,6 +16,7 @@ from ..services import (
     MispricingCandidate,
     MispricingSignals,
     OptionsExpressionSignals,
+    build_theme_equity_decomposition,
     fetch_bis_policy_feed,
     fetch_federal_register_policy_feed,
     build_policy_feed_source_bundle,
@@ -711,6 +712,97 @@ def save_scorecards(research_project_id: str):
         }), 404
     except Exception as e:
         logger.error(f"保存 scorecards 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route("/project/<research_project_id>/theme-equity-decomposition", methods=["POST"])
+def save_theme_equity_decomposition(research_project_id: str):
+    """Persist theme-to-equity candidate output for a research project."""
+    try:
+        decomposition = request.get_json() or {}
+        if not isinstance(decomposition, dict):
+            return jsonify({
+                "success": False,
+                "error": "theme equity decomposition payload must be an object",
+            }), 400
+
+        project = ResearchProjectManager.save_theme_equity_decomposition(
+            research_project_id, decomposition
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "theme_equity_decomposition": decomposition,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"保存 theme equity decomposition 失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": str(e),
+            "traceback": traceback.format_exc(),
+        }), 500
+
+
+@research_bp.route(
+    "/project/<research_project_id>/theme-equity-decomposition/generate",
+    methods=["POST"],
+)
+def generate_theme_equity_decomposition(research_project_id: str):
+    """Generate and persist candidate company/expression output from project artifacts."""
+    try:
+        payload = request.get_json(silent=True) or {}
+        source_bundle = payload.get("source_bundle")
+        if source_bundle is None:
+            source_bundle = ResearchProjectManager.get_source_bundle(research_project_id)
+        if not source_bundle:
+            return jsonify({
+                "success": False,
+                "error": "no source bundle available for candidate generation",
+            }), 400
+
+        structural_parse = payload.get("structural_parse")
+        if structural_parse is None:
+            structural_parse = ResearchProjectManager.get_structural_parse(research_project_id)
+        if not structural_parse:
+            return jsonify({
+                "success": False,
+                "error": "no structural parse available for candidate generation",
+            }), 400
+
+        graduation = payload.get("graduation") or {}
+        decomposition = build_theme_equity_decomposition(
+            source_bundle,
+            structural_parse,
+            graduation,
+        )
+        project = ResearchProjectManager.save_theme_equity_decomposition(
+            research_project_id, decomposition
+        )
+        return jsonify({
+            "success": True,
+            "data": {
+                "research_project": project.to_dict(),
+                "theme_equity_decomposition": decomposition,
+            },
+        })
+    except ValueError as e:
+        return jsonify({
+            "success": False,
+            "error": str(e),
+        }), 404
+    except Exception as e:
+        logger.error(f"生成 theme equity decomposition 失败: {str(e)}")
         return jsonify({
             "success": False,
             "error": str(e),

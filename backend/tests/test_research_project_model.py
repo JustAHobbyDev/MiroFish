@@ -85,6 +85,19 @@ def test_research_project_manager_round_trip(tmp_path):
             project.research_project_id,
             [{"candidate_name": "CoWoS", "severity": {"score_0_to_100": 90.8}}],
         )
+        ResearchProjectManager.save_theme_equity_decomposition(
+            project.research_project_id,
+            {
+                "theme": "HBM / advanced packaging",
+                "rows": [
+                    {
+                        "underlying": "MU",
+                        "company_role": "anchor",
+                        "candidate_summary": "MU is an anchor expression for packaging duration.",
+                    }
+                ],
+            },
+        )
         ResearchProjectManager.save_source_registry(
             project.research_project_id,
             {
@@ -143,6 +156,7 @@ def test_research_project_manager_round_trip(tmp_path):
         assert artifacts["thesis_intake"]["theme"] == "HBM / advanced packaging"
         assert artifacts["source_bundle"]["sources"][0]["source_id"] == "src_1"
         assert artifacts["structural_parse"]["claims"][0]["claim_id"] == "claim_1"
+        assert artifacts["theme_equity_decomposition"]["rows"][0]["underlying"] == "MU"
         assert artifacts["source_registry"]["rows"][0]["source_target_id"] == "src_target_sec_edgar"
         assert (
             artifacts["source_acquisition_plan"]["top_recommendations"][0]["source_target_id"]

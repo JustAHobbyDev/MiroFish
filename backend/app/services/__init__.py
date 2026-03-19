@@ -96,6 +96,7 @@ from .mispricing_screening import (
     score_mispricing_candidate,
     screen_candidates,
 )
+from .theme_equity_decomposer import build_theme_equity_decomposition
 
 __all__ = [
     'OntologyGenerator', 
@@ -176,4 +177,5 @@ __all__ = [
     'MispricingScorecard',
     'score_mispricing_candidate',
     'screen_candidates',
+    'build_theme_equity_decomposition',
 ]

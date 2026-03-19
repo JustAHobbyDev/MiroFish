@@ -79,3 +79,11 @@ export const generateResearchStructuralParse = (researchProjectId, data = {}) =>
     1000
   )
 }
+
+export const generateResearchThemeEquityDecomposition = (researchProjectId, data = {}) => {
+  return requestWithRetry(
+    () => service.post(`/api/research/project/${researchProjectId}/theme-equity-decomposition/generate`, data),
+    2,
+    1000
+  )
+}
