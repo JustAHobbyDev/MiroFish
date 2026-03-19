@@ -44,6 +44,29 @@ From serious predictions to playful simulations, we let every "what if" see its 
 
 Welcome to visit our online demo environment and experience a prediction simulation on trending public opinion events we've prepared for you: [mirofish-live-demo](https://666ghj.github.io/mirofish-demo/)
 
+## 🧭 Project Direction
+
+This repository is gradually diverging from its upstream fork into a more
+independent research-oriented product focused on:
+
+- thesis definition
+- live policy and source ingestion
+- `source_bundle` and `structural_parse` generation
+- claims audit, scorecards, and mispricing workflows
+
+That means:
+
+- upstream lineage still matters
+- upstream is no longer the product identity
+- synchronization should move toward selective intake rather than default parity
+
+Related documents:
+
+- [Project Identity](./docs/project-identity.md)
+- [Upstream Intake Policy](./docs/upstream-intake-policy.md)
+- [README Rewrite Outline](./docs/readme-rewrite-outline.md)
+- [Rename Migration Checklist](./docs/rename-migration-checklist.md)
+
 ## 📸 Screenshots
 
 <div align="center">
@@ -202,14 +225,16 @@ Reads `.env` from root directory by default, maps ports `3000 (frontend) / 5001 
 
 > Mirror address for faster pulling is provided as comments in `docker-compose.yml`, replace if needed.
 
-## 🔄 Syncing This Fork
+## 🔄 Upstream Intake
 
 This repository is configured with:
 
 - `origin`: your fork
 - `upstream`: the source repository (`666ghj/MiroFish`)
 
-Recommended habit:
+The recommended model is selective intake, not routine parity sync.
+
+The existing commands remain available:
 
 ```bash
 # Fetch upstream and show whether you are ahead / behind
@@ -219,7 +244,12 @@ npm run sync:upstream
 npm run sync:upstream:ff
 ```
 
-If the branch has diverged, resolve it explicitly with `git merge upstream/main` or `git rebase upstream/main`.
+Whether to accept upstream changes should be decided case by case based on
+product direction and maintenance value.
+
+See:
+
+- [Upstream Intake Policy](./docs/upstream-intake-policy.md)
 
 ## 📬 Join the Conversation
 
