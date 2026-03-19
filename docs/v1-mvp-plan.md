@@ -81,6 +81,40 @@ These may matter later, but they are not required to prove the core workflow.
 
 - go from `thesis or signal` to `candidate expression`
 
+### User Entry Modes
+
+All of these are acceptable starting points for the product from the user's
+perspective. They should be developed one by one, not assumed to work equally
+well from day one.
+
+Development order:
+
+1. `broad theme`
+2. `policy change`
+3. `vague intuition`
+4. `company already suspected`
+
+These entry modes mean:
+
+1. `broad theme`
+   The user starts with a domain such as rare earths, semiconductors, or
+   robotics and needs the system to surface bottlenecks, candidate theses, and
+   likely expressions.
+2. `policy change`
+   The user starts from a concrete trigger such as a BIS rule, Federal Register
+   notice, tariff, sanction, or subsidy and needs the system to trace
+   propagation into bottlenecks and names.
+3. `vague intuition`
+   The user starts with a weak hunch rather than a formed thesis and needs the
+   system to help sharpen, reject, or reframe it using evidence.
+4. `company already suspected`
+   The user starts from a company they already think matters and needs the
+   system to determine whether that company truly sits on the bottleneck or
+   value-capture path.
+
+For v1 development sequencing, `broad theme` is the canonical first entry
+mode. The remaining three stay in scope as planned follow-on paths.
+
 ### Required End-to-End Workflow
 
 1. Create a research project
@@ -223,6 +257,7 @@ The wrong v1 statement is:
 - declare v1 as thesis-to-expression discovery
 - explicitly demote research artifacts to intermediate outputs
 - choose one canonical thesis domain
+- make `broad theme` the first supported user entry mode
 
 ### Milestone 2: Candidate Output
 
