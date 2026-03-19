@@ -300,6 +300,10 @@
                         <input v-model="federalRegisterFetchForm.mergeExisting" type="checkbox" />
                         <span>Merge into existing source bundle</span>
                       </label>
+                      <label class="checkbox-line">
+                        <input v-model="federalRegisterFetchForm.generateStructuralParse" type="checkbox" />
+                        <span>Auto-generate structural parse</span>
+                      </label>
                     </div>
                   </div>
                 </section>
@@ -365,6 +369,10 @@
                       <label class="checkbox-line">
                         <input v-model="bisFetchForm.mergeExisting" type="checkbox" />
                         <span>Merge into existing source bundle</span>
+                      </label>
+                      <label class="checkbox-line">
+                        <input v-model="bisFetchForm.generateStructuralParse" type="checkbox" />
+                        <span>Auto-generate structural parse</span>
                       </label>
                     </div>
                   </div>
@@ -590,6 +598,7 @@ import {
   deleteResearchProject,
   fetchBisIntoSourceBundle,
   fetchFederalRegisterIntoSourceBundle,
+  generateResearchStructuralParse,
   getResearchOntology,
   getResearchProjectArtifacts,
   listResearchProjects,
@@ -650,7 +659,8 @@ const bisFetchForm = reactive({
   publishedGte: '',
   minimumRelevanceScore: 20,
   includeAdjacent: true,
-  mergeExisting: true
+  mergeExisting: true,
+  generateStructuralParse: true
 })
 const federalRegisterFetchForm = reactive({
   queryProfile: 'critical_materials',
@@ -666,7 +676,8 @@ const federalRegisterFetchForm = reactive({
   publishedLte: '',
   minimumRelevanceScore: 20,
   includeAdjacent: true,
-  mergeExisting: true
+  mergeExisting: true,
+  generateStructuralParse: true
 })
 
 const selectedProjectId = computed(() => route.params.researchProjectId || '')
@@ -844,6 +855,11 @@ function hydrateSourceBundle(payload = {}) {
   sourceBundle.value = payload && typeof payload === 'object' ? payload : {}
 }
 
+async function maybeGenerateStructuralParse(researchProjectId, shouldGenerate) {
+  if (!shouldGenerate) return null
+  return generateResearchStructuralParse(researchProjectId, {})
+}
+
 async function loadProjectBundle(researchProjectId) {
   projectLoading.value = true
   resetWorkspaceNotice()
@@ -989,9 +1005,16 @@ async function handleFetchBis() {
       merge_existing: bisFetchForm.mergeExisting
     })
     hydrateSourceBundle(res.data.source_bundle || {})
+    const structuralParseRes = await maybeGenerateStructuralParse(
+      selectedProject.value.research_project_id,
+      bisFetchForm.generateStructuralParse
+    )
     await refreshProjects()
     await loadProjectBundle(selectedProject.value.research_project_id)
-    workspaceNotice.value = `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
+    const entityCount = structuralParseRes?.data?.structural_parse?.summary?.entity_count
+    workspaceNotice.value = bisFetchForm.generateStructuralParse
+      ? `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added and structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}.`
+      : `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
   } catch (error) {
     workspaceError.value = error.message || 'Failed to fetch BIS updates.'
   } finally {
@@ -1022,9 +1045,16 @@ async function handleFetchFederalRegister() {
       merge_existing: federalRegisterFetchForm.mergeExisting
     })
     hydrateSourceBundle(res.data.source_bundle || {})
+    const structuralParseRes = await maybeGenerateStructuralParse(
+      selectedProject.value.research_project_id,
+      federalRegisterFetchForm.generateStructuralParse
+    )
     await refreshProjects()
     await loadProjectBundle(selectedProject.value.research_project_id)
-    workspaceNotice.value = `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
+    const entityCount = structuralParseRes?.data?.structural_parse?.summary?.entity_count
+    workspaceNotice.value = federalRegisterFetchForm.generateStructuralParse
+      ? `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added and structural parse generated${entityCount != null ? ` (${entityCount} entities)` : ''}.`
+      : `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
   } catch (error) {
     workspaceError.value = error.message || 'Failed to fetch Federal Register documents.'
   } finally {

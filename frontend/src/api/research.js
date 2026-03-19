@@ -71,3 +71,11 @@ export const fetchFederalRegisterIntoSourceBundle = (researchProjectId, data) =>
     1000
   )
 }
+
+export const generateResearchStructuralParse = (researchProjectId, data = {}) => {
+  return requestWithRetry(
+    () => service.post(`/api/research/project/${researchProjectId}/structural-parse/generate`, data),
+    2,
+    1000
+  )
+}
