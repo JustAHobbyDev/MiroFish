@@ -154,3 +154,37 @@ def test_build_structural_parse_from_curated_bundle():
     inference = output["inferences"][0]
     assert inference["inference_type"] == "market_miss"
     assert inference["derived_from_claim_ids"] == [claim["claim_id"]]
+
+
+def test_structural_parse_uses_source_tickers_when_fragment_tickers_absent():
+    payload = {
+        "sources": [
+            {
+                "source_id": "src_1",
+                "source_class": "government_policy_enforcement",
+                "ticker_refs": ["MP", "NEO"],
+            }
+        ],
+        "fragments": [
+            {
+                "fragment_id": "frag_1",
+                "source_id": "src_1",
+                "entity_hints": [
+                    {"entity_type": "Theme", "canonical_name": "Critical Materials"},
+                    {"entity_type": "ProcessLayer", "canonical_name": "Rare Earth Separation"},
+                ],
+                "relationship_hints": [],
+                "claim_candidates": [],
+                "inference_candidates": [],
+            }
+        ],
+    }
+
+    output = structural_parser.build_structural_parse_from_source_bundle(payload)
+    public_companies = {
+        entity["canonical_name"]
+        for entity in output["entities"]
+        if entity["entity_type"] == "PublicCompany"
+    }
+
+    assert {"MP", "NEO"}.issubset(public_companies)

@@ -101,3 +101,23 @@ def test_policy_feed_source_bundle_parses_into_structural_graph():
     relationship_types = {relationship["relationship_type"] for relationship in structural_parse["relationships"]}
     assert "AFFECTED_BY_EVENT" in relationship_types
     assert "CONSTRAINED_BY" in relationship_types
+
+
+def test_policy_feed_connector_copies_document_tickers_to_fragments():
+    payload = module.build_policy_feed_source_bundle(
+        {
+            "name": "policy_feed_live_like",
+            "feed_documents": [
+                {
+                    "document_id": "doc_live_like",
+                    "publisher": "Federal Register",
+                    "title": "Live-like policy notice",
+                    "ticker_refs": ["MP", "UUUU"],
+                    "summary": "Rare earth processing policy notice.",
+                }
+            ],
+        }
+    )
+
+    assert payload["sources"][0]["ticker_refs"] == ["MP", "UUUU"]
+    assert payload["fragments"][0]["ticker_refs"] == ["MP", "UUUU"]

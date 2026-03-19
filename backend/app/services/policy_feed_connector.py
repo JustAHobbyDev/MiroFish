@@ -78,6 +78,7 @@ def _normalize_fragment(document: Dict[str, Any], source_id: str) -> Dict[str, A
         "contains_claim_candidate": bool(
             document.get("contains_claim_candidate", True)
         ),
+        "ticker_refs": [str(value).upper() for value in _normalize_list(document.get("ticker_refs"))],
         "research_tags": deepcopy(document.get("research_tags", {})),
         "entity_hints": deepcopy(_normalize_list(document.get("entity_hints"))),
         "relationship_hints": deepcopy(_normalize_list(document.get("relationship_hints"))),
@@ -180,4 +181,3 @@ def build_policy_feed_source_bundle(
     if existing_source_bundle:
         return merge_source_bundles(existing_source_bundle, bundle)
     return bundle
-

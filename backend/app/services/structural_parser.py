@@ -86,7 +86,7 @@ class StructuralParser:
 
         fragments = _normalize_list(source_bundle.get("fragments"))
         for fragment in fragments:
-            self._ingest_fragment_entities(fragment)
+            self._ingest_fragment_entities(fragment, source_map)
 
         for fragment in fragments:
             self._ingest_fragment_relationships(fragment)
@@ -186,9 +186,14 @@ class StructuralParser:
         }
         return ref
 
-    def _extract_entity_hints(self, fragment: Dict[str, Any]) -> List[Dict[str, Any]]:
+    def _extract_entity_hints(
+        self,
+        fragment: Dict[str, Any],
+        source_map: Dict[str, Dict[str, Any]],
+    ) -> List[Dict[str, Any]]:
         hints = list(_normalize_list(fragment.get("entity_hints")))
         research_tags = fragment.get("research_tags", {}) or {}
+        source_payload = source_map.get(fragment.get("source_id"), {})
 
         for tag_key, entity_type in TAG_TO_ENTITY_TYPE.items():
             for value in _normalize_list(research_tags.get(tag_key)):
@@ -199,10 +204,12 @@ class StructuralParser:
                     hint = {
                         "entity_type": entity_type,
                         "canonical_name": str(value),
-                    }
+                }
                 hints.append(hint)
 
-        for ticker in _normalize_list(fragment.get("ticker_refs")):
+        fragment_tickers = _normalize_list(fragment.get("ticker_refs"))
+        source_tickers = _normalize_list(source_payload.get("ticker_refs"))
+        for ticker in [*fragment_tickers, *source_tickers]:
             hints.append(
                 {
                     "entity_type": "PublicCompany",
@@ -212,8 +219,12 @@ class StructuralParser:
             )
         return hints
 
-    def _ingest_fragment_entities(self, fragment: Dict[str, Any]) -> None:
-        for hint in self._extract_entity_hints(fragment):
+    def _ingest_fragment_entities(
+        self,
+        fragment: Dict[str, Any],
+        source_map: Dict[str, Dict[str, Any]],
+    ) -> None:
+        for hint in self._extract_entity_hints(fragment, source_map):
             entity_type = hint.get("entity_type")
             canonical_name = hint.get("canonical_name")
             if not entity_type or not canonical_name:
