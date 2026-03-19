@@ -62,14 +62,23 @@ class Config:
     REPORT_AGENT_MAX_TOOL_CALLS = int(os.environ.get('REPORT_AGENT_MAX_TOOL_CALLS', '5'))
     REPORT_AGENT_MAX_REFLECTION_ROUNDS = int(os.environ.get('REPORT_AGENT_MAX_REFLECTION_ROUNDS', '2'))
     REPORT_AGENT_TEMPERATURE = float(os.environ.get('REPORT_AGENT_TEMPERATURE', '0.5'))
-    
+
     @classmethod
-    def validate(cls):
-        """验证必要配置"""
+    def validate(cls, *, require_llm: bool = True, require_zep: bool = True):
+        """验证当前运行模式需要的配置。"""
         errors = []
-        if not cls.LLM_API_KEY:
+        if require_llm and not cls.LLM_API_KEY:
             errors.append("LLM_API_KEY 未配置")
-        if not cls.ZEP_API_KEY:
+        if require_zep and not cls.ZEP_API_KEY:
             errors.append("ZEP_API_KEY 未配置")
         return errors
 
+    @classmethod
+    def startup_warnings(cls):
+        """返回非阻塞启动警告，说明哪些功能会因缺少密钥而不可用。"""
+        warnings = []
+        if not cls.LLM_API_KEY:
+            warnings.append("LLM_API_KEY 未配置，LLM 驱动功能将不可用")
+        if not cls.ZEP_API_KEY:
+            warnings.append("ZEP_API_KEY 未配置，Zep 图谱和模拟相关功能将不可用")
+        return warnings

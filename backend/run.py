@@ -24,14 +24,26 @@ from app.config import Config
 
 def main():
     """主函数"""
-    # 验证配置
-    errors = Config.validate()
+    strict_startup = os.environ.get('MIROFISH_STRICT_STARTUP_CONFIG', 'False').lower() == 'true'
+
+    # 仅在严格模式下阻止启动；日常开发允许缺少按功能使用的 API Key。
+    errors = Config.validate(
+        require_llm=strict_startup,
+        require_zep=strict_startup,
+    )
     if errors:
         print("配置错误:")
         for err in errors:
             print(f"  - {err}")
         print("\n请检查 .env 文件中的配置")
         sys.exit(1)
+
+    warnings = Config.startup_warnings()
+    if warnings:
+        print("配置警告:")
+        for warning in warnings:
+            print(f"  - {warning}")
+        print("\n后端将继续启动；相关功能在调用时仍会校验密钥。")
     
     # 创建应用
     app = create_app()
@@ -47,4 +59,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

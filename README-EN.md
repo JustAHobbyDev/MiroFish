@@ -135,20 +135,22 @@ cp .env.example .env
 # Edit the .env file and fill in the required API keys
 ```
 
-**Required Environment Variables:**
+**Environment Variables:**
 
 ```env
-# LLM API Configuration (supports any LLM API with OpenAI SDK format)
+# LLM API Configuration (needed for graph/report/simulation features)
 # Recommended: Alibaba Qwen-plus model via Bailian Platform: https://bailian.console.aliyun.com/
 # High consumption, try simulations with fewer than 40 rounds first
 LLM_API_KEY=your_api_key
 LLM_BASE_URL=https://dashscope.aliyuncs.com/compatible-mode/v1
 LLM_MODEL_NAME=qwen-plus
 
-# Zep Cloud Configuration
+# Zep Cloud Configuration (needed for graph/report/simulation features)
 # Free monthly quota is sufficient for simple usage: https://app.getzep.com/
 ZEP_API_KEY=your_zep_api_key
 ```
+
+If `LLM_API_KEY` / `ZEP_API_KEY` are not set, the backend can still start for research-workbench flows that do not depend on those services. The relevant routes will continue to validate those keys when called.
 
 #### 2. Install Dependencies
 
