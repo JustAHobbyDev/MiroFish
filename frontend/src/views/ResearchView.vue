@@ -206,6 +206,231 @@
               </label>
             </section>
 
+            <section v-else-if="activeTab === 'sources'" class="tab-panel">
+              <div class="panel-header split">
+                <span class="panel-kicker">Sources</span>
+                <div class="button-row">
+                  <button class="ghost-btn small" @click="handleFetchFederalRegister" :disabled="fetchingFederalRegister">
+                    {{ fetchingFederalRegister ? 'Fetching Federal Register...' : 'Fetch Federal Register' }}
+                  </button>
+                  <button class="primary-btn small" @click="handleFetchBis" :disabled="fetchingBis">
+                    {{ fetchingBis ? 'Fetching BIS...' : 'Fetch BIS Updates' }}
+                  </button>
+                </div>
+              </div>
+
+              <div class="source-fetch-grid">
+                <section class="source-fetch-panel">
+                  <div class="panel-kicker">Federal Register Fetch</div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Query Profile</span>
+                      <input v-model="federalRegisterFetchForm.queryProfile" type="text" placeholder="critical_materials" />
+                    </label>
+                    <label class="field">
+                      <span>Query Override</span>
+                      <input v-model="federalRegisterFetchForm.query" type="text" placeholder="rare earth export controls" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Agencies</span>
+                      <input v-model="federalRegisterFetchForm.agenciesText" type="text" placeholder="bureau-of-industry-and-security, commerce-department" />
+                    </label>
+                    <label class="field">
+                      <span>Document Types</span>
+                      <input v-model="federalRegisterFetchForm.documentTypesText" type="text" placeholder="RULE, NOTICE" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Target Themes</span>
+                      <input v-model="federalRegisterFetchForm.targetThemesText" type="text" placeholder="critical_materials, semiconductors" />
+                    </label>
+                    <label class="field">
+                      <span>Process Layers</span>
+                      <input v-model="federalRegisterFetchForm.focusProcessLayersText" type="text" placeholder="Rare Earth Separation, Wafer Fabrication" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Geographies</span>
+                      <input v-model="federalRegisterFetchForm.focusGeographiesText" type="text" placeholder="China, United States" />
+                    </label>
+                    <label class="field">
+                      <span>Tickers</span>
+                      <input v-model="federalRegisterFetchForm.tickerRefsText" type="text" placeholder="MP, NVDA" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Policy Scope</span>
+                      <input v-model="federalRegisterFetchForm.policyScopeText" type="text" placeholder="industrial_policy, export_control" />
+                    </label>
+                    <label class="field">
+                      <span>Published After</span>
+                      <input v-model="federalRegisterFetchForm.publishedGte" type="date" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Published Before</span>
+                      <input v-model="federalRegisterFetchForm.publishedLte" type="date" />
+                    </label>
+                    <label class="field">
+                      <span>Minimum Relevance</span>
+                      <input v-model="federalRegisterFetchForm.minimumRelevanceScore" type="number" min="0" max="100" step="1" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <div class="field checkbox-field">
+                      <span>Options</span>
+                      <label class="checkbox-line">
+                        <input v-model="federalRegisterFetchForm.includeAdjacent" type="checkbox" />
+                        <span>Include adjacent results</span>
+                      </label>
+                      <label class="checkbox-line">
+                        <input v-model="federalRegisterFetchForm.mergeExisting" type="checkbox" />
+                        <span>Merge into existing source bundle</span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="source-fetch-panel">
+                  <div class="panel-kicker">BIS Fetch</div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Query Profile</span>
+                      <input v-model="bisFetchForm.queryProfile" type="text" placeholder="processed_critical_minerals" />
+                    </label>
+                    <label class="field">
+                      <span>Query Override</span>
+                      <input v-model="bisFetchForm.query" type="text" placeholder="critical minerals export control" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Target Themes</span>
+                      <input v-model="bisFetchForm.targetThemesText" type="text" placeholder="critical_materials, semiconductors" />
+                    </label>
+                    <label class="field">
+                      <span>Process Layers</span>
+                      <input v-model="bisFetchForm.focusProcessLayersText" type="text" placeholder="Rare Earth Separation, Wafer Fabrication" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Geographies</span>
+                      <input v-model="bisFetchForm.focusGeographiesText" type="text" placeholder="China, United States" />
+                    </label>
+                    <label class="field">
+                      <span>Tickers</span>
+                      <input v-model="bisFetchForm.tickerRefsText" type="text" placeholder="MP, NVDA" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Policy Scope</span>
+                      <input v-model="bisFetchForm.policyScopeText" type="text" placeholder="industrial_policy, export_control" />
+                    </label>
+                    <label class="field">
+                      <span>Published After</span>
+                      <input v-model="bisFetchForm.publishedGte" type="date" />
+                    </label>
+                  </div>
+
+                  <div class="field-grid">
+                    <label class="field">
+                      <span>Minimum Relevance</span>
+                      <input v-model="bisFetchForm.minimumRelevanceScore" type="number" min="0" max="100" step="1" />
+                    </label>
+                    <div class="field checkbox-field">
+                      <span>Options</span>
+                      <label class="checkbox-line">
+                        <input v-model="bisFetchForm.includeAdjacent" type="checkbox" />
+                        <span>Include adjacent results</span>
+                      </label>
+                      <label class="checkbox-line">
+                        <input v-model="bisFetchForm.mergeExisting" type="checkbox" />
+                        <span>Merge into existing source bundle</span>
+                      </label>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <div class="source-bundle-summary">
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Source Count</span>
+                  <strong>{{ sourceBundleSummary.sourceCount }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Fragment Count</span>
+                  <strong>{{ sourceBundleSummary.fragmentCount }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Connector</span>
+                  <strong>{{ sourceBundleSummary.connectorFamily }}</strong>
+                </div>
+                <div class="source-summary-card">
+                  <span class="source-summary-label">Targets</span>
+                  <strong>{{ sourceBundleSummary.sourceTargetCount }}</strong>
+                </div>
+              </div>
+
+              <div v-if="sourceBundleTargets.length" class="source-targets">
+                <span
+                  v-for="target in sourceBundleTargets"
+                  :key="target"
+                  class="target-chip"
+                >
+                  {{ target }}
+                </span>
+              </div>
+
+              <div v-if="sourceBundleSources.length" class="source-list">
+                <article
+                  v-for="source in sourceBundleSources"
+                  :key="source.source_id"
+                  class="source-item"
+                >
+                  <div class="source-item-top">
+                    <strong>{{ source.title }}</strong>
+                    <span>{{ source.publisher }}</span>
+                  </div>
+                  <div class="source-item-meta">
+                    <span>{{ source.published_at || 'undated' }}</span>
+                    <span>{{ source.source_class || 'unknown' }}</span>
+                  </div>
+                  <a
+                    v-if="source.canonical_url"
+                    class="source-link"
+                    :href="source.canonical_url"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Open source
+                  </a>
+                </article>
+              </div>
+
+              <div v-else class="empty-state compact">
+                No source bundle yet. Fetch BIS or Federal Register documents to seed policy evidence.
+              </div>
+            </section>
+
             <section v-else-if="activeTab === 'claims'" class="tab-panel">
               <div class="panel-header split">
                 <span class="panel-kicker">Claims Audit</span>
@@ -363,6 +588,8 @@ import { useI18n } from '../i18n'
 import {
   createResearchProject,
   deleteResearchProject,
+  fetchBisIntoSourceBundle,
+  fetchFederalRegisterIntoSourceBundle,
   getResearchOntology,
   getResearchProjectArtifacts,
   listResearchProjects,
@@ -384,12 +611,15 @@ const projectLoading = ref(false)
 const savingCreate = ref(false)
 const savingTab = ref(false)
 const deletingProject = ref(false)
+const fetchingBis = ref(false)
+const fetchingFederalRegister = ref(false)
 const workspaceError = ref('')
 const workspaceNotice = ref('')
 const activeTab = ref('intake')
 
 const tabs = [
   { key: 'intake', label: 'Thesis Intake' },
+  { key: 'sources', label: 'Sources' },
   { key: 'claims', label: 'Claims Audit' },
   { key: 'scorecards', label: 'Scorecards' },
   { key: 'summary', label: 'Summary' }
@@ -408,8 +638,51 @@ const thesisIntake = reactive(emptyThesisIntake())
 const claimsAuditRows = ref([emptyClaimRow()])
 const scorecardRows = ref([emptyScorecardRow()])
 const summary = reactive(emptySummary())
+const sourceBundle = ref({})
+const bisFetchForm = reactive({
+  queryProfile: 'processed_critical_minerals',
+  query: '',
+  targetThemesText: 'critical_materials',
+  focusProcessLayersText: 'Rare Earth Separation',
+  focusGeographiesText: 'China, United States',
+  tickerRefsText: 'MP',
+  policyScopeText: 'industrial_policy, export_control',
+  publishedGte: '',
+  minimumRelevanceScore: 20,
+  includeAdjacent: true,
+  mergeExisting: true
+})
+const federalRegisterFetchForm = reactive({
+  queryProfile: 'critical_materials',
+  query: '',
+  agenciesText: 'bureau-of-industry-and-security, commerce-department',
+  documentTypesText: 'RULE, NOTICE',
+  targetThemesText: 'critical_materials',
+  focusProcessLayersText: 'Rare Earth Separation',
+  focusGeographiesText: 'China, United States',
+  tickerRefsText: 'MP',
+  policyScopeText: 'industrial_policy, export_control',
+  publishedGte: '',
+  publishedLte: '',
+  minimumRelevanceScore: 20,
+  includeAdjacent: true,
+  mergeExisting: true
+})
 
 const selectedProjectId = computed(() => route.params.researchProjectId || '')
+const sourceBundleSources = computed(() => (
+  Array.isArray(sourceBundle.value?.sources) ? sourceBundle.value.sources : []
+))
+const sourceBundleTargets = computed(() => {
+  const targets = sourceBundle.value?.connector_metadata?.source_targets
+  return Array.isArray(targets) ? targets : []
+})
+const sourceBundleSummary = computed(() => ({
+  sourceCount: sourceBundleSources.value.length,
+  fragmentCount: Array.isArray(sourceBundle.value?.fragments) ? sourceBundle.value.fragments.length : 0,
+  connectorFamily: sourceBundle.value?.connector_metadata?.connector_family || 'none',
+  sourceTargetCount: sourceBundleTargets.value.length
+}))
 
 function emptyThesisIntake() {
   return {
@@ -567,6 +840,10 @@ function hydrateSummary(payload = {}) {
   })
 }
 
+function hydrateSourceBundle(payload = {}) {
+  sourceBundle.value = payload && typeof payload === 'object' ? payload : {}
+}
+
 async function loadProjectBundle(researchProjectId) {
   projectLoading.value = true
   resetWorkspaceNotice()
@@ -575,12 +852,14 @@ async function loadProjectBundle(researchProjectId) {
     const bundle = res.data
     selectedProject.value = bundle.research_project
     hydrateThesisIntake(bundle.thesis_intake)
+    hydrateSourceBundle(bundle.source_bundle)
     hydrateClaimsAudit(bundle.claims_audit)
     hydrateScorecards(bundle.scorecards)
     hydrateSummary(bundle.summary)
   } catch (error) {
     workspaceError.value = error.message || 'Failed to load project artifacts.'
     selectedProject.value = null
+    hydrateSourceBundle({})
   } finally {
     projectLoading.value = false
   }
@@ -690,6 +969,69 @@ async function handleSaveClaimsAudit() {
   }
 }
 
+async function handleFetchBis() {
+  if (!selectedProject.value) return
+
+  fetchingBis.value = true
+  resetWorkspaceNotice()
+  try {
+    const res = await fetchBisIntoSourceBundle(selectedProject.value.research_project_id, {
+      query_profile: bisFetchForm.queryProfile.trim() || undefined,
+      query: bisFetchForm.query.trim(),
+      target_themes: csvToArray(bisFetchForm.targetThemesText),
+      focus_process_layers: csvToArray(bisFetchForm.focusProcessLayersText),
+      focus_geographies: csvToArray(bisFetchForm.focusGeographiesText),
+      ticker_refs: csvToArray(bisFetchForm.tickerRefsText),
+      policy_scope: csvToArray(bisFetchForm.policyScopeText),
+      published_gte: bisFetchForm.publishedGte || undefined,
+      minimum_relevance_score: Number(bisFetchForm.minimumRelevanceScore) || 0,
+      include_adjacent: bisFetchForm.includeAdjacent,
+      merge_existing: bisFetchForm.mergeExisting
+    })
+    hydrateSourceBundle(res.data.source_bundle || {})
+    await refreshProjects()
+    await loadProjectBundle(selectedProject.value.research_project_id)
+    workspaceNotice.value = `BIS fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
+  } catch (error) {
+    workspaceError.value = error.message || 'Failed to fetch BIS updates.'
+  } finally {
+    fetchingBis.value = false
+  }
+}
+
+async function handleFetchFederalRegister() {
+  if (!selectedProject.value) return
+
+  fetchingFederalRegister.value = true
+  resetWorkspaceNotice()
+  try {
+    const res = await fetchFederalRegisterIntoSourceBundle(selectedProject.value.research_project_id, {
+      query_profile: federalRegisterFetchForm.queryProfile.trim() || undefined,
+      query: federalRegisterFetchForm.query.trim(),
+      agencies: csvToArray(federalRegisterFetchForm.agenciesText),
+      document_types: csvToArray(federalRegisterFetchForm.documentTypesText),
+      target_themes: csvToArray(federalRegisterFetchForm.targetThemesText),
+      focus_process_layers: csvToArray(federalRegisterFetchForm.focusProcessLayersText),
+      focus_geographies: csvToArray(federalRegisterFetchForm.focusGeographiesText),
+      ticker_refs: csvToArray(federalRegisterFetchForm.tickerRefsText),
+      policy_scope: csvToArray(federalRegisterFetchForm.policyScopeText),
+      published_gte: federalRegisterFetchForm.publishedGte || undefined,
+      published_lte: federalRegisterFetchForm.publishedLte || undefined,
+      minimum_relevance_score: Number(federalRegisterFetchForm.minimumRelevanceScore) || 0,
+      include_adjacent: federalRegisterFetchForm.includeAdjacent,
+      merge_existing: federalRegisterFetchForm.mergeExisting
+    })
+    hydrateSourceBundle(res.data.source_bundle || {})
+    await refreshProjects()
+    await loadProjectBundle(selectedProject.value.research_project_id)
+    workspaceNotice.value = `Federal Register fetch completed. ${res.data.policy_feed?.fetch_metadata?.result_count || 0} documents added.`
+  } catch (error) {
+    workspaceError.value = error.message || 'Failed to fetch Federal Register documents.'
+  } finally {
+    fetchingFederalRegister.value = false
+  }
+}
+
 function addScorecardRow() {
   scorecardRows.value.push(emptyScorecardRow())
 }
@@ -765,6 +1107,7 @@ async function handleDeleteProject() {
     await deleteResearchProject(currentId)
     selectedProject.value = null
     hydrateThesisIntake({})
+    hydrateSourceBundle({})
     hydrateClaimsAudit([])
     hydrateScorecards([])
     hydrateSummary({})
@@ -786,6 +1129,7 @@ watch(
     } else {
       selectedProject.value = null
       hydrateThesisIntake({})
+      hydrateSourceBundle({})
       hydrateClaimsAudit([])
       hydrateScorecards([])
       hydrateSummary({})
@@ -1014,6 +1358,25 @@ onMounted(async () => {
   border-color: #d94b11;
 }
 
+.checkbox-field {
+  justify-content: flex-start;
+}
+
+.checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #2f2a25;
+}
+
+.checkbox-line input {
+  width: auto;
+  margin: 0;
+}
+
 .primary-btn,
 .ghost-btn,
 .danger-btn,
@@ -1038,6 +1401,11 @@ onMounted(async () => {
 }
 
 .primary-btn.small {
+  padding: 10px 12px;
+  font-size: 0.9rem;
+}
+
+.ghost-btn.small {
   padding: 10px 12px;
   font-size: 0.9rem;
 }
@@ -1139,6 +1507,93 @@ onMounted(async () => {
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.source-fetch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.source-fetch-panel {
+  padding: 18px;
+  background: #fcfaf6;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.source-bundle-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.source-summary-card {
+  padding: 14px;
+  background: #f6f0e8;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.source-summary-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6f655b;
+}
+
+.source-targets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.target-chip {
+  padding: 8px 10px;
+  background: #fff3ec;
+  border: 1px solid rgba(217, 75, 17, 0.18);
+  color: #b33a0d;
+  font-size: 0.84rem;
+}
+
+.source-list {
+  display: grid;
+  gap: 12px;
+}
+
+.source-item {
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fffdf9;
+}
+
+.source-item-top,
+.source-item-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.source-item-top {
+  margin-bottom: 8px;
+}
+
+.source-item-meta {
+  margin-bottom: 10px;
+  font-size: 0.84rem;
+  color: #7a7269;
+}
+
+.source-link {
+  color: #b33a0d;
+  text-decoration: none;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -1213,7 +1668,9 @@ onMounted(async () => {
   }
 
   .workspace-actions,
-  .field-grid {
+  .field-grid,
+  .source-fetch-grid,
+  .source-bundle-summary {
     grid-template-columns: 1fr;
     display: grid;
   }
@@ -1229,7 +1686,9 @@ onMounted(async () => {
   .research-header,
   .header-left,
   .header-right,
-  .workspace-header {
+  .workspace-header,
+  .source-item-top,
+  .source-item-meta {
     flex-direction: column;
     align-items: flex-start;
   }

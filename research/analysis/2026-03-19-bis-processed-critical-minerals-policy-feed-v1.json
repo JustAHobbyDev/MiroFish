@@ -1,0 +1,22 @@
+{
+  "name": "bis_policy_feed_live_v1",
+  "theme": "critical_materials",
+  "synthetic_sample": false,
+  "notes": [
+    "Fetched from BIS website homepage.",
+    "Query profile: processed_critical_minerals",
+    "Query: critical mineral processing refining smelting cobalt lithium"
+  ],
+  "feed_documents": [],
+  "fetch_metadata": {
+    "api_url": "https://media.bis.gov/",
+    "raw_result_count": 55,
+    "candidate_count": 0,
+    "result_count": 0,
+    "filtered_out": 0,
+    "retrieved_at": "2026-03-19T18:23:14.845181+00:00",
+    "query_profile": "processed_critical_minerals",
+    "minimum_relevance_score": 20,
+    "include_adjacent": true
+  }
+}

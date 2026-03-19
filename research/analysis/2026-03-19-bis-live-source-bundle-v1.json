@@ -1,0 +1,255 @@
+{
+  "name": "bis_policy_feed_live_v1",
+  "theme": "",
+  "notes": [
+    "Fetched from BIS website homepage."
+  ],
+  "sources": [
+    {
+      "source_id": "src_bis_suspension_related_to_cuban_owned_banks",
+      "source_class": "government_policy_enforcement",
+      "title": "Suspension Related to Cuban-Owned Banks",
+      "canonical_url": "https://media.bis.gov/media/documents/030426-scp-gas-petroleum-bank-faq.pdf",
+      "publisher": "Bureau of Industry and Security",
+      "published_at": "2026-03-04",
+      "retrieved_at": "2026-03-19T18:25:24.480748+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [],
+      "theme_refs": [],
+      "source_quality": "high",
+      "source_reliability_score": 0.94,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live BIS website response.",
+        "Section: special_issue",
+        "Relevance: adjacent (20)"
+      ],
+      "source_target_id": "src_target_bis_updates",
+      "source_target_name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "policy_scope": [],
+      "document_id": "bis_suspension_related_to_cuban_owned_banks"
+    },
+    {
+      "source_id": "src_bis_exports_of_u_s_origin_gas_and_petroleum_products_to_cuba",
+      "source_class": "government_policy_enforcement",
+      "title": "Exports of U.S.-Origin Gas and Petroleum Products to Cuba",
+      "canonical_url": "https://media.bis.gov/media/documents/030426-scp-gas-petroleum-bank-faq.pdf",
+      "publisher": "Bureau of Industry and Security",
+      "published_at": "",
+      "retrieved_at": "2026-03-19T18:25:24.480779+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [],
+      "theme_refs": [],
+      "source_quality": "high",
+      "source_reliability_score": 0.94,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live BIS website response.",
+        "Section: special_issue",
+        "Relevance: adjacent (20)"
+      ],
+      "source_target_id": "src_target_bis_updates",
+      "source_target_name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "policy_scope": [],
+      "document_id": "bis_exports_of_u_s_origin_gas_and_petroleum_products_to_cuba"
+    },
+    {
+      "source_id": "src_bis_section_232_investigations",
+      "source_class": "government_policy_enforcement",
+      "title": "Section 232 Investigations",
+      "canonical_url": "https://www.federalregister.gov/public-inspection/2025-04061/section-232-national-security-investigation-of-imports-of-copper ",
+      "publisher": "Bureau of Industry and Security",
+      "published_at": "",
+      "retrieved_at": "2026-03-19T18:25:24.480794+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [],
+      "theme_refs": [],
+      "source_quality": "high",
+      "source_reliability_score": 0.94,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live BIS website response.",
+        "Section: special_issue",
+        "Relevance: adjacent (40)"
+      ],
+      "source_target_id": "src_target_bis_updates",
+      "source_target_name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "policy_scope": [],
+      "document_id": "bis_section_232_investigations"
+    },
+    {
+      "source_id": "src_bis_export_administration_regulations_ear",
+      "source_class": "government_policy_enforcement",
+      "title": "Export Administration Regulations (EAR)",
+      "canonical_url": "https://media.bis.gov/regulations/ear",
+      "publisher": "Bureau of Industry and Security",
+      "published_at": "",
+      "retrieved_at": "2026-03-19T18:25:24.480805+00:00",
+      "language": "en",
+      "jurisdiction": "US",
+      "ticker_refs": [],
+      "theme_refs": [],
+      "source_quality": "high",
+      "source_reliability_score": 0.94,
+      "usage_mode": "evidence",
+      "attachment_type": "html",
+      "notes": [
+        "Normalized from live BIS website response.",
+        "Section: news_update",
+        "Relevance: adjacent (20)"
+      ],
+      "source_target_id": "src_target_bis_updates",
+      "source_target_name": "Bureau of Industry and Security (BIS), U.S. Department of Commerce",
+      "policy_scope": [],
+      "document_id": "bis_export_administration_regulations_ear"
+    }
+  ],
+  "fragments": [
+    {
+      "fragment_id": "frag_bis_suspension_related_to_cuban_owned_banks",
+      "source_id": "src_bis_suspension_related_to_cuban_owned_banks",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Bureau of Industry and Security",
+      "excerpt": "Effective March 4, 2026, BIS has suspended the availability of License Exception Support for the Cuban People (SCP) under § 740.21(b)(1) for any export, reexport, or transfer involving the deposit of foreign funds into a Cuban‑owned bank. BIS determined that such transactions present an unacceptable risk of primarily benefiting the Cuban government and its military or intelligence services. This suspension does not apply to transactions that avoid Cuban banks, such as those routed through third‑country financial institutions, nor to shipments already en route by March 4, 2026, if completed by April 3, 2026. Exporters remain responsible for ensuring full compliance with § 740.21 and all SCP conditions before proceeding.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [],
+        "process_layers": [],
+        "geographies": [],
+        "bis_sections": [
+          "special_issue"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Suspension Related to Cuban-Owned Banks",
+          "attributes": {
+            "event_type": "special_issue",
+            "publisher": "Bureau of Industry and Security"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [],
+      "claim_candidates": [],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "Effective March 4, 2026, BIS has suspended the availability of License Exception Support for the Cuban People (SCP) under § 740.21(b)(1) for any export, reexport, or transfer involving the deposit of foreign funds into a Cuban‑owned bank. BIS determined that such transactions present an unacceptable risk of primarily benefiting the Cuban government and its military or intelligence services. This suspension does not apply to transactions that avoid Cuban banks, such as those routed through third‑country financial institutions, nor to shipments already en route by March 4, 2026, if completed by April 3, 2026. Exporters remain responsible for ensuring full compliance with § 740.21 and all SCP conditions before proceeding."
+    },
+    {
+      "fragment_id": "frag_bis_exports_of_u_s_origin_gas_and_petroleum_products_to_cuba",
+      "source_id": "src_bis_exports_of_u_s_origin_gas_and_petroleum_products_to_cuba",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Bureau of Industry and Security",
+      "excerpt": "BIS has updated its guidance regarding the availability of License Exception SCP for exports and reexports of U.S.-origin gas and other petroleum products to eligible Cuban private sector entities and to individual Cuban consumers. Certain transactions that meet SCP terms may be authorized without a license, and applications that otherwise qualify will be returned without action with instruction to use the exception. Exporters are responsible for ensuring that all SCP conditions are met and should carefully review § 740.21 before proceeding.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [],
+        "process_layers": [],
+        "geographies": [],
+        "bis_sections": [
+          "special_issue"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Exports of U.S.-Origin Gas and Petroleum Products to Cuba",
+          "attributes": {
+            "event_type": "special_issue",
+            "publisher": "Bureau of Industry and Security"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [],
+      "claim_candidates": [],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "BIS has updated its guidance regarding the availability of License Exception SCP for exports and reexports of U.S.-origin gas and other petroleum products to eligible Cuban private sector entities and to individual Cuban consumers. Certain transactions that meet SCP terms may be authorized without a license, and applications that otherwise qualify will be returned without action with instruction to use the exception. Exporters are responsible for ensuring that all SCP conditions are met and should carefully review § 740.21 before proceeding."
+    },
+    {
+      "fragment_id": "frag_bis_section_232_investigations",
+      "source_id": "src_bis_section_232_investigations",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Bureau of Industry and Security",
+      "excerpt": "The Secretary of Commerce initiated investigations under Section 232 of the Trade Expansion Act of 1962 to determine the effects on the national security of imports of the following: The posted Section 232 Inclusion Requests and their requested HTSUS Classifications can be found on on Regulations.gov.",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [],
+        "process_layers": [],
+        "geographies": [],
+        "bis_sections": [
+          "special_issue"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Section 232 Investigations",
+          "attributes": {
+            "event_type": "special_issue",
+            "publisher": "Bureau of Industry and Security"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [],
+      "claim_candidates": [],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "The Secretary of Commerce initiated investigations under Section 232 of the Trade Expansion Act of 1962 to determine the effects on the national security of imports of the following: The posted Section 232 Inclusion Requests and their requested HTSUS Classifications can be found on on Regulations.gov."
+    },
+    {
+      "fragment_id": "frag_bis_export_administration_regulations_ear",
+      "source_id": "src_bis_export_administration_regulations_ear",
+      "fragment_type": "policy_notice_excerpt",
+      "section_label": "Bureau of Industry and Security",
+      "excerpt": "Export Administration Regulations (EAR)",
+      "contains_claim_candidate": true,
+      "research_tags": {
+        "themes": [],
+        "process_layers": [],
+        "geographies": [],
+        "bis_sections": [
+          "news_update"
+        ]
+      },
+      "entity_hints": [
+        {
+          "entity_type": "Event",
+          "canonical_name": "Export Administration Regulations (EAR)",
+          "attributes": {
+            "event_type": "news_update",
+            "publisher": "Bureau of Industry and Security"
+          },
+          "confidence": "high"
+        }
+      ],
+      "relationship_hints": [],
+      "claim_candidates": [],
+      "inference_candidates": [],
+      "event_candidates": [],
+      "summary": "Export Administration Regulations (EAR)"
+    }
+  ],
+  "connector_metadata": {
+    "connector_family": "policy_feed",
+    "connector_versions": [
+      "federal_register_bis_v1"
+    ],
+    "source_targets": [
+      "Bureau of Industry and Security (BIS), U.S. Department of Commerce"
+    ],
+    "document_count": 4,
+    "generated_at": "2026-03-19T18:25:40.547514+00:00",
+    "synthetic_sample": false
+  }
+}

@@ -55,3 +55,19 @@ export const saveResearchSummary = (researchProjectId, data) => {
     1000
   )
 }
+
+export const fetchBisIntoSourceBundle = (researchProjectId, data) => {
+  return requestWithRetry(
+    () => service.post(`/api/research/project/${researchProjectId}/source-bundle/bis-fetch`, data),
+    2,
+    1000
+  )
+}
+
+export const fetchFederalRegisterIntoSourceBundle = (researchProjectId, data) => {
+  return requestWithRetry(
+    () => service.post(`/api/research/project/${researchProjectId}/source-bundle/federal-register-fetch`, data),
+    2,
+    1000
+  )
+}

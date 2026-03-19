@@ -55,6 +55,10 @@ from .federal_register_feed import (
     build_federal_register_documents_url,
     fetch_federal_register_policy_feed,
 )
+from .bis_feed import (
+    BIS_HOMEPAGE_URL,
+    fetch_bis_policy_feed,
+)
 from .federal_register_relevance import (
     DEFAULT_POSITIVE_MARKERS,
     DEFAULT_NEGATIVE_MARKERS,
@@ -141,6 +145,8 @@ __all__ = [
     'FEDERAL_REGISTER_API_URL',
     'build_federal_register_documents_url',
     'fetch_federal_register_policy_feed',
+    'BIS_HOMEPAGE_URL',
+    'fetch_bis_policy_feed',
     'DEFAULT_POSITIVE_MARKERS',
     'DEFAULT_NEGATIVE_MARKERS',
     'PROCESS_LAYER_MARKERS',

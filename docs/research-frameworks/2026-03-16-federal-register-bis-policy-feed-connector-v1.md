@@ -12,11 +12,14 @@ evidence without custom downstream handling.
 
 - Service: [policy_feed_connector.py](/home/d/codex/MiroFish/backend/app/services/policy_feed_connector.py)
 - Live Federal Register fetcher: [federal_register_feed.py](/home/d/codex/MiroFish/backend/app/services/federal_register_feed.py)
+- Live BIS fetcher: [bis_feed.py](/home/d/codex/MiroFish/backend/app/services/bis_feed.py)
 - CLI: [build_policy_feed_source_bundle.py](/home/d/codex/MiroFish/scripts/build_policy_feed_source_bundle.py)
 - Live fetch CLI: [fetch_federal_register_policy_feed.py](/home/d/codex/MiroFish/scripts/fetch_federal_register_policy_feed.py)
+- BIS fetch CLI: [fetch_bis_policy_feed.py](/home/d/codex/MiroFish/scripts/fetch_bis_policy_feed.py)
 - API route:
   - `POST /research/project/<id>/source-bundle/policy-feed-import`
   - `POST /research/project/<id>/source-bundle/federal-register-fetch`
+  - `POST /research/project/<id>/source-bundle/bis-fetch`
 
 ## Input Contract
 
@@ -99,10 +102,9 @@ expansion is:
 
 - live runtime validation against the real Federal Register API
 - selective query profiles by theme
-- BIS retrieval layer parallel to the Federal Register path
 - event-driven project updates for tracked theses
 
 Current limitation:
 
-- the live fetcher is fully implemented and tested with mocked API responses
+- the live fetchers are fully implemented and tested with mocked API / HTML responses
 - it was not executed against the real network in this environment
