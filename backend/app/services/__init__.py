@@ -93,6 +93,10 @@ from .capital_flow_prefilter import (
     triage_batch,
     triage_capital_flow_artifact,
 )
+from .company_release_archive import (
+    build_company_release_prefilter_batch,
+    normalize_company_release_artifact,
+)
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -182,6 +186,8 @@ __all__ = [
     'build_prefilter_audit_record',
     'triage_batch',
     'triage_capital_flow_artifact',
+    'build_company_release_prefilter_batch',
+    'normalize_company_release_artifact',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',
