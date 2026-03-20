@@ -9,18 +9,11 @@
   "corpus_end_date": "2026-02-28",
   "time_bucket_rule": "weekly",
   "source_classes": [
-    "company_filing",
     "company_release",
     "government",
     "trade_press"
   ],
   "source_universe": {
-    "company_filing": [
-      "SEC EDGAR 8-K",
-      "SEC EDGAR 10-Q",
-      "SEC EDGAR 10-K",
-      "SEC EDGAR 20-F"
-    ],
     "company_release": [
       "Business Wire",
       "PR Newswire",
@@ -46,13 +39,26 @@
       "Fierce Electronics"
     ]
   },
+  "deferred_enrichment_source_classes": [
+    "company_filing"
+  ],
+  "deferred_enrichment_source_universe": {
+    "company_filing": [
+      "SEC EDGAR 8-K",
+      "SEC EDGAR 10-Q",
+      "SEC EDGAR 10-K",
+      "SEC EDGAR 20-F"
+    ]
+  },
   "collection_policy": {
     "archive_rule": "Collect all in-window items from the listed concrete sources.",
+    "prefilter_rule": "Only venue-level event-form prefiltering on title, headline, deck, section metadata, or official tags is allowed before LLM extraction.",
     "forbidden_filters": [
       "theme-based collection",
       "ticker-seeded collection",
       "benchmark-case filtering",
       "manual relevance filtering during collection",
+      "issuer preselection for first-pass discovery",
       "source additions based on known historical winners"
     ]
   },

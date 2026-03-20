@@ -106,14 +106,15 @@ Every archive manifest must include:
 
 Use these classes for the first six-month archive:
 
-1. `company_filing`
-2. `company_release`
-3. `government`
-4. `trade_press`
+1. `company_release`
+2. `government`
+3. `trade_press`
 
 Keep it there for v1.
 
-Do not add more classes until the first run is complete.
+Do not add more first-pass classes until the first run is complete.
+
+Treat `company_filing` as deferred enrichment, not first-pass discovery input.
 
 ## Source Universe For First Archive
 
@@ -134,15 +135,6 @@ That means:
    undervalued
 3. signals may be indirect and need LLM interpretation later
 4. the source universe should therefore be venue-level and broad
-
-### Company filings
-
-Concrete sources:
-
-- `SEC EDGAR 8-K`
-- `SEC EDGAR 10-Q`
-- `SEC EDGAR 10-K`
-- `SEC EDGAR 20-F`
 
 ### Company releases
 
@@ -185,6 +177,20 @@ Rule:
   synthesis dominating the first-stage corpus
 - expanding the source universe requires a new manifest version
 
+### Deferred enrichment sources
+
+These are not part of the first-pass blind corpus.
+
+They are used only after a structural-pressure candidate justifies deeper
+narrowing.
+
+Concrete sources:
+
+- `SEC EDGAR 8-K`
+- `SEC EDGAR 10-Q`
+- `SEC EDGAR 10-K`
+- `SEC EDGAR 20-F`
+
 ## Archive Layout
 
 Recommended layout:
@@ -194,7 +200,6 @@ research/archive/
   manifests/
   runs/
   raw/
-    company_filing/
     company_release/
     government/
     trade_press/
@@ -315,12 +320,14 @@ Reason:
 2. first manifest file
 3. collection log format
 4. normalized source record format
+5. source-specific collection-method spec
 
 ### Build later
 
 1. automated refreshes
-2. broader source classes
-3. live collection cadence
+2. company-filing enrichment collection
+3. broader source classes
+4. live collection cadence
 
 ## Open Questions
 
