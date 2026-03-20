@@ -85,8 +85,8 @@ Every archive manifest must include:
 ### Scope
 
 1. `source_classes`
-2. `source_targets`
-3. `target_domains`
+2. `source_universe`
+3. `collection_policy`
 4. `exclusions`
 
 ### Storage
@@ -117,61 +117,75 @@ Keep it there for v1.
 
 Do not add more classes until the first run is complete.
 
-## Source Targets For First Archive
+## Source Universe For First Archive
 
-The first archive should not be built around target tickers.
+The first archive should not be built around target tickers or target domains.
 
-It should be built around broad source families that could surface multiple
-possible pressure zones.
+It should be built around concrete sources and venues.
 
-### Company disclosures
+Collection must happen by source-level inclusion rules, not by theme-level
+filtering.
 
-Target families:
+### Company filings
 
-1. large AI infrastructure companies
-2. memory companies
-3. photonics / optical networking companies
-4. adjacent suppliers and manufacturers
+Concrete sources:
 
-Examples:
+- `AXT` filings via `SEC EDGAR`
+- `Micron` filings via `SEC EDGAR`
+- `Lumentum` filings via `SEC EDGAR`
+- `Coherent` filings via `SEC EDGAR`
+- `Sandisk` filings via `SEC EDGAR`
 
-- NVIDIA
-- Broadcom
-- Micron
-- SK hynix
-- Samsung
-- Lumentum
-- Coherent
-- AXT
-- AAOI
-- Sandisk
+### Company releases
 
-### Government / policy
+Concrete sources:
 
-Target families:
+- `NVIDIA Investor Relations`
+- `Broadcom Investor Relations`
+- `Micron Investor Relations`
+- `SK hynix Newsroom`
+- `Samsung Newsroom`
+- `Sandisk Newsroom`
+- `Lumentum Investor Relations`
+- `Coherent Newsroom`
+- `JX Advanced Metals News Releases`
 
-1. BIS
-2. Federal Register
-3. other directly relevant industrial-policy or export-control sources
+### Earnings transcripts
+
+Concrete sources:
+
+- `Micron`
+- `SK hynix`
+- `Sandisk`
+
+### Government
+
+Concrete sources:
+
+- `BIS`
+- `Federal Register`
+- `SEC EDGAR`
 
 ### Trade press
 
-Target families:
+Concrete sources:
 
-1. semiconductor and packaging press
-2. photonics / optical networking press
-3. infrastructure / industrial supply-chain press
+- `SemiAnalysis`
+- `TrendForce`
+- `DigiTimes`
+- `LightCounting`
 
 ### Investor posts
 
-Target families:
+Concrete sources:
 
-1. high-signal investors
-2. not only AleaBito
+- `@aleabitoreddit`
 
 Rule:
 
 - investor posts are one layer of the archive, not the archive itself
+- a source may be concrete even if the class remains small in v1
+- expanding the source universe requires a new manifest version
 
 ## Archive Layout
 
@@ -233,6 +247,25 @@ Contains:
 4. preserve source class
 5. preserve publisher / author when available
 6. preserve text hash after normalization
+
+## Collection Policy
+
+The archive must be collected by source-level inclusion, not by theme-level
+filtering.
+
+Allowed collection rule:
+
+- collect all in-window items from the listed concrete sources
+
+Forbidden collection rules:
+
+1. collect only photonics items
+2. collect only memory items
+3. collect only items mentioning known benchmark tickers
+4. collect only items already believed to be relevant
+
+Signal collection should shape later domain research.
+Domain shaping should not shape initial archive collection.
 
 ## Freeze Rules
 

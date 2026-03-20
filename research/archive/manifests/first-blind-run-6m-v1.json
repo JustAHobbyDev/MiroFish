@@ -15,25 +15,20 @@
     "trade_press",
     "investor_post"
   ],
-  "target_domains": [
-    "ai_infrastructure",
-    "photonics",
-    "memory",
-    "adjacent_control_branches"
-  ],
-  "source_targets": {
+  "source_universe": {
     "company_filing": [
-      "AXT",
-      "Lumentum",
-      "Coherent",
-      "Micron",
-      "Sandisk"
+      "AXT via SEC EDGAR",
+      "Micron via SEC EDGAR",
+      "Lumentum via SEC EDGAR",
+      "Coherent via SEC EDGAR",
+      "Sandisk via SEC EDGAR"
     ],
     "company_release": [
       "NVIDIA IR",
       "Broadcom IR",
       "Micron IR",
       "SK hynix newsroom",
+      "Samsung newsroom",
       "Sandisk newsroom",
       "Lumentum IR",
       "Coherent newsroom",
@@ -50,13 +45,22 @@
       "SEC EDGAR"
     ],
     "trade_press": [
-      "specialist semiconductor press",
-      "specialist photonics press",
-      "specialist supply-chain press"
+      "SemiAnalysis",
+      "TrendForce",
+      "DigiTimes",
+      "LightCounting"
     ],
     "investor_post": [
-      "aleabitoreddit",
-      "adjacent high-signal accounts to be enumerated before collection freeze"
+      "@aleabitoreddit"
+    ]
+  },
+  "collection_policy": {
+    "archive_rule": "Collect all in-window items from the listed concrete sources.",
+    "forbidden_filters": [
+      "theme-based collection",
+      "ticker-seeded collection",
+      "benchmark-case filtering",
+      "manual relevance filtering during collection"
     ]
   },
   "exclusions": [
@@ -74,7 +78,8 @@
   "freeze_rules": {
     "frozen_inputs": [
       "source_classes",
-      "source_targets",
+      "source_universe",
+      "collection_policy",
       "corpus_start_date",
       "corpus_end_date",
       "time_bucket_rule"
