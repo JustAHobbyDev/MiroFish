@@ -108,10 +108,8 @@ Use these classes for the first six-month archive:
 
 1. `company_filing`
 2. `company_release`
-3. `earnings_transcript`
-4. `government`
-5. `trade_press`
-6. `investor_post`
+3. `government`
+4. `trade_press`
 
 Keep it there for v1.
 
@@ -126,45 +124,33 @@ It should be built around concrete sources and venues.
 Collection must happen by source-level inclusion rules, not by theme-level
 filtering.
 
-Important note:
+The first archive should be capital-flow-first.
 
-1. the concrete source list below is a provisional placeholder from an earlier
-   draft
-2. it is still too benchmark-proximate for a real blind run
-3. do not use it as the final first-run source universe
-4. replace it with a capital-flow-first concrete source set before collection
+That means:
+
+1. source selection should favor venues where directional spending, buildout,
+   procurement, awards, expansion, and capacity response appear
+2. source selection should not depend on knowing which company or industry is
+   undervalued
+3. signals may be indirect and need LLM interpretation later
+4. the source universe should therefore be venue-level and broad
 
 ### Company filings
 
 Concrete sources:
 
-- `AXT` filings via `SEC EDGAR`
-- `Micron` filings via `SEC EDGAR`
-- `Lumentum` filings via `SEC EDGAR`
-- `Coherent` filings via `SEC EDGAR`
-- `Sandisk` filings via `SEC EDGAR`
+- `SEC EDGAR 8-K`
+- `SEC EDGAR 10-Q`
+- `SEC EDGAR 10-K`
+- `SEC EDGAR 20-F`
 
 ### Company releases
 
 Concrete sources:
 
-- `NVIDIA Investor Relations`
-- `Broadcom Investor Relations`
-- `Micron Investor Relations`
-- `SK hynix Newsroom`
-- `Samsung Newsroom`
-- `Sandisk Newsroom`
-- `Lumentum Investor Relations`
-- `Coherent Newsroom`
-- `JX Advanced Metals News Releases`
-
-### Earnings transcripts
-
-Concrete sources:
-
-- `Micron`
-- `SK hynix`
-- `Sandisk`
+- `Business Wire`
+- `PR Newswire`
+- `GlobeNewswire`
 
 ### Government
 
@@ -172,27 +158,31 @@ Concrete sources:
 
 - `BIS`
 - `Federal Register`
-- `SEC EDGAR`
+- `DOE Loan Programs Office`
+- `Office of Clean Energy Demonstrations`
+- `CHIPS Program Office`
+- `DoD Contract Announcements`
+- `USASpending Award Data`
 
 ### Trade press
 
 Concrete sources:
 
-- `SemiAnalysis`
-- `TrendForce`
-- `DigiTimes`
-- `LightCounting`
-
-### Investor posts
-
-Concrete sources:
-
-- `@aleabitoreddit`
+- `IndustryWeek`
+- `Manufacturing Dive`
+- `Supply Chain Dive`
+- `Utility Dive`
+- `Data Center Dynamics`
+- `Semiconductor Engineering`
+- `EE Times`
+- `Fierce Electronics`
 
 Rule:
 
-- investor posts are one layer of the archive, not the archive itself
-- a source may be concrete even if the class remains small in v1
+- a source belongs in the first archive if it regularly surfaces capital-flow
+  indicators before deep company-specific narrowing
+- investor posts are excluded from the first blind run to avoid social
+  synthesis dominating the first-stage corpus
 - expanding the source universe requires a new manifest version
 
 ## Archive Layout
@@ -206,10 +196,8 @@ research/archive/
   raw/
     company_filing/
     company_release/
-    earnings_transcript/
     government/
     trade_press/
-    investor_post/
   normalized/
     sources/
     signals/
@@ -314,10 +302,10 @@ Use:
 
 Reason:
 
-1. captures photonics buildup
-2. captures memory buildup
-3. captures control-like side branches
-4. includes enough unrelated material to make the blind run harder
+1. captures multiple capital-flow waves across the same broad market period
+2. is long enough for indirect signals to accumulate before narrowing
+3. includes enough unrelated material to make the blind run harder
+4. does not require pre-selecting benchmark industries during collection
 
 ## Implementation Guidance
 
@@ -338,8 +326,5 @@ Reason:
 
 1. Should the first archive include only English-language sources?
 
-2. Should we cap investor-post accounts for the first run, or keep the class
-   broad and let the manifest enumerate accounts explicitly?
-
-3. Do we want the first normalized layer to stop at `source` objects, or also
+2. Do we want the first normalized layer to stop at `source` objects, or also
    include first-pass `capital_flow_signal_candidate` generation?

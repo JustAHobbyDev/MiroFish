@@ -92,12 +92,16 @@ archive.
 3. company press releases
 4. trade press
 5. policy or government notices where relevant
-6. high-signal investor posts
+6. high-signal investor posts, optionally in later runs
 
 These sources may contain indirect capital-flow evidence.
 
 The extraction pass should not require explicit capital-allocation language if
 the artifact plausibly implies procurement pull, buildout, or capacity response.
+
+For the first archive, it is acceptable to exclude investor posts entirely if
+they would distort the corpus toward social synthesis rather than primary
+capital-flow evidence.
 
 ### Minimum corpus rule
 

@@ -1,7 +1,7 @@
 {
   "archive_id": "first_blind_run_6m_v1",
   "archive_version": "v1",
-  "status": "provisional_placeholder_not_ready_for_collection",
+  "status": "draft_source_universe_defined_not_collected",
   "created_at": "2026-03-20T00:00:00Z",
   "owner": "Codex + user",
   "purpose": "Mixed historical corpus for the first true blind run over rising-demand structural pressure, with later artifact-local extraction of capital-flow implications.",
@@ -11,48 +11,39 @@
   "source_classes": [
     "company_filing",
     "company_release",
-    "earnings_transcript",
     "government",
-    "trade_press",
-    "investor_post"
+    "trade_press"
   ],
   "source_universe": {
     "company_filing": [
-      "AXT via SEC EDGAR",
-      "Micron via SEC EDGAR",
-      "Lumentum via SEC EDGAR",
-      "Coherent via SEC EDGAR",
-      "Sandisk via SEC EDGAR"
+      "SEC EDGAR 8-K",
+      "SEC EDGAR 10-Q",
+      "SEC EDGAR 10-K",
+      "SEC EDGAR 20-F"
     ],
     "company_release": [
-      "NVIDIA IR",
-      "Broadcom IR",
-      "Micron IR",
-      "SK hynix newsroom",
-      "Samsung newsroom",
-      "Sandisk newsroom",
-      "Lumentum IR",
-      "Coherent newsroom",
-      "JX Advanced Metals"
-    ],
-    "earnings_transcript": [
-      "Micron",
-      "SK hynix",
-      "Sandisk"
+      "Business Wire",
+      "PR Newswire",
+      "GlobeNewswire"
     ],
     "government": [
       "BIS",
       "Federal Register",
-      "SEC EDGAR"
+      "DOE Loan Programs Office",
+      "Office of Clean Energy Demonstrations",
+      "CHIPS Program Office",
+      "DoD Contract Announcements",
+      "USASpending Award Data"
     ],
     "trade_press": [
-      "SemiAnalysis",
-      "TrendForce",
-      "DigiTimes",
-      "LightCounting"
-    ],
-    "investor_post": [
-      "@aleabitoreddit"
+      "IndustryWeek",
+      "Manufacturing Dive",
+      "Supply Chain Dive",
+      "Utility Dive",
+      "Data Center Dynamics",
+      "Semiconductor Engineering",
+      "EE Times",
+      "Fierce Electronics"
     ]
   },
   "collection_policy": {
@@ -61,7 +52,8 @@
       "theme-based collection",
       "ticker-seeded collection",
       "benchmark-case filtering",
-      "manual relevance filtering during collection"
+      "manual relevance filtering during collection",
+      "source additions based on known historical winners"
     ]
   },
   "exclusions": [
