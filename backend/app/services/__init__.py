@@ -97,6 +97,14 @@ from .company_release_archive import (
     build_company_release_prefilter_batch,
     normalize_company_release_artifact,
 )
+from .capital_flow_extractor import (
+    CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION,
+    DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL,
+    CapitalFlowExtractor,
+    build_capital_flow_signal_batch,
+    build_capital_flow_extraction_messages,
+    validate_capital_flow_extraction_payload,
+)
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -188,6 +196,12 @@ __all__ = [
     'triage_capital_flow_artifact',
     'build_company_release_prefilter_batch',
     'normalize_company_release_artifact',
+    'CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION',
+    'DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL',
+    'CapitalFlowExtractor',
+    'build_capital_flow_signal_batch',
+    'build_capital_flow_extraction_messages',
+    'validate_capital_flow_extraction_payload',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',
