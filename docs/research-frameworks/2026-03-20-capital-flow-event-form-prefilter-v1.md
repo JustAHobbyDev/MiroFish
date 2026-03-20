@@ -50,6 +50,9 @@ It should not answer:
 
 4. The prefilter should be deterministic before any LLM interpretation begins.
 
+5. The first deployed version of the prefilter should be treated as
+   provisional until its rejected artifacts have been audited after real runs.
+
 ## Non-Goals
 
 This prefilter is not trying to do:
@@ -143,6 +146,12 @@ Use when:
 Use when:
 
 - no event-form evidence appears
+
+Important:
+
+- `drop` is still a provisional judgment in v1
+- dropped artifacts must be logged for later audit until rejection quality is
+  validated empirically
 
 ## Event-Form Families v1
 
@@ -337,6 +346,9 @@ Use the prefilter aggressively on:
 
 This is likely the highest-volume first-pass class.
 
+This is also the first class where rejection audits should be run, because it
+is likely to expose over-aggressive filtering fastest.
+
 ## Trade Press
 
 Use the prefilter on:
@@ -394,12 +406,35 @@ Reason:
    - `review`
    - `drop`
 4. provenance fields showing which rules fired
+5. rejected-artifact logging for post-run audit
 
 ### Build later
 
 1. statistical tuning
 2. classifier fallback
 3. source-specific threshold tuning
+
+## Validation Rule
+
+The deterministic prefilter must not be trusted on theory alone.
+
+For early runs:
+
+1. store all `drop` decisions with:
+   - artifact id
+   - source class
+   - title/headline
+   - fired rules
+   - timestamp
+2. sample and review dropped artifacts after each run
+3. classify reviewed drops as:
+   - correct_drop
+   - borderline_should_review
+   - false_negative
+4. revise the prefilter only after reviewing those logged drops
+
+The prefilter graduates from provisional to trusted only after repeated audits
+show that rejection quality is acceptable.
 
 ## Open Questions
 

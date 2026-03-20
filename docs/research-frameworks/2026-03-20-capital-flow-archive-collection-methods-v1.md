@@ -312,9 +312,29 @@ Use this order only after narrowing:
 ## Resulting Workflow
 
 1. collect broad first-pass artifacts from capital-flow-first venues
-2. run zero-context extraction to produce `capital_flow_signal_candidate`s
-3. cluster those candidates into possible structural-pressure zones
-4. only then deepen into issuer-specific filing collection
+2. run deterministic event-form prefilter
+3. preserve `drop` decisions for audit until rejection quality is validated
+4. run zero-context extraction to produce `capital_flow_signal_candidate`s on
+   surviving artifacts
+5. cluster those candidates into possible structural-pressure zones
+6. only then deepen into issuer-specific filing collection
+
+## Validation Requirement
+
+The first deterministic prefilter is not considered trusted by default.
+
+It must be validated empirically by reviewing rejected artifacts after early
+runs.
+
+Minimum validation loop:
+
+1. log all dropped artifacts
+2. review a sample after each run
+3. identify false negatives
+4. relax or revise rules if false negatives are too frequent
+
+Until this audit loop is completed repeatedly, the prefilter should be treated
+as a cost-control mechanism under test, not as a proven discovery gate.
 
 ## Open Questions
 
