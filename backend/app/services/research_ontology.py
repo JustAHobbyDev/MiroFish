@@ -102,6 +102,20 @@ SUPPORTED_CLAIM_TYPES: List[str] = [
     "expression_fit_assertion",
 ]
 
+SUPPORTED_COMPANY_ROLES: List[str] = [
+    "anchor",
+    "satellite",
+    "weak_mention",
+]
+
+SUPPORTED_CHAIN_ROLES: List[str] = [
+    "system_anchor",
+    "levered_adjacent_expression",
+    "hidden_upstream_bottleneck",
+    "second_order_upstream_refinement",
+    "weak_mention",
+]
+
 
 RESEARCH_ENTITY_TYPES: List[OntologyEntityType] = [
     OntologyEntityType(
@@ -611,6 +625,8 @@ def build_research_ontology_spec() -> Dict[str, object]:
         "score_dimensions": ["severity", "value_capture"],
         "supported_source_classes": list(SUPPORTED_SOURCE_CLASSES),
         "supported_claim_types": list(SUPPORTED_CLAIM_TYPES),
+        "supported_company_roles": list(SUPPORTED_COMPANY_ROLES),
+        "supported_chain_roles": list(SUPPORTED_CHAIN_ROLES),
     }
     validate_research_ontology_spec(spec)
     return spec
@@ -645,6 +661,8 @@ def validate_research_ontology_spec(spec: Dict[str, object]) -> None:
         "score_dimensions",
         "supported_source_classes",
         "supported_claim_types",
+        "supported_company_roles",
+        "supported_chain_roles",
     }
     missing = required_keys - set(spec)
     if missing:
@@ -658,6 +676,8 @@ def validate_research_ontology_spec(spec: Dict[str, object]) -> None:
     score_dimensions = spec["score_dimensions"]
     supported_source_classes = set(spec["supported_source_classes"])
     supported_claim_types = set(spec["supported_claim_types"])
+    supported_company_roles = set(spec["supported_company_roles"])
+    supported_chain_roles = set(spec["supported_chain_roles"])
 
     if not isinstance(entity_types, list) or not entity_types:
         raise ValueError("entity_types must be a non-empty list")
@@ -669,6 +689,10 @@ def validate_research_ontology_spec(spec: Dict[str, object]) -> None:
         raise ValueError("edge_types and relationship_types must match exactly")
     if list(score_dimensions) != ["severity", "value_capture"]:
         raise ValueError("score_dimensions must be ['severity', 'value_capture']")
+    if supported_company_roles != set(SUPPORTED_COMPANY_ROLES):
+        raise ValueError("supported_company_roles must match the canonical company roles")
+    if supported_chain_roles != set(SUPPORTED_CHAIN_ROLES):
+        raise ValueError("supported_chain_roles must match the canonical chain roles")
 
     entity_names = [entity["name"] for entity in entity_types]
     relationship_names = [relationship["name"] for relationship in relationship_types]

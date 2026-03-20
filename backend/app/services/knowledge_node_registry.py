@@ -98,12 +98,15 @@ def _pointer_from_rows(candidate_row: Dict[str, Any], ranked_row: Dict[str, Any]
         "promotion_status": candidate_row.get("promotion_status"),
         "promotion_score_0_to_100": candidate_row.get("promotion_score_0_to_100"),
         "company_role": decomposition.get("company_role"),
+        "chain_role": decomposition.get("chain_role"),
         "linked_process_layers": decomposition.get("linked_process_layers", []),
         "linked_components": decomposition.get("linked_components", []),
         "linked_materials": decomposition.get("linked_materials", []),
         "market_miss_alignment_score_0_to_100": decomposition.get("market_miss_alignment_score_0_to_100"),
         "value_capture_alignment_score_0_to_100": decomposition.get("value_capture_alignment_score_0_to_100"),
         "expression_readiness_score_0_to_100": decomposition.get("expression_readiness_score_0_to_100"),
+        "chain_role_fit_score_0_to_100": decomposition.get("chain_role_fit_score_0_to_100"),
+        "candidate_priority_score_0_to_100": decomposition.get("candidate_priority_score_0_to_100"),
         "decomposition_confidence": decomposition.get("decomposition_confidence"),
         "final_expression": (ranked_row or {}).get("final_expression"),
         "ranking_score": (ranked_row or {}).get("ranking_score"),
@@ -228,4 +231,3 @@ def build_knowledge_node_registry(
             ],
         },
     }
-

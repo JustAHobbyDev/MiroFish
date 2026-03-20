@@ -479,7 +479,12 @@
                   <div class="candidate-card-top">
                     <div>
                       <div class="candidate-symbol">{{ row.underlying }}</div>
-                      <div class="candidate-role">{{ row.company_role }}</div>
+                      <div class="candidate-role">
+                        {{ formatCandidateRole(row.chain_role || row.company_role) }}
+                        <span v-if="row.chain_role && row.company_role && row.chain_role !== row.company_role">
+                          · {{ formatCandidateRole(row.company_role) }}
+                        </span>
+                      </div>
                     </div>
                     <div class="candidate-confidence">
                       {{ row.decomposition_confidence }}/100 confidence
@@ -489,6 +494,10 @@
                   <p class="candidate-summary">{{ row.candidate_summary }}</p>
 
                   <div class="candidate-score-grid">
+                    <div class="candidate-score">
+                      <span>Priority</span>
+                      <strong>{{ row.candidate_priority_score_0_to_100 ?? 'n/a' }}</strong>
+                    </div>
                     <div class="candidate-score">
                       <span>Market Miss</span>
                       <strong>{{ row.market_miss_alignment_score_0_to_100 }}</strong>
@@ -500,6 +509,10 @@
                     <div class="candidate-score">
                       <span>Readiness</span>
                       <strong>{{ row.expression_readiness_score_0_to_100 }}</strong>
+                    </div>
+                    <div class="candidate-score">
+                      <span>Role Fit</span>
+                      <strong>{{ row.chain_role_fit_score_0_to_100 ?? 'n/a' }}</strong>
                     </div>
                   </div>
 
@@ -871,6 +884,14 @@ function linesToArray(value) {
 
 function arrayToLines(value) {
   return Array.isArray(value) ? value.join('\n') : ''
+}
+
+function formatCandidateRole(value) {
+  return String(value || 'unclassified')
+    .split('_')
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ')
 }
 
 function resetWorkspaceNotice() {

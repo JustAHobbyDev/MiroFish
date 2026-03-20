@@ -20,6 +20,14 @@ def test_build_research_ontology_spec_is_stable_and_valid():
     assert spec["ontology_version"] == "v1"
     assert spec["score_dimensions"] == ["severity", "value_capture"]
     assert spec["edge_types"] == spec["relationship_types"]
+    assert spec["supported_company_roles"] == ["anchor", "satellite", "weak_mention"]
+    assert spec["supported_chain_roles"] == [
+        "system_anchor",
+        "levered_adjacent_expression",
+        "hidden_upstream_bottleneck",
+        "second_order_upstream_refinement",
+        "weak_mention",
+    ]
 
     entity_names = {entity["name"] for entity in spec["entity_types"]}
     relationship_names = {

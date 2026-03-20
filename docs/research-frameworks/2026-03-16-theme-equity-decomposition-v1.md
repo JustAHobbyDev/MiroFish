@@ -28,6 +28,7 @@ include:
 
 - `underlying`
 - `company_role`
+- `chain_role`
 - `linked_process_layers`
 - `linked_components`
 - `linked_materials`
@@ -36,7 +37,24 @@ include:
 - `market_miss_alignment_score_0_to_100`
 - `value_capture_alignment_score_0_to_100`
 - `expression_readiness_score_0_to_100`
+- `chain_role_fit_score_0_to_100`
+- `candidate_priority_score_0_to_100`
 - `decomposition_confidence`
+
+`company_role` remains the coarse compatibility layer:
+
+- `anchor`
+- `satellite`
+- `weak_mention`
+
+`chain_role` is the richer role-in-chain label used for ranking and UI
+interpretation:
+
+- `system_anchor`
+- `levered_adjacent_expression`
+- `hidden_upstream_bottleneck`
+- `second_order_upstream_refinement`
+- `weak_mention`
 
 ## First Artifact
 
@@ -56,6 +74,13 @@ Current graph-derived role split:
 - `UUUU`: `satellite`
 - `NEO`: `satellite`
 
+Under the richer chain-role model this same output is expected to look more
+like:
+
+- `MP`: `hidden_upstream_bottleneck`
+- `UUUU`: `second_order_upstream_refinement`
+- `NEO`: `levered_adjacent_expression`
+
 ## Pick Flow Impact
 
 The promoted-parse handoff now prefers decomposition rows when available.
@@ -68,6 +93,9 @@ Updated artifacts:
 
 This means the robotics thesis now enters the pick flow as explicit names rather
 than a single basket thesis.
+
+Starting with decomposer `v2`, row ordering also uses a role-aware priority score
+instead of only the three original alignment/readiness metrics.
 
 ## Remaining Gap
 

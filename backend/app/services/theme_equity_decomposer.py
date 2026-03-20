@@ -12,6 +12,15 @@ from datetime import datetime, timezone
 from typing import Any, Dict, Iterable, List, Set
 
 
+CHAIN_ROLE_BASE_SCORES = {
+    "hidden_upstream_bottleneck": 95.0,
+    "system_anchor": 85.0,
+    "levered_adjacent_expression": 75.0,
+    "second_order_upstream_refinement": 65.0,
+    "weak_mention": 25.0,
+}
+
+
 def _clamp(value: float, low: float = 0.0, high: float = 100.0) -> float:
     return max(low, min(high, value))
 
@@ -214,6 +223,69 @@ def _inference(structural_parse: Dict[str, Any]) -> Dict[str, Any] | None:
     return inferences[0] if inferences else None
 
 
+def _company_role(
+    *,
+    graph_centrality_score: float,
+    value_capture_alignment_score: float,
+    claim_count: int,
+    process_count: int,
+) -> str:
+    if graph_centrality_score >= 78.0 or process_count >= 2:
+        return "anchor"
+    if value_capture_alignment_score >= 55.0 or claim_count >= 1:
+        return "satellite"
+    return "weak_mention"
+
+
+def _chain_role(
+    *,
+    company_role: str,
+    material_count: int,
+    component_count: int,
+    process_count: int,
+    share_expression_count: int,
+    basket_expression_count: int,
+    claim_count: int,
+    direct_value_capture_rel_count: int,
+    graph_centrality_score: float,
+    value_capture_alignment_score: float,
+) -> str:
+    if company_role == "weak_mention":
+        return "weak_mention"
+
+    if company_role == "anchor":
+        if material_count >= 1 or direct_value_capture_rel_count >= 2:
+            return "hidden_upstream_bottleneck"
+        return "system_anchor"
+
+    if material_count >= 1 and (
+        value_capture_alignment_score >= 75.0
+        or graph_centrality_score >= 70.0
+        or process_count >= 1
+    ):
+        return "second_order_upstream_refinement"
+
+    if component_count >= 1 or share_expression_count >= 1 or basket_expression_count >= 1 or claim_count >= 2:
+        return "levered_adjacent_expression"
+
+    return "second_order_upstream_refinement"
+
+
+def _chain_role_fit_score(
+    *,
+    chain_role: str,
+    graph_centrality_score: float,
+    value_capture_alignment_score: float,
+    expression_readiness_score: float,
+) -> float:
+    return _avg([
+        CHAIN_ROLE_BASE_SCORES.get(chain_role, 40.0),
+        graph_centrality_score,
+        value_capture_alignment_score,
+        expression_readiness_score,
+    ])
+
+
 def build_theme_equity_decomposition(
     source_bundle: Dict[str, Any],
     structural_parse: Dict[str, Any],
@@ -296,13 +368,37 @@ def build_theme_equity_decomposition(
             expression_readiness_score,
             100.0 if inference_support_claims or inference_support_relationships else 40.0,
         ])
-
-        if graph_centrality_score >= 78.0 or len(process_ids) >= 2:
-            company_role = "anchor"
-        elif value_capture_alignment_score >= 55.0 or len(claim_ids) >= 1:
-            company_role = "satellite"
-        else:
-            company_role = "weak_mention"
+        company_role = _company_role(
+            graph_centrality_score=graph_centrality_score,
+            value_capture_alignment_score=value_capture_alignment_score,
+            claim_count=len(claim_ids),
+            process_count=len(process_ids),
+        )
+        chain_role = _chain_role(
+            company_role=company_role,
+            material_count=len(material_ids),
+            component_count=len(component_ids),
+            process_count=len(process_ids),
+            share_expression_count=len(share_expression_ids),
+            basket_expression_count=len(basket_expression_ids),
+            claim_count=len(claim_ids),
+            direct_value_capture_rel_count=len(direct_value_capture_rels),
+            graph_centrality_score=graph_centrality_score,
+            value_capture_alignment_score=value_capture_alignment_score,
+        )
+        chain_role_fit_score = _chain_role_fit_score(
+            chain_role=chain_role,
+            graph_centrality_score=graph_centrality_score,
+            value_capture_alignment_score=value_capture_alignment_score,
+            expression_readiness_score=expression_readiness_score,
+        )
+        candidate_priority_score = _avg([
+            market_miss_alignment_score,
+            value_capture_alignment_score,
+            expression_readiness_score,
+            decomposition_confidence,
+            chain_role_fit_score,
+        ])
 
         linked_process_layers = _names_for_entity_ids(entity_map, process_ids, "ProcessLayer")
         linked_materials = _names_for_entity_ids(entity_map, material_ids, "MaterialInput")
@@ -310,7 +406,8 @@ def build_theme_equity_decomposition(
 
         process_fragment = ", ".join(linked_process_layers[:2]) if linked_process_layers else "the relevant process layer"
         summary = (
-            f"{symbol} is treated as a {company_role} expression for {theme.lower() if theme else 'the theme'} "
+            f"{symbol} is treated as a {chain_role} {company_role} expression for "
+            f"{theme.lower() if theme else 'the theme'} "
             f"through {process_fragment}."
         )
 
@@ -319,6 +416,7 @@ def build_theme_equity_decomposition(
                 "underlying": symbol,
                 "theme": theme,
                 "company_role": company_role,
+                "chain_role": chain_role,
                 "linked_process_layers": linked_process_layers,
                 "linked_components": linked_components,
                 "linked_materials": linked_materials,
@@ -330,6 +428,8 @@ def build_theme_equity_decomposition(
                 "market_miss_alignment_score_0_to_100": round(market_miss_alignment_score, 2),
                 "value_capture_alignment_score_0_to_100": round(value_capture_alignment_score, 2),
                 "expression_readiness_score_0_to_100": round(expression_readiness_score, 2),
+                "chain_role_fit_score_0_to_100": round(chain_role_fit_score, 2),
+                "candidate_priority_score_0_to_100": round(candidate_priority_score, 2),
                 "decomposition_confidence": round(decomposition_confidence, 2),
                 "candidate_summary": summary,
                 "company_attributes": company.get("attributes", {}),
@@ -338,6 +438,8 @@ def build_theme_equity_decomposition(
 
     rows.sort(
         key=lambda row: (
+            row["candidate_priority_score_0_to_100"],
+            row["chain_role_fit_score_0_to_100"],
             row["market_miss_alignment_score_0_to_100"],
             row["value_capture_alignment_score_0_to_100"],
             row["expression_readiness_score_0_to_100"],
@@ -347,7 +449,7 @@ def build_theme_equity_decomposition(
     )
 
     return {
-        "decomposer_version": "v1",
+        "decomposer_version": "v2",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source_bundle_name": source_bundle.get("name"),
         "graduation_status": graduation.get("graduation_status"),
@@ -361,4 +463,3 @@ def build_theme_equity_decomposition(
             "top_underlyings": [row["underlying"] for row in rows[:5]],
         },
     }
-

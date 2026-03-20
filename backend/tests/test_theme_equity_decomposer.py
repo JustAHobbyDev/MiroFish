@@ -34,7 +34,7 @@ def test_build_theme_equity_decomposition_for_robotics_v2():
         _load_json("research/analysis/2026-03-16-robotics-actuation-graduation-v2.json"),
     )
 
-    assert payload["decomposer_version"] == "v1"
+    assert payload["decomposer_version"] == "v2"
     assert payload["theme"] == "Robotics Supply Chain"
     assert payload["row_count"] == 3
     assert payload["summary"]["top_underlyings"][0] == "MP"
@@ -42,11 +42,15 @@ def test_build_theme_equity_decomposition_for_robotics_v2():
 
     rows = {row["underlying"]: row for row in payload["rows"]}
     assert rows["MP"]["company_role"] == "anchor"
+    assert rows["MP"]["chain_role"] == "hidden_upstream_bottleneck"
     assert "Neodymium Processing" in rows["MP"]["linked_process_layers"]
     assert "Sintered NdFeB Magnet Manufacturing" in rows["MP"]["linked_process_layers"]
+    assert rows["MP"]["candidate_priority_score_0_to_100"] >= rows["MP"]["market_miss_alignment_score_0_to_100"] - 5
 
     assert rows["NEO"]["company_role"] == "satellite"
+    assert rows["NEO"]["chain_role"] == "levered_adjacent_expression"
     assert rows["NEO"]["linked_process_layers"] == ["NdFeB Magnetic Powders and Alloys"]
 
     assert rows["UUUU"]["company_role"] == "satellite"
+    assert rows["UUUU"]["chain_role"] == "second_order_upstream_refinement"
     assert "Neodymium Processing" in rows["UUUU"]["linked_process_layers"]

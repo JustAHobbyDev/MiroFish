@@ -215,6 +215,42 @@ Connects claims to themes, bottleneck layers, companies, or policies.
 
 Captures substitutes, competing architectures, or replacement paths.
 
+## Canonical Expression Roles
+
+The ontology now distinguishes between two expression-role layers.
+
+### Compatibility company roles
+
+These are the coarse labels already used in candidate and knowledge-node
+artifacts:
+
+- `anchor`
+- `satellite`
+- `weak_mention`
+
+### Chain roles
+
+These are the richer role-in-chain labels used to describe how a company sits
+inside a discovered system:
+
+- `system_anchor`
+  Visible beneficiary or orienting company that makes the system legible.
+- `levered_adjacent_expression`
+  More asymmetric downstream or near-adjacent expression with customer, ramp, or
+  BOM leverage.
+- `hidden_upstream_bottleneck`
+  Less-obvious upstream chokepoint where scarcity, concentration, or process
+  control is likely misclassified by the market.
+- `second_order_upstream_refinement`
+  Upstream-adjacent refinement discovered after the core chain is already
+  understood.
+- `weak_mention`
+  Company mention with insufficient structural linkage to be treated as a real
+  expression.
+
+These roles should be treated as ranking and interpretation aids, not as a
+substitute for evidence.
+
 ## Backend Contract
 
 The ontology now has two stable output surfaces:
@@ -232,6 +268,11 @@ The ontology now has two stable output surfaces:
   This returns the reduced payload for the current graph builder:
   - `entity_types`
   - `edge_types`
+
+The broader ontology spec also exposes:
+
+- `supported_company_roles`
+- `supported_chain_roles`
 
 `edge_types` is intentionally preserved as a first-class key even though the research memo refers to relationships conceptually. This keeps the ontology compatible with the existing graph-builder and graph API contracts.
 
