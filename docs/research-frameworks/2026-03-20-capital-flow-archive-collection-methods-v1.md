@@ -100,6 +100,10 @@ The prefilter may keep artifacts that appear to involve:
 
 These are collection-shaping hints, not final signal labels.
 
+The concrete rule set is defined in:
+
+- [2026-03-20-capital-flow-event-form-prefilter-v1.md](/Users/danielschmidt/dev/MiroFish/docs/research-frameworks/2026-03-20-capital-flow-event-form-prefilter-v1.md)
+
 ## Source-Class Methods
 
 ## 1. Government
