@@ -24,7 +24,7 @@ Use historical cases to determine whether our early discovery workflow can:
 
 The framework is explicitly designed to calibrate:
 
-- `signal_candidate`
+- `capital_flow_signal_candidate`
 - `structural_pressure_candidate`
 - promotion thresholds from broad public flow into bounded universes
 
@@ -172,7 +172,7 @@ The blind pass may cluster only on upstream-neutral features such as:
 
 Each case must produce:
 
-1. surfaced `signal_candidate`s
+1. surfaced `capital_flow_signal_candidate`s
 2. surfaced cluster candidates
 3. surfaced `structural_pressure_candidate`s, if any
 4. a decision:

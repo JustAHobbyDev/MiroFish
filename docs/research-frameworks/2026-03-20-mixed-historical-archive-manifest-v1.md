@@ -126,6 +126,14 @@ It should be built around concrete sources and venues.
 Collection must happen by source-level inclusion rules, not by theme-level
 filtering.
 
+Important note:
+
+1. the concrete source list below is a provisional placeholder from an earlier
+   draft
+2. it is still too benchmark-proximate for a real blind run
+3. do not use it as the final first-run source universe
+4. replace it with a capital-flow-first concrete source set before collection
+
 ### Company filings
 
 Concrete sources:
@@ -222,7 +230,7 @@ Contains:
 
 - canonical source objects
 - normalized text/fragments
-- generated `signal_candidate`s
+- generated `capital_flow_signal_candidate`s
 
 ### Runs
 
@@ -247,11 +255,16 @@ Contains:
 4. preserve source class
 5. preserve publisher / author when available
 6. preserve text hash after normalization
+7. preserve artifact boundaries so first-pass interpretation can remain
+   artifact-local
 
 ## Collection Policy
 
 The archive must be collected by source-level inclusion, not by theme-level
 filtering.
+
+Interpretation may happen later with an LLM, but collection itself must remain
+blind to benchmark cases and target industries.
 
 Allowed collection rule:
 
@@ -329,4 +342,4 @@ Reason:
    broad and let the manifest enumerate accounts explicitly?
 
 3. Do we want the first normalized layer to stop at `source` objects, or also
-   include first-pass `signal_candidate` generation?
+   include first-pass `capital_flow_signal_candidate` generation?

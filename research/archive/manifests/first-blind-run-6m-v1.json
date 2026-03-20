@@ -1,9 +1,10 @@
 {
   "archive_id": "first_blind_run_6m_v1",
   "archive_version": "v1",
+  "status": "provisional_placeholder_not_ready_for_collection",
   "created_at": "2026-03-20T00:00:00Z",
   "owner": "Codex + user",
-  "purpose": "Mixed historical corpus for the first true blind run over rising-demand structural pressure.",
+  "purpose": "Mixed historical corpus for the first true blind run over rising-demand structural pressure, with later artifact-local extraction of capital-flow implications.",
   "corpus_start_date": "2025-09-01",
   "corpus_end_date": "2026-02-28",
   "time_bucket_rule": "weekly",
@@ -87,12 +88,14 @@
     "frozen_outputs": [
       "raw captures",
       "normalized sources",
+      "capital_flow_signal_candidates",
       "blind-run artifacts"
     ],
     "forbidden_hindsight_inputs": [
       "target-ticker-seeded collection",
       "post-cutoff evidence",
-      "benchmark notes during clustering"
+      "benchmark notes during clustering",
+      "prior artifact or cluster context during first-pass extraction"
     ]
   }
 }

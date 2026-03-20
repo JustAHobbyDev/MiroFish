@@ -94,6 +94,11 @@ archive.
 5. policy or government notices where relevant
 6. high-signal investor posts
 
+These sources may contain indirect capital-flow evidence.
+
+The extraction pass should not require explicit capital-allocation language if
+the artifact plausibly implies procurement pull, buildout, or capacity response.
+
 ### Minimum corpus rule
 
 The corpus must be broad enough that at least:
@@ -145,6 +150,7 @@ During the blind run, the operator may not use:
 4. post-cutoff evidence
 5. manual cluster naming around a known answer
 6. benchmark documents while clustering
+7. prior artifact or cluster context during first-pass extraction
 
 This applies even if the operator already personally knows the case.
 
@@ -176,7 +182,7 @@ Every blind run must produce these frozen outputs before evaluation:
 
 ### 1. Signal set
 
-- all surfaced `signal_candidate`s
+- all surfaced `capital_flow_signal_candidate`s
 
 ### 2. Cluster set
 
@@ -242,7 +248,8 @@ It does require two different phases.
 ### Phase A: run operator mode
 
 - define corpus
-- extract signals
+- extract `capital_flow_signal_candidate`s artifact by artifact with the fixed
+  zero-context prompt
 - cluster signals
 - freeze outputs
 

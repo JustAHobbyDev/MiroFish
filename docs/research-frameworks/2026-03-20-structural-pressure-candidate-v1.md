@@ -66,6 +66,9 @@ If yes:
    - chain expansion
    - bottleneck verification
 
+5. This object should be formed from multiple
+   `capital_flow_signal_candidate`s, not from raw mention volume alone.
+
 ## Assumptions
 
 1. Rising-demand bottlenecks can often be detected from repeated public
@@ -149,10 +152,10 @@ It is the minimum working contract.
   "system_label": "AI photonics buildout",
   "demand_driver_summary": "Hyperscaler TPU and AI-network buildout is increasing demand for photonics infrastructure.",
   "pressure_statement": "Rising AI optical demand is likely to stress component, material, and supplier layers upstream of visible beneficiaries.",
-  "supporting_signal_ids": [
-    "sig_001",
-    "sig_002",
-    "sig_003"
+  "supporting_capital_flow_signal_ids": [
+    "cfs_001",
+    "cfs_002",
+    "cfs_003"
   ],
   "signal_count": 3,
   "likely_visible_beneficiaries": [
@@ -191,7 +194,7 @@ It is the minimum working contract.
 
 ### Evidence
 
-1. `supporting_signal_ids`
+1. `supporting_capital_flow_signal_ids`
 2. `signal_count`
 3. `source_classes`
 4. `time_window` or `as_of_date`
@@ -223,8 +226,9 @@ It is the minimum working contract.
 
 ### Formation rule
 
-At least two independent public signals should support formation, and at least
-one should tie the pressure to a real system or buildout.
+At least two independent `capital_flow_signal_candidate`s should support
+formation, and at least one should tie the pressure to a real system or
+buildout.
 
 ## Promotion Rules
 
