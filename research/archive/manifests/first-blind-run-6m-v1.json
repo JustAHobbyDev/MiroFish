@@ -1,0 +1,93 @@
+{
+  "archive_id": "first_blind_run_6m_v1",
+  "archive_version": "v1",
+  "created_at": "2026-03-20T00:00:00Z",
+  "owner": "Codex + user",
+  "purpose": "Mixed historical corpus for the first true blind run over rising-demand structural pressure.",
+  "corpus_start_date": "2025-09-01",
+  "corpus_end_date": "2026-02-28",
+  "time_bucket_rule": "weekly",
+  "source_classes": [
+    "company_filing",
+    "company_release",
+    "earnings_transcript",
+    "government",
+    "trade_press",
+    "investor_post"
+  ],
+  "target_domains": [
+    "ai_infrastructure",
+    "photonics",
+    "memory",
+    "adjacent_control_branches"
+  ],
+  "source_targets": {
+    "company_filing": [
+      "AXT",
+      "Lumentum",
+      "Coherent",
+      "Micron",
+      "Sandisk"
+    ],
+    "company_release": [
+      "NVIDIA IR",
+      "Broadcom IR",
+      "Micron IR",
+      "SK hynix newsroom",
+      "Sandisk newsroom",
+      "Lumentum IR",
+      "Coherent newsroom",
+      "JX Advanced Metals"
+    ],
+    "earnings_transcript": [
+      "Micron",
+      "SK hynix",
+      "Sandisk"
+    ],
+    "government": [
+      "BIS",
+      "Federal Register",
+      "SEC EDGAR"
+    ],
+    "trade_press": [
+      "specialist semiconductor press",
+      "specialist photonics press",
+      "specialist supply-chain press"
+    ],
+    "investor_post": [
+      "aleabitoreddit",
+      "adjacent high-signal accounts to be enumerated before collection freeze"
+    ]
+  },
+  "exclusions": [
+    "post-cutoff benchmark summaries",
+    "current retrospective memos",
+    "manual evaluation notes"
+  ],
+  "storage": {
+    "raw_root": "research/archive/raw",
+    "normalized_root": "research/archive/normalized",
+    "manifests_root": "research/archive/manifests",
+    "runs_root": "research/archive/runs",
+    "logs_root": "research/archive/logs"
+  },
+  "freeze_rules": {
+    "frozen_inputs": [
+      "source_classes",
+      "source_targets",
+      "corpus_start_date",
+      "corpus_end_date",
+      "time_bucket_rule"
+    ],
+    "frozen_outputs": [
+      "raw captures",
+      "normalized sources",
+      "blind-run artifacts"
+    ],
+    "forbidden_hindsight_inputs": [
+      "target-ticker-seeded collection",
+      "post-cutoff evidence",
+      "benchmark notes during clustering"
+    ]
+  }
+}
