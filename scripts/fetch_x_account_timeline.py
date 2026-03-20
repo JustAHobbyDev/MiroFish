@@ -107,6 +107,8 @@ def _matched_terms(post: dict[str, Any], terms: list[str]) -> list[str]:
 @dataclass
 class TimelineQuery:
     username: str
+    mode: str
+    search_query: str | None
     start_time: str | None
     end_time: str | None
     exclude: list[str]
@@ -119,6 +121,16 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--username", required=True, help="X username without @")
     parser.add_argument("--output-json", type=Path, required=True)
+    parser.add_argument(
+        "--mode",
+        choices=["user-posts", "search-all"],
+        default="search-all",
+        help="Use full-archive search or the user posts timeline endpoint.",
+    )
+    parser.add_argument(
+        "--search-query",
+        help="Optional explicit full-archive search query. Defaults to from:<username> in search-all mode.",
+    )
     parser.add_argument("--start-time", help="ISO8601 UTC lower bound")
     parser.add_argument("--end-time", help="ISO8601 UTC upper bound")
     parser.add_argument(
@@ -168,34 +180,47 @@ def main() -> int:
     match_terms = _collect_terms(args.match_term)
     query = TimelineQuery(
         username=args.username,
+        mode=args.mode,
+        search_query=args.search_query,
         start_time=args.start_time,
         end_time=args.end_time,
         exclude=args.exclude,
-        max_results=max(5, min(100, int(args.max_results))),
+        max_results=max(5, min(500 if args.mode == "search-all" else 100, int(args.max_results))),
         max_pages=args.max_pages,
         match_terms=match_terms,
     )
 
     posts: list[dict[str, Any]] = []
     page_count = 0
-    paginator = client.users.get_posts(
-        id=user_id,
-        max_results=query.max_results,
-        start_time=query.start_time,
-        end_time=query.end_time,
-        exclude=query.exclude or None,
-        tweet_fields=[
-            "author_id",
-            "attachments",
-            "conversation_id",
-            "created_at",
-            "entities",
-            "lang",
-            "public_metrics",
-            "referenced_tweets",
-            "text",
-        ],
-    )
+    tweet_fields = [
+        "author_id",
+        "attachments",
+        "conversation_id",
+        "created_at",
+        "entities",
+        "lang",
+        "public_metrics",
+        "referenced_tweets",
+        "text",
+    ]
+    if query.mode == "search-all":
+        search_query = query.search_query or f"from:{args.username}"
+        paginator = client.posts.search_all(
+            query=search_query,
+            max_results=query.max_results,
+            start_time=query.start_time,
+            end_time=query.end_time,
+            tweet_fields=tweet_fields,
+        )
+    else:
+        paginator = client.users.get_posts(
+            id=user_id,
+            max_results=query.max_results,
+            start_time=query.start_time,
+            end_time=query.end_time,
+            exclude=query.exclude or None,
+            tweet_fields=tweet_fields,
+        )
 
     try:
         for page in paginator:
@@ -223,6 +248,11 @@ def main() -> int:
                 break
     except HTTPError as exc:
         response = exc.response
+        if response is not None and response.status_code == 429:
+            raise SystemExit(
+                "X API returned 429 Too Many Requests while fetching posts. Narrow the "
+                "query, reduce page count, or wait for the rate window to reset."
+            ) from exc
         if response is not None and response.status_code == 402:
             raise SystemExit(
                 "X API returned 402 Payment Required while fetching posts. Paid usage is "

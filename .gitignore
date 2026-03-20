@@ -59,3 +59,6 @@ backend/uploads/
 
 # Docker 数据
 data/
+
+# X research raw artifacts
+research/analysis/aleabitoreddit-*.json
