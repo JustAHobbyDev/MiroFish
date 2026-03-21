@@ -19,8 +19,8 @@
       "rejection_reason": "Constrained-access or licensing notice without concrete rising-demand buildout evidence.",
       "heuristic_filter_applied": true,
       "heuristic_filter_reason": "Constrained-access or licensing notice without concrete rising-demand buildout evidence.",
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Exclusive patent license notice without concrete evidence of current or planned physical buildout. This is outside the current rising-demand structural-pressure workflow and should remain rejected."
     },
     {
       "audit_type": "llm_no_candidate",
@@ -37,8 +37,8 @@
       "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
       "heuristic_filter_applied": false,
       "heuristic_filter_reason": null,
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Administrative information-collection comment request. The word construction appears in the form title, but the body is purely paperwork extension and does not imply directional capital flow or physical buildout."
     },
     {
       "audit_type": "llm_no_candidate",
@@ -55,8 +55,8 @@
       "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
       "heuristic_filter_applied": false,
       "heuristic_filter_reason": null,
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Administrative information-collection comment request. This is paperwork about wage-rate reporting, not a signal of rising demand or buildout."
     },
     {
       "audit_type": "llm_no_candidate",
@@ -73,8 +73,8 @@
       "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
       "heuristic_filter_applied": false,
       "heuristic_filter_reason": null,
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Operating-permit objection denial may matter for plant continuity, but this notice does not itself indicate rising demand, planned capital deployment, or new physical buildout. Rejection is correct for the current workflow."
     },
     {
       "audit_type": "llm_no_candidate",
@@ -91,8 +91,8 @@
       "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
       "heuristic_filter_applied": false,
       "heuristic_filter_reason": null,
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Correction notice only. It contains no new evidence of capital movement or physical buildout and should remain rejected."
     },
     {
       "audit_type": "llm_no_candidate",
@@ -109,8 +109,8 @@
       "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
       "heuristic_filter_applied": false,
       "heuristic_filter_reason": null,
-      "review_label": null,
-      "review_notes": ""
+      "review_label": "correct_rejection",
+      "review_notes": "Exclusive patent license notice without concrete evidence of current or planned physical buildout. Outside the current rising-demand structural-pressure workflow."
     }
   ],
   "review_labels": [
