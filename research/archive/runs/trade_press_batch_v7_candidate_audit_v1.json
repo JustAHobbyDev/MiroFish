@@ -1,0 +1,136 @@
+{
+  "name": "trade_press_batch_v7_candidate_audit_v1",
+  "batch_name": "trade_press_gpt4omini_v7_30",
+  "source_artifact": "research/archive/normalized/trade_press/trade_press_gpt4omini_v7_30.json",
+  "summary": {
+    "artifact_count": 17,
+    "correct_candidate_count": 17,
+    "borderline_should_review_count": 0,
+    "false_positive_count": 0
+  },
+  "items": [
+    {
+      "artifact_id": "trade_press_cac8ad2ff3742510",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Explicit capital investment with named manufacturing expansion."
+    },
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "title": "ABB to invest $120M in US manufacturing",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Direct manufacturing investment and facility activity."
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Explicit plant investment and physical buildout."
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Named factory siting plus explicit multi-year capital expansion."
+    },
+    {
+      "artifact_id": "trade_press_9f4a057076b0ca77",
+      "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Direct spend into grid equipment manufacturing."
+    },
+    {
+      "artifact_id": "trade_press_61fa290549c6e41d",
+      "title": "Roche to expand, open Indianapolis and North Carolina sites",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Multi-site expansion and openings are direct physical deployment."
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Groundbreaking for a large data-center campus is direct buildout."
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "title": "EdgeCore expands Mesa data center campus in Arizona",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Explicit campus expansion."
+    },
+    {
+      "artifact_id": "trade_press_a13c5dc00fba3fa5",
+      "title": "EdgeCore begins construction at 114MW Northern Virginia campus",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Direct construction start."
+    },
+    {
+      "artifact_id": "trade_press_08976a2c7918a320",
+      "title": "Eaton invests $340M in US transformer production",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Explicit transformer-production investment; this was the prior prefilter miss."
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Duplicate valid artifact from a second publication capture."
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Direct manufacturing investment with named transformer factory."
+    },
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "title": "As load grows, Southern raises spending plan to $81B",
+      "prefilter_triage": "keep",
+      "label": "correct_candidate",
+      "reason": "Explicit utility spending-plan increase tied to demand growth."
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "title": "Power enclosure maker AVL to establish its first US plant",
+      "prefilter_triage": "review",
+      "label": "correct_candidate",
+      "reason": "New plant establishment is direct physical buildout."
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "title": "Hitachi Energy commits $250M to address transformer shortage",
+      "prefilter_triage": "review",
+      "label": "correct_candidate",
+      "reason": "Explicit spend to relieve an industrial shortage fits the workflow directly."
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "prefilter_triage": "review",
+      "label": "correct_candidate",
+      "reason": "Concrete signed demand plus explicit load growth implies real utility buildout pressure."
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "title": "Italy-based Westrafo to build its first US transformer plant",
+      "prefilter_triage": "review",
+      "label": "correct_candidate",
+      "reason": "New transformer plant is direct manufacturing buildout."
+    }
+  ],
+  "notes": [
+    "The v7 candidate set contains no remaining utility pipeline or load-forecast artifacts without concrete spend or signed-demand context.",
+    "Residual risk is now concentrated in schema failures, not false-positive candidates."
+  ]
+}
