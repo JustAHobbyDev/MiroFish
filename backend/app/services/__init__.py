@@ -121,6 +121,9 @@ from .energy_flow_pressure_extractor import (
     build_energy_flow_pressure_extraction_messages,
     validate_energy_flow_pressure_extraction_payload,
 )
+from .capital_flow_clustering import build_capital_flow_cluster_batch
+from .energy_flow_pressure_clustering import build_energy_flow_pressure_cluster_batch
+from .structural_pressure_merger import build_structural_pressure_candidate_batch
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -228,6 +231,9 @@ __all__ = [
     'build_energy_flow_pressure_signal_batch',
     'build_energy_flow_pressure_extraction_messages',
     'validate_energy_flow_pressure_extraction_payload',
+    'build_capital_flow_cluster_batch',
+    'build_energy_flow_pressure_cluster_batch',
+    'build_structural_pressure_candidate_batch',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',

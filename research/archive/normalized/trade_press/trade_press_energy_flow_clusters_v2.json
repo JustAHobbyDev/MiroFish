@@ -1,0 +1,220 @@
+{
+  "name": "trade_press_prefilter_v5_30_energy_flow_clusters_v1",
+  "source_class": "trade_press",
+  "clusters": [
+    {
+      "energy_flow_pressure_cluster_id": "efpc_data_center_power_demand_buildout_2025-08-08_0e8075f8",
+      "as_of_date": "2025-08-08",
+      "status": "candidate",
+      "system_label": "data center power demand buildout",
+      "cluster_statement": "Multiple artifacts imply recurring data-center power-demand pressure tied to physical buildout.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_a13c5dc00fba3fa5:energy:0",
+        "trade_press_a13c5dc00fba3fa5:energy:1",
+        "trade_press_300902f748d55918:energy:0",
+        "trade_press_70a23134a41f33bd:energy:0",
+        "trade_press_70a23134a41f33bd:energy:1",
+        "trade_press_ff46b7dab1b827b4:energy:1",
+        "trade_press_ff46b7dab1b827b4:energy:2"
+      ],
+      "signal_count": 7,
+      "artifact_count": 4,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-02-21",
+        "end_date": "2025-08-08"
+      },
+      "pressure_types_present": [
+        "capacity_tightness",
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [
+        "Arizona",
+        "Texas",
+        "United States",
+        "Virginia"
+      ],
+      "confidence": "high",
+      "strong_infrastructure_response_evidence": true
+    },
+    {
+      "energy_flow_pressure_cluster_id": "efpc_general_energy_system_pressure_2025-03-27_6d160274",
+      "as_of_date": "2025-03-27",
+      "status": "candidate",
+      "system_label": "general energy-system pressure",
+      "cluster_statement": "Multiple artifacts imply recurring pressure in one energy system.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_c932aca7f0976acc:energy:0",
+        "trade_press_c932aca7f0976acc:energy:1",
+        "trade_press_c838cb21478bfff1:energy:0"
+      ],
+      "signal_count": 3,
+      "artifact_count": 2,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-03-10",
+        "end_date": "2025-03-27"
+      },
+      "pressure_types_present": [
+        "infrastructure_response_need"
+      ],
+      "geography_hints": [
+        "United States"
+      ],
+      "confidence": "medium",
+      "strong_infrastructure_response_evidence": true
+    },
+    {
+      "energy_flow_pressure_cluster_id": "efpc_grid_equipment_and_transformer_pressure_2025-05-29_678b93be",
+      "as_of_date": "2025-05-29",
+      "status": "candidate",
+      "system_label": "grid equipment and transformer pressure",
+      "cluster_statement": "Multiple artifacts imply recurring pressure on transformers, switchgear, and adjacent grid-equipment capacity.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_9f4a057076b0ca77:energy:0",
+        "trade_press_08976a2c7918a320:energy:0",
+        "trade_press_08976a2c7918a320:energy:1",
+        "trade_press_c906877e7f8ac2bc:energy:0",
+        "trade_press_c906877e7f8ac2bc:energy:1",
+        "trade_press_c906877e7f8ac2bc:energy:2",
+        "trade_press_404505b643706d79:energy:0",
+        "trade_press_404505b643706d79:energy:1"
+      ],
+      "signal_count": 8,
+      "artifact_count": 4,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2024-12-05",
+        "end_date": "2025-05-29"
+      },
+      "pressure_types_present": [
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [
+        "North Carolina",
+        "United States"
+      ],
+      "confidence": "high",
+      "strong_infrastructure_response_evidence": true
+    },
+    {
+      "energy_flow_pressure_cluster_id": "efpc_power_generation_and_backup_equipment_pressure_2025-08-01_afe2b6cb",
+      "as_of_date": "2025-08-01",
+      "status": "candidate",
+      "system_label": "power generation and backup equipment pressure",
+      "cluster_statement": "Multiple artifacts imply recurring pressure tied to generation and backup-power equipment response.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_898010ffbfe80234:energy:0",
+        "trade_press_898010ffbfe80234:energy:1",
+        "trade_press_b4dc467358a3db4d:energy:0",
+        "trade_press_b4dc467358a3db4d:energy:1"
+      ],
+      "signal_count": 4,
+      "artifact_count": 2,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-07-16",
+        "end_date": "2025-08-01"
+      },
+      "pressure_types_present": [
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [],
+      "confidence": "medium",
+      "strong_infrastructure_response_evidence": true
+    },
+    {
+      "energy_flow_pressure_cluster_id": "efpc_utility_and_large_load_power_demand_pressure_2025-04-07_94308007",
+      "as_of_date": "2025-04-07",
+      "status": "candidate",
+      "system_label": "utility and large-load power demand pressure",
+      "cluster_statement": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_1c40d6cd25decce0:energy:0",
+        "trade_press_1c40d6cd25decce0:energy:1",
+        "trade_press_1c40d6cd25decce0:energy:2",
+        "trade_press_12592956a90d251e:energy:0",
+        "trade_press_12592956a90d251e:energy:1",
+        "trade_press_47e3c04df2ffff47:energy:0",
+        "trade_press_47e3c04df2ffff47:energy:1",
+        "trade_press_cac8ad2ff3742510:energy:0",
+        "trade_press_cac8ad2ff3742510:energy:1",
+        "trade_press_acb174b496999f97:energy:0",
+        "trade_press_acb174b496999f97:energy:1"
+      ],
+      "signal_count": 11,
+      "artifact_count": 5,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-02-13",
+        "end_date": "2025-04-07"
+      },
+      "pressure_types_present": [
+        "capacity_tightness",
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [
+        "Texas",
+        "United States"
+      ],
+      "confidence": "high",
+      "strong_infrastructure_response_evidence": true
+    },
+    {
+      "energy_flow_pressure_cluster_id": "efpc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
+      "as_of_date": "2025-10-30",
+      "status": "candidate",
+      "system_label": "utility and large-load power demand pressure",
+      "cluster_statement": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_099f9d0368e5000f:energy:0",
+        "trade_press_099f9d0368e5000f:energy:1",
+        "trade_press_099f9d0368e5000f:energy:2",
+        "trade_press_adbcd97a0be82618:energy:0",
+        "trade_press_adbcd97a0be82618:energy:1",
+        "trade_press_ff46b7dab1b827b4:energy:0",
+        "trade_press_8434daa99144e894:energy:0",
+        "trade_press_8af4de468aa71b03:energy:0",
+        "trade_press_8af4de468aa71b03:energy:1",
+        "trade_press_8af4de468aa71b03:energy:2"
+      ],
+      "signal_count": 10,
+      "artifact_count": 5,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-08-01",
+        "end_date": "2025-10-30"
+      },
+      "pressure_types_present": [
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [
+        "Texas",
+        "United States"
+      ],
+      "confidence": "high",
+      "strong_infrastructure_response_evidence": true
+    }
+  ],
+  "metrics": {
+    "input_signal_count": 51,
+    "cluster_count": 6
+  }
+}
