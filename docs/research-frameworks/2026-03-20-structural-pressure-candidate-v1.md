@@ -262,6 +262,10 @@ If only one cluster type exists:
 2. an `energy_flow_pressure_cluster` alone should usually remain upstream unless
    it also contains strong infrastructure-response evidence
 
+Detailed merge policy now lives in:
+
+- `2026-03-21-structural-pressure-merge-rules-v1.md`
+
 ### Structural pressure candidate -> bounded universe
 
 Promote when all are true:
