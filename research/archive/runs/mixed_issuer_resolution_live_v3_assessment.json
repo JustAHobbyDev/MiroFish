@@ -1,0 +1,18 @@
+{
+  "batch": "mixed_issuer_resolution_live_v3",
+  "evaluated_real_entity_count": 5,
+  "resolved_parent_route_count": 1,
+  "resolved_direct_public_route_count": 2,
+  "resolved_direct_foreign_public_route_count": 1,
+  "resolved_private_company_route_count": 1,
+  "public_filing_ready_issuers": [
+    "Hitachi, Ltd.",
+    "Eaton Corporation plc",
+    "Mitsubishi Electric Corporation",
+    "GE Vernova Inc."
+  ],
+  "blocked_from_public_filing_collection": [
+    "Westrafo S.P.A."
+  ],
+  "decision": "Proceed with public filing collection only for the four public-route issuers and keep Westrafo on a private-company diligence path."
+}

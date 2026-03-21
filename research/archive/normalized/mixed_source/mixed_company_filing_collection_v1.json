@@ -1,0 +1,47 @@
+{
+  "name": "mixed_company_filing_collection_v1",
+  "origin_live_resolution_file": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_v3.json",
+  "collections": [
+    {
+      "company_filing_collection_id": "cfc_hitachi_ltd_2026-03-21_8bb6427f",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "collection_scope": "first_real_route_validation_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the two collected parent filings for transformer, grid equipment, capacity expansion, backlog, capex, and risk-language evidence.",
+      "collected_documents": [
+        {
+          "document_id": "hfl_hitachi_ltd_annual_securities_report_fy2025",
+          "document_title": "Annual Securities Report FY2025",
+          "filing_type": "annual_securities_report",
+          "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/ir/media/library/stock/hit_sr_fy2024_2_en.pdf",
+          "source_last_modified": "Mon, 18 Aug 2025 04:15:19 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 39311261,
+          "sha256": "4f62a5cdff2c7b7168eccd6f3f3eb6d057124baa1f196bbe6c7d90c61a737aca",
+          "local_path": "research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_annual_securities_report_fy2025.pdf",
+          "download_status": "downloaded"
+        },
+        {
+          "document_id": "hfl_hitachi_ltd_semi_annual_securities_report_fy2026",
+          "document_title": "Semi-annual Securities Report FY2026",
+          "filing_type": "semi_annual_securities_report",
+          "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/ir/media/library/stock/hit_sr_fy2024_1_en.pdf",
+          "source_last_modified": "Wed, 19 Nov 2025 01:48:11 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 524757,
+          "sha256": "7790ad714cd9fc85800652ac3395b27cd9f8ff472df6e52ca53ba5a2cb2452ce",
+          "local_path": "research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_semi_annual_securities_report_fy2026.pdf",
+          "download_status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "issuer_collection_count": 1,
+    "document_count": 2,
+    "total_downloaded_bytes": 39836018
+  }
+}

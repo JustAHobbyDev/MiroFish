@@ -1,0 +1,133 @@
+{
+  "name": "mixed_issuer_resolution_live_v3",
+  "evaluated_plan_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_v2.json",
+  "results": [
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "live_resolution_status": "resolved_parent_route",
+      "resolution_outcome": "parent_company_reporting_route_identified",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "resolved_entity_type": "wholly_owned_subsidiary_of_public_parent",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "next_action": "Use Hitachi, Ltd. investor-relations materials and Annual Securities Report / semi-annual securities filings via EDINET as the first filing route for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.hitachienergy.com/latam/es/news-and-events/press-releases/2025/10/hitachi-energy-and-blackstone-energy-transition-partners-enter-strategic-partnership",
+          "note": "Official Hitachi Energy source describing Hitachi Energy as a wholly owned subsidiary of Hitachi, Ltd."
+        },
+        {
+          "evidence_type": "official_parent_ir_source",
+          "source_url": "https://www.hitachi.com/en/ir/library/stock/",
+          "note": "Official Hitachi IR library page for Annual Securities Report and related filings filed via EDINET."
+        },
+        {
+          "evidence_type": "official_parent_ir_source",
+          "source_url": "https://www.hitachi.com/IR-e/faq/index.html",
+          "note": "Official Hitachi IR FAQ stating Annual Securities Report materials are available via EDINET and that Hitachi shares are listed in Japan."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Eaton",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "Eaton Corporation plc",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "eaton_ir_and_sec_edgar",
+      "next_action": "Use Eaton investor-relations annual reports and SEC EDGAR filings (10-K, 10-Q, 8-K) for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-reports-record-third-quarter-2025-results-with-accelerating-orders.html",
+          "note": "Official Eaton release identifying the issuer as Eaton Corporation plc (NYSE: ETN)."
+        },
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://www.eaton.com/us/en-us/company/investor-relations/investor-toolkit/financial-reports/annual-report.html",
+          "note": "Official Eaton investor-relations annual report page."
+        },
+        {
+          "evidence_type": "official_annual_report_pdf",
+          "source_url": "https://www.eaton.com/content/dam/eaton/company/investor-relations/annual-report/eaton-2025-annual-report.pdf",
+          "note": "Official Eaton annual report PDF hosted on eaton.com."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Mitsubishi Electric",
+      "live_resolution_status": "resolved_direct_foreign_public_route",
+      "resolution_outcome": "direct_foreign_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "Mitsubishi Electric Corporation",
+      "resolved_entity_type": "foreign_public_company",
+      "filing_route_assessment": "mitsubishi_electric_ir_and_annual_securities_report",
+      "next_action": "Use Mitsubishi Electric investor-relations stock information and Annual Securities Report / semi-annual securities report materials for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://www.mitsubishielectric.com/investors/stock/info/",
+          "note": "Official Mitsubishi Electric stock information page showing Tokyo Stock Exchange stock code 6503."
+        },
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://www.mitsubishielectric.com/investors/library/securities-report/",
+          "note": "Official Mitsubishi Electric Annual Securities Report page."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Westrafo",
+      "live_resolution_status": "resolved_private_company_route",
+      "resolution_outcome": "private_company_reporting_route_identified",
+      "resolved_issuer_name": "Westrafo S.P.A.",
+      "resolved_entity_type": "private_company",
+      "filing_route_assessment": "private_company_no_public_filing_route",
+      "next_action": "Do not run public filing collection. Use official company pages, company releases, and private-company registry sources if deeper diligence is needed.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.westrafo.com/about-us/",
+          "note": "Official Westrafo page identifying Westrafo S.P.A. and Westrafo America LLC as operating entities."
+        },
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.westrafo.com/nextalia-announces-the-acquisition-of-westrafo-leading-producer-of-electrical-transformers-and-integrated-solutions-for-the-energy-industry/",
+          "note": "Official Westrafo acquisition announcement describing a majority-stake acquisition by Nextalia and a continuing private ownership structure."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "GE Vernova",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "GE Vernova Inc.",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "ge_vernova_ir_and_sec_edgar",
+      "next_action": "Use GE Vernova investor-relations annual report / 10-K materials and SEC EDGAR filings (10-K, 10-Q, 8-K) for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-reports-third-quarter-2025-financial",
+          "note": "Official GE Vernova release identifying the issuer as GE Vernova Inc. (NYSE: GEV)."
+        },
+        {
+          "evidence_type": "official_annual_report_pdf",
+          "source_url": "https://www.gevernova.com/sites/default/files/gevernova_2025_form10-k.pdf",
+          "note": "Official GE Vernova Form 10-K PDF hosted on gevernova.com."
+        },
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://www.gevernova.com/news/articles/ge-vernova-releases-2024-annual-report-10-k",
+          "note": "Official GE Vernova investor-relations article directing investors to the annual report and 10-K."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "evaluated_real_entity_count": 5,
+    "resolved_parent_route_count": 1,
+    "resolved_direct_public_route_count": 2,
+    "resolved_direct_foreign_public_route_count": 1,
+    "resolved_private_company_route_count": 1
+  }
+}
