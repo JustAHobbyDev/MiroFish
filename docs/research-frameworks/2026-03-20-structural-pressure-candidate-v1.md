@@ -207,6 +207,8 @@ It is the minimum working contract.
 2. `suspected_stress_layers`
 3. `formation_basis`
 4. `confidence`
+5. `source_diversity_status`
+6. `requires_source_diversity_corroboration`
 
 ## Source Rules
 
@@ -266,6 +268,15 @@ Detailed merge policy now lives in:
 
 - `2026-03-21-structural-pressure-merge-rules-v1.md`
 
+### Single-source corroboration rule
+
+If only one source class supports the candidate:
+
+1. the candidate may still exist
+2. confidence should be capped at `medium`
+3. `source_diversity_status` should be `single_source_class`
+4. `requires_source_diversity_corroboration` should be `true`
+
 ### Structural pressure candidate -> bounded universe
 
 Promote when all are true:
@@ -273,6 +284,8 @@ Promote when all are true:
 1. at least one likely visible beneficiary is identified
 2. at least one suspected stress layer is named
 3. the system can specify which source classes are now worth deeper review
+4. any required source-diversity corroboration has been satisfied, or the
+   candidate has been explicitly promoted by an analyst
 
 ### Structural pressure candidate -> reject
 
@@ -303,6 +316,7 @@ These are workflow bands, not final scoring outputs.
 - demand pressure is persistent
 - physical system is clear
 - likely visible beneficiaries and suspected stress layers are both concrete
+- source diversity corroboration is present
 
 High confidence does not mean verified bottleneck.
 It only means the candidate deserves bounded-universe formation.

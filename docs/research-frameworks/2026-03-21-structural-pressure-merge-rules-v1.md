@@ -87,6 +87,8 @@ A merged `structural_pressure_candidate` should record:
 5. `pressure_statement`
 6. `stress_rationale`
 7. `confidence`
+8. `source_diversity_status`
+9. `requires_source_diversity_corroboration`
 
 ## Merge Basis Contract
 
@@ -127,6 +129,20 @@ Example:
 - time overlap is strong
 - pressure statement is clear and bounded
 
+## Source-Diversity Guardrail
+
+1. A `structural_pressure_candidate` may still form from one source class.
+2. If all supporting clusters come from only one source class:
+   - confidence must not exceed `medium`
+   - `source_diversity_status` should be `single_source_class`
+   - `requires_source_diversity_corroboration` should be `true`
+3. Single-source structural-pressure candidates are valid upstream objects, but
+   they should not auto-drive bounded-universe formation without:
+   - corroboration from another source class
+   - or explicit analyst confirmation
+4. Multi-source candidates may retain `high` confidence when the rest of the
+   merge basis is strong.
+
 ## Decision Rule
 
 For v1:
@@ -138,4 +154,6 @@ For v1:
 ## Open Questions
 
 1. Should a dual-lane merge require geography overlap explicitly in v1?
-2. Should merge confidence be capped at `medium` if only one lane exists?
+2. Should single-source corroboration be satisfied by:
+   - one additional source class anywhere in the candidate
+   - or one additional source class inside each supporting lane?

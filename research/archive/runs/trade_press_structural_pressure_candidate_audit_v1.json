@@ -1,0 +1,56 @@
+{
+  "name": "trade_press_structural_pressure_candidate_audit_v1",
+  "evaluated_batch": "research/archive/normalized/trade_press/trade_press_structural_pressure_candidates_v3.json",
+  "summary": {
+    "candidate_count": 6,
+    "correct_candidate_count": 4,
+    "borderline_should_review_count": 2,
+    "false_positive_count": 0,
+    "single_source_candidate_count": 6,
+    "recommendation": "keep_source_diversity_guardrail"
+  },
+  "items": [
+    {
+      "pressure_candidate_id": "spc_data_center_power_demand_buildout_2025-10-30_d803ed8b",
+      "label": "correct_candidate",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Concrete dual-lane data-center power/buildout pressure. Valid structural-pressure object, but not ready for bounded-universe promotion without another source class."
+    },
+    {
+      "pressure_candidate_id": "spc_grid_equipment_and_transformer_pressure_2025-03-10_0f431d4d",
+      "label": "correct_candidate",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Concrete transformer and grid-equipment pressure with repeated spend and response signals. Valid structural-pressure object; corroboration still required."
+    },
+    {
+      "pressure_candidate_id": "spc_industrial_manufacturing_expansion_2025-05-15_f8f01357",
+      "label": "borderline_should_review",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Real expansion activity, but the system label remains too broad and stress is not yet tightly bounded."
+    },
+    {
+      "pressure_candidate_id": "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001",
+      "label": "borderline_should_review",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Valid upstream pressure, but broader and less clearly bottleneck-shaped than transformer or data-center power cases."
+    },
+    {
+      "pressure_candidate_id": "spc_utility_and_large_load_power_demand_pressure_2025-04-07_94308007",
+      "label": "correct_candidate",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Repeated utility and large-load pressure evidence is coherent enough for a structural-pressure object; corroboration still required."
+    },
+    {
+      "pressure_candidate_id": "spc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
+      "label": "correct_candidate",
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "notes": "Late-window utility and large-load pressure remains coherent enough for a structural-pressure object; corroboration still required."
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "name": "structural_pressure_candidate_batch_v1",
+  "candidates": [
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_data_center_power_demand_buildout_2025-10-30_d803ed8b",
+      "as_of_date": "2025-10-30",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "data center power demand buildout",
+      "demand_driver_summary": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity.",
+      "pressure_statement": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity. This is likely to create structural pressure in data center power demand buildout.",
+      "supporting_capital_flow_cluster_ids": [
+        "cfc_data_center_campus_buildout_2025-10-30_5dde5c0f"
+      ],
+      "supporting_energy_flow_pressure_cluster_ids": [
+        "efpc_data_center_power_demand_buildout_2025-08-08_0e8075f8"
+      ],
+      "merge_basis": {
+        "system_overlap": true,
+        "time_overlap": true,
+        "direction_compatibility": true,
+        "demand_story_overlap": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity."
+      },
+      "signal_count": 19,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-02-21",
+        "end_date": "2025-10-30"
+      },
+      "suspected_stress_layers": [
+        "data center power demand buildout"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": true,
+        "energy_flow_pressure_cluster_present": true,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    },
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_grid_equipment_and_transformer_pressure_2025-03-10_0f431d4d",
+      "as_of_date": "2025-03-10",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "grid equipment and transformer pressure",
+      "demand_driver_summary": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment.",
+      "pressure_statement": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment. This is likely to create structural pressure in grid equipment and transformer pressure.",
+      "supporting_capital_flow_cluster_ids": [
+        "cfc_grid_equipment_and_transformer_buildout_2025-03-10_449aa2a9"
+      ],
+      "supporting_energy_flow_pressure_cluster_ids": [
+        "efpc_grid_equipment_and_transformer_pressure_2025-05-29_678b93be"
+      ],
+      "merge_basis": {
+        "system_overlap": true,
+        "time_overlap": true,
+        "direction_compatibility": true,
+        "demand_story_overlap": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment."
+      },
+      "signal_count": 15,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2024-12-05",
+        "end_date": "2025-03-10"
+      },
+      "suspected_stress_layers": [
+        "grid equipment and transformer pressure"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": true,
+        "energy_flow_pressure_cluster_present": true,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    },
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_industrial_manufacturing_expansion_2025-05-15_f8f01357",
+      "as_of_date": "2025-05-15",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "industrial manufacturing expansion",
+      "demand_driver_summary": "Industrial capacity additions are driving recurring manufacturing buildout and plant expansion signals.",
+      "pressure_statement": "Industrial capacity additions are driving recurring manufacturing buildout and plant expansion signals. This is likely to create structural pressure in industrial manufacturing expansion.",
+      "supporting_capital_flow_cluster_ids": [
+        "cfc_industrial_manufacturing_expansion_2025-05-15_f8f01357"
+      ],
+      "supporting_energy_flow_pressure_cluster_ids": [],
+      "merge_basis": {
+        "system_overlap": false,
+        "time_overlap": false,
+        "direction_compatibility": true,
+        "demand_story_overlap": "capital_flow_only"
+      },
+      "signal_count": 6,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-03-10",
+        "end_date": "2025-05-15"
+      },
+      "suspected_stress_layers": [
+        "industrial manufacturing expansion"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": true,
+        "energy_flow_pressure_cluster_present": false,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    },
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001",
+      "as_of_date": "2025-07-16",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "power generation and backup equipment pressure",
+      "demand_driver_summary": "Rising power demand and resilience needs are driving investment into generation and backup-power equipment.",
+      "pressure_statement": "Rising power demand and resilience needs are driving investment into generation and backup-power equipment. This is likely to create structural pressure in power generation and backup equipment pressure.",
+      "supporting_capital_flow_cluster_ids": [
+        "cfc_power_generation_and_backup_equipment_buildout_2025-07-16_ed81b3e0"
+      ],
+      "supporting_energy_flow_pressure_cluster_ids": [
+        "efpc_power_generation_and_backup_equipment_pressure_2025-08-01_afe2b6cb"
+      ],
+      "merge_basis": {
+        "system_overlap": true,
+        "time_overlap": true,
+        "direction_compatibility": true,
+        "demand_story_overlap": "Rising power demand and resilience needs are driving investment into generation and backup-power equipment."
+      },
+      "signal_count": 9,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-05-29",
+        "end_date": "2025-07-16"
+      },
+      "suspected_stress_layers": [
+        "power generation and backup equipment pressure"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": true,
+        "energy_flow_pressure_cluster_present": true,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    },
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_utility_and_large_load_power_demand_pressure_2025-04-07_94308007",
+      "as_of_date": "2025-04-07",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "utility and large-load power demand pressure",
+      "demand_driver_summary": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "pressure_statement": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "supporting_capital_flow_cluster_ids": [],
+      "supporting_energy_flow_pressure_cluster_ids": [
+        "efpc_utility_and_large_load_power_demand_pressure_2025-04-07_94308007"
+      ],
+      "merge_basis": {
+        "system_overlap": false,
+        "time_overlap": false,
+        "direction_compatibility": true,
+        "demand_story_overlap": "energy_flow_only_with_infrastructure_response"
+      },
+      "signal_count": 11,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-02-13",
+        "end_date": "2025-04-07"
+      },
+      "suspected_stress_layers": [
+        "utility and large-load power demand pressure"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": false,
+        "energy_flow_pressure_cluster_present": true,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    },
+    {
+      "confidence": "medium",
+      "pressure_candidate_id": "spc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
+      "as_of_date": "2025-10-30",
+      "status": "candidate",
+      "pressure_type": "rising_demand",
+      "system_label": "utility and large-load power demand pressure",
+      "demand_driver_summary": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "pressure_statement": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "supporting_capital_flow_cluster_ids": [],
+      "supporting_energy_flow_pressure_cluster_ids": [
+        "efpc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5"
+      ],
+      "merge_basis": {
+        "system_overlap": false,
+        "time_overlap": false,
+        "direction_compatibility": true,
+        "demand_story_overlap": "energy_flow_only_with_infrastructure_response"
+      },
+      "signal_count": 10,
+      "source_classes": [
+        "trade_press"
+      ],
+      "time_window": {
+        "start_date": "2025-08-01",
+        "end_date": "2025-10-30"
+      },
+      "suspected_stress_layers": [
+        "utility and large-load power demand pressure"
+      ],
+      "formation_basis": {
+        "capital_flow_cluster_present": false,
+        "energy_flow_pressure_cluster_present": true,
+        "physical_system_grounded": true,
+        "stress_rationale_present": true
+      },
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true
+    }
+  ],
+  "held_upstream_energy_flow_pressure_cluster_ids": [
+    "efpc_general_energy_system_pressure_2025-03-27_6d160274"
+  ],
+  "metrics": {
+    "capital_cluster_count": 4,
+    "energy_cluster_count": 6,
+    "structural_pressure_candidate_count": 6,
+    "held_upstream_energy_cluster_count": 1
+  }
+}

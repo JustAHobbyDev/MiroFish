@@ -73,6 +73,17 @@ def _merge_confidence(capital_confidence: str, energy_confidence: Optional[str])
     return capital_confidence or energy_confidence or "low"
 
 
+def _apply_source_diversity_guardrail(
+    confidence: str,
+    source_classes: List[str],
+) -> tuple[str, str, bool]:
+    distinct_source_count = len({item for item in source_classes if _coerce_string(item)})
+    if distinct_source_count <= 1:
+        adjusted_confidence = "medium" if confidence == "high" else (confidence or "low")
+        return adjusted_confidence, "single_source_class", True
+    return confidence or "low", "multi_source_class", False
+
+
 def _pressure_statement(system_label: str, demand_driver_summary: str) -> str:
     return f"{demand_driver_summary} This is likely to create structural pressure in {system_label}."
 
@@ -115,6 +126,10 @@ def build_structural_pressure_candidate_batch(
         as_of_date = capital_cluster.get("as_of_date")
         demand_driver_summary = _coerce_string(capital_cluster.get("demand_driver_summary"))
         candidate = {
+            "confidence": _merge_confidence(
+                _coerce_string(capital_cluster.get("confidence")),
+                _coerce_string(matched_energy.get("confidence")) if matched_energy else None,
+            ),
             "pressure_candidate_id": _id_for_structural_candidate(system_label, as_of_date),
             "as_of_date": as_of_date,
             "status": "candidate",
@@ -150,11 +165,15 @@ def build_structural_pressure_candidate_batch(
                 "physical_system_grounded": True,
                 "stress_rationale_present": True,
             },
-            "confidence": _merge_confidence(
-                _coerce_string(capital_cluster.get("confidence")),
-                _coerce_string(matched_energy.get("confidence")) if matched_energy else None,
-            ),
         }
+        (
+            candidate["confidence"],
+            candidate["source_diversity_status"],
+            candidate["requires_source_diversity_corroboration"],
+        ) = _apply_source_diversity_guardrail(
+            candidate["confidence"],
+            list(candidate["source_classes"]),
+        )
         candidates.append(candidate)
 
     held_upstream_energy_clusters: List[str] = []
@@ -171,6 +190,7 @@ def build_structural_pressure_candidate_batch(
             as_of_date = energy_cluster.get("as_of_date")
             candidates.append(
                 {
+                    "confidence": _coerce_string(energy_cluster.get("confidence")) or "low",
                     "pressure_candidate_id": _id_for_structural_candidate(system_label, as_of_date),
                     "as_of_date": as_of_date,
                     "status": "candidate",
@@ -196,8 +216,16 @@ def build_structural_pressure_candidate_batch(
                         "physical_system_grounded": True,
                         "stress_rationale_present": True,
                     },
-                    "confidence": _coerce_string(energy_cluster.get("confidence")) or "low",
                 }
+            )
+            candidate = candidates[-1]
+            (
+                candidate["confidence"],
+                candidate["source_diversity_status"],
+                candidate["requires_source_diversity_corroboration"],
+            ) = _apply_source_diversity_guardrail(
+                candidate["confidence"],
+                list(candidate["source_classes"]),
             )
         else:
             held_upstream_energy_clusters.append(energy_id)
