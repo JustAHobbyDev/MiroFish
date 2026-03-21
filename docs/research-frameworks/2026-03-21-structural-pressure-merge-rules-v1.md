@@ -89,6 +89,7 @@ A merged `structural_pressure_candidate` should record:
 7. `confidence`
 8. `source_diversity_status`
 9. `requires_source_diversity_corroboration`
+10. `source_diversity_corroboration_satisfied`
 
 ## Merge Basis Contract
 
@@ -142,6 +143,21 @@ Example:
    - or explicit analyst confirmation
 4. Multi-source candidates may retain `high` confidence when the rest of the
    merge basis is strong.
+
+## Corroboration Satisfaction Rule
+
+For v1, source-diversity corroboration is considered satisfied only when both
+are true:
+
+1. the supporting clusters collectively contain `2+` distinct source classes
+2. the candidate includes at least `1` supporting `capital_flow_cluster`
+
+Implications:
+
+1. energy-only structural-pressure candidates never satisfy corroboration in v1
+2. mixed-source capital-plus-energy candidates can satisfy corroboration
+3. capital-only candidates can satisfy corroboration if the capital lane itself
+   contains multiple source classes
 
 ## Decision Rule
 

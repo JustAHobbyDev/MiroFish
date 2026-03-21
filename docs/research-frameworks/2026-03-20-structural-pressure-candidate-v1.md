@@ -209,6 +209,7 @@ It is the minimum working contract.
 4. `confidence`
 5. `source_diversity_status`
 6. `requires_source_diversity_corroboration`
+7. `source_diversity_corroboration_satisfied`
 
 ## Source Rules
 
@@ -276,6 +277,15 @@ If only one source class supports the candidate:
 2. confidence should be capped at `medium`
 3. `source_diversity_status` should be `single_source_class`
 4. `requires_source_diversity_corroboration` should be `true`
+
+Corroboration is only considered satisfied in v1 when:
+
+1. the candidate has at least `2` distinct source classes
+2. at least one supporting `capital_flow_cluster` is present
+
+Satisfying corroboration does not make the candidate promotion-ready by itself.
+The system label and stress zone must still be concrete enough to bound a
+review universe.
 
 ### Structural pressure candidate -> bounded universe
 

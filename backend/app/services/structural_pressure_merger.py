@@ -84,6 +84,14 @@ def _apply_source_diversity_guardrail(
     return confidence or "low", "multi_source_class", False
 
 
+def _source_diversity_corroboration_satisfied(
+    source_classes: List[str],
+    supporting_capital_flow_cluster_ids: List[str],
+) -> bool:
+    distinct_source_count = len({item for item in source_classes if _coerce_string(item)})
+    return distinct_source_count >= 2 and len([item for item in supporting_capital_flow_cluster_ids if _coerce_string(item)]) >= 1
+
+
 def _pressure_statement(system_label: str, demand_driver_summary: str) -> str:
     return f"{demand_driver_summary} This is likely to create structural pressure in {system_label}."
 
@@ -174,6 +182,10 @@ def build_structural_pressure_candidate_batch(
             candidate["confidence"],
             list(candidate["source_classes"]),
         )
+        candidate["source_diversity_corroboration_satisfied"] = _source_diversity_corroboration_satisfied(
+            list(candidate["source_classes"]),
+            list(candidate["supporting_capital_flow_cluster_ids"]),
+        )
         candidates.append(candidate)
 
     held_upstream_energy_clusters: List[str] = []
@@ -226,6 +238,10 @@ def build_structural_pressure_candidate_batch(
             ) = _apply_source_diversity_guardrail(
                 candidate["confidence"],
                 list(candidate["source_classes"]),
+            )
+            candidate["source_diversity_corroboration_satisfied"] = _source_diversity_corroboration_satisfied(
+                list(candidate["source_classes"]),
+                list(candidate["supporting_capital_flow_cluster_ids"]),
             )
         else:
             held_upstream_energy_clusters.append(energy_id)

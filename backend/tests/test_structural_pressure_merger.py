@@ -70,6 +70,7 @@ def test_build_structural_pressure_candidate_batch_merges_adjacent_clusters():
     assert candidate["system_label"] == "utility and large-load power demand pressure"
     assert candidate["source_diversity_status"] == "single_source_class"
     assert candidate["requires_source_diversity_corroboration"] is True
+    assert candidate["source_diversity_corroboration_satisfied"] is False
 
 
 def test_build_structural_pressure_candidate_batch_holds_weak_energy_only_clusters_upstream():
@@ -146,6 +147,7 @@ def test_build_structural_pressure_candidate_batch_caps_high_confidence_single_s
     assert candidate["confidence"] == "medium"
     assert candidate["source_diversity_status"] == "single_source_class"
     assert candidate["requires_source_diversity_corroboration"] is True
+    assert candidate["source_diversity_corroboration_satisfied"] is False
 
 
 def test_build_structural_pressure_candidate_batch_keeps_multi_source_high_confidence():
@@ -193,3 +195,4 @@ def test_build_structural_pressure_candidate_batch_keeps_multi_source_high_confi
     assert candidate["confidence"] == "high"
     assert candidate["source_diversity_status"] == "multi_source_class"
     assert candidate["requires_source_diversity_corroboration"] is False
+    assert candidate["source_diversity_corroboration_satisfied"] is True
