@@ -1,0 +1,20 @@
+{
+  "batch": "mixed_company_filing_collection_v2",
+  "issuer_collection_count": 4,
+  "document_count": 5,
+  "total_downloaded_bytes": 52115326,
+  "public_route_issuers_collected": [
+    "Hitachi, Ltd.",
+    "Eaton Corporation plc",
+    "Mitsubishi Electric Corporation",
+    "GE Vernova Inc."
+  ],
+  "private_route_issuers_excluded": [
+    "Westrafo S.P.A."
+  ],
+  "special_handling_notes": [
+    "Eaton SEC collection required a declared user agent to avoid SEC automated-tool blocking.",
+    "GE Vernova was collected from the official company-hosted Form 10-K PDF.",
+    "Mitsubishi Electric was collected from the official IR securities-report PDF route."
+  ]
+}

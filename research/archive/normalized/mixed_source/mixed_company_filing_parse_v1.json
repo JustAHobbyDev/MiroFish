@@ -1,0 +1,199 @@
+{
+  "name": "company_filing_parse_batch_v1_1e4d4b01",
+  "origin_collection_batch": "mixed_company_filing_collection_v1",
+  "parsed_collections": [
+    {
+      "company_filing_collection_id": "cfc_hitachi_ltd_2026-03-21_8bb6427f",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "parsed_documents": [
+        {
+          "company_filing_parse_document_id": "cfp_9c5f72d2",
+          "document_id": "hfl_hitachi_ltd_annual_securities_report_fy2025",
+          "document_title": "Annual Securities Report FY2025",
+          "filing_type": "annual_securities_report",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_annual_securities_report_fy2025.pdf",
+          "keywords": [
+            "transformer",
+            "grid",
+            "substation",
+            "switchgear",
+            "backlog",
+            "capacity",
+            "capex",
+            "power",
+            "shortage",
+            "expansion",
+            "manufacturing"
+          ],
+          "keyword_counts": {
+            "transformer": 0,
+            "grid": 4,
+            "substation": 0,
+            "switchgear": 0,
+            "backlog": 2,
+            "capacity": 5,
+            "capex": 0,
+            "power": 79,
+            "shortage": 5,
+            "expansion": 9,
+            "manufacturing": 52
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "power",
+              "page_number": 7,
+              "excerpt": "nformation Media Division and renamed them Consumer Products & Information Media Systems Group Oct. Established Hitachi (China), Ltd. Feb. 1995 Reorganized business groups as the Power & Industrial Systems Group, Consumer Products & Information Media Systems Group, Information Systems Group and Electronics Components Group; integrated a part of the R&D divisi"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 7,
+              "excerpt": "Oct. 2000 Merged Hitachi Credit Corporation with Hitachi Leasing Corp. and changed its name to Hitachi Capital Corporation Oct. 2001 Split the Instruments Group and Semiconductor Manufacturing Equipment Group via a company split and reorganized them as Hitachi High -Technologies Corporation (currently Hitachi High-Tech Corporation); Split the Industrial Machinery Syste"
+            },
+            {
+              "keyword": "power",
+              "page_number": 8,
+              "excerpt": "ing Systems Co., Ltd. and changed its name to Hitachi Appliances, Inc. Dec. Turned Clarion Co., Ltd. into a consolidated subsidiary via a tender offer Jul. 2007 Split the nuclear power systems business via a company split and reorganized it as Hitachi-GE Nuclear Energy, Ltd. (currently Hitachi GE Vernova Nuclear Energy, Ltd.) Mar. 2009 Turned Hitachi Koki Co., L"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 9,
+              "excerpt": "ber 2020 following the sale of its shares.) Mar. Turned Hitachi Medical Corporation into a wholly owned subsidiary via a share exchange (It changed its name to Hitachi Healthcare Manufacturing, Ltd. following the reorganization of Hitachi\u2019s healthcare business in April 2016.) Apr. 2015 Reorganized Central Research Laboratory, Hitachi Research Laboratory, Yokohama Resea"
+            },
+            {
+              "keyword": "shortage",
+              "page_number": 29,
+              "excerpt": "developments such as the rapid evolution of generative AI, and the full-scale introduction of AI to improve the business efficiency and competitiveness of companies. While labor shortage is a concern in Japan, there is still strong demand for the modernization of IT systems and DX. In this market environment, Digital Systems & Services Sector has been committed t"
+            },
+            {
+              "keyword": "expansion",
+              "page_number": 29,
+              "excerpt": "ctricity. As a result, demand for new energy supplies, particularly electricity, is expanding. Specifically, new business opportunities are emerging around the world through the expansion of clean energy and the development of power grids to accommodate it, the diversification and decentralization of power sources leading to the expansion of microgrids, the servi"
+            },
+            {
+              "keyword": "shortage",
+              "page_number": 30,
+              "excerpt": "and green transportation. (Connective Industries) With the progress of social aging and the resulting decline in the working population, there is an increasingly serious global shortage of the frontline workers essential to industry and social infrastructure. In addition, innovation in industry is expected to achieve both economic growth and consideration for t"
+            },
+            {
+              "keyword": "expansion",
+              "page_number": 31,
+              "excerpt": "as set long-term management targets \u201cLUMADA 80-20,\u201d aiming for Lumada business revenues ratio of 80% and Lumada business Adjusted EBITA margin of 20%. Hitachi will drive further expansion and improvement of profitability of Lumada business by further investment and reorganization of the business portfolio. In addition to providing the performance targets above, H"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 50,
+              "excerpt": "materials, parts, components and services of adequate quality and quantity, delivered in a timely manner at a reasonable price. Procurement partners may not have the sufficient capacity to meet all of Hitachi\u2019s needs during periods of excess demand. Shortages of materials, parts, components and services may cause a sharp rise in their prices. In addition, price"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 54,
+              "excerpt": "sts related to the integration or restructuring of acquired businesses. Major financing for these costs may cause deterioration in Hitachi\u2019s financial condition and decrease its capacity to finance. If it is expected that the amount invested is irrecoverable due to a decline in the profitability of an investee, Hitachi may incur significant losses, including imp"
+            },
+            {
+              "keyword": "grid",
+              "page_number": 60,
+              "excerpt": "to foreign exchange effects. Other contributing factors were increased revenues in the Green Energy & Mobility segment, which benefited from the steady performance of the power grid business in Hitachi Energy and the acquisition of ground transportation systems business of Thales S.A. in the railway systems business, as well as the Digital Systems & Service"
+            },
+            {
+              "keyword": "backlog",
+              "page_number": 63,
+              "excerpt": "m decreased revenues associated with the sale of shares in Hitachi Power Semiconductor Device, Ltd., revenues increased overall, due mainly to the steady conversion of the order backlog into sales and expanded production capacity at Hitachi Energy, and increased revenues in Railway Systems primarily due to the acquisition of Thales\u2019s ground transportation syste"
+            },
+            {
+              "keyword": "grid",
+              "page_number": 83,
+              "excerpt": "tment Digital Systems & Services 61.4 91 Product development, Maintenance and renewal of data center equipment Green Energy & Mobility 160.0 139 Facility of production for power grid products, Facility of production for railway systems Connective Industries 93.1 146 Manufacturing facilities for industrial products, Increase in development and production of s"
+            },
+            {
+              "keyword": "backlog",
+              "page_number": 163,
+              "excerpt": "lion yen. The goodwill mainly comprises excess earning power and expected synergies arising from the acquisition. Other intangible assets include material intangible assets (order backlog of 71,308 million yen and technology of 20,374 million yen). These intangible assets are measured based on assumptions such as revenue growth rates, EBIT ratios, royalty rates an"
+            }
+          ],
+          "document_page_count": 235
+        },
+        {
+          "company_filing_parse_document_id": "cfp_96b256e5",
+          "document_id": "hfl_hitachi_ltd_semi_annual_securities_report_fy2026",
+          "document_title": "Semi-annual Securities Report FY2026",
+          "filing_type": "semi_annual_securities_report",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_semi_annual_securities_report_fy2026.pdf",
+          "keywords": [
+            "transformer",
+            "grid",
+            "substation",
+            "switchgear",
+            "backlog",
+            "capacity",
+            "capex",
+            "power",
+            "shortage",
+            "expansion",
+            "manufacturing"
+          ],
+          "keyword_counts": {
+            "transformer": 0,
+            "grid": 0,
+            "substation": 0,
+            "switchgear": 0,
+            "backlog": 1,
+            "capacity": 2,
+            "capex": 0,
+            "power": 12,
+            "shortage": 0,
+            "expansion": 0,
+            "manufacturing": 7
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "power",
+              "page_number": 5,
+              "excerpt": "Products (America), Inc. Hitachi Digital LLC Hitachi Digital Services LLC Hitachi Payment Services Private Limited Hitachi Vantara LLC Green Energy & Mobility \u30fbEnergy Solutions (Power Grids, Renewable Energy, Nuclear) \u30fbRailway Systems [BU] Power Grids BU Nuclear Energy BU Railway Systems BU [Consolidated subsidiaries] (Note 2) Hitachi-GE Nuclear Energy, Ltd. H"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 5,
+              "excerpt": "ctive Industries \u30fbBuilding Systems (Elevators, Escalators) \u30fbSmart Life & Ecofriendly Systems (Home Appliances, Air Conditioners) \u30fbMeasurement and Analysis Systems (Semiconductor Manufacturing Equipment, Clinical Analyzers) \u30fbIndustry & Distribution Solutions \u30fbWater & Environment Solutions \u30fbIndustrial Machinery [BU] Building Systems BU Industrial Digital BU Water & Envi"
+            },
+            {
+              "keyword": "power",
+              "page_number": 6,
+              "excerpt": "2. Hitachi Power Semiconductor Device, Ltd. has ceased to be an affiliate of the Company following the share transfer on May 2, 2024. 3. Hitachi America, Ltd., Hitachi Asia Ltd., Hitachi (China)"
+            },
+            {
+              "keyword": "backlog",
+              "page_number": 8,
+              "excerpt": "ncreased 33% to 1,785.7 billion yen, as compared with the six months ended September 30, 2023, due mainly to the impact of foreign exchange, as well as steady conversion of order backlog into sales in Hitachi Energy Ltd and the acquisition of Thales\u2019s ground transportation systems in the Railway Systems business. Adjusted EBITA increased 73.2 billion yen to 152.9"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 10,
+              "excerpt": "y increased due mainly to the fact that Hitachi High-Tech Corporation constructs new production facility for semiconductor manufacturing equipment in order to increase production capacity. 7"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 10,
+              "excerpt": "ools, furniture and fixtures Right-of- use Assets Other Construction in progress Total Hitachi High-Tech Corporation, Kasado Area (Kudamatsu, Yamaguchi) Connective Industries Manufacturing facilities for semiconductor manufacturing equipment, etc. 321 2,908 4,945 1,466 1,900 - 10,164 21,706 648 [15] (3) Management Policy There were no material changes in Hitach"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 12,
+              "excerpt": "on method to recognize revenue from sales; \u2022 increased commoditization of and intensifying price competition for products; \u2022 fluctuations in demand of products, etc. and industry capacity; \u2022 uncertainty as to Hitachi\u2019s ability to implement measures to reduce the potential negative impact of fluctuations in demand of products, etc., exchange rates and/or price of r"
+            }
+          ],
+          "document_page_count": 40
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_collection_count": 1,
+    "parsed_collection_count": 1,
+    "parsed_document_count": 2
+  }
+}

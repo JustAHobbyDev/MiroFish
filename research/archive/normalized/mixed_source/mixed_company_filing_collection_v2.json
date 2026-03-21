@@ -1,0 +1,119 @@
+{
+  "name": "mixed_company_filing_collection_v2",
+  "origin_live_resolution_file": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_v3.json",
+  "collections": [
+    {
+      "company_filing_collection_id": "cfc_hitachi_ltd_2026-03-21_8bb6427f",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "collection_scope": "first_real_route_validation_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the two collected parent filings for transformer, grid equipment, capacity expansion, backlog, capex, and risk-language evidence.",
+      "collected_documents": [
+        {
+          "document_id": "hfl_hitachi_ltd_annual_securities_report_fy2025",
+          "document_title": "Annual Securities Report FY2025",
+          "filing_type": "annual_securities_report",
+          "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/ir/media/library/stock/hit_sr_fy2024_2_en.pdf",
+          "source_last_modified": "Mon, 18 Aug 2025 04:15:19 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 39311261,
+          "sha256": "4f62a5cdff2c7b7168eccd6f3f3eb6d057124baa1f196bbe6c7d90c61a737aca",
+          "local_path": "research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_annual_securities_report_fy2025.pdf",
+          "download_status": "downloaded"
+        },
+        {
+          "document_id": "hfl_hitachi_ltd_semi_annual_securities_report_fy2026",
+          "document_title": "Semi-annual Securities Report FY2026",
+          "filing_type": "semi_annual_securities_report",
+          "source_url": "https://www.hitachi.com/content/dam/hitachi/global/en/ir/media/library/stock/hit_sr_fy2024_1_en.pdf",
+          "source_last_modified": "Wed, 19 Nov 2025 01:48:11 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 524757,
+          "sha256": "7790ad714cd9fc85800652ac3395b27cd9f8ff472df6e52ca53ba5a2cb2452ce",
+          "local_path": "research/archive/raw/company_filing/hitachi_ltd/hitachi_ltd_semi_annual_securities_report_fy2026.pdf",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_eaton_corporation_plc_2026-03-21_5d6a31ef",
+      "canonical_entity_name": "Eaton",
+      "resolved_issuer_name": "Eaton Corporation plc",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "eaton_ir_and_sec_edgar",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the SEC 10-K HTML for transformer production, backlog, capacity expansion, and power-infrastructure commentary.",
+      "collected_documents": [
+        {
+          "document_id": "efl_eaton_2024_10k_html",
+          "document_title": "Eaton Corporation plc Form 10-K for fiscal year ended December 31, 2024",
+          "filing_type": "10-k_html",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1551182/000155118225000006/etn-20241231.htm",
+          "source_last_modified": "Thu, 27 Feb 2025 19:22:54 GMT",
+          "content_type": "text/html",
+          "content_length_bytes": 3366475,
+          "sha256": "ee3a216789b7a3e33224bb01c305100ebeace10168dd5a455fdd9c9a536e9fcb",
+          "local_path": "research/archive/raw/company_filing/eaton/eaton_2024_10k.html",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_mitsubishi_electric_2026-03-21_6b1fd75a",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "resolved_issuer_name": "Mitsubishi Electric Corporation",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "mitsubishi_electric_ir_and_annual_securities_report",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the Annual Securities Report for switchgear, power systems, manufacturing capacity, and expansion commentary.",
+      "collected_documents": [
+        {
+          "document_id": "mfl_mitsubishi_electric_annual_securities_report_fy2025",
+          "document_title": "Annual Securities Report for FY2025",
+          "filing_type": "annual_securities_report",
+          "source_url": "https://www.mitsubishielectric.com/investors/library/securities-report/pdf/Annual_Securities_Report_FY2025.pdf",
+          "source_last_modified": "Sun, 28 Sep 2025 04:43:38 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 7700017,
+          "sha256": "d5934f48f57df1e4752c2cb55b1c2eacc0eb6fb564248842cdc88e5e02c67c01",
+          "local_path": "research/archive/raw/company_filing/mitsubishi_electric/mitsubishi_electric_annual_securities_report_fy2025.pdf",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_ge_vernova_inc_2026-03-21_dd5e7264",
+      "canonical_entity_name": "GE Vernova",
+      "resolved_issuer_name": "GE Vernova Inc.",
+      "system_label": "grid equipment and transformer buildout",
+      "filing_route_assessment": "ge_vernova_ir_and_sec_edgar",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the Form 10-K PDF for grid, electrification, manufacturing, and backlog commentary.",
+      "collected_documents": [
+        {
+          "document_id": "gfl_ge_vernova_2025_form10k",
+          "document_title": "GE Vernova Form 10-K 2025",
+          "filing_type": "10-k_pdf",
+          "source_url": "https://www.gevernova.com/sites/default/files/gevernova_2025_form10-k.pdf",
+          "source_last_modified": "Thu, 29 Jan 2026 21:19:06 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 1212816,
+          "sha256": "b1e4226fa23432305482756e51bc7a91fd1526055b512e8cebaea0632a5443a4",
+          "local_path": "research/archive/raw/company_filing/ge_vernova/ge_vernova_2025_form10-k.pdf",
+          "download_status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "issuer_collection_count": 4,
+    "document_count": 5,
+    "total_downloaded_bytes": 52115326
+  }
+}

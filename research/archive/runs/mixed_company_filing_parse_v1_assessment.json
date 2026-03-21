@@ -1,0 +1,14 @@
+{
+  "batch": "mixed_company_filing_parse_v1",
+  "parsed_document_count": 2,
+  "resolved_issuer_name": "Hitachi, Ltd.",
+  "system_label": "grid equipment and transformer buildout",
+  "key_findings": [
+    "The FY2025 annual filing ties Hitachi Energy growth to power distribution transformers, power receiving and transforming equipment, and expanded production capacity.",
+    "The FY2025 annual filing links clean-energy expansion to development of power grids and microgrids.",
+    "The FY2026 semi-annual filing states that order backlog conversion into sales in Hitachi Energy Ltd contributed to revenue growth."
+  ],
+  "parse_limitations": [
+    "The deterministic parser currently extracts keyword snippets, which still require analyst review for strongest evidence selection."
+  ]
+}
