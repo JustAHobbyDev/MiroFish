@@ -50,6 +50,19 @@ def test_review_when_only_partnership_language_is_present():
     assert result["matched_families"] == ["partnerships_with_buildout_implications"]
 
 
+def test_review_on_record_of_decision_resource_planning_notice():
+    artifact = {
+        "artifact_id": "art_rod",
+        "source_class": "government_policy_enforcement",
+        "title": "Notice of Availability of the 2025 Record of Decision for the Final Environmental Impact Statement for the National Petroleum Reserve-Alaska, Integrated Activity Plan",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_REVIEW
+    assert "planning_and_land_access_enablement" in result["matched_families"]
+
+
 def test_drop_when_only_generic_narrative_language_exists():
     artifact = {
         "artifact_id": "art_3",

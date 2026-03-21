@@ -82,6 +82,13 @@ EVENT_FORM_FAMILIES: Dict[str, Tuple[str, ...]] = {
         "manufacturing agreement",
         "supply partnership",
     ),
+    "planning_and_land_access_enablement": (
+        "record of decision",
+        "integrated activity plan",
+        "public land order",
+        "land opening",
+        "lease sale",
+    ),
 }
 
 
@@ -134,6 +141,19 @@ EVENT_FORM_REGEXES: Dict[str, Tuple[str, ...]] = {
         r"\bmanufacturing agreement(?:s)?\b",
         r"\bsupply partnership(?:s)?\b",
     ),
+    "planning_and_land_access_enablement": (
+        r"\brecord of decision\b",
+        r"\bintegrated activity plan\b",
+        r"\bpublic land order\b",
+        r"\bopening of (?:public )?lands?\b",
+        r"\blease sale\b",
+    ),
+}
+
+
+REVIEW_ONLY_FAMILIES = {
+    "partnerships_with_buildout_implications",
+    "planning_and_land_access_enablement",
 }
 
 
@@ -252,12 +272,11 @@ def triage_capital_flow_artifact(artifact: Dict[str, Any]) -> Dict[str, Any]:
         }
     )
 
-    has_partnership_only = bool(family_names) and set(family_names) == {
-        "partnerships_with_buildout_implications"
-    }
+    family_set = set(family_names)
+    has_review_only_families = bool(family_set) and family_set.issubset(REVIEW_ONLY_FAMILIES)
 
     if strong_hits and any(
-        family != "partnerships_with_buildout_implications"
+        family not in REVIEW_ONLY_FAMILIES
         for family in {
             family
             for per_field in strong_hits.values()
@@ -269,9 +288,9 @@ def triage_capital_flow_artifact(artifact: Dict[str, Any]) -> Dict[str, Any]:
     elif distinct_family_count >= 2:
         triage = TRIAGE_KEEP
         reason = "Multiple distinct event-form families were detected across allowed fields."
-    elif has_partnership_only:
+    elif has_review_only_families:
         triage = TRIAGE_REVIEW
-        reason = "Only partnership-style language was detected without explicit buildout form."
+        reason = "Only review-only event-form language was detected without explicit buildout form."
     elif medium_hits or weak_hits:
         triage = TRIAGE_REVIEW
         reason = "Only medium/weak-field event-form evidence was detected."
