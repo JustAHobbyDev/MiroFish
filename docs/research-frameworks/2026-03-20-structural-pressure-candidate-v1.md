@@ -66,8 +66,10 @@ If yes:
    - chain expansion
    - bottleneck verification
 
-5. This object should be formed from multiple
-   `capital_flow_signal_candidate`s, not from raw mention volume alone.
+5. This object should be formed from multiple upstream signals, primarily:
+   - `capital_flow_signal_candidate`
+   - and, where relevant, `energy_flow_pressure_signal`
+   not from raw mention volume alone.
 
 ## Assumptions
 
@@ -226,9 +228,14 @@ It is the minimum working contract.
 
 ### Formation rule
 
-At least two independent `capital_flow_signal_candidate`s should support
-formation, and at least one should tie the pressure to a real system or
-buildout.
+At least two independent upstream signals should support formation.
+
+Preferred composition:
+
+1. at least one `capital_flow_signal_candidate`
+2. optionally one or more `energy_flow_pressure_signal`s
+3. at least one supporting signal should tie the pressure to a real system or
+   buildout
 
 ## Promotion Rules
 
