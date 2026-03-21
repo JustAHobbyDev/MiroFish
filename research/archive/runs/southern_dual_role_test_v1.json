@@ -1,0 +1,46 @@
+{
+  "name": "southern_dual_role_test_v1",
+  "artifact_id": "trade_press_7cab8b3aa2571296",
+  "title": "As load grows, Southern raises spending plan to $81B",
+  "source_artifacts": {
+    "prefilter": "research/archive/normalized/trade_press/trade_press_prefilter_v5_30.json",
+    "capital_flow_run": "research/archive/normalized/trade_press/trade_press_gpt4omini_v7_30.json"
+  },
+  "artifact_excerpt_summary": {
+    "headline": "As load grows, Southern raises spending plan to $81B",
+    "body_points": [
+      "Southern Company raised its five-year spending plan to $81 billion.",
+      "The increase is driven by substantial new growth infrastructure investments.",
+      "Large-load and data-center demand are increasing.",
+      "The company is working on adding 10GW of approved new generation."
+    ]
+  },
+  "classification": {
+    "capital_flow_signal_candidate": true,
+    "energy_flow_pressure_signal": true,
+    "recommended_relationship": "energy_flow_pressure_and_capital_flow"
+  },
+  "reasoning": {
+    "capital_flow_basis": [
+      "explicit five-year spending-plan increase",
+      "direct infrastructure investment language",
+      "approved new generation additions"
+    ],
+    "energy_flow_pressure_basis": [
+      "load growth is explicit",
+      "data-center demand is explicit",
+      "new generation need is explicit"
+    ],
+    "why_not_capital_flow_only": [
+      "the article is not just a spending artifact",
+      "it also directly states the physical energy-demand pressure that drives the spending response"
+    ],
+    "why_not_energy_flow_only": [
+      "the artifact goes beyond pressure and names a concrete capital response"
+    ]
+  },
+  "decision": {
+    "label": "both",
+    "recommended_handling": "Treat Southern-like utility spending-plan artifacts as dual-role artifacts that produce both a capital_flow_signal_candidate and an energy_flow_pressure_signal."
+  }
+}
