@@ -1,0 +1,201 @@
+{
+  "name": "trade_press_sample_prefilter_v1",
+  "source_class": "trade_press",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "openai/gpt-oss-20b",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_9a24459d121a92cc",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Hitachi Energy outlined plans for a new transformer factory",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital outflow from Hitachi Energy to construct a new transformer factory, indicating investment into manufacturing infrastructure.",
+          "system_hints": [
+            "transformer manufacturing, grid equipment supply chain, utilities sector"
+          ],
+          "physical_implication": "Construction of a new factory facility, procurement of land, building materials, equipment, and workforce.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "additional plant expansions",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital outflow to expand existing plants, increasing production capacity for transformers.",
+          "system_hints": [
+            "transformer manufacturing, grid equipment supply chain, utilities sector"
+          ],
+          "physical_implication": "Expansion of existing plant facilities, installation of new production lines, equipment upgrades.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "utilities and large load customers increase demand for grid equipment",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "Capital flow into transformer manufacturing driven by increased demand from utilities and large load customers, implying future sales and revenue growth.",
+          "system_hints": [
+            "grid equipment, utilities sector, large load customers"
+          ],
+          "physical_implication": "Potential for increased production, hiring, and supply chain expansion.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:31:26Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_10881caa54e04b20",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Developer has started construction on a 250MW data center campus designed for AI workloads, including liquid cooling infrastructure and phased power delivery.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital is being invested into the construction of a large-scale AI data center campus, indicating a flow of funds into the data center infrastructure.",
+          "system_hints": [
+            "data center",
+            "AI workloads",
+            "liquid cooling",
+            "250MW power",
+            "phased power delivery"
+          ],
+          "physical_implication": "Construction of a 250MW data center campus with liquid cooling infrastructure and phased power delivery.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The campus includes liquid cooling infrastructure.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Funds are being directed toward the procurement and installation of liquid cooling systems for the data center.",
+          "system_hints": [
+            "liquid cooling",
+            "data center",
+            "AI workloads"
+          ],
+          "physical_implication": "Installation of liquid cooling infrastructure within the data center campus.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The campus features phased power delivery.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital is being allocated to the development of a phased power delivery system for the data center.",
+          "system_hints": [
+            "phased power delivery",
+            "data center",
+            "250MW"
+          ],
+          "physical_implication": "Construction of a phased power delivery infrastructure to support the data center.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:31:30Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_556caf251479d424",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric said it plans to invest $700 million in U.S. operations over multiple years, including manufacturing capacity, automation, and energy infrastructure upgrades tied to growing AI and electrification demand.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital flowing into U.S. manufacturing capacity expansion, automation, and energy infrastructure upgrades.",
+          "system_hints": [
+            "U.S. manufacturing sector",
+            "AI demand",
+            "electrification",
+            "energy infrastructure"
+          ],
+          "physical_implication": "Construction of new manufacturing facilities, installation of automation equipment, upgrades to energy infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Schneider Electric said it plans to invest $700 million in U.S. operations over multiple years, including manufacturing capacity, automation, and energy infrastructure upgrades tied to growing AI and electrification demand.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital flowing into U.S. manufacturing capacity expansion.",
+          "system_hints": [
+            "U.S. manufacturing sector",
+            "AI demand"
+          ],
+          "physical_implication": "Construction of new or expanded manufacturing plants.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Schneider Electric said it plans to invest $700 million in U.S. operations over multiple years, including manufacturing capacity, automation, and energy infrastructure upgrades tied to growing AI and electrification demand.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital flowing into automation equipment and energy infrastructure upgrades.",
+          "system_hints": [
+            "automation",
+            "energy infrastructure",
+            "AI demand"
+          ],
+          "physical_implication": "Purchase and installation of automation machinery and upgrades to power distribution systems.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:31:32Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_887711df85c1a0b9",
+      "source_class": "trade_press",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:31:32Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "trade_press_43464f35fa1bd9e1",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: ",
+      "raw_payload": ""
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 5,
+    "successful_extractions": 4,
+    "schema_failure_count": 1,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 3,
+    "no_candidate_artifact_count": 1,
+    "total_candidate_count": 9,
+    "review_artifact_count": 3,
+    "review_candidate_artifact_count": 1
+  }
+}

@@ -97,6 +97,10 @@ from .company_release_archive import (
     build_company_release_prefilter_batch,
     normalize_company_release_artifact,
 )
+from .trade_press_archive import (
+    build_trade_press_prefilter_batch,
+    normalize_trade_press_artifact,
+)
 from .policy_feed_archive import (
     build_policy_feed_prefilter_batch,
     normalize_policy_feed_artifact,
@@ -200,6 +204,8 @@ __all__ = [
     'triage_capital_flow_artifact',
     'build_company_release_prefilter_batch',
     'normalize_company_release_artifact',
+    'build_trade_press_prefilter_batch',
+    'normalize_trade_press_artifact',
     'build_policy_feed_prefilter_batch',
     'normalize_policy_feed_artifact',
     'CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION',

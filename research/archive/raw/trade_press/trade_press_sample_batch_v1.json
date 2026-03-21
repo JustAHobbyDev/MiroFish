@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "source_url": "https://www.manufacturingdive.com/news/schneider-electric-us-investment-ai-demand/1/",
+      "publication": "Manufacturing Dive",
+      "author": "Staff",
+      "published_at": "2026-02-18",
+      "title": "Schneider Electric to invest $700M in U.S. operations as AI and energy demand rise",
+      "section": "Operations",
+      "tags": ["manufacturing", "capacity", "energy"],
+      "body": "Schneider Electric said it plans to invest $700 million in U.S. operations over multiple years, including manufacturing capacity, automation, and energy infrastructure upgrades tied to growing AI and electrification demand."
+    },
+    {
+      "source_url": "https://www.utilitydive.com/news/hitachi-energy-transformer-factory-expansion-grid-demand/2/",
+      "publication": "Utility Dive",
+      "author": "Staff",
+      "published_at": "2026-02-20",
+      "title": "Hitachi Energy plans new transformer factory and plant expansions to meet grid demand",
+      "section": "Grid infrastructure",
+      "tags": ["transformers", "manufacturing", "grid"],
+      "body": "Hitachi Energy outlined plans for a new transformer factory and additional plant expansions as utilities and large load customers increase demand for grid equipment."
+    },
+    {
+      "source_url": "https://www.datacenterdynamics.com/en/news/developer-starts-construction-on-250mw-ai-campus/3/",
+      "publication": "Data Center Dynamics",
+      "author": "Staff",
+      "published_at": "2026-02-21",
+      "title": "Developer starts construction on 250MW AI data center campus with liquid cooling",
+      "section": "Design & Build",
+      "tags": ["construction", "data center", "cooling"],
+      "body": "A developer has started construction on a 250MW data center campus designed for AI workloads, including liquid cooling infrastructure and phased power delivery."
+    },
+    {
+      "source_url": "https://www.semiengineering.com/photonics-suppliers-partner-on-optical-roadmap/4/",
+      "publication": "Semiconductor Engineering",
+      "author": "Staff",
+      "published_at": "2026-02-22",
+      "title": "Photonics suppliers partner on optical roadmap for AI clusters",
+      "section": "Photonics",
+      "tags": ["photonics", "optical interconnect", "partnership"],
+      "body": "Several photonics suppliers announced a partnership around optical interconnect roadmaps for AI clusters, but the article does not describe new construction, plant expansion, or signed supply commitments."
+    },
+    {
+      "source_url": "https://www.eetimes.com/networking-vendors-form-joint-venture-for-ai-interconnects/5/",
+      "publication": "EE Times",
+      "author": "Staff",
+      "published_at": "2026-02-23",
+      "title": "Networking vendors form joint venture for AI interconnect systems",
+      "section": "Networking",
+      "tags": ["joint venture", "networking", "AI"],
+      "body": "Two networking vendors formed a joint venture focused on AI interconnect systems. The article describes product development goals but no current buildout, order, or capacity expansion commitment."
+    },
+    {
+      "source_url": "https://www.industryweek.com/leadership/article/why-manufacturers-are-rethinking-innovation-culture/6/",
+      "publication": "IndustryWeek",
+      "author": "Staff",
+      "published_at": "2026-02-24",
+      "title": "Why manufacturers are rethinking innovation culture",
+      "section": "Leadership",
+      "tags": ["leadership", "innovation"],
+      "body": "A management-focused article about innovation culture and executive decision-making with no specific construction, capacity, procurement, or financing event."
+    }
+  ]
+}

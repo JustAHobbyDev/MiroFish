@@ -1,0 +1,312 @@
+{
+  "name": "trade_press_sample_prefilter_v1",
+  "source_class": "trade_press",
+  "processed_artifact_count": 6,
+  "kept_artifacts": [
+    {
+      "artifact_id": "trade_press_9a24459d121a92cc",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Staff",
+      "published_at": "2026-02-20",
+      "title": "Hitachi Energy plans new transformer factory and plant expansions to meet grid demand",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Grid infrastructure",
+      "category_tags": [
+        "transformers",
+        "manufacturing",
+        "grid"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Grid infrastructure",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/hitachi-energy-transformer-factory-expansion-grid-demand/2/",
+      "body_text": "Hitachi Energy outlined plans for a new transformer factory and additional plant expansions as utilities and large load customers increase demand for grid equipment.",
+      "_prefilter": {
+        "artifact_id": "trade_press_9a24459d121a92cc",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_10881caa54e04b20",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Staff",
+      "published_at": "2026-02-21",
+      "title": "Developer starts construction on 250MW AI data center campus with liquid cooling",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Design & Build",
+      "category_tags": [
+        "construction",
+        "data center",
+        "cooling"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Design & Build",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/developer-starts-construction-on-250mw-ai-campus/3/",
+      "body_text": "A developer has started construction on a 250MW data center campus designed for AI workloads, including liquid cooling infrastructure and phased power delivery.",
+      "_prefilter": {
+        "artifact_id": "trade_press_10881caa54e04b20",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bconstruction\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [
+    {
+      "artifact_id": "trade_press_556caf251479d424",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Staff",
+      "published_at": "2026-02-18",
+      "title": "Schneider Electric to invest $700M in U.S. operations as AI and energy demand rise",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Operations",
+      "category_tags": [
+        "manufacturing",
+        "capacity",
+        "energy"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Operations",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/schneider-electric-us-investment-ai-demand/1/",
+      "body_text": "Schneider Electric said it plans to invest $700 million in U.S. operations over multiple years, including manufacturing capacity, automation, and energy infrastructure upgrades tied to growing AI and electrification demand.",
+      "_prefilter": {
+        "artifact_id": "trade_press_556caf251479d424",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_887711df85c1a0b9",
+      "source_class": "trade_press",
+      "publisher_or_author": "Semiconductor Engineering",
+      "author_name": "Staff",
+      "published_at": "2026-02-22",
+      "title": "Photonics suppliers partner on optical roadmap for AI clusters",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Photonics",
+      "category_tags": [
+        "photonics",
+        "optical interconnect",
+        "partnership"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Photonics",
+        "raw_source": ""
+      },
+      "source_url": "https://www.semiengineering.com/photonics-suppliers-partner-on-optical-roadmap/4/",
+      "body_text": "Several photonics suppliers announced a partnership around optical interconnect roadmaps for AI clusters, but the article does not describe new construction, plant expansion, or signed supply commitments.",
+      "_prefilter": {
+        "artifact_id": "trade_press_887711df85c1a0b9",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only review-only event-form language was detected without explicit buildout form.",
+        "matched_families": [
+          "partnerships_with_buildout_implications"
+        ],
+        "field_hits": {
+          "category_tags": {
+            "partnerships_with_buildout_implications": [
+              "\\bpartnership(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "category_tags:partnerships_with_buildout_implications:\\bpartnership(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_43464f35fa1bd9e1",
+      "source_class": "trade_press",
+      "publisher_or_author": "EE Times",
+      "author_name": "Staff",
+      "published_at": "2026-02-23",
+      "title": "Networking vendors form joint venture for AI interconnect systems",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Networking",
+      "category_tags": [
+        "joint venture",
+        "networking",
+        "AI"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Networking",
+        "raw_source": ""
+      },
+      "source_url": "https://www.eetimes.com/networking-vendors-form-joint-venture-for-ai-interconnects/5/",
+      "body_text": "Two networking vendors formed a joint venture focused on AI interconnect systems. The article describes product development goals but no current buildout, order, or capacity expansion commitment.",
+      "_prefilter": {
+        "artifact_id": "trade_press_43464f35fa1bd9e1",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only review-only event-form language was detected without explicit buildout form.",
+        "matched_families": [
+          "partnerships_with_buildout_implications"
+        ],
+        "field_hits": {
+          "title": {
+            "partnerships_with_buildout_implications": [
+              "\\bjoint venture(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "partnerships_with_buildout_implications": [
+              "\\bjoint venture(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:partnerships_with_buildout_implications:\\bjoint venture(?:s)?\\b",
+          "category_tags:partnerships_with_buildout_implications:\\bjoint venture(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "dropped_audit_records": [
+    {
+      "artifact_id": "trade_press_d16899556b742070",
+      "source_class": "trade_press",
+      "publisher_or_author": "IndustryWeek",
+      "published_at": "2026-02-24",
+      "title": "Why manufacturers are rethinking innovation culture",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\binnovation\\b",
+        "\\bleadership\\b"
+      ]
+    }
+  ],
+  "metrics": {
+    "processed_artifact_count": 6,
+    "kept_count": 2,
+    "review_count": 3,
+    "dropped_count": 1
+  }
+}
