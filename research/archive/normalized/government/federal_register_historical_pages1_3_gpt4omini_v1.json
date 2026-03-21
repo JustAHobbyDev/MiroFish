@@ -1,0 +1,733 @@
+{
+  "name": "federal_register_historical_pages1_3_prefilter_v1",
+  "source_class": "policy_feed",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "policy_feed_e380bf5295f244ee",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Department of Health and Human Services is granting an exclusive patent license for in vivo manufactured anti-CD19 CAR products.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in the development and production of CAR products for autoimmune diseases.",
+          "system_hints": [
+            "Biotechnology and pharmaceutical sectors focused on autoimmune disease treatments."
+          ],
+          "physical_implication": "Potential expansion of manufacturing facilities or R&D investments in CAR technology.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The correction in the summary section of the patent license notice indicates ongoing regulatory processes.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "Companies may adjust their capacity planning based on the regulatory landscape for CAR products.",
+          "system_hints": [
+            "Regulatory compliance and biotechnology sectors."
+          ],
+          "physical_implication": "Possible scaling of operations or strategic partnerships to align with regulatory requirements.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:17:09Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_e0766c57e71e1a35",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The OCC is renewing its information collection titled, 'Appraisals for Higher-Priced Mortgage Loans.'",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for appraisal services and related financial services due to the renewal of information collection requirements.",
+          "system_hints": [
+            "Financial services sector, particularly mortgage lending and appraisal services."
+          ],
+          "physical_implication": "Potential increase in hiring or contracting of appraisal professionals and related service providers.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The OCC is inviting comment on the information collection, indicating ongoing regulatory engagement.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "Financial institutions may adjust their operational capacities to comply with renewed appraisal requirements.",
+          "system_hints": [
+            "Mortgage lending institutions and appraisal firms."
+          ],
+          "physical_implication": "Possible expansion of operational capacity in appraisal services to meet compliance needs.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:17:14Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_2ceb2d252849b7da",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "MARAD is seeking public comments on the renewal of an information collection related to ocean shipments financed by the EXIM Bank.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased monitoring and documentation of ocean shipments may lead to enhanced procurement activities related to EXIM Bank financed projects.",
+          "system_hints": [
+            "Maritime shipping and export financing sectors."
+          ],
+          "physical_implication": "Potential increase in shipping activities and related infrastructure development.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The information collection is necessary for MARAD to monitor ocean freight revenues and tonnage.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Monitoring of ocean freight revenues may prompt stakeholders to adjust capacity in response to demand for EXIM Bank financed projects.",
+          "system_hints": [
+            "Shipping industry and export financing."
+          ],
+          "physical_implication": "Possible expansion of shipping capacity or investment in maritime infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:17:20Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_867f2a0e00c994c3",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The NRC has accepted for review a phased construction permit application for a dual-unit SMR-300 plant.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in construction and procurement of materials and services for the SMR-300 plant.",
+          "system_hints": [
+            "Nuclear energy sector, construction industry, supply chain for nuclear components."
+          ],
+          "physical_implication": "Initiation of construction activities at the Palisades Energy Center.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The application includes a limited work authorization request for early construction activities.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Potential increase in capital allocation towards early-stage construction efforts.",
+          "system_hints": [
+            "Nuclear energy development, early-stage project financing."
+          ],
+          "physical_implication": "Preparation for construction activities at the site.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "An uncontested hearing will be held regarding SMR's application.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "Possible future capital inflow contingent on the outcome of the hearing and subsequent approvals.",
+          "system_hints": [
+            "Regulatory environment, investment climate in nuclear energy."
+          ],
+          "physical_implication": "Future construction and operational activities dependent on regulatory approval.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:17:33Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_fe05aeb686c503b3",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Regulatory Secretariat Division has submitted a request to OMB for an extension of an information collection requirement.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for compliance and auditing services as agencies prepare for continued oversight.",
+          "system_hints": [
+            "Federal procurement processes, compliance services, auditing firms."
+          ],
+          "physical_implication": "Potential increase in contracts awarded to auditing and compliance firms.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The examination of records by the Comptroller General and contract audit is being reviewed for extension.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Agencies may increase their capacity to handle audits and compliance checks.",
+          "system_hints": [
+            "Federal agencies, compliance departments, auditing firms."
+          ],
+          "physical_implication": "Possible hiring or resource allocation towards compliance and auditing functions.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:17:40Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_d813430c12aa0ec2",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The U.S. Navy is requesting authorization for the demolition of Pier 10 and construction of a Crane Weight Test Area at Naval Submarine Base New London.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased spending on construction and demolition services and materials related to the project.",
+          "system_hints": [
+            "U.S. Navy, construction industry, marine services."
+          ],
+          "physical_implication": "Construction and demolition activities will require labor, materials, and equipment.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The proposal includes a possible one-time, 1-year renewal for the incidental harassment authorization.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "Potential for extended contracts or additional funding for ongoing marine mammal monitoring and mitigation efforts.",
+          "system_hints": [
+            "Environmental consulting firms, marine biology services."
+          ],
+          "physical_implication": "Increased capacity for environmental monitoring and compliance activities.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:00Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_a288137bb1f016cb",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The revocation of Public Land Orders opens approximately 2,127,845 acres of public land to mineral and resource development opportunity.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in mineral and resource extraction activities in the newly available land.",
+          "system_hints": [
+            "Mineral and resource development sector, including mining and energy companies."
+          ],
+          "physical_implication": "Potential construction of infrastructure and facilities for resource extraction.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:03Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_08c2cec38f38c0df",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Veterans Benefits Administration is proposing a collection of information related to VA-Guaranteed Home Loan Cash-Out Refinance Loan Comparison Disclosure.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for services related to VA home loans and refinancing.",
+          "system_hints": [
+            "Veterans Affairs Department, home loan market, financial services."
+          ],
+          "physical_implication": "Potential increase in home refinancing activities and related financial services infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:06Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_bc247dbbfe437ede",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The FCC adopts rules allowing unlicensed geofenced variable power (GVP) devices to operate in the 6 GHz band.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for GVP devices and related technologies.",
+          "system_hints": [
+            "Telecommunications and wireless technology sectors."
+          ],
+          "physical_implication": "Potential increase in manufacturing and deployment of GVP devices.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "GVP devices must use geofencing systems to prevent harmful interference.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in geofencing technology and systems.",
+          "system_hints": [
+            "Geolocation and geofencing technology sectors."
+          ],
+          "physical_implication": "Expansion of infrastructure to support geofencing capabilities.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "GVP devices can operate at higher power than lower power 6 GHz band unlicensed devices.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased infrastructure development for higher power GVP devices.",
+          "system_hints": [
+            "Wireless communication infrastructure."
+          ],
+          "physical_implication": "Potential upgrades to existing networks to accommodate higher power operations.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:12Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_4d34bc54c4bfa31e",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The proposed rule change to amend add liquidity orders by Nasdaq PHLX LLC indicates a regulatory adjustment in trading practices.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased liquidity provision may attract more trading activity and capital into the market.",
+          "system_hints": [
+            "Nasdaq PHLX LLC trading platform and associated liquidity providers."
+          ],
+          "physical_implication": "Potential increase in trading volume and market participation.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:14Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_c04e10c8143d48bb",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Texas Stock Exchange LLC has proposed a rule change to add an Offset Peg Order.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased trading activity and potential liquidity in the Texas Stock Exchange.",
+          "system_hints": [
+            "Texas Stock Exchange, trading mechanisms, market participants."
+          ],
+          "physical_implication": "Potential increase in trading volume and market engagement.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:17Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_ae8423eef3b90cc9",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Department of Labor is soliciting comments for the extension of the information collection request titled 'Report of Construction Contractor's Wage Rates.'",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased compliance and reporting requirements may lead to higher demand for services related to wage reporting and compliance in the construction sector.",
+          "system_hints": [
+            "Construction industry, labor compliance services"
+          ],
+          "physical_implication": "Potential increase in hiring or contracting of compliance services and tools by construction contractors.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The proposed extension aims to minimize reporting burden and improve clarity of collection instruments.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "If the reporting process becomes more efficient, it may encourage more contractors to participate, leading to increased activity and investment in the construction sector.",
+          "system_hints": [
+            "Construction industry, contractor engagement"
+          ],
+          "physical_implication": "Possible expansion of construction projects as more contractors engage due to reduced administrative burdens.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:26Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_d4c584a01a37f3d8",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The proposed rule change to amend an Add Liquidity Order by Nasdaq MRX, LLC indicates a modification in trading practices.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased liquidity provision may attract more trading activity and capital inflow into the market.",
+          "system_hints": [
+            "Nasdaq MRX, LLC trading platform and liquidity providers."
+          ],
+          "physical_implication": "Potential increase in trading volume and market participation.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:29Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_6d6ba56a42dfcd82",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:29Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_4b2e13b06c9906f8",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Tennessee Valley Authority has adopted categorical exclusions under the National Environmental Policy Act.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased efficiency in project approvals may lead to accelerated investment in energy infrastructure.",
+          "system_hints": [
+            "Energy sector, infrastructure development, regulatory compliance."
+          ],
+          "physical_implication": "Potential for expedited construction and deployment of energy projects.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The order involves the Energy Department and the Federal Energy Regulatory Commission.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Collaboration between federal agencies may enhance funding opportunities for energy projects.",
+          "system_hints": [
+            "Federal energy initiatives, inter-agency collaboration."
+          ],
+          "physical_implication": "Increased capacity for energy generation and distribution projects.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:34Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_1594c8731870caa4",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Removal of regulations limiting authorizations to proceed with construction activities.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased capital investment in construction projects.",
+          "system_hints": [
+            "Energy sector construction activities."
+          ],
+          "physical_implication": "Potential increase in construction of energy infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Confirmation of the effective date of the final rule by the Federal Energy Regulatory Commission.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Encouragement for companies to initiate or expand construction projects.",
+          "system_hints": [
+            "Energy infrastructure development."
+          ],
+          "physical_implication": "Expansion of energy capacity through new construction.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:18:43Z",
+      "prefilter_triage": "keep"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "policy_feed_3d1962f60f69e27b",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[1] has invalid capital_flow_implication_type: 'licensing revenue generation'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "The Clinical Center of the National Institutes of Health is contemplating the grant of an Exclusive Patent License to Bionic Power Inc.",
+            "capital_flow_implication_type": "investment in technology development",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential capital flow into Bionic Power Inc. for the development and commercialization of powered gait assistance systems.",
+            "system_hints": "healthcare technology, rehabilitation devices",
+            "physical_implication": "increased production capacity for powered gait assistance systems",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The grant of an Exclusive Patent License indicates a formal agreement for the use of patented technology.",
+            "capital_flow_implication_type": "licensing revenue generation",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Possible revenue flow from Bionic Power Inc. to the National Institutes of Health through licensing fees.",
+            "system_hints": "intellectual property, healthcare funding",
+            "physical_implication": "potential reinvestment into further research and development by NIH",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_a20888efd28ad300",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory response'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "Imports of seamless oil country tubular goods (OCTG) completed in Thailand using steel billets from China are circumventing U.S. antidumping and countervailing duties.",
+            "capital_flow_implication_type": "regulatory response",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in domestic production of OCTG in response to regulatory enforcement.",
+            "system_hints": "U.S. oil and gas industry, domestic manufacturing sector.",
+            "physical_implication": "Increased investment in domestic OCTG manufacturing facilities.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The determination by the U.S. Department of Commerce indicates a crackdown on circumvention of trade duties.",
+            "capital_flow_implication_type": "trade compliance enforcement",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Shift in procurement strategies towards compliant suppliers within the U.S. or other countries.",
+            "system_hints": "Supply chain management in the oil and gas sector.",
+            "physical_implication": "Potential buildout of supply chains that comply with U.S. trade regulations.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_e361f10f17cb11ef",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory change'",
+      "raw_payload": {
+        "candidates": [
+          {
+            "observable_statement": "The proposed rule change aims to amend the position and exercise limits for IBIT options.",
+            "capital_flow_implication_type": "regulatory change",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in trading activity and investment in IBIT options due to revised limits.",
+            "system_hints": "Options trading market, specifically related to IBIT options.",
+            "physical_implication": "Increased trading volume may lead to enhanced liquidity and market participation.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_e2aa283fbc50515b",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory approval'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "The EPA denied a petition to object to the operating permit for the Platteville Natural Gas Processing Plant.",
+            "capital_flow_implication_type": "regulatory approval",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential for continued investment in the natural gas processing facility due to regulatory stability.",
+            "system_hints": "Natural gas processing sector, environmental compliance.",
+            "physical_implication": "Possible expansion or maintenance of operations at the Platteville facility.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_61f13be909bb1344",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory relief'",
+      "raw_payload": {
+        "candidates": [
+          {
+            "observable_statement": "The northern and southern distinct population segments of the lesser prairie-chicken are removed from the Federal List of Endangered and Threatened Wildlife.",
+            "capital_flow_implication_type": "regulatory relief",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in investment in land development and agricultural activities in areas previously restricted due to endangered species protections.",
+            "system_hints": "Land development, agriculture, and related industries in regions where the lesser prairie-chicken was previously protected.",
+            "physical_implication": "Increased land use and potential construction or agricultural expansion in affected areas.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_2333e80b68fc4479",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[1] has invalid capital_flow_implication_type: 'protection of domestic industry'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "Continuation of the antidumping duty order on electrolytic manganese dioxide from China.",
+            "capital_flow_implication_type": "increased domestic production investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Investment may flow into U.S. production facilities for electrolytic manganese dioxide to meet domestic demand and avoid tariffs.",
+            "system_hints": "U.S. electrolytic manganese dioxide industry, domestic manufacturing sector.",
+            "physical_implication": "Potential expansion or buildout of manufacturing capacity in the U.S.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "Determination that revocation of the antidumping duty would likely lead to material injury to the U.S. industry.",
+            "capital_flow_implication_type": "protection of domestic industry",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Capital may be directed towards supporting U.S. manufacturers to enhance competitiveness against foreign imports.",
+            "system_hints": "U.S. manufacturing sector, trade compliance mechanisms.",
+            "physical_implication": "Increased investment in technology or processes to improve efficiency and reduce costs.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_313e87f5ee6bcd9f",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory easing'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "The exemption from certain rules for broker-dealers with capital of less than $100 million and total assets of less than $1 billion.",
+            "capital_flow_implication_type": "regulatory easing",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in capital flow to smaller broker-dealers as they face fewer regulatory burdens.",
+            "system_hints": "Broker-dealer sector, financial services industry.",
+            "physical_implication": "Increased operational capacity or expansion of smaller broker-dealers.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_d82c2d55d29b7ab7",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory change'",
+      "raw_payload": {
+        "candidates": [
+          {
+            "observable_statement": "The proposed rule change to amend add liquidity orders has been filed and is effective immediately.",
+            "capital_flow_implication_type": "regulatory change",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in liquidity provision and trading activity on Nasdaq GEMX, which may attract more market participants.",
+            "system_hints": "Nasdaq GEMX trading platform and liquidity provision mechanisms.",
+            "physical_implication": "Increased trading volume may necessitate enhanced infrastructure or technology investments by market participants.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_d3426979d9550bb1",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory approval'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "The order approves reliability standards for inverter-based resources and generators.",
+            "capital_flow_implication_type": "regulatory approval",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Increased investment in inverter-based resources and generators due to regulatory support.",
+            "system_hints": "Energy sector, specifically renewable energy and grid reliability.",
+            "physical_implication": "Potential buildout of new inverter-based generation capacity.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The involvement of the Energy Department and Federal Energy Regulatory Commission indicates federal support for inverter-based technologies.",
+            "capital_flow_implication_type": "government support",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Attraction of private capital into inverter-based energy technologies.",
+            "system_hints": "Renewable energy technologies, energy infrastructure.",
+            "physical_implication": "Expansion of manufacturing and deployment of inverter-based systems.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 25,
+    "successful_extractions": 16,
+    "schema_failure_count": 9,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 15,
+    "no_candidate_artifact_count": 1,
+    "total_candidate_count": 27,
+    "review_artifact_count": 0,
+    "review_candidate_artifact_count": 0
+  }
+}

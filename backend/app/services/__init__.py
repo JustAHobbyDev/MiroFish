@@ -97,6 +97,10 @@ from .company_release_archive import (
     build_company_release_prefilter_batch,
     normalize_company_release_artifact,
 )
+from .policy_feed_archive import (
+    build_policy_feed_prefilter_batch,
+    normalize_policy_feed_artifact,
+)
 from .capital_flow_extractor import (
     CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION,
     DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL,
@@ -196,6 +200,8 @@ __all__ = [
     'triage_capital_flow_artifact',
     'build_company_release_prefilter_batch',
     'normalize_company_release_artifact',
+    'build_policy_feed_prefilter_batch',
+    'normalize_policy_feed_artifact',
     'CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION',
     'DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL',
     'CapitalFlowExtractor',
