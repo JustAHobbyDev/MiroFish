@@ -1,0 +1,72 @@
+{
+  "name": "mixed_issuer_resolution_live_v1",
+  "evaluated_plan_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_v1.json",
+  "executed_entities": [
+    "GridCore Manufacturing",
+    "Hitachi Energy",
+    "Lamina Grid Products"
+  ],
+  "results": [
+    {
+      "canonical_entity_name": "GridCore Manufacturing",
+      "live_resolution_status": "placeholder_not_live_resolvable",
+      "resolution_outcome": "synthetic_placeholder_in_local_corpus",
+      "resolved_issuer_name": null,
+      "resolved_entity_type": "placeholder_entity",
+      "filing_route_assessment": "blocked_placeholder",
+      "next_action": "Do not perform live filing collection. Replace this placeholder with a real-world bounded entity before any filing work.",
+      "evidence": [
+        {
+          "evidence_type": "local_corpus_source",
+          "source_url": "https://example.com/releases/2025-09-18-grid-transformers-expansion",
+          "note": "The bounded-entity support comes from an example.com synthetic company-release artifact."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "live_resolution_status": "partially_resolved_real_entity",
+      "resolution_outcome": "real_operating_entity_parent_route_candidate_identified",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "resolved_entity_type": "wholly_owned_subsidiary",
+      "filing_route_assessment": "parent_public_route_candidate",
+      "inference_note": "Official Hitachi Energy sources describe Hitachi Energy as a wholly owned subsidiary of Hitachi, Ltd. Parent-company IR therefore becomes the first filing-route candidate. This is an inference from official company sources, not yet a confirmed filing-route resolution.",
+      "next_action": "Use official Hitachi, Ltd. investor-relations and filing sources as the first live resolution route. Keep affiliate-specific routes separate unless later bounded evidence points there.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.hitachienergy.com/ca/fr/news-and-events/press-releases/2025/10/hitachi-energy-and-blackstone-energy-transition-partners-enter-strategic-partnership",
+          "note": "States that Hitachi Energy is a wholly owned subsidiary of Hitachi, Ltd."
+        },
+        {
+          "evidence_type": "official_parent_ir_source",
+          "source_url": "https://www.hitachi.com/en/ir/mail/",
+          "note": "Official Hitachi, Ltd. investor-relations contact surface."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Lamina Grid Products",
+      "live_resolution_status": "placeholder_not_live_resolvable",
+      "resolution_outcome": "synthetic_placeholder_in_local_corpus",
+      "resolved_issuer_name": null,
+      "resolved_entity_type": "placeholder_entity",
+      "filing_route_assessment": "blocked_placeholder",
+      "next_action": "Do not perform live filing collection. Replace this placeholder with a real-world bounded entity before any filing work.",
+      "evidence": [
+        {
+          "evidence_type": "local_corpus_source",
+          "source_url": "https://example.com/releases/2025-11-19-transformer-components",
+          "note": "The bounded-entity support comes from an example.com synthetic company-release artifact."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "executed_entity_count": 3,
+    "real_entity_count": 1,
+    "placeholder_entity_count": 2,
+    "parent_route_candidate_count": 1
+  }
+}
+
