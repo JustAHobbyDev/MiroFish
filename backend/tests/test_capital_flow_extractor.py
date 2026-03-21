@@ -68,6 +68,30 @@ def _sample_artifact():
     }
 
 
+def _sample_government_admin_artifact():
+    return {
+        "artifact_id": "gov_admin_1",
+        "source_class": "government_policy_enforcement",
+        "publisher_or_author": "Federal Register",
+        "published_at": "2026-02-01",
+        "title": "Agency Information Collection Activities: Information Collection Renewal; Submission for OMB Review; Appraisals for Higher-Priced Mortgage Loans",
+        "source_url": "https://example.com/fedreg/admin",
+        "body_text": "Submission for OMB review of an information collection renewal for appraisals.",
+    }
+
+
+def _sample_government_buildout_artifact():
+    return {
+        "artifact_id": "gov_buildout_1",
+        "source_class": "government_policy_enforcement",
+        "publisher_or_author": "Federal Register",
+        "published_at": "2026-02-01",
+        "title": "SMR, LLC; Pioneer Units 1 and 2; Phased Construction Permit Application-Limited Work Authorization",
+        "source_url": "https://example.com/fedreg/buildout",
+        "body_text": "Construction permit application with limited work authorization for early construction activities.",
+    }
+
+
 def test_validate_capital_flow_extraction_payload_accepts_valid_no_candidate():
     payload = {
         "produced_candidates": False,
@@ -194,6 +218,7 @@ def test_extractor_returns_valid_candidate_batch():
     assert result["model_name"] == "gpt-4o-mini"
     assert llm.calls[0]["temperature"] == 0.1
     assert llm.calls[0]["response_format"] is None
+    assert result["heuristic_filter_applied"] is False
 
 
 def test_build_capital_flow_signal_batch_instruments_schema_failures():
@@ -263,3 +288,64 @@ def test_build_capital_flow_signal_batch_counts_review_candidates():
     assert result["metrics"]["review_artifact_count"] == 1
     assert result["metrics"]["review_candidate_artifact_count"] == 1
     assert result["processed_results"][0]["prefilter_triage"] == "review"
+
+
+def test_extractor_forces_no_candidate_for_admin_government_notice():
+    llm = _FakeLLMClient(
+        """
+        {
+          "capital_flow_signal_candidates": [
+            {
+              "observable_statement": "The agency renewed an information collection.",
+              "capital_flow_implication_type": "direct_capital_allocation",
+              "observation_directness": "direct",
+              "capital_flow_implication": "Capital may flow into compliance work.",
+              "system_hints": ["financial services"],
+              "physical_implication": "Possible operational scaling.",
+              "confidence": "medium"
+            }
+          ]
+        }
+        """
+    )
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_government_admin_artifact())
+
+    assert result["produced_candidates"] is False
+    assert result["heuristic_filter_applied"] is True
+    assert "Administrative or procedural" in result["heuristic_filter_reason"]
+
+
+def test_extractor_does_not_force_no_candidate_for_buildout_government_notice():
+    llm = _FakeLLMClient(
+        """
+        {
+          "capital_flow_signal_candidates": [
+            {
+              "observable_statement": "The application includes a limited work authorization request for early construction activities.",
+              "capital_flow_implication_type": "capacity_response",
+              "observation_directness": "direct",
+              "capital_flow_implication": "Capital may move into construction activity.",
+              "system_hints": ["nuclear construction"],
+              "physical_implication": "Early construction at the project site.",
+              "confidence": "high"
+            }
+          ]
+        }
+        """
+    )
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_government_buildout_artifact())
+
+    assert result["produced_candidates"] is True
+    assert result["heuristic_filter_applied"] is False

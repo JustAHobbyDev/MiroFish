@@ -8,6 +8,7 @@ returned JSON against the v1 extraction contract.
 from __future__ import annotations
 
 import os
+import re
 from datetime import datetime, timezone
 from typing import Any, Dict, Iterable, List, Optional
 
@@ -61,6 +62,17 @@ Your job is not to form a thesis.
 Your job is to decide whether this artifact alone contains one or more concrete observations that plausibly imply directional capital flow, procurement pull, capacity response, or physical buildout in a real system.
 
 If no such implication is plausible from the artifact alone, return no candidates.
+
+For this workflow, treat the following as no-candidate by default unless the artifact explicitly describes physical construction, facility expansion, equipment purchases, financing, contracted procurement, land opening for development, or similar concrete buildout:
+
+- information collection renewals
+- comment requests
+- form/disclosure paperwork
+- hearings or meetings
+- administrative corrections
+- exchange rule filings
+- procedural regulatory maintenance notices
+- patent or exclusive license notices without concrete buildout or committed spend
 
 Return strict JSON only."""
 
@@ -172,6 +184,81 @@ def _normalize_payload_shape(payload: Any) -> Dict[str, Any]:
         "candidates": candidates,
         "rejection_reason": rejection_reason,
     }
+
+
+POST_FILTER_ADMIN_NOISE_PATTERNS = (
+    r"\binformation collection\b",
+    r"\bsubmission for omb review\b",
+    r"\bcomment request\b",
+    r"\bsubmission for review\b",
+    r"\bsunshine act meeting(?:s)?\b",
+    r"\bnotice of filing\b",
+    r"\bproposed rule change\b",
+    r"\bimmediate effectiveness\b",
+    r"\bposition and exercise limits\b",
+    r"\badd liquidity order\b",
+    r"\bpeg order\b",
+    r"\bappraisals? for higher[- ]priced mortgage loans\b",
+    r"\bhome loan cash[- ]out refinance loan comparison disclosure\b",
+    r"\breport of construction contractor'?s wage rates\b",
+    r"\breinstatement of disability annuity\b",
+    r"\bexamination of records by comptroller general and contract audit\b",
+)
+
+POST_FILTER_OUT_OF_SCOPE_PATTERNS = (
+    r"\bexclusive patent license\b",
+    r"\bprospective grant of an exclusive patent license\b",
+)
+
+POST_FILTER_STRONG_BUILDOUT_PATTERNS = (
+    r"\bconstruction permit\b",
+    r"\blimited work authorization\b",
+    r"\bbreaks? ground\b",
+    r"\bconstruction\b",
+    r"\bdemolition\b",
+    r"\bnew plant\b",
+    r"\bnew facility\b",
+    r"\bmanufacturing\b",
+    r"\bcommissioning\b",
+    r"\bfinancing package\b",
+    r"\bequipment purchases?\b",
+    r"\bsite development\b",
+    r"\bprocess-line installation\b",
+    r"\bsupply agreement\b",
+    r"\bproduction ramp\b",
+    r"\bpublic land order\b",
+    r"\bmineral and resource development\b",
+    r"\bopened? .* land[s]? .* development\b",
+)
+
+
+def _artifact_text_for_post_filter(artifact: Dict[str, Any]) -> str:
+    parts = [
+        _coerce_string(artifact.get("title")),
+        _coerce_string(artifact.get("body_text")),
+    ]
+    return "\n".join(part for part in parts if part).lower()
+
+
+def _matches_any_pattern(text: str, patterns: tuple[str, ...]) -> bool:
+    return any(re.search(pattern, text) for pattern in patterns)
+
+
+def _should_force_no_candidate_after_extraction(artifact: Dict[str, Any]) -> Optional[str]:
+    source_class = _coerce_string(artifact.get("source_class")).lower()
+    if "government" not in source_class:
+        return None
+
+    text = _artifact_text_for_post_filter(artifact)
+    has_strong_buildout = _matches_any_pattern(text, POST_FILTER_STRONG_BUILDOUT_PATTERNS)
+    has_admin_noise = _matches_any_pattern(text, POST_FILTER_ADMIN_NOISE_PATTERNS)
+    has_out_of_scope = _matches_any_pattern(text, POST_FILTER_OUT_OF_SCOPE_PATTERNS)
+
+    if has_admin_noise and not has_strong_buildout:
+        return "Administrative or procedural policy notice without concrete buildout or committed capital."
+    if has_out_of_scope and not has_strong_buildout:
+        return "Constrained-access or licensing notice without concrete rising-demand buildout evidence."
+    return None
 
 
 def build_capital_flow_extraction_messages(artifact: Dict[str, Any]) -> List[Dict[str, str]]:
@@ -312,12 +399,23 @@ class CapitalFlowExtractor:
         except ValueError as exc:
             setattr(exc, "raw_payload", raw_payload)
             raise
+        heuristic_filter_reason = None
+        if validated["produced_candidates"]:
+            heuristic_filter_reason = _should_force_no_candidate_after_extraction(artifact)
+            if heuristic_filter_reason:
+                validated = {
+                    "produced_candidates": False,
+                    "candidates": [],
+                    "rejection_reason": heuristic_filter_reason,
+                }
         return {
             "artifact_id": _coerce_string(artifact.get("artifact_id")),
             "source_class": _coerce_string(artifact.get("source_class")),
             "produced_candidates": validated["produced_candidates"],
             "candidates": validated["candidates"],
             "rejection_reason": validated["rejection_reason"],
+            "heuristic_filter_applied": bool(heuristic_filter_reason),
+            "heuristic_filter_reason": heuristic_filter_reason,
             "provider_name": self.provider,
             "model_name": self.model_name,
             "prompt_version": CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION,
