@@ -1,0 +1,121 @@
+{
+  "name": "trade_press_energy_flow_smoke_prefilter_v1",
+  "source_class": "trade_press",
+  "kept_artifacts": [
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2026-02-20",
+      "title": "As load grows, Southern raises spending plan to $81B",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "load growth",
+        "capex",
+        "generation"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
+      "body_text": "Southern Company raised its five-year spending plan to $81 billion, driven by substantial new growth infrastructure investments as large-load and data center demand increases. The company is working on adding 10GW of approved new generation.",
+      "_prefilter": {
+        "artifact_id": "trade_press_7cab8b3aa2571296",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates an explicit increase in planned capital spending.",
+        "matched_families": [
+          "trade_press_spending_plan"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_spending_plan": [
+              "trade_press:spending_plan"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_spending_plan:trade_press:spending_plan"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Zachary Skidmore",
+      "published_at": "2025-08-01",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Power",
+      "category_tags": [
+        "pipeline",
+        "utility",
+        "interconnection"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Power",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/pge-data-center-pipeline-swells-to-10gw/",
+      "body_text": "PG&E reported 10GW of data center capacity in its pipeline, with 17 projects totaling 1.5GW in final engineering phases and operations expected to begin between 2026 and 2030.",
+      "_prefilter": {
+        "artifact_id": "trade_press_b4dc467358a3db4d",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "dropped_audit_records": [],
+  "metrics": {
+    "processed_artifact_count": 2,
+    "kept_count": 1,
+    "review_count": 1,
+    "dropped_count": 0
+  }
+}

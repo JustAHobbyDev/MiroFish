@@ -1,0 +1,107 @@
+{
+  "name": "trade_press_energy_flow_smoke_prefilter_v1",
+  "source_class": "trade_press",
+  "prompt_version": "energy_flow_pressure_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Southern Company raised its five-year spending plan to $81 billion.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for energy generation capacity",
+          "system_hints": [
+            "electricity generation and infrastructure development"
+          ],
+          "physical_implication": "need for additional energy resources and infrastructure to meet demand",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Substantial new growth infrastructure investments as large-load and data center demand increases.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy consumption from data centers and large-load facilities",
+          "system_hints": [
+            "electricity supply and demand balance"
+          ],
+          "physical_implication": "potential strain on existing energy resources and infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company is working on adding 10GW of approved new generation.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "need for new energy generation sources to meet rising demand",
+          "system_hints": [
+            "energy generation capacity expansion"
+          ],
+          "physical_implication": "increased physical infrastructure for energy generation",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T18:32:04Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PG&E reported 10GW of data center capacity in its pipeline.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Increased demand for energy to support data center operations.",
+          "system_hints": [
+            "Electricity generation and distribution systems may need to scale up."
+          ],
+          "physical_implication": "Potential strain on existing energy infrastructure to meet new capacity demands.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "17 projects totaling 1.5GW are in final engineering phases.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Need for energy supply to support new data center projects.",
+          "system_hints": [
+            "Investment in energy generation and transmission may be required."
+          ],
+          "physical_implication": "Increased construction and operational energy needs.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T18:32:09Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 2,
+    "successful_extractions": 2,
+    "schema_failure_count": 0,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 2,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 5,
+    "review_artifact_count": 1,
+    "review_candidate_artifact_count": 1
+  }
+}

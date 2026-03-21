@@ -56,6 +56,15 @@ class _FakeLLMClient:
         return json.loads(response)
 
 
+class _FailingLLMClient:
+    def chat(self, messages, temperature=0.0, max_tokens=0, response_format=None):
+        raise RuntimeError("simulated runtime failure")
+
+    @staticmethod
+    def parse_json_text(response):
+        raise AssertionError("parse_json_text should not be called on runtime failure")
+
+
 def _sample_trade_press_pipeline_artifact():
     return {
         "artifact_id": "trade_energy_1",
@@ -112,6 +121,48 @@ def test_validate_energy_flow_pressure_payload_accepts_aliases():
     assert validated["candidates"][0]["observation_directness"] == "direct"
     assert validated["candidates"][0]["relationship_to_capital_flow"] == "energy_flow_pressure_and_capital_flow"
     assert validated["candidates"][0]["confidence"] == "high"
+
+
+def test_validate_energy_flow_pressure_payload_accepts_observed_smoke_aliases():
+    payload = {
+        "energy_flow_pressure_signals": [
+            {
+                "observable_statement": "Southern raised its spending plan.",
+                "energy_pressure_type": "capital investment pressure",
+                "observation_directness": "direct",
+                "energy_flow_implication": "More generation investment is likely needed.",
+                "system_hints": ["utility generation"],
+                "physical_implication": "New generation capacity may be added.",
+                "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+                "confidence": "high"
+            },
+            {
+                "observable_statement": "Large-load demand is rising.",
+                "energy_pressure_type": "demand pressure",
+                "observation_directness": "direct",
+                "energy_flow_implication": "Load growth is increasing.",
+                "system_hints": ["utility load"],
+                "physical_implication": "More grid capacity may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_only",
+                "confidence": "medium"
+            },
+            {
+                "observable_statement": "The company is adding new generation.",
+                "energy_pressure_type": "supply pressure",
+                "observation_directness": "direct",
+                "energy_flow_implication": "New infrastructure is needed to meet demand.",
+                "system_hints": ["generation capacity"],
+                "physical_implication": "Generation buildout may occur.",
+                "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+                "confidence": "high"
+            }
+        ]
+    }
+    validated = module.validate_energy_flow_pressure_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["energy_pressure_type"] == "infrastructure_response_need"
+    assert validated["candidates"][1]["energy_pressure_type"] == "load_growth"
+    assert validated["candidates"][2]["energy_pressure_type"] == "infrastructure_response_need"
 
 
 def test_energy_flow_extractor_returns_pipeline_pressure_candidate():
@@ -220,3 +271,24 @@ def test_build_energy_flow_pressure_signal_batch_counts_review_candidates():
     assert result["metrics"]["review_artifact_count"] == 1
     assert result["metrics"]["review_candidate_artifact_count"] == 1
     assert result["processed_results"][0]["prefilter_triage"] == "review"
+
+
+def test_build_energy_flow_pressure_signal_batch_captures_runtime_exception_metadata():
+    extractor = module.EnergyFlowPressureExtractor(
+        llm_client=_FailingLLMClient(),
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+    batch = {
+        "name": "prefilter_batch",
+        "source_class": "trade_press",
+        "kept_artifacts": [_sample_trade_press_pipeline_artifact()],
+        "review_artifacts": [],
+    }
+
+    result = module.build_energy_flow_pressure_signal_batch(batch, extractor=extractor)
+
+    assert result["metrics"]["extraction_failure_count"] == 1
+    failure = result["extraction_failures"][0]
+    assert failure["exception_type"] == "RuntimeError"
+    assert failure["error_repr"] == "RuntimeError('simulated runtime failure')"

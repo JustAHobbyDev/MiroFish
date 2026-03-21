@@ -39,12 +39,16 @@ ALLOWED_CONFIDENCE = {"low", "medium", "high"}
 ENERGY_PRESSURE_TYPE_ALIASES = {
     "load_growth": "load_growth",
     "load growth": "load_growth",
+    "demand increase": "load_growth",
+    "demand pressure": "load_growth",
     "pipeline_pressure": "pipeline_pressure",
     "pipeline pressure": "pipeline_pressure",
     "capacity_tightness": "capacity_tightness",
     "capacity tightness": "capacity_tightness",
+    "supply pressure": "infrastructure_response_need",
     "infrastructure_response_need": "infrastructure_response_need",
     "infrastructure response need": "infrastructure_response_need",
+    "capital investment pressure": "infrastructure_response_need",
 }
 RELATIONSHIP_ALIASES = {
     "energy_flow_pressure_only": "energy_flow_pressure_only",
@@ -403,7 +407,9 @@ def build_energy_flow_pressure_signal_batch(
                     "artifact_id": artifact.get("artifact_id"),
                     "prefilter_triage": triage,
                     "error_type": "extraction_runtime_error",
+                    "exception_type": type(exc).__name__,
                     "error_message": str(exc),
+                    "error_repr": repr(exc),
                 }
             )
             continue
