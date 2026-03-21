@@ -1,0 +1,1100 @@
+{
+  "name": "trade_press_prefilter_v4_30",
+  "source_class": "trade_press",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_cac8ad2ff3742510",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric plans to invest $700 million in its U.S. operations through 2027.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital flow into U.S. manufacturing sector",
+          "system_hints": [
+            "U.S. operations, manufacturing, data centers, electricity infrastructure"
+          ],
+          "physical_implication": "facility upgrades, expansions, and openings across eight sites",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The money will fund facility upgrades, expansions and openings across eight sites.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased procurement for construction and equipment",
+          "system_hints": [
+            "manufacturing facilities, data centers"
+          ],
+          "physical_implication": "construction and operational enhancements at multiple sites",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Investment is aimed at meeting rising demand from data centers and electricity infrastructure.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "potential increase in capital flow to support infrastructure development",
+          "system_hints": [
+            "data centers, electricity infrastructure"
+          ],
+          "physical_implication": "expansion of capabilities to support growing demand",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:13:33Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rolls-Royce will invest $75 million to expand its Aiken, South Carolina, engine plant.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital flow into the expansion of manufacturing capacity",
+          "system_hints": [
+            "engine manufacturing for data centers and industrial facilities"
+          ],
+          "physical_implication": "construction of a 60,000-square-foot expansion",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The expansion will increase production of large engines used to power data centers.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased production capacity for large engines",
+          "system_hints": [
+            "data center demand"
+          ],
+          "physical_implication": "enhanced operational capacity at the Aiken plant",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:13:51Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rockwell Automation plans to build a new factory in Wisconsin as part of a $2 billion effort.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "significant capital flow into construction and operational setup in Wisconsin.",
+          "system_hints": [
+            "manufacturing sector, automation technology"
+          ],
+          "physical_implication": "construction of a new factory and associated infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The campus will include more than 1 million square feet of manufacturing and warehouse space.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "procurement pull for construction materials and equipment for the new facility.",
+          "system_hints": [
+            "construction industry, supply chain for manufacturing"
+          ],
+          "physical_implication": "expansion of physical manufacturing capabilities.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:13:56Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_9f4a057076b0ca77",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Mitsubishi Electric Power Products will invest $86 million in a 160,000-square-foot switchgear factory near Pittsburgh.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into manufacturing infrastructure",
+          "system_hints": [
+            "manufacturing, energy transmission, and distribution sectors"
+          ],
+          "physical_implication": "construction of a new factory and upgrades to existing facilities",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The move responds to growing demand for transmission, distribution and data center power products.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "potential increase in procurement for related components and services",
+          "system_hints": [
+            "energy sector, data centers, manufacturing supply chain"
+          ],
+          "physical_implication": "expansion of production capacity to meet demand",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:01Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_61fa290549c6e41d",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Roche Diagnostics will build a $550 million expansion at an Indianapolis facility.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into the Indianapolis facility for expansion purposes",
+          "system_hints": [
+            "manufacturing and healthcare sectors"
+          ],
+          "physical_implication": "construction and operational expansion of the facility",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Roche Diagnostics will build a new $700 million factory in Holly Springs, North Carolina.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into the Holly Springs area for new factory construction",
+          "system_hints": [
+            "manufacturing and healthcare sectors"
+          ],
+          "physical_implication": "construction of a new manufacturing facility",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:06Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rowan Digital Infrastructure has broken ground on a 300MW hyperscale campus outside San Antonio.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "A significant capital investment of $900 million is being made for the construction of the data center campus.",
+          "system_hints": [
+            "data center infrastructure, technology sector"
+          ],
+          "physical_implication": "construction of a new data center facility",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The project is tailored to a top five U.S. technology company.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "The project indicates a procurement pull from a major technology company, likely leading to further investments in related services and infrastructure.",
+          "system_hints": [
+            "technology sector, data services"
+          ],
+          "physical_implication": "potential expansion of services and infrastructure to support the technology company",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "An initial 60MW is expected in early 2026.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "The phased rollout of the data center capacity suggests ongoing capital flow and investment over time as the project progresses.",
+          "system_hints": [
+            "data center operations, energy supply"
+          ],
+          "physical_implication": "incremental buildout of data center capacity",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:14Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_acb174b496999f97",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "CyrusOne broke ground on a new multi-building campus in Fort Worth, Texas.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "investment in construction and infrastructure development",
+          "system_hints": [
+            "data center industry, Texas region"
+          ],
+          "physical_implication": "new data center campus construction",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The project will deliver an initial IT capacity of around 70MW.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased operational capacity leading to potential revenue growth",
+          "system_hints": [
+            "data center operations, IT infrastructure"
+          ],
+          "physical_implication": "expansion of IT service capabilities",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Total capital investments in Texas exceeding $2.4 billion.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "significant financial investment into the local economy",
+          "system_hints": [
+            "regional economic development, data center market"
+          ],
+          "physical_implication": "increased economic activity and job creation in the area",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:22Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "EdgeCore is expanding its Mesa campus by adding nearly 44 acres.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for construction and development services and materials.",
+          "system_hints": [
+            "Data center infrastructure development."
+          ],
+          "physical_implication": "Expansion of physical land and facilities.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Lifting total capacity from more than 200MW to more than 450MW.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in power infrastructure and equipment to support increased capacity.",
+          "system_hints": [
+            "Energy supply and data center operations."
+          ],
+          "physical_implication": "Installation of additional power systems and equipment.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "To meet urgent hyperscale demand for AI and cloud-ready capacity.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in data center capabilities to support AI and cloud services.",
+          "system_hints": [
+            "Hyperscale data center market."
+          ],
+          "physical_implication": "Potential buildout of additional data center facilities and technology.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:28Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_a13c5dc00fba3fa5",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "EdgeCore began construction at a 114MW campus in Northern Virginia.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "significant capital flow into construction and development activities in Northern Virginia.",
+          "system_hints": [
+            "data center infrastructure development"
+          ],
+          "physical_implication": "physical buildout of a new data center facility.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company is also topping out additional facilities on its 450MW campus in Mesa, Arizona.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "ongoing capital flow into the expansion of data center facilities in Arizona.",
+          "system_hints": [
+            "data center infrastructure expansion"
+          ],
+          "physical_implication": "completion and operational readiness of additional data center facilities.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:33Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rowan Digital Infrastructure secured approximately $550 million of construction financing for the first development phase of its 300MW Cinco campus outside San Antonio.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "significant capital flow into the construction and development of a data center facility",
+          "system_hints": [
+            "data center infrastructure development in Texas"
+          ],
+          "physical_implication": "construction of a 300MW data center campus",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:41Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric plans to invest $700 million through 2027 for facility upgrades, expansions and openings across eight U.S. sites.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into U.S. manufacturing and infrastructure sectors",
+          "system_hints": [
+            "data centers, utilities, energy infrastructure"
+          ],
+          "physical_implication": "facility upgrades, expansions, and openings",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:44Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "significant capital flow into manufacturing infrastructure",
+          "system_hints": [
+            "U.S. grid equipment manufacturing"
+          ],
+          "physical_implication": "construction of a new transformer production facility",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Hitachi will make more than $500 million in other investments to meet growing need for U.S. grid equipment.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "additional capital flow into grid equipment production and related sectors",
+          "system_hints": [
+            "U.S. grid equipment market"
+          ],
+          "physical_implication": "potential expansion of manufacturing capabilities and supply chain enhancements",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:14:49Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "AVL Manufacturing will invest $56 million to establish its first U.S. production facility in North Carolina.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital flow into the establishment of a new manufacturing facility",
+          "system_hints": [
+            "manufacturing sector, power generation equipment"
+          ],
+          "physical_implication": "construction of a new production facility",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The plant will make industrial enclosures for large-scale power generators used in data centers.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased demand for industrial enclosures in the power generation sector",
+          "system_hints": [
+            "data centers, power generation"
+          ],
+          "physical_implication": "production of industrial enclosures",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The plant will create about 300 jobs.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased employment and economic activity in the region",
+          "system_hints": [
+            "local labor market, economic development"
+          ],
+          "physical_implication": "expansion of workforce capacity",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:02Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_81078c2995bcc693",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Hyundai increased its U.S. investment commitment to $26 billion.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into U.S. manufacturing and production facilities",
+          "system_hints": [
+            "U.S. vehicle production and related manufacturing sectors"
+          ],
+          "physical_implication": "expansion of production capacity and construction of new facilities",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Hyundai plans to fund a Louisiana steel plant.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital flow directed towards steel production infrastructure",
+          "system_hints": [
+            "steel manufacturing and supply chain in Louisiana"
+          ],
+          "physical_implication": "construction of a new steel plant",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Hyundai is building a robotics facility with annual capacity of 30,000 units.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "investment in robotics manufacturing capabilities",
+          "system_hints": [
+            "robotics industry and automation in vehicle production"
+          ],
+          "physical_implication": "construction of a new robotics facility",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:09Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PG&E reported 10GW of data center capacity in its pipeline.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in infrastructure to support data center capacity expansion.",
+          "system_hints": [
+            "Data center infrastructure and energy supply."
+          ],
+          "physical_implication": "Potential construction of new data center facilities and related infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "17 projects totaling 1.5GW are in final engineering phases.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for construction services and materials for data center projects.",
+          "system_hints": [
+            "Construction and engineering sectors related to data centers."
+          ],
+          "physical_implication": "Commitment to build out new data center facilities.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Operations expected to begin between 2026 and 2030.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Long-term investment in energy and data center operations.",
+          "system_hints": [
+            "Energy supply and data center operational capacity."
+          ],
+          "physical_implication": "Preparation for operational readiness and potential scaling of services.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:15Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Exelon has 33GW of data centers interested in connecting to its system.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for infrastructure and services to support data center connections.",
+          "system_hints": [
+            "Utility infrastructure and energy generation capacity."
+          ],
+          "physical_implication": "Potential construction of new facilities or upgrades to existing infrastructure to accommodate the demand.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "17GW already in line to connect.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Need for immediate investment in capacity to support the existing demand.",
+          "system_hints": [
+            "Energy generation and distribution systems."
+          ],
+          "physical_implication": "Possible expansion of generation facilities or enhancements to grid capacity.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility is considering options for building and owning generation to meet the demand.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in new generation facilities is likely to occur.",
+          "system_hints": [
+            "Energy generation sector."
+          ],
+          "physical_implication": "Construction of new power generation facilities.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:22Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "First Energy's pipeline of potential data centers surged to 2.6GW by 2029.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in infrastructure to support data center growth.",
+          "system_hints": [
+            "Data center energy supply and generation capacity."
+          ],
+          "physical_implication": "Potential construction of new energy generation facilities or upgrades to existing ones.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility is considering delaying coal retirements or adding gas-fired generation to serve the load.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased procurement of gas-fired generation equipment or maintenance of existing coal facilities.",
+          "system_hints": [
+            "Energy generation and procurement strategies."
+          ],
+          "physical_implication": "Possible investments in gas infrastructure or retrofitting coal plants.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:29Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PPL Electric's advanced-stage data center interconnection pipeline grew to 14GW.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in infrastructure to support data center interconnections.",
+          "system_hints": [
+            "Data center infrastructure and utility services."
+          ],
+          "physical_implication": "Potential construction or expansion of data center interconnection facilities.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility is taking a two-pronged approach to support data center growth.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased procurement of resources and services to facilitate data center expansion.",
+          "system_hints": [
+            "Utility services and data center operations."
+          ],
+          "physical_implication": "Possible contracts for equipment and services related to data center infrastructure.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "PPL Electric expects load to ramp sharply over the decade.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Anticipation of increased capital investment to meet rising energy demands from data centers.",
+          "system_hints": [
+            "Energy supply and demand dynamics."
+          ],
+          "physical_implication": "Potential upgrades to energy generation and distribution infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:40Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "DTE signed a 1.4GW agreement to serve a hyperscale data center.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in infrastructure to support the new data center load.",
+          "system_hints": [
+            "Electric utility infrastructure and data center operations."
+          ],
+          "physical_implication": "Potential expansion of generation and distribution capacity.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "DTE sees another 7GW of potential large loads.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Future investments may be directed towards accommodating additional large loads.",
+          "system_hints": [
+            "Electric utility planning and capacity management."
+          ],
+          "physical_implication": "Need for further infrastructure development to meet anticipated demand.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility now has a $30 billion investment pipeline for generation, distribution and other infrastructure from 2026 to 2030.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Significant capital flow into utility infrastructure projects.",
+          "system_hints": [
+            "Utility investment strategies and infrastructure development."
+          ],
+          "physical_implication": "Construction and enhancement of utility facilities and services.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:15:55Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Exelon utilities' pipeline of data centers and other high-density load projects more than doubled to 17GW.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in infrastructure to support the expanded data center pipeline.",
+          "system_hints": [
+            "Power supply and energy infrastructure."
+          ],
+          "physical_implication": "Potential construction of new power generation facilities or upgrades to existing ones.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company expects positive load growth and called for new approaches to ensure adequate power supplies.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for procurement of energy resources and technologies to meet load growth.",
+          "system_hints": [
+            "Energy procurement and technology development."
+          ],
+          "physical_implication": "Investment in new energy technologies or contracts for energy supply.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:16:00Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "FirstEnergy's pipeline of potential data centers nearly doubled to almost 3GW by 2029.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in infrastructure to support data center capacity.",
+          "system_hints": [
+            "Utility infrastructure and data center development."
+          ],
+          "physical_implication": "Potential construction of new data center facilities and related infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility expects industrial sales including data centers to grow 5.1% annually over the next five years.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for services and equipment related to data centers.",
+          "system_hints": [
+            "Utility services and data center operational needs."
+          ],
+          "physical_implication": "Potential procurement of equipment and services to support growing data center operations.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:16:05Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Westrafo will invest at least $12 million to establish its first U.S. transformer plant in Ohio.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "investment of $12 million into the U.S. manufacturing sector",
+          "system_hints": [
+            "U.S. energy infrastructure and manufacturing"
+          ],
+          "physical_implication": "construction of a transformer manufacturing facility",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Production expected to start in 2025 and output of 12GW per year by 2027.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased production capacity in the U.S. market for transformers",
+          "system_hints": [
+            "U.S. energy sector demand for transformers"
+          ],
+          "physical_implication": "operational capacity of the new plant contributing to energy infrastructure",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T02:16:11Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[2] has invalid capital_flow_implication_type: 'demand response'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "ABB will invest $120 million to expand production of low-voltage electrification products in the U.S.",
+            "capital_flow_implication_type": "investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "increased capital flow into U.S. manufacturing sector",
+            "system_hints": "manufacturing, electrification products",
+            "physical_implication": "expansion of facilities in Tennessee and Mississippi",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The investment will increase capacity at facilities in Tennessee and Mississippi.",
+            "capital_flow_implication_type": "capacity expansion",
+            "observation_directness": "direct",
+            "capital_flow_implication": "increased production capacity in the U.S.",
+            "system_hints": "manufacturing, low-voltage electrification products",
+            "physical_implication": "physical buildout of manufacturing facilities",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The investment supports growing demand from data centers, buildings and utilities.",
+            "capital_flow_implication_type": "demand response",
+            "observation_directness": "direct",
+            "capital_flow_implication": "potential increase in procurement for low-voltage electrification products",
+            "system_hints": "data centers, buildings, utilities",
+            "physical_implication": "increased production to meet demand",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_3d1582c75dda6698",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[1] has invalid capital_flow_implication_type: 'job creation'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "GE Vernova will spend nearly $600 million on U.S. factories and facilities over two years.",
+            "capital_flow_implication_type": "investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "inflow of capital into U.S. manufacturing sector",
+            "system_hints": "U.S. factories and facilities related to energy production",
+            "physical_implication": "construction and expansion of manufacturing sites",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The investment will create over 1,500 jobs.",
+            "capital_flow_implication_type": "job creation",
+            "observation_directness": "direct",
+            "capital_flow_implication": "increased economic activity and potential consumer spending in the local economy",
+            "system_hints": "local labor market and economy surrounding manufacturing sites",
+            "physical_implication": "need for workforce development and support services",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The investment will focus on gas power, grid, nuclear and onshore wind manufacturing sites.",
+            "capital_flow_implication_type": "sectoral investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "targeted capital flow into renewable and traditional energy sectors",
+            "system_hints": "energy production and infrastructure development",
+            "physical_implication": "potential buildout of energy-related manufacturing capabilities",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_70a23134a41f33bd",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'financing'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "EdgeCore completed a $235 million asset-backed securitization backed by its fully leased Phoenix-area data center.",
+            "capital_flow_implication_type": "financing",
+            "observation_directness": "direct",
+            "capital_flow_implication": "capital is flowing into EdgeCore for refinancing and future development.",
+            "system_hints": "data center development, asset-backed financing",
+            "physical_implication": "funding will support construction and expansion of green data centers.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "Proceeds will refinance construction loans and fund future green data center development.",
+            "capital_flow_implication_type": "procurement pull",
+            "observation_directness": "direct",
+            "capital_flow_implication": "there is a pull for capital to support green data center projects.",
+            "system_hints": "green technology, data center infrastructure",
+            "physical_implication": "indicates potential construction and expansion activities in green data centers.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_adcf7136a2e92950",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[1] has invalid capital_flow_implication_type: 'employment growth'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "Jabil plans to spend $500 million to expand its U.S. manufacturing footprint in the Southeast.",
+            "capital_flow_implication_type": "capital investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "significant capital flow into the manufacturing sector in North Carolina",
+            "system_hints": "U.S. manufacturing, data center operations",
+            "physical_implication": "construction of a new facility",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The project is expected to create nearly 1,200 jobs.",
+            "capital_flow_implication_type": "employment growth",
+            "observation_directness": "direct",
+            "capital_flow_implication": "increased local economic activity and potential for further investment in the region",
+            "system_hints": "local labor market, economic development",
+            "physical_implication": "operational facility requiring workforce",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The facility is expected to be operational by mid-2026.",
+            "capital_flow_implication_type": "project timeline",
+            "observation_directness": "direct",
+            "capital_flow_implication": "planned future capital flow related to operational readiness and ongoing operational expenses",
+            "system_hints": "data center operations, technology infrastructure",
+            "physical_implication": "completion of facility construction and readiness for operations",
+            "confidence": "medium"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[1] has invalid capital_flow_implication_type: 'regional allocation'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "Hitachi Energy announced a $250 million investment to expand global production of transformer components.",
+            "capital_flow_implication_type": "investment",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Capital is flowing into the production capacity for transformer components.",
+            "system_hints": "Global production of transformer components, with a significant focus on the U.S.",
+            "physical_implication": "Expansion of manufacturing facilities or capabilities for transformer components.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "More than 40% of the $250 million investment is dedicated to the U.S.",
+            "capital_flow_implication_type": "regional allocation",
+            "observation_directness": "direct",
+            "capital_flow_implication": "A significant portion of the investment is directed towards the U.S. market.",
+            "system_hints": "U.S. transformer component production and demand.",
+            "physical_implication": "Potential buildout or enhancement of facilities in the U.S. to meet demand.",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The company said data center development has pushed transformer demand beyond initial projections.",
+            "capital_flow_implication_type": "demand-driven investment",
+            "observation_directness": "indirect",
+            "capital_flow_implication": "Increased demand for transformers due to data center development may lead to further investments in production capacity.",
+            "system_hints": "Data center infrastructure and its impact on transformer demand.",
+            "physical_implication": "Possible future expansions or upgrades in transformer production facilities to meet rising demand.",
+            "confidence": "medium"
+          }
+        ]
+      }
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 27,
+    "successful_extractions": 22,
+    "schema_failure_count": 5,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 22,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 52,
+    "review_artifact_count": 12,
+    "review_candidate_artifact_count": 10
+  }
+}

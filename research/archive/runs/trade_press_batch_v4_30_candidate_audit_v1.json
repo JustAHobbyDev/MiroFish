@@ -1,0 +1,213 @@
+{
+  "name": "trade_press_batch_v4_30_candidate_audit_v1",
+  "batch_name": "trade_press_batch_v4_30",
+  "scope": "Union of artifact-level candidates surfaced by openai/gpt-4o-mini and groq/openai-gpt-oss-20b",
+  "summary": {
+    "artifact_count": 25,
+    "correct_candidate_count": 18,
+    "borderline_should_review_count": 7,
+    "false_positive_count": 0
+  },
+  "items": [
+    {
+      "artifact_id": "trade_press_cac8ad2ff3742510",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Direct manufacturing investment with explicit spend and facility activity."
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Explicit plant investment and physical expansion."
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Explicit factory siting and multi-year expansion spend."
+    },
+    {
+      "artifact_id": "trade_press_9f4a057076b0ca77",
+      "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Direct factory investment into grid equipment manufacturing."
+    },
+    {
+      "artifact_id": "trade_press_61fa290549c6e41d",
+      "title": "Roche to expand, open Indianapolis and North Carolina sites",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Multi-site physical expansion is direct capital deployment."
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Groundbreaking for a large data center campus is direct buildout."
+    },
+    {
+      "artifact_id": "trade_press_acb174b496999f97",
+      "title": "CyrusOne breaks ground on Fort Worth data center campus in Texas",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Direct campus construction."
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "title": "EdgeCore expands Mesa data center campus in Arizona",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Explicit campus expansion."
+    },
+    {
+      "artifact_id": "trade_press_a13c5dc00fba3fa5",
+      "title": "EdgeCore begins construction at 114MW Northern Virginia campus",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Direct construction commencement."
+    },
+    {
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "title": "Rowan secures $500m for 300MW Texas data center project",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Project financing for a specific data center buildout."
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "Same valid capital-deployment signal surfaced from a second artifact."
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Direct manufacturing investment with named factory expansion."
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "title": "Power enclosure maker AVL to establish its first US plant",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "New plant establishment is real physical buildout even without explicit spend in the headline."
+    },
+    {
+      "artifact_id": "trade_press_81078c2995bcc693",
+      "title": "Hyundai boosts US investments to $26B through 2028",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Large capital allocation is real, but the headline is broad and not tightly tied to one rising-demand industrial system."
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Strong demand signal, but pipeline size is not yet direct committed buildout or spend."
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "title": "US utility Exelon reports data center pipeline of 33GW",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Useful directional demand signal, but still pipeline language rather than committed capital."
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "title": "First Energy data center pipeline surges to 2.6GW by 2029",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Good signal for demand pressure; not yet direct project authorization or spend."
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "title": "PPL Electric's data center pipeline soars to 14GW",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Pipeline signal is relevant but should remain review-stage by default."
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "First deal plus explicit load growth is concrete demand pull with likely utility capex implications."
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "title": "Exelon data center pipeline jumps to 17 GW as load forecast turns positive",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini", "groq/openai-gpt-oss-20b"],
+      "label": "borderline_should_review",
+      "reason": "Forecast and pipeline signal matter, but this still sits one step upstream of direct buildout."
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "title": "FirstEnergy’s 5-year data center pipeline doubles to 3 GW",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "borderline_should_review",
+      "reason": "Pipeline expansion is informative, but not yet a direct capital-flow artifact."
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "title": "Italy-based Westrafo to build its first US transformer plant",
+      "prefilter_triage": "review",
+      "surfaced_by": ["openai/gpt-4o-mini"],
+      "label": "correct_candidate",
+      "reason": "New transformer plant is direct manufacturing buildout."
+    },
+    {
+      "artifact_id": "trade_press_3d1582c75dda6698",
+      "title": "GE Vernova to invest nearly $600M in US factories",
+      "prefilter_triage": "keep",
+      "surfaced_by": ["groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Explicit factory investment and manufacturing expansion."
+    },
+    {
+      "artifact_id": "trade_press_adcf7136a2e92950",
+      "title": "Jabil picks North Carolina for $500M AI facility",
+      "prefilter_triage": "review",
+      "surfaced_by": ["groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Specific facility siting and spend indicate direct capital allocation."
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "title": "Hitachi Energy commits $250M to address transformer shortage",
+      "prefilter_triage": "review",
+      "surfaced_by": ["groq/openai-gpt-oss-20b"],
+      "label": "correct_candidate",
+      "reason": "Explicit spend to relieve an industrial shortage fits rising-demand structural pressure."
+    }
+  ]
+}

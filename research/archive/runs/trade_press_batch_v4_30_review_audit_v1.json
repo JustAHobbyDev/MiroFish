@@ -1,0 +1,85 @@
+{
+  "name": "trade_press_batch_v4_30_review_audit_v1",
+  "batch_name": "trade_press_batch_v4_30",
+  "scope": "All review-triaged trade_press artifacts from the 30-article batch",
+  "summary": {
+    "artifact_count": 12,
+    "correct_candidate_count": 5,
+    "borderline_should_review_count": 7,
+    "false_positive_count": 0
+  },
+  "items": [
+    {
+      "artifact_id": "trade_press_adcf7136a2e92950",
+      "title": "Jabil picks North Carolina for $500M AI facility",
+      "label": "correct_candidate",
+      "reason": "Specific facility siting and spend are direct capital allocation."
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "title": "Power enclosure maker AVL to establish its first US plant",
+      "label": "correct_candidate",
+      "reason": "New plant buildout is a valid capital-flow signal even without headline spend."
+    },
+    {
+      "artifact_id": "trade_press_81078c2995bcc693",
+      "title": "Hyundai boosts US investments to $26B through 2028",
+      "label": "borderline_should_review",
+      "reason": "Broad capital allocation is real but not tightly grounded to one rising-demand industrial system."
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "label": "borderline_should_review",
+      "reason": "Pipeline size is important but remains one step upstream of committed buildout."
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "title": "US utility Exelon reports data center pipeline of 33GW",
+      "label": "borderline_should_review",
+      "reason": "High-signal demand indicator, but still not direct spend or project authorization."
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "title": "First Energy data center pipeline surges to 2.6GW by 2029",
+      "label": "borderline_should_review",
+      "reason": "Relevant for narrowing, not yet direct capital deployment."
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "title": "PPL Electric's data center pipeline soars to 14GW",
+      "label": "borderline_should_review",
+      "reason": "Strong directional demand signal but should remain in review state."
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "title": "Hitachi Energy commits $250M to address transformer shortage",
+      "label": "correct_candidate",
+      "reason": "Explicit spend to add manufacturing or supply capacity."
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "label": "correct_candidate",
+      "reason": "A concrete deal plus explicit load growth implies real utility buildout pressure."
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "title": "Exelon data center pipeline jumps to 17 GW as load forecast turns positive",
+      "label": "borderline_should_review",
+      "reason": "Forecast improvement matters, but it remains a planning-stage signal."
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "title": "FirstEnergy’s 5-year data center pipeline doubles to 3 GW",
+      "label": "borderline_should_review",
+      "reason": "Pipeline expansion supports narrowing, not direct capital allocation."
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "title": "Italy-based Westrafo to build its first US transformer plant",
+      "label": "correct_candidate",
+      "reason": "New transformer plant is direct manufacturing buildout."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "trade_press_batch_v4_30_drop_audit_v1",
+  "batch_name": "trade_press_batch_v4_30",
+  "scope": "All dropped trade_press artifacts from the 30-article batch",
+  "summary": {
+    "artifact_count": 3,
+    "correct_rejection_count": 0,
+    "borderline_should_review_count": 1,
+    "false_negative_count": 2
+  },
+  "items": [
+    {
+      "artifact_id": "trade_press_08976a2c7918a320",
+      "title": "Eaton invests $340M in US transformer production",
+      "label": "false_negative",
+      "reason": "Direct manufacturing investment should not have been dropped."
+    },
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "title": "As load grows, Southern raises spending plan to $81B",
+      "label": "false_negative",
+      "reason": "Explicit utility spending-plan increase is a valid capital-flow artifact."
+    },
+    {
+      "artifact_id": "trade_press_8434daa99144e894",
+      "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
+      "label": "borderline_should_review",
+      "reason": "Strong load-growth signal should route to review instead of drop."
+    }
+  ]
+}
