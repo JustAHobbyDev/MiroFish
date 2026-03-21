@@ -1,0 +1,28 @@
+{
+  "name": "mixed_structural_pressure_candidates_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_structural_pressure_candidates_v2.json",
+  "summary": {
+    "candidate_count": 8,
+    "corroborated_candidate_count": 2,
+    "corroborated_and_bounded_count": 1,
+    "corroborated_but_too_broad_count": 1,
+    "uncorroborated_but_promising_count": 6
+  },
+  "categories": {
+    "corroborated_and_bounded": [
+      "spc_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa"
+    ],
+    "corroborated_but_too_broad": [
+      "spc_industrial_manufacturing_expansion_2026-01-09_a5b69960"
+    ],
+    "uncorroborated_but_promising": [
+      "spc_data_center_power_demand_buildout_2025-10-30_d803ed8b",
+      "spc_grid_equipment_and_transformer_pressure_2025-03-10_0f431d4d",
+      "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001",
+      "spc_utility_and_large_load_power_demand_pressure_2025-04-07_94308007",
+      "spc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
+      "spc_industrial_manufacturing_expansion_2025-05-15_f8f01357"
+    ]
+  },
+  "recommendation": "keep_corroboration_and_boundedness_gates"
+}

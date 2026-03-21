@@ -210,6 +210,9 @@ It is the minimum working contract.
 5. `source_diversity_status`
 6. `requires_source_diversity_corroboration`
 7. `source_diversity_corroboration_satisfied`
+8. `boundedness_status`
+9. `requires_system_narrowing`
+10. `bounded_universe_promotion_ready`
 
 ## Source Rules
 
@@ -287,6 +290,23 @@ Satisfying corroboration does not make the candidate promotion-ready by itself.
 The system label and stress zone must still be concrete enough to bound a
 review universe.
 
+## Boundedness Rule
+
+Even corroborated candidates should remain gated if the system label is still
+too broad.
+
+Examples that are usually bounded enough in v1:
+
+1. `grid equipment and transformer pressure`
+2. `data center power demand buildout`
+3. `utility and large-load power demand pressure`
+
+Examples that are still too broad in v1:
+
+1. `industrial manufacturing expansion`
+2. `power generation and backup equipment pressure`
+3. `general industrial buildout`
+
 ### Structural pressure candidate -> bounded universe
 
 Promote when all are true:
@@ -295,6 +315,8 @@ Promote when all are true:
 2. at least one suspected stress layer is named
 3. the system can specify which source classes are now worth deeper review
 4. any required source-diversity corroboration has been satisfied, or the
+   candidate has been explicitly promoted by an analyst
+5. the candidate is bounded enough to support a review universe, or the
    candidate has been explicitly promoted by an analyst
 
 ### Structural pressure candidate -> reject

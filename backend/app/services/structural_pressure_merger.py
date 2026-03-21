@@ -92,6 +92,33 @@ def _source_diversity_corroboration_satisfied(
     return distinct_source_count >= 2 and len([item for item in supporting_capital_flow_cluster_ids if _coerce_string(item)]) >= 1
 
 
+BOUNDED_SYSTEM_LABELS = {
+    "data center power demand buildout",
+    "data center campus buildout",
+    "grid equipment and transformer pressure",
+    "grid equipment and transformer buildout",
+    "utility and large-load power demand pressure",
+    "utility and large-load power buildout",
+}
+
+BROAD_REVIEW_SYSTEM_LABELS = {
+    "industrial manufacturing expansion",
+    "power generation and backup equipment pressure",
+    "power generation and backup equipment buildout",
+    "general industrial buildout",
+    "general energy-system pressure",
+}
+
+
+def _boundedness_status(system_label: str) -> tuple[str, bool]:
+    normalized = _coerce_string(system_label)
+    if normalized in BOUNDED_SYSTEM_LABELS:
+        return "bounded", False
+    if normalized in BROAD_REVIEW_SYSTEM_LABELS:
+        return "broad_review_required", True
+    return "provisional_boundedness", True
+
+
 def _pressure_statement(system_label: str, demand_driver_summary: str) -> str:
     return f"{demand_driver_summary} This is likely to create structural pressure in {system_label}."
 
@@ -186,6 +213,14 @@ def build_structural_pressure_candidate_batch(
             list(candidate["source_classes"]),
             list(candidate["supporting_capital_flow_cluster_ids"]),
         )
+        (
+            candidate["boundedness_status"],
+            candidate["requires_system_narrowing"],
+        ) = _boundedness_status(candidate["system_label"])
+        candidate["bounded_universe_promotion_ready"] = (
+            candidate["source_diversity_corroboration_satisfied"]
+            and not candidate["requires_system_narrowing"]
+        )
         candidates.append(candidate)
 
     held_upstream_energy_clusters: List[str] = []
@@ -242,6 +277,14 @@ def build_structural_pressure_candidate_batch(
             candidate["source_diversity_corroboration_satisfied"] = _source_diversity_corroboration_satisfied(
                 list(candidate["source_classes"]),
                 list(candidate["supporting_capital_flow_cluster_ids"]),
+            )
+            (
+                candidate["boundedness_status"],
+                candidate["requires_system_narrowing"],
+            ) = _boundedness_status(candidate["system_label"])
+            candidate["bounded_universe_promotion_ready"] = (
+                candidate["source_diversity_corroboration_satisfied"]
+                and not candidate["requires_system_narrowing"]
             )
         else:
             held_upstream_energy_clusters.append(energy_id)

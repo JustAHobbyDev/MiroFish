@@ -71,6 +71,9 @@ def test_build_structural_pressure_candidate_batch_merges_adjacent_clusters():
     assert candidate["source_diversity_status"] == "single_source_class"
     assert candidate["requires_source_diversity_corroboration"] is True
     assert candidate["source_diversity_corroboration_satisfied"] is False
+    assert candidate["boundedness_status"] == "bounded"
+    assert candidate["requires_system_narrowing"] is False
+    assert candidate["bounded_universe_promotion_ready"] is False
 
 
 def test_build_structural_pressure_candidate_batch_holds_weak_energy_only_clusters_upstream():
@@ -196,3 +199,38 @@ def test_build_structural_pressure_candidate_batch_keeps_multi_source_high_confi
     assert candidate["source_diversity_status"] == "multi_source_class"
     assert candidate["requires_source_diversity_corroboration"] is False
     assert candidate["source_diversity_corroboration_satisfied"] is True
+    assert candidate["boundedness_status"] == "bounded"
+    assert candidate["requires_system_narrowing"] is False
+    assert candidate["bounded_universe_promotion_ready"] is True
+
+
+def test_build_structural_pressure_candidate_batch_keeps_corroborated_but_broad_candidate_promotion_gated():
+    capital_cluster_batch = {
+        "clusters": [
+            {
+                "capital_flow_cluster_id": "cfc_1",
+                "as_of_date": "2026-02-28",
+                "system_label": "industrial manufacturing expansion",
+                "demand_driver_summary": "Industrial expansion is recurring.",
+                "signal_count": 5,
+                "source_classes": ["trade_press", "company_release"],
+                "time_window": {
+                    "start_date": "2026-01-01",
+                    "end_date": "2026-02-28",
+                },
+                "confidence": "medium",
+            }
+        ]
+    }
+    energy_cluster_batch = {"clusters": []}
+
+    result = module.build_structural_pressure_candidate_batch(
+        capital_cluster_batch,
+        energy_cluster_batch,
+    )
+
+    candidate = result["candidates"][0]
+    assert candidate["source_diversity_corroboration_satisfied"] is True
+    assert candidate["boundedness_status"] == "broad_review_required"
+    assert candidate["requires_system_narrowing"] is True
+    assert candidate["bounded_universe_promotion_ready"] is False

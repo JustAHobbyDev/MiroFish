@@ -90,6 +90,9 @@ A merged `structural_pressure_candidate` should record:
 8. `source_diversity_status`
 9. `requires_source_diversity_corroboration`
 10. `source_diversity_corroboration_satisfied`
+11. `boundedness_status`
+12. `requires_system_narrowing`
+13. `bounded_universe_promotion_ready`
 
 ## Merge Basis Contract
 
@@ -158,6 +161,19 @@ Implications:
 2. mixed-source capital-plus-energy candidates can satisfy corroboration
 3. capital-only candidates can satisfy corroboration if the capital lane itself
    contains multiple source classes
+
+## Boundedness Gate
+
+Corroborated candidates still require a bounded system label before they should
+auto-drive bounded-universe formation.
+
+For v1:
+
+1. bounded labels may become `bounded_universe_promotion_ready = true`
+2. broad labels should carry:
+   - `boundedness_status = broad_review_required`
+   - `requires_system_narrowing = true`
+   - `bounded_universe_promotion_ready = false`
 
 ## Decision Rule
 
