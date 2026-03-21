@@ -27,18 +27,21 @@ def test_build_capital_flow_cluster_batch_groups_compatible_signals():
         "kept_artifacts": [
             {
                 "artifact_id": "a1",
+                "publisher_or_author": "Manufacturing Dive",
                 "published_at": "2026-01-10",
                 "title": "Transformer maker invests in Ohio plant",
                 "body_text": "A new transformer plant will serve utilities and data centers in the United States.",
             },
             {
                 "artifact_id": "a2",
+                "publisher_or_author": "Manufacturing Dive",
                 "published_at": "2026-02-02",
                 "title": "Switchgear factory expansion targets utility demand",
                 "body_text": "The U.S. expansion responds to utility and data center power-product demand.",
             },
             {
                 "artifact_id": "a3",
+                "publisher_or_author": "Manufacturing Dive",
                 "published_at": "2026-02-20",
                 "title": "Biopharma company expands manufacturing in North Carolina",
                 "body_text": "The company is building additional pharmaceutical manufacturing space.",
@@ -112,3 +115,120 @@ def test_build_capital_flow_cluster_batch_groups_compatible_signals():
     assert cluster["artifact_count"] == 2
     assert cluster["signal_count"] == 2
     assert cluster["confidence"] in {"low", "medium", "high"}
+
+
+def test_build_capital_flow_cluster_batch_single_publisher_trade_press_does_not_get_high_confidence():
+    prefilter_batch = {
+        "kept_artifacts": [
+            {
+                "artifact_id": "a1",
+                "publisher_or_author": "Manufacturing Dive",
+                "published_at": "2026-01-10",
+                "title": "Transformer maker invests in Ohio plant",
+                "body_text": "A new transformer plant will serve utilities and data centers.",
+            },
+            {
+                "artifact_id": "a2",
+                "publisher_or_author": "Manufacturing Dive",
+                "published_at": "2026-01-20",
+                "title": "Switchgear campus expands for utility demand",
+                "body_text": "More switchgear output will support utility capital programs.",
+            },
+            {
+                "artifact_id": "a3",
+                "publisher_or_author": "Manufacturing Dive",
+                "published_at": "2026-02-01",
+                "title": "Transformer output grows with data center demand",
+                "body_text": "Production lines are expanding for transformers and substations.",
+            },
+            {
+                "artifact_id": "a4",
+                "publisher_or_author": "Manufacturing Dive",
+                "published_at": "2026-02-15",
+                "title": "Grid equipment factory ramps domestic production",
+                "body_text": "The company is adding more domestic grid-equipment capacity.",
+            },
+        ],
+        "review_artifacts": [],
+    }
+    signal_batch = {
+        "name": "capital_batch",
+        "source_class": "trade_press",
+        "processed_results": [
+            {
+                "artifact_id": "a1",
+                "source_class": "trade_press",
+                "produced_candidates": True,
+                "prefilter_triage": "keep",
+                "candidates": [
+                    {
+                        "observable_statement": "The company will invest in a new transformer plant.",
+                        "capital_flow_implication_type": "direct_capital_allocation",
+                        "observation_directness": "direct",
+                        "capital_flow_implication": "Capital is moving into transformer production.",
+                        "system_hints": ["transformers", "grid equipment"],
+                        "physical_implication": "A new plant will expand transformer output.",
+                        "confidence": "high",
+                    }
+                ],
+            },
+            {
+                "artifact_id": "a2",
+                "source_class": "trade_press",
+                "produced_candidates": True,
+                "prefilter_triage": "keep",
+                "candidates": [
+                    {
+                        "observable_statement": "The company is expanding its switchgear campus.",
+                        "capital_flow_implication_type": "capacity_response",
+                        "observation_directness": "direct",
+                        "capital_flow_implication": "Capital is moving into switchgear capacity expansion.",
+                        "system_hints": ["switchgear", "utility grid"],
+                        "physical_implication": "Factory output for power equipment will rise.",
+                        "confidence": "high",
+                    }
+                ],
+            },
+            {
+                "artifact_id": "a3",
+                "source_class": "trade_press",
+                "produced_candidates": True,
+                "prefilter_triage": "keep",
+                "candidates": [
+                    {
+                        "observable_statement": "Transformer output is growing with demand.",
+                        "capital_flow_implication_type": "capacity_response",
+                        "observation_directness": "direct",
+                        "capital_flow_implication": "Capital is moving into transformer output expansion.",
+                        "system_hints": ["transformers"],
+                        "physical_implication": "More transformer capacity will be added.",
+                        "confidence": "high",
+                    }
+                ],
+            },
+            {
+                "artifact_id": "a4",
+                "source_class": "trade_press",
+                "produced_candidates": True,
+                "prefilter_triage": "keep",
+                "candidates": [
+                    {
+                        "observable_statement": "Grid-equipment production is ramping.",
+                        "capital_flow_implication_type": "capacity_response",
+                        "observation_directness": "direct",
+                        "capital_flow_implication": "Capital is moving into grid-equipment expansion.",
+                        "system_hints": ["grid equipment"],
+                        "physical_implication": "More domestic capacity will be added.",
+                        "confidence": "high",
+                    }
+                ],
+            },
+        ],
+    }
+
+    result = module.build_capital_flow_cluster_batch(signal_batch, prefilter_batch)
+
+    cluster = result["clusters"][0]
+    assert cluster["publisher_diversity_status"] == "single_publisher"
+    assert cluster["publisher_diversity_count"] == 1
+    assert cluster["confidence"] == "medium"

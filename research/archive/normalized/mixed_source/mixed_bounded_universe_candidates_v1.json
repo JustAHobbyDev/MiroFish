@@ -1,0 +1,39 @@
+{
+  "name": "bounded_universe_candidate_batch_v1",
+  "candidates": [
+    {
+      "bounded_universe_candidate_id": "buc_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa",
+      "as_of_date": "2025-11-19",
+      "status": "candidate",
+      "origin_pressure_candidate_id": "spc_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa",
+      "universe_label": "grid equipment and transformer buildout universe",
+      "system_label": "grid equipment and transformer buildout",
+      "bounding_basis": {
+        "source_diversity_corroborated": true,
+        "system_bounded": true,
+        "promotion_ready": true
+      },
+      "review_universe_definition": "Companies, suppliers, facilities, inputs, and public artifacts tied to transformer, switchgear, substation, and adjacent grid-equipment expansion.",
+      "next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ],
+      "suspected_stress_layers": [
+        "transformers",
+        "switchgear",
+        "substation equipment",
+        "grid equipment components"
+      ],
+      "visible_beneficiary_hints": [],
+      "confidence": "high",
+      "supporting_pressure_candidate_ids": [
+        "spc_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_pressure_candidate_count": 8,
+    "bounded_universe_candidate_count": 1
+  }
+}

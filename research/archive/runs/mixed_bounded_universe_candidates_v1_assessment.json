@@ -1,0 +1,12 @@
+{
+  "name": "mixed_bounded_universe_candidates_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_universe_candidates_v1.json",
+  "summary": {
+    "input_pressure_candidate_count": 8,
+    "bounded_universe_candidate_count": 1,
+    "ready_systems": [
+      "grid equipment and transformer buildout"
+    ]
+  },
+  "recommendation": "use_transformer_universe_as_first_downstream_test_case"
+}

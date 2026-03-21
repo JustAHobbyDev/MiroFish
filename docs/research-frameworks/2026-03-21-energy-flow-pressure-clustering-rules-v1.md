@@ -152,6 +152,14 @@ Form an `energy_flow_pressure_cluster` when all are true:
 - strong geography overlap
 - clear infrastructure-response implications
 
+For `trade_press`-only clusters, repeated coverage from one publication should
+count less than cross-publication reinforcement.
+
+That means `high` confidence should require at least one of:
+
+1. `2+` source classes
+2. `2+` distinct trade-press publishers with repeated compatible coverage
+
 ## Output Requirements
 
 Every `energy_flow_pressure_cluster` should include:
@@ -167,6 +175,9 @@ Every `energy_flow_pressure_cluster` should include:
 9. `pressure_types_present`
 10. `geography_hints`
 11. `confidence`
+12. `publisher_or_authors`
+13. `publisher_diversity_count`
+14. `publisher_diversity_status`
 
 ## Non-Goals
 

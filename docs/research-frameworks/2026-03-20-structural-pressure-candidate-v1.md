@@ -319,6 +319,10 @@ Promote when all are true:
 5. the candidate is bounded enough to support a review universe, or the
    candidate has been explicitly promoted by an analyst
 
+Detailed bounded-universe object policy now lives in:
+
+- `2026-03-21-bounded-universe-candidate-v1.md`
+
 ### Structural pressure candidate -> reject
 
 Reject when any are true:

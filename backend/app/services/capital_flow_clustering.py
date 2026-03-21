@@ -127,6 +127,7 @@ def _normalize_signal(
         "signal_id": f"{artifact_id}:capital:{candidate_index}",
         "artifact_id": artifact_id,
         "source_class": _coerce_string(processed_result.get("source_class")),
+        "publisher_or_author": _coerce_string(artifact.get("publisher_or_author")),
         "published_at": _coerce_string(artifact.get("published_at")),
         "published_date": _parse_date(artifact.get("published_at")),
         "title": title,
@@ -160,11 +161,45 @@ def _confidence_for_cluster(cluster_signals: List[Dict[str, Any]]) -> str:
     artifact_count = len({signal["artifact_id"] for signal in cluster_signals})
     source_class_count = len({signal["source_class"] for signal in cluster_signals})
     direct_count = sum(1 for signal in cluster_signals if signal["observation_directness"] == "direct")
-    if artifact_count >= 4 and source_class_count >= 2 and direct_count >= 3:
+    trade_press_artifact_count = len(
+        {signal["artifact_id"] for signal in cluster_signals if signal["source_class"] == "trade_press"}
+    )
+    trade_press_publisher_count = len(
+        {
+            signal["publisher_or_author"]
+            for signal in cluster_signals
+            if signal["source_class"] == "trade_press" and signal["publisher_or_author"]
+        }
+    )
+    if artifact_count >= 4 and direct_count >= 3 and (
+        source_class_count >= 2 or (trade_press_artifact_count >= 4 and trade_press_publisher_count >= 2)
+    ):
         return "high"
     if artifact_count >= 2 and len(cluster_signals) >= 3:
         return "medium"
     return "low"
+
+
+def _publisher_diversity_fields(cluster_signals: List[Dict[str, Any]]) -> Dict[str, Any]:
+    publishers = sorted(
+        {
+            signal["publisher_or_author"]
+            for signal in cluster_signals
+            if signal["publisher_or_author"]
+        }
+    )
+    count = len(publishers)
+    if count >= 2:
+        status = "multi_publisher"
+    elif count == 1:
+        status = "single_publisher"
+    else:
+        status = "unknown"
+    return {
+        "publisher_or_authors": publishers,
+        "publisher_diversity_count": count,
+        "publisher_diversity_status": status,
+    }
 
 
 def _window_for_cluster(cluster_signals: List[Dict[str, Any]]) -> Dict[str, Optional[str]]:
@@ -220,6 +255,7 @@ def build_capital_flow_cluster_batch(
                             "signal_count": len(bucket),
                             "artifact_count": len({item["artifact_id"] for item in bucket}),
                             "source_classes": sorted({item["source_class"] for item in bucket if item["source_class"]}),
+                            **_publisher_diversity_fields(bucket),
                             "time_window": window,
                             "geography_hints": sorted({hint for item in bucket for hint in item["geography_hints"]}),
                             "demand_driver_summary": _derive_demand_driver_summary(system_label),
@@ -243,6 +279,7 @@ def build_capital_flow_cluster_batch(
                     "signal_count": len(bucket),
                     "artifact_count": len({item["artifact_id"] for item in bucket}),
                     "source_classes": sorted({item["source_class"] for item in bucket if item["source_class"]}),
+                    **_publisher_diversity_fields(bucket),
                     "time_window": window,
                     "geography_hints": sorted({hint for item in bucket for hint in item["geography_hints"]}),
                     "demand_driver_summary": _derive_demand_driver_summary(system_label),

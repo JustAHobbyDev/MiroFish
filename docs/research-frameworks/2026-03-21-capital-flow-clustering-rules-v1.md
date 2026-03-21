@@ -156,6 +156,14 @@ Form a `capital_flow_cluster` when all are true:
 - strong geography and system overlap
 - clear capital-flow mechanism recurrence
 
+For `trade_press`-only clusters, repeated coverage from one publication should
+count less than cross-publication reinforcement.
+
+That means `high` confidence should require at least one of:
+
+1. `2+` source classes
+2. `2+` distinct trade-press publishers with repeated compatible coverage
+
 ## Output Requirements
 
 Every `capital_flow_cluster` should include:
@@ -171,6 +179,9 @@ Every `capital_flow_cluster` should include:
 9. `geography_hints`
 10. `demand_driver_summary`
 11. `confidence`
+12. `publisher_or_authors`
+13. `publisher_diversity_count`
+14. `publisher_diversity_status`
 
 ## Non-Goals
 
@@ -183,7 +194,7 @@ This step is not trying to:
 
 ## Open Questions
 
-1. Should v1 clustering require at least `1` non-trade-press source for higher
-   confidence bands?
-2. Should repeated same-publisher artifacts count less than cross-publisher
-   artifacts?
+1. Should same-publisher trade-press repetition lower `medium` confidence too,
+   not just block `high`?
+2. Should publisher diversity be weighted separately from source-class
+   diversity in final cluster scoring?
