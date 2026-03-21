@@ -11,21 +11,76 @@ from openai import OpenAI
 from ..config import Config
 
 
+PROVIDER_OPENAI = "openai"
+PROVIDER_GROQ = "groq"
+PROVIDER_FIREWORKS = "fireworks"
+SUPPORTED_PROVIDERS = {
+    PROVIDER_OPENAI,
+    PROVIDER_GROQ,
+    PROVIDER_FIREWORKS,
+}
+
+
+def resolve_llm_provider_settings(
+    *,
+    provider: Optional[str] = None,
+    api_key: Optional[str] = None,
+    base_url: Optional[str] = None,
+    model: Optional[str] = None,
+) -> Dict[str, str]:
+    resolved_provider = (provider or Config.LLM_PROVIDER or PROVIDER_OPENAI).strip().lower()
+    if resolved_provider not in SUPPORTED_PROVIDERS:
+        raise ValueError(f"Unsupported LLM provider: {resolved_provider}")
+
+    if resolved_provider == PROVIDER_GROQ:
+        resolved_api_key = api_key or Config.GROQ_API_KEY
+        resolved_base_url = base_url or Config.GROQ_BASE_URL
+        resolved_model = model or Config.GROQ_MODEL_NAME
+    elif resolved_provider == PROVIDER_FIREWORKS:
+        resolved_api_key = api_key or Config.FIREWORKS_API_KEY
+        resolved_base_url = base_url or Config.FIREWORKS_BASE_URL
+        resolved_model = model or Config.FIREWORKS_MODEL_NAME
+    else:
+        resolved_api_key = api_key or Config.LLM_API_KEY
+        resolved_base_url = base_url or Config.LLM_BASE_URL
+        resolved_model = model or Config.LLM_MODEL_NAME
+
+    if not resolved_api_key:
+        env_name = {
+            PROVIDER_OPENAI: "LLM_API_KEY / OPENAI_API_KEY",
+            PROVIDER_GROQ: "GROQ_API_KEY",
+            PROVIDER_FIREWORKS: "FIREWORKS_API_KEY",
+        }[resolved_provider]
+        raise ValueError(f"{env_name} 未配置")
+
+    return {
+        "provider": resolved_provider,
+        "api_key": resolved_api_key,
+        "base_url": resolved_base_url,
+        "model": resolved_model,
+    }
+
+
 class LLMClient:
     """LLM客户端"""
     
     def __init__(
         self,
+        provider: Optional[str] = None,
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
         model: Optional[str] = None
     ):
-        self.api_key = api_key or Config.LLM_API_KEY
-        self.base_url = base_url or Config.LLM_BASE_URL
-        self.model = model or Config.LLM_MODEL_NAME
-        
-        if not self.api_key:
-            raise ValueError("LLM_API_KEY 未配置")
+        settings = resolve_llm_provider_settings(
+            provider=provider,
+            api_key=api_key,
+            base_url=base_url,
+            model=model,
+        )
+        self.provider = settings["provider"]
+        self.api_key = settings["api_key"]
+        self.base_url = settings["base_url"]
+        self.model = settings["model"]
         
         self.client = OpenAI(
             api_key=self.api_key,
@@ -100,4 +155,3 @@ class LLMClient:
             return json.loads(cleaned_response)
         except json.JSONDecodeError:
             raise ValueError(f"LLM返回的JSON格式无效: {cleaned_response}")
-

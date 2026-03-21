@@ -104,12 +104,17 @@ def test_extractor_returns_valid_candidate_batch():
             "rejection_reason": None,
         }
     )
-    extractor = module.CapitalFlowExtractor(llm_client=llm, model_name="gpt-4o-mini")
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
 
     result = extractor.extract_from_artifact(_sample_artifact())
 
     assert result["produced_candidates"] is True
     assert len(result["candidates"]) == 1
+    assert result["provider_name"] == "openai"
     assert result["model_name"] == "gpt-4o-mini"
     assert llm.calls[0]["temperature"] == 0.1
 
@@ -122,7 +127,11 @@ def test_build_capital_flow_signal_batch_instruments_schema_failures():
             "rejection_reason": None,
         }
     )
-    extractor = module.CapitalFlowExtractor(llm_client=llm, model_name="gpt-4o-mini")
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
     batch = {
         "name": "prefilter_batch",
         "source_class": "company_release",
@@ -155,7 +164,11 @@ def test_build_capital_flow_signal_batch_counts_review_candidates():
             "rejection_reason": None,
         }
     )
-    extractor = module.CapitalFlowExtractor(llm_client=llm, model_name="gpt-4o-mini")
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
     artifact = _sample_artifact()
     batch = {
         "name": "prefilter_batch",

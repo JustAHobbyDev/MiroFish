@@ -28,6 +28,7 @@ class Config:
     JSON_AS_ASCII = False
     
     # LLM配置（统一使用OpenAI格式）
+    LLM_PROVIDER = os.environ.get('LLM_PROVIDER', 'openai')
     LLM_API_KEY = os.environ.get('LLM_API_KEY') or os.environ.get('OPENAI_API_KEY')
     LLM_BASE_URL = (
         os.environ.get('LLM_BASE_URL')
@@ -35,6 +36,12 @@ class Config:
         or 'https://api.openai.com/v1'
     )
     LLM_MODEL_NAME = os.environ.get('LLM_MODEL_NAME', 'gpt-4o-mini')
+    GROQ_API_KEY = os.environ.get('GROQ_API_KEY')
+    GROQ_BASE_URL = os.environ.get('GROQ_BASE_URL', 'https://api.groq.com/openai/v1')
+    GROQ_MODEL_NAME = os.environ.get('GROQ_MODEL_NAME', 'llama-3.1-8b-instant')
+    FIREWORKS_API_KEY = os.environ.get('FIREWORKS_API_KEY')
+    FIREWORKS_BASE_URL = os.environ.get('FIREWORKS_BASE_URL', 'https://api.fireworks.ai/inference/v1')
+    FIREWORKS_MODEL_NAME = os.environ.get('FIREWORKS_MODEL_NAME', 'accounts/fireworks/models/gpt-oss-20b')
     
     # Zep配置
     ZEP_API_KEY = os.environ.get('ZEP_API_KEY')

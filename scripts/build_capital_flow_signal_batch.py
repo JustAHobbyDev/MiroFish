@@ -47,11 +47,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("prefilter_batch_json", type=Path)
     parser.add_argument("--output-json", type=Path, required=True)
+    parser.add_argument("--provider")
     parser.add_argument("--model-name")
     args = parser.parse_args()
 
     module = _load_module("capital_flow_extractor")
-    extractor = module.CapitalFlowExtractor(model_name=args.model_name) if args.model_name else module.CapitalFlowExtractor()
+    extractor_kwargs = {}
+    if args.provider:
+        extractor_kwargs["provider"] = args.provider
+    if args.model_name:
+        extractor_kwargs["model_name"] = args.model_name
+    extractor = module.CapitalFlowExtractor(**extractor_kwargs)
     payload = module.build_capital_flow_signal_batch(
         _load_json(args.prefilter_batch_json),
         extractor=extractor,

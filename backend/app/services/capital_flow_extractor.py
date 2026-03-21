@@ -19,6 +19,10 @@ DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL = os.environ.get(
     "CAPITAL_FLOW_EXTRACTION_MODEL",
     "gpt-4o-mini",
 )
+DEFAULT_CAPITAL_FLOW_EXTRACTION_PROVIDER = os.environ.get(
+    "CAPITAL_FLOW_EXTRACTION_PROVIDER",
+    Config.LLM_PROVIDER,
+)
 CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION = "capital_flow_signal_extraction_v1"
 ALLOWED_IMPLICATION_TYPES = {
     "direct_capital_allocation",
@@ -177,10 +181,15 @@ class CapitalFlowExtractor:
         self,
         *,
         llm_client: Optional[LLMClient] = None,
+        provider: Optional[str] = None,
         model_name: Optional[str] = None,
     ):
+        self.provider = provider or DEFAULT_CAPITAL_FLOW_EXTRACTION_PROVIDER
         self.model_name = model_name or DEFAULT_CAPITAL_FLOW_EXTRACTION_MODEL
-        self.llm_client = llm_client or LLMClient(model=self.model_name)
+        self.llm_client = llm_client or LLMClient(
+            provider=self.provider,
+            model=self.model_name,
+        )
 
     def extract_from_artifact(self, artifact: Dict[str, Any]) -> Dict[str, Any]:
         messages = build_capital_flow_extraction_messages(artifact)
@@ -196,6 +205,7 @@ class CapitalFlowExtractor:
             "produced_candidates": validated["produced_candidates"],
             "candidates": validated["candidates"],
             "rejection_reason": validated["rejection_reason"],
+            "provider_name": self.provider,
             "model_name": self.model_name,
             "prompt_version": CAPITAL_FLOW_EXTRACTION_PROMPT_VERSION,
             "extracted_at": _utc_now_iso(),
