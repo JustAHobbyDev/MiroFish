@@ -1,0 +1,33 @@
+{
+  "name": "mixed_bounded_research_sets_v1_assessment",
+  "research_set_count": 2,
+  "sets": [
+    {
+      "system_label": "data center power demand buildout",
+      "matched_artifact_count": 36,
+      "matched_source_classes": [
+        "company_release",
+        "trade_press"
+      ],
+      "entity_candidate_count": 20,
+      "judgment": "bounded_review_surface",
+      "recommended_use": "bounded review lane for downstream power-delivery and beneficiary expansion"
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "matched_artifact_count": 10,
+      "matched_source_classes": [
+        "company_release",
+        "trade_press"
+      ],
+      "entity_candidate_count": 5,
+      "judgment": "first_downstream_expansion_test",
+      "recommended_use": "first downstream entity and filing expansion lane"
+    }
+  ],
+  "next_corroboration_focus": [
+    "utility and large-load power",
+    "power generation and backup equipment"
+  ]
+}
+

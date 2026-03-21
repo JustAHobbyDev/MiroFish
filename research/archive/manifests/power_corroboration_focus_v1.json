@@ -1,0 +1,43 @@
+{
+  "name": "power_corroboration_focus_v1",
+  "as_of_date": "2026-03-21",
+  "focus_lanes": [
+    {
+      "system_label": "utility and large-load power",
+      "objective": "Add corroborated direct-capital-flow artifacts around large-load service, utility spend, and substation/interconnection buildout.",
+      "preferred_source_classes": [
+        "company_release",
+        "trade_press",
+        "government"
+      ],
+      "target_cues": [
+        "utility spending plan increase",
+        "substation or interconnection buildout",
+        "signed data center load service deal",
+        "new generation tied to large-load service"
+      ],
+      "negative_boundaries": [
+        "generic load forecast without spend",
+        "policy commentary without project action"
+      ]
+    },
+    {
+      "system_label": "power generation and backup equipment",
+      "objective": "Add corroborated direct-capital-flow artifacts around turbine, generator, and backup-power equipment buildout serving digital or industrial loads.",
+      "preferred_source_classes": [
+        "company_release",
+        "trade_press"
+      ],
+      "target_cues": [
+        "generator or turbine package factory expansion",
+        "backup-power manufacturing line addition",
+        "power-equipment financing or site buildout",
+        "large-load resilience equipment supply agreement"
+      ],
+      "negative_boundaries": [
+        "generic engine manufacturing",
+        "broad industrial capacity without power-equipment linkage"
+      ]
+    }
+  ]
+}
