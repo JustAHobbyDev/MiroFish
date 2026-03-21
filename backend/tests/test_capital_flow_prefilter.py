@@ -50,6 +50,32 @@ def test_review_when_only_partnership_language_is_present():
     assert result["matched_families"] == ["partnerships_with_buildout_implications"]
 
 
+def test_trade_press_investment_plus_manufacturing_routes_to_keep():
+    artifact = {
+        "artifact_id": "art_trade_keep",
+        "source_class": "trade_press",
+        "title": "Schneider Electric to invest $700M in US manufacturing",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_KEEP
+    assert "trade_press_investment_and_factory" in result["matched_families"]
+
+
+def test_trade_press_pipeline_routes_to_review():
+    artifact = {
+        "artifact_id": "art_trade_review",
+        "source_class": "trade_press",
+        "title": "PG&E data center pipeline swells to 10GW",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_REVIEW
+    assert "trade_press_pipeline_or_load_growth" in result["matched_families"]
+
+
 def test_review_on_record_of_decision_resource_planning_notice():
     artifact = {
         "artifact_id": "art_rod",

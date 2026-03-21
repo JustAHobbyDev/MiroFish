@@ -1,0 +1,175 @@
+{
+  "name": "trade_press_prefilter_v3",
+  "source_class": "trade_press",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "openai/gpt-oss-20b",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S. The investment will increase capacity in Tennessee and Mississippi to support growing demand from data centers, buildings and utilities.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "ABB will channel $120M into U.S. manufacturing, expanding capacity in Tennessee and Mississippi.",
+          "system_hints": [
+            "U.S. manufacturing sector, low-voltage electrification products, data centers, buildings, utilities, Tennessee, Mississippi"
+          ],
+          "physical_implication": "Expansion of production capacity in Tennessee and Mississippi, likely involving construction of new facilities or expansion of existing ones.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:52:30Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rolls-Royce will invest $75 million to expand its Aiken, South Carolina, engine plant to meet surging data center demand.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital flow of $75M into the Aiken engine plant, expanding production capacity for large engines used in data centers and industrial facilities.",
+          "system_hints": [
+            "Aiken, South Carolina engine plant",
+            "data center industry",
+            "industrial facilities"
+          ],
+          "physical_implication": "Expansion of the plant by 60,000 square feet, increasing production volume.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The 60,000-square-foot expansion will increase production volume for large engines used to power data centers and other industrial facilities.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Physical expansion of the plant by 60,000 square feet, implying capital outflow for construction and equipment.",
+          "system_hints": [
+            "Aiken engine plant",
+            "data center demand",
+            "industrial facilities"
+          ],
+          "physical_implication": "60,000-square-foot expansion of the plant, increased production capacity.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:52:32Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric plans to invest $700 million in its U.S. operations through 2027 for facility upgrades, expansions and openings across eight sites.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital outflow from Schneider Electric into U.S. manufacturing facilities, indicating increased investment in U.S. manufacturing capacity.",
+          "system_hints": [
+            "U.S. manufacturing",
+            "data center",
+            "utilities",
+            "manufacturing",
+            "energy infrastructure"
+          ],
+          "physical_implication": "Facility upgrades, expansions, and openings across eight U.S. sites.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The move is driven by rising demand across data center, utilities, manufacturing and energy infrastructure segments.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital inflow into U.S. data center, utilities, manufacturing, and energy infrastructure sectors.",
+          "system_hints": [
+            "data center",
+            "utilities",
+            "manufacturing",
+            "energy infrastructure"
+          ],
+          "physical_implication": "Increased investment in U.S. manufacturing and data center facilities.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:52:46Z",
+      "prefilter_triage": "keep"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: {\n  \"candidates\": [\n    {\n      \"observable_statement\": \"Rockwell Automation confirmed a Wisconsin site for a new factory as part of a $2 billion U.S. expansion.\",\n      \"capital_flow_implication_type\": \"investment\",\n      \"observation_directness\": \"direct\",",
+      "raw_payload": "{\n  \"candidates\": [\n    {\n      \"observable_statement\": \"Rockwell Automation confirmed a Wisconsin site for a new factory as part of a $2 billion U.S. expansion.\",\n      \"capital_flow_implication_type\": \"investment\",\n      \"observation_directness\": \"direct\","
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: ",
+      "raw_payload": ""
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: ",
+      "raw_payload": ""
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: [\n  {\n    \"observable_statement\": \"Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia\",\n    \"capital_flow_implication_type\": \"construction investment\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flows into U.S. transformer manufacturing capacity\",\n    \"system_hints\": [\n      \"U.S. grid equipment manufacturing\",\n      \"transformer production\",\n      \"grid expansion\"\n    ],\n    \"physical_implication\": \"Construction of a new transformer factory in South Boston, Virginia\",\n    \"confidence\": 0.95\n  },\n  {\n    \"observable_statement\": \"make more than $500 million in other investments to meet growing need",
+      "raw_payload": "```json\n[\n  {\n    \"observable_statement\": \"Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia\",\n    \"capital_flow_implication_type\": \"construction investment\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flows into U.S. transformer manufacturing capacity\",\n    \"system_hints\": [\n      \"U.S. grid equipment manufacturing\",\n      \"transformer production\",\n      \"grid expansion\"\n    ],\n    \"physical_implication\": \"Construction of a new transformer factory in South Boston, Virginia\",\n    \"confidence\": 0.95\n  },\n  {\n    \"observable_statement\": \"make more than $500 million in other investments to meet growing need"
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: [\n  {\n    \"observable_statement\": \"PG&E said its data center pipeline has grown to 10GW expected for connection over the next ten years\",\n    \"capital_flow_implication_type\": \"capacity expansion\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"PG&E is investing capital into expanding its data center pipeline to 10GW over the next decade\",\n    \"system_hints\": [\"PG&E data center pipeline\", \"data center infrastructure\"],\n    \"physical_implication\": \"construction of new power transmission and distribution infrastructure to support data center operations\",\n    \"confidence\": \"high\"\n  },\n  {\n    \"observable_statement\": \"17 projects totaling 1.5GW in final engineering stages and operations slated to begin between 2026 and 2030\",\n    \"capital_flow_implication_type\": \"physical buildout\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"PG&E is allocating capital to 17 specific projects totaling 1.5GW of new data center capacity\",\n    \"system_hints\":",
+      "raw_payload": "[\n  {\n    \"observable_statement\": \"PG&E said its data center pipeline has grown to 10GW expected for connection over the next ten years\",\n    \"capital_flow_implication_type\": \"capacity expansion\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"PG&E is investing capital into expanding its data center pipeline to 10GW over the next decade\",\n    \"system_hints\": [\"PG&E data center pipeline\", \"data center infrastructure\"],\n    \"physical_implication\": \"construction of new power transmission and distribution infrastructure to support data center operations\",\n    \"confidence\": \"high\"\n  },\n  {\n    \"observable_statement\": \"17 projects totaling 1.5GW in final engineering stages and operations slated to begin between 2026 and 2030\",\n    \"capital_flow_implication_type\": \"physical buildout\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"PG&E is allocating capital to 17 specific projects totaling 1.5GW of new data center capacity\",\n    \"system_hints\":"
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: [\n  {\n    \"observable_statement\": \"DTE Energy said it has signed agreements to serve a 1.4GW hyperscaler and sees another 7GW of potential large loads, supported by a $30 billion investment pipeline across 2026 to 2030.\",\n    \"capital_flow_implication_type\": \"investment\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow of $30B into generation, storage, and distribution infrastructure to support data center load growth.\",\n    \"system_hints\": [\"electric grid\", \"data center load\", \"hyperscaler\", \"generation\", \"storage\", \"distribution\"],\n    \"physical_implication\": \"Construction of new generation plants, storage facilities, and grid upgrades.\",\n    \"confidence\": 0.9\n  },\n  {\n    \"observable_statement\": \"DTE Energy said it has signed agreements to serve a 1.4GW hyperscaler.\",\n    \"capital_flow_implication_type\": \"procurement\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow into procurement of capacity and services to support a 1.4GW data center load.\",\n    \"system_hints\": [\"electric grid\", \"data center\", \"hyperscaler\"],\n    \"physical_implication\": \"Expansion of transmission and distribution capacity to deliver 1.4GW to the hyperscaler.\",\n    \"confidence\": 0.85\n  },\n  {\n    \"observable_statement\": \"DTE Energy sees another 7GW of potential large loads.\",\n    \"capital_flow_implication_type\": \"capacity expansion\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow into future capacity expansion to accommodate 7GW of additional data center load.\",\n    \"system_hints\": [\"electric grid\", \"data center load\", \"capacity expansion\"],\n    \"physical_implication\": \"Construction of additional generation or storage assets to meet 7GW demand.\",",
+      "raw_payload": "```json\n[\n  {\n    \"observable_statement\": \"DTE Energy said it has signed agreements to serve a 1.4GW hyperscaler and sees another 7GW of potential large loads, supported by a $30 billion investment pipeline across 2026 to 2030.\",\n    \"capital_flow_implication_type\": \"investment\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow of $30B into generation, storage, and distribution infrastructure to support data center load growth.\",\n    \"system_hints\": [\"electric grid\", \"data center load\", \"hyperscaler\", \"generation\", \"storage\", \"distribution\"],\n    \"physical_implication\": \"Construction of new generation plants, storage facilities, and grid upgrades.\",\n    \"confidence\": 0.9\n  },\n  {\n    \"observable_statement\": \"DTE Energy said it has signed agreements to serve a 1.4GW hyperscaler.\",\n    \"capital_flow_implication_type\": \"procurement\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow into procurement of capacity and services to support a 1.4GW data center load.\",\n    \"system_hints\": [\"electric grid\", \"data center\", \"hyperscaler\"],\n    \"physical_implication\": \"Expansion of transmission and distribution capacity to deliver 1.4GW to the hyperscaler.\",\n    \"confidence\": 0.85\n  },\n  {\n    \"observable_statement\": \"DTE Energy sees another 7GW of potential large loads.\",\n    \"capital_flow_implication_type\": \"capacity expansion\",\n    \"observation_directness\": \"direct\",\n    \"capital_flow_implication\": \"Capital flow into future capacity expansion to accommodate 7GW of additional data center load.\",\n    \"system_hints\": [\"electric grid\", \"data center load\", \"capacity expansion\"],\n    \"physical_implication\": \"Construction of additional generation or storage assets to meet 7GW demand.\","
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 9,
+    "successful_extractions": 3,
+    "schema_failure_count": 6,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 3,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 5,
+    "review_artifact_count": 2,
+    "review_candidate_artifact_count": 0
+  }
+}

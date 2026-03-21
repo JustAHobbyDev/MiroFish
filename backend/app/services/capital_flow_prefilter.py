@@ -55,6 +55,7 @@ EVENT_FORM_FAMILIES: Dict[str, Tuple[str, ...]] = {
         "expansion",
         "capacity",
         "capacity increase",
+        "factory",
         "new facility",
         "new plant",
         "new fab",
@@ -113,8 +114,10 @@ EVENT_FORM_REGEXES: Dict[str, Tuple[str, ...]] = {
         r"\bframework agreement(?:s)?\b",
     ),
     "facility_and_capacity_expansion": (
-        r"\bexpand(?:ing|ed|s|ion)?\b",
+        r"\bexpand(?:ing|ed|s)?\b",
+        r"\bexpansion(?:s)?\b",
         r"\bcapacity(?: increase| expansion| additions?)?\b",
+        r"\bfactor(?:y|ies)\b",
         r"\bnew (?:facility|plant|fab|line)\b",
         r"\bnew [\w-]+(?: [\w-]+){0,3} (?:facility|plant|fab|line)\b",
         r"\bramp(?:ing|ed|s)?\b",
@@ -166,6 +169,15 @@ EXCLUDED_GENERIC_PATTERNS: Tuple[str, ...] = (
     r"\bleadership\b",
     r"\bnext generation\b",
     r"\bstrong demand\b",
+)
+
+TRADE_PRESS_INVESTMENT_KEEP_PATTERN = re.compile(
+    r"\binvest(?:s|ed|ing|ment|ments)?\b.*\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions)\b"
+    r"|\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions)\b.*\binvest(?:s|ed|ing|ment|ments)?\b"
+)
+
+TRADE_PRESS_PIPELINE_REVIEW_PATTERN = re.compile(
+    r"\bpipeline\b|\bload growth\b|\bload increase\b|\bgrow(?:ing)? electric load\b|\bload (?:to|of) \d"
 )
 
 
@@ -251,12 +263,59 @@ def _flatten_fired_rules(field_hits: Dict[str, Dict[str, List[str]]]) -> List[st
     return fired
 
 
+def _apply_trade_press_overrides(
+    artifact: Dict[str, Any],
+    field_values: Dict[str, str],
+    field_hits: Dict[str, Dict[str, List[str]]],
+    matched_families: List[str],
+    fired_rules: List[str],
+    triage: str,
+    reason: str,
+) -> Tuple[str, str, List[str], List[str], Dict[str, Dict[str, List[str]]]]:
+    if artifact.get("source_class") != "trade_press":
+        return triage, reason, matched_families, fired_rules, field_hits
+
+    strong_text = " ".join(field_values[field] for field in STRONG_FIELDS if field_values.get(field)).lower()
+    title_hits = field_hits.setdefault("title", {})
+
+    if TRADE_PRESS_INVESTMENT_KEEP_PATTERN.search(strong_text):
+        title_hits.setdefault("trade_press_investment_and_factory", []).append("trade_press:investment+factory")
+        if "trade_press_investment_and_factory" not in matched_families:
+            matched_families.append("trade_press_investment_and_factory")
+        if "title:trade_press_investment_and_factory:trade_press:investment+factory" not in fired_rules:
+            fired_rules.append("title:trade_press_investment_and_factory:trade_press:investment+factory")
+        return (
+            TRIAGE_KEEP,
+            "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+            sorted(matched_families),
+            fired_rules,
+            field_hits,
+        )
+
+    if TRADE_PRESS_PIPELINE_REVIEW_PATTERN.search(strong_text):
+        title_hits.setdefault("trade_press_pipeline_or_load_growth", []).append("trade_press:pipeline_or_load_growth")
+        if "trade_press_pipeline_or_load_growth" not in matched_families:
+            matched_families.append("trade_press_pipeline_or_load_growth")
+        if "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth" not in fired_rules:
+            fired_rules.append("title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth")
+        return (
+            TRIAGE_REVIEW if triage == TRIAGE_DROP else triage,
+            "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+            sorted(matched_families),
+            fired_rules,
+            field_hits,
+        )
+
+    return triage, reason, matched_families, fired_rules, field_hits
+
+
 def triage_capital_flow_artifact(artifact: Dict[str, Any]) -> Dict[str, Any]:
     """
     Deterministically triage an artifact into keep/review/drop.
 
     The result includes rule provenance so rejected artifacts can be audited.
     """
+    field_values = _extract_allowed_fields(artifact)
     field_hits = _collect_field_hits(artifact)
     generic_hits = _collect_excluded_generic_hits(artifact)
 
@@ -298,6 +357,17 @@ def triage_capital_flow_artifact(artifact: Dict[str, Any]) -> Dict[str, Any]:
         triage = TRIAGE_DROP
         reason = "No qualifying event-form evidence was detected in allowed fields."
 
+    fired_rules = _flatten_fired_rules(field_hits)
+    triage, reason, family_names, fired_rules, field_hits = _apply_trade_press_overrides(
+        artifact,
+        field_values,
+        field_hits,
+        family_names,
+        fired_rules,
+        triage,
+        reason,
+    )
+
     return {
         "artifact_id": artifact.get("artifact_id"),
         "source_class": artifact.get("source_class"),
@@ -305,7 +375,7 @@ def triage_capital_flow_artifact(artifact: Dict[str, Any]) -> Dict[str, Any]:
         "reason": reason,
         "matched_families": family_names,
         "field_hits": field_hits,
-        "fired_rules": _flatten_fired_rules(field_hits),
+        "fired_rules": fired_rules,
         "excluded_generic_hits": generic_hits,
         "allowed_fields_examined": list(ALLOWED_FIELDS),
     }
