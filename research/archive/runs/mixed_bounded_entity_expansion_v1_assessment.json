@@ -1,0 +1,17 @@
+{
+  "name": "mixed_bounded_entity_expansion_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_expansion_v1.json",
+  "metrics": {
+    "selected_entity_expansion_count": 6,
+    "filing_gap_count": 6
+  },
+  "first_filing_expansion_set": [
+    "GridCore Manufacturing",
+    "Hitachi Energy",
+    "Lamina Grid Products",
+    "Eaton",
+    "MeterWave Technologies",
+    "Westrafo"
+  ],
+  "decision": "ready for first filing and company-source expansion pass"
+}

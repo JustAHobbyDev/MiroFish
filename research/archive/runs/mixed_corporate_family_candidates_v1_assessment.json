@@ -1,0 +1,18 @@
+{
+  "name": "mixed_corporate_family_candidates_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_corporate_family_candidates_v1.json",
+  "metrics": {
+    "corporate_family_candidate_count": 34
+  },
+  "notable_merge": {
+    "system_label": "grid equipment and transformer buildout",
+    "canonical_entity_name": "Hitachi Energy",
+    "member_entities": [
+      "Hitachi",
+      "Hitachi Energy"
+    ],
+    "merge_relation": "prefix_family_merge"
+  },
+  "decision": "use this normalized family batch for the first filing-expansion pass"
+}
+

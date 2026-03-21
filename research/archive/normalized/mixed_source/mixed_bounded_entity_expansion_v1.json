@@ -1,0 +1,162 @@
+{
+  "name": "bounded_entity_expansion_batch_v1",
+  "expansions": [
+    {
+      "canonical_entity_name": "GridCore Manufacturing",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "GridCore Manufacturing"
+      ],
+      "supporting_artifact_ids": [
+        "company_release_328fad99416fbef1"
+      ],
+      "supporting_titles": [
+        "GridCore Manufacturing breaks ground on new power transformer production plant"
+      ],
+      "local_source_classes": [
+        "company_release"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "trade_press"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_921740cadac635c6",
+        "trade_press_c906877e7f8ac2bc"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Lamina Grid Products",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "Lamina Grid Products"
+      ],
+      "supporting_artifact_ids": [
+        "company_release_a39925a36c9535e7"
+      ],
+      "supporting_titles": [
+        "Lamina Grid Products adds core and coil line to support transformer backlog"
+      ],
+      "local_source_classes": [
+        "company_release"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "trade_press"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Eaton",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_08976a2c7918a320"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "MeterWave Technologies",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "MeterWave Technologies"
+      ],
+      "supporting_artifact_ids": [
+        "company_release_088c813f7e093143"
+      ],
+      "supporting_titles": [
+        "MeterWave Technologies expands smart meter production lines for utility modernization programs"
+      ],
+      "local_source_classes": [
+        "company_release"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "trade_press"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Westrafo",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "member_entities": [
+        "Westrafo"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_904540c22ad17bed"
+      ],
+      "supporting_titles": [
+        "Italy-based Westrafo to build its first US transformer plant"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    }
+  ],
+  "metrics": {
+    "input_family_candidate_count": 34,
+    "selected_entity_expansion_count": 6
+  }
+}
