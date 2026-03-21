@@ -1,0 +1,54 @@
+{
+  "name": "bounded_universe_expansion_batch_v1",
+  "plans": [
+    {
+      "bounded_universe_expansion_plan_id": "bue_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa",
+      "as_of_date": "2025-11-19",
+      "status": "candidate",
+      "origin_bounded_universe_candidate_id": "buc_grid_equipment_and_transformer_buildout_2025-11-19_b00c1eaa",
+      "system_label": "grid equipment and transformer buildout",
+      "expansion_objective": "Expand the grid equipment and transformer buildout universe into a reviewable company and supplier set without leaving the bounded lane.",
+      "entity_lane_hints": [
+        "transformer manufacturers",
+        "switchgear manufacturers",
+        "substation equipment suppliers",
+        "grid equipment component suppliers",
+        "core, coil, insulation, and conductor input suppliers"
+      ],
+      "query_seed_terms": [
+        "transformer production expansion",
+        "switchgear manufacturing expansion",
+        "substation equipment capacity",
+        "transformer backlog",
+        "grid equipment lead times",
+        "core and coil manufacturing"
+      ],
+      "negative_boundaries": [
+        "generic industrial manufacturing",
+        "consumer electrical products",
+        "non-grid building wiring products"
+      ],
+      "first_actions": [
+        "Confirm visible beneficiary manufacturers from mixed-source public evidence.",
+        "Expand upstream from transformers, switchgear, and substation equipment into component and material layers.",
+        "Pull company filings only for entities that appear inside the bounded system lane."
+      ],
+      "source_classes_priority": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ],
+      "suspected_stress_layers": [
+        "transformers",
+        "switchgear",
+        "substation equipment",
+        "grid equipment components"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "metrics": {
+    "input_bounded_universe_candidate_count": 1,
+    "bounded_universe_expansion_plan_count": 1
+  }
+}

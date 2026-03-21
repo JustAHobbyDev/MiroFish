@@ -1,0 +1,70 @@
+{
+  "name": "bounded_universe_candidate_batch_v1",
+  "candidates": [
+    {
+      "bounded_universe_candidate_id": "buc_data_center_power_demand_buildout_2025-11-21_fd341142",
+      "as_of_date": "2025-11-21",
+      "status": "candidate",
+      "origin_pressure_candidate_id": "spc_data_center_power_demand_buildout_2025-11-21_fd341142",
+      "universe_label": "data center power demand buildout universe",
+      "system_label": "data center power demand buildout",
+      "bounding_basis": {
+        "source_diversity_corroborated": true,
+        "system_bounded": true,
+        "promotion_ready": true
+      },
+      "review_universe_definition": "Companies, utilities, suppliers, facilities, and public artifacts tied to data-center power delivery, interconnection, substations, transformers, and adjacent support infrastructure.",
+      "next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ],
+      "suspected_stress_layers": [
+        "utility interconnection",
+        "substations",
+        "transformers",
+        "cooling and power-delivery infrastructure"
+      ],
+      "visible_beneficiary_hints": [],
+      "confidence": "high",
+      "supporting_pressure_candidate_ids": [
+        "spc_data_center_power_demand_buildout_2025-11-21_fd341142"
+      ]
+    },
+    {
+      "bounded_universe_candidate_id": "buc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
+      "as_of_date": "2025-12-17",
+      "status": "candidate",
+      "origin_pressure_candidate_id": "spc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
+      "universe_label": "grid equipment and transformer buildout universe",
+      "system_label": "grid equipment and transformer buildout",
+      "bounding_basis": {
+        "source_diversity_corroborated": true,
+        "system_bounded": true,
+        "promotion_ready": true
+      },
+      "review_universe_definition": "Companies, suppliers, facilities, inputs, and public artifacts tied to transformer, switchgear, substation, and adjacent grid-equipment expansion.",
+      "next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ],
+      "suspected_stress_layers": [
+        "transformers",
+        "switchgear",
+        "substation equipment",
+        "grid equipment components"
+      ],
+      "visible_beneficiary_hints": [],
+      "confidence": "high",
+      "supporting_pressure_candidate_ids": [
+        "spc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_pressure_candidate_count": 10,
+    "bounded_universe_candidate_count": 2
+  }
+}

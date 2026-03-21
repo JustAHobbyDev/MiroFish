@@ -1,0 +1,95 @@
+{
+  "name": "bounded_universe_expansion_batch_v1",
+  "plans": [
+    {
+      "bounded_universe_expansion_plan_id": "bue_data_center_power_demand_buildout_2025-11-21_fd341142",
+      "as_of_date": "2025-11-21",
+      "status": "candidate",
+      "origin_bounded_universe_candidate_id": "buc_data_center_power_demand_buildout_2025-11-21_fd341142",
+      "system_label": "data center power demand buildout",
+      "expansion_objective": "Expand the data center power demand buildout universe into a reviewable company and supplier set without leaving the bounded lane.",
+      "entity_lane_hints": [
+        "utilities serving hyperscale corridors",
+        "substation and transformer suppliers",
+        "power-delivery equipment providers",
+        "cooling and power-distribution infrastructure suppliers"
+      ],
+      "query_seed_terms": [
+        "data center campus power expansion",
+        "substation buildout for data centers",
+        "utility interconnection for hyperscale",
+        "transformer demand for data centers"
+      ],
+      "negative_boundaries": [
+        "generic cloud software demand",
+        "enterprise IT without physical buildout"
+      ],
+      "first_actions": [
+        "Confirm which utilities and equipment layers recur across the bounded power-delivery lane.",
+        "Expand from visible beneficiaries into transformer, substation, and cooling-power layers."
+      ],
+      "source_classes_priority": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ],
+      "suspected_stress_layers": [
+        "utility interconnection",
+        "substations",
+        "transformers",
+        "cooling and power-delivery infrastructure"
+      ],
+      "confidence": "high"
+    },
+    {
+      "bounded_universe_expansion_plan_id": "bue_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
+      "as_of_date": "2025-12-17",
+      "status": "candidate",
+      "origin_bounded_universe_candidate_id": "buc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
+      "system_label": "grid equipment and transformer buildout",
+      "expansion_objective": "Expand the grid equipment and transformer buildout universe into a reviewable company and supplier set without leaving the bounded lane.",
+      "entity_lane_hints": [
+        "transformer manufacturers",
+        "switchgear manufacturers",
+        "substation equipment suppliers",
+        "grid equipment component suppliers",
+        "core, coil, insulation, and conductor input suppliers"
+      ],
+      "query_seed_terms": [
+        "transformer production expansion",
+        "switchgear manufacturing expansion",
+        "substation equipment capacity",
+        "transformer backlog",
+        "grid equipment lead times",
+        "core and coil manufacturing"
+      ],
+      "negative_boundaries": [
+        "generic industrial manufacturing",
+        "consumer electrical products",
+        "non-grid building wiring products"
+      ],
+      "first_actions": [
+        "Confirm visible beneficiary manufacturers from mixed-source public evidence.",
+        "Expand upstream from transformers, switchgear, and substation equipment into component and material layers.",
+        "Pull company filings only for entities that appear inside the bounded system lane."
+      ],
+      "source_classes_priority": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ],
+      "suspected_stress_layers": [
+        "transformers",
+        "switchgear",
+        "substation equipment",
+        "grid equipment components"
+      ],
+      "confidence": "high"
+    }
+  ],
+  "metrics": {
+    "input_bounded_universe_candidate_count": 2,
+    "bounded_universe_expansion_plan_count": 2
+  }
+}

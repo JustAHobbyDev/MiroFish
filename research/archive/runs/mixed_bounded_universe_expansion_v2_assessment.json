@@ -1,0 +1,13 @@
+{
+  "name": "mixed_bounded_universe_expansion_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_universe_expansion_v2.json",
+  "summary": {
+    "bounded_universe_candidate_count": 2,
+    "bounded_universe_expansion_plan_count": 2,
+    "ready_systems": [
+      "data center power demand buildout",
+      "grid equipment and transformer buildout"
+    ]
+  },
+  "recommendation": "use_two_ready_universes_for_first_downstream_expansion_test"
+}

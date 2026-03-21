@@ -1,0 +1,191 @@
+{
+  "name": "company_release_prefilter_v3_power_focus_6",
+  "source_class": "company_release",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "company_release_79386cedd20ceb6a",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "NorthRiver Digital Infrastructure announced groundbreaking for the second phase of its hyperscale data center campus.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into construction and infrastructure development",
+          "system_hints": [
+            "data center infrastructure, digital services, technology sector"
+          ],
+          "physical_implication": "physical construction of new facilities and infrastructure",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The project adds new shell space, cooling infrastructure, and power-delivery systems.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased procurement of materials and services for construction and infrastructure",
+          "system_hints": [
+            "construction materials, cooling technology, power systems"
+          ],
+          "physical_implication": "expansion of operational capacity and capabilities",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company said the project expands campus capacity.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "potential for increased operational capacity leading to future revenue growth",
+          "system_hints": [
+            "data center operations, cloud services, digital infrastructure"
+          ],
+          "physical_implication": "enhanced capability to support more data and services",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T21:11:39Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_699b2a49df49cc9e",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Summit Compute Parks announced continued construction of a 250MW data center campus.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased capital flow into construction and infrastructure development for data centers",
+          "system_hints": [
+            "data center industry, energy infrastructure"
+          ],
+          "physical_implication": "physical buildout of data center facilities and associated infrastructure",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The project includes dedicated substations, on-site power infrastructure, and supporting cooling systems.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital flow directed towards energy and cooling infrastructure development",
+          "system_hints": [
+            "energy sector, cooling technology"
+          ],
+          "physical_implication": "construction of substations and installation of cooling systems",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T21:11:44Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_c57077dab862393a",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PeakSpan Power Systems announced an expansion of its generator module assembly operations.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in assembly capacity for generator modules.",
+          "system_hints": [
+            "Utility and data center sectors."
+          ],
+          "physical_implication": "Expansion of assembly operations indicates physical buildout.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The expansion increases package throughput for gas and dual-fuel generator systems.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Potential increase in procurement of materials and components for generator systems.",
+          "system_hints": [
+            "Gas and dual-fuel generator systems."
+          ],
+          "physical_implication": "Increased throughput suggests a need for more resources and possibly new contracts.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T21:11:48Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_71c6dc59027b9138",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "FlexGen Turbine Packages announced an investment in a new manufacturing line for fast-start power equipment.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital is flowing into the manufacturing sector for power equipment.",
+          "system_hints": [
+            "utility balancing needs and resilience demand from digital infrastructure operators."
+          ],
+          "physical_implication": "new manufacturing line construction and equipment procurement.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The new manufacturing line will support utility balancing needs.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased demand for manufacturing capabilities in response to utility needs.",
+          "system_hints": [
+            "utility sector and digital infrastructure operators."
+          ],
+          "physical_implication": "expansion of manufacturing capabilities.",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The investment is associated with balance-of-plant systems.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "capital is being allocated to enhance capacity in balance-of-plant systems.",
+          "system_hints": [
+            "power generation and utility sectors."
+          ],
+          "physical_implication": "development of new systems and infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T21:11:55Z",
+      "prefilter_triage": "keep"
+    }
+  ],
+  "schema_failures": [],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 4,
+    "successful_extractions": 4,
+    "schema_failure_count": 0,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 4,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 10,
+    "review_artifact_count": 0,
+    "review_candidate_artifact_count": 0
+  }
+}

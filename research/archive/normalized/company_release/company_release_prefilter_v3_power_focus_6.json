@@ -1,0 +1,277 @@
+{
+  "name": "company_release_prefilter_v3_power_focus_6",
+  "source_class": "company_release",
+  "processed_artifact_count": 6,
+  "kept_artifacts": [
+    {
+      "artifact_id": "company_release_79386cedd20ceb6a",
+      "source_class": "company_release",
+      "publisher_or_author": "GlobeNewswire",
+      "issuing_company_name": "NorthRiver Digital Infrastructure",
+      "published_at": "2025-11-21T14:00:00Z",
+      "title": "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase",
+      "headline": "",
+      "subheadline": "New phase adds power-delivery, cooling and shell capacity.",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "Data Centers",
+        "Construction"
+      ],
+      "publisher_metadata": {
+        "raw_category": "",
+        "raw_source": ""
+      },
+      "source_url": "https://example.com/releases/2025-11-21-hyperscale-campus-phase-two",
+      "body_text": "NorthRiver Digital Infrastructure announced groundbreaking for the second phase of its hyperscale data center campus. The company said the project adds new shell space, cooling infrastructure, and power-delivery systems as it expands campus capacity.",
+      "_prefilter": {
+        "artifact_id": "company_release_79386cedd20ceb6a",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment",
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "subheadline": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "subheadline:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "company_release_699b2a49df49cc9e",
+      "source_class": "company_release",
+      "publisher_or_author": "Business Wire",
+      "issuing_company_name": "Summit Compute Parks",
+      "published_at": "2025-12-17T10:30:00Z",
+      "title": "Summit Compute Parks advances 250MW data center campus construction",
+      "headline": "",
+      "subheadline": "Project includes dedicated substations and on-site power infrastructure.",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "Data Centers",
+        "Construction"
+      ],
+      "publisher_metadata": {
+        "raw_category": "",
+        "raw_source": ""
+      },
+      "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
+      "body_text": "Summit Compute Parks announced continued construction of a 250MW data center campus. The company said the project includes dedicated substations, on-site power infrastructure, and supporting cooling systems to bring new campus capacity online.",
+      "_prefilter": {
+        "artifact_id": "company_release_699b2a49df49cc9e",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bconstruction\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "company_release_c57077dab862393a",
+      "source_class": "company_release",
+      "publisher_or_author": "PR Newswire",
+      "issuing_company_name": "PeakSpan Power Systems",
+      "published_at": "2025-11-25T09:45:00Z",
+      "title": "PeakSpan Power Systems expands generator module assembly for utility and data center demand",
+      "headline": "",
+      "subheadline": "Expansion is aimed at fast-response power projects and backup systems.",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "Power Generation",
+        "Expansion"
+      ],
+      "publisher_metadata": {
+        "raw_category": "",
+        "raw_source": ""
+      },
+      "source_url": "https://example.com/releases/2025-11-25-generator-module-expansion",
+      "body_text": "PeakSpan Power Systems announced an expansion of its generator module assembly operations to serve utility response projects and data center backup-power demand. The company said the expansion increases package throughput for gas and dual-fuel generator systems.",
+      "_prefilter": {
+        "artifact_id": "company_release_c57077dab862393a",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpand(?:ing|ed|s)?\\b"
+            ]
+          },
+          "subheadline": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
+          "subheadline:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "company_release_71c6dc59027b9138",
+      "source_class": "company_release",
+      "publisher_or_author": "GlobeNewswire",
+      "issuing_company_name": "FlexGen Turbine Packages",
+      "published_at": "2025-12-12T11:20:00Z",
+      "title": "FlexGen Turbine Packages invests in new manufacturing line for fast-start power equipment",
+      "headline": "",
+      "subheadline": "Project supports utility balancing needs and digital infrastructure resilience.",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "Power Generation",
+        "Investment"
+      ],
+      "publisher_metadata": {
+        "raw_category": "",
+        "raw_source": ""
+      },
+      "source_url": "https://example.com/releases/2025-12-12-turbine-packages-manufacturing",
+      "body_text": "FlexGen Turbine Packages announced an investment in a new manufacturing line for fast-start power equipment and associated balance-of-plant systems. The company said the line will support utility balancing needs and resilience demand from digital infrastructure operators.",
+      "_prefilter": {
+        "artifact_id": "company_release_71c6dc59027b9138",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [],
+  "dropped_audit_records": [
+    {
+      "artifact_id": "company_release_b281baa51080df94",
+      "source_class": "company_release",
+      "publisher_or_author": "Business Wire",
+      "published_at": "2025-11-14T13:00:00Z",
+      "title": "HighPlains Electric launches substation and feeder upgrade program for large-load customer growth",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bgrowth\\b"
+      ]
+    },
+    {
+      "artifact_id": "company_release_bff0047ae0beda24",
+      "source_class": "company_release",
+      "publisher_or_author": "PR Newswire",
+      "published_at": "2025-12-05T12:15:00Z",
+      "title": "Prairie Grid Utility signs electric service agreement with large-load campus project",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    }
+  ],
+  "metrics": {
+    "processed_artifact_count": 6,
+    "kept_count": 4,
+    "review_count": 0,
+    "dropped_count": 2
+  }
+}

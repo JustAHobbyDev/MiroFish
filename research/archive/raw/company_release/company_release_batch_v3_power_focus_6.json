@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "source_url": "https://example.com/releases/2025-11-14-utility-large-load-upgrade-program",
+      "publisher": "Business Wire",
+      "issuer_name": "HighPlains Electric",
+      "published_at": "2025-11-14T13:00:00Z",
+      "title": "HighPlains Electric launches substation and feeder upgrade program for large-load customer growth",
+      "subheadline": "Utility cites data center and industrial interconnection demand.",
+      "categories": ["Utilities", "Grid Upgrades"],
+      "body_text": "HighPlains Electric announced a multi-year substation and feeder upgrade program tied to large-load customer growth and interconnection demand. The utility said the program responds to expected data center and industrial load additions and will require new power-system investments across its service territory."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-12-05-large-load-service-agreement",
+      "publisher": "PR Newswire",
+      "issuer_name": "Prairie Grid Utility",
+      "published_at": "2025-12-05T12:15:00Z",
+      "title": "Prairie Grid Utility signs electric service agreement with large-load campus project",
+      "subheadline": "Agreement is expected to trigger new substation and transmission work.",
+      "categories": ["Utilities", "Service Agreement"],
+      "body_text": "Prairie Grid Utility announced an electric service agreement with a large-load campus project that is expected to increase connected load materially. The utility said the project will trigger new substation, feeder, and transmission work as part of its power-system expansion plan."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-11-21-hyperscale-campus-phase-two",
+      "publisher": "GlobeNewswire",
+      "issuer_name": "NorthRiver Digital Infrastructure",
+      "published_at": "2025-11-21T14:00:00Z",
+      "title": "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase",
+      "subheadline": "New phase adds power-delivery, cooling and shell capacity.",
+      "categories": ["Data Centers", "Construction"],
+      "body_text": "NorthRiver Digital Infrastructure announced groundbreaking for the second phase of its hyperscale data center campus. The company said the project adds new shell space, cooling infrastructure, and power-delivery systems as it expands campus capacity."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
+      "publisher": "Business Wire",
+      "issuer_name": "Summit Compute Parks",
+      "published_at": "2025-12-17T10:30:00Z",
+      "title": "Summit Compute Parks advances 250MW data center campus construction",
+      "subheadline": "Project includes dedicated substations and on-site power infrastructure.",
+      "categories": ["Data Centers", "Construction"],
+      "body_text": "Summit Compute Parks announced continued construction of a 250MW data center campus. The company said the project includes dedicated substations, on-site power infrastructure, and supporting cooling systems to bring new campus capacity online."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-11-25-generator-module-expansion",
+      "publisher": "PR Newswire",
+      "issuer_name": "PeakSpan Power Systems",
+      "published_at": "2025-11-25T09:45:00Z",
+      "title": "PeakSpan Power Systems expands generator module assembly for utility and data center demand",
+      "subheadline": "Expansion is aimed at fast-response power projects and backup systems.",
+      "categories": ["Power Generation", "Expansion"],
+      "body_text": "PeakSpan Power Systems announced an expansion of its generator module assembly operations to serve utility response projects and data center backup-power demand. The company said the expansion increases package throughput for gas and dual-fuel generator systems."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-12-12-turbine-packages-manufacturing",
+      "publisher": "GlobeNewswire",
+      "issuer_name": "FlexGen Turbine Packages",
+      "published_at": "2025-12-12T11:20:00Z",
+      "title": "FlexGen Turbine Packages invests in new manufacturing line for fast-start power equipment",
+      "subheadline": "Project supports utility balancing needs and digital infrastructure resilience.",
+      "categories": ["Power Generation", "Investment"],
+      "body_text": "FlexGen Turbine Packages announced an investment in a new manufacturing line for fast-start power equipment and associated balance-of-plant systems. The company said the line will support utility balancing needs and resilience demand from digital infrastructure operators."
+    }
+  ]
+}
