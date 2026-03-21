@@ -92,6 +92,45 @@ def _sample_government_buildout_artifact():
     }
 
 
+def _sample_trade_press_review_pipeline_artifact():
+    return {
+        "artifact_id": "trade_review_pipeline_1",
+        "source_class": "trade_press",
+        "publisher_or_author": "Utility Dive",
+        "published_at": "2026-02-01",
+        "title": "PG&E data center pipeline swells to 10GW",
+        "source_url": "https://example.com/trade/pipeline",
+        "body_text": "The utility said its data center pipeline continues to grow and load forecast has increased.",
+        "_prefilter_triage": "review",
+    }
+
+
+def _sample_trade_press_review_pipeline_with_generic_site_language_artifact():
+    return {
+        "artifact_id": "trade_review_pipeline_2",
+        "source_class": "trade_press",
+        "publisher_or_author": "Utility Dive",
+        "published_at": "2026-02-01",
+        "title": "US utility Exelon reports data center pipeline of 33GW",
+        "source_url": "https://example.com/trade/pipeline-sites",
+        "body_text": "The utility said multiple customer sites remain in the planning pipeline and load forecasts are rising.",
+        "_prefilter_triage": "review",
+    }
+
+
+def _sample_trade_press_review_deal_artifact():
+    return {
+        "artifact_id": "trade_review_deal_1",
+        "source_class": "trade_press",
+        "publisher_or_author": "Utility Dive",
+        "published_at": "2026-02-01",
+        "title": "DTE inks first data center deal to grow electric load 25%",
+        "source_url": "https://example.com/trade/deal",
+        "body_text": "The utility inked its first data center deal and expects load to increase 25%.",
+        "_prefilter_triage": "review",
+    }
+
+
 def test_validate_capital_flow_extraction_payload_accepts_valid_no_candidate():
     payload = {
         "produced_candidates": False,
@@ -349,3 +388,94 @@ def test_extractor_does_not_force_no_candidate_for_buildout_government_notice():
 
     assert result["produced_candidates"] is True
     assert result["heuristic_filter_applied"] is False
+
+
+def test_extractor_forces_no_candidate_for_review_stage_trade_press_pipeline_article():
+    llm = _FakeLLMClient(
+        """
+        {
+          "capital_flow_signal_candidates": [
+            {
+              "observable_statement": "The utility's data center pipeline has grown materially.",
+              "capital_flow_implication_type": "direct_capital_allocation",
+              "observation_directness": "indirect",
+              "capital_flow_implication": "Utilities may need to increase capital spending.",
+              "system_hints": ["utility grid", "data center power demand"],
+              "physical_implication": "Potential future grid investment.",
+              "confidence": "medium"
+            }
+          ]
+        }
+        """
+    )
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_trade_press_review_pipeline_artifact())
+
+    assert result["produced_candidates"] is False
+    assert result["heuristic_filter_applied"] is True
+    assert "Planning-stage utility pipeline or load-forecast" in result["heuristic_filter_reason"]
+
+
+def test_extractor_does_not_force_no_candidate_for_review_stage_trade_press_deal_article():
+    llm = _FakeLLMClient(
+        """
+        {
+          "capital_flow_signal_candidates": [
+            {
+              "observable_statement": "The utility signed its first data center deal and expects load to grow 25%.",
+              "capital_flow_implication_type": "procurement_or_commitment_pull",
+              "observation_directness": "direct",
+              "capital_flow_implication": "The signed deal implies concrete demand pull into utility infrastructure.",
+              "system_hints": ["utility grid", "data center demand"],
+              "physical_implication": "The utility may need to add substation and transmission capacity.",
+              "confidence": "high"
+            }
+          ]
+        }
+        """
+    )
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_trade_press_review_deal_artifact())
+
+    assert result["produced_candidates"] is True
+    assert result["heuristic_filter_applied"] is False
+
+
+def test_extractor_still_forces_no_candidate_for_pipeline_article_with_generic_site_language():
+    llm = _FakeLLMClient(
+        """
+        {
+          "capital_flow_signal_candidates": [
+            {
+              "observable_statement": "The utility reported multiple data center sites in its pipeline.",
+              "capital_flow_implication_type": "direct_capital_allocation",
+              "observation_directness": "indirect",
+              "capital_flow_implication": "Future capital demand may rise.",
+              "system_hints": ["utility grid", "data center demand"],
+              "physical_implication": "Possible future utility upgrades.",
+              "confidence": "medium"
+            }
+          ]
+        }
+        """
+    )
+    extractor = module.CapitalFlowExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_trade_press_review_pipeline_with_generic_site_language_artifact())
+
+    assert result["produced_candidates"] is False
+    assert result["heuristic_filter_applied"] is True

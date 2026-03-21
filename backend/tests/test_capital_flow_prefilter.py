@@ -76,6 +76,45 @@ def test_trade_press_pipeline_routes_to_review():
     assert "trade_press_pipeline_or_load_growth" in result["matched_families"]
 
 
+def test_trade_press_investment_plus_production_routes_to_keep():
+    artifact = {
+        "artifact_id": "art_trade_production_keep",
+        "source_class": "trade_press",
+        "title": "Eaton invests $340M in US transformer production",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_KEEP
+    assert "trade_press_investment_and_factory" in result["matched_families"]
+
+
+def test_trade_press_spending_plan_routes_to_keep():
+    artifact = {
+        "artifact_id": "art_trade_spending_keep",
+        "source_class": "trade_press",
+        "title": "As load grows, Southern raises spending plan to $81B",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_KEEP
+    assert "trade_press_spending_plan" in result["matched_families"]
+
+
+def test_trade_press_peak_load_growth_routes_to_review():
+    artifact = {
+        "artifact_id": "art_trade_peak_load_review",
+        "source_class": "trade_press",
+        "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
+    }
+
+    result = module.triage_capital_flow_artifact(artifact)
+
+    assert result["triage"] == module.TRIAGE_REVIEW
+    assert "trade_press_pipeline_or_load_growth" in result["matched_families"]
+
+
 def test_review_on_record_of_decision_resource_planning_notice():
     artifact = {
         "artifact_id": "art_rod",

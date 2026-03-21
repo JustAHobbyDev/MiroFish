@@ -231,6 +231,39 @@ POST_FILTER_STRONG_BUILDOUT_PATTERNS = (
     r"\bopened? .* land[s]? .* development\b",
 )
 
+TRADE_PRESS_REVIEW_STAGE_PRESSURE_PATTERNS = (
+    r"\bpipeline\b",
+    r"\bload growth\b",
+    r"\bload increase\b",
+    r"\bpeak load\b",
+    r"\bload forecast\b",
+    r"\bforecast turns positive\b",
+    r"\bgrow(?:ing)? electric load\b",
+    r"\bload to grow\b",
+)
+
+TRADE_PRESS_REVIEW_STAGE_CONCRETE_BUILDOUT_PATTERNS = (
+    r"\bconstruction\b",
+    r"\bbreaks? ground\b",
+    r"\bbuild(?:ing|out)?\b",
+    r"\bsite selection\b",
+    r"\bselected site\b",
+    r"\bpicks? .* location\b",
+    r"\bconfirms? .* location\b",
+    r"\bnew (?:facility|plant|factory|site)\b",
+    r"\bfinancing\b",
+    r"\bfunded\b",
+    r"\bsecures? \$?\d",
+    r"\binvest(?:s|ed|ing|ment|ments)?\b",
+    r"\bspending plan\b",
+    r"\bcapex\b",
+    r"\bdeal\b",
+    r"\bagreement\b",
+    r"\bofftake\b",
+    r"\binks?\b",
+    r"\bsigns?\b",
+)
+
 
 def _artifact_text_for_post_filter(artifact: Dict[str, Any]) -> str:
     parts = [
@@ -246,18 +279,27 @@ def _matches_any_pattern(text: str, patterns: tuple[str, ...]) -> bool:
 
 def _should_force_no_candidate_after_extraction(artifact: Dict[str, Any]) -> Optional[str]:
     source_class = _coerce_string(artifact.get("source_class")).lower()
-    if "government" not in source_class:
-        return None
-
     text = _artifact_text_for_post_filter(artifact)
-    has_strong_buildout = _matches_any_pattern(text, POST_FILTER_STRONG_BUILDOUT_PATTERNS)
-    has_admin_noise = _matches_any_pattern(text, POST_FILTER_ADMIN_NOISE_PATTERNS)
-    has_out_of_scope = _matches_any_pattern(text, POST_FILTER_OUT_OF_SCOPE_PATTERNS)
+    title_text = _coerce_string(artifact.get("title")).lower()
+    if "government" in source_class:
+        has_strong_buildout = _matches_any_pattern(text, POST_FILTER_STRONG_BUILDOUT_PATTERNS)
+        has_admin_noise = _matches_any_pattern(text, POST_FILTER_ADMIN_NOISE_PATTERNS)
+        has_out_of_scope = _matches_any_pattern(text, POST_FILTER_OUT_OF_SCOPE_PATTERNS)
 
-    if has_admin_noise and not has_strong_buildout:
-        return "Administrative or procedural policy notice without concrete buildout or committed capital."
-    if has_out_of_scope and not has_strong_buildout:
-        return "Constrained-access or licensing notice without concrete rising-demand buildout evidence."
+        if has_admin_noise and not has_strong_buildout:
+            return "Administrative or procedural policy notice without concrete buildout or committed capital."
+        if has_out_of_scope and not has_strong_buildout:
+            return "Constrained-access or licensing notice without concrete rising-demand buildout evidence."
+
+    if source_class == "trade_press" and _coerce_string(artifact.get("_prefilter_triage")).lower() == "review":
+        title_has_pressure_signal = _matches_any_pattern(title_text, TRADE_PRESS_REVIEW_STAGE_PRESSURE_PATTERNS)
+        title_has_concrete_buildout = _matches_any_pattern(title_text, TRADE_PRESS_REVIEW_STAGE_CONCRETE_BUILDOUT_PATTERNS)
+        has_pressure_signal = _matches_any_pattern(text, TRADE_PRESS_REVIEW_STAGE_PRESSURE_PATTERNS)
+        has_concrete_buildout = _matches_any_pattern(text, TRADE_PRESS_REVIEW_STAGE_CONCRETE_BUILDOUT_PATTERNS)
+        if title_has_pressure_signal and not title_has_concrete_buildout:
+            return "Planning-stage utility pipeline or load-forecast article without explicit spend, financing, siting, or construction."
+        if has_pressure_signal and not has_concrete_buildout:
+            return "Planning-stage utility pipeline or load-forecast article without explicit spend, financing, siting, or construction."
     return None
 
 

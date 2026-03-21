@@ -172,12 +172,18 @@ EXCLUDED_GENERIC_PATTERNS: Tuple[str, ...] = (
 )
 
 TRADE_PRESS_INVESTMENT_KEEP_PATTERN = re.compile(
-    r"\binvest(?:s|ed|ing|ment|ments)?\b.*\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions)\b"
-    r"|\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions)\b.*\binvest(?:s|ed|ing|ment|ments)?\b"
+    r"\binvest(?:s|ed|ing|ment|ments)?\b.*\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions|production)\b"
+    r"|\b(factory|plant|facility|site|manufacturing|operations|expansion|expansions|production)\b.*\binvest(?:s|ed|ing|ment|ments)?\b"
 )
 
 TRADE_PRESS_PIPELINE_REVIEW_PATTERN = re.compile(
-    r"\bpipeline\b|\bload growth\b|\bload increase\b|\bgrow(?:ing)? electric load\b|\bload (?:to|of) \d"
+    r"\bpipeline\b|\bload growth\b|\bload increase\b|\bgrow(?:ing)? electric load\b|\bpeak load\b|\bload forecast\b|\bload (?:to|of) \d|\bload to grow\b"
+)
+
+TRADE_PRESS_SPENDING_PLAN_KEEP_PATTERN = re.compile(
+    r"\b(?:raises|raise|boosts|boost|increases|increase|lifts|lift)\b.*\bspending plan\b"
+    r"|\bspending plan\b.*\b(?:raises|raise|boosts|boost|increases|increase|lifts|lift)\b"
+    r"|\bcapex plan\b|\bcapital spending plan\b"
 )
 
 
@@ -287,6 +293,20 @@ def _apply_trade_press_overrides(
         return (
             TRIAGE_KEEP,
             "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+            sorted(matched_families),
+            fired_rules,
+            field_hits,
+        )
+
+    if TRADE_PRESS_SPENDING_PLAN_KEEP_PATTERN.search(strong_text):
+        title_hits.setdefault("trade_press_spending_plan", []).append("trade_press:spending_plan")
+        if "trade_press_spending_plan" not in matched_families:
+            matched_families.append("trade_press_spending_plan")
+        if "title:trade_press_spending_plan:trade_press:spending_plan" not in fired_rules:
+            fired_rules.append("title:trade_press_spending_plan:trade_press:spending_plan")
+        return (
+            TRIAGE_KEEP,
+            "Trade-press headline indicates an explicit increase in planned capital spending.",
             sorted(matched_families),
             fired_rules,
             field_hits,

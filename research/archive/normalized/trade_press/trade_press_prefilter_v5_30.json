@@ -1,0 +1,1862 @@
+{
+  "name": "trade_press_prefilter_v5_30",
+  "source_class": "trade_press",
+  "processed_artifact_count": 30,
+  "kept_artifacts": [
+    {
+      "artifact_id": "trade_press_cac8ad2ff3742510",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Kate Magill",
+      "published_at": "2025-03-27",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "manufacturing",
+        "data centers",
+        "energy infrastructure"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/schneider-electric-700-million-investment-us-data-center-demand-ai/743630/",
+      "body_text": "Schneider Electric plans to invest $700 million in its U.S. operations through 2027. The money will fund facility upgrades, expansions and openings across eight sites to meet rising demand from data centers and electricity infrastructure.",
+      "_prefilter": {
+        "artifact_id": "trade_press_cac8ad2ff3742510",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          }
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-03-10",
+      "title": "ABB to invest $120M in US manufacturing",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "electrification",
+        "manufacturing",
+        "capacity"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/swiss-giant-abb-invest-120-million-us-manufacturing/741971/",
+      "body_text": "ABB said it will invest $120 million to expand production of low-voltage electrification products in the U.S. The investment will increase capacity at facilities in Tennessee and Mississippi to support growing demand from data centers, buildings and utilities.",
+      "_prefilter": {
+        "artifact_id": "trade_press_c932aca7f0976acc",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          }
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_3d1582c75dda6698",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Joelle Anselmo",
+      "published_at": "2025-02-06",
+      "title": "GE Vernova to invest nearly $600M in US factories",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "energy equipment",
+        "factories",
+        "grid"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/ge-vernova-invest-nearly-600-million-us-factories/738792/",
+      "body_text": "GE Vernova will spend nearly $600 million on U.S. factories and facilities over two years. The investment will create over 1,500 jobs and focus on gas power, grid, nuclear and onshore wind manufacturing sites.",
+      "_prefilter": {
+        "artifact_id": "trade_press_3d1582c75dda6698",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-07-16",
+      "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "engine plant",
+        "data centers",
+        "power systems"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/rolls-royce-invests-75-million-aiken-south-carolina-engine-plant/753189/",
+      "body_text": "Rolls-Royce will invest $75 million to expand its Aiken, South Carolina, engine plant to meet surging data center demand. The 60,000-square-foot expansion will increase production of large engines used to power data centers and industrial facilities.",
+      "_prefilter": {
+        "artifact_id": "trade_press_898010ffbfe80234",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          }
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-11-20",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "automation",
+        "factory",
+        "expansion"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/rockwell-automation-greenfield-wisconsin-largest-factory-2b-investment/806033/",
+      "body_text": "Rockwell Automation plans to build a new factory in Wisconsin as part of a $2 billion effort to strengthen its U.S. operations. The campus will include more than 1 million square feet of manufacturing and warehouse space.",
+      "_prefilter": {
+        "artifact_id": "trade_press_10e5144776b5598c",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b",
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b",
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_9f4a057076b0ca77",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Joelle Anselmo",
+      "published_at": "2024-12-05",
+      "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "switchgear",
+        "factory",
+        "grid"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
+      "body_text": "Mitsubishi Electric Power Products will invest $86 million in a 160,000-square-foot switchgear factory near Pittsburgh and upgrade existing facilities. The move responds to growing demand for transmission, distribution and data center power products.",
+      "_prefilter": {
+        "artifact_id": "trade_press_9f4a057076b0ca77",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ],
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_61fa290549c6e41d",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Elise Reuter",
+      "published_at": "2025-05-15",
+      "title": "Roche to expand, open Indianapolis and North Carolina sites",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "medical devices",
+        "expansion",
+        "factory"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/roche-manufacturing-indiana-cgm/748067/",
+      "body_text": "Roche Diagnostics will build a $550 million expansion at an Indianapolis facility to produce continuous glucose monitors and a new $700 million factory in Holly Springs, North Carolina.",
+      "_prefilter": {
+        "artifact_id": "trade_press_61fa290549c6e41d",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpand(?:ing|ed|s)?\\b"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b",
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2025-08-08",
+      "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Construction",
+      "category_tags": [
+        "hyperscale",
+        "construction",
+        "power"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Construction",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-digital-breaks-ground-on-300mw-data-center-campus-outside-san-antonio-texas/",
+      "body_text": "Rowan Digital Infrastructure has broken ground on a 300MW hyperscale campus outside San Antonio. The $900 million project is tailored to a top five U.S. technology company, with an initial 60MW expected in early 2026.",
+      "_prefilter": {
+        "artifact_id": "trade_press_ff46b7dab1b827b4",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "section_name": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "section_name:construction_and_deployment:\\bconstruction\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b",
+          "publisher_metadata:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_acb174b496999f97",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2025-04-07",
+      "title": "CyrusOne breaks ground on Fort Worth data center campus in Texas",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Construction",
+      "category_tags": [
+        "campus",
+        "groundbreaking",
+        "Texas"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Construction",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/cyrusone-breaks-ground-on-fort-worth-data-center-campus-in-texas/",
+      "body_text": "CyrusOne broke ground on a new multi-building campus in Fort Worth, Texas. The project will deliver an initial IT capacity of around 70MW, with total capital investments in Texas exceeding $2.4 billion.",
+      "_prefilter": {
+        "artifact_id": "trade_press_acb174b496999f97",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "section_name": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bgroundbreak(?:ing)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "section_name:construction_and_deployment:\\bconstruction\\b",
+          "category_tags:construction_and_deployment:\\bgroundbreak(?:ing)?\\b",
+          "publisher_metadata:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Jason Ma",
+      "published_at": "2025-05-21",
+      "title": "EdgeCore expands Mesa data center campus in Arizona",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Expansion",
+      "category_tags": [
+        "capacity",
+        "campus",
+        "Arizona"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Expansion",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-expands-mesa-data-center-campus-in-arizona/",
+      "body_text": "EdgeCore is expanding its Mesa campus by adding nearly 44 acres and lifting total capacity from more than 200MW to more than 450MW to meet urgent hyperscale demand for AI and cloud-ready capacity.",
+      "_prefilter": {
+        "artifact_id": "trade_press_300902f748d55918",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpand(?:ing|ed|s)?\\b"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_a13c5dc00fba3fa5",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Niva Yadav",
+      "published_at": "2025-02-21",
+      "title": "EdgeCore begins construction at 114MW Northern Virginia campus",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Construction",
+      "category_tags": [
+        "Virginia",
+        "campus",
+        "construction"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Construction",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-begins-construction-at-114mw-northern-virginia-campus/",
+      "body_text": "EdgeCore began construction at a 114MW campus in Northern Virginia with delivery expected in 2026. The company is also topping out additional facilities on its 450MW campus in Mesa, Arizona.",
+      "_prefilter": {
+        "artifact_id": "trade_press_a13c5dc00fba3fa5",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "section_name": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bconstruction\\b",
+          "section_name:construction_and_deployment:\\bconstruction\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b",
+          "publisher_metadata:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_70a23134a41f33bd",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2025-07-26",
+      "title": "EdgeCore secures $235 million in ABS financing",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Finance",
+      "category_tags": [
+        "financing",
+        "Mesa",
+        "development"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Finance",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-secures-235-million-in-abs-financing/",
+      "body_text": "EdgeCore completed a $235 million asset-backed securitization backed by its fully leased Phoenix-area data center. Proceeds will refinance construction loans and fund future green data center development.",
+      "_prefilter": {
+        "artifact_id": "trade_press_70a23134a41f33bd",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "awards_and_funding"
+        ],
+        "field_hits": {
+          "title": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "section_name": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "category_tags": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "section_name:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "publisher_metadata:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2026-02-12",
+      "title": "Rowan secures $500m for 300MW Texas data center project",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Finance",
+      "category_tags": [
+        "construction financing",
+        "Texas",
+        "campus"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Finance",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-secures-500m-for-300mw-texas-data-center-project/",
+      "body_text": "Rowan Digital Infrastructure secured approximately $550 million of construction financing for the first development phase of its 300MW Cinco campus outside San Antonio.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8de0a080761e2c3b",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Multiple distinct event-form families were detected across allowed fields.",
+        "matched_families": [
+          "awards_and_funding",
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "section_name": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "category_tags": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b",
+          "publisher_metadata:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_08976a2c7918a320",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2025-02-12",
+      "title": "Eaton invests $340M in US transformer production",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "manufacturing",
+        "investment"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/eaton-transformer-production-shortage-investment/739932/",
+      "body_text": "Eaton will invest $340 million to increase U.S. production of three-phase transformers in response to an ongoing shortage and record demand from utilities, industrial customers and data centers.",
+      "_prefilter": {
+        "artifact_id": "trade_press_08976a2c7918a320",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Kate Magill",
+      "published_at": "2025-03-27",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Operations",
+      "category_tags": [
+        "manufacturing",
+        "data centers",
+        "utilities"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Operations",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/schneider-electric-700-million-investment-us-data-center-demand-ai/743790/",
+      "body_text": "Schneider Electric plans to invest $700 million through 2027 for facility upgrades, expansions and openings across eight U.S. sites to meet rising demand across data centers, utilities and energy infrastructure.",
+      "_prefilter": {
+        "artifact_id": "trade_press_c838cb21478bfff1",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-09-04",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "factory",
+        "manufacturing investment"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+      "body_text": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia, and make more than $500 million in other investments to meet growing need for U.S. grid equipment amid transformer bottlenecks.",
+      "_prefilter": {
+        "artifact_id": "trade_press_921740cadac635c6",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ],
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2026-02-20",
+      "title": "As load grows, Southern raises spending plan to $81B",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "load growth",
+        "capex",
+        "generation"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
+      "body_text": "Southern Company raised its five-year spending plan to $81 billion, driven by substantial new growth infrastructure investments as large-load and data center demand increases. The company is working on adding 10GW of approved new generation.",
+      "_prefilter": {
+        "artifact_id": "trade_press_7cab8b3aa2571296",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates an explicit increase in planned capital spending.",
+        "matched_families": [
+          "trade_press_spending_plan"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_spending_plan": [
+              "trade_press:spending_plan"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_spending_plan:trade_press:spending_plan"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [
+    {
+      "artifact_id": "trade_press_adcf7136a2e92950",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-06-20",
+      "title": "Jabil picks North Carolina for $500M AI facility",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "data centers",
+        "AI",
+        "manufacturing"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/jabil-pledges-500-million-expand-us-production-data-center-ai/751024/",
+      "body_text": "Jabil plans to spend $500 million to expand its U.S. manufacturing footprint in the Southeast to support surging data center demand. The project is expected to create nearly 1,200 jobs and have the facility operational by mid-2026.",
+      "_prefilter": {
+        "artifact_id": "trade_press_adcf7136a2e92950",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-05-29",
+      "title": "Power enclosure maker AVL to establish its first US plant",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "factory",
+        "power systems",
+        "data centers"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/power-enclosure-avl-first-us-factory-charlotte-north-carolina/749197/",
+      "body_text": "AVL Manufacturing will invest $56 million to establish its first U.S. production facility in North Carolina. The plant will make industrial enclosures for large-scale power generators used in data centers and create about 300 jobs.",
+      "_prefilter": {
+        "artifact_id": "trade_press_404505b643706d79",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_81078c2995bcc693",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Eric Walz",
+      "published_at": "2025-08-27",
+      "title": "Hyundai boosts US investments to $26B through 2028",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "steel plant",
+        "robotics",
+        "manufacturing"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/hyundai-boosts-us-invetments-26B-billion-vehicle-production-robotics-steel-plant/758720/",
+      "body_text": "Hyundai increased its U.S. investment commitment to $26 billion from 2025 to 2028 to expand vehicle production capacity, fund a Louisiana steel plant and build a robotics facility with annual capacity of 30,000 units.",
+      "_prefilter": {
+        "artifact_id": "trade_press_81078c2995bcc693",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Zachary Skidmore",
+      "published_at": "2025-08-01",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Power",
+      "category_tags": [
+        "pipeline",
+        "utility",
+        "interconnection"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Power",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/pge-data-center-pipeline-swells-to-10gw/",
+      "body_text": "PG&E reported 10GW of data center capacity in its pipeline, with 17 projects totaling 1.5GW in final engineering phases and operations expected to begin between 2026 and 2030.",
+      "_prefilter": {
+        "artifact_id": "trade_press_b4dc467358a3db4d",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Zachary Skidmore",
+      "published_at": "2025-08-01",
+      "title": "US utility Exelon reports data center pipeline of 33GW",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Power",
+      "category_tags": [
+        "utility",
+        "pipeline",
+        "generation"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Power",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/us-utility-exelon-reports-data-center-pipeline-of-33gw/",
+      "body_text": "Exelon said it has 33GW of data centers interested in connecting to its system, with 17GW already in line to connect. The utility is considering options for building and owning generation to meet the demand.",
+      "_prefilter": {
+        "artifact_id": "trade_press_099f9d0368e5000f",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Zachary Skidmore",
+      "published_at": "2025-03-03",
+      "title": "First Energy data center pipeline surges to 2.6GW by 2029",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Power",
+      "category_tags": [
+        "pipeline",
+        "utility",
+        "generation"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Power",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/first-energy-data-center-pipeline-surges-to-26gw-by-2029/",
+      "body_text": "First Energy reported that its pipeline of potential data centers surged to 2.6GW by 2029, almost double the prior reported pipeline. The utility is considering delaying coal retirements or adding gas-fired generation to serve the load.",
+      "_prefilter": {
+        "artifact_id": "trade_press_47e3c04df2ffff47",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Zachary Skidmore",
+      "published_at": "2025-08-04",
+      "title": "PPL Electric's data center pipeline soars to 14GW",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Power",
+      "category_tags": [
+        "pipeline",
+        "utility",
+        "Pennsylvania"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Power",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/ppl-electrics-data-center-pipeline-soars-to-14gw/",
+      "body_text": "PPL Electric said its advanced-stage data center interconnection pipeline grew to 14GW. The utility is taking a two-pronged approach to support data center growth and expects load to ramp sharply over the decade.",
+      "_prefilter": {
+        "artifact_id": "trade_press_adbcd97a0be82618",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-03-10",
+      "title": "Hitachi Energy commits $250M to address transformer shortage",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "shortage",
+        "capacity"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/hitachi-energy-commits-250-million-transformer-shortage/742010/",
+      "body_text": "Hitachi Energy announced a $250 million investment to expand global production of transformer components, with more than 40% dedicated to the U.S. The company said data center development has pushed transformer demand beyond initial projections.",
+      "_prefilter": {
+        "artifact_id": "trade_press_c906877e7f8ac2bc",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-10-30",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "data centers",
+        "utility load",
+        "investment pipeline"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/dte-data-center-deal-transformational-growth-earnings/804231/",
+      "body_text": "DTE signed a 1.4GW agreement to serve a hyperscale data center and sees another 7GW of potential large loads. The utility now has a $30 billion investment pipeline for generation, distribution and other infrastructure from 2026 to 2030.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8af4de468aa71b03",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Ethan Howland",
+      "published_at": "2025-02-13",
+      "title": "Exelon data center pipeline jumps to 17 GW as load forecast turns positive",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "data centers",
+        "pipeline",
+        "load growth"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/exelon-data-center-pipeline-earnings-transmission/740034/",
+      "body_text": "Exelon utilities' pipeline of data centers and other high-density load projects more than doubled to 17GW. The company expects positive load growth and called for new approaches to ensure adequate power supplies.",
+      "_prefilter": {
+        "artifact_id": "trade_press_1c40d6cd25decce0",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Ethan Howland",
+      "published_at": "2025-02-28",
+      "title": "FirstEnergy’s 5-year data center pipeline doubles to 3 GW",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "data centers",
+        "pipeline",
+        "load growth"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/firstenergy-data-center-pipeline-earnings-transmission/741237/",
+      "body_text": "FirstEnergy's pipeline of potential data centers nearly doubled to almost 3GW by 2029. The utility expects industrial sales including data centers to grow 5.1% annually over the next five years.",
+      "_prefilter": {
+        "artifact_id": "trade_press_12592956a90d251e",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_8434daa99144e894",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2025-10-30",
+      "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "load growth",
+        "data centers",
+        "capital plan"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/firstenergy-data-centers-earnings/803612/",
+      "body_text": "FirstEnergy expects system peak load to jump 45% by 2035, driven by data center development. The company said developers will be responsible for incremental investments needed to support that growth.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8434daa99144e894",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Joelle Anselmo",
+      "published_at": "2024-05-23",
+      "title": "Italy-based Westrafo to build its first US transformer plant",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "factory",
+        "investment"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/italy-westrafo-power-transformer-facility-planned-in-trotwood-ohio/721345/",
+      "body_text": "Westrafo will invest at least $12 million to establish its first U.S. transformer plant in Ohio, with production expected to start in 2025 and output of 12GW per year by 2027.",
+      "_prefilter": {
+        "artifact_id": "trade_press_904540c22ad17bed",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "dropped_audit_records": [],
+  "metrics": {
+    "processed_artifact_count": 30,
+    "kept_count": 17,
+    "review_count": 13,
+    "dropped_count": 0
+  }
+}
