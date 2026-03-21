@@ -1,0 +1,292 @@
+{
+  "audit_name": "federal_register_historical_pages1_3_llm_no_candidate_audit_v1",
+  "source_audit_set": "federal_register_historical_pages1_3_rejection_audit_v1",
+  "scope": {
+    "source_batch_name": "federal_register_historical_pages1_3_prefilter_v1",
+    "review_target": "llm_no_candidate_items_only",
+    "total_llm_no_candidate_items": 29,
+    "unique_artifact_count": 17
+  },
+  "summary": {
+    "correct_rejection_count": 17,
+    "borderline_should_review_count": 0,
+    "false_negative_count": 0,
+    "overall_judgment": "All unique LLM no-candidate artifacts were valid rejections for the current rising-demand structural-pressure workflow."
+  },
+  "review_labels": [
+    "correct_rejection",
+    "borderline_should_review",
+    "false_negative"
+  ],
+  "artifact_reviews": [
+    {
+      "artifact_id": "policy_feed_4b2e13b06c9906f8",
+      "published_at": "2026-02-24",
+      "title": "Order Adopting Categorical Exclusions From Tennessee Valley Authority Under the National Environmental Policy Act; Notice of Adoption of Categorical Exclusions Under the National Environmental Policy Act",
+      "review_label": "correct_rejection",
+      "review_notes": "Policy-enabling notice that may reduce future review friction, but the artifact itself does not evidence current or planned demand-led capital deployment or physical buildout.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_6d6ba56a42dfcd82",
+      "published_at": "2026-02-24",
+      "title": "Submission for Review: 3206-0138, Reinstatement of Disability Annuity Previously Terminated Because of Restoration To Earning Capacity, RI 30-9",
+      "review_label": "correct_rejection",
+      "review_notes": "Paperwork and benefits administration notice with no plausible directional capital-flow implication.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_d3426979d9550bb1",
+      "published_at": "2026-02-24",
+      "title": "Before Commissioners: Laura V. Swett, Chairman; David Rosner, Lindsay S. See, Judy W. Chang, and David LaCerte; North American Electric Reliability Corporation; Order Approving Inverter-Based Resources and Generators Modeling Reliability Standards",
+      "review_label": "correct_rejection",
+      "review_notes": "Reliability-standards approval could matter later as system context, but the artifact alone does not signal current or planned directional capital movement.",
+      "provider_occurrences": [
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_08c2cec38f38c0df",
+      "published_at": "2026-02-25",
+      "title": "Agency Information Collection Activity: VA-Guaranteed Home Loan Cash-Out Refinance Loan Comparison Disclosure",
+      "review_label": "correct_rejection",
+      "review_notes": "Information-collection notice only. No demand-led buildout or directional capital deployment signal.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_4d34bc54c4bfa31e",
+      "published_at": "2026-02-25",
+      "title": "Self-Regulatory Organizations; Nasdaq PHLX LLC; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend Add Liquidity Orders",
+      "review_label": "correct_rejection",
+      "review_notes": "Exchange market-structure rule change, not a capital-flow or physical buildout signal.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_ae8423eef3b90cc9",
+      "published_at": "2026-02-25",
+      "title": "Agency Information Collection Activities; Comment Request; Report of Construction Contractor's Wage Rates",
+      "review_label": "correct_rejection",
+      "review_notes": "Construction appears only inside a paperwork-renewal context. The artifact does not indicate new construction activity or rising-demand capital deployment.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_c04e10c8143d48bb",
+      "published_at": "2026-02-25",
+      "title": "Self-Regulatory Organizations; Texas Stock Exchange LLC; Notice of Filing and Immediate Effectiveness of a Proposed Rule Change To Add an Offset Peg Order",
+      "review_label": "correct_rejection",
+      "review_notes": "Exchange order-type rule change with no plausible directional capital-flow implication for the current workflow.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_d4c584a01a37f3d8",
+      "published_at": "2026-02-25",
+      "title": "Self-Regulatory Organizations; Nasdaq MRX, LLC; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend an Add Liquidity Order",
+      "review_label": "correct_rejection",
+      "review_notes": "Exchange market-structure filing only. No physical-system stress or directional capital movement evidence.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_d82c2d55d29b7ab7",
+      "published_at": "2026-02-25",
+      "title": "Self-Regulatory Organizations; Nasdaq GEMX, LLC; Notice of Filing and Immediate Effectiveness of Proposed Rule Change To Amend Add Liquidity Orders",
+      "review_label": "correct_rejection",
+      "review_notes": "Exchange market-structure filing only. No directional capital-flow implication for rising-demand structural-pressure discovery.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_313e87f5ee6bcd9f",
+      "published_at": "2026-02-26",
+      "title": "Amended and Restated Order Under Section 17(h)(4) of the Securities Exchange Act of 1934 Granting Exemption From Rule 17h-1T and Rule 17h-2T for Certain Broker-Dealers Maintaining Capital of Less Than $100 Million and Total Assets of Less Than $1 Billion",
+      "review_label": "correct_rejection",
+      "review_notes": "Broker-dealer exemption order concerns regulatory thresholds, not directional capital deployment into a physical system.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_e2aa283fbc50515b",
+      "published_at": "2026-02-26",
+      "title": "Clean Air Act Operating Permit Program; Order on Petition for Objection to State Operating Permit for Platteville Natural Gas Processing Plant",
+      "review_label": "correct_rejection",
+      "review_notes": "Permit-objection order for an existing facility. The artifact does not indicate new demand-led buildout or current capital movement.",
+      "provider_occurrences": [
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_2ceb2d252849b7da",
+      "published_at": "2026-02-27",
+      "title": "Request for Comments on the Renewal of a Previously Approved Information Collection: Ocean Shipments Moving Under Export-Import Bank Financing",
+      "review_label": "correct_rejection",
+      "review_notes": "Monitoring/reporting renewal tied to already-financed projects, not a fresh signal of directional capital flow in the artifact itself.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_3d1962f60f69e27b",
+      "published_at": "2026-02-27",
+      "title": "Prospective Grant of an Exclusive Patent License: Powered Gait Assistance Systems and Gait Assistance Systems and Methods of Control Thereof",
+      "review_label": "correct_rejection",
+      "review_notes": "Exclusive licensing notice without concrete evidence of current or planned physical buildout. This remains out of scope for the current rising-demand workflow.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_e0766c57e71e1a35",
+      "published_at": "2026-02-27",
+      "title": "Agency Information Collection Activities: Information Collection Renewal; Submission for OMB Review; Appraisals for Higher-Priced Mortgage Loans",
+      "review_label": "correct_rejection",
+      "review_notes": "OMB review and paperwork-renewal notice only. No directional capital-flow implication.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_e361f10f17cb11ef",
+      "published_at": "2026-02-27",
+      "title": "Self-Regulatory Organizations; Nasdaq ISE, LLC; Notice of Filing of Amendment No. 5 and Order Instituting Proceedings To Determine Whether To Approve or Disapprove a Proposed Rule Change, as Modified by Amendment No. 5, To Amend the Position and Exercise Limits for IBIT Options",
+      "review_label": "correct_rejection",
+      "review_notes": "Exchange options market-structure rule matter, not evidence of directional capital deployment into a physical system.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_e380bf5295f244ee",
+      "published_at": "2026-02-27",
+      "title": "Prospective Grant of an Exclusive Patent License: In Vivo Manufactured Anti-CD19 Chimeric Antigen Receptor (CAR) Products for the Treatment or Prevention of B Cell Mediated Autoimmune Diseases; Correction",
+      "review_label": "correct_rejection",
+      "review_notes": "Correction to a licensing notice. No buildout or capital-flow evidence in the artifact.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_fe05aeb686c503b3",
+      "published_at": "2026-02-27",
+      "title": "Submission for OMB Review; Examination of Records by Comptroller General and Contract Audit",
+      "review_label": "correct_rejection",
+      "review_notes": "Contract-audit paperwork review only. No evidence of directional capital movement or demand-led physical buildout.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    }
+  ]
+}
