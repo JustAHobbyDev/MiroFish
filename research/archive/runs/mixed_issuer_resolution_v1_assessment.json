@@ -1,0 +1,27 @@
+{
+  "name": "mixed_issuer_resolution_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_v1.json",
+  "metrics": {
+    "issuer_resolution_plan_count": 6,
+    "resolve_first_count": 3,
+    "resolve_after_high_count": 3
+  },
+  "resolve_first_queue": [
+    "GridCore Manufacturing",
+    "Hitachi Energy",
+    "Lamina Grid Products"
+  ],
+  "notable_route_hints": {
+    "Westrafo": {
+      "route_hypothesis": "foreign_route_hint",
+      "foreign_geography_hints": [
+        "Italy"
+      ]
+    },
+    "Eaton": {
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": []
+    }
+  },
+  "decision": "use this queue for the first live issuer-resolution pass"
+}

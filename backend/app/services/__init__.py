@@ -135,6 +135,7 @@ from .bounded_entity_candidate_builder import build_bounded_entity_candidate_bat
 from .corporate_family_normalizer import build_corporate_family_batch
 from .bounded_entity_expander import build_bounded_entity_expansion_batch
 from .company_filing_expansion_planner import build_company_filing_expansion_batch
+from .issuer_resolution_planner import build_issuer_resolution_batch
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -254,6 +255,7 @@ __all__ = [
     'build_corporate_family_batch',
     'build_bounded_entity_expansion_batch',
     'build_company_filing_expansion_batch',
+    'build_issuer_resolution_batch',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',

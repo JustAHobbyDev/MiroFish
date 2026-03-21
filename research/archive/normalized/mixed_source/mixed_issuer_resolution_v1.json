@@ -1,0 +1,193 @@
+{
+  "name": "issuer_resolution_batch_v1",
+  "plans": [
+    {
+      "issuer_resolution_plan_id": "irp_gridcore_manufacturing_658e0aa3",
+      "origin_company_filing_expansion_plan_id": "cfep_gridcore_manufacturing_658e0aa3",
+      "canonical_entity_name": "GridCore Manufacturing",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "GridCore Manufacturing"
+      ],
+      "supporting_titles": [
+        "GridCore Manufacturing breaks ground on new power transformer production plant"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "GridCore Manufacturing",
+        "GridCore Manufacturing investor relations",
+        "GridCore Manufacturing annual report",
+        "GridCore Manufacturing SEC EDGAR",
+        "GridCore Manufacturing 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_hitachi_energy_d3b28bda",
+      "origin_company_filing_expansion_plan_id": "cfep_hitachi_energy_d3b28bda",
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Hitachi Energy",
+        "Hitachi Energy investor relations",
+        "Hitachi Energy annual report",
+        "Hitachi Energy SEC EDGAR",
+        "Hitachi Energy 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_lamina_grid_products_9cbaca4d",
+      "origin_company_filing_expansion_plan_id": "cfep_lamina_grid_products_9cbaca4d",
+      "canonical_entity_name": "Lamina Grid Products",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Lamina Grid Products"
+      ],
+      "supporting_titles": [
+        "Lamina Grid Products adds core and coil line to support transformer backlog"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Lamina Grid Products",
+        "Lamina Grid Products investor relations",
+        "Lamina Grid Products annual report",
+        "Lamina Grid Products SEC EDGAR",
+        "Lamina Grid Products 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_eaton_a12e4f80",
+      "origin_company_filing_expansion_plan_id": "cfep_eaton_a12e4f80",
+      "canonical_entity_name": "Eaton",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "Eaton",
+        "Eaton investor relations",
+        "Eaton annual report",
+        "Eaton SEC EDGAR",
+        "Eaton 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_meterwave_technologies_84e59381",
+      "origin_company_filing_expansion_plan_id": "cfep_meterwave_technologies_84e59381",
+      "canonical_entity_name": "MeterWave Technologies",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "MeterWave Technologies"
+      ],
+      "supporting_titles": [
+        "MeterWave Technologies expands smart meter production lines for utility modernization programs"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "MeterWave Technologies",
+        "MeterWave Technologies investor relations",
+        "MeterWave Technologies annual report",
+        "MeterWave Technologies SEC EDGAR",
+        "MeterWave Technologies 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_westrafo_9183018f",
+      "origin_company_filing_expansion_plan_id": "cfep_westrafo_9183018f",
+      "canonical_entity_name": "Westrafo",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Westrafo"
+      ],
+      "supporting_titles": [
+        "Italy-based Westrafo to build its first US transformer plant"
+      ],
+      "route_hypothesis": "foreign_route_hint",
+      "foreign_geography_hints": [
+        "Italy"
+      ],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "annual report or equivalent",
+        "20-F if SEC-registered foreign issuer"
+      ],
+      "issuer_resolution_query_terms": [
+        "Westrafo",
+        "Westrafo investor relations",
+        "Westrafo annual report",
+        "Westrafo 20-F",
+        "Westrafo annual report pdf"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    }
+  ],
+  "metrics": {
+    "input_company_filing_expansion_plan_count": 6,
+    "issuer_resolution_plan_count": 6
+  }
+}
