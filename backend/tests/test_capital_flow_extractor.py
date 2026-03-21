@@ -38,15 +38,22 @@ class _FakeLLMClient:
         self.payload = payload
         self.calls = []
 
-    def chat_json(self, messages, temperature=0.0, max_tokens=0):
+    def chat(self, messages, temperature=0.0, max_tokens=0, response_format=None):
         self.calls.append(
             {
                 "messages": messages,
                 "temperature": temperature,
                 "max_tokens": max_tokens,
+                "response_format": response_format,
             }
         )
         return self.payload
+
+    @staticmethod
+    def parse_json_text(response):
+        import json
+
+        return json.loads(response)
 
 
 def _sample_artifact():
@@ -72,24 +79,92 @@ def test_validate_capital_flow_extraction_payload_accepts_valid_no_candidate():
     assert validated["candidates"] == []
 
 
-def test_validate_capital_flow_extraction_payload_rejects_missing_rejection_reason():
+def test_validate_capital_flow_extraction_payload_coerces_string_boolean_and_null_candidates():
+    payload = {
+        "produced_candidates": "false",
+        "candidates": None,
+        "rejection_reason": "No direct buildout signal.",
+    }
+    validated = module.validate_capital_flow_extraction_payload(payload)
+    assert validated["produced_candidates"] is False
+    assert validated["candidates"] == []
+
+
+def test_validate_capital_flow_extraction_payload_accepts_top_level_candidate_list():
+    payload = [
+        {
+            "observable_statement": "The company announced a new plant.",
+            "capital_flow_implication_type": "physical buildout",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Capital is moving into capacity expansion.",
+            "system_hints": ["industrial plant"],
+            "physical_implication": "New manufacturing capacity is being added.",
+            "confidence": 0.82,
+        }
+    ]
+    validated = module.validate_capital_flow_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["capital_flow_implication_type"] == "capacity_response"
+    assert validated["candidates"][0]["confidence"] == "high"
+
+
+def test_validate_capital_flow_extraction_payload_infers_produced_candidates_from_candidates():
+    payload = {
+        "candidates": [
+            {
+                "observable_statement": "The company announced a new contract.",
+                "capital_flow_implication_type": "procurement_pull",
+                "observation_directness": "direct",
+                "capital_flow_implication": "Committed demand is increasing.",
+                "system_hints": ["industrial components"],
+                "physical_implication": "Suppliers may need to raise throughput.",
+                "confidence": 0.6,
+            }
+        ],
+        "rejection_reason": None,
+    }
+    validated = module.validate_capital_flow_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["capital_flow_implication_type"] == "procurement_or_commitment_pull"
+    assert validated["candidates"][0]["confidence"] == "medium"
+
+
+def test_validate_capital_flow_extraction_payload_accepts_candidate_alias_key_and_directness_alias():
+    payload = {
+        "capital_flow_signal_candidates": [
+            {
+                "observable_statement": "A company broke ground on a new plant.",
+                "capital_flow_implication_type": "capital investment",
+                "observation_directness": "high",
+                "capital_flow_implication": "Spending is moving into plant construction.",
+                "system_hints": "industrial plant",
+                "physical_implication": "new facility construction",
+                "confidence": "medium",
+            }
+        ]
+    }
+    validated = module.validate_capital_flow_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["capital_flow_implication_type"] == "direct_capital_allocation"
+    assert validated["candidates"][0]["observation_directness"] == "direct"
+
+
+def test_validate_capital_flow_extraction_payload_fills_missing_rejection_reason_for_explicit_no_candidate():
     payload = {
         "produced_candidates": False,
         "candidates": [],
         "rejection_reason": None,
     }
-    try:
-        module.validate_capital_flow_extraction_payload(payload)
-    except ValueError as exc:
-        assert "rejection_reason" in str(exc)
-    else:  # pragma: no cover - safety
-        raise AssertionError("Expected ValueError")
+    validated = module.validate_capital_flow_extraction_payload(payload)
+    assert validated["produced_candidates"] is False
+    assert validated["rejection_reason"]
 
 
 def test_extractor_returns_valid_candidate_batch():
     llm = _FakeLLMClient(
+        """
         {
-            "produced_candidates": True,
+            "produced_candidates": true,
             "candidates": [
                 {
                     "observable_statement": "The company is building a new manufacturing plant.",
@@ -98,11 +173,12 @@ def test_extractor_returns_valid_candidate_batch():
                     "capital_flow_implication": "The release implies active capital deployment into manufacturing capacity.",
                     "system_hints": ["battery materials"],
                     "physical_implication": "More physical production capacity is being added to this manufacturing layer.",
-                    "confidence": "high",
+                    "confidence": "high"
                 }
             ],
-            "rejection_reason": None,
+            "rejection_reason": null
         }
+        """
     )
     extractor = module.CapitalFlowExtractor(
         llm_client=llm,
@@ -117,15 +193,18 @@ def test_extractor_returns_valid_candidate_batch():
     assert result["provider_name"] == "openai"
     assert result["model_name"] == "gpt-4o-mini"
     assert llm.calls[0]["temperature"] == 0.1
+    assert llm.calls[0]["response_format"] is None
 
 
 def test_build_capital_flow_signal_batch_instruments_schema_failures():
     llm = _FakeLLMClient(
+        """
         {
-            "produced_candidates": True,
+            "produced_candidates": true,
             "candidates": [],
-            "rejection_reason": None,
+            "rejection_reason": null
         }
+        """
     )
     extractor = module.CapitalFlowExtractor(
         llm_client=llm,
@@ -148,8 +227,9 @@ def test_build_capital_flow_signal_batch_instruments_schema_failures():
 
 def test_build_capital_flow_signal_batch_counts_review_candidates():
     llm = _FakeLLMClient(
+        """
         {
-            "produced_candidates": True,
+            "produced_candidates": true,
             "candidates": [
                 {
                     "observable_statement": "The release announces a supply agreement for new production.",
@@ -158,11 +238,12 @@ def test_build_capital_flow_signal_batch_counts_review_candidates():
                     "capital_flow_implication": "The agreement implies committed directional demand into this production system.",
                     "system_hints": ["industrial components"],
                     "physical_implication": "Committed procurement may pull additional capacity into the supply chain.",
-                    "confidence": "medium",
+                    "confidence": "medium"
                 }
             ],
-            "rejection_reason": None,
+            "rejection_reason": null
         }
+        """
     )
     extractor = module.CapitalFlowExtractor(
         llm_client=llm,

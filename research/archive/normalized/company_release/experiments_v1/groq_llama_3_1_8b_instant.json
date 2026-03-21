@@ -1,0 +1,251 @@
+{
+  "name": "company_release_sample_prefilter_v1",
+  "source_class": "company_release",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "llama-3.1-8b-instant",
+  "processed_results": [
+    {
+      "artifact_id": "company_release_328fad99416fbef1",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "GridCore Manufacturing has broken ground on a new power transformer production plant in Oklahoma.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased demand for power transformers",
+          "system_hints": [
+            "grid modernization, substation replacement, transmission buildout"
+          ],
+          "physical_implication": "new manufacturing capacity",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The facility is expected to increase output for utility customers.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased production of power transformers",
+          "system_hints": [
+            "utility customers, grid modernization, substation replacement, transmission buildout"
+          ],
+          "physical_implication": "new manufacturing capacity",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The company said the new site will add significant annual manufacturing capacity once fully operational.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "new manufacturing capacity",
+          "system_hints": [
+            "power transformer production plant"
+          ],
+          "physical_implication": "new manufacturing capacity",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "groq",
+      "model_name": "llama-3.1-8b-instant",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:09:20Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_9f3fe7173322b302",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "ThermaLoop Systems announced a multi-year supply agreement",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased demand for data center cooling modules",
+          "system_hints": [
+            "data center infrastructure"
+          ],
+          "physical_implication": "increased production of data center cooling modules",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Management stated that the agreement is expected to support a sustained production ramp",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "increased investment in production capacity",
+          "system_hints": [
+            "data center cooling module manufacturing"
+          ],
+          "physical_implication": "physical buildout of manufacturing facilities",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The agreement covers liquid cooling modules and related systems across multiple planned deployment phases",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "increased investment in data center infrastructure",
+          "system_hints": [
+            "data center infrastructure development"
+          ],
+          "physical_implication": "physical construction of data centers",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "groq",
+      "model_name": "llama-3.1-8b-instant",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:09:21Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_d21c574184e58807",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Frontier Separation Holdings announced a financing package to support construction and commissioning of a domestic rare earth separation facility.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "equipment purchases",
+          "system_hints": [
+            "rare earth separation facility"
+          ],
+          "physical_implication": "equipment purchases, site development, and process-line installation",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company said the package will fund equipment purchases, site development, and process-line installation.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "site development and process-line installation",
+          "system_hints": [
+            "rare earth separation facility"
+          ],
+          "physical_implication": "equipment purchases, site development, and process-line installation",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The initial phase is expected to begin operations next year.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "construction and commissioning of a domestic rare earth separation facility",
+          "system_hints": [
+            "rare earth separation facility"
+          ],
+          "physical_implication": "equipment purchases, site development, and process-line installation",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "groq",
+      "model_name": "llama-3.1-8b-instant",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:09:21Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_4b2d0901f2a0394e",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "OptiWeave Networks announced a strategic partnership with a system integrator to explore next-generation networking solutions.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "possible increase in procurement of next-generation networking solutions",
+          "system_hints": [
+            "next-generation networking solutions, system integrator"
+          ],
+          "physical_implication": "no physical buildout implied",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The parties plan to collaborate on future product designs and market development opportunities.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "possible increase in investment in product design and market development",
+          "system_hints": [
+            "future product designs, market development opportunities"
+          ],
+          "physical_implication": "no physical buildout implied",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "OptiWeave Networks announced a strategic partnership with a system integrator.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "possible increase in investment in the partnership",
+          "system_hints": [
+            "strategic partnership, system integrator"
+          ],
+          "physical_implication": "no physical buildout implied",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "groq",
+      "model_name": "llama-3.1-8b-instant",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:09:22Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "company_release_d504c2a0d9c8be13",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The companies said the venture will accelerate product development and expand go-to-market coverage.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "increased",
+          "system_hints": [
+            "industrial automation systems"
+          ],
+          "physical_implication": "possible expansion of production capacity",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The companies said the venture will accelerate product development and expand go-to-market coverage.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "increased",
+          "system_hints": [
+            "industrial automation systems"
+          ],
+          "physical_implication": "possible expansion of production capacity",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The companies said the venture will accelerate product development and expand go-to-market coverage.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "increased",
+          "system_hints": [
+            "industrial automation systems"
+          ],
+          "physical_implication": "possible expansion of production capacity",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "provider_name": "groq",
+      "model_name": "llama-3.1-8b-instant",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:09:22Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 5,
+    "successful_extractions": 5,
+    "schema_failure_count": 0,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 5,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 15,
+    "review_artifact_count": 2,
+    "review_candidate_artifact_count": 2
+  }
+}

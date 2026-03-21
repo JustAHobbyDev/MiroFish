@@ -126,7 +126,9 @@ class LLMClient:
         self,
         messages: List[Dict[str, str]],
         temperature: float = 0.3,
-        max_tokens: int = 4096
+        max_tokens: int = 4096,
+        *,
+        use_response_format: bool = True,
     ) -> Dict[str, Any]:
         """
         发送聊天请求并返回JSON
@@ -143,8 +145,12 @@ class LLMClient:
             messages=messages,
             temperature=temperature,
             max_tokens=max_tokens,
-            response_format={"type": "json_object"}
+            response_format={"type": "json_object"} if use_response_format else None,
         )
+        return self.parse_json_text(response)
+
+    @staticmethod
+    def parse_json_text(response: str) -> Dict[str, Any]:
         # 清理markdown代码块标记
         cleaned_response = response.strip()
         cleaned_response = re.sub(r'^```(?:json)?\s*\n?', '', cleaned_response, flags=re.IGNORECASE)

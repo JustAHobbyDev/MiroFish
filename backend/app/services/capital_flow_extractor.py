@@ -33,6 +33,21 @@ ALLOWED_IMPLICATION_TYPES = {
 }
 ALLOWED_DIRECTNESS = {"direct", "indirect"}
 ALLOWED_CONFIDENCE = {"low", "medium", "high"}
+IMPLICATION_TYPE_ALIASES = {
+    "direct_capital_allocation": "direct_capital_allocation",
+    "capital_inflow": "direct_capital_allocation",
+    "procurement_or_commitment_pull": "procurement_or_commitment_pull",
+    "procurement_pull": "procurement_or_commitment_pull",
+    "procurement pull": "procurement_or_commitment_pull",
+    "commitment_pull": "procurement_or_commitment_pull",
+    "capacity_response": "capacity_response",
+    "capacity expansion": "capacity_response",
+    "physical_buildout": "capacity_response",
+    "physical buildout": "capacity_response",
+    "architecture_induced_intensity": "architecture_induced_intensity",
+    "architecture_induced_intensity_increase": "architecture_induced_intensity",
+    "policy_enabled_buildout": "policy_enabled_buildout",
+}
 
 
 SYSTEM_PROMPT = """You are extracting possible capital-flow implications from a single public artifact.
@@ -71,6 +86,94 @@ def _normalize_system_hints(value: Any) -> List[str]:
     return [single] if single else []
 
 
+def _coerce_bool(value: Any) -> Optional[bool]:
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        if value in {0, 1}:
+            return bool(value)
+        return None
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "yes", "y", "1"}:
+            return True
+        if normalized in {"false", "no", "n", "0"}:
+            return False
+    return None
+
+
+def _normalize_implication_type(value: Any) -> str:
+    normalized = _coerce_string(value).strip().lower().replace("-", "_")
+    if normalized in IMPLICATION_TYPE_ALIASES:
+        return IMPLICATION_TYPE_ALIASES[normalized]
+    if "procurement" in normalized or "commitment" in normalized or "order" in normalized:
+        return "procurement_or_commitment_pull"
+    if "capacity" in normalized or "buildout" in normalized or "build_out" in normalized:
+        return "capacity_response"
+    if "policy" in normalized:
+        return "policy_enabled_buildout"
+    if "architecture" in normalized or "intensity" in normalized:
+        return "architecture_induced_intensity"
+    if "capital" in normalized or "investment" in normalized:
+        return "direct_capital_allocation"
+    return normalized
+
+
+def _normalize_confidence(value: Any) -> str:
+    if isinstance(value, (int, float)):
+        if value >= 0.8:
+            return "high"
+        if value >= 0.5:
+            return "medium"
+        return "low"
+    normalized = _coerce_string(value).strip().lower()
+    if normalized in ALLOWED_CONFIDENCE:
+        return normalized
+    return normalized
+
+
+def _normalize_directness(value: Any) -> str:
+    normalized = _coerce_string(value).strip().lower()
+    if normalized in ALLOWED_DIRECTNESS:
+        return normalized
+    if normalized in {"high", "medium", "explicit", "stated", "announced"}:
+        return "direct"
+    if normalized in {"low", "inferred", "implicit", "possible", "potential"}:
+        return "indirect"
+    return normalized
+
+
+def _normalize_payload_shape(payload: Any) -> Dict[str, Any]:
+    if isinstance(payload, list):
+        return {
+            "produced_candidates": bool(payload),
+            "candidates": payload,
+            "rejection_reason": None if payload else "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+        }
+    if not isinstance(payload, dict):
+        raise ValueError("Extraction payload must be a JSON object.")
+
+    candidates = payload.get("candidates")
+    if candidates is None and isinstance(payload.get("results"), list):
+        candidates = payload.get("results")
+    if candidates is None and isinstance(payload.get("capital_flow_signal_candidates"), list):
+        candidates = payload.get("capital_flow_signal_candidates")
+
+    produced_candidates = payload.get("produced_candidates")
+    if produced_candidates is None and isinstance(candidates, list):
+        produced_candidates = bool(candidates)
+
+    rejection_reason = payload.get("rejection_reason")
+    if rejection_reason is None and produced_candidates is False:
+        rejection_reason = "No plausible directional capital-flow implication can be inferred from the artifact alone."
+
+    return {
+        "produced_candidates": produced_candidates,
+        "candidates": candidates,
+        "rejection_reason": rejection_reason,
+    }
+
+
 def build_capital_flow_extraction_messages(artifact: Dict[str, Any]) -> List[Dict[str, str]]:
     user_prompt = f"""Artifact metadata:
 - artifact_id: {_coerce_string(artifact.get("artifact_id"))}
@@ -105,12 +208,12 @@ Task:
 
 def _validate_candidate(candidate: Dict[str, Any], index: int) -> Dict[str, Any]:
     observable_statement = _coerce_string(candidate.get("observable_statement"))
-    implication_type = _coerce_string(candidate.get("capital_flow_implication_type"))
-    directness = _coerce_string(candidate.get("observation_directness"))
+    implication_type = _normalize_implication_type(candidate.get("capital_flow_implication_type"))
+    directness = _normalize_directness(candidate.get("observation_directness"))
     implication = _coerce_string(candidate.get("capital_flow_implication"))
     system_hints = _normalize_system_hints(candidate.get("system_hints"))
     physical_implication = _coerce_string(candidate.get("physical_implication"))
-    confidence = _coerce_string(candidate.get("confidence"))
+    confidence = _normalize_confidence(candidate.get("confidence"))
 
     if not observable_statement:
         raise ValueError(f"candidate[{index}] missing observable_statement")
@@ -139,15 +242,16 @@ def _validate_candidate(candidate: Dict[str, Any], index: int) -> Dict[str, Any]
 
 
 def validate_capital_flow_extraction_payload(payload: Dict[str, Any]) -> Dict[str, Any]:
-    if not isinstance(payload, dict):
-        raise ValueError("Extraction payload must be a JSON object.")
+    normalized_payload = _normalize_payload_shape(payload)
 
-    produced_candidates = payload.get("produced_candidates")
-    candidates = payload.get("candidates")
-    rejection_reason = payload.get("rejection_reason")
+    produced_candidates = _coerce_bool(normalized_payload.get("produced_candidates"))
+    candidates = normalized_payload.get("candidates")
+    rejection_reason = normalized_payload.get("rejection_reason")
 
     if not isinstance(produced_candidates, bool):
         raise ValueError("produced_candidates must be a boolean.")
+    if candidates is None:
+        candidates = []
     if not isinstance(candidates, list):
         raise ValueError("candidates must be a list.")
 
@@ -193,12 +297,21 @@ class CapitalFlowExtractor:
 
     def extract_from_artifact(self, artifact: Dict[str, Any]) -> Dict[str, Any]:
         messages = build_capital_flow_extraction_messages(artifact)
-        raw_payload = self.llm_client.chat_json(
+        raw_response_text = self.llm_client.chat(
             messages=messages,
             temperature=0.1,
             max_tokens=1400,
         )
-        validated = validate_capital_flow_extraction_payload(raw_payload)
+        try:
+            raw_payload = self.llm_client.parse_json_text(raw_response_text)
+        except ValueError as exc:
+            setattr(exc, "raw_payload", raw_response_text)
+            raise
+        try:
+            validated = validate_capital_flow_extraction_payload(raw_payload)
+        except ValueError as exc:
+            setattr(exc, "raw_payload", raw_payload)
+            raise
         return {
             "artifact_id": _coerce_string(artifact.get("artifact_id")),
             "source_class": _coerce_string(artifact.get("source_class")),
@@ -254,6 +367,7 @@ def build_capital_flow_signal_batch(
                     "prefilter_triage": triage,
                     "error_type": "schema_validation_error",
                     "error_message": str(exc),
+                    "raw_payload": getattr(exc, "raw_payload", None),
                 }
             )
             continue

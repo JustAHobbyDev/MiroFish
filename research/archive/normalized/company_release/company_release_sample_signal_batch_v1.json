@@ -1,0 +1,51 @@
+{
+  "name": "company_release_sample_prefilter_v1",
+  "source_class": "company_release",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [],
+  "schema_failures": [],
+  "extraction_failures": [
+    {
+      "artifact_id": "company_release_328fad99416fbef1",
+      "prefilter_triage": "keep",
+      "error_type": "extraction_runtime_error",
+      "error_message": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    },
+    {
+      "artifact_id": "company_release_9f3fe7173322b302",
+      "prefilter_triage": "keep",
+      "error_type": "extraction_runtime_error",
+      "error_message": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    },
+    {
+      "artifact_id": "company_release_d21c574184e58807",
+      "prefilter_triage": "keep",
+      "error_type": "extraction_runtime_error",
+      "error_message": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    },
+    {
+      "artifact_id": "company_release_4b2d0901f2a0394e",
+      "prefilter_triage": "review",
+      "error_type": "extraction_runtime_error",
+      "error_message": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    },
+    {
+      "artifact_id": "company_release_d504c2a0d9c8be13",
+      "prefilter_triage": "review",
+      "error_type": "extraction_runtime_error",
+      "error_message": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+    }
+  ],
+  "metrics": {
+    "artifacts_sent_to_llm": 5,
+    "successful_extractions": 0,
+    "schema_failure_count": 0,
+    "extraction_failure_count": 5,
+    "produced_candidate_artifact_count": 0,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 0,
+    "review_artifact_count": 2,
+    "review_candidate_artifact_count": 0
+  }
+}

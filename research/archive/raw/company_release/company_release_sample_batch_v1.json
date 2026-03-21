@@ -1,0 +1,74 @@
+{
+  "records": [
+    {
+      "source_url": "https://example.com/releases/2025-09-18-grid-transformers-expansion",
+      "publisher": "Business Wire",
+      "issuer_name": "GridCore Manufacturing",
+      "published_at": "2025-09-18T13:00:00Z",
+      "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
+      "subheadline": "Expansion is intended to increase domestic output for utility and grid modernization projects.",
+      "categories": ["Manufacturing", "Expansion"],
+      "body_text": "GridCore Manufacturing today announced that it has broken ground on a new power transformer production plant in Oklahoma. The facility is expected to increase output for utility customers pursuing grid modernization, substation replacement, and transmission buildout. The company said the new site will add significant annual manufacturing capacity once fully operational."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-10-02-data-center-supply-agreement",
+      "publisher": "PR Newswire",
+      "issuer_name": "ThermaLoop Systems",
+      "published_at": "2025-10-02T12:30:00Z",
+      "title": "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules",
+      "subheadline": "Agreement supports expanding deployment schedules for large-scale AI infrastructure programs.",
+      "categories": ["Supply Agreement", "Data Centers"],
+      "body_text": "ThermaLoop Systems announced a multi-year supply agreement with an infrastructure integrator serving large-scale AI data center deployments. The agreement covers liquid cooling modules and related systems across multiple planned deployment phases. Management stated that the agreement is expected to support a sustained production ramp over the coming quarters."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-11-14-rare-earth-separation-loan",
+      "publisher": "GlobeNewswire",
+      "issuer_name": "Frontier Separation Holdings",
+      "published_at": "2025-11-14T15:45:00Z",
+      "title": "Frontier Separation Holdings secures financing package for rare earth separation facility",
+      "subheadline": "Capital package will support construction and commissioning of a domestic processing site.",
+      "categories": ["Financing", "Critical Materials"],
+      "body_text": "Frontier Separation Holdings announced a financing package to support construction and commissioning of a domestic rare earth separation facility. The company said the package will fund equipment purchases, site development, and process-line installation. The initial phase is expected to begin operations next year."
+    },
+    {
+      "source_url": "https://example.com/releases/2025-12-05-networking-partnership",
+      "publisher": "Business Wire",
+      "issuer_name": "OptiWeave Networks",
+      "published_at": "2025-12-05T14:10:00Z",
+      "title": "OptiWeave Networks announces strategic partnership for next-generation networking solutions",
+      "subheadline": "Partnership will explore advanced optical connectivity opportunities.",
+      "categories": ["Partnership", "Networking"],
+      "body_text": "OptiWeave Networks announced a strategic partnership with a system integrator to explore next-generation networking solutions. The parties plan to collaborate on future product designs and market development opportunities. No construction, order, or capacity commitments were disclosed."
+    },
+    {
+      "source_url": "https://example.com/releases/2026-01-09-industrial-controls-jv",
+      "publisher": "PR Newswire",
+      "issuer_name": "MotionArc Controls",
+      "published_at": "2026-01-09T11:05:00Z",
+      "title": "MotionArc Controls enters joint venture for industrial automation systems",
+      "subheadline": "New venture aims to accelerate product development for factory modernization.",
+      "categories": ["Joint Venture", "Industrial Automation"],
+      "body_text": "MotionArc Controls announced a joint venture focused on industrial automation systems. The companies said the venture will accelerate product development and expand go-to-market coverage. Specific factory, procurement, or buildout commitments were not disclosed."
+    },
+    {
+      "source_url": "https://example.com/releases/2026-01-20-brand-refresh",
+      "publisher": "GlobeNewswire",
+      "issuer_name": "NovaEdge Platforms",
+      "published_at": "2026-01-20T09:00:00Z",
+      "title": "NovaEdge Platforms launches innovation initiative for long-term growth",
+      "subheadline": "Program highlights product vision and market opportunity.",
+      "categories": ["Corporate Update"],
+      "body_text": "NovaEdge Platforms announced a corporate innovation initiative focused on long-term growth and market opportunity. The program includes branding, internal coordination, and strategic planning. No orders, expansions, construction, or financing actions were announced."
+    },
+    {
+      "source_url": "https://example.com/releases/2026-02-03-healthcare-brand-campaign",
+      "publisher": "Business Wire",
+      "issuer_name": "CareBridge Systems",
+      "published_at": "2026-02-03T16:20:00Z",
+      "title": "CareBridge Systems launches new healthcare branding campaign",
+      "subheadline": "Campaign promotes awareness of the company’s integrated care platform.",
+      "categories": ["Marketing"],
+      "body_text": "CareBridge Systems launched a new healthcare branding campaign to promote awareness of its integrated care platform. The company said the campaign will support broader customer engagement and messaging consistency. No new capital projects or procurement actions were announced."
+    }
+  ]
+}
