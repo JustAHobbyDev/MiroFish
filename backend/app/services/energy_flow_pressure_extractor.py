@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import os
 from datetime import datetime, timezone
+import re
 from typing import Any, Dict, List, Optional
 
 from ..config import Config
@@ -108,6 +109,47 @@ RELATIONSHIP_ALIASES = {
     "dual_role": "energy_flow_pressure_and_capital_flow",
 }
 
+ENERGY_SYSTEM_LINKAGE_TERMS = (
+    "power",
+    "electric",
+    "electricity",
+    "grid",
+    "utility",
+    "utilities",
+    "generation",
+    "generator",
+    "transformer",
+    "transmission",
+    "distribution",
+    "switchgear",
+    "substation",
+    "interconnection",
+    "load",
+)
+
+DATA_CENTER_BUILDOUT_TERMS = (
+    "campus",
+    "hyperscale",
+    "it capacity",
+    "data center development",
+    "data center campus",
+    "construction",
+    "ground",
+    "final engineering",
+    "engineering phase",
+    "buildout",
+)
+
+LABOR_ONLY_TERMS = (
+    "job",
+    "jobs",
+    "workforce",
+    "hiring",
+    "employment",
+    "create",
+    "creating",
+)
+
 
 SYSTEM_PROMPT = """You are extracting possible energy-system pressure implications from a single public artifact.
 
@@ -159,6 +201,59 @@ def _coerce_bool(value: Any) -> Optional[bool]:
         if normalized in {"false", "no", "n", "0"}:
             return False
     return None
+
+
+def _contains_energy_system_linkage(text: str) -> bool:
+    normalized = text.lower()
+    if re.search(r"\b\d+\s?(mw|gw)\b", normalized):
+        return True
+    return any(term in normalized for term in ENERGY_SYSTEM_LINKAGE_TERMS)
+
+
+def _contains_data_center_buildout_linkage(text: str) -> bool:
+    normalized = text.lower()
+    if "data center" not in normalized:
+        return False
+    if re.search(r"\b\d+\s?(mw|gw)\b", normalized):
+        return True
+    return any(term in normalized for term in DATA_CENTER_BUILDOUT_TERMS)
+
+
+def _apply_trade_press_energy_postfilter(
+    artifact: Dict[str, Any],
+    candidates: List[Dict[str, Any]],
+) -> tuple[List[Dict[str, Any]], List[str]]:
+    artifact_text = " ".join(
+        [
+            _coerce_string(artifact.get("title")),
+            _coerce_string(artifact.get("body_text")),
+        ]
+    ).lower()
+    filtered: List[Dict[str, Any]] = []
+    dropped_errors: List[str] = []
+
+    for index, candidate in enumerate(candidates):
+        observable = _coerce_string(candidate.get("observable_statement")).lower()
+
+        if any(term in observable for term in LABOR_ONLY_TERMS):
+            dropped_errors.append(
+                f"candidate[{index}] suppressed as labor-only energy observation"
+            )
+            continue
+
+        if _contains_energy_system_linkage(artifact_text):
+            filtered.append(candidate)
+            continue
+
+        if _contains_data_center_buildout_linkage(artifact_text):
+            filtered.append(candidate)
+            continue
+
+        dropped_errors.append(
+            f"candidate[{index}] suppressed for lacking explicit energy-system or data-center-buildout linkage"
+        )
+
+    return filtered, dropped_errors
 
 
 def _normalize_energy_pressure_type(value: Any) -> str:
@@ -402,13 +497,30 @@ class EnergyFlowPressureExtractor:
             setattr(exc, "raw_payload", raw_payload)
             raise
 
+        dropped_candidate_errors = list(validated["dropped_candidate_errors"])
+        candidates = list(validated["candidates"])
+        if _coerce_string(artifact.get("source_class")) == "trade_press":
+            candidates, postfilter_errors = _apply_trade_press_energy_postfilter(
+                artifact,
+                candidates,
+            )
+            dropped_candidate_errors.extend(postfilter_errors)
+
+        produced_candidates = bool(candidates)
+        rejection_reason = validated["rejection_reason"]
+        if not produced_candidates:
+            rejection_reason = (
+                rejection_reason
+                or "No candidate retained after energy-flow postfilter."
+            )
+
         return {
             "artifact_id": _coerce_string(artifact.get("artifact_id")),
             "source_class": _coerce_string(artifact.get("source_class")),
-            "produced_candidates": validated["produced_candidates"],
-            "candidates": validated["candidates"],
-            "rejection_reason": validated["rejection_reason"],
-            "dropped_candidate_errors": validated["dropped_candidate_errors"],
+            "produced_candidates": produced_candidates,
+            "candidates": candidates,
+            "rejection_reason": rejection_reason,
+            "dropped_candidate_errors": dropped_candidate_errors,
             "provider_name": self.provider,
             "model_name": self.model_name,
             "prompt_version": ENERGY_FLOW_EXTRACTION_PROMPT_VERSION,

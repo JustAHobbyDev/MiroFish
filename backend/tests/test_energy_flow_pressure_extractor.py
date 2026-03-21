@@ -89,6 +89,18 @@ def _sample_trade_press_dual_role_artifact():
     }
 
 
+def _sample_trade_press_generic_manufacturing_artifact():
+    return {
+        "artifact_id": "trade_energy_3",
+        "source_class": "trade_press",
+        "publisher_or_author": "Manufacturing Dive",
+        "published_at": "2026-02-22",
+        "title": "Hyundai boosts US investments to $26B through 2028",
+        "source_url": "https://example.com/trade/hyundai",
+        "body_text": "Hyundai increased its U.S. investment commitment to expand vehicle production capacity, fund a steel plant and build a robotics facility.",
+    }
+
+
 def test_validate_energy_flow_pressure_payload_accepts_valid_no_candidate():
     payload = {
         "produced_candidates": False,
@@ -338,6 +350,95 @@ def test_energy_flow_extractor_returns_dual_role_candidate():
 
     assert result["produced_candidates"] is True
     assert result["candidates"][0]["relationship_to_capital_flow"] == "energy_flow_pressure_and_capital_flow"
+
+
+def test_energy_flow_extractor_suppresses_generic_manufacturing_energy_overcall():
+    llm = _FakeLLMClient(
+        """
+        {
+          "produced_candidates": true,
+          "candidates": [
+            {
+              "observable_statement": "The steel plant indicates a need for substantial energy inputs.",
+              "energy_pressure_type": "load_growth",
+              "observation_directness": "direct",
+              "energy_flow_implication": "Manufacturing operations will use more energy.",
+              "system_hints": ["steel production", "robotics"],
+              "physical_implication": "Industrial energy demand may rise.",
+              "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+              "confidence": "medium"
+            },
+            {
+              "observable_statement": "The robotics facility will need power for automated systems.",
+              "energy_pressure_type": "load_growth",
+              "observation_directness": "direct",
+              "energy_flow_implication": "Power demand may rise with robotics deployment.",
+              "system_hints": ["robotics facility"],
+              "physical_implication": "Electricity use may increase.",
+              "relationship_to_capital_flow": "energy_flow_pressure_only",
+              "confidence": "medium"
+            }
+          ],
+          "rejection_reason": null
+        }
+        """
+    )
+    extractor = module.EnergyFlowPressureExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_trade_press_generic_manufacturing_artifact())
+
+    assert result["produced_candidates"] is False
+    assert result["candidates"] == []
+    assert result["rejection_reason"] == "No candidate retained after energy-flow postfilter."
+    assert len(result["dropped_candidate_errors"]) == 2
+
+
+def test_energy_flow_extractor_drops_labor_only_candidate_even_when_artifact_is_valid():
+    llm = _FakeLLMClient(
+        """
+        {
+          "produced_candidates": true,
+          "candidates": [
+            {
+              "observable_statement": "The utility's pipeline has grown substantially.",
+              "energy_pressure_type": "pipeline_pressure",
+              "observation_directness": "direct",
+              "energy_flow_implication": "Future energy demand is rising.",
+              "system_hints": ["utility grid"],
+              "physical_implication": "The grid may need upgrades.",
+              "relationship_to_capital_flow": "energy_flow_pressure_only",
+              "confidence": "medium"
+            },
+            {
+              "observable_statement": "The project will create many jobs.",
+              "energy_pressure_type": "load_growth",
+              "observation_directness": "indirect",
+              "energy_flow_implication": "Hiring may support future production.",
+              "system_hints": ["utility workforce"],
+              "physical_implication": "More labor may be needed.",
+              "relationship_to_capital_flow": "energy_flow_pressure_only",
+              "confidence": "medium"
+            }
+          ],
+          "rejection_reason": null
+        }
+        """
+    )
+    extractor = module.EnergyFlowPressureExtractor(
+        llm_client=llm,
+        provider="openai",
+        model_name="gpt-4o-mini",
+    )
+
+    result = extractor.extract_from_artifact(_sample_trade_press_pipeline_artifact())
+
+    assert result["produced_candidates"] is True
+    assert len(result["candidates"]) == 1
+    assert "labor-only" in result["dropped_candidate_errors"][0]
 
 
 def test_build_energy_flow_pressure_signal_batch_counts_review_candidates():

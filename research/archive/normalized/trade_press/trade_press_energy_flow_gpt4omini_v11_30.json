@@ -1,0 +1,1071 @@
+{
+  "name": "trade_press_prefilter_v5_30",
+  "source_class": "trade_press",
+  "prompt_version": "energy_flow_pressure_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_cac8ad2ff3742510",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric plans to invest $700 million in U.S. operations to meet rising demand from data centers and electricity infrastructure.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential strain on energy supply systems due to increased demand from data centers",
+          "system_hints": [
+            "electricity infrastructure, data centers"
+          ],
+          "physical_implication": "need for enhanced energy production and distribution capabilities",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The investment will fund facility upgrades and expansions across eight sites.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased capacity requirements for energy supply to upgraded facilities",
+          "system_hints": [
+            "manufacturing facilities, energy supply"
+          ],
+          "physical_implication": "requirement for additional energy resources to support expanded operations",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:19Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "ABB is expanding production capacity for low-voltage electrification products in the U.S.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "higher demand for energy inputs to support increased production capacity",
+          "system_hints": [
+            "data centers, buildings, and utilities are key sectors driving demand"
+          ],
+          "physical_implication": "potential increase in energy consumption associated with expanded manufacturing operations",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The investment of $120 million indicates a significant commitment to meet growing demand.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "potential strain on energy supply chains to support new manufacturing capabilities",
+          "system_hints": [
+            "investment in manufacturing suggests reliance on stable energy supply"
+          ],
+          "physical_implication": "increased energy requirements for new production facilities",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:25Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_3d1582c75dda6698",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "GE Vernova will invest nearly $600 million in U.S. factories focused on gas power, grid, nuclear, and onshore wind.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased production capacity for multiple energy sources",
+          "system_hints": [
+            "gas power, nuclear, onshore wind, grid infrastructure"
+          ],
+          "physical_implication": "enhanced manufacturing capabilities for energy technologies",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [
+        "candidate[1] has invalid energy_pressure_type: 'labor demand in energy sectors'"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:30Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rolls-Royce is expanding its engine plant to meet surging data center demand.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Higher demand for energy to power expanded production and data centers.",
+          "system_hints": [
+            "Data centers require significant energy resources for operation."
+          ],
+          "physical_implication": "Potential increase in energy consumption in the region due to expanded data center operations.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The expansion will increase production of large engines used to power data centers.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Need for more energy to manufacture engines that will be used in energy-intensive applications.",
+          "system_hints": [
+            "Manufacturing processes for large engines are energy-intensive."
+          ],
+          "physical_implication": "Increased energy requirements for manufacturing processes at the plant.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:37Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No candidate retained after energy-flow postfilter.",
+      "dropped_candidate_errors": [
+        "candidate[0] suppressed for lacking explicit energy-system or data-center-buildout linkage",
+        "candidate[1] suppressed for lacking explicit energy-system or data-center-buildout linkage"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:43Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_9f4a057076b0ca77",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Mitsubishi Electric Power Products is investing $86 million in a new switchgear factory.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential increase in energy transmission and distribution capacity",
+          "system_hints": [
+            "electricity transmission and distribution systems"
+          ],
+          "physical_implication": "expansion of manufacturing capabilities for energy-related products",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [
+        "candidate[1] has invalid energy_pressure_type: 'growing demand for energy products'"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:50Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_61fa290549c6e41d",
+      "source_class": "trade_press",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No candidate retained after energy-flow postfilter.",
+      "dropped_candidate_errors": [
+        "candidate[1] has invalid energy_pressure_type: 'construction energy demand'",
+        "candidate[0] suppressed for lacking explicit energy-system or data-center-buildout linkage"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:12:56Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rowan Digital Infrastructure is developing a 300MW hyperscale data center campus.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Increased demand for electricity to support the data center operations.",
+          "system_hints": [
+            "Electricity generation and distribution systems in the region may need to scale up."
+          ],
+          "physical_implication": "Potential strain on local energy infrastructure to meet the new demand.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The project has an initial phase of 60MW expected in early 2026.",
+          "energy_pressure_type": "capacity_tightness",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Urgent need for energy supply solutions to be in place by early 2026.",
+          "system_hints": [
+            "Energy providers may need to expedite infrastructure upgrades or expansions."
+          ],
+          "physical_implication": "Increased construction and operational activities in the energy sector.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The project is tailored to a top five U.S. technology company.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "Potential for significant energy consumption due to the scale and nature of the technology company's operations.",
+          "system_hints": [
+            "Long-term energy supply contracts may be negotiated to secure necessary power."
+          ],
+          "physical_implication": "Increased long-term energy commitments and infrastructure planning.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:05Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_acb174b496999f97",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "CyrusOne's new data center campus will deliver an initial IT capacity of around 70MW.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Increased demand for electricity to support the data center operations.",
+          "system_hints": [
+            "Electricity generation and distribution systems in Texas may face increased load."
+          ],
+          "physical_implication": "Potential strain on local energy infrastructure to meet the new demand.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Total capital investments in Texas exceeding $2.4 billion for the project.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "Increased capital flow may lead to enhancements in energy infrastructure to support new developments.",
+          "system_hints": [
+            "Investment in energy generation or distribution may be necessary to accommodate new facilities."
+          ],
+          "physical_implication": "Potential upgrades or expansions in energy production capacity.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:11Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "EdgeCore is expanding its Mesa campus by adding nearly 44 acres and lifting total capacity from more than 200MW to more than 450MW.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "The expansion indicates a significant increase in energy consumption requirements to support the additional capacity.",
+          "system_hints": [
+            "Data center operations, particularly for AI and cloud services, are highly energy-intensive."
+          ],
+          "physical_implication": "The need for more energy infrastructure and resources to meet the heightened demand.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:16Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_a13c5dc00fba3fa5",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "EdgeCore began construction at a 114MW campus in Northern Virginia.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy demand for construction and operation of the data center",
+          "system_hints": [
+            "data center operations typically require significant energy resources"
+          ],
+          "physical_implication": "potential strain on local energy supply infrastructure to meet new demand",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company is also topping out additional facilities on its 450MW campus in Mesa, Arizona.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy demand for the additional facilities",
+          "system_hints": [
+            "large-scale data centers are energy-intensive"
+          ],
+          "physical_implication": "further pressure on energy resources in the region",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:21Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_70a23134a41f33bd",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "EdgeCore is securing financing for future green data center development.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential increase in energy consumption from renewable sources to power new data centers",
+          "system_hints": [
+            "data center operations, renewable energy integration"
+          ],
+          "physical_implication": "need for more renewable energy infrastructure to support data center growth",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Proceeds from the financing will refinance construction loans.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "potential for increased energy capacity to support expanded data center operations",
+          "system_hints": [
+            "construction and operation of energy facilities, data center energy requirements"
+          ],
+          "physical_implication": "need for enhanced energy supply to meet operational demands of data centers",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:27Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rowan Digital Infrastructure secured approximately $550 million for a 300MW data center project.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy demand for data center operations",
+          "system_hints": [
+            "data center infrastructure, energy consumption"
+          ],
+          "physical_implication": "potential strain on local energy supply systems",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:30Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_08976a2c7918a320",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Eaton will invest $340 million to increase U.S. production of three-phase transformers.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Increased production capacity for transformers may alleviate supply constraints in the energy system.",
+          "system_hints": [
+            "U.S. energy infrastructure, utility services, industrial energy use."
+          ],
+          "physical_implication": "Enhanced availability of transformers for energy distribution and management.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The investment is in response to an ongoing shortage and record demand from utilities, industrial customers and data centers.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Rising demand for transformers indicates increasing energy system needs, potentially leading to further investment and resource allocation.",
+          "system_hints": [
+            "Utilities, industrial sectors, data centers, energy consumption trends."
+          ],
+          "physical_implication": "Potential strain on existing energy infrastructure due to high demand.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:36Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Schneider Electric plans to invest $700 million for facility upgrades and expansions to meet rising demand.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential increase in energy consumption due to expanded data center operations",
+          "system_hints": [
+            "data centers, utilities, energy infrastructure"
+          ],
+          "physical_implication": "greater energy requirements for upgraded and new facilities",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:38Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential strain on energy supply chains due to increased production capacity requirements",
+          "system_hints": [
+            "U.S. grid infrastructure"
+          ],
+          "physical_implication": "need for more transformers to support energy distribution",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Hitachi will make more than $500 million in other investments to meet growing need for U.S. grid equipment.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased capital flow towards energy production inputs",
+          "system_hints": [
+            "U.S. energy grid modernization"
+          ],
+          "physical_implication": "enhanced capacity for energy distribution and reliability",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:43Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Southern Company raised its five-year spending plan to $81 billion.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for energy generation capacity",
+          "system_hints": [
+            "electricity generation and infrastructure development"
+          ],
+          "physical_implication": "need for additional energy resources and infrastructure to meet demand",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Substantial new growth infrastructure investments as large-load and data center demand increases.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy consumption from data centers and large-load facilities",
+          "system_hints": [
+            "infrastructure for data centers and large industrial users"
+          ],
+          "physical_implication": "potential strain on existing energy supply systems",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company is working on adding 10GW of approved new generation.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "need for new generation capacity to meet rising demand",
+          "system_hints": [
+            "electricity generation capacity expansion"
+          ],
+          "physical_implication": "increased resource allocation for energy production",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:50Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "trade_press_adcf7136a2e92950",
+      "source_class": "trade_press",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No candidate retained after energy-flow postfilter.",
+      "dropped_candidate_errors": [
+        "candidate[2] has invalid energy_pressure_type: 'future energy demand planning'",
+        "candidate[0] suppressed for lacking explicit energy-system or data-center-buildout linkage",
+        "candidate[1] suppressed as labor-only energy observation"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:13:58Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_404505b643706d79",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "AVL Manufacturing is establishing a production facility for industrial enclosures for large-scale power generators.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "The establishment of the plant indicates a growing need for energy generation capacity, particularly for data centers.",
+          "system_hints": [
+            "The focus on large-scale power generators suggests a reliance on robust energy systems to support data center operations."
+          ],
+          "physical_implication": "The production of enclosures for power generators implies a need for reliable energy supply to meet the demands of data centers.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The investment of $56 million in the new plant indicates significant capital allocation towards energy-related manufacturing.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "The investment suggests a recognition of the importance of energy systems in supporting industrial operations.",
+          "system_hints": [
+            "The capital flow towards energy infrastructure indicates a potential increase in energy demand."
+          ],
+          "physical_implication": "The establishment of the plant may lead to increased production of energy-related equipment, impacting energy supply chains.",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:05Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_81078c2995bcc693",
+      "source_class": "trade_press",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No candidate retained after energy-flow postfilter.",
+      "dropped_candidate_errors": [
+        "candidate[0] suppressed for lacking explicit energy-system or data-center-buildout linkage",
+        "candidate[1] suppressed for lacking explicit energy-system or data-center-buildout linkage",
+        "candidate[2] suppressed for lacking explicit energy-system or data-center-buildout linkage"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:14Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PG&E reported 10GW of data center capacity in its pipeline.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Increased demand for energy to support data center operations.",
+          "system_hints": [
+            "Electricity generation and distribution systems may need to scale up."
+          ],
+          "physical_implication": "Potential strain on existing energy infrastructure to meet new capacity demands.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "17 projects totaling 1.5GW are in final engineering phases.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "Need for additional energy resources to support new data center projects.",
+          "system_hints": [
+            "Investment in energy generation and transmission may be required."
+          ],
+          "physical_implication": "Increased construction and operational demands on energy systems.",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:19Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Exelon has 33GW of data centers interested in connecting to its system.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for energy generation capacity",
+          "system_hints": [
+            "utility-scale energy generation and infrastructure"
+          ],
+          "physical_implication": "potential need for new energy generation facilities",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "17GW already in line to connect.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "urgent need for energy supply to meet existing demand",
+          "system_hints": [
+            "existing energy infrastructure and capacity planning"
+          ],
+          "physical_implication": "potential strain on current energy supply systems",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility is considering options for building and owning generation to meet the demand.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "need for investment in new generation capacity",
+          "system_hints": [
+            "energy generation investment and planning"
+          ],
+          "physical_implication": "development of new energy generation projects",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:26Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "First Energy's pipeline of potential data centers surged to 2.6GW by 2029, almost double the prior reported pipeline.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for energy generation capacity",
+          "system_hints": [
+            "potential strain on existing energy infrastructure"
+          ],
+          "physical_implication": "need for additional energy generation resources",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility is considering delaying coal retirements or adding gas-fired generation to serve the load.",
+          "energy_pressure_type": "capacity_tightness",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential increase in fossil fuel generation to meet demand",
+          "system_hints": [
+            "shift in energy generation strategy"
+          ],
+          "physical_implication": "increased reliance on fossil fuels for energy production",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:31Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "PPL Electric's advanced-stage data center interconnection pipeline grew to 14GW.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for electricity to support data center operations",
+          "system_hints": [
+            "electricity generation and distribution systems"
+          ],
+          "physical_implication": "potential strain on existing energy infrastructure to meet rising demand",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility expects load to ramp sharply over the decade.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "anticipated increase in energy consumption from data centers",
+          "system_hints": [
+            "energy supply planning and resource allocation"
+          ],
+          "physical_implication": "need for infrastructure upgrades or expansions to accommodate future load",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:37Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_c906877e7f8ac2bc",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Hitachi Energy announced a $250 million investment to expand global production of transformer components.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "potential strain on energy infrastructure due to increased demand for transformers",
+          "system_hints": [
+            "energy distribution and transmission systems"
+          ],
+          "physical_implication": "need for more transformer components to support energy infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "More than 40% of the investment is dedicated to the U.S.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "regional pressure on energy systems in the U.S. due to increased transformer demand",
+          "system_hints": [
+            "U.S. energy market and infrastructure"
+          ],
+          "physical_implication": "increased production capacity needed to meet U.S. energy demands",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company said data center development has pushed transformer demand beyond initial projections.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased pressure on energy systems to accommodate new data center demands",
+          "system_hints": [
+            "data centers as energy consumers"
+          ],
+          "physical_implication": "need for additional transformers to support growing data center energy requirements",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:47Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "DTE signed a 1.4GW agreement to serve a hyperscale data center.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "need for additional electricity generation capacity",
+          "system_hints": [
+            "electric grid infrastructure"
+          ],
+          "physical_implication": "potential strain on existing energy resources and infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "DTE sees another 7GW of potential large loads.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "requirement for future energy production expansion",
+          "system_hints": [
+            "generation and distribution systems"
+          ],
+          "physical_implication": "necessity for investment in new energy projects",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "DTE has a $30 billion investment pipeline for generation, distribution and other infrastructure.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "indirect",
+          "energy_flow_implication": "support for increased energy production and distribution capacity",
+          "system_hints": [
+            "overall energy system resilience and reliability"
+          ],
+          "physical_implication": "enhanced capability to meet rising energy demands",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:14:54Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Exelon utilities' pipeline of data centers and other high-density load projects more than doubled to 17GW.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased demand for power generation capacity",
+          "system_hints": [
+            "data centers, high-density load projects"
+          ],
+          "physical_implication": "need for additional power generation infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company expects positive load growth.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "anticipation of increased energy consumption",
+          "system_hints": [
+            "load growth, energy supply adequacy"
+          ],
+          "physical_implication": "potential strain on existing energy resources",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Called for new approaches to ensure adequate power supplies.",
+          "energy_pressure_type": "capacity_tightness",
+          "observation_directness": "direct",
+          "energy_flow_implication": "need for innovative solutions to meet rising demand",
+          "system_hints": [
+            "power supply, energy management strategies"
+          ],
+          "physical_implication": "requirement for investment in energy infrastructure and technology",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:15:02Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "FirstEnergy's pipeline of potential data centers nearly doubled to almost 3GW by 2029.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased energy demand from data centers",
+          "system_hints": [
+            "electricity generation and distribution systems"
+          ],
+          "physical_implication": "potential strain on existing energy infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The utility expects industrial sales including data centers to grow 5.1% annually over the next five years.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "sustained increase in energy consumption",
+          "system_hints": [
+            "energy supply and grid stability"
+          ],
+          "physical_implication": "need for additional energy resources or upgrades",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:15:07Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_8434daa99144e894",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "FirstEnergy expects system peak load to jump 45% by 2035, driven by data center development.",
+          "energy_pressure_type": "load_growth",
+          "observation_directness": "direct",
+          "energy_flow_implication": "higher energy consumption required to meet peak load",
+          "system_hints": [
+            "electricity generation and distribution systems"
+          ],
+          "physical_implication": "potential strain on existing energy infrastructure",
+          "relationship_to_capital_flow": "energy_flow_pressure_only",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [
+        "candidate[1] has invalid energy_pressure_type: 'investment requirement'"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:15:15Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "trade_press_904540c22ad17bed",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Westrafo will invest at least $12 million to establish its first U.S. transformer plant in Ohio.",
+          "energy_pressure_type": "infrastructure_response_need",
+          "observation_directness": "direct",
+          "energy_flow_implication": "increased capacity for energy distribution",
+          "system_hints": [
+            "transformer production for energy transmission"
+          ],
+          "physical_implication": "enhanced ability to manage and distribute electrical power",
+          "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "dropped_candidate_errors": [
+        "candidate[1] has invalid energy_pressure_type: 'increased energy output capacity'"
+      ],
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "energy_flow_pressure_extraction_v1",
+      "extracted_at": "2026-03-21T19:15:20Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 30,
+    "successful_extractions": 30,
+    "schema_failure_count": 0,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 26,
+    "no_candidate_artifact_count": 4,
+    "total_candidate_count": 51,
+    "review_artifact_count": 13,
+    "review_candidate_artifact_count": 11
+  }
+}
