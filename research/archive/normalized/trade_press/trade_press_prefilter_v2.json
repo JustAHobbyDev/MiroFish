@@ -1,0 +1,257 @@
+{
+  "name": "trade_press_prefilter_v2",
+  "source_class": "trade_press",
+  "processed_artifact_count": 9,
+  "kept_artifacts": [
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2025-08-08",
+      "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Data Center Build",
+      "category_tags": [
+        "construction",
+        "hyperscale",
+        "power"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Data Center Build",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-digital-breaks-ground-on-300mw-data-center-campus-outside-san-antonio-texas/",
+      "body_text": "Rowan Digital Infrastructure has begun construction on a 300MW hyperscale project outside San Antonio, Texas. The $900 million project is tailored to a top five U.S. technology company, with an initial 60MW planned for early 2026.",
+      "_prefilter": {
+        "artifact_id": "trade_press_ff46b7dab1b827b4",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "title": {
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "category_tags": {
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Jason Ma",
+      "published_at": "2025-05-21",
+      "title": "EdgeCore expands Mesa data center campus in Arizona",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Data Center Expansion",
+      "category_tags": [
+        "capacity",
+        "campus expansion",
+        "power"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Data Center Expansion",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-expands-mesa-data-center-campus-in-arizona/",
+      "body_text": "EdgeCore Digital Infrastructure is expanding its Mesa, Arizona campus, adding land and increasing total capacity from more than 200MW to more than 450MW to fulfill hyperscale customers' urgent need for AI and cloud-ready capacity. Salt River Project will provide power.",
+      "_prefilter": {
+        "artifact_id": "trade_press_300902f748d55918",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpand(?:ing|ed|s|ion)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s|ion)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-03-10",
+      "title": "ABB to invest $120M in US manufacturing",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "electrification",
+        "manufacturing",
+        "capacity"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/swiss-giant-abb-invest-120-million-us-manufacturing/741971/",
+      "body_text": "Switzerland-based ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S. The investment will increase capacity in Tennessee and Mississippi to support growing demand from data centers, buildings and utilities.",
+      "_prefilter": {
+        "artifact_id": "trade_press_c932aca7f0976acc",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Only medium/weak-field event-form evidence was detected.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bcapacity(?: increase| expansion| additions?)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "dropped_audit_records": [
+    {
+      "artifact_id": "trade_press_898010ffbfe80234",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "published_at": "2025-07-16",
+      "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    },
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "published_at": "2025-11-20",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    },
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "published_at": "2025-08-01",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "published_at": "2025-09-04",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    },
+    {
+      "artifact_id": "trade_press_c838cb21478bfff1",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "published_at": "2025-03-27",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "published_at": "2025-10-30",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    }
+  ],
+  "metrics": {
+    "processed_artifact_count": 9,
+    "kept_count": 2,
+    "review_count": 1,
+    "dropped_count": 6
+  }
+}

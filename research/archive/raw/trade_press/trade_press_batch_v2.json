@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "source_url": "https://www.manufacturingdive.com/news/swiss-giant-abb-invest-120-million-us-manufacturing/741971/",
+      "publication": "Manufacturing Dive",
+      "author": "Nathan Owens",
+      "published_at": "2025-03-10",
+      "title": "ABB to invest $120M in US manufacturing",
+      "section": "Openings & Expansions",
+      "tags": ["electrification", "manufacturing", "capacity"],
+      "body": "Switzerland-based ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S. The investment will increase capacity in Tennessee and Mississippi to support growing demand from data centers, buildings and utilities."
+    },
+    {
+      "source_url": "https://www.manufacturingdive.com/news/rolls-royce-invests-75-million-aiken-south-carolina-engine-plant/753189/",
+      "publication": "Manufacturing Dive",
+      "author": "Nathan Owens",
+      "published_at": "2025-07-16",
+      "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+      "section": "Openings & Expansions",
+      "tags": ["data centers", "power systems", "manufacturing"],
+      "body": "Rolls-Royce will invest $75 million to expand its Aiken, South Carolina, engine plant to meet surging data center demand. The 60,000-square-foot expansion will increase production volume for large engines used to power data centers and other industrial facilities."
+    },
+    {
+      "source_url": "https://www.manufacturingdive.com/news/rockwell-automation-greenfield-wisconsin-largest-factory-2b-investment/806033/",
+      "publication": "Manufacturing Dive",
+      "author": "Nathan Owens",
+      "published_at": "2025-11-20",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "section": "Openings & Expansions",
+      "tags": ["automation", "factory", "expansion"],
+      "body": "Rockwell Automation confirmed a Wisconsin site for a new factory as part of a $2 billion U.S. expansion. The facility will include more than 1 million square feet of manufacturing and warehouse space and support customer demand for automation and digital solutions."
+    },
+    {
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-digital-breaks-ground-on-300mw-data-center-campus-outside-san-antonio-texas/",
+      "publication": "Data Center Dynamics",
+      "author": "Dan Swinhoe",
+      "published_at": "2025-08-08",
+      "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
+      "section": "Data Center Build",
+      "tags": ["construction", "hyperscale", "power"],
+      "body": "Rowan Digital Infrastructure has begun construction on a 300MW hyperscale project outside San Antonio, Texas. The $900 million project is tailored to a top five U.S. technology company, with an initial 60MW planned for early 2026."
+    },
+    {
+      "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-expands-mesa-data-center-campus-in-arizona/",
+      "publication": "Data Center Dynamics",
+      "author": "Jason Ma",
+      "published_at": "2025-05-21",
+      "title": "EdgeCore expands Mesa data center campus in Arizona",
+      "section": "Data Center Expansion",
+      "tags": ["capacity", "campus expansion", "power"],
+      "body": "EdgeCore Digital Infrastructure is expanding its Mesa, Arizona campus, adding land and increasing total capacity from more than 200MW to more than 450MW to fulfill hyperscale customers' urgent need for AI and cloud-ready capacity. Salt River Project will provide power."
+    },
+    {
+      "source_url": "https://www.datacenterdynamics.com/en/news/pge-data-center-pipeline-swells-to-10gw/",
+      "publication": "Data Center Dynamics",
+      "author": "Zachary Skidmore",
+      "published_at": "2025-08-01",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "section": "Power",
+      "tags": ["utility", "pipeline", "data centers"],
+      "body": "Pacific Gas and Electric said its data center pipeline has grown to 10GW expected for connection over the next ten years, with 17 projects totaling 1.5GW in final engineering stages and operations slated to begin between 2026 and 2030."
+    },
+    {
+      "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+      "publication": "Utility Dive",
+      "author": "Robert Walton",
+      "published_at": "2025-09-04",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "section": "Transmission & Distribution",
+      "tags": ["transformers", "manufacturing", "grid"],
+      "body": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia, and make more than $500 million in other investments to meet growing need for U.S. grid equipment. The investment comes as transformer lead times stretch from weeks to years amid grid expansion and manufacturing bottlenecks."
+    },
+    {
+      "source_url": "https://www.utilitydive.com/news/schneider-electric-700-million-investment-us-data-center-demand-ai/743790/",
+      "publication": "Utility Dive",
+      "author": "Kate Magill",
+      "published_at": "2025-03-27",
+      "title": "Schneider Electric to invest $700M in US manufacturing",
+      "section": "Operations",
+      "tags": ["data centers", "manufacturing", "energy infrastructure"],
+      "body": "Schneider Electric plans to invest $700 million in its U.S. operations through 2027 for facility upgrades, expansions and openings across eight sites. The company said the move is driven by rising demand across data center, utilities, manufacturing and energy infrastructure segments."
+    },
+    {
+      "source_url": "https://www.utilitydive.com/news/dte-data-center-deal-transformational-growth-earnings/804231/",
+      "publication": "Utility Dive",
+      "author": "Robert Walton",
+      "published_at": "2025-10-30",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "section": "Corporate News",
+      "tags": ["data centers", "utility load", "investment pipeline"],
+      "body": "DTE Energy said it has signed agreements to serve a 1.4GW hyperscaler and sees another 7GW of potential large loads, supported by a $30 billion investment pipeline across 2026 to 2030. The utility expects major generation, storage and distribution investment to align with data center load growth."
+    }
+  ]
+}

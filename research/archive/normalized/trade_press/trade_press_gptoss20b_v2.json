@@ -1,0 +1,93 @@
+{
+  "name": "trade_press_prefilter_v2",
+  "source_class": "trade_press",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "openai/gpt-oss-20b",
+  "processed_results": [
+    {
+      "artifact_id": "trade_press_ff46b7dab1b827b4",
+      "source_class": "trade_press",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Rowan Digital Infrastructure has begun construction on a 300MW hyperscale project outside San Antonio, Texas. The $900 million project is tailored to a top five U.S. technology company, with an initial 60MW planned for early 2026.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Capital inflow of $900 million into the data center infrastructure sector in Texas.",
+          "system_hints": [
+            "data center infrastructure",
+            "hyperscale",
+            "San Antonio, Texas",
+            "top five U.S. technology company"
+          ],
+          "physical_implication": "Construction of a 300MW data center campus.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Rowan Digital Infrastructure has begun construction on a 300MW hyperscale project outside San Antonio, Texas.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Physical expansion of data center capacity by 300MW in Texas.",
+          "system_hints": [
+            "data center",
+            "hyperscale",
+            "San Antonio",
+            "Texas"
+          ],
+          "physical_implication": "Construction of a 300MW data center campus.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "with an initial 60MW planned for early 2026.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Initial deployment of 60MW of data center capacity by early 2026.",
+          "system_hints": [
+            "data center",
+            "60MW",
+            "early 2026",
+            "San Antonio"
+          ],
+          "physical_implication": "Deployment of 60MW of data center capacity.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "groq",
+      "model_name": "openai/gpt-oss-20b",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:48:29Z",
+      "prefilter_triage": "keep"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "trade_press_300902f748d55918",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: ",
+      "raw_payload": ""
+    },
+    {
+      "artifact_id": "trade_press_c932aca7f0976acc",
+      "prefilter_triage": "review",
+      "error_type": "schema_validation_error",
+      "error_message": "LLM返回的JSON格式无效: {\n  \"candidates\": [\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"capital expenditure\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the Tennessee manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electrification, data centers, buildings, utilities\",\n      \"physical_implication\": \"Expansion of production capacity in Tennessee, likely involving new or expanded facilities.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"capital expenditure\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the Mississippi manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electrification, data centers, buildings, utilities\",\n      \"physical_implication\": \"Expansion of production capacity in Mississippi, likely involving new or expanded facilities.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"investment\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the US manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electr",
+      "raw_payload": "```json\n{\n  \"candidates\": [\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"capital expenditure\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the Tennessee manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electrification, data centers, buildings, utilities\",\n      \"physical_implication\": \"Expansion of production capacity in Tennessee, likely involving new or expanded facilities.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"capital expenditure\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the Mississippi manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electrification, data centers, buildings, utilities\",\n      \"physical_implication\": \"Expansion of production capacity in Mississippi, likely involving new or expanded facilities.\",\n      \"confidence\": 0.95\n    },\n    {\n      \"observable_statement\": \"ABB said it will invest $120 million to expand production of its low-voltage electrification products in the U.S.\",\n      \"capital_flow_implication_type\": \"investment\",\n      \"observation_directness\": \"direct\",\n      \"capital_flow_implication\": \"Capital inflow of $120M into the US manufacturing sector.\",\n      \"system_hints\": \"US manufacturing, low-voltage electr"
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 3,
+    "successful_extractions": 1,
+    "schema_failure_count": 2,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 1,
+    "no_candidate_artifact_count": 0,
+    "total_candidate_count": 3,
+    "review_artifact_count": 1,
+    "review_candidate_artifact_count": 0
+  }
+}
