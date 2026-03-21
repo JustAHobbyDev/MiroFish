@@ -1,0 +1,197 @@
+{
+  "audit_name": "federal_register_historical_pages1_3_prefilter_drop_audit_v1",
+  "source_audit_set": "federal_register_historical_pages1_3_rejection_audit_v1",
+  "scope": {
+    "source_batch_name": "federal_register_historical_pages1_3_prefilter_v1",
+    "review_target": "sampled_prefilter_drops_only",
+    "sampled_prefilter_drops": 25
+  },
+  "summary": {
+    "correct_rejection_count": 24,
+    "borderline_should_review_count": 1,
+    "false_negative_count": 0,
+    "overall_judgment": "The deterministic prefilter sample was mostly clean, but one dropped policy notice should have been surfaced for review rather than dropped outright."
+  },
+  "review_labels": [
+    "correct_rejection",
+    "borderline_should_review",
+    "false_negative"
+  ],
+  "artifact_reviews": [
+    {
+      "artifact_id": "policy_feed_5e371424743a74c8",
+      "published_at": "2026-02-24",
+      "title": "Center For Scientific Review; Notice of Closed Meetings",
+      "review_label": "correct_rejection",
+      "review_notes": "Meeting notice only. No directional capital-flow implication."
+    },
+    {
+      "artifact_id": "policy_feed_03a37dd6adb7bceb",
+      "published_at": "2026-02-24",
+      "title": "Request for Comments on the Renewal of a Previously Approved Information Collection: Requirements for Establishing U.S. Citizenship",
+      "review_label": "correct_rejection",
+      "review_notes": "Information-collection renewal only. No demand-led buildout or directional capital deployment signal."
+    },
+    {
+      "artifact_id": "policy_feed_ea4b54506ece1d9f",
+      "published_at": "2026-02-25",
+      "title": "Agency Information Collection Activities; Proposed Renewal Collection and Request for Comment; Confidential Business Information Claims Under the Toxic Substances Control Act (TSCA)",
+      "review_label": "correct_rejection",
+      "review_notes": "Paperwork-renewal notice without current or planned physical buildout implications."
+    },
+    {
+      "artifact_id": "policy_feed_43e47ef2865c42a1",
+      "published_at": "2026-02-25",
+      "title": "Notice of Availability of the 2025 Record of Decision for the Final Environmental Impact Statement for the National Petroleum Reserve-Alaska, Integrated Activity Plan",
+      "review_label": "borderline_should_review",
+      "review_notes": "This is policy-enabling rather than demand-proving, but it concerns petroleum reserve planning and could plausibly precede resource-development capital deployment. The title-level prefilter should likely surface this for review instead of dropping it."
+    },
+    {
+      "artifact_id": "policy_feed_8da43a2ac810265d",
+      "published_at": "2026-02-25",
+      "title": "Privacy Act of 1974; Matching Program",
+      "review_label": "correct_rejection",
+      "review_notes": "Eligibility-matching/privacy program notice only. No capital-flow signal."
+    },
+    {
+      "artifact_id": "policy_feed_82b3a4fb5bb83ba1",
+      "published_at": "2026-02-25",
+      "title": "Privacy Act of 1974; System of Records",
+      "review_label": "correct_rejection",
+      "review_notes": "Records-system modification notice only. No directional capital-flow implication."
+    },
+    {
+      "artifact_id": "policy_feed_08893b3c7841ab48",
+      "published_at": "2026-02-25",
+      "title": "Proposed Information Collection Activity; Next Generation of Enhanced Employment Strategies Project",
+      "review_label": "correct_rejection",
+      "review_notes": "Survey/data-collection extension only. No evidence of material capital deployment."
+    },
+    {
+      "artifact_id": "policy_feed_86645418b5eac10b",
+      "published_at": "2026-02-26",
+      "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget for Review and Approval; Comment Request; the Recognition Process for Accrediting Agencies, State Approval Agencies; Evaluation of Foreign Medical, and Foreign Veterinary Accrediting Agencies (e-Recognition)",
+      "review_label": "correct_rejection",
+      "review_notes": "OMB review and accreditation-process paperwork only. No directional capital-flow signal."
+    },
+    {
+      "artifact_id": "policy_feed_af5c6af3b1d7f578",
+      "published_at": "2026-02-26",
+      "title": "Air Plan Approval; Connecticut; State Implementation Plan Revisions Required as a Result of a Definition Change Due to the Ozone Reclassification",
+      "review_label": "correct_rejection",
+      "review_notes": "Compliance and emissions-plan rulemaking context, not direct evidence of rising-demand capital deployment."
+    },
+    {
+      "artifact_id": "policy_feed_ac3e57f5db8e9716",
+      "published_at": "2026-02-26",
+      "title": "Certain Lined Paper Products From India: Preliminary Results and Rescission, in Part, of Antidumping Duty Administrative Review; 2023-2024",
+      "review_label": "correct_rejection",
+      "review_notes": "Trade-review result with no direct directional capital-flow implication for the current workflow."
+    },
+    {
+      "artifact_id": "policy_feed_dd464ccc33c7f0e2",
+      "published_at": "2026-02-26",
+      "title": "Change in Bank Control Notices; Acquisitions of Shares of a Bank or Bank Holding Company",
+      "review_label": "correct_rejection",
+      "review_notes": "Ownership/control notice for a financial institution, not a physical-system capital-flow signal relevant to structural-pressure discovery."
+    },
+    {
+      "artifact_id": "policy_feed_12df69b556d95598",
+      "published_at": "2026-02-26",
+      "title": "Crystalline Silicon Photovoltaic Cells, Whether or Not Assembled Into Modules From the Lao People's Democratic Republic: Preliminary Affirmative Countervailing Duty Determination, Preliminary Negative Critical Circumstances Determination, and Alignment of Final Determination With Final Antidumping Duty Determination",
+      "review_label": "correct_rejection",
+      "review_notes": "Trade-remedy determination that could matter later as policy context, but the artifact alone does not indicate current or planned demand-led capital deployment."
+    },
+    {
+      "artifact_id": "policy_feed_41d9d22bf939d42d",
+      "published_at": "2026-02-26",
+      "title": "Determination of Regulatory Review Period for Purposes of Patent Extension; AEROPACE",
+      "review_label": "correct_rejection",
+      "review_notes": "Patent-extension determination only. No directional capital-flow implication for the current workflow."
+    },
+    {
+      "artifact_id": "policy_feed_c0733abbebfa1349",
+      "published_at": "2026-02-26",
+      "title": "Determination of Regulatory Review Period for Purposes of Patent Extension; ORLYNVAH",
+      "review_label": "correct_rejection",
+      "review_notes": "Patent-extension determination only. No current or planned physical buildout signal."
+    },
+    {
+      "artifact_id": "policy_feed_3e90113116e42999",
+      "published_at": "2026-02-26",
+      "title": "Information Collection Requirement; Defense Federal Acquisition Regulation Supplement; Performance-Based Payments-Representation (OMB Control Number 0750-0001)",
+      "review_label": "correct_rejection",
+      "review_notes": "Defense acquisition paperwork extension only. No actual procurement, construction, or capacity signal in the artifact."
+    },
+    {
+      "artifact_id": "policy_feed_abf53f6d3d69992a",
+      "published_at": "2026-02-26",
+      "title": "Meeting of the Advisory Committee on Immunization Practices",
+      "review_label": "correct_rejection",
+      "review_notes": "Advisory-committee meeting notice only. No directional capital-flow implication."
+    },
+    {
+      "artifact_id": "policy_feed_477fbbb60340ce93",
+      "published_at": "2026-02-27",
+      "title": "Agency Information Collection Activities: Information Collection Renewal; Submission for OMB Review; OCC Supplier Registration Form",
+      "review_label": "correct_rejection",
+      "review_notes": "Supplier-registration paperwork renewal only. No procurement or buildout event is being signaled."
+    },
+    {
+      "artifact_id": "policy_feed_d4ace14c67c704ab",
+      "published_at": "2026-02-27",
+      "title": "Agency Information Collection Activities; Northeast Region Hunter Participation Surveys",
+      "review_label": "correct_rejection",
+      "review_notes": "Survey revision only. No capital-flow or physical buildout implication."
+    },
+    {
+      "artifact_id": "policy_feed_3b08b5435c2d56cd",
+      "published_at": "2026-02-27",
+      "title": "Certain Beverage Brewing Products and Components Thereof; Notice of Institution of Investigation",
+      "review_label": "correct_rejection",
+      "review_notes": "Patent/import investigation notice. This is litigation/trade enforcement context, not a directional capital-flow signal for rising-demand structural pressure."
+    },
+    {
+      "artifact_id": "policy_feed_dc6600fce2d77976",
+      "published_at": "2026-02-27",
+      "title": "Constellation Energy Generation, LLC; Dresden Nuclear Power Station, Unit 1; Exemption",
+      "review_label": "correct_rejection",
+      "review_notes": "Decommissioning-timeline exemption for an existing plant. Not evidence of new demand-led capital deployment."
+    },
+    {
+      "artifact_id": "policy_feed_33dbbe37b20cbf1e",
+      "published_at": "2026-02-27",
+      "title": "Issuance of Priority Review Voucher; Rare Pediatric Disease Product; ZYCUBO (Copper Histidinate)",
+      "review_label": "correct_rejection",
+      "review_notes": "Potentially relevant to a constrained-access or drug-exclusivity workflow later, but out of scope for the current rising-demand capital-flow workflow."
+    },
+    {
+      "artifact_id": "policy_feed_c30918e19ffbfd9b",
+      "published_at": "2026-02-27",
+      "title": "Meeting of the Great Lakes St. Lawrence Seaway Development Corporation (GLS) Advisory Board",
+      "review_label": "correct_rejection",
+      "review_notes": "Board meeting notice only. No directional capital-flow implication."
+    },
+    {
+      "artifact_id": "policy_feed_9dad61f770560804",
+      "published_at": "2026-02-27",
+      "title": "New Postal Products",
+      "review_label": "correct_rejection",
+      "review_notes": "Administrative notice about a negotiated service agreement. No capital-flow or physical-system buildout signal."
+    },
+    {
+      "artifact_id": "policy_feed_9d359c97ae6a69c1",
+      "published_at": "2026-02-27",
+      "title": "Notice of Receipt of Complaint; Solicitation of Comments Relating to the Public Interest",
+      "review_label": "correct_rejection",
+      "review_notes": "ITC complaint/public-interest notice only. No directional capital-flow implication."
+    },
+    {
+      "artifact_id": "policy_feed_78a6cc50b88fec20",
+      "published_at": "2026-02-27",
+      "title": "Withdrawal of 2023 Standard for Determining Joint Employer Status",
+      "review_label": "correct_rejection",
+      "review_notes": "Labor-rule withdrawal may matter as general policy context, but the artifact itself is not a direct signal of demand-led capital deployment."
+    }
+  ]
+}
