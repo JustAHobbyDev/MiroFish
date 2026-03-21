@@ -336,6 +336,18 @@ Use:
 1. keep almost everything from narrowly scoped sources
 2. use the prefilter mainly for very broad feeds or award databases
 
+Additional note for broad government feeds:
+
+1. planning-enablement notices should default to `review`, not `keep`
+2. examples:
+   - `record of decision`
+   - `integrated activity plan`
+   - `public land order`
+   - `lease sale`
+3. reason:
+   - these can precede capital deployment
+   - but they are usually one step upstream of direct buildout evidence
+
 ## Company Release
 
 Use the prefilter aggressively on:

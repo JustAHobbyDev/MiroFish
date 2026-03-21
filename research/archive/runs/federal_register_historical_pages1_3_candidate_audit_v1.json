@@ -1,0 +1,175 @@
+{
+  "audit_name": "federal_register_historical_pages1_3_candidate_audit_v1",
+  "source_batches": [
+    "federal_register_historical_pages1_3_gpt4omini_v3",
+    "federal_register_historical_pages1_3_gptoss20b_v3"
+  ],
+  "scope": {
+    "source_prefilter_batch": "federal_register_historical_pages1_3_prefilter_v2",
+    "unique_candidate_artifact_count": 11
+  },
+  "review_labels": [
+    "correct_candidate",
+    "borderline_should_review",
+    "false_positive"
+  ],
+  "summary": {
+    "correct_candidate_count": 3,
+    "borderline_should_review_count": 3,
+    "false_positive_count": 5,
+    "overall_judgment": "Government candidate extraction remains too permissive on trade-policy and standards notices, but it is surfacing a small number of valid construction and land-opening signals."
+  },
+  "artifact_reviews": [
+    {
+      "artifact_id": "policy_feed_a20888efd28ad300",
+      "title": "Oil Country Tubular Goods From the People's Republic of China: Final Affirmative Determination of Circumvention of the Antidumping Duty and Countervailing Duty Orders",
+      "prefilter_triage": "keep",
+      "review_label": "false_positive",
+      "review_notes": "Trade-enforcement notice. It may influence future sourcing incentives, but the artifact does not evidence current or planned directional capital deployment on its own.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_867f2a0e00c994c3",
+      "title": "SMR, LLC; Pioneer Units 1 and 2; Phased Construction Permit Application-Limited Work Authorization",
+      "prefilter_triage": "keep",
+      "review_label": "correct_candidate",
+      "review_notes": "Directly tied to limited work authorization for early construction activities on a dual-unit SMR plant. This is a valid capital-flow/buildout candidate.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_e2aa283fbc50515b",
+      "title": "Clean Air Act Operating Permit Program; Order on Petition for Objection to State Operating Permit for Platteville Natural Gas Processing Plant",
+      "prefilter_triage": "keep",
+      "review_label": "false_positive",
+      "review_notes": "Permit-objection denial for an existing plant. It supports continuity of operations, but does not show fresh demand-led capital movement.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_2333e80b68fc4479",
+      "title": "Electrolytic Manganese Dioxide From the People's Republic of China: Continuation of Antidumping Duty Order",
+      "prefilter_triage": "keep",
+      "review_label": "false_positive",
+      "review_notes": "Trade-remedy continuation. It may matter later as policy context, but the artifact itself is not a direct capital-flow signal.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_a288137bb1f016cb",
+      "title": "Public Land Order No. 7966; Partial Revocation of Public Land Order Nos. 5150 and 5180, as Amended, Modified, or Corrected; Alaska",
+      "prefilter_triage": "keep",
+      "review_label": "correct_candidate",
+      "review_notes": "The order explicitly opens land to mineral and resource development opportunity. This is a valid land-access and likely capital-deployment signal.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_bc247dbbfe437ede",
+      "title": "Unlicensed Use of the 6 GHz Band; Expanding Flexible Use in Mid-Band Spectrum Between 3.7 and 24 GHz",
+      "prefilter_triage": "keep",
+      "review_label": "false_positive",
+      "review_notes": "Regulatory-enablement for spectrum use. It may change market conditions, but the artifact alone does not show directional capital deployment into a physical system.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_d3426979d9550bb1",
+      "title": "Before Commissioners: Laura V. Swett, Chairman; David Rosner, Lindsay S. See, Judy W. Chang, and David LaCerte; North American Electric Reliability Corporation; Order Approving Inverter-Based Resources and Generators Modeling Reliability Standards",
+      "prefilter_triage": "keep",
+      "review_label": "false_positive",
+      "review_notes": "Standards approval can matter as system context, but this artifact does not itself evidence current or planned capital deployment.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_1594c8731870caa4",
+      "title": "Removal of Regulations Limiting Authorizations To Proceed With Construction Activities Pending Rehearing; Confirmation",
+      "prefilter_triage": "keep",
+      "review_label": "borderline_should_review",
+      "review_notes": "This is policy-enabling and explicitly references construction activities, but it still sits one step upstream of observed capital deployment. It belongs in review rather than being treated as a clean candidate by default.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        },
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_43e47ef2865c42a1",
+      "title": "Notice of Availability of the 2025 Record of Decision for the Final Environmental Impact Statement for the National Petroleum Reserve-Alaska, Integrated Activity Plan",
+      "prefilter_triage": "review",
+      "review_label": "borderline_should_review",
+      "review_notes": "Resource-development planning notice. It is worth surfacing for LLM review, but still not strong enough to treat as a clean capital-flow candidate without corroboration.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_77b674eb72edfd04",
+      "title": "Gulf of America, Outer Continental Shelf, Record of Decision To Reaffirm Decisions for Gulf of Mexico Outer Continental Shelf Oil and Gas Lease Sales 259 and 261 and Gulf of America Regional OCS Oil and Gas Lease Sales and Post-Lease Activities: Final Programmatic Environmental Impact Statement",
+      "prefilter_triage": "review",
+      "review_label": "borderline_should_review",
+      "review_notes": "Lease-sale and post-lease planning enablement. This is correctly surfaced for review, but should not be treated as a clean candidate absent additional buildout or commitment evidence.",
+      "provider_occurrences": [
+        {
+          "provider_name": "openai",
+          "model_name": "gpt-4o-mini"
+        }
+      ]
+    },
+    {
+      "artifact_id": "policy_feed_d813430c12aa0ec2",
+      "title": "Takes of Marine Mammals Incidental to Specified Activities; Taking Marine Mammals Incidental to the Demolition of Pier 10 and Construction of a Crane Weight Test Area Project at U.S. Naval Submarine Base New London",
+      "prefilter_triage": "keep",
+      "review_label": "correct_candidate",
+      "review_notes": "Directly tied to demolition and construction activities for a named project. This is a valid government construction/buildout candidate.",
+      "provider_occurrences": [
+        {
+          "provider_name": "groq",
+          "model_name": "openai/gpt-oss-20b"
+        }
+      ]
+    }
+  ]
+}

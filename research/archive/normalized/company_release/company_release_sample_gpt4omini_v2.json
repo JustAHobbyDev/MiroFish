@@ -1,0 +1,195 @@
+{
+  "name": "company_release_sample_prefilter_v1",
+  "source_class": "company_release",
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "company_release_328fad99416fbef1",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "GridCore Manufacturing has broken ground on a new power transformer production plant in Oklahoma.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in physical infrastructure for manufacturing capacity.",
+          "system_hints": [
+            "Power transformer production, utility sector, grid modernization."
+          ],
+          "physical_implication": "Construction of a new manufacturing facility.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The facility is expected to increase output for utility customers pursuing grid modernization, substation replacement, and transmission buildout.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased procurement of manufacturing services and materials related to power transformers.",
+          "system_hints": [
+            "Utility customers, grid modernization projects."
+          ],
+          "physical_implication": "Expansion of manufacturing capabilities to meet utility demands.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The company said the new site will add significant annual manufacturing capacity once fully operational.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Potential for increased revenue from higher production capacity.",
+          "system_hints": [
+            "Manufacturing sector, utility infrastructure."
+          ],
+          "physical_implication": "Operational readiness of a new manufacturing plant.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:08:35Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_9f3fe7173322b302",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "ThermaLoop Systems announced a multi-year supply agreement for liquid cooling modules.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for procurement of cooling modules and related systems.",
+          "system_hints": [
+            "AI data center deployments"
+          ],
+          "physical_implication": "Potential increase in manufacturing and supply chain activities for cooling systems.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The agreement is expected to support a sustained production ramp over the coming quarters.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in production capacity to meet the demand from the supply agreement.",
+          "system_hints": [
+            "Infrastructure for data centers"
+          ],
+          "physical_implication": "Possible expansion of production facilities or increased operational capacity.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:08:42Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "company_release_4b2d0901f2a0394e",
+      "source_class": "company_release",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:08:50Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "company_release_d504c2a0d9c8be13",
+      "source_class": "company_release",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "MotionArc Controls announced a joint venture focused on industrial automation systems.",
+          "capital_flow_implication_type": "direct_capital_allocation",
+          "observation_directness": "direct",
+          "capital_flow_implication": "potential increase in capital investment in industrial automation systems",
+          "system_hints": [
+            "industrial automation sector"
+          ],
+          "physical_implication": "possible future factory or equipment buildout as a result of the joint venture",
+          "confidence": "medium"
+        },
+        {
+          "observable_statement": "The venture will accelerate product development and expand go-to-market coverage.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "indirect",
+          "capital_flow_implication": "increased procurement for product development and marketing efforts",
+          "system_hints": [
+            "product development and marketing within industrial automation"
+          ],
+          "physical_implication": "potential procurement of resources or facilities to support expanded operations",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T01:08:55Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "company_release_d21c574184e58807",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'financing for construction'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "Frontier Separation Holdings announced a financing package to support construction and commissioning of a domestic rare earth separation facility.",
+            "capital_flow_implication_type": "financing for construction",
+            "observation_directness": "direct",
+            "capital_flow_implication": "capital flow into construction and commissioning of a facility",
+            "system_hints": "rare earth separation industry, domestic manufacturing",
+            "physical_implication": "construction and commissioning of a facility",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The company said the package will fund equipment purchases, site development, and process-line installation.",
+            "capital_flow_implication_type": "procurement pull for equipment and site development",
+            "observation_directness": "direct",
+            "capital_flow_implication": "capital flow into procurement of equipment and site development",
+            "system_hints": "manufacturing equipment, site development for rare earth processing",
+            "physical_implication": "equipment purchases and site development activities",
+            "confidence": "high"
+          },
+          {
+            "observable_statement": "The initial phase is expected to begin operations next year.",
+            "capital_flow_implication_type": "capacity response",
+            "observation_directness": "indirect",
+            "capital_flow_implication": "potential future capital flow related to operational capacity",
+            "system_hints": "operational capacity in rare earth processing",
+            "physical_implication": "increased operational capacity in the rare earth sector",
+            "confidence": "medium"
+          }
+        ]
+      }
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 5,
+    "successful_extractions": 4,
+    "schema_failure_count": 1,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 3,
+    "no_candidate_artifact_count": 1,
+    "total_candidate_count": 7,
+    "review_artifact_count": 2,
+    "review_candidate_artifact_count": 1
+  }
+}
