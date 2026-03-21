@@ -131,6 +131,7 @@ from .structural_pressure_merger import build_structural_pressure_candidate_batc
 from .bounded_universe_builder import build_bounded_universe_candidate_batch
 from .bounded_universe_expander import build_bounded_universe_expansion_batch
 from .bounded_research_set_builder import build_bounded_research_set_batch
+from .bounded_entity_candidate_builder import build_bounded_entity_candidate_batch
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -246,6 +247,7 @@ __all__ = [
     'build_bounded_universe_candidate_batch',
     'build_bounded_universe_expansion_batch',
     'build_bounded_research_set_batch',
+    'build_bounded_entity_candidate_batch',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',

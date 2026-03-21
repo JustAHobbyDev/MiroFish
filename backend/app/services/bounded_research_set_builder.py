@@ -42,7 +42,9 @@ STOPWORDS = {
 
 ENTITY_VERBS = (
     "invests",
+    "invest",
     "expands",
+    "commits",
     "breaks",
     "adds",
     "raises",
@@ -60,6 +62,7 @@ ENTITY_VERBS = (
     "launches",
     "signs",
     "announces",
+    "unveils",
 )
 
 
@@ -108,9 +111,15 @@ def _artifact_text(artifact: Dict[str, Any]) -> str:
     ).lower()
 
 
-def _anchor_keywords(system_label: str) -> List[str]:
+def _anchor_keywords(plan: Dict[str, Any]) -> List[str]:
     anchors: List[str] = []
-    for token in re.findall(r"[a-z0-9]+", _coerce_string(system_label).lower()):
+    source_text = " ".join(
+        [
+            _coerce_string(plan.get("system_label")),
+            *[_coerce_string(item) for item in plan.get("suspected_stress_layers", [])],
+        ]
+    )
+    for token in re.findall(r"[a-z0-9]+", source_text.lower()):
         if len(token) < 4 or token in STOPWORDS:
             continue
         if token not in anchors:
@@ -125,13 +134,19 @@ def _extract_entity_hint(artifact: Dict[str, Any]) -> str:
     title = _coerce_string(artifact.get("title"))
     if not title:
         return ""
-    pattern = (
-        r"([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,4}) "
-        r"(?:%s)\b" % "|".join(ENTITY_VERBS)
-    )
-    match = re.search(pattern, title)
-    if match:
-        return match.group(1).strip(" ,:-")
+    patterns = [
+        r"([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,4}(?: subsidiary)?) (?:%s)\b"
+        % "|".join(ENTITY_VERBS),
+        r"([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,4}(?: subsidiary)?) to (?:build|expand|invest)\b",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, title)
+        if not match:
+            continue
+        entity = match.group(1).strip(" ,:-")
+        entity = re.sub(r"^[A-Z][a-z]+-based\s+", "", entity)
+        entity = re.sub(r"\s+subsidiary$", "", entity, flags=re.IGNORECASE)
+        return entity
     return ""
 
 
@@ -139,7 +154,7 @@ def _score_artifact(plan: Dict[str, Any], artifact: Dict[str, Any]) -> Tuple[int
     text = _artifact_text(artifact)
     positive_terms = list(plan.get("query_seed_terms", [])) + list(plan.get("suspected_stress_layers", []))
     negative_terms = list(plan.get("negative_boundaries", []))
-    anchor_hits = sorted({kw for kw in _anchor_keywords(_coerce_string(plan.get("system_label"))) if kw in text})
+    anchor_hits = sorted({kw for kw in _anchor_keywords(plan) if kw in text})
     phrase_hits = sorted({term for term in positive_terms if _coerce_string(term).lower() in text})
     keyword_hits = sorted({kw for kw in _term_keywords(positive_terms) if kw in text})
     negative_hits = sorted({term for term in negative_terms if _coerce_string(term).lower() in text})

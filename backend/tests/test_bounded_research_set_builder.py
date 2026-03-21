@@ -126,3 +126,55 @@ def test_build_bounded_research_set_batch_requires_lane_anchor_keywords():
 
     research_set = result["research_sets"][0]
     assert research_set["matched_artifact_ids"] == ["dc1"]
+
+
+def test_extract_entity_hints_from_trade_press_title_patterns():
+    expansion_batch = {
+        "plans": [
+            {
+                "bounded_universe_expansion_plan_id": "bue_grid",
+                "as_of_date": "2025-12-17",
+                "system_label": "grid equipment and transformer buildout",
+                "query_seed_terms": ["transformer production expansion", "switchgear manufacturing expansion"],
+                "negative_boundaries": [],
+                "source_classes_priority": ["trade_press"],
+                "suspected_stress_layers": ["transformers", "switchgear"],
+                "confidence": "high",
+            }
+        ]
+    }
+    prefilter_batches = [
+        {
+            "kept_artifacts": [
+                {
+                    "artifact_id": "a1",
+                    "source_class": "trade_press",
+                    "title": "Hitachi Energy commits $250M to address transformer shortage",
+                    "body_text": "Transformer production expansion supports utility demand.",
+                    "source_url": "https://example.com/a1",
+                },
+                {
+                    "artifact_id": "a2",
+                    "source_class": "trade_press",
+                    "title": "Italy-based Westrafo to build its first US transformer plant",
+                    "body_text": "The plant supports transformer demand.",
+                    "source_url": "https://example.com/a2",
+                },
+                {
+                    "artifact_id": "a3",
+                    "source_class": "trade_press",
+                    "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
+                    "body_text": "Switchgear factory expansion.",
+                    "source_url": "https://example.com/a3",
+                },
+            ],
+            "review_artifacts": [],
+        }
+    ]
+
+    result = module.build_bounded_research_set_batch(expansion_batch, prefilter_batches)
+
+    entity_names = [item["entity_name"] for item in result["research_sets"][0]["entity_candidates"]]
+    assert "Hitachi Energy" in entity_names
+    assert "Westrafo" in entity_names
+    assert "Mitsubishi Electric" in entity_names

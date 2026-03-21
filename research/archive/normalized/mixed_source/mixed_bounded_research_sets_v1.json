@@ -14,11 +14,13 @@
           "title": "Summit Compute Parks advances 250MW data center campus construction",
           "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
           "entity_hint": "Summit Compute Parks",
-          "match_score": 14,
+          "match_score": 16,
           "matched_terms": [
             "center",
+            "cooling",
             "data",
             "power",
+            "substations",
             "substations",
             "campus",
             "center",
@@ -37,10 +39,12 @@
           "title": "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase",
           "source_url": "https://example.com/releases/2025-11-21-hyperscale-campus-phase-two",
           "entity_hint": "NorthRiver Digital Infrastructure",
-          "match_score": 11,
+          "match_score": 13,
           "matched_terms": [
             "center",
+            "cooling",
             "data",
+            "delivery",
             "power",
             "campus",
             "center",
@@ -59,10 +63,11 @@
           "title": "Eaton invests $340M in US transformer production",
           "source_url": "https://www.utilitydive.com/news/eaton-transformer-production-shortage-investment/739932/",
           "entity_hint": "Eaton",
-          "match_score": 10,
+          "match_score": 11,
           "matched_terms": [
             "center",
             "data",
+            "transformers",
             "transformers",
             "center",
             "centers",
@@ -78,10 +83,11 @@
           "title": "PG&E data center pipeline swells to 10GW",
           "source_url": "https://www.datacenterdynamics.com/en/news/pge-data-center-pipeline-swells-to-10gw/",
           "entity_hint": "",
-          "match_score": 10,
+          "match_score": 11,
           "matched_terms": [
             "center",
             "data",
+            "interconnection",
             "power",
             "utility interconnection",
             "center",
@@ -96,11 +102,12 @@
           "source_class": "trade_press",
           "title": "Hitachi Energy commits $250M to address transformer shortage",
           "source_url": "https://www.utilitydive.com/news/hitachi-energy-commits-250-million-transformer-shortage/742010/",
-          "entity_hint": "",
-          "match_score": 9,
+          "entity_hint": "Hitachi Energy",
+          "match_score": 10,
           "matched_terms": [
             "center",
             "data",
+            "transformers",
             "transformers",
             "center",
             "data",
@@ -129,6 +136,25 @@
           "negative_hits": []
         },
         {
+          "artifact_id": "trade_press_adbcd97a0be82618",
+          "source_class": "trade_press",
+          "title": "PPL Electric's data center pipeline soars to 14GW",
+          "source_url": "https://www.datacenterdynamics.com/en/news/ppl-electrics-data-center-pipeline-soars-to-14gw/",
+          "entity_hint": "",
+          "match_score": 8,
+          "matched_terms": [
+            "center",
+            "data",
+            "interconnection",
+            "power",
+            "center",
+            "data",
+            "interconnection",
+            "power"
+          ],
+          "negative_hits": []
+        },
+        {
           "artifact_id": "trade_press_ff46b7dab1b827b4",
           "source_class": "trade_press",
           "title": "Rowan Digital breaks ground on 300MW data center campus outside San Antonio, Texas",
@@ -144,6 +170,24 @@
             "data",
             "hyperscale",
             "power"
+          ],
+          "negative_hits": []
+        },
+        {
+          "artifact_id": "company_release_628ba329dfe7d2b1",
+          "source_class": "company_release",
+          "title": "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules",
+          "source_url": "https://example.com/releases/2025-10-22-cooling-modules-supply",
+          "entity_hint": "ThermaLoop Systems",
+          "match_score": 7,
+          "matched_terms": [
+            "center",
+            "cooling",
+            "data",
+            "center",
+            "centers",
+            "cooling",
+            "data"
           ],
           "negative_hits": []
         },
@@ -238,41 +282,6 @@
           "negative_hits": []
         },
         {
-          "artifact_id": "trade_press_adbcd97a0be82618",
-          "source_class": "trade_press",
-          "title": "PPL Electric's data center pipeline soars to 14GW",
-          "source_url": "https://www.datacenterdynamics.com/en/news/ppl-electrics-data-center-pipeline-soars-to-14gw/",
-          "entity_hint": "",
-          "match_score": 7,
-          "matched_terms": [
-            "center",
-            "data",
-            "power",
-            "center",
-            "data",
-            "interconnection",
-            "power"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_628ba329dfe7d2b1",
-          "source_class": "company_release",
-          "title": "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules",
-          "source_url": "https://example.com/releases/2025-10-22-cooling-modules-supply",
-          "entity_hint": "ThermaLoop Systems",
-          "match_score": 6,
-          "matched_terms": [
-            "center",
-            "data",
-            "center",
-            "centers",
-            "cooling",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
           "artifact_id": "company_release_7434d169b6d086b9",
           "source_class": "company_release",
           "title": "PrimeForge Power to expand generator package factory for data center and utility resilience demand",
@@ -341,11 +350,41 @@
           "negative_hits": []
         },
         {
+          "artifact_id": "trade_press_904540c22ad17bed",
+          "source_class": "trade_press",
+          "title": "Italy-based Westrafo to build its first US transformer plant",
+          "source_url": "https://www.utilitydive.com/news/italy-westrafo-power-transformer-facility-planned-in-trotwood-ohio/721345/",
+          "entity_hint": "Westrafo",
+          "match_score": 6,
+          "matched_terms": [
+            "transformers",
+            "transformers",
+            "transformer",
+            "transformers"
+          ],
+          "negative_hits": []
+        },
+        {
+          "artifact_id": "trade_press_921740cadac635c6",
+          "source_class": "trade_press",
+          "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+          "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+          "entity_hint": "Hitachi",
+          "match_score": 6,
+          "matched_terms": [
+            "transformers",
+            "transformers",
+            "transformer",
+            "transformers"
+          ],
+          "negative_hits": []
+        },
+        {
           "artifact_id": "trade_press_9f4a057076b0ca77",
           "source_class": "trade_press",
           "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
           "source_url": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
-          "entity_hint": "",
+          "entity_hint": "Mitsubishi Electric",
           "match_score": 6,
           "matched_terms": [
             "center",
@@ -422,34 +461,6 @@
           "negative_hits": []
         },
         {
-          "artifact_id": "trade_press_904540c22ad17bed",
-          "source_class": "trade_press",
-          "title": "Italy-based Westrafo to build its first US transformer plant",
-          "source_url": "https://www.utilitydive.com/news/italy-westrafo-power-transformer-facility-planned-in-trotwood-ohio/721345/",
-          "entity_hint": "",
-          "match_score": 5,
-          "matched_terms": [
-            "transformers",
-            "transformer",
-            "transformers"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "trade_press_921740cadac635c6",
-          "source_class": "trade_press",
-          "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
-          "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
-          "entity_hint": "",
-          "match_score": 5,
-          "matched_terms": [
-            "transformers",
-            "transformer",
-            "transformers"
-          ],
-          "negative_hits": []
-        },
-        {
           "artifact_id": "trade_press_acb174b496999f97",
           "source_class": "trade_press",
           "title": "CyrusOne breaks ground on Fort Worth data center campus in Texas",
@@ -486,7 +497,7 @@
           "source_class": "trade_press",
           "title": "Schneider Electric to invest $700M in US manufacturing",
           "source_url": "https://www.utilitydive.com/news/schneider-electric-700-million-investment-us-data-center-demand-ai/743790/",
-          "entity_hint": "",
+          "entity_hint": "Schneider Electric",
           "match_score": 5,
           "matched_terms": [
             "center",
@@ -502,7 +513,7 @@
           "source_class": "trade_press",
           "title": "ABB to invest $120M in US manufacturing",
           "source_url": "https://www.manufacturingdive.com/news/swiss-giant-abb-invest-120-million-us-manufacturing/741971/",
-          "entity_hint": "",
+          "entity_hint": "ABB",
           "match_score": 5,
           "matched_terms": [
             "center",
@@ -518,7 +529,7 @@
           "source_class": "trade_press",
           "title": "Schneider Electric to invest $700M in US manufacturing",
           "source_url": "https://www.manufacturingdive.com/news/schneider-electric-700-million-investment-us-data-center-demand-ai/743630/",
-          "entity_hint": "",
+          "entity_hint": "Schneider Electric",
           "match_score": 5,
           "matched_terms": [
             "center",
@@ -526,6 +537,21 @@
             "center",
             "centers",
             "data"
+          ],
+          "negative_hits": []
+        },
+        {
+          "artifact_id": "company_release_2779831d9e413245",
+          "source_class": "company_release",
+          "title": "TurbineWorks Energy opens service and assembly hub for gas turbine packages",
+          "source_url": "https://example.com/releases/2025-12-11-gasturbine-service-hub",
+          "entity_hint": "TurbineWorks Energy",
+          "match_score": 4,
+          "matched_terms": [
+            "delivery",
+            "power",
+            "delivery",
+            "power"
           ],
           "negative_hits": []
         },
@@ -575,16 +601,16 @@
           "negative_hits": []
         },
         {
-          "artifact_id": "company_release_2779831d9e413245",
-          "source_class": "company_release",
-          "title": "TurbineWorks Energy opens service and assembly hub for gas turbine packages",
-          "source_url": "https://example.com/releases/2025-12-11-gasturbine-service-hub",
-          "entity_hint": "TurbineWorks Energy",
+          "artifact_id": "trade_press_a13c5dc00fba3fa5",
+          "source_class": "trade_press",
+          "title": "EdgeCore begins construction at 114MW Northern Virginia campus",
+          "source_url": "https://www.datacenterdynamics.com/en/news/edgecore-begins-construction-at-114mw-northern-virginia-campus/",
+          "entity_hint": "",
           "match_score": 3,
           "matched_terms": [
-            "power",
             "delivery",
-            "power"
+            "campus",
+            "delivery"
           ],
           "negative_hits": []
         },
@@ -606,7 +632,7 @@
           "source_class": "trade_press",
           "title": "GE Vernova to invest nearly $600M in US factories",
           "source_url": "https://www.manufacturingdive.com/news/ge-vernova-invest-nearly-600-million-us-factories/738792/",
-          "entity_hint": "",
+          "entity_hint": "GE Vernova",
           "match_score": 2,
           "matched_terms": [
             "power",
@@ -622,38 +648,60 @@
         "trade_press_b4dc467358a3db4d",
         "trade_press_c906877e7f8ac2bc",
         "company_release_a39925a36c9535e7",
+        "trade_press_adbcd97a0be82618",
         "trade_press_ff46b7dab1b827b4",
+        "company_release_628ba329dfe7d2b1",
         "trade_press_099f9d0368e5000f",
         "trade_press_1c40d6cd25decce0",
         "trade_press_404505b643706d79",
         "trade_press_47e3c04df2ffff47",
         "trade_press_898010ffbfe80234",
-        "trade_press_adbcd97a0be82618",
-        "company_release_628ba329dfe7d2b1",
         "company_release_7434d169b6d086b9",
         "company_release_c57077dab862393a",
         "trade_press_300902f748d55918",
         "trade_press_8af4de468aa71b03",
+        "trade_press_904540c22ad17bed",
+        "trade_press_921740cadac635c6",
         "trade_press_9f4a057076b0ca77",
         "company_release_99d3a8bd7a7d6651",
         "trade_press_12592956a90d251e",
         "trade_press_8434daa99144e894",
         "trade_press_8de0a080761e2c3b",
-        "trade_press_904540c22ad17bed",
-        "trade_press_921740cadac635c6",
         "trade_press_acb174b496999f97",
         "trade_press_adcf7136a2e92950",
         "trade_press_c838cb21478bfff1",
         "trade_press_c932aca7f0976acc",
         "trade_press_cac8ad2ff3742510",
+        "company_release_2779831d9e413245",
         "company_release_328fad99416fbef1",
         "trade_press_70a23134a41f33bd",
         "trade_press_7cab8b3aa2571296",
-        "company_release_2779831d9e413245",
+        "trade_press_a13c5dc00fba3fa5",
         "company_release_71c6dc59027b9138",
         "trade_press_3d1582c75dda6698"
       ],
       "entity_candidates": [
+        {
+          "entity_name": "Schneider Electric",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 2,
+          "artifact_ids": [
+            "trade_press_c838cb21478bfff1",
+            "trade_press_cac8ad2ff3742510"
+          ]
+        },
+        {
+          "entity_name": "ABB",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_c932aca7f0976acc"
+          ]
+        },
         {
           "entity_name": "ConductorWorks",
           "source_classes": [
@@ -735,6 +783,16 @@
           ]
         },
         {
+          "entity_name": "GE Vernova",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_3d1582c75dda6698"
+          ]
+        },
+        {
           "entity_name": "GridCore Manufacturing",
           "source_classes": [
             "company_release"
@@ -742,6 +800,26 @@
           "artifact_support_count": 1,
           "artifact_ids": [
             "company_release_328fad99416fbef1"
+          ]
+        },
+        {
+          "entity_name": "Hitachi",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_921740cadac635c6"
+          ]
+        },
+        {
+          "entity_name": "Hitachi Energy",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_c906877e7f8ac2bc"
           ]
         },
         {
@@ -762,6 +840,16 @@
           "artifact_support_count": 1,
           "artifact_ids": [
             "company_release_a39925a36c9535e7"
+          ]
+        },
+        {
+          "entity_name": "Mitsubishi Electric",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_9f4a057076b0ca77"
           ]
         },
         {
@@ -853,15 +941,25 @@
           "artifact_ids": [
             "company_release_2779831d9e413245"
           ]
+        },
+        {
+          "entity_name": "Westrafo",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_904540c22ad17bed"
+          ]
         }
       ],
       "coverage_metrics": {
-        "matched_artifact_count": 36,
+        "matched_artifact_count": 37,
         "matched_source_classes": [
           "company_release",
           "trade_press"
         ],
-        "entity_candidate_count": 20
+        "entity_candidate_count": 27
       },
       "source_classes_priority": [
         "company_release",
@@ -890,9 +988,10 @@
           "title": "Lamina Grid Products adds core and coil line to support transformer backlog",
           "source_url": "https://example.com/releases/2025-11-19-transformer-components",
           "entity_hint": "Lamina Grid Products",
-          "match_score": 15,
+          "match_score": 16,
           "matched_terms": [
             "grid",
+            "substation",
             "transformer",
             "core and coil manufacturing",
             "transformer backlog",
@@ -907,34 +1006,37 @@
           "negative_hits": []
         },
         {
-          "artifact_id": "trade_press_921740cadac635c6",
+          "artifact_id": "trade_press_c906877e7f8ac2bc",
           "source_class": "trade_press",
-          "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
-          "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
-          "entity_hint": "",
-          "match_score": 8,
+          "title": "Hitachi Energy commits $250M to address transformer shortage",
+          "source_url": "https://www.utilitydive.com/news/hitachi-energy-commits-250-million-transformer-shortage/742010/",
+          "entity_hint": "Hitachi Energy",
+          "match_score": 10,
           "matched_terms": [
-            "grid",
+            "components",
             "transformer",
             "transformers",
-            "grid",
+            "transformers",
+            "capacity",
+            "components",
             "transformer",
             "transformers"
           ],
           "negative_hits": []
         },
         {
-          "artifact_id": "trade_press_c906877e7f8ac2bc",
+          "artifact_id": "trade_press_921740cadac635c6",
           "source_class": "trade_press",
-          "title": "Hitachi Energy commits $250M to address transformer shortage",
-          "source_url": "https://www.utilitydive.com/news/hitachi-energy-commits-250-million-transformer-shortage/742010/",
-          "entity_hint": "",
-          "match_score": 8,
+          "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+          "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+          "entity_hint": "Hitachi",
+          "match_score": 9,
           "matched_terms": [
+            "grid",
             "transformer",
             "transformers",
-            "capacity",
-            "components",
+            "transformers",
+            "grid",
             "transformer",
             "transformers"
           ],
@@ -946,9 +1048,10 @@
           "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
           "source_url": "https://example.com/releases/2025-09-18-grid-transformers-expansion",
           "entity_hint": "GridCore Manufacturing",
-          "match_score": 7,
+          "match_score": 8,
           "matched_terms": [
             "grid",
+            "substation",
             "transformer",
             "capacity",
             "core",
@@ -964,9 +1067,10 @@
           "title": "Eaton invests $340M in US transformer production",
           "source_url": "https://www.utilitydive.com/news/eaton-transformer-production-shortage-investment/739932/",
           "entity_hint": "Eaton",
-          "match_score": 6,
+          "match_score": 7,
           "matched_terms": [
             "transformer",
+            "transformers",
             "transformers",
             "transformer",
             "transformers"
@@ -978,10 +1082,11 @@
           "source_class": "trade_press",
           "title": "Italy-based Westrafo to build its first US transformer plant",
           "source_url": "https://www.utilitydive.com/news/italy-westrafo-power-transformer-facility-planned-in-trotwood-ohio/721345/",
-          "entity_hint": "",
-          "match_score": 6,
+          "entity_hint": "Westrafo",
+          "match_score": 7,
           "matched_terms": [
             "transformer",
+            "transformers",
             "transformers",
             "transformer",
             "transformers"
@@ -993,10 +1098,11 @@
           "source_class": "trade_press",
           "title": "Mitsubishi Electric subsidiary invests $86M in switchgear factory",
           "source_url": "https://www.manufacturingdive.com/news/mitsubishi-subsidiary-invests-86-million-switchgear-pennsylvania-facility/734314/",
-          "entity_hint": "",
-          "match_score": 6,
+          "entity_hint": "Mitsubishi Electric",
+          "match_score": 7,
           "matched_terms": [
             "grid",
+            "switchgear",
             "switchgear",
             "grid",
             "switchgear"
@@ -1025,11 +1131,26 @@
           "title": "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects",
           "source_url": "https://example.com/releases/2025-10-30-cable-factory",
           "entity_hint": "ConductorWorks",
-          "match_score": 4,
+          "match_score": 5,
           "matched_terms": [
             "grid",
+            "substation",
             "capacity",
             "grid",
+            "substation"
+          ],
+          "negative_hits": []
+        },
+        {
+          "artifact_id": "company_release_699b2a49df49cc9e",
+          "source_class": "company_release",
+          "title": "Summit Compute Parks advances 250MW data center campus construction",
+          "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
+          "entity_hint": "Summit Compute Parks",
+          "match_score": 3,
+          "matched_terms": [
+            "substation",
+            "capacity",
             "substation"
           ],
           "negative_hits": []
@@ -1039,7 +1160,7 @@
           "source_class": "trade_press",
           "title": "GE Vernova to invest nearly $600M in US factories",
           "source_url": "https://www.manufacturingdive.com/news/ge-vernova-invest-nearly-600-million-us-factories/738792/",
-          "entity_hint": "",
+          "entity_hint": "GE Vernova",
           "match_score": 2,
           "matched_terms": [
             "grid",
@@ -1050,14 +1171,15 @@
       ],
       "matched_artifact_ids": [
         "company_release_a39925a36c9535e7",
-        "trade_press_921740cadac635c6",
         "trade_press_c906877e7f8ac2bc",
+        "trade_press_921740cadac635c6",
         "company_release_328fad99416fbef1",
         "trade_press_08976a2c7918a320",
         "trade_press_904540c22ad17bed",
         "trade_press_9f4a057076b0ca77",
         "company_release_088c813f7e093143",
         "company_release_99d3a8bd7a7d6651",
+        "company_release_699b2a49df49cc9e",
         "trade_press_3d1582c75dda6698"
       ],
       "entity_candidates": [
@@ -1082,6 +1204,16 @@
           ]
         },
         {
+          "entity_name": "GE Vernova",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_3d1582c75dda6698"
+          ]
+        },
+        {
           "entity_name": "GridCore Manufacturing",
           "source_classes": [
             "company_release"
@@ -1089,6 +1221,26 @@
           "artifact_support_count": 1,
           "artifact_ids": [
             "company_release_328fad99416fbef1"
+          ]
+        },
+        {
+          "entity_name": "Hitachi",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_921740cadac635c6"
+          ]
+        },
+        {
+          "entity_name": "Hitachi Energy",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_c906877e7f8ac2bc"
           ]
         },
         {
@@ -1110,15 +1262,45 @@
           "artifact_ids": [
             "company_release_088c813f7e093143"
           ]
+        },
+        {
+          "entity_name": "Mitsubishi Electric",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_9f4a057076b0ca77"
+          ]
+        },
+        {
+          "entity_name": "Summit Compute Parks",
+          "source_classes": [
+            "company_release"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "company_release_699b2a49df49cc9e"
+          ]
+        },
+        {
+          "entity_name": "Westrafo",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_904540c22ad17bed"
+          ]
         }
       ],
       "coverage_metrics": {
-        "matched_artifact_count": 10,
+        "matched_artifact_count": 11,
         "matched_source_classes": [
           "company_release",
           "trade_press"
         ],
-        "entity_candidate_count": 5
+        "entity_candidate_count": 11
       },
       "source_classes_priority": [
         "company_release",

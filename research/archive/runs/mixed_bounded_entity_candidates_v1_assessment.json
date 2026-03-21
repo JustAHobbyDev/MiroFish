@@ -1,0 +1,33 @@
+{
+  "name": "mixed_bounded_entity_candidates_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_candidates_v1.json",
+  "metrics": {
+    "bounded_entity_candidate_count": 36,
+    "data_center_power_demand_buildout_entity_count": 26,
+    "grid_equipment_and_transformer_buildout_entity_count": 10
+  },
+  "first_downstream_entity_expansion_test": {
+    "system_label": "grid equipment and transformer buildout",
+    "initial_priority_entities": [
+      "Lamina Grid Products",
+      "Hitachi Energy",
+      "GridCore Manufacturing",
+      "Eaton",
+      "Westrafo",
+      "MeterWave Technologies"
+    ],
+    "holdout_entities": [
+      "ConductorWorks",
+      "GE Vernova",
+      "Summit Compute Parks"
+    ],
+    "known_normalization_gap": [
+      "Hitachi",
+      "Hitachi Energy"
+    ]
+  },
+  "next_corroboration_focus": [
+    "utility and large-load power",
+    "power generation and backup equipment"
+  ]
+}
