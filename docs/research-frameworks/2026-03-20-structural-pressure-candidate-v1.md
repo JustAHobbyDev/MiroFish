@@ -67,8 +67,8 @@ If yes:
    - bottleneck verification
 
 5. This object should be formed from multiple upstream signals, primarily:
-   - `capital_flow_signal_candidate`
-   - and, where relevant, `energy_flow_pressure_signal`
+   - `capital_flow_cluster`
+   - and, where relevant, `energy_flow_pressure_cluster`
    not from raw mention volume alone.
 
 ## Assumptions
@@ -212,12 +212,8 @@ It is the minimum working contract.
 
 ### Allowed to contribute to formation
 
-1. company filings
-2. earnings releases and transcripts
-3. company press releases
-4. policy or government notices if they affect demand or buildout
-5. trade press
-6. high-signal investor posts
+1. `capital_flow_cluster`
+2. `energy_flow_pressure_cluster`
 
 ### Not sufficient on their own
 
@@ -228,14 +224,14 @@ It is the minimum working contract.
 
 ### Formation rule
 
-At least two independent upstream signals should support formation.
+At least one valid upstream cluster should support formation.
 
 Preferred composition:
 
-1. at least one `capital_flow_signal_candidate`
-2. optionally one or more `energy_flow_pressure_signal`s
-3. at least one supporting signal should tie the pressure to a real system or
-   buildout
+1. at least one `capital_flow_cluster`
+2. optionally one overlapping `energy_flow_pressure_cluster`
+3. at least one contributing cluster should tie the pressure to a real system or
+   buildout lane
 
 ## Promotion Rules
 
@@ -243,9 +239,28 @@ Preferred composition:
 
 Promote when all are true:
 
-1. repeated rising-demand signals exist
+1. a valid upstream cluster exists
 2. the system can name the affected physical system
 3. there is a plausible stress rationale
+4. if both cluster types exist, they are compatible on system, geography, or
+   demand story
+
+### Cluster merge -> structural pressure candidate
+
+Merge a `capital_flow_cluster` and an `energy_flow_pressure_cluster` into one
+`structural_pressure_candidate` when all are true:
+
+1. they overlap on a concrete system label or adjacent system labels
+2. they share a compatible time window
+3. they do not conflict on direction
+4. the merged statement is stronger than either cluster alone
+
+If only one cluster type exists:
+
+1. a `capital_flow_cluster` may form a `structural_pressure_candidate` alone
+   when system grounding and stress rationale are already clear
+2. an `energy_flow_pressure_cluster` alone should usually remain upstream unless
+   it also contains strong infrastructure-response evidence
 
 ### Structural pressure candidate -> bounded universe
 
@@ -344,13 +359,15 @@ The intended sequence is:
 
 1. broad public flow
 2. signal candidates
-3. `structural_pressure_candidate`
-4. bounded universe formation
-5. visible beneficiary confirmation
-6. chain expansion
-7. bottleneck candidate
-8. verification
-9. expression selection
+3. `capital_flow_cluster`
+4. `energy_flow_pressure_cluster`
+5. `structural_pressure_candidate`
+6. bounded universe formation
+7. visible beneficiary confirmation
+8. chain expansion
+9. bottleneck candidate
+10. verification
+11. expression selection
 
 ## What This Enables
 
@@ -382,9 +399,9 @@ Once this object exists, the system can:
 ### Build first
 
 1. signal normalization
-2. multi-source demand-pressure detection
+2. per-lane clustering
 3. physical-system labeling
-4. minimal promotion logic into `structural_pressure_candidate`
+4. minimal merge logic into `structural_pressure_candidate`
 
 ### Do not build first
 
