@@ -106,9 +106,9 @@ Every archive manifest must include:
 
 Use these classes for the first six-month archive:
 
-1. `company_release`
-2. `government`
-3. `trade_press`
+1. `trade_press`
+2. `company_release`
+3. `government`
 
 Keep it there for v1.
 
@@ -160,13 +160,13 @@ Concrete sources:
 
 Concrete sources:
 
-- `IndustryWeek`
 - `Manufacturing Dive`
-- `Supply Chain Dive`
 - `Utility Dive`
 - `Data Center Dynamics`
 - `Semiconductor Engineering`
 - `EE Times`
+- `IndustryWeek`
+- `Supply Chain Dive`
 - `Fierce Electronics`
 
 Rule:
@@ -176,6 +176,12 @@ Rule:
 - investor posts are excluded from the first blind run to avoid social
   synthesis dominating the first-stage corpus
 - expanding the source universe requires a new manifest version
+
+Current priority note:
+
+1. `trade_press` is the primary early-discovery source class
+2. `company_release` is a confirmation and corroboration lane
+3. broad `government` feeds are secondary and should stay narrowly scoped
 
 ### Deferred enrichment sources
 

@@ -20,3 +20,7 @@ Operational note:
 
 - deterministic prefilter `drop` decisions must be logged and audited during
   early runs before the prefilter is trusted as a stable discovery gate
+- current source-class priority:
+  1. `trade_press`
+  2. `company_release`
+  3. narrow `government`

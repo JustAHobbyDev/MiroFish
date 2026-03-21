@@ -106,52 +106,69 @@ The concrete rule set is defined in:
 
 ## Source-Class Methods
 
-## 1. Government
+## 1. Trade Press
 
 ### Why it is first-pass eligible
 
-Government sources directly surface:
+Broad industrial and technical trade press surfaces:
 
-1. public spending
-2. industrial-policy support
-3. contract awards
-4. subsidy-backed buildout
-5. infrastructure deployment
+1. facility construction
+2. equipment orders
+3. deployment waves
+4. manufacturing constraints
+5. procurement shifts
+6. capacity announcements
+7. cross-company demand and bottleneck context
+
+This is currently the strongest source class tested for early structural-pressure
+discovery.
 
 ### Concrete sources
 
-1. `BIS`
-2. `Federal Register`
-3. `DOE Loan Programs Office`
-4. `Office of Clean Energy Demonstrations`
-5. `CHIPS Program Office`
-6. `DoD Contract Announcements`
-7. `USASpending Award Data`
+1. `Manufacturing Dive`
+2. `Utility Dive`
+3. `Data Center Dynamics`
+4. `Semiconductor Engineering`
+5. `EE Times`
+6. `IndustryWeek`
+7. `Supply Chain Dive`
+8. `Fierce Electronics`
 
 ### Artifact boundary
 
-One artifact equals:
-
-1. one notice
-2. one award record
-3. one release
-4. one announcement page
+One artifact equals one article page.
 
 ### Collection rule
 
-Collect all in-window artifacts from these sources.
+Collect all in-window articles that pass the allowed event-form prefilter on:
 
-If the source is too broad for direct full capture, apply only the allowed
-event-form prefilter to title or metadata.
+1. headline
+2. deck
+3. section name
+4. article tags when available
+
+Do not filter by:
+
+1. target company
+2. target component
+3. target bottleneck
+4. known benchmark theme
 
 ### Preserve
 
-1. source URL
-2. publication date
-3. publisher
-4. title
-5. body text
-6. source tags or categories
+1. article URL
+2. publisher
+3. published date
+4. headline
+5. deck if available
+6. body text
+
+### Current operating note
+
+1. `trade_press` is the primary early-discovery lane
+2. the current deterministic prefilter has been adjusted specifically for
+   trade-press investment, factory, pipeline, and load-growth language
+3. future scaling should start here before broadening government work further
 
 ## 2. Company Release
 
@@ -204,60 +221,68 @@ Do not filter by:
 6. body text
 7. category metadata
 
-## 3. Trade Press
+### Current operating note
+
+1. `company_release` is now best treated as a confirmation and corroboration
+   lane
+2. it is cleaner than broad government feeds, but more issuer-local than
+   `trade_press`
+
+## 3. Government
 
 ### Why it is first-pass eligible
 
-Broad industrial and technical trade press surfaces:
+Government sources can still surface:
 
-1. facility construction
-2. equipment orders
-3. deployment waves
-4. manufacturing constraints
-5. procurement shifts
-6. capacity announcements
-
-without needing a benchmark-seeded company universe.
+1. direct project authorizations
+2. land and resource access changes
+3. project-linked awards and spending
+4. narrow implementation signals
 
 ### Concrete sources
 
-1. `IndustryWeek`
-2. `Manufacturing Dive`
-3. `Supply Chain Dive`
-4. `Utility Dive`
-5. `Data Center Dynamics`
-6. `Semiconductor Engineering`
-7. `EE Times`
-8. `Fierce Electronics`
+1. `BIS`
+2. `Federal Register`
+3. `DOE Loan Programs Office`
+4. `Office of Clean Energy Demonstrations`
+5. `CHIPS Program Office`
+6. `DoD Contract Announcements`
+7. `USASpending Award Data`
 
 ### Artifact boundary
 
-One artifact equals one article page.
+One artifact equals:
+
+1. one notice
+2. one award record
+3. one release
+4. one announcement page
 
 ### Collection rule
 
-Collect all in-window articles that pass the allowed event-form prefilter on:
+Collect all in-window artifacts from these sources.
 
-1. headline
-2. deck
-3. section name
-4. article tags when available
-
-Do not filter by:
-
-1. target company
-2. target component
-3. target bottleneck
-4. known benchmark theme
+If the source is too broad for direct full capture, apply only the allowed
+event-form prefilter to title or metadata.
 
 ### Preserve
 
-1. article URL
+1. source URL
 2. publisher
-3. published date
-4. headline
-5. deck if available
-6. body text
+3. publication date
+4. title
+5. body text
+6. source tags or categories
+
+### Current operating note
+
+1. broad government feeds are secondary, not primary
+2. use them narrowly for:
+   - construction / project authorization
+   - land and resource access changes
+   - implementation-stage corroboration
+3. do not spend more time broadening government edge-case handling until the
+   larger `trade_press` lane is more mature
 7. section/tag metadata
 
 ## 4. Company Filing
