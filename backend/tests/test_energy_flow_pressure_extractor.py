@@ -165,6 +165,114 @@ def test_validate_energy_flow_pressure_payload_accepts_observed_smoke_aliases():
     assert validated["candidates"][2]["energy_pressure_type"] == "infrastructure_response_need"
 
 
+def test_validate_energy_flow_pressure_payload_accepts_singular_key_and_trimmed_field_names():
+    payload = {
+        "energy_flow_pressure_signal": [
+            {
+                "observable_statement": "A plant is being established for power-generator infrastructure.",
+                "energy_pressure_type": "increased demand for energy infrastructure",
+                " observation_directness": "direct",
+                "energy_flow_implication": "Power infrastructure demand is increasing.",
+                "system_hints": "power generators",
+                "physical_implication": "More supporting infrastructure may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+                "confidence": "high"
+            }
+        ]
+    }
+    validated = module.validate_energy_flow_pressure_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["energy_pressure_type"] == "infrastructure_response_need"
+    assert validated["candidates"][0]["observation_directness"] == "direct"
+
+
+def test_validate_energy_flow_pressure_payload_accepts_full_batch_aliases():
+    payload = {
+        "energy_flow_pressure_signals": [
+            {
+                "observable_statement": "Facility upgrades imply more on-site power draw.",
+                "energy_pressure_type": "increased energy consumption",
+                "observation_directness": "direct",
+                "energy_flow_implication": "Electricity demand is likely to rise at the upgraded sites.",
+                "system_hints": ["manufacturing facilities"],
+                "physical_implication": "More grid capacity may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+                "confidence": "high",
+            },
+            {
+                "observable_statement": "Data-center demand is rising in a defined sector.",
+                "energy_pressure_type": "rising energy demand from specific sectors",
+                "observation_directness": "direct",
+                "energy_flow_implication": "Sector-specific electricity demand is increasing.",
+                "system_hints": ["data centers"],
+                "physical_implication": "Generation and transmission needs may grow.",
+                "relationship_to_capital_flow": "energy_flow_pressure_only",
+                "confidence": "medium",
+            },
+            {
+                "observable_statement": "Regional supply could become strained.",
+                "energy_pressure_type": "supply adequacy concern",
+                "observation_directness": "indirect",
+                "energy_flow_implication": "Existing energy supply may be insufficient.",
+                "system_hints": ["regional grid"],
+                "physical_implication": "Capacity tightness may emerge.",
+                "relationship_to_capital_flow": "energy_flow_pressure_only",
+                "confidence": "medium",
+            },
+            {
+                "observable_statement": "Production growth will require more energy inputs.",
+                "energy_pressure_type": "increased energy requirements for production",
+                "observation_directness": "direct",
+                "energy_flow_implication": "Industrial production is likely to increase power demand.",
+                "system_hints": ["factory production"],
+                "physical_implication": "More electricity infrastructure may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+                "confidence": "high",
+            },
+        ]
+    }
+    validated = module.validate_energy_flow_pressure_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert validated["candidates"][0]["energy_pressure_type"] == "load_growth"
+    assert validated["candidates"][1]["energy_pressure_type"] == "load_growth"
+    assert validated["candidates"][2]["energy_pressure_type"] == "capacity_tightness"
+    assert validated["candidates"][3]["energy_pressure_type"] == "infrastructure_response_need"
+
+
+def test_validate_energy_flow_pressure_payload_drops_invalid_secondary_candidates():
+    payload = {
+        "produced_candidates": True,
+        "candidates": [
+            {
+                "observable_statement": "The utility pipeline has risen materially.",
+                "energy_pressure_type": "pipeline pressure",
+                "observation_directness": "direct",
+                "energy_flow_implication": "Future electricity demand is likely rising.",
+                "system_hints": "utility grid",
+                "physical_implication": "More generation and grid infrastructure may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_only",
+                "confidence": "high",
+            },
+            {
+                "observable_statement": "The project will create many jobs.",
+                "energy_pressure_type": "job creation in energy sectors",
+                "observation_directness": "indirect",
+                "energy_flow_implication": "Hiring may support future production.",
+                "system_hints": "energy manufacturing",
+                "physical_implication": "More labor may be needed.",
+                "relationship_to_capital_flow": "energy_flow_pressure_only",
+                "confidence": "medium",
+            },
+        ],
+    }
+    validated = module.validate_energy_flow_pressure_extraction_payload(payload)
+    assert validated["produced_candidates"] is True
+    assert len(validated["candidates"]) == 1
+    assert validated["candidates"][0]["energy_pressure_type"] == "pipeline_pressure"
+    assert len(validated["dropped_candidate_errors"]) == 1
+    assert "job creation in energy sectors" in validated["dropped_candidate_errors"][0]
+
+
 def test_energy_flow_extractor_returns_pipeline_pressure_candidate():
     llm = _FakeLLMClient(
         """

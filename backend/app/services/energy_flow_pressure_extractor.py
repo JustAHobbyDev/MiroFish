@@ -41,14 +41,62 @@ ENERGY_PRESSURE_TYPE_ALIASES = {
     "load growth": "load_growth",
     "demand increase": "load_growth",
     "demand pressure": "load_growth",
+    "demand growth": "load_growth",
+    "increased demand": "load_growth",
+    "increased energy demand": "load_growth",
+    "increased demand for electricity": "load_growth",
+    "anticipated future demand increase": "load_growth",
+    "future demand projection": "load_growth",
+    "immediate demand pressure": "load_growth",
     "pipeline_pressure": "pipeline_pressure",
     "pipeline pressure": "pipeline_pressure",
     "capacity_tightness": "capacity_tightness",
     "capacity tightness": "capacity_tightness",
+    "timing pressure": "capacity_tightness",
+    "supply adjustment": "capacity_tightness",
     "supply pressure": "infrastructure_response_need",
     "infrastructure_response_need": "infrastructure_response_need",
     "infrastructure response need": "infrastructure_response_need",
     "capital investment pressure": "infrastructure_response_need",
+    "infrastructure enhancement": "infrastructure_response_need",
+    "infrastructure development": "infrastructure_response_need",
+    "investment in energy production capacity": "infrastructure_response_need",
+    "increased demand for energy production capabilities": "infrastructure_response_need",
+    "capital investment in energy infrastructure": "infrastructure_response_need",
+    "investment-driven demand for energy resources": "infrastructure_response_need",
+    "increased demand for energy_related products": "infrastructure_response_need",
+    "increased demand for power products": "infrastructure_response_need",
+    "increased demand for grid equipment": "infrastructure_response_need",
+    "increased demand for transformers": "infrastructure_response_need",
+    "increased demand for energy infrastructure": "infrastructure_response_need",
+    "demand for energy-efficient production technologies": "infrastructure_response_need",
+    "capital investment in energy_intensive manufacturing": "infrastructure_response_need",
+    "increased energy supply requirements": "infrastructure_response_need",
+    "increased energy usage during construction": "infrastructure_response_need",
+    "increased demand for energy capacity": "infrastructure_response_need",
+    "increased demand for renewable energy sources": "infrastructure_response_need",
+    "demand for energy capacity": "infrastructure_response_need",
+    "production capacity pressure": "infrastructure_response_need",
+    "increased residential energy demand": "load_growth",
+    "future demand escalation": "load_growth",
+    "regional demand surge": "load_growth",
+    "demand growth expectation": "load_growth",
+    "investment in production capacity": "infrastructure_response_need",
+    "increased energy consumption": "load_growth",
+    "rising energy demand from specific sectors": "load_growth",
+    "capital investment in energy production": "infrastructure_response_need",
+    "increased demand for energy_intensive production": "infrastructure_response_need",
+    "strategic demand": "load_growth",
+    "investment_driven demand": "infrastructure_response_need",
+    "sustained demand for energy resources": "load_growth",
+    "increased local energy consumption": "load_growth",
+    "increased energy consumption due to economic growth": "load_growth",
+    "investment pressure": "infrastructure_response_need",
+    "emerging demand from new sectors": "load_growth",
+    "supply adequacy concern": "capacity_tightness",
+    "future energy supply increase": "infrastructure_response_need",
+    "increased demand for energy inputs": "infrastructure_response_need",
+    "increased energy requirements for production": "infrastructure_response_need",
 }
 RELATIONSHIP_ALIASES = {
     "energy_flow_pressure_only": "energy_flow_pressure_only",
@@ -180,6 +228,8 @@ def _normalize_payload_shape(payload: Any) -> Dict[str, Any]:
         candidates = payload.get("results")
     if candidates is None and isinstance(payload.get("energy_flow_pressure_signals"), list):
         candidates = payload.get("energy_flow_pressure_signals")
+    if candidates is None and isinstance(payload.get("energy_flow_pressure_signal"), list):
+        candidates = payload.get("energy_flow_pressure_signal")
 
     produced_candidates = payload.get("produced_candidates")
     if produced_candidates is None and isinstance(candidates, list):
@@ -232,14 +282,18 @@ Task:
 
 
 def _validate_candidate(candidate: Dict[str, Any], index: int) -> Dict[str, Any]:
-    observable_statement = _coerce_string(candidate.get("observable_statement"))
-    pressure_type = _normalize_energy_pressure_type(candidate.get("energy_pressure_type"))
-    directness = _normalize_directness(candidate.get("observation_directness"))
-    implication = _coerce_string(candidate.get("energy_flow_implication"))
-    system_hints = _normalize_system_hints(candidate.get("system_hints"))
-    physical_implication = _coerce_string(candidate.get("physical_implication"))
-    relationship = _normalize_relationship_to_capital_flow(candidate.get("relationship_to_capital_flow"))
-    confidence = _normalize_confidence(candidate.get("confidence"))
+    normalized_candidate = {
+        _coerce_string(key).strip(): value
+        for key, value in candidate.items()
+    }
+    observable_statement = _coerce_string(normalized_candidate.get("observable_statement"))
+    pressure_type = _normalize_energy_pressure_type(normalized_candidate.get("energy_pressure_type"))
+    directness = _normalize_directness(normalized_candidate.get("observation_directness"))
+    implication = _coerce_string(normalized_candidate.get("energy_flow_implication"))
+    system_hints = _normalize_system_hints(normalized_candidate.get("system_hints"))
+    physical_implication = _coerce_string(normalized_candidate.get("physical_implication"))
+    relationship = _normalize_relationship_to_capital_flow(normalized_candidate.get("relationship_to_capital_flow"))
+    confidence = _normalize_confidence(normalized_candidate.get("confidence"))
 
     if not observable_statement:
         raise ValueError(f"candidate[{index}] missing observable_statement")
@@ -284,16 +338,21 @@ def validate_energy_flow_pressure_extraction_payload(payload: Dict[str, Any]) ->
     if not isinstance(candidates, list):
         raise ValueError("candidates must be a list.")
 
-    validated_candidates = [
-        _validate_candidate(candidate, index)
-        for index, candidate in enumerate(candidates)
-    ]
+    validated_candidates: List[Dict[str, Any]] = []
+    dropped_candidate_errors: List[str] = []
+    for index, candidate in enumerate(candidates):
+        try:
+            validated_candidates.append(_validate_candidate(candidate, index))
+        except ValueError as exc:
+            dropped_candidate_errors.append(str(exc))
 
     normalized_rejection_reason = None
     if rejection_reason is not None:
         normalized_rejection_reason = _coerce_string(rejection_reason) or None
 
     if produced_candidates and not validated_candidates:
+        if dropped_candidate_errors:
+            raise ValueError(dropped_candidate_errors[0])
         raise ValueError("produced_candidates=true requires at least one valid candidate.")
     if not produced_candidates and validated_candidates:
         raise ValueError("produced_candidates=false cannot include candidates.")
@@ -304,6 +363,7 @@ def validate_energy_flow_pressure_extraction_payload(payload: Dict[str, Any]) ->
         "produced_candidates": produced_candidates,
         "candidates": validated_candidates,
         "rejection_reason": normalized_rejection_reason,
+        "dropped_candidate_errors": dropped_candidate_errors,
     }
 
 
@@ -348,6 +408,7 @@ class EnergyFlowPressureExtractor:
             "produced_candidates": validated["produced_candidates"],
             "candidates": validated["candidates"],
             "rejection_reason": validated["rejection_reason"],
+            "dropped_candidate_errors": validated["dropped_candidate_errors"],
             "provider_name": self.provider,
             "model_name": self.model_name,
             "prompt_version": ENERGY_FLOW_EXTRACTION_PROMPT_VERSION,
