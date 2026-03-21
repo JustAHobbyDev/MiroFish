@@ -1,0 +1,82 @@
+{
+  "name": "trade_press_energy_flow_pressure_test_v1",
+  "source_artifact": "research/archive/normalized/trade_press/trade_press_gpt4omini_v7_30.json",
+  "objective": "Test whether review-stage utility/load articles that correctly failed the capital-flow gate form a coherent energy-flow-pressure set.",
+  "summary": {
+    "artifacts_reviewed": 8,
+    "energy_flow_pressure_count": 8,
+    "energy_flow_pressure_only_count": 7,
+    "energy_flow_pressure_and_capital_flow_count": 1,
+    "not_energy_flow_pressure_count": 0
+  },
+  "items": [
+    {
+      "artifact_id": "trade_press_b4dc467358a3db4d",
+      "title": "PG&E data center pipeline swells to 10GW",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Large expected electricity demand increase implies future generation, transmission, substation, and transformer pressure without proving committed spend yet."
+    },
+    {
+      "artifact_id": "trade_press_099f9d0368e5000f",
+      "title": "US utility Exelon reports data center pipeline of 33GW",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Very large prospective load requirement is a strong physical-demand signal even if direct capex is not yet stated."
+    },
+    {
+      "artifact_id": "trade_press_47e3c04df2ffff47",
+      "title": "First Energy data center pipeline surges to 2.6GW by 2029",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Data-center pipeline growth implies rising electricity-flow requirements and likely future utility investment needs."
+    },
+    {
+      "artifact_id": "trade_press_adbcd97a0be82618",
+      "title": "PPL Electric's data center pipeline soars to 14GW",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Prospective large-load growth is a direct energy-input stress signal."
+    },
+    {
+      "artifact_id": "trade_press_1c40d6cd25decce0",
+      "title": "Exelon data center pipeline jumps to 17 GW as load forecast turns positive",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Positive load-forecast inflection indicates future pressure on the power system before explicit capital commitments are announced."
+    },
+    {
+      "artifact_id": "trade_press_12592956a90d251e",
+      "title": "FirstEnergy’s 5-year data center pipeline doubles to 3 GW",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "A doubling pipeline is strong evidence of rising energy-input demand, even if buildout is still planning-stage."
+    },
+    {
+      "artifact_id": "trade_press_8434daa99144e894",
+      "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
+      "current_status": "review_no_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_only",
+      "reason": "Peak-load growth is a direct signal of energy-system stress and future infrastructure requirement."
+    },
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "current_status": "review_candidate",
+      "proposed_label": "energy_flow_pressure",
+      "relationship_to_capital_flow": "energy_flow_pressure_and_capital_flow",
+      "reason": "This one carries both energy-flow pressure and direct capital-flow relevance because the signed deal makes demand more concrete."
+    }
+  ],
+  "conclusion": {
+    "supported": true,
+    "reason": "The review-stage utility set becomes coherent when interpreted as energy-flow pressure rather than forced direct capital-flow. This supports adding a separate upstream pressure object instead of weakening the capital-flow gate."
+  }
+}
