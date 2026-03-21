@@ -1,0 +1,22 @@
+{
+  "name": "mixed_company_filing_expansion_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_company_filing_expansion_v1.json",
+  "metrics": {
+    "company_filing_expansion_plan_count": 6,
+    "unresolved_issuer_count": 6,
+    "not_collected_filing_count": 6
+  },
+  "first_filing_resolution_set": {
+    "high_priority": [
+      "GridCore Manufacturing",
+      "Hitachi Energy",
+      "Lamina Grid Products"
+    ],
+    "medium_priority": [
+      "Eaton",
+      "MeterWave Technologies",
+      "Westrafo"
+    ]
+  },
+  "decision": "use this set as the first issuer-resolution and filing-collection queue"
+}

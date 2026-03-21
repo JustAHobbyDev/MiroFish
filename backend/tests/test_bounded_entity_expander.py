@@ -26,10 +26,12 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
     family_batch = {
         "families": [
             {
+                "corporate_family_candidate_id": "cf_hitachi_energy",
                 "canonical_entity_name": "Hitachi Energy",
                 "system_label": "grid equipment and transformer buildout",
                 "priority_tier": "high",
                 "entity_role": "equipment_or_component_supplier",
+                "origin_bounded_entity_candidate_ids": ["bec_hitachi", "bec_hitachi_energy"],
                 "member_entities": ["Hitachi", "Hitachi Energy"],
                 "supporting_artifact_ids": ["a1", "a2"],
                 "supporting_titles": ["Hitachi Energy commits $250M", "Hitachi unveils $1B"],
@@ -37,10 +39,12 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
                 "recommended_next_source_classes": ["company_release", "trade_press", "company_filing"],
             },
             {
+                "corporate_family_candidate_id": "cf_conductorworks",
                 "canonical_entity_name": "ConductorWorks",
                 "system_label": "grid equipment and transformer buildout",
                 "priority_tier": "medium",
                 "entity_role": "equipment_or_component_supplier",
+                "origin_bounded_entity_candidate_ids": ["bec_conductorworks"],
                 "member_entities": ["ConductorWorks"],
                 "supporting_artifact_ids": ["a3"],
                 "supporting_titles": ["ConductorWorks invests in cable factory"],
@@ -61,6 +65,7 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
     assert result["metrics"]["selected_entity_expansion_count"] == 1
     expansion = result["expansions"][0]
     assert expansion["canonical_entity_name"] == "Hitachi Energy"
+    assert expansion["origin_corporate_family_candidate_id"] == "cf_hitachi_energy"
+    assert expansion["origin_bounded_entity_candidate_ids"] == ["bec_hitachi", "bec_hitachi_energy"]
     assert expansion["filing_gap"] is True
     assert expansion["ready_for_filing_expansion"] is True
-

@@ -45,6 +45,12 @@ def build_bounded_entity_expansion_batch(
                 "system_label": target_system,
                 "priority_tier": _coerce_string(family.get("priority_tier")) or "low",
                 "entity_role": _coerce_string(family.get("entity_role")),
+                "origin_corporate_family_candidate_id": _coerce_string(
+                    family.get("corporate_family_candidate_id")
+                ),
+                "origin_bounded_entity_candidate_ids": list(
+                    family.get("origin_bounded_entity_candidate_ids", [])
+                ),
                 "member_entities": list(family.get("member_entities", [])),
                 "supporting_artifact_ids": list(family.get("supporting_artifact_ids", [])),
                 "supporting_titles": list(family.get("supporting_titles", [])),
