@@ -1,0 +1,163 @@
+{
+  "name": "bounded_entity_expansion_batch_v1",
+  "expansions": [
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_grid_equipment_and_transformer_buildout_hitachi_energy_2025-12-17_d2d67b94",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_grid_equipment_and_transformer_buildout_hitachi_2025-12-17_b6b2e0c1",
+        "bec_grid_equipment_and_transformer_buildout_hitachi_energy_2025-12-17_d2d67b94"
+      ],
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_921740cadac635c6",
+        "trade_press_c906877e7f8ac2bc"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "support_provenance_status": "real_only",
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Eaton",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_grid_equipment_and_transformer_buildout_eaton_2025-12-17_84ceeda3",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_grid_equipment_and_transformer_buildout_eaton_2025-12-17_84ceeda3"
+      ],
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_08976a2c7918a320"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "support_provenance_status": "real_only",
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Mitsubishi Electric",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_grid_equipment_and_transformer_buildout_mitsubishi_electric_2025-12-17_f10c269e",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_grid_equipment_and_transformer_buildout_mitsubishi_electric_2025-12-17_f10c269e"
+      ],
+      "member_entities": [
+        "Mitsubishi Electric"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_9f4a057076b0ca77"
+      ],
+      "supporting_titles": [
+        "Mitsubishi Electric subsidiary invests $86M in switchgear factory"
+      ],
+      "support_provenance_status": "real_only",
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "Westrafo",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_grid_equipment_and_transformer_buildout_westrafo_2025-12-17_5d84d3f7",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_grid_equipment_and_transformer_buildout_westrafo_2025-12-17_5d84d3f7"
+      ],
+      "member_entities": [
+        "Westrafo"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_904540c22ad17bed"
+      ],
+      "supporting_titles": [
+        "Italy-based Westrafo to build its first US transformer plant"
+      ],
+      "support_provenance_status": "real_only",
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    },
+    {
+      "canonical_entity_name": "GE Vernova",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "low",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_grid_equipment_and_transformer_buildout_ge_vernova_2025-12-17_a9d680db",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_grid_equipment_and_transformer_buildout_ge_vernova_2025-12-17_a9d680db"
+      ],
+      "member_entities": [
+        "GE Vernova"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_3d1582c75dda6698"
+      ],
+      "supporting_titles": [
+        "GE Vernova to invest nearly $600M in US factories"
+      ],
+      "support_provenance_status": "real_only",
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "filing_gap": true,
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "ready_for_filing_expansion": true
+    }
+  ],
+  "metrics": {
+    "input_family_candidate_count": 36,
+    "selected_entity_expansion_count": 5
+  }
+}

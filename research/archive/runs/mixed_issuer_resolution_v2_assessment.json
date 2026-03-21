@@ -1,0 +1,16 @@
+{
+  "name": "mixed_issuer_resolution_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_v2.json",
+  "metrics": {
+    "issuer_resolution_plan_count": 5
+  },
+  "route_hints": {
+    "Eaton": "domestic_route_hint",
+    "Westrafo": "foreign_route_hint",
+    "Hitachi Energy": "route_unknown",
+    "Mitsubishi Electric": "route_unknown",
+    "GE Vernova": "route_unknown"
+  },
+  "decision": "use this v2 real-only issuer-resolution queue going forward"
+}
+

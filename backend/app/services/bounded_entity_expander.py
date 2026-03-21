@@ -29,6 +29,8 @@ def build_bounded_entity_expansion_batch(
     for family in family_batch.get("families", []):
         if _coerce_string(family.get("system_label")) != target_system:
             continue
+        if _coerce_string(family.get("support_provenance_status")) == "synthetic_only":
+            continue
         canonical_name = _coerce_string(family.get("canonical_entity_name"))
         if canonical_name not in initial_priority_entities:
             continue
@@ -54,6 +56,7 @@ def build_bounded_entity_expansion_batch(
                 "member_entities": list(family.get("member_entities", [])),
                 "supporting_artifact_ids": list(family.get("supporting_artifact_ids", [])),
                 "supporting_titles": list(family.get("supporting_titles", [])),
+                "support_provenance_status": _coerce_string(family.get("support_provenance_status")) or "unknown",
                 "local_source_classes": source_classes,
                 "local_coverage_status": "cross_source_local" if len(source_classes) >= 2 else "single_source_local",
                 "filing_gap": "company_filing" not in source_classes,

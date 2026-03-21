@@ -1,0 +1,16 @@
+{
+  "name": "mixed_bounded_entity_expansion_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_expansion_v2.json",
+  "metrics": {
+    "selected_entity_expansion_count": 5
+  },
+  "real_only_entity_set": [
+    "Hitachi Energy",
+    "Eaton",
+    "Mitsubishi Electric",
+    "Westrafo",
+    "GE Vernova"
+  ],
+  "decision": "use this v2 real-only set for live downstream work"
+}
+

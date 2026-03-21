@@ -1,0 +1,16 @@
+{
+  "name": "mixed_company_filing_expansion_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_company_filing_expansion_v2.json",
+  "metrics": {
+    "company_filing_expansion_plan_count": 5
+  },
+  "real_only_filing_queue": [
+    "Hitachi Energy",
+    "Eaton",
+    "Mitsubishi Electric",
+    "Westrafo",
+    "GE Vernova"
+  ],
+  "decision": "use this v2 real-only filing queue going forward"
+}
+

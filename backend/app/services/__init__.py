@@ -132,6 +132,11 @@ from .bounded_universe_builder import build_bounded_universe_candidate_batch
 from .bounded_universe_expander import build_bounded_universe_expansion_batch
 from .bounded_research_set_builder import build_bounded_research_set_batch
 from .bounded_entity_candidate_builder import build_bounded_entity_candidate_batch
+from .artifact_provenance import (
+    artifact_provenance_classes,
+    classify_artifact_provenance,
+    support_provenance_status,
+)
 from .corporate_family_normalizer import build_corporate_family_batch
 from .bounded_entity_expander import build_bounded_entity_expansion_batch
 from .company_filing_expansion_planner import build_company_filing_expansion_batch
@@ -252,6 +257,9 @@ __all__ = [
     'build_bounded_universe_expansion_batch',
     'build_bounded_research_set_batch',
     'build_bounded_entity_candidate_batch',
+    'classify_artifact_provenance',
+    'support_provenance_status',
+    'artifact_provenance_classes',
     'build_corporate_family_batch',
     'build_bounded_entity_expansion_batch',
     'build_company_filing_expansion_batch',

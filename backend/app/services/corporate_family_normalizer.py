@@ -113,6 +113,19 @@ def build_corporate_family_batch(bounded_entity_batch: Dict[str, Any]) -> Dict[s
                     if _coerce_string(source_class)
                 }
             )
+            provenance_statuses = sorted(
+                {
+                    _coerce_string(member.get("support_provenance_status"))
+                    for member in members
+                    if _coerce_string(member.get("support_provenance_status"))
+                }
+            )
+            if provenance_statuses == ["synthetic_only"]:
+                support_provenance = "synthetic_only"
+            elif "synthetic_only" in provenance_statuses or "mixed" in provenance_statuses:
+                support_provenance = "mixed"
+            else:
+                support_provenance = "real_only"
             priority_tier = max(
                 (_coerce_string(member.get("priority_tier")) for member in members),
                 key=_priority_rank,
@@ -145,6 +158,7 @@ def build_corporate_family_batch(bounded_entity_batch: Dict[str, Any]) -> Dict[s
                     "source_classes": source_classes,
                     "supporting_artifact_ids": supporting_artifact_ids,
                     "supporting_titles": supporting_titles,
+                    "support_provenance_status": support_provenance,
                     "recommended_next_source_classes": recommended_next_source_classes,
                 }
             )

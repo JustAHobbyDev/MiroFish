@@ -1,0 +1,163 @@
+{
+  "name": "issuer_resolution_batch_v1",
+  "plans": [
+    {
+      "issuer_resolution_plan_id": "irp_hitachi_energy_d3b28bda",
+      "origin_company_filing_expansion_plan_id": "cfep_hitachi_energy_d3b28bda",
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Hitachi Energy",
+        "Hitachi Energy investor relations",
+        "Hitachi Energy annual report",
+        "Hitachi Energy SEC EDGAR",
+        "Hitachi Energy 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_eaton_a12e4f80",
+      "origin_company_filing_expansion_plan_id": "cfep_eaton_a12e4f80",
+      "canonical_entity_name": "Eaton",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "Eaton",
+        "Eaton investor relations",
+        "Eaton annual report",
+        "Eaton SEC EDGAR",
+        "Eaton 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_mitsubishi_electric_06c8e8be",
+      "origin_company_filing_expansion_plan_id": "cfep_mitsubishi_electric_06c8e8be",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Mitsubishi Electric"
+      ],
+      "supporting_titles": [
+        "Mitsubishi Electric subsidiary invests $86M in switchgear factory"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Mitsubishi Electric",
+        "Mitsubishi Electric investor relations",
+        "Mitsubishi Electric annual report",
+        "Mitsubishi Electric SEC EDGAR",
+        "Mitsubishi Electric 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_westrafo_9183018f",
+      "origin_company_filing_expansion_plan_id": "cfep_westrafo_9183018f",
+      "canonical_entity_name": "Westrafo",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Westrafo"
+      ],
+      "supporting_titles": [
+        "Italy-based Westrafo to build its first US transformer plant"
+      ],
+      "route_hypothesis": "foreign_route_hint",
+      "foreign_geography_hints": [
+        "Italy"
+      ],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "annual report or equivalent",
+        "20-F if SEC-registered foreign issuer"
+      ],
+      "issuer_resolution_query_terms": [
+        "Westrafo",
+        "Westrafo investor relations",
+        "Westrafo annual report",
+        "Westrafo 20-F",
+        "Westrafo annual report pdf"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_ge_vernova_74d2f5a0",
+      "origin_company_filing_expansion_plan_id": "cfep_ge_vernova_74d2f5a0",
+      "canonical_entity_name": "GE Vernova",
+      "system_label": "grid equipment and transformer buildout",
+      "priority_tier": "low",
+      "member_entities": [
+        "GE Vernova"
+      ],
+      "supporting_titles": [
+        "GE Vernova to invest nearly $600M in US factories"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "GE Vernova",
+        "GE Vernova investor relations",
+        "GE Vernova annual report",
+        "GE Vernova SEC EDGAR",
+        "GE Vernova 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    }
+  ],
+  "metrics": {
+    "input_company_filing_expansion_plan_count": 5,
+    "issuer_resolution_plan_count": 5
+  }
+}

@@ -36,6 +36,7 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
                 "supporting_artifact_ids": ["a1", "a2"],
                 "supporting_titles": ["Hitachi Energy commits $250M", "Hitachi unveils $1B"],
                 "source_classes": ["trade_press"],
+                "support_provenance_status": "real_only",
                 "recommended_next_source_classes": ["company_release", "trade_press", "company_filing"],
             },
             {
@@ -49,6 +50,7 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
                 "supporting_artifact_ids": ["a3"],
                 "supporting_titles": ["ConductorWorks invests in cable factory"],
                 "source_classes": ["company_release"],
+                "support_provenance_status": "synthetic_only",
                 "recommended_next_source_classes": ["company_release", "trade_press", "company_filing"],
             },
         ]
@@ -67,5 +69,6 @@ def test_build_bounded_entity_expansion_batch_uses_priority_entity_list():
     assert expansion["canonical_entity_name"] == "Hitachi Energy"
     assert expansion["origin_corporate_family_candidate_id"] == "cf_hitachi_energy"
     assert expansion["origin_bounded_entity_candidate_ids"] == ["bec_hitachi", "bec_hitachi_energy"]
+    assert expansion["support_provenance_status"] == "real_only"
     assert expansion["filing_gap"] is True
     assert expansion["ready_for_filing_expansion"] is True

@@ -1,0 +1,36 @@
+{
+  "name": "mixed_issuer_resolution_live_v2",
+  "evaluated_plan_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_v2.json",
+  "results": [
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "live_resolution_status": "resolved_parent_route",
+      "resolution_outcome": "parent_company_reporting_route_identified",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "resolved_entity_type": "wholly_owned_subsidiary_of_public_parent",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "next_action": "Use Hitachi, Ltd. investor-relations materials and Annual Securities Report / semi-annual securities filings via EDINET as the first filing route for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.hitachienergy.com/latam/es/news-and-events/press-releases/2025/10/hitachi-energy-and-blackstone-energy-transition-partners-enter-strategic-partnership",
+          "note": "Official Hitachi Energy source describing Hitachi Energy as a wholly owned subsidiary of Hitachi, Ltd."
+        },
+        {
+          "evidence_type": "official_parent_ir_source",
+          "source_url": "https://www.hitachi.com/en/ir/library/stock/",
+          "note": "Official Hitachi IR library page for Annual Securities Report and related filings filed via EDINET."
+        },
+        {
+          "evidence_type": "official_parent_ir_source",
+          "source_url": "https://www.hitachi.com/IR-e/faq/index.html",
+          "note": "Official Hitachi IR FAQ stating Annual Securities Report materials are available via EDINET and that Hitachi shares are listed in Japan."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "resolved_live_entity_count": 1
+  }
+}
+

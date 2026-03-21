@@ -33,6 +33,7 @@ def test_build_corporate_family_batch_merges_prefix_family():
                 "entity_role": "equipment_or_component_supplier",
                 "priority_tier": "high",
                 "source_classes": ["trade_press"],
+                "support_provenance_status": "real_only",
                 "supporting_artifact_ids": ["a1"],
                 "supporting_titles": ["Hitachi unveils $1B grid manufacturing investment"],
                 "recommended_next_source_classes": ["company_release", "trade_press", "company_filing"],
@@ -45,6 +46,7 @@ def test_build_corporate_family_batch_merges_prefix_family():
                 "entity_role": "equipment_or_component_supplier",
                 "priority_tier": "high",
                 "source_classes": ["trade_press"],
+                "support_provenance_status": "real_only",
                 "supporting_artifact_ids": ["a2"],
                 "supporting_titles": ["Hitachi Energy commits $250M to address transformer shortage"],
                 "recommended_next_source_classes": ["company_release", "trade_press", "company_filing"],
@@ -59,4 +61,4 @@ def test_build_corporate_family_batch_merges_prefix_family():
     assert family["canonical_entity_name"] == "Hitachi Energy"
     assert family["member_entities"] == ["Hitachi", "Hitachi Energy"]
     assert family["merge_relation"] == "prefix_family_merge"
-
+    assert family["support_provenance_status"] == "real_only"

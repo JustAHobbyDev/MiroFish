@@ -8,6 +8,8 @@ import hashlib
 import re
 from typing import Any, Dict, List
 
+from .artifact_provenance import artifact_provenance_classes, support_provenance_status
+
 
 def _coerce_string(value: Any) -> str:
     if value is None:
@@ -121,6 +123,8 @@ def build_bounded_entity_candidate_batch(research_set_batch: Dict[str, Any]) -> 
                         _coerce_string(item.get("title")) for item in supporting_artifacts if _coerce_string(item.get("title"))
                     ],
                     "matched_terms": matched_terms,
+                    "artifact_provenance_classes": artifact_provenance_classes(supporting_artifacts),
+                    "support_provenance_status": support_provenance_status(supporting_artifacts),
                     "priority_tier": _priority_tier(
                         artifact_support_count=len(artifact_ids),
                         source_class_diversity_count=len(source_classes),

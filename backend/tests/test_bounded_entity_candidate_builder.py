@@ -65,4 +65,4 @@ def test_build_bounded_entity_candidate_batch_ranks_transformer_entities():
     assert result["candidates"][0]["priority_tier"] == "high"
     assert result["candidates"][0]["entity_role"] == "equipment_or_component_supplier"
     assert "company_filing" in result["candidates"][0]["recommended_next_source_classes"]
-
+    assert result["candidates"][0]["support_provenance_status"] == "real_only"
