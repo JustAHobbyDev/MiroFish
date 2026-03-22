@@ -19,16 +19,28 @@ PressPass gives us:
 
 ## Workflow
 
+Preferred path:
+
+1. Use your normal logged-in browser session.
+2. Open the PressPass results page you want.
+3. Run:
+   - [businesswire_presspass_console_capture.js](/Users/danielschmidt/dev/MiroFish/scripts/businesswire_presspass_console_capture.js)
+   in the browser console.
+4. The script downloads a JSON payload containing visible result metadata and
+   fetched article HTML from the authenticated browser session.
+5. Convert the capture JSON into raw release records with:
+   - [build_businesswire_company_release_browser_capture.py](/Users/danielschmidt/dev/MiroFish/scripts/build_businesswire_company_release_browser_capture.py)
+6. Feed the resulting records into:
+   - [build_company_release_prefilter_batch.py](/Users/danielschmidt/dev/MiroFish/scripts/build_company_release_prefilter_batch.py)
+
+Fallback path:
+
 1. Run:
    - [capture_businesswire_presspass_playwright.mjs](/Users/danielschmidt/dev/MiroFish/scripts/capture_businesswire_presspass_playwright.mjs)
 2. Log in manually and prepare the search/filter view you want.
 3. Press Enter in the terminal.
 4. The script captures visible Business Wire result links and the corresponding
    article HTML into a timestamped raw archive folder.
-5. Convert the capture summary into raw release records with:
-   - [build_businesswire_company_release_browser_capture.py](/Users/danielschmidt/dev/MiroFish/scripts/build_businesswire_company_release_browser_capture.py)
-6. Feed the resulting records into:
-   - [build_company_release_prefilter_batch.py](/Users/danielschmidt/dev/MiroFish/scripts/build_company_release_prefilter_batch.py)
 
 ## Boundaries
 
@@ -39,15 +51,33 @@ This path is intentionally narrow:
 3. no attempt to bypass Business Wire controls
 4. captures only the visible result set the user prepares
 
+## Current OAuth Boundary
+
+Business Wire's OAuth flow is currently failing in Playwright-launched browser
+sessions from this environment with `ERR_HTTP2_PROTOCOL_ERROR`.
+
+So the preferred path is now:
+
+1. run capture inside the user's normal browser session
+2. keep Playwright only as a secondary fallback
+
 ## Components
 
 1. [capture_businesswire_presspass_playwright.mjs](/Users/danielschmidt/dev/MiroFish/scripts/capture_businesswire_presspass_playwright.mjs)
-2. [build_businesswire_company_release_browser_capture.py](/Users/danielschmidt/dev/MiroFish/scripts/build_businesswire_company_release_browser_capture.py)
-3. [businesswire_company_release_collector.py](/Users/danielschmidt/dev/MiroFish/backend/app/services/businesswire_company_release_collector.py)
+2. [businesswire_presspass_console_capture.js](/Users/danielschmidt/dev/MiroFish/scripts/businesswire_presspass_console_capture.js)
+3. [build_businesswire_company_release_browser_capture.py](/Users/danielschmidt/dev/MiroFish/scripts/build_businesswire_company_release_browser_capture.py)
+4. [businesswire_company_release_collector.py](/Users/danielschmidt/dev/MiroFish/backend/app/services/businesswire_company_release_collector.py)
 
 ## Example
 
-Capture:
+Console capture:
+
+1. Open DevTools on the PressPass results page
+2. Paste the contents of:
+   - [businesswire_presspass_console_capture.js](/Users/danielschmidt/dev/MiroFish/scripts/businesswire_presspass_console_capture.js)
+3. Let it download a JSON file
+
+Playwright capture:
 
 ```bash
 npm run businesswire:capture -- \
@@ -59,7 +89,7 @@ Build raw records:
 
 ```bash
 bash ./scripts/backend-uv.sh run python scripts/build_businesswire_company_release_browser_capture.py \
-  research/archive/raw/company_release/businesswire_presspass/2026-03-22T12-00-00-000Z/capture-summary.json \
+  ~/Downloads/businesswire-presspass-capture-2026-03-22T12-00-00-000Z.json \
   --output-json research/archive/raw/company_release/businesswire_presspass_raw_v1.json
 ```
 

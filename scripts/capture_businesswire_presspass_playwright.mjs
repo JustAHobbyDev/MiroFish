@@ -22,6 +22,7 @@ function parseArgs(argv) {
     provider: "businesswire-presspass-playwright",
     maxResults: 25,
     articleTimeoutMs: 30000,
+    browser: "chrome",
   };
 
   for (let index = 0; index < argv.length; index += 1) {
@@ -63,6 +64,7 @@ function slugify(value) {
 const args = parseArgs(process.argv.slice(2));
 const browser = await chromium.launch({
   headless: args.headless,
+  channel: args.browser === "chrome" ? "chrome" : undefined,
   chromiumSandbox: false,
   args: ["--disable-setuid-sandbox"],
 });

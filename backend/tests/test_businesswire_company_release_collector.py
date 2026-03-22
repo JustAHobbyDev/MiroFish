@@ -138,3 +138,33 @@ def test_build_businesswire_browser_capture_records_skips_failed_results() -> No
     )
 
     assert records == []
+
+
+def test_build_businesswire_browser_capture_records_accepts_inline_article_html() -> None:
+    records = build_businesswire_browser_capture_records(
+        {
+            "results": [
+                {
+                    "capture_status": "captured",
+                    "url": "https://www.businesswire.com/news/home/example/en/test-release",
+                    "article_final_url": "https://www.businesswire.com/news/home/example/en/test-release",
+                    "published_label": "2026-03-22T10:00:00Z",
+                    "article_html": """
+                        <html>
+                          <head>
+                            <meta property=\"og:title\" content=\"Mitsubishi Electric Invests in Elephantech\" />
+                          </head>
+                          <body>
+                            <article>
+                              <p>TOKYO--(BUSINESS WIRE)--Mitsubishi Electric Corporation announced a strategic investment in Elephantech.</p>
+                            </article>
+                          </body>
+                        </html>
+                    """,
+                }
+            ]
+        }
+    )
+
+    assert len(records) == 1
+    assert "Elephantech" in records[0]["title"]
