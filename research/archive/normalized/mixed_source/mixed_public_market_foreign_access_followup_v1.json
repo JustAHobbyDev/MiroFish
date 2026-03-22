@@ -1,0 +1,62 @@
+{
+  "name": "public_market_foreign_access_followup_batch_v1",
+  "followup_rows": [
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_symbol",
+      "us_accessibility_status": "foreign_home_with_us_reference",
+      "followup_type": "us_secondary_access_followup",
+      "followup_action": "confirm_adr_or_otc_symbol_and_check_basic_liquidity",
+      "us_reference_present": true,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.rolls-royce.com/investors/shareholder-information.aspx",
+        "note": "Official Rolls-Royce shareholder information page identifying Rolls-Royce Holdings plc (LSE: RR., ADR: RYCEY)."
+      }
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "followup_type": "home_market_or_proxy_followup",
+      "followup_action": "decide_home_market_execution_or_find_us_proxy_expression",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.hitachi.com/IR-e/stock/index.html",
+        "note": "Official Hitachi stock page identifying Hitachi, Ltd. (TSE: 6501)."
+      }
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "followup_type": "home_market_or_proxy_followup",
+      "followup_action": "decide_home_market_execution_or_find_us_proxy_expression",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_ir_stock_code_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.mitsubishielectric.com/investors/stock/info/",
+        "note": "Official Mitsubishi Electric stock information page showing Tokyo Stock Exchange stock code 6503."
+      }
+    }
+  ],
+  "metrics": {
+    "input_accessibility_row_count": 8,
+    "followup_count": 3,
+    "us_secondary_access_followup_count": 1,
+    "home_market_or_proxy_followup_count": 2
+  }
+}
