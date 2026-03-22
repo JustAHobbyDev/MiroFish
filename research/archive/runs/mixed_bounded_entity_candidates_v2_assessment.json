@@ -1,14 +1,16 @@
 {
   "name": "mixed_bounded_entity_candidates_v2_assessment",
-  "first_downstream_entity_expansion_test": {
-    "system_label": "grid equipment and transformer buildout",
-    "initial_priority_entities": [
-      "Hitachi Energy",
-      "Eaton",
-      "Mitsubishi Electric",
-      "Westrafo",
-      "GE Vernova"
-    ]
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_candidates_v2.json",
+  "metrics": {
+    "bounded_entity_candidate_count": 56,
+    "utility_raw_candidate_count": 18
   },
-  "decision": "use this real-only set for live downstream expansion"
+  "real_utility_operator_candidates": [
+    "DTE",
+    "FirstEnergy",
+    "Southern",
+    "Exelon",
+    "CyrusOne"
+  ],
+  "decision": "derive live follow-up work only from the filtered real-only utility/operator subset"
 }

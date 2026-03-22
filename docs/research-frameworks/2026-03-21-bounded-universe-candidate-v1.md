@@ -41,6 +41,18 @@ It should answer:
 3. which source classes justify the next expansion
 4. what is still unresolved before expression ranking
 
+## Exploratory Boundary
+
+v1 also allows an `exploratory_candidate` status for a structural-pressure lane
+that is:
+
+1. already `bounded`
+2. not yet promotion-ready
+3. still suitable for research-set and entity-candidate formation
+
+This is allowed only to support bounded downstream research. It does not
+authorize bounded-universe promotion.
+
 ## Promotion Preconditions
 
 Promote a `structural_pressure_candidate` into a
@@ -50,6 +62,16 @@ Promote a `structural_pressure_candidate` into a
 2. `bounded_universe_promotion_ready = true`
 3. the candidate names a concrete system or supply-layer lane
 4. the next research expansion can be expressed as a bounded search space
+
+## Exploratory Preconditions
+
+Create an `exploratory_candidate` only when all are true:
+
+1. `boundedness_status = bounded`
+2. `requires_system_narrowing = false`
+3. `bounded_universe_promotion_ready = false`
+4. the lane is still concrete enough for deterministic expansion planning
+5. the object remains explicitly blocked from promotion
 
 ## Minimal Shape
 
@@ -64,6 +86,7 @@ Promote a `structural_pressure_candidate` into a
   "bounding_basis": {
     "source_diversity_corroborated": true,
     "system_bounded": true,
+    "research_ready": true,
     "promotion_ready": true
   },
   "review_universe_definition": "Companies, suppliers, facilities, inputs, and public artifacts tied to transformer, switchgear, substation, and adjacent grid-equipment expansion.",
@@ -97,6 +120,11 @@ Promote a `structural_pressure_candidate` into a
 11. `visible_beneficiary_hints`
 12. `confidence`
 
+`bounding_basis` should also include:
+
+13. `research_ready`
+14. `exploration_only`
+
 ## Non-Goals
 
 This object is not trying to:
@@ -105,6 +133,27 @@ This object is not trying to:
 2. rank expressions
 3. prove the final bottleneck
 4. decide valuation or mispricing
+
+## Example Exploratory Case
+
+### Valid Exploratory
+
+`utility and large-load power buildout universe`
+
+Why valid:
+
+1. the lane is already bounded
+2. deterministic downstream research can stay inside the lane
+3. source-diversity corroboration is not yet strong enough for promotion
+
+### Still Invalid
+
+`power generation and backup equipment buildout universe`
+
+Why still invalid:
+
+1. the lane is still too broad
+2. bounded downstream expansion would still over-widen the search space
 
 ## Example
 

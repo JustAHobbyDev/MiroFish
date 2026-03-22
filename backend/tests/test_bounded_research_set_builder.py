@@ -178,3 +178,71 @@ def test_extract_entity_hints_from_trade_press_title_patterns():
     assert "Hitachi Energy" in entity_names
     assert "Westrafo" in entity_names
     assert "Mitsubishi Electric" in entity_names
+
+
+def test_build_bounded_research_set_batch_keeps_utility_lane_inside_operator_signals() -> None:
+    expansion_batch = {
+        "plans": [
+            {
+                "bounded_universe_expansion_plan_id": "bue_utility",
+                "as_of_date": "2025-12-18",
+                "system_label": "utility and large-load power buildout",
+                "query_seed_terms": [
+                    "data center agreement",
+                    "large load agreement",
+                    "electric load growth",
+                    "utility capital plan",
+                    "utility spending plan",
+                    "substation buildout",
+                    "generation response",
+                    "interconnection expansion",
+                ],
+                "negative_boundaries": [
+                    "transformer production",
+                    "switchgear factory",
+                    "generator package factory",
+                    "campus construction",
+                ],
+                "source_classes_priority": ["company_release", "trade_press"],
+                "suspected_stress_layers": ["utility interconnection", "substations", "generation response"],
+                "confidence": "medium",
+            }
+        ]
+    }
+    prefilter_batches = [
+        {
+            "kept_artifacts": [
+                {
+                    "artifact_id": "u1",
+                    "source_class": "trade_press",
+                    "title": "DTE inks first data center deal to grow electric load 25%",
+                    "body_text": "Utility capital investments will support the agreement.",
+                    "source_url": "https://example.com/u1",
+                },
+                {
+                    "artifact_id": "u2",
+                    "source_class": "trade_press",
+                    "title": "As load grows, Southern raises spending plan to $81B",
+                    "body_text": "The utility is planning grid and generation response investments.",
+                    "source_url": "https://example.com/u2",
+                },
+                {
+                    "artifact_id": "s1",
+                    "source_class": "trade_press",
+                    "title": "Eaton invests $340M in US transformer production",
+                    "body_text": "Transformer production expansion targets utility demand.",
+                    "source_url": "https://example.com/s1",
+                },
+            ],
+            "review_artifacts": [],
+        }
+    ]
+
+    result = module.build_bounded_research_set_batch(expansion_batch, prefilter_batches)
+    research_set = result["research_sets"][0]
+
+    assert sorted(research_set["matched_artifact_ids"]) == ["u1", "u2"]
+    entity_names = [item["entity_name"] for item in research_set["entity_candidates"]]
+    assert "DTE" in entity_names
+    assert "Southern" in entity_names
+    assert "Eaton" not in entity_names

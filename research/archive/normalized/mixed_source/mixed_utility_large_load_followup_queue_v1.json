@@ -1,0 +1,76 @@
+{
+  "name": "bounded_entity_followup_queue_v1",
+  "queue_rows": [
+    {
+      "canonical_entity_name": "CyrusOne",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "needs_live_resolution",
+      "existing_resolved_issuer_name": "",
+      "next_action": "resolve_issuer_and_collect_filing_route"
+    },
+    {
+      "canonical_entity_name": "DTE",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "already_supported",
+      "existing_resolved_issuer_name": "DTE Energy Company",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "FirstEnergy",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "already_supported",
+      "existing_resolved_issuer_name": "FirstEnergy Corp.",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Southern",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "power_or_utility_operator",
+      "priority_tier": "medium",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "already_supported",
+      "existing_resolved_issuer_name": "The Southern Company",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Exelon",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "already_supported",
+      "existing_resolved_issuer_name": "Exelon Corporation",
+      "next_action": "reuse_existing_filing_support"
+    }
+  ],
+  "metrics": {
+    "input_candidate_count": 56,
+    "selected_queue_count": 5,
+    "already_supported_count": 4,
+    "needs_live_resolution_count": 1
+  }
+}

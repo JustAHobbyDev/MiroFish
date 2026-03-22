@@ -1,0 +1,36 @@
+{
+  "name": "mixed_issuer_resolution_live_utility_large_load_v1",
+  "evaluated_queue_batch": "research/archive/normalized/mixed_source/mixed_utility_large_load_followup_queue_v1.json",
+  "results": [
+    {
+      "canonical_entity_name": "CyrusOne",
+      "live_resolution_status": "resolved_private_company_route",
+      "resolution_outcome": "private_company_reporting_route_identified",
+      "resolved_issuer_name": "CyrusOne",
+      "resolved_entity_type": "private_company",
+      "filing_route_assessment": "private_company_official_company_route",
+      "next_action": "Do not start a public-filing collection pass. Use official company materials, financing announcements, and other private-company diligence sources for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.cyrusone.com/about-us",
+          "note": "Official current company page showing CyrusOne as an operating data-center developer and operator."
+        },
+        {
+          "evidence_type": "official_company_financing_source",
+          "source_url": "https://www.cyrusone.com/resources/press-releases/cyrusone-closes-1-175-billion-abs-issuance",
+          "note": "Official current company financing announcement showing issuer-level private-company capital raising rather than a public-company filing route."
+        },
+        {
+          "evidence_type": "official_owner_source",
+          "source_url": "https://www.kkr.com/insights/kkr-recognized-36-wins-2022-pei-pdi-pere-and-infrastructure-investor",
+          "note": "Official KKR page describing CyrusOne as the subject of a take-private transaction."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "evaluated_real_entity_count": 1,
+    "resolved_private_company_route_count": 1
+  }
+}

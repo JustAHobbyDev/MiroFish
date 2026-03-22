@@ -1,0 +1,19 @@
+{
+  "name": "mixed_utility_large_load_followup_queue_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_utility_large_load_followup_queue_v1.json",
+  "metrics": {
+    "selected_queue_count": 5,
+    "already_supported_count": 4,
+    "needs_live_resolution_count": 1
+  },
+  "already_supported_entities": [
+    "DTE",
+    "FirstEnergy",
+    "Southern",
+    "Exelon"
+  ],
+  "needs_live_resolution_entities": [
+    "CyrusOne"
+  ],
+  "decision": "reuse existing filing support for the four utilities and resolve CyrusOne as the only new live follow-up target"
+}

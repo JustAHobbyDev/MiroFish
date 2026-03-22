@@ -1,24 +1,25 @@
 # Mixed Bounded Entity Candidates v2 Assessment
 
-Date: March 21, 2026
-
 ## Facts
+1. `mixed_bounded_entity_candidates_v2.json` contains `56` bounded entity candidates across three bounded lanes.
+2. The exploratory utility lane contributes `18` raw candidates.
 
-1. `v2` excludes synthetic-only downstream candidates from the live path.
-2. The active real-only transformer lane now uses real entities only.
+## Utility Lane Read
+The utility lane now contains real operator names worth keeping:
 
-## First Downstream Entity Expansion Test
+1. `DTE`
+2. `FirstEnergy`
+3. `Southern`
+4. `Exelon`
+5. `CyrusOne`
 
-Selected real-only entities:
+## Important Boundary
+The raw utility candidate set also contains:
 
-1. `Hitachi Energy`
-2. `Eaton`
-3. `Mitsubishi Electric`
-4. `Westrafo`
-5. `GE Vernova`
+1. real supplier names that belong in supplier lanes
+2. synthetic fixture entities from the local corpus
 
-## Decision
+So the raw utility candidate set should not drive live filing work directly.
 
-1. These five replace the synthetic-placeholder-driven set for live downstream work.
-2. Synthetic-only entities remain in fixture corpora only and are excluded from live queues.
-
+## Outcome
+The utility lane now has enough bounded entity coverage to create a filtered live follow-up queue, but not enough cleanliness to skip that filter.

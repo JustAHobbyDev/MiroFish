@@ -41,6 +41,13 @@ def _suspected_stress_layers(system_label: str) -> List[str]:
             "transformers",
             "cooling and power-delivery infrastructure",
         ],
+        "utility and large-load power buildout": [
+            "utility interconnection",
+            "substations",
+            "transformers",
+            "generation response",
+            "large-load service infrastructure",
+        ],
         "utility and large-load power demand pressure": [
             "utility interconnection",
             "substations",
@@ -56,6 +63,7 @@ def _review_universe_definition(system_label: str) -> str:
         "grid equipment and transformer buildout": "Companies, suppliers, facilities, inputs, and public artifacts tied to transformer, switchgear, substation, and adjacent grid-equipment expansion.",
         "grid equipment and transformer pressure": "Companies, suppliers, facilities, inputs, and public artifacts tied to transformer, switchgear, substation, and adjacent grid-equipment capacity pressure.",
         "data center power demand buildout": "Companies, utilities, suppliers, facilities, and public artifacts tied to data-center power delivery, interconnection, substations, transformers, and adjacent support infrastructure.",
+        "utility and large-load power buildout": "Utilities, large-load operators, power-delivery suppliers, and public artifacts tied to interconnection, substations, transformers, generation response, and adjacent utility-system expansion.",
         "utility and large-load power demand pressure": "Utilities, suppliers, facilities, and public artifacts tied to large-load growth, interconnection, substations, transformers, and generation-response needs.",
     }
     return mapping.get(system_label, f"Public artifacts and entities tied to {system_label}.")
@@ -71,12 +79,30 @@ def _next_source_classes(system_label: str, source_classes: List[str]) -> List[s
     return recommended
 
 
+def _research_ready_exploratory_candidate(pressure_candidate: Dict[str, Any]) -> bool:
+    system_label = _coerce_string(pressure_candidate.get("system_label")).lower()
+    return (
+        not bool(pressure_candidate.get("bounded_universe_promotion_ready"))
+        and not bool(pressure_candidate.get("requires_system_narrowing"))
+        and _coerce_string(pressure_candidate.get("boundedness_status")) == "bounded"
+        and "buildout" in system_label
+    )
+
+
+def _candidate_status(pressure_candidate: Dict[str, Any]) -> str:
+    if bool(pressure_candidate.get("bounded_universe_promotion_ready")):
+        return "candidate"
+    return "exploratory_candidate"
+
+
 def build_bounded_universe_candidate_batch(
     structural_pressure_batch: Dict[str, Any],
 ) -> Dict[str, Any]:
     candidates: List[Dict[str, Any]] = []
     for pressure_candidate in structural_pressure_batch.get("candidates", []):
-        if not pressure_candidate.get("bounded_universe_promotion_ready"):
+        promotion_ready = bool(pressure_candidate.get("bounded_universe_promotion_ready"))
+        exploratory_ready = _research_ready_exploratory_candidate(pressure_candidate)
+        if not promotion_ready and not exploratory_ready:
             continue
         system_label = _coerce_string(pressure_candidate.get("system_label"))
         as_of_date = _coerce_string(pressure_candidate.get("as_of_date"))
@@ -85,7 +111,7 @@ def build_bounded_universe_candidate_batch(
             {
                 "bounded_universe_candidate_id": _bounded_universe_id(system_label, as_of_date),
                 "as_of_date": as_of_date,
-                "status": "candidate",
+                "status": _candidate_status(pressure_candidate),
                 "origin_pressure_candidate_id": _coerce_string(pressure_candidate.get("pressure_candidate_id")),
                 "universe_label": f"{system_label} universe",
                 "system_label": system_label,
@@ -94,7 +120,9 @@ def build_bounded_universe_candidate_batch(
                         pressure_candidate.get("source_diversity_corroboration_satisfied")
                     ),
                     "system_bounded": not bool(pressure_candidate.get("requires_system_narrowing")),
-                    "promotion_ready": bool(pressure_candidate.get("bounded_universe_promotion_ready")),
+                    "research_ready": promotion_ready or exploratory_ready,
+                    "promotion_ready": promotion_ready,
+                    "exploration_only": exploratory_ready and not promotion_ready,
                 },
                 "review_universe_definition": _review_universe_definition(system_label),
                 "next_source_classes": _next_source_classes(system_label, source_classes),
@@ -111,5 +139,11 @@ def build_bounded_universe_candidate_batch(
         "metrics": {
             "input_pressure_candidate_count": len(structural_pressure_batch.get("candidates", [])),
             "bounded_universe_candidate_count": len(candidates),
+            "promotion_ready_candidate_count": len(
+                [item for item in candidates if item["bounding_basis"]["promotion_ready"]]
+            ),
+            "exploratory_candidate_count": len(
+                [item for item in candidates if item["bounding_basis"]["exploration_only"]]
+            ),
         },
     }

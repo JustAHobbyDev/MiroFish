@@ -1368,10 +1368,641 @@
         "trade_press",
         "company_filing"
       ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_dte_2025-12-18_b62f1cdb",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "DTE",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_8af4de468aa71b03"
+      ],
+      "supporting_titles": [
+        "DTE inks first data center deal to grow electric load 25%"
+      ],
+      "matched_terms": [
+        "agreement",
+        "generation",
+        "large",
+        "load",
+        "loads"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "medium",
+      "max_match_score": 7,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_southern_2025-12-18_fba064af",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Southern",
+      "entity_role": "power_or_utility_operator",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_7cab8b3aa2571296"
+      ],
+      "supporting_titles": [
+        "As load grows, Southern raises spending plan to $81B"
+      ],
+      "matched_terms": [
+        "generation",
+        "large",
+        "load",
+        "plan",
+        "spending"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "medium",
+      "max_match_score": 7,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_summit_compute_parks_2025-12-18_bbc247ac",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Summit Compute Parks",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_699b2a49df49cc9e"
+      ],
+      "supporting_titles": [
+        "Summit Compute Parks advances 250MW data center campus construction"
+      ],
+      "matched_terms": [
+        "power",
+        "substation",
+        "substations"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "medium",
+      "max_match_score": 7,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_turbineworks_energy_2025-12-18_60dfae7a",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "TurbineWorks Energy",
+      "entity_role": "power_or_utility_operator",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_2779831d9e413245"
+      ],
+      "supporting_titles": [
+        "TurbineWorks Energy opens service and assembly hub for gas turbine packages"
+      ],
+      "matched_terms": [
+        "generation",
+        "load",
+        "loads",
+        "power",
+        "service"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "medium",
+      "max_match_score": 7,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_conductorworks_2025-12-18_48726686",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "ConductorWorks",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_99d3a8bd7a7d6651"
+      ],
+      "supporting_titles": [
+        "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects"
+      ],
+      "matched_terms": [
+        "large",
+        "load",
+        "substation"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "medium",
+      "max_match_score": 5,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_eaton_2025-12-18_bf02519b",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Eaton",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_08976a2c7918a320"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "matched_terms": [
+        "response",
+        "transformers"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "medium",
+      "max_match_score": 5,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_firstenergy_2025-12-18_56310b7d",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "FirstEnergy",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_8434daa99144e894"
+      ],
+      "supporting_titles": [
+        "FirstEnergy expects peak load to grow 45% by 2035 on data centers"
+      ],
+      "matched_terms": [
+        "capital",
+        "load",
+        "plan"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "medium",
+      "max_match_score": 5,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_westrafo_2025-12-18_3695a241",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Westrafo",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_904540c22ad17bed"
+      ],
+      "supporting_titles": [
+        "Italy-based Westrafo to build its first US transformer plant"
+      ],
+      "matched_terms": [
+        "plan",
+        "transformers"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "medium",
+      "max_match_score": 5,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_flexgen_turbine_packages_2025-12-18_fbc1bd4a",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "FlexGen Turbine Packages",
+      "entity_role": "power_or_utility_operator",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_71c6dc59027b9138"
+      ],
+      "supporting_titles": [
+        "FlexGen Turbine Packages invests in new manufacturing line for fast-start power equipment"
+      ],
+      "matched_terms": [
+        "generation",
+        "plan",
+        "power"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 4,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_gridcore_manufacturing_2025-12-18_4e8184dc",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "GridCore Manufacturing",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_328fad99416fbef1"
+      ],
+      "supporting_titles": [
+        "GridCore Manufacturing breaks ground on new power transformer production plant"
+      ],
+      "matched_terms": [
+        "plan",
+        "power",
+        "substation"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 4,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_hitachi_2025-12-18_2879cc87",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Hitachi",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_921740cadac635c6"
+      ],
+      "supporting_titles": [
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "matched_terms": [
+        "transformers"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "low",
+      "max_match_score": 4,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_hitachi_energy_2025-12-18_2ab24792",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Hitachi Energy",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_c906877e7f8ac2bc"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage"
+      ],
+      "matched_terms": [
+        "transformers"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "low",
+      "max_match_score": 4,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_peakspan_power_systems_2025-12-18_9d62cf5b",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "PeakSpan Power Systems",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_c57077dab862393a"
+      ],
+      "supporting_titles": [
+        "PeakSpan Power Systems expands generator module assembly for utility and data center demand"
+      ],
+      "matched_terms": [
+        "generation",
+        "power",
+        "response"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 4,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_exelon_2025-12-18_938e4a31",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Exelon",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_099f9d0368e5000f"
+      ],
+      "supporting_titles": [
+        "US utility Exelon reports data center pipeline of 33GW"
+      ],
+      "matched_terms": [
+        "generation",
+        "power"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "low",
+      "max_match_score": 3,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_lamina_grid_products_2025-12-18_c9ac8e5b",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "Lamina Grid Products",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_a39925a36c9535e7"
+      ],
+      "supporting_titles": [
+        "Lamina Grid Products adds core and coil line to support transformer backlog"
+      ],
+      "matched_terms": [
+        "power",
+        "substation"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 3,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_macrofab_holdings_2025-12-18_60648056",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "MacroFab Holdings",
+      "entity_role": "power_or_utility_operator",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_eac17ce201345043"
+      ],
+      "supporting_titles": [
+        "MacroFab Holdings announces $600 million U.S. industrial expansion plan"
+      ],
+      "matched_terms": [
+        "capital",
+        "plan"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 3,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_thermaloop_systems_2025-12-18_c99a5fc4",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "ThermaLoop Systems",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "company_release"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "company_release_628ba329dfe7d2b1"
+      ],
+      "supporting_titles": [
+        "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules"
+      ],
+      "matched_terms": [
+        "agreement",
+        "large",
+        "plan"
+      ],
+      "artifact_provenance_classes": [
+        "synthetic_example"
+      ],
+      "support_provenance_status": "synthetic_only",
+      "priority_tier": "low",
+      "max_match_score": 3,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_cyrusone_2025-12-18_aad59722",
+      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2025-12-18_69403371",
+      "system_label": "utility and large-load power buildout",
+      "as_of_date": "2025-12-18",
+      "entity_name": "CyrusOne",
+      "entity_role": "capacity_operator_or_owner",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_acb174b496999f97"
+      ],
+      "supporting_titles": [
+        "CyrusOne breaks ground on Fort Worth data center campus in Texas"
+      ],
+      "matched_terms": [
+        "capital"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "low",
+      "max_match_score": 2,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing",
+        "government"
+      ]
     }
   ],
   "metrics": {
-    "input_bounded_research_set_count": 2,
-    "bounded_entity_candidate_count": 38
+    "input_bounded_research_set_count": 3,
+    "bounded_entity_candidate_count": 56
   }
 }

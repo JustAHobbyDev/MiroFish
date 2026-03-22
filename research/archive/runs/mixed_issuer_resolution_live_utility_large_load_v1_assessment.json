@@ -1,0 +1,12 @@
+{
+  "name": "mixed_issuer_resolution_live_utility_large_load_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_utility_large_load_v1.json",
+  "metrics": {
+    "evaluated_real_entity_count": 1,
+    "resolved_private_company_route_count": 1
+  },
+  "resolved_private_company_route_entities": [
+    "CyrusOne"
+  ],
+  "decision": "close the utility follow-up queue by reusing existing support for the four public utilities and moving CyrusOne to a private-company diligence path"
+}

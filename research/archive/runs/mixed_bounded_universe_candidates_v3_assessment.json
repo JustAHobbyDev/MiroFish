@@ -1,0 +1,20 @@
+{
+  "name": "mixed_bounded_universe_candidates_v3_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_universe_candidates_v3.json",
+  "metrics": {
+    "bounded_universe_candidate_count": 3,
+    "promotion_ready_candidate_count": 2,
+    "exploratory_candidate_count": 1
+  },
+  "promotion_ready_systems": [
+    "data center power demand buildout",
+    "grid equipment and transformer buildout"
+  ],
+  "exploratory_systems": [
+    "utility and large-load power buildout"
+  ],
+  "blocked_systems": [
+    "power generation and backup equipment"
+  ],
+  "decision": "allow bounded downstream research for the utility buildout lane while keeping the power-generation lane blocked"
+}

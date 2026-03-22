@@ -73,6 +73,38 @@ def _expansion_template(system_label: str) -> Dict[str, Any]:
                 "Expand from visible beneficiaries into transformer, substation, and cooling-power layers.",
             ],
         },
+        "utility and large-load power buildout": {
+            "entity_lane_hints": [
+                "regulated utilities serving large-load corridors",
+                "merchant and transmission-connected power providers",
+                "large-load service and interconnection operators",
+            ],
+            "query_seed_terms": [
+                "data center agreement",
+                "large load agreement",
+                "electric load growth",
+                "utility capital plan",
+                "utility spending plan",
+                "substation buildout",
+                "generation response",
+                "interconnection expansion",
+            ],
+            "negative_boundaries": [
+                "generic software demand",
+                "consumer electricity usage commentary",
+                "transformer production",
+                "switchgear factory",
+                "generator package factory",
+                "campus construction",
+                "cooling modules",
+                "manufacturing line",
+            ],
+            "first_actions": [
+                "Separate utility/operator names from supplier names inside the lane.",
+                "Confirm which utilities are reporting large-load agreements, load growth, interconnection activity, or substation buildout.",
+                "Only advance live filing work for entities with explicit lane-specific local support.",
+            ],
+        },
     }
     return templates.get(
         system_label,

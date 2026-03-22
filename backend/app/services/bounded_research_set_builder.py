@@ -112,6 +112,21 @@ def _artifact_text(artifact: Dict[str, Any]) -> str:
 
 
 def _anchor_keywords(plan: Dict[str, Any]) -> List[str]:
+    system_label = _coerce_string(plan.get("system_label"))
+    overrides = {
+        "utility and large-load power buildout": [
+            "load",
+            "interconnection",
+            "substation",
+            "capital",
+            "agreement",
+            "generation",
+            "spending",
+        ],
+    }
+    if system_label in overrides:
+        return overrides[system_label]
+
     anchors: List[str] = []
     source_text = " ".join(
         [
