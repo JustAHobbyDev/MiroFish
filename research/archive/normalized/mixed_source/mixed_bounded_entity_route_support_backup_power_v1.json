@@ -1,0 +1,202 @@
+{
+  "name": "bounded_entity_route_support_batch_v1",
+  "support_rows": [
+    {
+      "canonical_entity_name": "Rolls-Royce",
+      "system_label": "data center backup-power equipment buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "followup_status": "needs_live_resolution",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "support_evidence_item_count": 16,
+      "support_strong_evidence_item_count": 10,
+      "support_component_specific_count": 4,
+      "support_pressure_or_capacity_count": 2,
+      "support_expansion_or_capex_count": 4,
+      "support_financing_or_capital_count": 0,
+      "role_specific_evidence_summary": {},
+      "top_support_evidence_items": [
+        {
+          "company_filing_evidence_id": "cfe_ee9b42b53a",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "engine",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 3,
+          "excerpt": "Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non-core asset disposals \u2014 Growing Civil LTSA margins for in-production engines \u2014 Time on wing targets raised to >100% with more than half delivered \u2014 Fur"
+        },
+        {
+          "company_filing_evidence_id": "cfe_f0071b0e89",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "engine",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 4,
+          "excerpt": "Civil Aerospace is a major manufacturer of aero engines for the large commercial aircraft, regional jets and business aviation markets. The division uses its engineering expertise, in-depth knowledge and capabilities to provide th"
+        },
+        {
+          "company_filing_evidence_id": "cfe_e3cfb89e38",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "generator",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 14,
+          "excerpt": "able transitional fuel for backup power in data centres. The use of HVO can reduce lifecycle CO\u2082 emissions by up to 90% compared to fossil diesel and is compatible with existing generator infrastructure. Rolls-Royce SMR made significant advances in 2025, having been chosen as the preferred technology in the Great British Energy \u2013 Nuclear small modular reactor comp"
+        },
+        {
+          "company_filing_evidence_id": "cfe_d82d1f5cba",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "generator",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 46,
+          "excerpt": "and reduce overall engine environmental impact. Power Systems has developed and published third-party verified Environmental Product Declarations (EPD) for mtu emergency power generator sets. These reports enable Power Systems to demonstrate the environmental footprint of mtu emergency power systems of the mtu 16V4000 DS2500 type and of the 10V1600. The EPDs"
+        },
+        {
+          "company_filing_evidence_id": "cfe_6d04ac3d23",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "capacity",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "high",
+          "page_number": 3,
+          "excerpt": "r are summarised opposite. CONTINUED STRATEGIC PROGRESS Portfolio choices and partnerships Strategic initiatives \u2014 Strategic investment by \u010cEZ Group in Rolls-Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non"
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "system_label": "data center backup-power equipment buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "followup_status": "needs_live_resolution",
+      "support_route_type": "private_company",
+      "support_status": "supported_private_company",
+      "resolved_issuer_name": "AVL List GmbH",
+      "route_assessment": "private_company",
+      "support_evidence_item_count": 6,
+      "support_strong_evidence_item_count": 6,
+      "support_component_specific_count": 0,
+      "support_pressure_or_capacity_count": 6,
+      "support_expansion_or_capex_count": 0,
+      "support_financing_or_capital_count": 0,
+      "role_specific_evidence_summary": {},
+      "top_support_evidence_items": [
+        {
+          "private_company_evidence_id": "pcde_8c215265d1",
+          "resolved_issuer_name": "AVL List GmbH",
+          "canonical_entity_name": "AVL",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "document_type": "official_press_release",
+          "keyword": "capacity",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "medium",
+          "page_number": null,
+          "excerpt": "tions Breadcrumb Home / AVL Opens New Hydrogen and Fuel Cell Test Center in Graz Press Release AVL Opens New Hydrogen and Fuel Cell Test Center in Graz EN , DE , JA , Greater test capacities for innovative energy and propulsion solutions Press Release About AVL Latest Press Release Get in Touch With the official opening of the AVL Hydrogen and Fuel Cell Test Center"
+        },
+        {
+          "private_company_evidence_id": "pcde_06a14e6a45",
+          "resolved_issuer_name": "AVL List GmbH",
+          "canonical_entity_name": "AVL",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "document_type": "official_press_release",
+          "keyword": "capacity",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "medium",
+          "page_number": null,
+          "excerpt": "ptember 19, 2022, AVL is greatly expanding its global test infrastructure for fuel cell and hydrogen technology. The new center at the company\u2019s headquarters in Graz has a maximum capacity of 20 high-performance testbeds, making it one of the largest and most advanced test sites for fuel cells and electrolysis systems in the world. With this investment, AVL strength"
+        },
+        {
+          "private_company_evidence_id": "pcde_0f2f5e618b",
+          "resolved_issuer_name": "AVL List GmbH",
+          "canonical_entity_name": "AVL",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "document_type": "official_press_release",
+          "keyword": "power",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "medium",
+          "page_number": null,
+          "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+        },
+        {
+          "private_company_evidence_id": "pcde_4584ed1fbd",
+          "resolved_issuer_name": "AVL List GmbH",
+          "canonical_entity_name": "AVL",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "document_type": "official_press_release",
+          "keyword": "power",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "medium",
+          "page_number": null,
+          "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+        },
+        {
+          "private_company_evidence_id": "pcde_2c27e22bde",
+          "resolved_issuer_name": "AVL List GmbH",
+          "canonical_entity_name": "AVL",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "avl_permanent_magnet_generators_2026",
+          "document_title": "AVL Permanent Magnet Generators",
+          "document_type": "official_solution_page",
+          "keyword": "power",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "medium",
+          "page_number": null,
+          "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_queue_count": 2,
+    "supported_public_count": 1,
+    "supported_private_count": 1,
+    "planned_private_count": 0,
+    "needs_live_resolution_count": 0
+  }
+}

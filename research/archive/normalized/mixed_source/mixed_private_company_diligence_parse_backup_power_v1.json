@@ -1,0 +1,310 @@
+{
+  "name": "private_company_diligence_parse_batch_v1_d6533561",
+  "origin_collection_batch": "private_company_diligence_collection_batch_v1",
+  "parsed_collections": [
+    {
+      "private_company_diligence_plan_id": "pcd_avl",
+      "canonical_entity_name": "AVL",
+      "resolved_issuer_name": "AVL List GmbH",
+      "system_label": "data center backup-power equipment buildout",
+      "route_type": "private_company",
+      "parsed_documents": [
+        {
+          "private_company_parse_document_id": "pcdp_de3c6374",
+          "document_id": "avl_imprint_2026",
+          "document_title": "AVL Imprint",
+          "document_type": "official_company_legal_page",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_imprint.html",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "power",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 0,
+            "engine": 15,
+            "backup power": 0,
+            "data center": 0,
+            "capacity": 0,
+            "manufacturing": 0,
+            "expansion": 0,
+            "plant": 0,
+            "power": 2,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "le Development Vehicle Systems Development and Integration Functional Vehicle Development Thermal Management and HVAC Hybrid Propulsion Engineering Electrified Internal Combustion Engines Combustion Development Additional Services AVL Test Factory \u2013 Your Single Point Of Contact For All Test Cases Simulation Solutions Simulation Software AVL CRUISE\u2122 M AVL EXCITE\u2122 M"
+            },
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "ta and Analytics Platform AVL DRIVINGCUBE\u2122 AVL Dynamic Ground Truth System\u2122 AVL Integration Core\u2122 AVL SCENIUS\u2122 AVL Smart ADAS Analyzer\u2122 ICE/Hybrid Propulsion Testing Actuators for Engine, Powertrain and Vehicle Testbeds Emission and Energy Certification Hybrid and Engine Testing Powertrain Testing Solutions Transmission Testing Solutions Alternative Fuel Engine Te"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_96eb8786",
+          "document_id": "avl_about_us_2026",
+          "document_title": "AVL About Us",
+          "document_type": "official_company_page",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_about_us.html",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "power",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 0,
+            "engine": 35,
+            "backup power": 0,
+            "data center": 0,
+            "capacity": 0,
+            "manufacturing": 0,
+            "expansion": 0,
+            "plant": 0,
+            "power": 2,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "le Development Vehicle Systems Development and Integration Functional Vehicle Development Thermal Management and HVAC Hybrid Propulsion Engineering Electrified Internal Combustion Engines Combustion Development Additional Services AVL Test Factory \u2013 Your Single Point Of Contact For All Test Cases Simulation Solutions Simulation Software AVL CRUISE\u2122 M AVL EXCITE\u2122 M"
+            },
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "ta and Analytics Platform AVL DRIVINGCUBE\u2122 AVL Dynamic Ground Truth System\u2122 AVL Integration Core\u2122 AVL SCENIUS\u2122 AVL Smart ADAS Analyzer\u2122 ICE/Hybrid Propulsion Testing Actuators for Engine, Powertrain and Vehicle Testbeds Emission and Energy Certification Hybrid and Engine Testing Powertrain Testing Solutions Transmission Testing Solutions Alternative Fuel Engine Te"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_3937ff71",
+          "document_id": "avl_mobility_technologies_inc_2026",
+          "document_title": "AVL Mobility Technologies, Inc.",
+          "document_type": "official_company_location_page",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_mobility_technologies_inc.html",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "power",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 0,
+            "engine": 10,
+            "backup power": 0,
+            "data center": 0,
+            "capacity": 0,
+            "manufacturing": 1,
+            "expansion": 0,
+            "plant": 0,
+            "power": 2,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "le Development Vehicle Systems Development and Integration Functional Vehicle Development Thermal Management and HVAC Hybrid Propulsion Engineering Electrified Internal Combustion Engines Combustion Development Additional Services AVL Test Factory \u2013 Your Single Point Of Contact For All Test Cases Simulation Solutions Simulation Software AVL CRUISE\u2122 M AVL EXCITE\u2122 M"
+            },
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "ta and Analytics Platform AVL DRIVINGCUBE\u2122 AVL Dynamic Ground Truth System\u2122 AVL Integration Core\u2122 AVL SCENIUS\u2122 AVL Smart ADAS Analyzer\u2122 ICE/Hybrid Propulsion Testing Actuators for Engine, Powertrain and Vehicle Testbeds Emission and Energy Certification Hybrid and Engine Testing Powertrain Testing Solutions Transmission Testing Solutions Alternative Fuel Engine Te"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": null,
+              "excerpt": ", e-drive, and more Simulation technologies highlighted by software suite of industry-standard tools Development speed and methodology providing innovation as a key differentiator Manufacturing solutions for prototyping, small batch production, and racing applications Highlights AVL Expands Canadian Presence EN , DE , AVL is pleased to announce it is expanding its Canadi"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_087612e9",
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "document_type": "official_press_release",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_hydrogen_test_center_graz.html",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "power",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 0,
+            "engine": 10,
+            "backup power": 0,
+            "data center": 0,
+            "capacity": 6,
+            "manufacturing": 0,
+            "expansion": 0,
+            "plant": 0,
+            "power": 4,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "le Development Vehicle Systems Development and Integration Functional Vehicle Development Thermal Management and HVAC Hybrid Propulsion Engineering Electrified Internal Combustion Engines Combustion Development Additional Services AVL Test Factory \u2013 Your Single Point Of Contact For All Test Cases Simulation Solutions Simulation Software AVL CRUISE\u2122 M AVL EXCITE\u2122 M"
+            },
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "ta and Analytics Platform AVL DRIVINGCUBE\u2122 AVL Dynamic Ground Truth System\u2122 AVL Integration Core\u2122 AVL SCENIUS\u2122 AVL Smart ADAS Analyzer\u2122 ICE/Hybrid Propulsion Testing Actuators for Engine, Powertrain and Vehicle Testbeds Emission and Energy Certification Hybrid and Engine Testing Powertrain Testing Solutions Transmission Testing Solutions Alternative Fuel Engine Te"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "tions Breadcrumb Home / AVL Opens New Hydrogen and Fuel Cell Test Center in Graz Press Release AVL Opens New Hydrogen and Fuel Cell Test Center in Graz EN , DE , JA , Greater test capacities for innovative energy and propulsion solutions Press Release About AVL Latest Press Release Get in Touch With the official opening of the AVL Hydrogen and Fuel Cell Test Center"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "ptember 19, 2022, AVL is greatly expanding its global test infrastructure for fuel cell and hydrogen technology. The new center at the company\u2019s headquarters in Graz has a maximum capacity of 20 high-performance testbeds, making it one of the largest and most advanced test sites for fuel cells and electrolysis systems in the world. With this investment, AVL strength"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_a3e6f158",
+          "document_id": "avl_permanent_magnet_generators_2026",
+          "document_title": "AVL Permanent Magnet Generators",
+          "document_type": "official_solution_page",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_permanent_magnet_generators.html",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "power",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 0,
+            "engine": 10,
+            "backup power": 0,
+            "data center": 0,
+            "capacity": 0,
+            "manufacturing": 0,
+            "expansion": 0,
+            "plant": 0,
+            "power": 2,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "le Development Vehicle Systems Development and Integration Functional Vehicle Development Thermal Management and HVAC Hybrid Propulsion Engineering Electrified Internal Combustion Engines Combustion Development Additional Services AVL Test Factory \u2013 Your Single Point Of Contact For All Test Cases Simulation Solutions Simulation Software AVL CRUISE\u2122 M AVL EXCITE\u2122 M"
+            },
+            {
+              "keyword": "engine",
+              "page_number": null,
+              "excerpt": "ta and Analytics Platform AVL DRIVINGCUBE\u2122 AVL Dynamic Ground Truth System\u2122 AVL Integration Core\u2122 AVL SCENIUS\u2122 AVL Smart ADAS Analyzer\u2122 ICE/Hybrid Propulsion Testing Actuators for Engine, Powertrain and Vehicle Testbeds Emission and Energy Certification Hybrid and Engine Testing Powertrain Testing Solutions Transmission Testing Solutions Alternative Fuel Engine Te"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "INESS AREA Engineering E-Mobility Engineering Electric Driveline Development Battery Development Fuel Cell Development Industrial Energy Engineering Electrolysis Systems Fuel Cell Power Generation Energy Ecosystem Automated and Connected Mobility Engineering Systems Engineering Software and Controls Development and Verification Calibration, Verification and Valid"
+            }
+          ],
+          "document_page_count": null
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_collection_count": 1,
+    "parsed_collection_count": 1,
+    "parsed_document_count": 5
+  }
+}

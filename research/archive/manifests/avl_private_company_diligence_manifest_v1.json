@@ -1,0 +1,50 @@
+{
+  "name": "avl_private_company_diligence_manifest_v1",
+  "documents": [
+    {
+      "canonical_entity_name": "AVL",
+      "document_id": "avl_imprint_2026",
+      "document_type": "official_company_legal_page",
+      "document_title": "AVL Imprint",
+      "source_url": "https://www.avl.com/en-it/imprint",
+      "local_path": "research/archive/raw/private_company/avl/avl_imprint.html",
+      "source_priority": "official_company_site"
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "document_id": "avl_about_us_2026",
+      "document_type": "official_company_page",
+      "document_title": "AVL About Us",
+      "source_url": "https://www.avl.com/en-us/about-avl",
+      "local_path": "research/archive/raw/private_company/avl/avl_about_us.html",
+      "source_priority": "official_company_site"
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "document_id": "avl_mobility_technologies_inc_2026",
+      "document_type": "official_company_location_page",
+      "document_title": "AVL Mobility Technologies, Inc.",
+      "source_url": "https://www.avl.com/en/locations/avl-mobility-technologies-inc",
+      "local_path": "research/archive/raw/private_company/avl/avl_mobility_technologies_inc.html",
+      "source_priority": "official_company_site"
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "document_id": "avl_hydrogen_test_center_graz_2026",
+      "document_type": "official_press_release",
+      "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+      "source_url": "https://www.avl.com/en/press/press-release/avl-opens-new-hydrogen-and-fuel-cell-test-center-graz",
+      "local_path": "research/archive/raw/private_company/avl/avl_hydrogen_test_center_graz.html",
+      "source_priority": "official_press_releases"
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "document_id": "avl_permanent_magnet_generators_2026",
+      "document_type": "official_solution_page",
+      "document_title": "AVL Permanent Magnet Generators",
+      "source_url": "https://www.avl.com/en-mx/simulations/large-engines/generator-and-electric-motor-simulations/permanent-magnet-generators",
+      "local_path": "research/archive/raw/private_company/avl/avl_permanent_magnet_generators.html",
+      "source_priority": "official_company_site"
+    }
+  ]
+}

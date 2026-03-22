@@ -1,0 +1,76 @@
+{
+  "name": "private_company_diligence_collection_batch_v1",
+  "collections": [
+    {
+      "private_company_diligence_plan_id": "pcd_avl",
+      "canonical_entity_name": "AVL",
+      "resolved_issuer_name": "AVL List GmbH",
+      "system_label": "data center backup-power equipment buildout",
+      "route_type": "private_company",
+      "source_priorities": [
+        "official_company_site",
+        "official_press_releases",
+        "financing_announcements",
+        "private_credit_or_abs_materials",
+        "trade_press"
+      ],
+      "collected_documents": [
+        {
+          "document_id": "avl_imprint_2026",
+          "document_type": "official_company_legal_page",
+          "document_title": "AVL Imprint",
+          "source_url": "https://www.avl.com/en-it/imprint",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_imprint.html",
+          "local_file_exists": true,
+          "source_priority": "official_company_site"
+        },
+        {
+          "document_id": "avl_about_us_2026",
+          "document_type": "official_company_page",
+          "document_title": "AVL About Us",
+          "source_url": "https://www.avl.com/en-us/about-avl",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_about_us.html",
+          "local_file_exists": true,
+          "source_priority": "official_company_site"
+        },
+        {
+          "document_id": "avl_mobility_technologies_inc_2026",
+          "document_type": "official_company_location_page",
+          "document_title": "AVL Mobility Technologies, Inc.",
+          "source_url": "https://www.avl.com/en/locations/avl-mobility-technologies-inc",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_mobility_technologies_inc.html",
+          "local_file_exists": true,
+          "source_priority": "official_company_site"
+        },
+        {
+          "document_id": "avl_hydrogen_test_center_graz_2026",
+          "document_type": "official_press_release",
+          "document_title": "AVL Opens New Hydrogen and Fuel Cell Test Center in Graz",
+          "source_url": "https://www.avl.com/en/press/press-release/avl-opens-new-hydrogen-and-fuel-cell-test-center-graz",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_hydrogen_test_center_graz.html",
+          "local_file_exists": true,
+          "source_priority": "official_press_releases"
+        },
+        {
+          "document_id": "avl_permanent_magnet_generators_2026",
+          "document_type": "official_solution_page",
+          "document_title": "AVL Permanent Magnet Generators",
+          "source_url": "https://www.avl.com/en-mx/simulations/large-engines/generator-and-electric-motor-simulations/permanent-magnet-generators",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/avl/avl_permanent_magnet_generators.html",
+          "local_file_exists": true,
+          "source_priority": "official_company_site"
+        }
+      ],
+      "collection_summary": {
+        "document_count": 5,
+        "existing_document_count": 5,
+        "missing_document_count": 0
+      }
+    }
+  ],
+  "metrics": {
+    "input_plan_count": 1,
+    "collection_count": 1,
+    "document_count": 5
+  }
+}
