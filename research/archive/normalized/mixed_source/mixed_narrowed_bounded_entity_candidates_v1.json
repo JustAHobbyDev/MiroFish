@@ -1,0 +1,87 @@
+{
+  "name": "bounded_entity_candidate_batch_v1",
+  "candidates": [
+    {
+      "bounded_entity_candidate_id": "bec_data_center_backup_power_equipment_buildout_avl_2025-07-16_582e3527",
+      "origin_bounded_research_set_id": "brs_data_center_backup_power_equipment_buildout_2025-07-16_c6d371d6",
+      "system_label": "data center backup-power equipment buildout",
+      "as_of_date": "2025-07-16",
+      "entity_name": "AVL",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_404505b643706d79"
+      ],
+      "supporting_titles": [
+        "Power enclosure maker AVL to establish its first US plant"
+      ],
+      "matched_terms": [
+        "center",
+        "centers",
+        "data",
+        "enclosure",
+        "enclosures",
+        "generator",
+        "large",
+        "power"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "high",
+      "max_match_score": 14,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    },
+    {
+      "bounded_entity_candidate_id": "bec_data_center_backup_power_equipment_buildout_rolls_royce_2025-07-16_c5047165",
+      "origin_bounded_research_set_id": "brs_data_center_backup_power_equipment_buildout_2025-07-16_c6d371d6",
+      "system_label": "data center backup-power equipment buildout",
+      "as_of_date": "2025-07-16",
+      "entity_name": "Rolls-Royce",
+      "entity_role": "equipment_or_component_supplier",
+      "artifact_support_count": 1,
+      "source_classes": [
+        "trade_press"
+      ],
+      "source_class_diversity_count": 1,
+      "supporting_artifact_ids": [
+        "trade_press_898010ffbfe80234"
+      ],
+      "supporting_titles": [
+        "Rolls-Royce invests $75M in South Carolina engine plant"
+      ],
+      "matched_terms": [
+        "center",
+        "centers",
+        "data",
+        "engine",
+        "large",
+        "power"
+      ],
+      "artifact_provenance_classes": [
+        "external_real_or_unknown"
+      ],
+      "support_provenance_status": "real_only",
+      "priority_tier": "high",
+      "max_match_score": 11,
+      "recommended_next_source_classes": [
+        "company_release",
+        "trade_press",
+        "company_filing"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_bounded_research_set_count": 1,
+    "bounded_entity_candidate_count": 2
+  }
+}

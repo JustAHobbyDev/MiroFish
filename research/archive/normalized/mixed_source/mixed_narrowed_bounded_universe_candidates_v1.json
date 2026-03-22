@@ -1,0 +1,44 @@
+{
+  "name": "narrowed_bounded_universe_candidate_batch_v1",
+  "candidates": [
+    {
+      "bounded_universe_candidate_id": "buc_data_center_backup_power_equipment_buildout_5bbd7196",
+      "as_of_date": "2025-07-16",
+      "status": "exploratory_candidate",
+      "origin_pressure_candidate_id": "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001",
+      "origin_narrowed_pressure_candidate_id": "nsp_data_center_backup_power_equipment_buildout_2025_07_16",
+      "universe_label": "data center backup-power equipment buildout universe",
+      "system_label": "data center backup-power equipment buildout",
+      "bounding_basis": {
+        "source_diversity_corroborated": false,
+        "system_bounded": true,
+        "research_ready": true,
+        "promotion_ready": false,
+        "exploration_only": true,
+        "support_provenance_status": "real_only"
+      },
+      "review_universe_definition": "Manufacturers, suppliers, and public artifacts tied to backup-power engines, generator packages, generator enclosures, and adjacent data-center onsite-power equipment buildout.",
+      "next_source_classes": [
+        "trade_press"
+      ],
+      "suspected_stress_layers": [
+        "backup-power equipment manufacturing",
+        "generator packages",
+        "large-engine backup systems",
+        "power enclosures"
+      ],
+      "visible_beneficiary_hints": [],
+      "confidence": "medium",
+      "supporting_pressure_candidate_ids": [
+        "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001"
+      ],
+      "supporting_narrowed_pressure_candidate_ids": [
+        "nsp_data_center_backup_power_equipment_buildout_2025_07_16"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_narrowed_candidate_count": 1,
+    "bounded_universe_candidate_count": 1
+  }
+}

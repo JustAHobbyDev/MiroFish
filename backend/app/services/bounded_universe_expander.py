@@ -105,6 +105,31 @@ def _expansion_template(system_label: str) -> Dict[str, Any]:
                 "Only advance live filing work for entities with explicit lane-specific local support.",
             ],
         },
+        "data center backup-power equipment buildout": {
+            "entity_lane_hints": [
+                "backup-power engine manufacturers",
+                "generator package and module assemblers",
+                "power enclosure manufacturers",
+                "onsite-power system integrators for data centers",
+            ],
+            "query_seed_terms": [
+                "data center backup power equipment",
+                "generator package expansion",
+                "engine plant for backup power",
+                "power enclosure manufacturing",
+                "onsite power system for data centers",
+            ],
+            "negative_boundaries": [
+                "utility load growth without equipment buildout",
+                "generic electrical products",
+                "non-power industrial manufacturing",
+            ],
+            "first_actions": [
+                "Keep this exploratory lane on real backup-power equipment artifacts.",
+                "Separate equipment makers from utilities and site operators.",
+                "Do not widen into generic power generation without additional corroboration.",
+            ],
+        },
     }
     return templates.get(
         system_label,

@@ -36,7 +36,22 @@ def _entity_role(system_label: str, matched_artifacts: List[Dict[str, Any]]) -> 
             ],
         ]
     ).lower()
-    if any(token in text for token in ("transformer", "switchgear", "substation", "meter", "cable", "coil")):
+    if any(
+        token in text
+        for token in (
+            "transformer",
+            "switchgear",
+            "substation",
+            "meter",
+            "cable",
+            "coil",
+            "generator",
+            "engine",
+            "enclosure",
+            "module",
+            "package",
+        )
+    ):
         return "equipment_or_component_supplier"
     if any(token in text for token in ("data center", "campus", "hyperscale", "digital infrastructure")):
         return "capacity_operator_or_owner"

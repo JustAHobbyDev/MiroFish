@@ -1,0 +1,41 @@
+{
+  "name": "cyrusone_private_company_diligence_manifest_v1",
+  "documents": [
+    {
+      "canonical_entity_name": "CyrusOne",
+      "document_id": "cyrusone_about_2026",
+      "document_type": "official_company_page",
+      "document_title": "CyrusOne About Us",
+      "source_url": "https://www.cyrusone.com/about-us",
+      "local_path": "research/archive/raw/private_company/cyrusone/cyrusone_about_us.html",
+      "source_priority": "official_company_site"
+    },
+    {
+      "canonical_entity_name": "CyrusOne",
+      "document_id": "cyrusone_abs_issuance_2026",
+      "document_type": "official_financing_announcement",
+      "document_title": "CyrusOne Closes $1.175B ABS Issuance",
+      "source_url": "https://www.cyrusone.com/resources/press-releases/cyrusone-closes-1-175-billion-abs-issuance",
+      "local_path": "research/archive/raw/private_company/cyrusone/cyrusone_abs_issuance.html",
+      "source_priority": "financing_announcements"
+    },
+    {
+      "canonical_entity_name": "CyrusOne",
+      "document_id": "cyrusone_fort_worth_200mw_2026",
+      "document_type": "official_press_release",
+      "document_title": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200MW Data Center Campus in Fort Worth, Texas",
+      "source_url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-eolian-partner-to-enable-rapid-deployment-of-200-megawatt-data-center-campus-in-fort-worth-texas",
+      "local_path": "research/archive/raw/private_company/cyrusone/cyrusone_fort_worth_200mw.html",
+      "source_priority": "official_press_releases"
+    },
+    {
+      "canonical_entity_name": "CyrusOne",
+      "document_id": "cyrusone_calpine_powered_land_2026",
+      "document_type": "official_press_release",
+      "document_title": "CyrusOne and Calpine Announce New Hyperscale Data Center Development in Texas",
+      "source_url": "https://www.cyrusone.com/resources/press-releases/cyrusone-and-calpine-announce-newhyperscale-data-center-development-in-texas",
+      "local_path": "research/archive/raw/private_company/cyrusone/cyrusone_calpine_powered_land.html",
+      "source_priority": "official_press_releases"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "name": "utility_lane_review_surface_v1",
+  "rows": [
+    {
+      "canonical_entity_name": "FirstEnergy",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "review_route": "public_filing_reuse",
+      "supporting_source_classes": [
+        "trade_press"
+      ],
+      "followup_status": "already_supported",
+      "filing_strong_evidence_item_count": 8,
+      "load_and_demand_signal_count": 6,
+      "grid_response_signal_count": 3,
+      "capex_response_signal_count": 2,
+      "private_document_count": 0,
+      "private_existing_document_count": 0,
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "DTE",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "DTE Energy Company",
+      "review_route": "public_filing_reuse",
+      "supporting_source_classes": [
+        "trade_press"
+      ],
+      "followup_status": "already_supported",
+      "filing_strong_evidence_item_count": 7,
+      "load_and_demand_signal_count": 7,
+      "grid_response_signal_count": 3,
+      "capex_response_signal_count": 2,
+      "private_document_count": 0,
+      "private_existing_document_count": 0,
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Southern",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "power_or_utility_operator",
+      "priority_tier": "medium",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "The Southern Company",
+      "review_route": "public_filing_reuse",
+      "supporting_source_classes": [
+        "trade_press"
+      ],
+      "followup_status": "already_supported",
+      "filing_strong_evidence_item_count": 6,
+      "load_and_demand_signal_count": 5,
+      "grid_response_signal_count": 3,
+      "capex_response_signal_count": 2,
+      "private_document_count": 0,
+      "private_existing_document_count": 0,
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Exelon",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "Exelon Corporation",
+      "review_route": "public_filing_reuse",
+      "supporting_source_classes": [
+        "trade_press"
+      ],
+      "followup_status": "already_supported",
+      "filing_strong_evidence_item_count": 6,
+      "load_and_demand_signal_count": 4,
+      "grid_response_signal_count": 3,
+      "capex_response_signal_count": 1,
+      "private_document_count": 0,
+      "private_existing_document_count": 0,
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "CyrusOne",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "downstream_status": "private_company_diligence_required",
+      "resolved_issuer_name": "CyrusOne",
+      "review_route": "private_company_diligence",
+      "supporting_source_classes": [
+        "trade_press"
+      ],
+      "followup_status": "needs_live_resolution",
+      "filing_strong_evidence_item_count": 0,
+      "load_and_demand_signal_count": 0,
+      "grid_response_signal_count": 0,
+      "capex_response_signal_count": 0,
+      "private_document_count": 4,
+      "private_existing_document_count": 4,
+      "next_action": "run_private_company_diligence"
+    }
+  ],
+  "metrics": {
+    "input_downstream_row_count": 5,
+    "public_filing_reuse_count": 4,
+    "private_company_diligence_count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "bounded_entity_followup_queue_v1",
+  "queue_rows": [
+    {
+      "canonical_entity_name": "AVL",
+      "system_label": "data center backup-power equipment buildout",
+      "entity_role": "equipment_or_component_supplier",
+      "priority_tier": "high",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "needs_live_resolution",
+      "existing_resolved_issuer_name": "",
+      "next_action": "resolve_issuer_and_collect_filing_route"
+    },
+    {
+      "canonical_entity_name": "Rolls-Royce",
+      "system_label": "data center backup-power equipment buildout",
+      "entity_role": "equipment_or_component_supplier",
+      "priority_tier": "high",
+      "source_classes": [
+        "trade_press"
+      ],
+      "support_provenance_status": "real_only",
+      "filing_followup_status": "needs_live_resolution",
+      "existing_resolved_issuer_name": "",
+      "next_action": "resolve_issuer_and_collect_filing_route"
+    }
+  ],
+  "metrics": {
+    "input_candidate_count": 2,
+    "selected_queue_count": 2,
+    "already_supported_count": 0,
+    "needs_live_resolution_count": 2
+  }
+}

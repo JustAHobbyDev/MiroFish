@@ -1,0 +1,108 @@
+{
+  "name": "bounded_research_set_batch_v1",
+  "research_sets": [
+    {
+      "bounded_research_set_id": "brs_data_center_backup_power_equipment_buildout_2025-07-16_c6d371d6",
+      "as_of_date": "2025-07-16",
+      "status": "candidate",
+      "origin_bounded_universe_expansion_plan_id": "bue_data_center_backup_power_equipment_buildout_2025-07-16_c6d371d6",
+      "system_label": "data center backup-power equipment buildout",
+      "matched_artifacts": [
+        {
+          "artifact_id": "trade_press_404505b643706d79",
+          "source_class": "trade_press",
+          "title": "Power enclosure maker AVL to establish its first US plant",
+          "source_url": "https://www.manufacturingdive.com/news/power-enclosure-avl-first-us-factory-charlotte-north-carolina/749197/",
+          "entity_hint": "AVL",
+          "match_score": 14,
+          "matched_terms": [
+            "center",
+            "data",
+            "enclosures",
+            "generator",
+            "large",
+            "power",
+            "center",
+            "centers",
+            "data",
+            "enclosure",
+            "enclosures",
+            "generator",
+            "large",
+            "power"
+          ],
+          "negative_hits": []
+        },
+        {
+          "artifact_id": "trade_press_898010ffbfe80234",
+          "source_class": "trade_press",
+          "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+          "source_url": "https://www.manufacturingdive.com/news/rolls-royce-invests-75-million-aiken-south-carolina-engine-plant/753189/",
+          "entity_hint": "Rolls-Royce",
+          "match_score": 11,
+          "matched_terms": [
+            "center",
+            "data",
+            "engine",
+            "large",
+            "power",
+            "center",
+            "centers",
+            "data",
+            "engine",
+            "large",
+            "power"
+          ],
+          "negative_hits": []
+        }
+      ],
+      "matched_artifact_ids": [
+        "trade_press_404505b643706d79",
+        "trade_press_898010ffbfe80234"
+      ],
+      "entity_candidates": [
+        {
+          "entity_name": "AVL",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_404505b643706d79"
+          ]
+        },
+        {
+          "entity_name": "Rolls-Royce",
+          "source_classes": [
+            "trade_press"
+          ],
+          "artifact_support_count": 1,
+          "artifact_ids": [
+            "trade_press_898010ffbfe80234"
+          ]
+        }
+      ],
+      "coverage_metrics": {
+        "matched_artifact_count": 2,
+        "matched_source_classes": [
+          "trade_press"
+        ],
+        "entity_candidate_count": 2
+      },
+      "source_classes_priority": [
+        "trade_press"
+      ],
+      "suspected_stress_layers": [
+        "backup-power equipment manufacturing",
+        "generator packages",
+        "large-engine backup systems",
+        "power enclosures"
+      ],
+      "confidence": "medium"
+    }
+  ],
+  "metrics": {
+    "input_expansion_plan_count": 1,
+    "bounded_research_set_count": 1
+  }
+}

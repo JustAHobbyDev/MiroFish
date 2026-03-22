@@ -246,3 +246,61 @@ def test_build_bounded_research_set_batch_keeps_utility_lane_inside_operator_sig
     assert "DTE" in entity_names
     assert "Southern" in entity_names
     assert "Eaton" not in entity_names
+
+
+def test_build_bounded_research_set_batch_keeps_backup_power_lane_narrow() -> None:
+    expansion_batch = {
+        "plans": [
+            {
+                "bounded_universe_expansion_plan_id": "bue_backup",
+                "as_of_date": "2025-07-16",
+                "system_label": "data center backup-power equipment buildout",
+                "query_seed_terms": [
+                    "data center backup power equipment",
+                    "generator package expansion",
+                    "engine plant for backup power",
+                    "power enclosure manufacturing",
+                ],
+                "negative_boundaries": [],
+                "source_classes_priority": ["trade_press"],
+                "suspected_stress_layers": ["backup-power equipment manufacturing"],
+                "confidence": "medium",
+            }
+        ]
+    }
+    prefilter_batches = [
+        {
+            "kept_artifacts": [
+                {
+                    "artifact_id": "b1",
+                    "source_class": "trade_press",
+                    "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+                    "body_text": "The plant supports backup-power demand from data centers.",
+                    "source_url": "https://example.com/b1",
+                },
+                {
+                    "artifact_id": "b2",
+                    "source_class": "trade_press",
+                    "title": "Power enclosure maker AVL to establish its first US plant",
+                    "body_text": "The enclosure plant supports large-scale power generator systems.",
+                    "source_url": "https://example.com/b2",
+                },
+                {
+                    "artifact_id": "u1",
+                    "source_class": "trade_press",
+                    "title": "PG&E data center pipeline swells to 10GW",
+                    "body_text": "Utility demand is rising.",
+                    "source_url": "https://example.com/u1",
+                },
+            ],
+            "review_artifacts": [],
+        }
+    ]
+
+    result = module.build_bounded_research_set_batch(expansion_batch, prefilter_batches)
+    research_set = result["research_sets"][0]
+
+    assert sorted(research_set["matched_artifact_ids"]) == ["b1", "b2"]
+    entity_names = [item["entity_name"] for item in research_set["entity_candidates"]]
+    assert "Rolls-Royce" in entity_names
+    assert "AVL" in entity_names

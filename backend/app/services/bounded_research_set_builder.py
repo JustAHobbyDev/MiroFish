@@ -142,6 +142,17 @@ def _anchor_keywords(plan: Dict[str, Any]) -> List[str]:
     return anchors
 
 
+def _matches_backup_power_lane(artifact: Dict[str, Any]) -> bool:
+    title = _coerce_string(artifact.get("title")).lower()
+    equipment = any(token in title for token in ("generator", "engine", "enclosure", "module", "package"))
+    buildout = any(
+        token in title
+        for token in ("factory", "plant", "manufacturing", "production", "assembly", "expand", "invest")
+    )
+    context = any(token in title for token in ("data center", "backup", "resilience", "power"))
+    return equipment and (buildout or context)
+
+
 def _extract_entity_hint(artifact: Dict[str, Any]) -> str:
     issuer = _coerce_string(artifact.get("issuing_company_name"))
     if issuer:
@@ -153,6 +164,8 @@ def _extract_entity_hint(artifact: Dict[str, Any]) -> str:
         r"([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,4}(?: subsidiary)?) (?:%s)\b"
         % "|".join(ENTITY_VERBS),
         r"([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,4}(?: subsidiary)?) to (?:build|expand|invest)\b",
+        r"(?:maker|manufacturer|supplier)\s+([A-Z][A-Za-z0-9&'.-]+(?: [A-Z][A-Za-z0-9&'.-]+){0,3})\s+(?:to|%s)\b"
+        % "|".join(ENTITY_VERBS),
     ]
     for pattern in patterns:
         match = re.search(pattern, title)
@@ -166,7 +179,10 @@ def _extract_entity_hint(artifact: Dict[str, Any]) -> str:
 
 
 def _score_artifact(plan: Dict[str, Any], artifact: Dict[str, Any]) -> Tuple[int, List[str], List[str]]:
+    system_label = _coerce_string(plan.get("system_label"))
     text = _artifact_text(artifact)
+    if system_label == "data center backup-power equipment buildout" and not _matches_backup_power_lane(artifact):
+        return 0, [], []
     positive_terms = list(plan.get("query_seed_terms", [])) + list(plan.get("suspected_stress_layers", []))
     negative_terms = list(plan.get("negative_boundaries", []))
     anchor_hits = sorted({kw for kw in _anchor_keywords(plan) if kw in text})

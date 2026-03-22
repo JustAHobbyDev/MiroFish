@@ -66,3 +66,41 @@ def test_build_bounded_entity_candidate_batch_ranks_transformer_entities():
     assert result["candidates"][0]["entity_role"] == "equipment_or_component_supplier"
     assert "company_filing" in result["candidates"][0]["recommended_next_source_classes"]
     assert result["candidates"][0]["support_provenance_status"] == "real_only"
+
+
+def test_build_bounded_entity_candidate_batch_marks_backup_power_suppliers_as_equipment():
+    research_set_batch = {
+        "research_sets": [
+            {
+                "bounded_research_set_id": "brs_backup",
+                "system_label": "data center backup-power equipment buildout",
+                "as_of_date": "2025-07-16",
+                "matched_artifacts": [
+                    {
+                        "artifact_id": "b1",
+                        "source_class": "trade_press",
+                        "title": "Rolls-Royce invests $75M in South Carolina engine plant",
+                        "matched_terms": ["engine", "power"],
+                        "match_score": 11,
+                    },
+                    {
+                        "artifact_id": "b2",
+                        "source_class": "trade_press",
+                        "title": "Power enclosure maker AVL to establish its first US plant",
+                        "matched_terms": ["enclosure", "power"],
+                        "match_score": 14,
+                    },
+                ],
+                "entity_candidates": [
+                    {"entity_name": "Rolls-Royce", "artifact_ids": ["b1"]},
+                    {"entity_name": "AVL", "artifact_ids": ["b2"]},
+                ],
+            }
+        ]
+    }
+
+    result = module.build_bounded_entity_candidate_batch(research_set_batch)
+
+    roles = {item["entity_name"]: item["entity_role"] for item in result["candidates"]}
+    assert roles["Rolls-Royce"] == "equipment_or_component_supplier"
+    assert roles["AVL"] == "equipment_or_component_supplier"

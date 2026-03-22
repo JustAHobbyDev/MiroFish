@@ -1,0 +1,10 @@
+{
+  "bounded_universe_candidate_count": 1,
+  "matched_artifact_count": 2,
+  "entity_candidate_count": 2,
+  "followup_queue_count": 2,
+  "entity_names": [
+    "AVL",
+    "Rolls-Royce"
+  ]
+}
