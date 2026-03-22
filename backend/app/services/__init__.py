@@ -97,6 +97,12 @@ from .company_release_archive import (
     build_company_release_prefilter_batch,
     normalize_company_release_artifact,
 )
+from .businesswire_company_release_collector import (
+    BusinessWireAccessDeniedError,
+    fetch_businesswire_article,
+    fetch_businesswire_company_release_records,
+    parse_businesswire_article_html,
+)
 from .trade_press_archive import (
     build_trade_press_prefilter_batch,
     normalize_trade_press_artifact,
