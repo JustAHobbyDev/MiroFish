@@ -1,0 +1,504 @@
+{
+  "method": "public market research rows -> deterministic market scan candidates",
+  "rows": [
+    {
+      "name": "DTE on data center utility response buildout",
+      "market_theme": "data center utility response buildout",
+      "thesis": "DTE appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "underlying": "DTE",
+      "mispricing_type": "capacity_response_operator",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "DTE"
+      ],
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 2.5,
+        "recognition_gap": 2.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 2.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 2.0
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 1.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 1.5,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.5,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      },
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "notes": [
+        "deterministic market research row built from capacity_response_operator",
+        "resolved issuer: DTE Energy Company"
+      ]
+    },
+    {
+      "name": "Exelon on data center utility response buildout",
+      "market_theme": "data center utility response buildout",
+      "thesis": "Exelon appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "underlying": "EXC",
+      "mispricing_type": "capacity_response_operator",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "Exelon"
+      ],
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 2.5,
+        "recognition_gap": 2.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 2.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 2.0
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 1.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 1.5,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.5,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      },
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 75.0,
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "notes": [
+        "deterministic market research row built from capacity_response_operator",
+        "resolved issuer: Exelon Corporation"
+      ]
+    },
+    {
+      "name": "FirstEnergy on data center utility response buildout",
+      "market_theme": "data center utility response buildout",
+      "thesis": "FirstEnergy appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "underlying": "FE",
+      "mispricing_type": "capacity_response_operator",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "FirstEnergy"
+      ],
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 2.5,
+        "recognition_gap": 2.5,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 2.5,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 2.0
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 1.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 1.5,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.5,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      },
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "notes": [
+        "deterministic market research row built from capacity_response_operator",
+        "resolved issuer: FirstEnergy Corp."
+      ]
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "market_theme": "grid equipment and transformer buildout",
+      "thesis": "Eaton appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "underlying": "ETN",
+      "mispricing_type": "supply_chain_beneficiary",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "Eaton"
+      ],
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 3.0,
+        "recognition_gap": 3.0,
+        "catalyst_clarity": 3.0,
+        "propagation_asymmetry": 3.0,
+        "duration_mismatch": 3.5,
+        "evidence_quality": 4.0,
+        "crowding_inverse": 2.5,
+        "valuation_nonlinearity": 2.5
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.5,
+        "microcap_rerating_potential": 1.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 1.0,
+        "surface_staleness": 1.0,
+        "pre_expiration_repricing_potential": 1.0,
+        "stock_vs_call_convexity_advantage": 1.0,
+        "long_dated_liquidity_quality": 1.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 1.5,
+        "tenor_alignment": 2.5,
+        "vol_expansion_potential": 1.5,
+        "downside_definedness": 1.5,
+        "liquidity_path": 1.5,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.0
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      },
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 83.0,
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+        "market_research_row_action": "build_beneficiary_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "notes": [
+        "deterministic market research row built from supply_chain_beneficiary",
+        "resolved issuer: Eaton Corporation plc"
+      ]
+    },
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "market_theme": "grid equipment and transformer buildout",
+      "thesis": "GE Vernova appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "underlying": "GEV",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "GE Vernova"
+      ],
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.0,
+        "recognition_gap": 4.0,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 3.5
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 3.5,
+        "microcap_rerating_potential": 2.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 2.0,
+        "surface_staleness": 2.0,
+        "pre_expiration_repricing_potential": 2.5,
+        "stock_vs_call_convexity_advantage": 2.0,
+        "long_dated_liquidity_quality": 2.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 3.0,
+        "tenor_alignment": 3.5,
+        "vol_expansion_potential": 3.0,
+        "downside_definedness": 2.0,
+        "liquidity_path": 2.0,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 4.0,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 4.0
+      },
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 95.0,
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+        "market_research_row_action": "build_bottleneck_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "notes": [
+        "deterministic market research row built from bottleneck_candidate",
+        "resolved issuer: GE Vernova Inc."
+      ]
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "market_theme": "grid equipment and transformer buildout",
+      "thesis": "Mitsubishi Electric appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "underlying": "6503",
+      "mispricing_type": "hidden_bottleneck",
+      "time_horizon": "12-24m",
+      "linked_companies": [
+        "Mitsubishi Electric"
+      ],
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage",
+        "primary listing is outside the default U.S. ticker workflow"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "mispricing_signals": {
+        "hiddenness": 4.0,
+        "recognition_gap": 4.0,
+        "catalyst_clarity": 3.5,
+        "propagation_asymmetry": 4.0,
+        "duration_mismatch": 4.0,
+        "evidence_quality": 4.5,
+        "crowding_inverse": 3.5,
+        "valuation_nonlinearity": 3.5
+      },
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 3.5,
+        "microcap_rerating_potential": 2.0
+      },
+      "leaps_bias_signals": {
+        "iv_cheapness": 0.0,
+        "surface_staleness": 0.0,
+        "pre_expiration_repricing_potential": 0.0,
+        "stock_vs_call_convexity_advantage": 0.0,
+        "long_dated_liquidity_quality": 0.0
+      },
+      "options_expression_signals": {
+        "convexity_need": 3.0,
+        "tenor_alignment": 3.5,
+        "vol_expansion_potential": 3.0,
+        "downside_definedness": 2.0,
+        "liquidity_path": 2.0,
+        "implementation_simplicity": 3.0,
+        "catalyst_timing_specificity": 2.5
+      },
+      "stock_expression_signals": {
+        "market_accessibility": 2.5,
+        "implementation_simplicity": 4.5,
+        "balance_sheet_resilience": 3.5,
+        "dilution_risk_inverse": 3.5,
+        "thesis_linearity": 4.0,
+        "duration_tolerance": 4.0,
+        "listing_quality": 3.0
+      },
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 95.0,
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+        "market_research_row_action": "build_bottleneck_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_foreign_public_symbol",
+        "exchange_scope": "foreign_home_market_code"
+      },
+      "notes": [
+        "deterministic market research row built from bottleneck_candidate",
+        "resolved issuer: Mitsubishi Electric Corporation"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_research_row_count": 8,
+    "ready_market_scan_candidate_count": 6,
+    "pick_candidate_count": 2,
+    "watchlist_candidate_count": 4
+  }
+}

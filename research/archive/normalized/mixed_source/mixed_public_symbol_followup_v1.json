@@ -1,0 +1,35 @@
+{
+  "name": "public_symbol_followup_batch_v1",
+  "followup_rows": [
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "followup_type": "foreign_public_symbol_followup",
+      "followup_action": "confirm_primary_listing_symbol_and_tradable_market_code",
+      "exchange_scope": "foreign_public_route_unmapped",
+      "symbol_mapping_status": "public_symbol_followup_required_foreign_route",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "live_resolution_status": "resolved_direct_foreign_public_route",
+      "route_aware_priority_score": 98
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "followup_type": "parent_public_symbol_followup",
+      "followup_action": "confirm_parent_listing_symbol_and_parent_entity_market_mapping",
+      "exchange_scope": "public_route_unmapped",
+      "symbol_mapping_status": "public_symbol_followup_required",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "live_resolution_status": "resolved_parent_route",
+      "route_aware_priority_score": 112
+    }
+  ],
+  "metrics": {
+    "input_symbol_row_count": 8,
+    "followup_count": 2,
+    "foreign_public_symbol_followup_count": 1,
+    "parent_public_symbol_followup_count": 1
+  }
+}
