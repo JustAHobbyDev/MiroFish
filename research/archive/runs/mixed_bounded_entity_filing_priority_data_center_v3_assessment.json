@@ -1,0 +1,25 @@
+{
+  "name": "mixed_bounded_entity_filing_priority_data_center_v3_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_priority_data_center_v3.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "supported_priority_count": 9,
+    "high_priority_count": 9,
+    "equipment_supplier_count": 5,
+    "utility_or_operator_count": 4
+  },
+  "equipment_supplier_priority_queue": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Eaton",
+    "Mitsubishi Electric",
+    "Schneider Electric"
+  ],
+  "utility_or_operator_priority_queue": [
+    "DTE",
+    "FirstEnergy",
+    "Exelon",
+    "Southern"
+  ],
+  "decision": "advance split filing-backed queues instead of one mixed data-center rank list"
+}

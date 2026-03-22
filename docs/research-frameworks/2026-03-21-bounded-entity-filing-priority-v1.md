@@ -14,8 +14,10 @@ Deterministically reprioritize bounded entity queues after filing evidence is at
 One `priority_row` per bounded entity expansion with:
 
 1. base priority
+2. role lane
 2. filing support status
 3. filing evidence counts
+4. role-specific evidence summary when applicable
 4. filing-backed priority score
 5. filing-backed priority tier
 6. next action
@@ -27,6 +29,21 @@ The priority layer should:
 1. prefer entities with real filing-backed support
 2. reward component-specific evidence over generic system context
 3. keep unsupported entities in queue when they are still real-only and filing-eligible
+4. split equipment suppliers from utilities/operators before ranking
+
+## Role-Lane Boundary
+
+1. `equipment_supplier`
+   - rank primarily on:
+     - component-specific evidence
+     - capacity tightness
+     - expansion or capex language
+2. `utility_or_operator`
+   - rank primarily on:
+     - load and demand pressure
+     - grid-response evidence
+     - capex response evidence
+3. Utilities and operators should not compete directly with equipment suppliers in one undifferentiated filing-backed queue.
 
 ## Action Boundary
 

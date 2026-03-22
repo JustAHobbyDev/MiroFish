@@ -1,0 +1,24 @@
+{
+  "name": "mixed_bounded_entity_filing_support_data_center_v3_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_support_data_center_v3.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "supported_entity_count": 9,
+    "equipment_supplier_count": 5,
+    "utility_or_operator_count": 4
+  },
+  "equipment_supplier_entities": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Mitsubishi Electric",
+    "Eaton",
+    "Schneider Electric"
+  ],
+  "utility_or_operator_entities": [
+    "FirstEnergy",
+    "DTE",
+    "Exelon",
+    "Southern"
+  ],
+  "decision": "use the split support lanes for all downstream data-center filing-backed ranking"
+}
