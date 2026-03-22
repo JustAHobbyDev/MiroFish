@@ -88,6 +88,15 @@ def _normalize_whitespace(text: str) -> str:
     return " ".join(text.split())
 
 
+def _keyword_pattern(keyword: str) -> re.Pattern[str]:
+    normalized = _coerce_string(keyword).lower()
+    if " " in normalized:
+        return re.compile(rf"\b{re.escape(normalized)}\b")
+    if normalized.endswith("y") and len(normalized) > 2:
+        return re.compile(rf"\b{re.escape(normalized[:-1])}(?:y|ies)\b")
+    return re.compile(rf"\b{re.escape(normalized)}s?\b")
+
+
 def _strip_html(text: str) -> str:
     text = re.sub(r"(?is)<script.*?>.*?</script>", " ", text)
     text = re.sub(r"(?is)<style.*?>.*?</style>", " ", text)
@@ -99,7 +108,7 @@ def _keyword_counts(text: str, keywords: List[str]) -> Dict[str, int]:
     lowered = text.lower()
     counts: Dict[str, int] = {}
     for keyword in keywords:
-        pattern = re.compile(rf"\b{re.escape(keyword.lower())}\b")
+        pattern = _keyword_pattern(keyword)
         counts[keyword] = len(pattern.findall(lowered))
     return counts
 
@@ -122,7 +131,7 @@ def _extract_pdf_text_and_snippets(file_path: Path, keywords: List[str]) -> Dict
             page_text = page.get_text()
             lowered = page_text.lower()
             for keyword in keywords:
-                pattern = re.compile(rf"\b{re.escape(keyword.lower())}\b")
+                pattern = _keyword_pattern(keyword)
                 matches = list(pattern.finditer(lowered))
                 keyword_counts[keyword] += len(matches)
                 if matches and len([s for s in evidence_snippets if s["keyword"] == keyword]) < 2:
@@ -149,7 +158,7 @@ def _extract_html_text_and_snippets(file_path: Path, keywords: List[str]) -> Dic
     for keyword in keywords:
         if keyword_counts[keyword] == 0:
             continue
-        pattern = re.compile(rf"\b{re.escape(keyword.lower())}\b")
+        pattern = _keyword_pattern(keyword)
         matches = list(pattern.finditer(lowered))
         for match in matches[:2]:
             evidence_snippets.append(

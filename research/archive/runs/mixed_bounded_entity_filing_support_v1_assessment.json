@@ -1,0 +1,15 @@
+{
+  "batch": "mixed_bounded_entity_filing_support_v1",
+  "input_entity_expansion_count": 5,
+  "supported_entity_count": 4,
+  "support_order": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Mitsubishi Electric",
+    "Eaton",
+    "Westrafo"
+  ],
+  "unsupported_entities": [
+    "Westrafo"
+  ]
+}

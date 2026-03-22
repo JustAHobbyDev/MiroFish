@@ -1,0 +1,39 @@
+{
+  "batch": "mixed_company_filing_parse_v2",
+  "parsed_collection_count": 4,
+  "parsed_document_count": 5,
+  "issuer_summaries": {
+    "Hitachi, Ltd.": {
+      "documents": 2,
+      "highlights": [
+        "power distribution transformers",
+        "order backlog into sales at Hitachi Energy",
+        "expanded production capacity at Hitachi Energy"
+      ]
+    },
+    "Eaton Corporation plc": {
+      "documents": 1,
+      "highlights": [
+        "approximately $15.9 billion backlog",
+        "plans to increase capital expenditures",
+        "expand production capacity"
+      ]
+    },
+    "Mitsubishi Electric Corporation": {
+      "documents": 1,
+      "highlights": [
+        "72/84kV environmentally friendly switchgear",
+        "substation equipment",
+        "large electricity users"
+      ]
+    },
+    "GE Vernova Inc.": {
+      "documents": 1,
+      "highlights": [
+        "alternating current substation solutions",
+        "power transformers and switchgear",
+        "increase production capacity"
+      ]
+    }
+  }
+}

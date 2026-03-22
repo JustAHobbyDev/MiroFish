@@ -1,0 +1,17 @@
+{
+  "batch": "mixed_company_filing_evidence_v1",
+  "evidence_collection_count": 4,
+  "total_evidence_item_count": 73,
+  "supported_issuers": [
+    "Hitachi, Ltd.",
+    "Eaton Corporation plc",
+    "Mitsubishi Electric Corporation",
+    "GE Vernova Inc."
+  ],
+  "strongest_component_specific_counts": {
+    "GE Vernova Inc.": 6,
+    "Mitsubishi Electric Corporation": 4,
+    "Eaton Corporation plc": 2,
+    "Hitachi, Ltd.": 1
+  }
+}
