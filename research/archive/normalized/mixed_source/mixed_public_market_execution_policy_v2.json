@@ -1,0 +1,116 @@
+{
+  "name": "public_market_execution_policy_batch_v1",
+  "policy_rows": [
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "final_expression": "shares",
+      "us_accessibility_status": "us_direct_primary",
+      "execution_policy_status": "default_us_executable",
+      "execution_policy_action": "use_default_us_execution_path",
+      "foreign_access_followup_type": "",
+      "ranking_score": 85.39
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "final_expression": "shares",
+      "us_accessibility_status": "us_direct_primary",
+      "execution_policy_status": "default_us_executable",
+      "execution_policy_action": "use_default_us_execution_path",
+      "foreign_access_followup_type": "",
+      "ranking_score": 66.0
+    },
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "role_label": "supply_chain_beneficiary",
+      "final_expression": "shares",
+      "us_accessibility_status": "foreign_home_with_us_reference",
+      "execution_policy_status": "requires_us_secondary_access_review",
+      "execution_policy_action": "review_secondary_us_listing_before_execution",
+      "foreign_access_followup_type": "us_secondary_access_followup",
+      "ranking_score": 65.29
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "final_expression": "shares",
+      "us_accessibility_status": "foreign_home_market_only",
+      "execution_policy_status": "requires_foreign_execution_review",
+      "execution_policy_action": "review_home_market_or_proxy_before_execution",
+      "foreign_access_followup_type": "home_market_or_proxy_followup",
+      "ranking_score": 83.98
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "final_expression": "shares",
+      "us_accessibility_status": "foreign_home_market_only",
+      "execution_policy_status": "requires_foreign_execution_review",
+      "execution_policy_action": "review_home_market_or_proxy_before_execution",
+      "foreign_access_followup_type": "home_market_or_proxy_followup",
+      "ranking_score": 65.29
+    },
+    {
+      "name": "DTE on data center utility response buildout",
+      "canonical_entity_name": "DTE",
+      "underlying": "DTE",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "final_expression": "reject",
+      "us_accessibility_status": "us_direct_primary",
+      "execution_policy_status": "blocked_by_pick_reject",
+      "execution_policy_action": "do_not_forward_to_execution",
+      "foreign_access_followup_type": "",
+      "ranking_score": 53.05
+    },
+    {
+      "name": "FirstEnergy on data center utility response buildout",
+      "canonical_entity_name": "FirstEnergy",
+      "underlying": "FE",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "final_expression": "reject",
+      "us_accessibility_status": "us_direct_primary",
+      "execution_policy_status": "blocked_by_pick_reject",
+      "execution_policy_action": "do_not_forward_to_execution",
+      "foreign_access_followup_type": "",
+      "ranking_score": 53.05
+    },
+    {
+      "name": "Exelon on data center utility response buildout",
+      "canonical_entity_name": "Exelon",
+      "underlying": "EXC",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "final_expression": "reject",
+      "us_accessibility_status": "us_direct_primary",
+      "execution_policy_status": "blocked_by_pick_reject",
+      "execution_policy_action": "do_not_forward_to_execution",
+      "foreign_access_followup_type": "",
+      "ranking_score": 51.55
+    }
+  ],
+  "metrics": {
+    "input_review_row_count": 8,
+    "default_us_executable_count": 2,
+    "requires_us_secondary_access_review_count": 1,
+    "requires_foreign_execution_review_count": 2,
+    "blocked_by_pick_reject_count": 3
+  }
+}

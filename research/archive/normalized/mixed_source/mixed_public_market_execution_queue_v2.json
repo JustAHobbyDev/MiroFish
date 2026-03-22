@@ -1,0 +1,89 @@
+{
+  "name": "public_market_execution_queue_v1",
+  "queue_rows": [
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "final_expression": "shares",
+      "execution_policy_status": "default_us_executable",
+      "execution_policy_action": "use_default_us_execution_path",
+      "ranking_score": 85.39,
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 95.0,
+      "pick_score": 72.89,
+      "mispricing_score_0_to_100": 78.0,
+      "stock_fit_score_0_to_100": 78.6,
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "thesis": "GE Vernova appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage"
+      ],
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      }
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "final_expression": "shares",
+      "execution_policy_status": "default_us_executable",
+      "execution_policy_action": "use_default_us_execution_path",
+      "ranking_score": 66.0,
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 83.0,
+      "pick_score": 61.2,
+      "mispricing_score_0_to_100": 60.8,
+      "stock_fit_score_0_to_100": 78.6,
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "thesis": "Eaton appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      }
+    }
+  ],
+  "metrics": {
+    "input_policy_row_count": 8,
+    "execution_queue_count": 2,
+    "bottleneck_candidate_count": 1,
+    "supply_chain_beneficiary_count": 1
+  }
+}

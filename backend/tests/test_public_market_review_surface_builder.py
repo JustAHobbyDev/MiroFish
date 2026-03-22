@@ -70,6 +70,7 @@ def test_build_public_market_review_surface_combines_pick_access_and_followup() 
 
     assert batch["metrics"]["review_row_count"] == 2
     assert batch["metrics"]["foreign_access_followup_count"] == 1
+    gev = next(row for row in batch["rows"] if row["name"].startswith("GE Vernova"))
+    assert gev["canonical_entity_name"] == "GE Vernova"
     rr = next(row for row in batch["rows"] if row["name"].startswith("Rolls-Royce"))
     assert rr["foreign_access_followup_type"] == "us_secondary_access_followup"
-

@@ -22,6 +22,12 @@ def _index(rows: List[Dict[str, Any]], key_field: str = "name") -> Dict[str, Dic
     }
 
 
+def _base_entity_name(themed_name: str) -> str:
+    if " on " in themed_name:
+        return _coerce_string(themed_name.split(" on ", 1)[0])
+    return themed_name
+
+
 def build_public_market_review_surface(
     public_market_pick_batch: Dict[str, Any],
     public_market_pick_assessment_batch: Dict[str, Any],
@@ -42,7 +48,11 @@ def build_public_market_review_surface(
         rows.append(
             {
                 "name": name,
-                "canonical_entity_name": _coerce_string(assessment_row.get("name") or accessibility_row.get("canonical_entity_name")),
+                "canonical_entity_name": _coerce_string(
+                    accessibility_row.get("canonical_entity_name")
+                    or assessment_row.get("canonical_entity_name")
+                    or _base_entity_name(name)
+                ),
                 "underlying": _coerce_string(pick_row.get("underlying")),
                 "market_theme": _coerce_string(pick_row.get("market_theme")),
                 "role_label": _coerce_string(assessment_row.get("role_label")),

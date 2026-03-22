@@ -1,0 +1,75 @@
+{
+  "name": "public_market_execution_handoff_v1",
+  "handoff_rows": [
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "underlying": "GEV",
+      "execution_expression": "shares",
+      "execution_policy_action": "use_default_us_execution_path",
+      "execution_priority": "highest",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "ranking_score": 85.39,
+      "promotion_status": "pick_candidate",
+      "mispricing_score_0_to_100": 78.0,
+      "stock_fit_score_0_to_100": 78.6,
+      "thesis": "GE Vernova appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage"
+      ],
+      "execution_readiness_note": "Upstream constrained-layer exposure with direct U.S. execution path."
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "underlying": "ETN",
+      "execution_expression": "shares",
+      "execution_policy_action": "use_default_us_execution_path",
+      "execution_priority": "high",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "ranking_score": 66.0,
+      "promotion_status": "watchlist_candidate",
+      "mispricing_score_0_to_100": 60.8,
+      "stock_fit_score_0_to_100": 78.6,
+      "thesis": "Eaton appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "execution_readiness_note": "Supplier exposure is actionable, but bottleneck proof is weaker than the top queue name."
+    }
+  ],
+  "metrics": {
+    "input_queue_row_count": 2,
+    "handoff_count": 2,
+    "highest_priority_count": 1,
+    "high_priority_count": 1
+  }
+}

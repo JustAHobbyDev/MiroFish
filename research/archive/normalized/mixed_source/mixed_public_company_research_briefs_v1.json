@@ -1,0 +1,143 @@
+{
+  "name": "public_company_research_brief_batch_v1",
+  "brief_rows": [
+    {
+      "canonical_entity_name": "GE Vernova",
+      "resolved_issuer_name": "GE Vernova Inc.",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "execution_priority": "highest",
+      "execution_expression": "shares",
+      "thesis": "GE Vernova appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "evidence_summary": {
+        "filing_support_status": "supported",
+        "filing_evidence_item_count": 19,
+        "filing_strong_evidence_item_count": 16,
+        "filing_component_specific_count": 6,
+        "filing_pressure_or_capacity_count": 5,
+        "filing_expansion_or_capex_count": 4
+      },
+      "top_supporting_excerpts": [
+        {
+          "document_title": "GE Vernova Form 10-K 2025",
+          "filing_type": "10-k_pdf",
+          "keyword": "transformer",
+          "keyword_family": "component_specific",
+          "page_number": 6,
+          "excerpt": "ption. Several of the key offerings in this segment, for example, include our high-voltage direct current transmission (HVDC) and alternating current substation solutions, power transformers, switchgear, synchronous condensers, and our grid automation related products and services. Grid Solutions - enables power utilities and industries worldwide to effectively mana"
+        },
+        {
+          "document_title": "GE Vernova Form 10-K 2025",
+          "filing_type": "10-k_pdf",
+          "keyword": "substation",
+          "keyword_family": "component_specific",
+          "page_number": 6,
+          "excerpt": "generation to point of consumption. Several of the key offerings in this segment, for example, include our high-voltage direct current transmission (HVDC) and alternating current substation solutions, power transformers, switchgear, synchronous condensers, and our grid automation related products and services. Grid Solutions - enables power utilities and industries"
+        },
+        {
+          "document_title": "GE Vernova Form 10-K 2025",
+          "filing_type": "10-k_pdf",
+          "keyword": "switchgear",
+          "keyword_family": "component_specific",
+          "page_number": 6,
+          "excerpt": "of the key offerings in this segment, for example, include our high-voltage direct current transmission (HVDC) and alternating current substation solutions, power transformers, switchgear, synchronous condensers, and our grid automation related products and services. Grid Solutions - enables power utilities and industries worldwide to effectively manage electricit"
+        }
+      ],
+      "research_priority_note": "Confirm whether constrained component evidence is converting into pricing power, backlog durability, and capacity leverage.",
+      "research_questions": [
+        "How much of current demand is tied specifically to transformers, switchgear, or substation equipment?",
+        "Is backlog or RPO converting into revenue without margin erosion?",
+        "Are new capacity additions likely to relieve or reinforce the current constrained layer?"
+      ],
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage"
+      ],
+      "brief_status": "ready_for_human_company_research"
+    },
+    {
+      "canonical_entity_name": "Eaton",
+      "resolved_issuer_name": "Eaton Corporation plc",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "execution_priority": "high",
+      "execution_expression": "shares",
+      "thesis": "Eaton appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "evidence_summary": {
+        "filing_support_status": "supported",
+        "filing_evidence_item_count": 14,
+        "filing_strong_evidence_item_count": 11,
+        "filing_component_specific_count": 2,
+        "filing_pressure_or_capacity_count": 6,
+        "filing_expansion_or_capex_count": 3
+      },
+      "top_supporting_excerpts": [
+        {
+          "document_title": "Eaton Corporation plc Form 10-K for fiscal year ended December 31, 2024",
+          "filing_type": "10-k_html",
+          "keyword": "transformer",
+          "keyword_family": "component_specific",
+          "page_number": null,
+          "excerpt": "iangsu Ryan Electrical Co. Ltd. On April 23, 2023, Eaton acquired a 49 percent stake in Jiangsu Ryan Electrical Co. Ltd., a manufacturer of power distribution and sub-transmission transformers in China. Eaton accounts for this investment on the equity method of accounting and it is reported within the Electrical Global business segment. Acquisition of Exertherm On May"
+        },
+        {
+          "document_title": "Eaton Corporation plc Form 10-K for fiscal year ended December 31, 2024",
+          "filing_type": "10-k_html",
+          "keyword": "transformer",
+          "keyword_family": "component_specific",
+          "page_number": null,
+          "excerpt": "Jiangsu Ryan Electrical Co. Ltd. April 23, 2023 Electrical Global A 49 percent stake in Jiangsu Ryan Electrical Co. Ltd., a manufacturer of power distribution and sub-transmission transformers in China. Exertherm May 20, 2024 Electrical Americas A U.K. based provider of thermal monitoring solutions for electrical equipment. NordicEPOD AS May 31, 2024 Electrical Global"
+        },
+        {
+          "document_title": "Eaton Corporation plc Form 10-K for fiscal year ended December 31, 2024",
+          "filing_type": "10-k_html",
+          "keyword": "backlog",
+          "keyword_family": "pressure_or_capacity",
+          "page_number": null,
+          "excerpt": "on are by original equipment manufacturers or distributors. These open orders are not considered firm as they have been historically subject to releases by customers. In measuring backlog of unsatisfied or partially satisfied obligations, only the amount of orders to which customers are firmly committed are included. Using this criterion, total backlog at December"
+        }
+      ],
+      "research_priority_note": "Confirm whether supplier exposure is large enough to matter economically even without strict chokepoint status.",
+      "research_questions": [
+        "Which business segments are most exposed to the theme and how material are they?",
+        "Is capacity expansion targeted at the constrained layer or spread across unrelated end markets?",
+        "What would need to happen for this name to graduate from beneficiary to bottleneck candidate?"
+      ],
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "brief_status": "ready_for_human_company_research"
+    }
+  ],
+  "metrics": {
+    "input_handoff_row_count": 2,
+    "brief_count": 2,
+    "ready_for_human_company_research_count": 2,
+    "supported_brief_count": 2
+  }
+}

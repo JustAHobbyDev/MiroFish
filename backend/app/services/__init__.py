@@ -192,6 +192,9 @@ from .public_market_foreign_execution_handoff_builder import (
 from .public_market_execution_handoff_builder import (
     build_public_market_execution_handoff,
 )
+from .public_company_research_brief_builder import (
+    build_public_company_research_brief_batch,
+)
 from .public_market_us_accessibility_builder import (
     build_public_market_us_accessibility_batch,
 )
@@ -352,6 +355,21 @@ __all__ = [
     'build_narrowed_bounded_universe_candidate_batch',
     'build_private_company_diligence_collection_batch',
     'build_utility_lane_review_surface',
+    'build_public_market_symbol_mapping_batch',
+    'build_public_market_research_row_batch',
+    'build_public_market_scan_candidate_batch',
+    'build_public_market_pick_assessment_batch',
+    'build_public_market_foreign_access_followup_batch',
+    'build_public_market_review_surface',
+    'build_public_market_execution_policy_batch',
+    'build_public_market_execution_queue',
+    'build_public_market_foreign_review_handoff',
+    'build_public_market_foreign_execution_handoff',
+    'build_public_market_execution_handoff',
+    'build_public_company_research_brief_batch',
+    'build_public_market_us_accessibility_batch',
+    'build_public_symbol_followup_batch',
+    'build_public_symbol_followup_resolution_batch',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',
