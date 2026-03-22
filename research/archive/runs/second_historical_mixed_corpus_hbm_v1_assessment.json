@@ -1,0 +1,42 @@
+{
+  "archive_id": "second_historical_mixed_corpus_hbm_v1",
+  "date": "2026-03-22",
+  "manifest": "research/archive/manifests/second-historical-mixed-corpus-hbm-v1.json",
+  "raw_output": "research/archive/raw/historical_mixed/second_historical_mixed_corpus_hbm_raw_v1.json",
+  "prefilter_output": "research/archive/normalized/historical_mixed/second_historical_mixed_corpus_hbm_prefilter_v1.json",
+  "facts": {
+    "manifest_entry_count": 9,
+    "fetched_entry_count": 7,
+    "fetch_failure_count": 2,
+    "raw_source_class_counts": {
+      "company_release": 5,
+      "company_filing": 2
+    },
+    "prefilter_kept_count": 1,
+    "prefilter_review_count": 0,
+    "prefilter_dropped_count": 6
+  },
+  "fetch_failures": [
+    {
+      "corpus_entry_id": "sandisk_ultraqlc_2025_08_05",
+      "error_type": "TimeoutError"
+    },
+    {
+      "corpus_entry_id": "sandisk_kioxia_fab2_2025_09_29",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "judgment": {
+    "corpus_build_result": "pass_with_partial_coverage",
+    "blind_ready": false,
+    "why_not_blind_ready": [
+      "The corpus is seeded from previously identified public evidence rather than broad pre-registered source collection.",
+      "Government source coverage is missing because commerce.gov blocked programmatic fetches from this environment."
+    ],
+    "why_prefilter_looks_thin": [
+      "The current capital-flow prefilter is tuned for event-form first-pass discovery.",
+      "Company filing pages in this corpus are more useful as corroborating source material than as standalone first-pass capital-flow artifacts."
+    ]
+  }
+}

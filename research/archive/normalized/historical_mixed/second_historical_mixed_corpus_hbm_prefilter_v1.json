@@ -1,0 +1,171 @@
+{
+  "name": "second_historical_mixed_corpus_hbm_raw_v1_prefilter_v1",
+  "source_class": "mixed_source",
+  "source_classes": [
+    "company_release"
+  ],
+  "processed_artifact_count": 7,
+  "kept_artifacts": [
+    {
+      "artifact_id": "historical_web_ed35a2746d86c64b",
+      "source_class": "company_release",
+      "publisher_or_author": "Micron",
+      "issuing_company_name": "Micron",
+      "published_at": "2025-01-08",
+      "title": "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore | Micron Technology",
+      "headline": "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore | Micron Technology",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "HBM",
+        "advanced packaging",
+        "AI infrastructure"
+      ],
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-breaks-ground-new-hbm-advanced-packaging-facility",
+      "body_text": "PDF Version January 8, 2025 at 9:00 PM EST Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore Approximate $7 billion investment over the next several years to meet AI data center demand SINGAPORE, Jan. 08, 2025 (GLOBE NEWSWIRE) -- Micron Technology, Inc. (Nasdaq: MU) broke ground today on a new High-Bandwidth Memory (HBM) advanced packaging facility adjacent to the company’s current facilities in Singapore. Micron marked the occasion with a ceremony attended by Gan Kim Yong, Deputy Prime Minister and Minister for Trade and Industry of Singapore, Png Cheong Boon, Chairman of the Singapore Economic Development Board, Pee Beng Kong, Executive Vice President of the Singapore Economic Development Board, and Tan Boon Khai, CEO of JTC Corporation. The new HBM advanced packaging facility will be the first facility of its kind in Singapore. Operations for the new facility are scheduled to begin in 2026, with meaningful expansion of Micron’s total advanced packaging capacity beginning in calendar 2027 to meet the demands of AI growth. The launch of this facility will further strengthen Singapore’s local semiconductor ecosystem and innovation. “As AI adoption proliferates across industries, the demand for advanced memory and storage solutions will continue to increase robustly,” said Sanjay Mehrotra, president and CEO of Micron. “With the continued support of the Singapore government, our investment in this HBM advanced packaging facility strengthens our position to address the expanding AI opportunities ahead.” Micron’s HBM advanced packaging investment of approximately US $7 billion (SG$9.5 billion) through the end of the decade and beyond will initially create around 1,400 jobs, with site expansion plans to reach an estimated 3,000 jobs in the future. These new roles will include functions such as packaging development, assembly and test operations. Png Cheong Boon, Chairman of the Singapore Economic Development Board, said, “We welcome this significant investment by Micron, which reflects its confidence in Singapore’s competitiveness as a critical node in the global semiconductor supply chain. This is Singapore’s first high-bandwidth memory advanced packaging facility, allowing us to contribute to global AI growth. It expands Singapore’s partnership with Micron and further strengthens the semiconductor ecosystem in Singapore.” Micron’s future expansion plans in Singapore will also support long-term manufacturing requirements for NAND. Micron will maintain flexibility in managing the pace of capacity ramps in both the HBM and NAND facilities to align with market demand. Micron’s current facility in Singapore is the first front-end semiconductor fab in the world to be recognized as the Advanced Fourth Industrial Revolution Lighthouse and Sustainability Lighthouse by the World Economic Forum. The new HBM advanced packaging facility will be built in alignment with Micron’s sustainability commitments. It will feature technologies such as a greenhouse gas abatement, water recycling and waste circularity (reduce, reuse, recycle, recover). The new building will be highly automated through AI-based intelligent solutions and designed to meet the Leadership in Energy and Environmental Design (LEED) certification requirements. About Micron Technology, Inc. We are an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all. With a relentless focus on our customers, technology leadership, and manufacturing and operational excellence, Micron delivers a rich portfolio of high-performance DRAM, NAND and NOR memory and storage products through our Micron® and Crucial® brands. Every day, the innovations that our people create fuel the data economy, enabling advances in artificial intelligence (AI) and compute-intensive applications that unleash opportunities — from the data center to the intelligent edge and across the client and mobile user experience. To learn more about Micron Technology, Inc. (Nasdaq: MU), visit micron.com. © 2025 Micron Technology, Inc. All rights reserved. Information, products, and/or specifications are subject to change without notice. Micron, the Micron logo, and all other Micron trademarks are the property of Micron Technology, Inc. All other trademarks are the property of their respective owners. Micron Media Relations Contact Mark Plungy Micron Technology, Inc. +1 (408) 203-2910 mplungy@micron.com Micron Investor Relations Contact Satya Kumar Micron Technology, Inc. +1 (408) 450-6199 satyakumar@micron.com",
+      "artifact_metadata": {
+        "source_type": "company press release",
+        "corpus_entry_id": "micron_hbm_packaging_groundbreaking_2025_01_08",
+        "fetched_via": "historical_web_archive_v1"
+      },
+      "_prefilter": {
+        "artifact_id": "historical_web_ed35a2746d86c64b",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment",
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "headline": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b",
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "headline:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b",
+          "headline:construction_and_deployment:\\bbreaks? ground\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [],
+  "dropped_audit_records": [
+    {
+      "artifact_id": "historical_web_24d33f69e9bf52cf",
+      "source_class": "company_release",
+      "publisher_or_author": "Micron",
+      "published_at": "2025-06-12",
+      "title": "マイクロン、主要顧客への HBM4 出荷を開始　次世代 AI プラットフォームの強化を支援 | Micron Technology",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_29cb770f26fcd942",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-07-23T22:37:26+00:00",
+      "title": "SK hynix Announces Q2 2025 Financial Results",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_3d6435437ded8cf3",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-09-12T00:36:47+00:00",
+      "title": "SK hynix Completes World-First HBM4 Development",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_fdb63407fbe38652",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-10-29T01:00:00+00:00",
+      "title": "SK hynix Announces Q3 2025 Financial Results",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_184998e750d6ed07",
+      "source_class": "company_filing",
+      "publisher_or_author": "TSMC",
+      "published_at": "2025-04-17",
+      "title": "TSMC 2024 Annual Report",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_3c21a4bef609b95c",
+      "source_class": "company_filing",
+      "publisher_or_author": "TSMC",
+      "published_at": "2025-04-17",
+      "title": "TSMC 2024 Annual Report",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": []
+    }
+  ],
+  "metrics": {
+    "processed_artifact_count": 7,
+    "kept_count": 1,
+    "review_count": 0,
+    "dropped_count": 6
+  }
+}

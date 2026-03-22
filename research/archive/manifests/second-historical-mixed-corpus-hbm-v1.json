@@ -1,0 +1,123 @@
+{
+  "archive_id": "second_historical_mixed_corpus_hbm_v1",
+  "archive_version": "v1",
+  "status": "collected_partial_v1",
+  "created_at": "2026-03-22T00:00:00Z",
+  "owner": "Codex + user",
+  "purpose": "Second historical mixed corpus focused on HBM and advanced packaging using real pre-cutoff company-release and company-filing sources.",
+  "corpus_start_date": "2025-01-01",
+  "corpus_end_date": "2026-01-21",
+  "time_bucket_rule": "weekly",
+  "source_classes": [
+    "company_release",
+    "company_filing"
+  ],
+  "coverage_status": "retrospective_seeded_not_blind_ready",
+  "coverage_notes": [
+    "This corpus is seeded from previously identified pre-cutoff public evidence, not from a broad blind collection sweep.",
+    "Government press-release sources were intentionally excluded from v1 because commerce.gov returned anti-bot blocks from this environment.",
+    "The corpus is real and historical, but should not be treated as a true blind-run source universe.",
+    "The authoritative collected output is research/archive/raw/historical_mixed/second_historical_mixed_corpus_hbm_raw_v1.json."
+  ],
+  "entries": [
+    {
+      "corpus_entry_id": "micron_hbm_packaging_groundbreaking_2025_01_08",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Micron",
+      "issuing_company_name": "Micron",
+      "published_at": "2025-01-08",
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-breaks-ground-new-hbm-advanced-packaging-facility",
+      "title_hint": "Micron breaks ground on new HBM advanced packaging facility",
+      "category_tags": ["HBM", "advanced packaging", "AI infrastructure"]
+    },
+    {
+      "corpus_entry_id": "micron_hbm4_samples_2025_06_12",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Micron",
+      "issuing_company_name": "Micron",
+      "published_at": "2025-06-12",
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/maikuronzhuyaogukeheno-hbm4-chuhewokaishicishidai-ai",
+      "title_hint": "Micron begins shipping HBM4 samples to major customers",
+      "category_tags": ["HBM4", "AI infrastructure", "memory"]
+    },
+    {
+      "corpus_entry_id": "skhynix_q2_results_2025_07_23",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "SK hynix",
+      "issuing_company_name": "SK hynix",
+      "published_at": "2025-07-23",
+      "source_url": "https://news.skhynix.com/sk-hynix-announces-2q25-financial-results/",
+      "title_hint": "SK hynix Q2 2025 financial results",
+      "category_tags": ["memory", "HBM", "AI demand"]
+    },
+    {
+      "corpus_entry_id": "sandisk_ultraqlc_2025_08_05",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Sandisk",
+      "issuing_company_name": "Sandisk",
+      "published_at": "2025-08-05",
+      "source_url": "https://investor.sandisk.com/news-releases/news-release-details/sandisk-showcases-ultraqlctm-technology-platform-milestone",
+      "title_hint": "Sandisk showcases UltraQLC platform for AI-driven enterprise storage",
+      "category_tags": ["flash", "storage", "AI infrastructure"]
+    },
+    {
+      "corpus_entry_id": "skhynix_hbm4_mass_production_2025_09_12",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "SK hynix",
+      "issuing_company_name": "SK hynix",
+      "published_at": "2025-09-12",
+      "source_url": "https://news.skhynix.com/sk-hynix-completes-worlds-first-hbm4-development-and-readies-mass-production/",
+      "title_hint": "SK hynix completes HBM4 development and readies mass production",
+      "category_tags": ["HBM4", "mass production", "AI infrastructure"]
+    },
+    {
+      "corpus_entry_id": "sandisk_kioxia_fab2_2025_09_29",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Sandisk",
+      "issuing_company_name": "Sandisk",
+      "published_at": "2025-09-29",
+      "source_url": "https://www.sandisk.com/en-in/company/newsroom/press-releases/2025/2025-09-29-kioxia-and-sandisk-announce-beginning-of-operation-of-fab2-at-kitakami-plant-japan-to-meet-the-market-demand-driven-by-ai",
+      "title_hint": "Kioxia and Sandisk begin operation of Fab2 to meet AI-driven demand",
+      "category_tags": ["NAND", "flash", "AI demand"]
+    },
+    {
+      "corpus_entry_id": "skhynix_q3_results_2025_10_29",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "SK hynix",
+      "issuing_company_name": "SK hynix",
+      "published_at": "2025-10-29",
+      "source_url": "https://news.skhynix.com/sk-hynix-announces-3q25-financial-results/",
+      "title_hint": "SK hynix Q3 2025 financial results",
+      "category_tags": ["HBM", "DRAM", "NAND", "AI demand"]
+    },
+    {
+      "corpus_entry_id": "tsmc_annual_report_page_8_2025_04_17",
+      "source_class": "company_filing",
+      "source_type": "company annual report",
+      "publisher_or_author": "TSMC",
+      "issuing_company_name": "TSMC",
+      "published_at": "2025-04-17",
+      "source_url": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page8.html",
+      "title_hint": "TSMC 2024 annual report page 8",
+      "category_tags": ["advanced packaging", "AI demand", "annual report"]
+    },
+    {
+      "corpus_entry_id": "tsmc_annual_report_page_100_2025_04_17",
+      "source_class": "company_filing",
+      "source_type": "company annual report",
+      "publisher_or_author": "TSMC",
+      "issuing_company_name": "TSMC",
+      "published_at": "2025-04-17",
+      "source_url": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page100.html",
+      "title_hint": "TSMC 2024 annual report page 100",
+      "category_tags": ["advanced packaging", "CoWoS", "annual report"]
+    }
+  ]
+}
