@@ -1,0 +1,26 @@
+{
+  "resolution_inputs": [
+    {
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "mapped_public_symbol": "RR.",
+      "exchange_scope": "foreign_home_market_symbol",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.rolls-royce.com/investors/shareholder-information.aspx",
+        "note": "Official Rolls-Royce shareholder information page identifying Rolls-Royce Holdings plc (LSE: RR., ADR: RYCEY)."
+      }
+    },
+    {
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "mapped_public_symbol": "6501",
+      "exchange_scope": "foreign_home_market_code",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.hitachi.com/IR-e/stock/index.html",
+        "note": "Official Hitachi stock page identifying Hitachi, Ltd. (TSE: 6501)."
+      }
+    }
+  ]
+}

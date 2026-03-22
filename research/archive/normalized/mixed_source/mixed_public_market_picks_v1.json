@@ -1,0 +1,1599 @@
+{
+  "method": "market scan -> mispricing score -> stock-vs-LEAPS choice -> ranked picks",
+  "rows": [
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 95.0,
+      "thesis": "GE Vernova appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+        "market_research_row_action": "build_bottleneck_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 3.5,
+        "microcap_rerating_potential": 2.0
+      },
+      "mispricing": {
+        "candidate_name": "GE Vernova on grid equipment and transformer buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 78.0,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.96,
+          "recognition_gap": 0.64,
+          "catalyst_clarity": 0.35,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.4,
+          "evidence_quality": 0.36,
+          "crowding_inverse": 0.315,
+          "valuation_nonlinearity": 0.315
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.96
+          ],
+          [
+            "recognition_gap",
+            0.64
+          ],
+          [
+            "propagation_asymmetry",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.315
+          ],
+          [
+            "crowding_inverse",
+            0.315
+          ]
+        ],
+        "explanation": "GE Vernova on grid equipment and transformer buildout scores 78.0/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "GE Vernova on grid equipment and transformer buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 55.6,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.54,
+          "tenor_alignment": 0.63,
+          "vol_expansion_potential": 0.54,
+          "downside_definedness": 0.28,
+          "liquidity_path": 0.24,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.63
+          ],
+          [
+            "convexity_need",
+            0.54
+          ],
+          [
+            "vol_expansion_potential",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.24
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ]
+        ],
+        "explanation": "GE Vernova on grid equipment and transformer buildout scores 55.6/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 42.4,
+        "weighted_signals": {
+          "iv_cheapness": 0.48,
+          "surface_staleness": 0.36,
+          "pre_expiration_repricing_potential": 0.6,
+          "stock_vs_call_convexity_advantage": 0.48,
+          "long_dated_liquidity_quality": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "pre_expiration_repricing_potential",
+            0.6
+          ],
+          [
+            "iv_cheapness",
+            0.48
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.48
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.36
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.2
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 78.6,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.48
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.42
+          ],
+          [
+            "market_accessibility",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 8.33,
+      "pick_score": 72.89,
+      "promotion_bonus": 12.5,
+      "ranking_score": 85.39,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "promotion_status": "pick_candidate",
+      "promotion_score_0_to_100": 95.0,
+      "thesis": "Mitsubishi Electric appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage",
+        "primary listing is outside the default U.S. ticker workflow"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+        "market_research_row_action": "build_bottleneck_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_foreign_public_symbol",
+        "exchange_scope": "foreign_home_market_code"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 4.0,
+        "downstream_valuation_gap": 3.5,
+        "microcap_rerating_potential": 2.0
+      },
+      "mispricing": {
+        "candidate_name": "Mitsubishi Electric on grid equipment and transformer buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 78.0,
+        "band": "high",
+        "weighted_signals": {
+          "hiddenness": 0.96,
+          "recognition_gap": 0.64,
+          "catalyst_clarity": 0.35,
+          "propagation_asymmetry": 0.56,
+          "duration_mismatch": 0.4,
+          "evidence_quality": 0.36,
+          "crowding_inverse": 0.315,
+          "valuation_nonlinearity": 0.315
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.96
+          ],
+          [
+            "recognition_gap",
+            0.64
+          ],
+          [
+            "propagation_asymmetry",
+            0.56
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.315
+          ],
+          [
+            "crowding_inverse",
+            0.315
+          ]
+        ],
+        "explanation": "Mitsubishi Electric on grid equipment and transformer buildout scores 78.0/100 (high) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "Mitsubishi Electric on grid equipment and transformer buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 55.6,
+        "band": "moderate",
+        "weighted_signals": {
+          "convexity_need": 0.54,
+          "tenor_alignment": 0.63,
+          "vol_expansion_potential": 0.54,
+          "downside_definedness": 0.28,
+          "liquidity_path": 0.24,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.25
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.63
+          ],
+          [
+            "convexity_need",
+            0.54
+          ],
+          [
+            "vol_expansion_potential",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.24
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.25
+          ]
+        ],
+        "explanation": "Mitsubishi Electric on grid equipment and transformer buildout scores 55.6/100 (moderate) on options-expression fit. The strongest weighted drivers are tenor alignment, convexity need, vol expansion potential. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 0.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.0,
+          "surface_staleness": 0.0,
+          "pre_expiration_repricing_potential": 0.0,
+          "stock_vs_call_convexity_advantage": 0.0,
+          "long_dated_liquidity_quality": 0.0
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.0
+          ],
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.0
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "iv_cheapness",
+            0.0
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 73.2,
+        "weighted_signals": {
+          "market_accessibility": 0.25,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.36
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "listing_quality",
+            0.36
+          ],
+          [
+            "market_accessibility",
+            0.25
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 8.33,
+      "pick_score": 71.48,
+      "promotion_bonus": 12.5,
+      "ranking_score": 83.98,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 2.0
+      }
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 83.0,
+      "thesis": "Eaton appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+        "market_research_row_action": "build_beneficiary_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.5,
+        "microcap_rerating_potential": 1.0
+      },
+      "mispricing": {
+        "candidate_name": "Eaton on grid equipment and transformer buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 60.8,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.72,
+          "recognition_gap": 0.48,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.225
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.72
+          ],
+          [
+            "recognition_gap",
+            0.48
+          ],
+          [
+            "propagation_asymmetry",
+            0.42
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.225
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "Eaton on grid equipment and transformer buildout scores 60.8/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "Eaton on grid equipment and transformer buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "Eaton on grid equipment and transformer buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 20.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.24,
+          "surface_staleness": 0.18,
+          "pre_expiration_repricing_potential": 0.24,
+          "stock_vs_call_convexity_advantage": 0.24,
+          "long_dated_liquidity_quality": 0.1
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.24
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.24
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.24
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.18
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.1
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 78.6,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.48
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.42
+          ],
+          [
+            "market_accessibility",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 5.93,
+      "pick_score": 61.2,
+      "promotion_bonus": 4.8,
+      "ranking_score": 66.0,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 1.0
+      }
+    },
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "thesis": "Rolls-Royce appears to be a relevant beneficiary of data center backup-power equipment buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "data center backup-power equipment buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "data-center backup-power order growth",
+        "generator deployment announcements"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+        "market_research_row_action": "build_beneficiary_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_foreign_public_symbol",
+        "exchange_scope": "foreign_home_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.5,
+        "microcap_rerating_potential": 1.0
+      },
+      "mispricing": {
+        "candidate_name": "Rolls-Royce on data center backup-power equipment buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 60.8,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.72,
+          "recognition_gap": 0.48,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.225
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.72
+          ],
+          [
+            "recognition_gap",
+            0.48
+          ],
+          [
+            "propagation_asymmetry",
+            0.42
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.225
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "Rolls-Royce on data center backup-power equipment buildout scores 60.8/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "Rolls-Royce on data center backup-power equipment buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "Rolls-Royce on data center backup-power equipment buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 0.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.0,
+          "surface_staleness": 0.0,
+          "pre_expiration_repricing_potential": 0.0,
+          "stock_vs_call_convexity_advantage": 0.0,
+          "long_dated_liquidity_quality": 0.0
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.0
+          ],
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.0
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "iv_cheapness",
+            0.0
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 73.2,
+        "weighted_signals": {
+          "market_accessibility": 0.25,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.36
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "listing_quality",
+            0.36
+          ],
+          [
+            "market_accessibility",
+            0.25
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 5.93,
+      "pick_score": 59.79,
+      "promotion_bonus": 5.5,
+      "ranking_score": 65.29,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 1.0
+      }
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "thesis": "Hitachi Energy appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure",
+        "primary listing is outside the default U.S. ticker workflow"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary",
+        "substation and grid-equipment expansion updates"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+        "market_research_row_action": "build_beneficiary_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_foreign_public_symbol",
+        "exchange_scope": "foreign_home_market_code"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.5,
+        "microcap_rerating_potential": 1.0
+      },
+      "mispricing": {
+        "candidate_name": "Hitachi Energy on grid equipment and transformer buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 60.8,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.72,
+          "recognition_gap": 0.48,
+          "catalyst_clarity": 0.3,
+          "propagation_asymmetry": 0.42,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.225
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.72
+          ],
+          [
+            "recognition_gap",
+            0.48
+          ],
+          [
+            "propagation_asymmetry",
+            0.42
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.225
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "Hitachi Energy on grid equipment and transformer buildout scores 60.8/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, propagation asymmetry. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "Hitachi Energy on grid equipment and transformer buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "Hitachi Energy on grid equipment and transformer buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 0.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.0,
+          "surface_staleness": 0.0,
+          "pre_expiration_repricing_potential": 0.0,
+          "stock_vs_call_convexity_advantage": 0.0,
+          "long_dated_liquidity_quality": 0.0
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.0
+          ],
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.0
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.0
+          ],
+          [
+            "iv_cheapness",
+            0.0
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 73.2,
+        "weighted_signals": {
+          "market_accessibility": 0.25,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.36
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "listing_quality",
+            0.36
+          ],
+          [
+            "market_accessibility",
+            0.25
+          ]
+        ]
+      },
+      "final_expression": "shares",
+      "asymmetry_bonus": 5.93,
+      "pick_score": 59.79,
+      "promotion_bonus": 5.5,
+      "ranking_score": 65.29,
+      "ranking_metadata": {
+        "expression_viability_rank": 1,
+        "promotion_rank": 1.0
+      }
+    },
+    {
+      "name": "DTE on data center utility response buildout",
+      "underlying": "DTE",
+      "market_theme": "data center utility response buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "thesis": "DTE appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "mispricing": {
+        "candidate_name": "DTE on data center utility response buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 55.5,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.6,
+          "recognition_gap": 0.4,
+          "catalyst_clarity": 0.35,
+          "propagation_asymmetry": 0.35,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.6
+          ],
+          [
+            "recognition_gap",
+            0.4
+          ],
+          [
+            "catalyst_clarity",
+            0.35
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.18
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "DTE on data center utility response buildout scores 55.5/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "DTE on data center utility response buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "DTE on data center utility response buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 20.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.24,
+          "surface_staleness": 0.18,
+          "pre_expiration_repricing_potential": 0.24,
+          "stock_vs_call_convexity_advantage": 0.24,
+          "long_dated_liquidity_quality": 0.1
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.24
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.24
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.24
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.18
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.1
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 78.6,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.48
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.42
+          ],
+          [
+            "market_accessibility",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "asymmetry_bonus": 5.14,
+      "pick_score": 47.55,
+      "promotion_bonus": 5.5,
+      "ranking_score": 53.05,
+      "ranking_metadata": {
+        "expression_viability_rank": 0,
+        "promotion_rank": 1.0
+      }
+    },
+    {
+      "name": "FirstEnergy on data center utility response buildout",
+      "underlying": "FE",
+      "market_theme": "data center utility response buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 90.0,
+      "thesis": "FirstEnergy appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "mispricing": {
+        "candidate_name": "FirstEnergy on data center utility response buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 55.5,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.6,
+          "recognition_gap": 0.4,
+          "catalyst_clarity": 0.35,
+          "propagation_asymmetry": 0.35,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.6
+          ],
+          [
+            "recognition_gap",
+            0.4
+          ],
+          [
+            "catalyst_clarity",
+            0.35
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.18
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "FirstEnergy on data center utility response buildout scores 55.5/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "FirstEnergy on data center utility response buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "FirstEnergy on data center utility response buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 20.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.24,
+          "surface_staleness": 0.18,
+          "pre_expiration_repricing_potential": 0.24,
+          "stock_vs_call_convexity_advantage": 0.24,
+          "long_dated_liquidity_quality": 0.1
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.24
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.24
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.24
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.18
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.1
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 78.6,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.48
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.42
+          ],
+          [
+            "market_accessibility",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "asymmetry_bonus": 5.14,
+      "pick_score": 47.55,
+      "promotion_bonus": 5.5,
+      "ranking_score": 53.05,
+      "ranking_metadata": {
+        "expression_viability_rank": 0,
+        "promotion_rank": 1.0
+      }
+    },
+    {
+      "name": "Exelon on data center utility response buildout",
+      "underlying": "EXC",
+      "market_theme": "data center utility response buildout",
+      "promotion_status": "watchlist_candidate",
+      "promotion_score_0_to_100": 75.0,
+      "thesis": "Exelon appears positioned to capture data center utility response buildout demand-response economics through load growth, capex response, and utility-side infrastructure spending.",
+      "bottleneck_layer": "data center utility response buildout response layer",
+      "value_capture_layer": "Utility or operator capturing demand-response capex and load growth",
+      "why_missed": [
+        "utility load-response names are often read as regulated capex stories rather than structural demand-surprise expressions",
+        "market focus is usually on data-center tenants rather than the utility-side response layer"
+      ],
+      "catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "new large-load agreements",
+        "utility capex plan increases"
+      ],
+      "invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "large-load demand does not convert into durable utility earnings or capex response"
+      ],
+      "parse_evidence_summary": {
+        "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+        "market_research_row_action": "build_operator_market_research_row"
+      },
+      "market_data_checks": {
+        "symbol_mapping_status": "mapped_public_symbol",
+        "exchange_scope": "direct_public_market_symbol"
+      },
+      "theme_equity_decomposition": null,
+      "asymmetry_signals": {
+        "ecosystem_centrality": 3.0,
+        "downstream_valuation_gap": 2.0,
+        "microcap_rerating_potential": 0.5
+      },
+      "mispricing": {
+        "candidate_name": "Exelon on data center utility response buildout",
+        "score_type": "mispricing",
+        "score_0_to_100": 55.5,
+        "band": "moderate",
+        "weighted_signals": {
+          "hiddenness": 0.6,
+          "recognition_gap": 0.4,
+          "catalyst_clarity": 0.35,
+          "propagation_asymmetry": 0.35,
+          "duration_mismatch": 0.35,
+          "evidence_quality": 0.32,
+          "crowding_inverse": 0.225,
+          "valuation_nonlinearity": 0.18
+        },
+        "strongest_drivers": [
+          [
+            "hiddenness",
+            0.6
+          ],
+          [
+            "recognition_gap",
+            0.4
+          ],
+          [
+            "catalyst_clarity",
+            0.35
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "valuation_nonlinearity",
+            0.18
+          ],
+          [
+            "crowding_inverse",
+            0.225
+          ]
+        ],
+        "explanation": "Exelon on data center utility response buildout scores 55.5/100 (moderate) on mispricing plausibility. The strongest weighted drivers are hiddenness, recognition gap, catalyst clarity. The least supportive signals are valuation nonlinearity, crowding inverse. This screen is a structural ranking aid, not live options pricing."
+      },
+      "options_fit": {
+        "candidate_name": "Exelon on data center utility response buildout",
+        "score_type": "options_fit",
+        "score_0_to_100": 37.6,
+        "band": "emerging",
+        "weighted_signals": {
+          "convexity_need": 0.27,
+          "tenor_alignment": 0.45,
+          "vol_expansion_potential": 0.27,
+          "downside_definedness": 0.21,
+          "liquidity_path": 0.18,
+          "implementation_simplicity": 0.3,
+          "catalyst_timing_specificity": 0.2
+        },
+        "strongest_drivers": [
+          [
+            "tenor_alignment",
+            0.45
+          ],
+          [
+            "implementation_simplicity",
+            0.3
+          ],
+          [
+            "convexity_need",
+            0.27
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "liquidity_path",
+            0.18
+          ],
+          [
+            "catalyst_timing_specificity",
+            0.2
+          ]
+        ],
+        "explanation": "Exelon on data center utility response buildout scores 37.6/100 (emerging) on options-expression fit. The strongest weighted drivers are tenor alignment, implementation simplicity, convexity need. The least supportive signals are liquidity path, catalyst timing specificity. This screen helps decide whether options are a sensible expression path."
+      },
+      "leaps_bias": {
+        "score_0_to_100": 20.0,
+        "weighted_signals": {
+          "iv_cheapness": 0.24,
+          "surface_staleness": 0.18,
+          "pre_expiration_repricing_potential": 0.24,
+          "stock_vs_call_convexity_advantage": 0.24,
+          "long_dated_liquidity_quality": 0.1
+        },
+        "strongest_drivers": [
+          [
+            "iv_cheapness",
+            0.24
+          ],
+          [
+            "pre_expiration_repricing_potential",
+            0.24
+          ],
+          [
+            "stock_vs_call_convexity_advantage",
+            0.24
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "surface_staleness",
+            0.18
+          ],
+          [
+            "long_dated_liquidity_quality",
+            0.1
+          ]
+        ]
+      },
+      "stock_fit": {
+        "score_0_to_100": 78.6,
+        "weighted_signals": {
+          "market_accessibility": 0.4,
+          "implementation_simplicity": 0.54,
+          "balance_sheet_resilience": 0.49,
+          "dilution_risk_inverse": 0.42,
+          "thesis_linearity": 0.72,
+          "duration_tolerance": 0.88,
+          "listing_quality": 0.48
+        },
+        "strongest_drivers": [
+          [
+            "duration_tolerance",
+            0.88
+          ],
+          [
+            "thesis_linearity",
+            0.72
+          ],
+          [
+            "implementation_simplicity",
+            0.54
+          ]
+        ],
+        "weakest_drivers": [
+          [
+            "dilution_risk_inverse",
+            0.42
+          ],
+          [
+            "market_accessibility",
+            0.4
+          ]
+        ]
+      },
+      "final_expression": "reject",
+      "asymmetry_bonus": 5.14,
+      "pick_score": 47.55,
+      "promotion_bonus": 4.0,
+      "ranking_score": 51.55,
+      "ranking_metadata": {
+        "expression_viability_rank": 0,
+        "promotion_rank": 1.0
+      }
+    }
+  ]
+}

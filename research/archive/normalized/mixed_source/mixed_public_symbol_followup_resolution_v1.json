@@ -1,0 +1,49 @@
+{
+  "name": "public_symbol_followup_resolution_batch_v1",
+  "symbol_rows": [
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 98,
+      "mapped_public_symbol": "RR.",
+      "symbol_mapping_status": "mapped_foreign_public_symbol",
+      "exchange_scope": "foreign_home_market_symbol",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.rolls-royce.com/investors/shareholder-information.aspx",
+        "note": "Official Rolls-Royce shareholder information page identifying Rolls-Royce Holdings plc (LSE: RR., ADR: RYCEY)."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "live_resolution_status": "resolved_direct_foreign_public_route"
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 112,
+      "mapped_public_symbol": "6501",
+      "symbol_mapping_status": "mapped_foreign_public_symbol",
+      "exchange_scope": "foreign_home_market_code",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.hitachi.com/IR-e/stock/index.html",
+        "note": "Official Hitachi stock page identifying Hitachi, Ltd. (TSE: 6501)."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "live_resolution_status": "resolved_parent_route"
+    }
+  ],
+  "metrics": {
+    "input_followup_row_count": 2,
+    "resolved_symbol_row_count": 2,
+    "mapped_public_symbol_count": 0,
+    "mapped_foreign_public_symbol_count": 2
+  }
+}

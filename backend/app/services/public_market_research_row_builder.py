@@ -45,29 +45,29 @@ def build_public_market_research_row_batch(
     bottleneck_classification_batches: List[Dict[str, Any]],
 ) -> Dict[str, Any]:
     role_by_key = _role_index(bottleneck_classification_batches)
-    research_rows: List[Dict[str, Any]] = []
+    research_rows_by_key: Dict[Tuple[str, str], Dict[str, Any]] = {}
 
     for batch in symbol_mapping_batches:
         for row in batch.get("symbol_rows", []):
             key = (_coerce_string(row.get("system_label")), _coerce_string(row.get("canonical_entity_name")))
             role_row = role_by_key.get(key, {})
             symbol_mapping_status = _coerce_string(row.get("symbol_mapping_status"))
-            research_rows.append(
-                {
-                    "system_label": _coerce_string(row.get("system_label")),
-                    "canonical_entity_name": _coerce_string(row.get("canonical_entity_name")),
-                    "resolved_issuer_name": _coerce_string(row.get("resolved_issuer_name")),
-                    "mapped_public_symbol": _coerce_string(row.get("mapped_public_symbol")),
-                    "exchange_scope": _coerce_string(row.get("exchange_scope")),
-                    "symbol_mapping_status": symbol_mapping_status,
-                    "market_expression_scope": _coerce_string(row.get("market_expression_scope")),
-                    "bottleneck_role_label": _coerce_string(role_row.get("bottleneck_role_label")),
-                    "classification_reason": _coerce_string(role_row.get("classification_reason")),
-                    "market_research_row_status": _research_row_status(symbol_mapping_status),
-                    "market_research_row_action": _research_row_action(row, role_row),
-                    "route_aware_priority_score": int(row.get("route_aware_priority_score", 0)),
-                }
-            )
+            research_rows_by_key[key] = {
+                "system_label": _coerce_string(row.get("system_label")),
+                "canonical_entity_name": _coerce_string(row.get("canonical_entity_name")),
+                "resolved_issuer_name": _coerce_string(row.get("resolved_issuer_name")),
+                "mapped_public_symbol": _coerce_string(row.get("mapped_public_symbol")),
+                "exchange_scope": _coerce_string(row.get("exchange_scope")),
+                "symbol_mapping_status": symbol_mapping_status,
+                "market_expression_scope": _coerce_string(row.get("market_expression_scope")),
+                "bottleneck_role_label": _coerce_string(role_row.get("bottleneck_role_label")),
+                "classification_reason": _coerce_string(role_row.get("classification_reason")),
+                "market_research_row_status": _research_row_status(symbol_mapping_status),
+                "market_research_row_action": _research_row_action(row, role_row),
+                "route_aware_priority_score": int(row.get("route_aware_priority_score", 0)),
+            }
+
+    research_rows = list(research_rows_by_key.values())
 
     research_rows.sort(
         key=lambda item: (

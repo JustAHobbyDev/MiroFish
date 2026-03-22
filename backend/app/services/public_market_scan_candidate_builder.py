@@ -144,7 +144,7 @@ def _options_expression_signals(role_label: str) -> Dict[str, float]:
 def _stock_expression_signals(exchange_scope: str) -> Dict[str, float]:
     listing_quality = 4.0
     market_accessibility = 4.0
-    if exchange_scope == "foreign_home_market_code":
+    if exchange_scope in {"foreign_home_market_code", "foreign_home_market_symbol"}:
         listing_quality = 3.0
         market_accessibility = 2.5
     return {
@@ -159,7 +159,7 @@ def _stock_expression_signals(exchange_scope: str) -> Dict[str, float]:
 
 
 def _leaps_bias_signals(role_label: str, exchange_scope: str) -> Dict[str, float]:
-    if exchange_scope == "foreign_home_market_code":
+    if exchange_scope in {"foreign_home_market_code", "foreign_home_market_symbol"}:
         return {
             "iv_cheapness": 0.0,
             "surface_staleness": 0.0,

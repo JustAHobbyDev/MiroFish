@@ -57,3 +57,55 @@ def test_build_public_market_research_row_batch_attaches_role_labels() -> None:
     assert utility["market_research_row_status"] == "symbol_followup_required_before_market_research"
     assert utility["bottleneck_role_label"] == "capacity_response_operator"
 
+
+def test_build_public_market_research_row_batch_uses_later_symbol_resolution_overrides() -> None:
+    batch = build_public_market_research_row_batch(
+        symbol_mapping_batches=[
+            {
+                "symbol_rows": [
+                    {
+                        "system_label": "grid equipment and transformer buildout",
+                        "canonical_entity_name": "Hitachi Energy",
+                        "resolved_issuer_name": "Hitachi, Ltd.",
+                        "mapped_public_symbol": "",
+                        "exchange_scope": "public_route_unmapped",
+                        "symbol_mapping_status": "public_symbol_followup_required",
+                        "market_expression_scope": "public_supplier_expression",
+                        "route_aware_priority_score": 112,
+                    }
+                ]
+            },
+            {
+                "symbol_rows": [
+                    {
+                        "system_label": "grid equipment and transformer buildout",
+                        "canonical_entity_name": "Hitachi Energy",
+                        "resolved_issuer_name": "Hitachi, Ltd.",
+                        "mapped_public_symbol": "6501",
+                        "exchange_scope": "foreign_home_market_code",
+                        "symbol_mapping_status": "mapped_foreign_public_symbol",
+                        "market_expression_scope": "public_supplier_expression",
+                        "route_aware_priority_score": 112,
+                    }
+                ]
+            },
+        ],
+        bottleneck_classification_batches=[
+            {
+                "classification_rows": [
+                    {
+                        "system_label": "grid equipment and transformer buildout",
+                        "canonical_entity_name": "Hitachi Energy",
+                        "bottleneck_role_label": "supply_chain_beneficiary",
+                        "classification_reason": "supportive supplier evidence",
+                    }
+                ]
+            }
+        ],
+    )
+
+    assert batch["metrics"]["input_symbol_row_count"] == 2
+    assert batch["metrics"]["ready_for_market_research_count"] == 1
+    assert batch["metrics"]["symbol_followup_required_count"] == 0
+    assert len(batch["research_rows"]) == 1
+    assert batch["research_rows"][0]["mapped_public_symbol"] == "6501"
