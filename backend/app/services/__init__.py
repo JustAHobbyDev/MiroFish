@@ -168,6 +168,9 @@ from .public_market_scan_candidate_builder import build_public_market_scan_candi
 from .public_market_pick_assessment_builder import (
     build_public_market_pick_assessment_batch,
 )
+from .public_market_us_accessibility_builder import (
+    build_public_market_us_accessibility_batch,
+)
 from .public_symbol_followup_builder import build_public_symbol_followup_batch
 from .public_symbol_followup_resolution_builder import (
     build_public_symbol_followup_resolution_batch,

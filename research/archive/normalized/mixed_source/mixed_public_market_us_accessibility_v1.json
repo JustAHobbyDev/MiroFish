@@ -1,0 +1,139 @@
+{
+  "name": "public_market_us_accessibility_batch_v1",
+  "accessibility_rows": [
+    {
+      "name": "DTE on data center utility response buildout",
+      "canonical_entity_name": "DTE",
+      "underlying": "DTE",
+      "market_theme": "data center utility response buildout",
+      "final_expression": "reject",
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "us_accessibility_action": "use_direct_us_symbol",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_sec_lookup_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DTE&type=10-k&owner=exclude&count=10&output=atom",
+        "note": "Official SEC ticker lookup for DTE showing the current 10-K filing route."
+      }
+    },
+    {
+      "name": "Exelon on data center utility response buildout",
+      "canonical_entity_name": "Exelon",
+      "underlying": "EXC",
+      "market_theme": "data center utility response buildout",
+      "final_expression": "reject",
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "us_accessibility_action": "use_direct_us_symbol",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_filing_document_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/8192/000110935726000018/exc-20251231.htm",
+        "document_title": "Exelon Corporation Form 10-K for fiscal year ended December 31, 2025"
+      }
+    },
+    {
+      "name": "FirstEnergy on data center utility response buildout",
+      "canonical_entity_name": "FirstEnergy",
+      "underlying": "FE",
+      "market_theme": "data center utility response buildout",
+      "final_expression": "reject",
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "us_accessibility_action": "use_direct_us_symbol",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_sec_lookup_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FE&type=10-k&owner=exclude&count=10&output=atom",
+        "note": "Official SEC ticker lookup for FE showing the current 10-K filing route."
+      }
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "us_accessibility_action": "use_direct_us_symbol",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-reports-record-third-quarter-2025-results-with-accelerating-orders.html",
+        "note": "Official Eaton release identifying the issuer as Eaton Corporation plc (NYSE: ETN)."
+      }
+    },
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "direct_public_market_symbol",
+      "us_accessibility_status": "us_direct_primary",
+      "us_accessibility_action": "use_direct_us_symbol",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-reports-third-quarter-2025-financial",
+        "note": "Official GE Vernova release identifying the issuer as GE Vernova Inc. (NYSE: GEV)."
+      }
+    },
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_symbol",
+      "us_accessibility_status": "foreign_home_with_us_reference",
+      "us_accessibility_action": "verify_adr_or_otc_liquidity_before_us_expression",
+      "us_reference_present": true,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.rolls-royce.com/investors/shareholder-information.aspx",
+        "note": "Official Rolls-Royce shareholder information page identifying Rolls-Royce Holdings plc (LSE: RR., ADR: RYCEY)."
+      }
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "us_accessibility_action": "use_home_market_symbol_or_add_us_access_followup",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.hitachi.com/IR-e/stock/index.html",
+        "note": "Official Hitachi stock page identifying Hitachi, Ltd. (TSE: 6501)."
+      }
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "final_expression": "shares",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "us_accessibility_action": "use_home_market_symbol_or_add_us_access_followup",
+      "us_reference_present": false,
+      "symbol_mapping_basis": "official_ir_stock_code_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.mitsubishielectric.com/investors/stock/info/",
+        "note": "Official Mitsubishi Electric stock information page showing Tokyo Stock Exchange stock code 6503."
+      }
+    }
+  ],
+  "metrics": {
+    "input_pick_row_count": 8,
+    "us_direct_primary_count": 5,
+    "foreign_home_with_us_reference_count": 1,
+    "foreign_home_market_only_count": 2
+  }
+}
