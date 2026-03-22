@@ -1,0 +1,387 @@
+{
+  "name": "first_frozen_mixed_blind_run_power_trade_press_prefilter_window_v1",
+  "source_class": "trade_press",
+  "source_classes": null,
+  "kept_artifacts": [
+    {
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-11-20",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Openings & Expansions",
+      "category_tags": [
+        "automation",
+        "factory",
+        "expansion"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Openings & Expansions",
+        "raw_source": ""
+      },
+      "source_url": "https://www.manufacturingdive.com/news/rockwell-automation-greenfield-wisconsin-largest-factory-2b-investment/806033/",
+      "body_text": "Rockwell Automation plans to build a new factory in Wisconsin as part of a $2 billion effort to strengthen its U.S. operations. The campus will include more than 1 million square feet of manufacturing and warehouse space.",
+      "_prefilter": {
+        "artifact_id": "trade_press_10e5144776b5598c",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b",
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "section_name": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b",
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "facility_and_capacity_expansion": [
+              "\\bexpansion(?:s)?\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2026-02-12",
+      "title": "Rowan secures $500m for 300MW Texas data center project",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Finance",
+      "category_tags": [
+        "construction financing",
+        "Texas",
+        "campus"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Finance",
+        "raw_source": ""
+      },
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-secures-500m-for-300mw-texas-data-center-project/",
+      "body_text": "Rowan Digital Infrastructure secured approximately $550 million of construction financing for the first development phase of its 300MW Cinco campus outside San Antonio.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8de0a080761e2c3b",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Multiple distinct event-form families were detected across allowed fields.",
+        "matched_families": [
+          "awards_and_funding",
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "section_name": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "category_tags": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b",
+          "publisher_metadata:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-09-04",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "factory",
+        "manufacturing investment"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+      "body_text": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia, and make more than $500 million in other investments to meet growing need for U.S. grid equipment amid transformer bottlenecks.",
+      "_prefilter": {
+        "artifact_id": "trade_press_921740cadac635c6",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ],
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          },
+          "category_tags": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2026-02-20",
+      "title": "As load grows, Southern raises spending plan to $81B",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "load growth",
+        "capex",
+        "generation"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
+      "body_text": "Southern Company raised its five-year spending plan to $81 billion, driven by substantial new growth infrastructure investments as large-load and data center demand increases. The company is working on adding 10GW of approved new generation.",
+      "_prefilter": {
+        "artifact_id": "trade_press_7cab8b3aa2571296",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates an explicit increase in planned capital spending.",
+        "matched_families": [
+          "trade_press_spending_plan"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_spending_plan": [
+              "trade_press:spending_plan"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_spending_plan:trade_press:spending_plan"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [
+    {
+      "artifact_id": "trade_press_8af4de468aa71b03",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-10-30",
+      "title": "DTE inks first data center deal to grow electric load 25%",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "data centers",
+        "utility load",
+        "investment pipeline"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/dte-data-center-deal-transformational-growth-earnings/804231/",
+      "body_text": "DTE signed a 1.4GW agreement to serve a hyperscale data center and sees another 7GW of potential large loads. The utility now has a $30 billion investment pipeline for generation, distribution and other infrastructure from 2026 to 2030.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8af4de468aa71b03",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_8434daa99144e894",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2025-10-30",
+      "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Corporate News",
+      "category_tags": [
+        "load growth",
+        "data centers",
+        "capital plan"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Corporate News",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/firstenergy-data-centers-earnings/803612/",
+      "body_text": "FirstEnergy expects system peak load to jump 45% by 2035, driven by data center development. The company said developers will be responsible for incremental investments needed to support that growth.",
+      "_prefilter": {
+        "artifact_id": "trade_press_8434daa99144e894",
+        "source_class": "trade_press",
+        "triage": "review",
+        "reason": "Trade-press headline indicates pipeline or load-growth pressure that should be reviewed.",
+        "matched_families": [
+          "trade_press_pipeline_or_load_growth"
+        ],
+        "field_hits": {
+          "title": {
+            "trade_press_pipeline_or_load_growth": [
+              "trade_press:pipeline_or_load_growth"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:trade_press_pipeline_or_load_growth:trade_press:pipeline_or_load_growth"
+        ],
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "dropped_audit_records": [],
+  "metrics": {
+    "processed_artifact_count": 6,
+    "kept_count": 4,
+    "review_count": 2,
+    "dropped_count": 0
+  },
+  "window_filter": {
+    "start_date": "2025-09-01",
+    "end_date": "2026-02-28"
+  }
+}

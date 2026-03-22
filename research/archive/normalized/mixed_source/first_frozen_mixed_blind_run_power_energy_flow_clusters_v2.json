@@ -1,0 +1,44 @@
+{
+  "name": "first_frozen_mixed_blind_run_power_trade_press_energy_signal_window_v1_energy_flow_clusters_v1",
+  "source_class": "trade_press",
+  "clusters": [
+    {
+      "energy_flow_pressure_cluster_id": "efpc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
+      "as_of_date": "2025-10-30",
+      "status": "candidate",
+      "system_label": "utility and large-load power demand pressure",
+      "cluster_statement": "Multiple artifacts imply recurring utility load growth, pipeline pressure, or infrastructure-response need tied to large-load demand.",
+      "supporting_energy_flow_signal_ids": [
+        "trade_press_8434daa99144e894:energy:0",
+        "trade_press_8af4de468aa71b03:energy:0",
+        "trade_press_8af4de468aa71b03:energy:1",
+        "trade_press_8af4de468aa71b03:energy:2"
+      ],
+      "signal_count": 4,
+      "artifact_count": 2,
+      "source_classes": [
+        "trade_press"
+      ],
+      "publisher_or_authors": [
+        "Utility Dive"
+      ],
+      "publisher_diversity_count": 1,
+      "publisher_diversity_status": "single_publisher",
+      "time_window": {
+        "start_date": "2025-10-30",
+        "end_date": "2025-10-30"
+      },
+      "pressure_types_present": [
+        "infrastructure_response_need",
+        "load_growth"
+      ],
+      "geography_hints": [],
+      "confidence": "medium",
+      "strong_infrastructure_response_evidence": true
+    }
+  ],
+  "metrics": {
+    "input_signal_count": 10,
+    "cluster_count": 1
+  }
+}

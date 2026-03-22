@@ -1,0 +1,68 @@
+{
+  "run_id": "first_frozen_mixed_blind_run_power_v1",
+  "status": "frozen_complete_evaluation_allowed",
+  "protocol_reference": "docs/research-frameworks/2026-03-20-true-blind-run-protocol-v1.md",
+  "planned_manifest_reference": "research/archive/manifests/first-blind-run-6m-v1.json",
+  "base_code_revision": "bc486bb",
+  "workspace_state_at_freeze": "local uncommitted additions for archive window filtering and blind-run artifacts",
+  "run_completed_at_utc": "2026-03-22T19:28:45Z",
+  "corpus_definition": {
+    "executed_corpus_start_date": "2025-09-01",
+    "executed_corpus_end_date": "2026-02-28",
+    "time_bucket_rule": "weekly",
+    "freeze_enforcement": "Date-window filtering applied to each source-level prefilter batch before signal union. Signal batches were then filtered by the frozen artifact-id set from the corresponding filtered prefilter batch.",
+    "coverage_status": "partial_coverage_against_broader_draft_manifest",
+    "coverage_notes": [
+      "This run uses only already collected finalized source batches.",
+      "company_release coverage is limited to the existing combined archive batch and excludes the shelved Business Wire capture path.",
+      "government coverage in this run is limited to the existing Federal Register historical batch.",
+      "trade_press coverage in-window is limited to the existing 30-article archive, of which 6 artifacts survived the frozen date window."
+    ],
+    "executed_source_batches": {
+      "company_release_prefilter": "research/archive/normalized/company_release/company_release_prefilter_window_v1.json",
+      "company_release_signal": "research/archive/normalized/company_release/company_release_signal_window_v1.json",
+      "government_prefilter": "research/archive/normalized/government/federal_register_prefilter_window_v1.json",
+      "government_signal": "research/archive/normalized/government/federal_register_signal_window_v1.json",
+      "trade_press_prefilter": "research/archive/normalized/trade_press/trade_press_prefilter_window_v1.json",
+      "trade_press_capital_signal": "research/archive/normalized/trade_press/trade_press_signal_window_v1.json",
+      "trade_press_energy_signal": "research/archive/normalized/trade_press/trade_press_energy_signal_window_v1.json"
+    }
+  },
+  "extraction_rules_used": {
+    "capital_signal_inputs": [
+      "research/archive/normalized/company_release/company_release_signal_window_v1.json",
+      "research/archive/normalized/government/federal_register_signal_window_v1.json",
+      "research/archive/normalized/trade_press/trade_press_signal_window_v1.json"
+    ],
+    "energy_signal_inputs": [
+      "research/archive/normalized/trade_press/trade_press_energy_signal_window_v1.json"
+    ],
+    "constraint": "All first-pass extraction inputs were pre-existing artifact-local zero-context outputs. No new extraction logic or new source collection was introduced after the freeze design issue was identified."
+  },
+  "clustering_rules_used": {
+    "capital_flow_clustering_service": "backend/app/services/capital_flow_clustering.py",
+    "energy_flow_clustering_service": "backend/app/services/energy_flow_pressure_clustering.py",
+    "structural_pressure_merger_service": "backend/app/services/structural_pressure_merger.py",
+    "bounded_universe_builder_service": "backend/app/services/bounded_universe_builder.py"
+  },
+  "frozen_outputs": {
+    "signal_set": "research/archive/normalized/mixed_source/first_frozen_mixed_blind_run_power_capital_signal_v2.json",
+    "capital_cluster_set": "research/archive/normalized/mixed_source/first_frozen_mixed_blind_run_power_capital_flow_clusters_v2.json",
+    "energy_cluster_set": "research/archive/normalized/mixed_source/first_frozen_mixed_blind_run_power_energy_flow_clusters_v2.json",
+    "structural_pressure_candidate_set": "research/archive/normalized/mixed_source/first_frozen_mixed_blind_run_power_structural_pressure_candidates_v2.json",
+    "narrowing_decisions": "research/archive/runs/first_frozen_mixed_blind_run_power_v1_narrowing_decisions.json"
+  },
+  "frozen_output_metrics": {
+    "mixed_prefilter_processed_artifact_count": 324,
+    "mixed_prefilter_kept_count": 41,
+    "mixed_prefilter_review_count": 5,
+    "mixed_capital_signal_artifacts_sent_to_llm": 46,
+    "mixed_capital_signal_successful_extractions": 43,
+    "mixed_capital_signal_total_candidate_count": 53,
+    "capital_cluster_count": 6,
+    "energy_cluster_count": 1,
+    "structural_pressure_candidate_count": 7,
+    "bounded_universe_candidate_count": 3
+  },
+  "authoritative_freeze_note": "The earlier v1 mixed outputs leaked pre-window trade-press artifacts and are not the authoritative blind-run freeze. The v2 window-filtered outputs are authoritative."
+}

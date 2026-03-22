@@ -1,0 +1,587 @@
+{
+  "name": "first_frozen_mixed_blind_run_power_government_signal_window_v1",
+  "source_class": "policy_feed",
+  "source_classes": null,
+  "prompt_version": "capital_flow_signal_extraction_v1",
+  "model_name": "gpt-4o-mini",
+  "processed_results": [
+    {
+      "artifact_id": "policy_feed_3d1962f60f69e27b",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "Constrained-access or licensing notice without concrete rising-demand buildout evidence.",
+      "heuristic_filter_applied": true,
+      "heuristic_filter_reason": "Constrained-access or licensing notice without concrete rising-demand buildout evidence.",
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:46Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_e380bf5295f244ee",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:47Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_e0766c57e71e1a35",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:48Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_2ceb2d252849b7da",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:49Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_a20888efd28ad300",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Imports of seamless oil country tubular goods (OCTG) completed in Thailand using steel billets from China are circumventing antidumping and countervailing duties.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for domestic production of OCTG or alternative sourcing to avoid duties.",
+          "system_hints": [
+            "Oil and gas industry supply chain, domestic manufacturing of OCTG."
+          ],
+          "physical_implication": "Potential increase in domestic manufacturing capacity or sourcing of OCTG.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:52Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_867f2a0e00c994c3",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The NRC has accepted for review and docketed the phased construction permit application, including a limited work authorization request for Pioneer Units 1 and 2.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Potential investment in construction and procurement of materials and services for the dual-unit SMR-300 plant.",
+          "system_hints": [
+            "Nuclear energy sector, construction industry, supply chain for nuclear components."
+          ],
+          "physical_implication": "Early construction activities authorized at the Palisades Energy Center site.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "If the NRC issues an LWA, SMR would be authorized to conduct certain early construction activities.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased capacity for nuclear energy generation through the construction of the SMR-300 plant.",
+          "system_hints": [
+            "Energy production, nuclear facility development."
+          ],
+          "physical_implication": "Construction activities related to the dual-unit SMR-300 plant.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:58Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_e361f10f17cb11ef",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:58:59Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_fe05aeb686c503b3",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:00Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_e2aa283fbc50515b",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The EPA denied a petition to object to the operating permit for the Platteville Natural Gas Processing Plant.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "The denial of the petition suggests that the facility can continue operations without interruption, potentially leading to sustained or increased capital investment in the facility.",
+          "system_hints": [
+            "natural gas processing, energy sector, environmental compliance"
+          ],
+          "physical_implication": "The facility may continue to operate and possibly expand its processing capacity or related infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:03Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_2333e80b68fc4479",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Continuation of the antidumping duty order on electrolytic manganese dioxide from China.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased domestic production and procurement of electrolytic manganese dioxide in the U.S. to avoid duties.",
+          "system_hints": [
+            "U.S. electrolytic manganese dioxide industry, domestic manufacturers."
+          ],
+          "physical_implication": "Potential increase in domestic manufacturing capacity or investment in production facilities.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Determination that revocation of the antidumping duty would likely lead to material injury to an industry in the U.S.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Encouragement for U.S. manufacturers to expand capacity to meet demand without reliance on imports.",
+          "system_hints": [
+            "U.S. manufacturing sector, electrolytic manganese dioxide producers."
+          ],
+          "physical_implication": "Possible investments in new production lines or facilities to increase output.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:12Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_313e87f5ee6bcd9f",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:13Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_a288137bb1f016cb",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The revocation of Public Land Orders opens approximately 2,127,845 acres of public land to mineral and resource development opportunity.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in mineral and resource extraction activities in the newly available land.",
+          "system_hints": [
+            "Mineral and resource development sector, including mining and energy companies."
+          ],
+          "physical_implication": "Potential construction of extraction facilities and infrastructure to support resource development.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:20Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_08c2cec38f38c0df",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:21Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_bc247dbbfe437ede",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The FCC adopts rules allowing unlicensed geofenced variable power (GVP) devices to operate at higher power levels in the 6 GHz band.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased demand for GVP devices and related geofencing technology.",
+          "system_hints": [
+            "Telecommunications and wireless technology sectors."
+          ],
+          "physical_implication": "Potential increase in manufacturing and deployment of GVP devices and geofencing systems.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "GVP devices must use geofencing systems to prevent harmful interference, requiring new technology implementations.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Investment in geofencing technology and infrastructure to support GVP devices.",
+          "system_hints": [
+            "Technology development and telecommunications infrastructure."
+          ],
+          "physical_implication": "Expansion of geofencing capabilities and related infrastructure.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "Each GVP access point must have geolocation capability to avoid operating on prohibited frequencies.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased capital expenditure on geolocation technology for GVP access points.",
+          "system_hints": [
+            "Wireless communication and location-based services."
+          ],
+          "physical_implication": "Development and installation of geolocation systems in GVP devices.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:29Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_4d34bc54c4bfa31e",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:29Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_c04e10c8143d48bb",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:30Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_d82c2d55d29b7ab7",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:31Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_ae8423eef3b90cc9",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:32Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_d4c584a01a37f3d8",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:33Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_6d6ba56a42dfcd82",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:34Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_4b2e13b06c9906f8",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": false,
+      "candidates": [],
+      "rejection_reason": "No plausible directional capital-flow implication can be inferred from the artifact alone.",
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:34Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_d3426979d9550bb1",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Order Approving Inverter-Based Resources and Generators Modeling Reliability Standards",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in inverter-based resources and generators to comply with new reliability standards.",
+          "system_hints": [
+            "Electricity generation and distribution systems, particularly those incorporating renewable energy sources."
+          ],
+          "physical_implication": "Potential construction or upgrade of facilities to accommodate inverter-based technologies.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:38Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_1594c8731870caa4",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "Removal of regulations limiting authorizations to proceed with construction activities.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased capital flow towards construction projects in the energy sector.",
+          "system_hints": [
+            "Energy infrastructure development, including pipelines and power plants."
+          ],
+          "physical_implication": "Potential for new construction activities to commence without regulatory delays.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:41Z",
+      "prefilter_triage": "keep"
+    },
+    {
+      "artifact_id": "policy_feed_43e47ef2865c42a1",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Bureau of Land Management announces the availability of the record of decision for the final environmental impact statement for the National Petroleum Reserve-Alaska.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Potential increase in capital investment in oil and gas exploration and production activities in the National Petroleum Reserve-Alaska.",
+          "system_hints": [
+            "National Petroleum Reserve-Alaska, oil and gas industry"
+          ],
+          "physical_implication": "Possible future drilling and infrastructure development in the area.",
+          "confidence": "high"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:45Z",
+      "prefilter_triage": "review"
+    },
+    {
+      "artifact_id": "policy_feed_77b674eb72edfd04",
+      "source_class": "government_policy_enforcement",
+      "produced_candidates": true,
+      "candidates": [
+        {
+          "observable_statement": "The Bureau of Ocean Energy Management (BOEM) reaffirms decisions for Gulf of Mexico Outer Continental Shelf Oil and Gas Lease Sales 259 and 261.",
+          "capital_flow_implication_type": "procurement_or_commitment_pull",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Increased investment in oil and gas exploration and production activities in the Gulf of Mexico.",
+          "system_hints": [
+            "Oil and gas industry, offshore drilling operations."
+          ],
+          "physical_implication": "Potential for new drilling operations and associated infrastructure development.",
+          "confidence": "high"
+        },
+        {
+          "observable_statement": "The ROD concludes the programmatic NEPA process for the GOA Oil and Gas Programmatic EIS.",
+          "capital_flow_implication_type": "capacity_response",
+          "observation_directness": "direct",
+          "capital_flow_implication": "Facilitation of future lease sales and development projects, leading to increased capacity in oil and gas production.",
+          "system_hints": [
+            "Energy sector, regulatory compliance for offshore activities."
+          ],
+          "physical_implication": "Preparation for future lease sales may lead to physical buildout of facilities and infrastructure.",
+          "confidence": "medium"
+        }
+      ],
+      "rejection_reason": null,
+      "heuristic_filter_applied": false,
+      "heuristic_filter_reason": null,
+      "provider_name": "openai",
+      "model_name": "gpt-4o-mini",
+      "prompt_version": "capital_flow_signal_extraction_v1",
+      "extracted_at": "2026-03-21T00:59:51Z",
+      "prefilter_triage": "review"
+    }
+  ],
+  "schema_failures": [
+    {
+      "artifact_id": "policy_feed_61f13be909bb1344",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'regulatory relief'",
+      "raw_payload": {
+        "candidates": [
+          {
+            "observable_statement": "The northern and southern distinct population segments of the lesser prairie-chicken are being removed from the Federal List of Endangered and Threatened Wildlife.",
+            "capital_flow_implication_type": "regulatory relief",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential increase in land development and agricultural activities in areas previously restricted due to endangered species protections.",
+            "system_hints": "Land development, agriculture, conservation efforts.",
+            "physical_implication": "Possible expansion of agricultural land use and infrastructure development in habitats of the lesser prairie-chicken.",
+            "confidence": "high"
+          }
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_d813430c12aa0ec2",
+      "prefilter_triage": "keep",
+      "error_type": "schema_validation_error",
+      "error_message": "candidate[0] has invalid capital_flow_implication_type: 'construction'",
+      "raw_payload": {
+        "capital_flow_signal_candidates": [
+          {
+            "observable_statement": "The U.S. Navy is requesting authorization for the demolition of Pier 10 and construction of a Crane Weight Test Area at Naval Submarine Base New London.",
+            "capital_flow_implication_type": "construction",
+            "observation_directness": "direct",
+            "capital_flow_implication": "Potential capital flow into construction services and materials for the demolition and construction activities.",
+            "system_hints": "U.S. Navy, construction industry, marine infrastructure.",
+            "physical_implication": "Demolition of existing structures and construction of new facilities.",
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  ],
+  "extraction_failures": [],
+  "metrics": {
+    "artifacts_sent_to_llm": 27,
+    "successful_extractions": 25,
+    "schema_failure_count": 2,
+    "extraction_failure_count": 0,
+    "produced_candidate_artifact_count": 10,
+    "no_candidate_artifact_count": 15,
+    "total_candidate_count": 15,
+    "review_artifact_count": 2,
+    "review_candidate_artifact_count": 2
+  },
+  "artifact_window_filter_count": 27
+}
