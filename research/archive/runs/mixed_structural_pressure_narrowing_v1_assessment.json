@@ -1,0 +1,12 @@
+{
+  "narrowed_candidate_count": 1,
+  "system_labels": [
+    "data center backup-power equipment buildout"
+  ],
+  "support_provenance_statuses": [
+    "real_only"
+  ],
+  "origin_pressure_candidate_ids": [
+    "spc_power_generation_and_backup_equipment_pressure_2025-07-16_2de20001"
+  ]
+}

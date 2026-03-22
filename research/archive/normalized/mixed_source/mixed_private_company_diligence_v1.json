@@ -1,0 +1,61 @@
+{
+  "name": "private_company_diligence_plan_batch_v1",
+  "plans": [
+    {
+      "private_company_diligence_plan_id": "pcd_cyrusone",
+      "canonical_entity_name": "CyrusOne",
+      "resolved_issuer_name": "CyrusOne",
+      "system_label": "utility and large-load power buildout",
+      "diligence_status": "planned",
+      "route_type": "private_company",
+      "priority_tier": "targeted",
+      "source_priorities": [
+        "official_company_site",
+        "official_press_releases",
+        "financing_announcements",
+        "private_credit_or_abs_materials",
+        "trade_press"
+      ],
+      "query_terms": [
+        "CyrusOne",
+        "CyrusOne financing",
+        "CyrusOne debt issuance",
+        "CyrusOne private placement",
+        "CyrusOne investor",
+        "CyrusOne press release",
+        "CyrusOne capacity expansion"
+      ],
+      "next_actions": [
+        "Collect official company press releases and financing announcements.",
+        "Look for debt, ABS, private placement, and campus-capacity materials.",
+        "Do not route this issuer into public-company filing collection."
+      ],
+      "origin_live_resolution_result": {
+        "canonical_entity_name": "CyrusOne",
+        "live_resolution_status": "resolved_private_company_route",
+        "filing_route_assessment": "private_company_official_company_route"
+      },
+      "evidence": [
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.cyrusone.com/about-us",
+          "note": "Official current company page showing CyrusOne as an operating data-center developer and operator."
+        },
+        {
+          "evidence_type": "official_company_financing_source",
+          "source_url": "https://www.cyrusone.com/resources/press-releases/cyrusone-closes-1-175-billion-abs-issuance",
+          "note": "Official current company financing announcement showing issuer-level private-company capital raising rather than a public-company filing route."
+        },
+        {
+          "evidence_type": "official_owner_source",
+          "source_url": "https://www.kkr.com/insights/kkr-recognized-36-wins-2022-pei-pdi-pere-and-infrastructure-investor",
+          "note": "Official KKR page describing CyrusOne as the subject of a take-private transaction."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_live_resolution_count": 1,
+    "private_company_plan_count": 1
+  }
+}

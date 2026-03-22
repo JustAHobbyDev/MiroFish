@@ -1,0 +1,80 @@
+{
+  "name": "utility_lane_downstream_state_v1",
+  "rows": [
+    {
+      "canonical_entity_name": "FirstEnergy",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "followup_status": "already_supported",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "filing_route_assessment": "firstenergy_sec_edgar_combined_parent_route",
+      "filing_support_status": "supported",
+      "filing_strong_evidence_item_count": 8,
+      "private_diligence_plan_id": "",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "DTE",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "medium",
+      "followup_status": "already_supported",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "DTE Energy Company",
+      "filing_route_assessment": "dte_sec_edgar_combined_parent_route",
+      "filing_support_status": "supported",
+      "filing_strong_evidence_item_count": 7,
+      "private_diligence_plan_id": "",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Southern",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "power_or_utility_operator",
+      "priority_tier": "medium",
+      "followup_status": "already_supported",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "The Southern Company",
+      "filing_route_assessment": "southern_ir_and_sec_edgar_combined_parent_route",
+      "filing_support_status": "supported",
+      "filing_strong_evidence_item_count": 6,
+      "private_diligence_plan_id": "",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "Exelon",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "followup_status": "already_supported",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "Exelon Corporation",
+      "filing_route_assessment": "exelon_ir_and_sec_edgar_combined_parent_route",
+      "filing_support_status": "supported",
+      "filing_strong_evidence_item_count": 6,
+      "private_diligence_plan_id": "",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "CyrusOne",
+      "system_label": "utility and large-load power buildout",
+      "entity_role": "capacity_operator_or_owner",
+      "priority_tier": "low",
+      "followup_status": "needs_live_resolution",
+      "downstream_status": "private_company_diligence_required",
+      "resolved_issuer_name": "CyrusOne",
+      "filing_route_assessment": "private_company_official_company_route",
+      "filing_support_status": "",
+      "filing_strong_evidence_item_count": 0,
+      "private_diligence_plan_id": "pcd_cyrusone",
+      "next_action": "run_private_company_diligence"
+    }
+  ],
+  "metrics": {
+    "input_queue_count": 5,
+    "public_filing_supported_count": 4,
+    "private_company_diligence_required_count": 1
+  }
+}

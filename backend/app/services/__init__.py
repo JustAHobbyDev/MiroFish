@@ -148,6 +148,9 @@ from .company_filing_evidence_builder import build_company_filing_evidence_batch
 from .bounded_entity_filing_support import build_bounded_entity_filing_support_batch
 from .bounded_entity_filing_priority import build_bounded_entity_filing_priority_batch
 from .issuer_resolution_planner import build_issuer_resolution_batch
+from .private_company_diligence_planner import build_private_company_diligence_plan_batch
+from .utility_lane_downstream_state_builder import build_utility_lane_downstream_state
+from .structural_pressure_narrower import build_structural_pressure_narrowing_batch
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
     DEFAULT_OPTIONS_FIT_WEIGHTS,
@@ -276,6 +279,9 @@ __all__ = [
     'build_bounded_entity_filing_priority_batch',
     'parse_company_filing_document',
     'build_issuer_resolution_batch',
+    'build_private_company_diligence_plan_batch',
+    'build_utility_lane_downstream_state',
+    'build_structural_pressure_narrowing_batch',
     'DEFAULT_MISPRICING_WEIGHTS',
     'DEFAULT_OPTIONS_FIT_WEIGHTS',
     'MispricingSignals',

@@ -1,0 +1,14 @@
+{
+  "input_queue_count": 5,
+  "public_filing_supported_count": 4,
+  "private_company_diligence_required_count": 1,
+  "public_entities": [
+    "FirstEnergy",
+    "DTE",
+    "Southern",
+    "Exelon"
+  ],
+  "private_entities": [
+    "CyrusOne"
+  ]
+}
