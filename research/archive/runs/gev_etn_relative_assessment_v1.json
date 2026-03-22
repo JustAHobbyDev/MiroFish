@@ -1,0 +1,59 @@
+{
+  "name": "gev_etn_relative_assessment_v1",
+  "date": "2026-03-22",
+  "lane": "grid equipment and transformer buildout",
+  "rows": [
+    {
+      "canonical_entity_name": "GE Vernova",
+      "underlying": "GEV",
+      "role_label": "bottleneck_candidate",
+      "current_read": "best_pure_structural_name",
+      "already_priced_summary": [
+        "near_52_week_high",
+        "richer_ttm_pe",
+        "simple_rerating_leg_more_mature"
+      ],
+      "still_underappreciated_summary": [
+        "bottleneck_duration",
+        "margin_leverage_if_constraints_persist",
+        "backlog_and_rpo_conversion_durability"
+      ],
+      "local_filing_support": {
+        "filing_evidence_item_count": 19,
+        "filing_strong_evidence_item_count": 16,
+        "filing_component_specific_count": 6,
+        "filing_pressure_or_capacity_count": 5,
+        "filing_expansion_or_capex_count": 4
+      }
+    },
+    {
+      "canonical_entity_name": "Eaton",
+      "underlying": "ETN",
+      "role_label": "supply_chain_beneficiary",
+      "current_read": "less_extended_beneficiary_expression",
+      "already_priced_summary": [
+        "recognized_broad_electrification_winner"
+      ],
+      "still_underappreciated_summary": [
+        "transformer_and_adjacent_exposure_materiality",
+        "backlog_and_capacity_conversion",
+        "potential_misclassification_as_generic_electrification"
+      ],
+      "local_filing_support": {
+        "filing_evidence_item_count": 14,
+        "filing_strong_evidence_item_count": 11,
+        "filing_component_specific_count": 2,
+        "filing_pressure_or_capacity_count": 6,
+        "filing_expansion_or_capex_count": 3
+      }
+    }
+  ],
+  "decision": {
+    "best_pure_structural_name": "GE Vernova",
+    "better_less_stretched_expression": "Eaton",
+    "recommended_current_framing": [
+      "GE Vernova as bottleneck_purity_watch",
+      "Eaton as less_extended_beneficiary_watch"
+    ]
+  }
+}
