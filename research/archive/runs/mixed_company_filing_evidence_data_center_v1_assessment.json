@@ -1,0 +1,19 @@
+{
+  "batch": "mixed_company_filing_evidence_data_center_v1",
+  "evidence_collection_count": 5,
+  "total_evidence_item_count": 59,
+  "supported_issuers": [
+    "DTE Energy Company",
+    "Exelon Corporation",
+    "FirstEnergy Corp.",
+    "The Southern Company",
+    "Schneider Electric SE"
+  ],
+  "strongest_issuer_counts": {
+    "FirstEnergy Corp.": 8,
+    "DTE Energy Company": 7,
+    "Schneider Electric SE": 7,
+    "Exelon Corporation": 6,
+    "The Southern Company": 6
+  }
+}

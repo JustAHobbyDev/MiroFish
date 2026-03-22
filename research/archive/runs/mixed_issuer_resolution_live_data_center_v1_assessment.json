@@ -1,0 +1,19 @@
+{
+  "name": "mixed_issuer_resolution_live_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_data_center_v1.json",
+  "metrics": {
+    "evaluated_real_entity_count": 5,
+    "resolved_direct_public_route_count": 4,
+    "resolved_direct_foreign_public_route_count": 1
+  },
+  "resolved_direct_public_route_entities": [
+    "DTE",
+    "Exelon",
+    "FirstEnergy",
+    "Southern"
+  ],
+  "resolved_direct_foreign_public_route_entities": [
+    "Schneider Electric"
+  ],
+  "decision": "advance all five entities into first filing collection because the live issuer-resolution queue is now resolved"
+}

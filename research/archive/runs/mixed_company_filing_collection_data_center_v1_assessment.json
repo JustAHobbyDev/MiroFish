@@ -1,0 +1,17 @@
+{
+  "name": "mixed_company_filing_collection_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_company_filing_collection_data_center_v1.json",
+  "metrics": {
+    "issuer_collection_count": 5,
+    "document_count": 5,
+    "total_downloaded_bytes": 70828938
+  },
+  "collected_issuers": [
+    "DTE Energy Company",
+    "Exelon Corporation",
+    "FirstEnergy Corp.",
+    "The Southern Company",
+    "Schneider Electric SE"
+  ],
+  "decision": "advance the full five-issuer set into parse and filing-evidence extraction"
+}

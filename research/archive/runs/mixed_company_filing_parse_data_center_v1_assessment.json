@@ -1,0 +1,47 @@
+{
+  "batch": "mixed_company_filing_parse_data_center_v1",
+  "parsed_collection_count": 5,
+  "parsed_document_count": 5,
+  "issuer_summaries": {
+    "DTE Energy Company": {
+      "documents": 1,
+      "highlights": [
+        "1.4 gigawatt data center agreement",
+        "capital investments in 5-year plan",
+        "substations and line transformers"
+      ]
+    },
+    "Exelon Corporation": {
+      "documents": 1,
+      "highlights": [
+        "repeated load and capacity language",
+        "substation references",
+        "transformer references"
+      ]
+    },
+    "FirstEnergy Corp.": {
+      "documents": 1,
+      "highlights": [
+        "data center references",
+        "load-growth language",
+        "capacity language"
+      ]
+    },
+    "The Southern Company": {
+      "documents": 1,
+      "highlights": [
+        "broad power-system language",
+        "load pressure",
+        "capacity language"
+      ]
+    },
+    "Schneider Electric SE": {
+      "documents": 1,
+      "highlights": [
+        "data center references",
+        "switchgear",
+        "expansion and capacity language"
+      ]
+    }
+  }
+}

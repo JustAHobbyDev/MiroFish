@@ -1,0 +1,116 @@
+{
+  "name": "mixed_issuer_resolution_live_data_center_v1",
+  "evaluated_plan_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_data_center_v1.json",
+  "results": [
+    {
+      "canonical_entity_name": "DTE",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "DTE Energy Company",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "dte_sec_edgar_combined_parent_route",
+      "next_action": "Use DTE Energy Company SEC EDGAR annual and quarterly filings for bounded follow-up, while reading combined filing sections with parent-versus-utility discrimination.",
+      "evidence": [
+        {
+          "evidence_type": "official_sec_filing_route",
+          "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DTE&type=10-k&owner=exclude&count=10&output=atom",
+          "note": "Official SEC ticker lookup for DTE showing the current 10-K filing route."
+        },
+        {
+          "evidence_type": "official_sec_filing_index",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/936340/000093634026000054/0000936340-26-000054-index.htm",
+          "note": "Official SEC filing index listing DTE ENERGY CO as a filer on the current annual filing."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Exelon",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "Exelon Corporation",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "exelon_ir_and_sec_edgar_combined_parent_route",
+      "next_action": "Use Exelon Corporation SEC EDGAR and official investor-relations filing materials for bounded follow-up, while separating parent from utility-subsidiary sections in the combined filing.",
+      "evidence": [
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://investors.exeloncorp.com/sec-filings/sec-filing/ars/0001109357-25-000078",
+          "note": "Official Exelon investor-relations annual report filing page."
+        },
+        {
+          "evidence_type": "official_sec_filing_index",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1109357/000110935726000018/0001109357-26-000018-index.htm",
+          "note": "Official SEC filing index listing EXELON CORP as a filer on the current annual filing."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "FirstEnergy",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "firstenergy_sec_edgar_combined_parent_route",
+      "next_action": "Use FirstEnergy Corp. SEC EDGAR annual and quarterly filings for bounded follow-up, while separating parent from operating-utility sections in the combined filing.",
+      "evidence": [
+        {
+          "evidence_type": "official_sec_filing_route",
+          "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FE&type=10-k&owner=exclude&count=10&output=atom",
+          "note": "Official SEC ticker lookup for FE showing the current 10-K filing route."
+        },
+        {
+          "evidence_type": "official_sec_filing_index",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/1031296/000103129626000046/0001031296-26-000046-index.htm",
+          "note": "Official SEC filing index listing FIRSTENERGY CORP as a filer on the current annual filing."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Southern",
+      "live_resolution_status": "resolved_direct_public_route",
+      "resolution_outcome": "direct_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "The Southern Company",
+      "resolved_entity_type": "public_company",
+      "filing_route_assessment": "southern_ir_and_sec_edgar_combined_parent_route",
+      "next_action": "Use The Southern Company SEC EDGAR and official investor-relations filing materials for bounded follow-up, while separating parent from operating-utility and gas segments in the combined filing.",
+      "evidence": [
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://investor.southerncompany.com/financials-and-sec-filings/sec-filings/sec-filings-details/default.aspx?FilingId=18363511",
+          "note": "Official Southern Company filing-detail page for the annual report to security holders."
+        },
+        {
+          "evidence_type": "official_sec_filing_index",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/92122/000009212226000006/0000092122-26-000006-index.htm",
+          "note": "Official SEC filing index listing SOUTHERN CO as a filer on the current annual filing."
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "Schneider Electric",
+      "live_resolution_status": "resolved_direct_foreign_public_route",
+      "resolution_outcome": "direct_foreign_public_issuer_reporting_route_identified",
+      "resolved_issuer_name": "Schneider Electric SE",
+      "resolved_entity_type": "foreign_public_company",
+      "filing_route_assessment": "schneider_electric_ir_integrated_report_route",
+      "next_action": "Use Schneider Electric annual financial reports and integrated reports from the official IR archive for bounded follow-up.",
+      "evidence": [
+        {
+          "evidence_type": "official_investor_relations_source",
+          "source_url": "https://www.se.com/ww/en/about-us/investor-relations/regulatory-information/annual-reports/",
+          "note": "Official Schneider Electric annual financial reports archive."
+        },
+        {
+          "evidence_type": "official_annual_report_pdf",
+          "source_url": "https://www.se.com/ww/en/Images/Integrated-report-2024_tcm564-511188.pdf",
+          "note": "Official Schneider Electric integrated report PDF from the annual reports archive."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "evaluated_real_entity_count": 5,
+    "resolved_direct_public_route_count": 4,
+    "resolved_direct_foreign_public_route_count": 1
+  }
+}

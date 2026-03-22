@@ -1,0 +1,131 @@
+{
+  "name": "mixed_company_filing_collection_data_center_v1",
+  "origin_live_resolution_file": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_data_center_v1.json",
+  "collections": [
+    {
+      "company_filing_collection_id": "cfc_dte_data_center_v1",
+      "canonical_entity_name": "DTE",
+      "resolved_issuer_name": "DTE Energy Company",
+      "system_label": "data center power demand buildout",
+      "filing_route_assessment": "dte_sec_edgar_combined_parent_route",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the SEC 10-K HTML for load growth, power delivery, substations, transformers, capital spending, and data-center-linked demand language.",
+      "collected_documents": [
+        {
+          "document_id": "dfl_dte_energy_2025_10k_html",
+          "document_title": "DTE Energy Company Form 10-K for fiscal year ended December 31, 2025",
+          "filing_type": "10-k_html",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/28385/000093634026000054/dte-20251231.htm",
+          "source_last_modified": "Tue, 17 Feb 2026 13:28:49 GMT",
+          "content_type": "text/html",
+          "local_path": "research/archive/raw/company_filing/dte_energy/dte_energy_2025_10k.html",
+          "content_length_bytes": 6032479,
+          "sha256": "2947ce262e24e42a514c77340d04e4f308eb6ddfc7123916047f5740eae6760b",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_exelon_data_center_v1",
+      "canonical_entity_name": "Exelon",
+      "resolved_issuer_name": "Exelon Corporation",
+      "system_label": "data center power demand buildout",
+      "filing_route_assessment": "exelon_ir_and_sec_edgar_combined_parent_route",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the SEC 10-K HTML for utility capex, transmission and distribution spend, load growth, and large-load/data-center demand commentary.",
+      "collected_documents": [
+        {
+          "document_id": "xfl_exelon_2025_10k_html",
+          "document_title": "Exelon Corporation Form 10-K for fiscal year ended December 31, 2025",
+          "filing_type": "10-k_html",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/8192/000110935726000018/exc-20251231.htm",
+          "source_last_modified": "Thu, 12 Feb 2026 20:06:00 GMT",
+          "content_type": "text/html",
+          "local_path": "research/archive/raw/company_filing/exelon/exelon_2025_10k.html",
+          "content_length_bytes": 14641208,
+          "sha256": "add3ff5ad10ef344760bf7402e674f1d0534d40c2afb3c0886ac3985cf51c39b",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_firstenergy_data_center_v1",
+      "canonical_entity_name": "FirstEnergy",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "system_label": "data center power demand buildout",
+      "filing_route_assessment": "firstenergy_sec_edgar_combined_parent_route",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the SEC 10-K HTML for load growth, transmission and distribution investment, interconnection demand, and data-center-linked commentary.",
+      "collected_documents": [
+        {
+          "document_id": "ffl_firstenergy_2025_10k_html",
+          "document_title": "FirstEnergy Corp. Form 10-K for fiscal year ended December 31, 2025",
+          "filing_type": "10-k_html",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/53456/000103129626000046/fe-20251231.htm",
+          "source_last_modified": "Wed, 18 Feb 2026 12:56:37 GMT",
+          "content_type": "text/html",
+          "local_path": "research/archive/raw/company_filing/firstenergy/firstenergy_2025_10k.html",
+          "content_length_bytes": 6497062,
+          "sha256": "af232311594baba6fc8a51e4bcda33fda83f1b890365c836ab4aeeb667849f90",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_southern_data_center_v1",
+      "canonical_entity_name": "Southern",
+      "resolved_issuer_name": "The Southern Company",
+      "system_label": "data center power demand buildout",
+      "filing_route_assessment": "southern_ir_and_sec_edgar_combined_parent_route",
+      "collection_scope": "first_real_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the SEC 10-K HTML for load growth, generation and grid spending, interconnection demand, and data-center-linked commentary.",
+      "collected_documents": [
+        {
+          "document_id": "sfl_southern_2025_10k_html",
+          "document_title": "The Southern Company Form 10-K for fiscal year ended December 31, 2025",
+          "filing_type": "10-k_html",
+          "source_url": "https://www.sec.gov/Archives/edgar/data/3153/000009212226000006/so-20251231.htm",
+          "source_last_modified": "Thu, 19 Feb 2026 11:01:00 GMT",
+          "content_type": "text/html",
+          "local_path": "research/archive/raw/company_filing/southern/southern_2025_10k.html",
+          "content_length_bytes": 15639198,
+          "sha256": "46aea07b6bd44b32b75014da650ae2610949a487927dd53b16f239110a734c7e",
+          "download_status": "downloaded"
+        }
+      ]
+    },
+    {
+      "company_filing_collection_id": "cfc_schneider_electric_data_center_v1",
+      "canonical_entity_name": "Schneider Electric",
+      "resolved_issuer_name": "Schneider Electric SE",
+      "system_label": "data center power demand buildout",
+      "filing_route_assessment": "schneider_electric_ir_integrated_report_route",
+      "collection_scope": "first_real_foreign_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the integrated report PDF for electrification, data-center power delivery, grid equipment, capacity expansion, and backlog commentary.",
+      "collected_documents": [
+        {
+          "document_id": "sfl_schneider_electric_integrated_report_2024",
+          "document_title": "Schneider Electric Integrated Report 2024",
+          "filing_type": "integrated_report_pdf",
+          "source_url": "https://www.se.com/ww/en/Images/Integrated-report-2024_tcm564-511188.pdf",
+          "source_last_modified": "Wed, 04 Feb 2026 09:44:13 GMT",
+          "content_type": "application/pdf;charset=UTF-8",
+          "local_path": "research/archive/raw/company_filing/schneider_electric/schneider_electric_integrated_report_2024.pdf",
+          "content_length_bytes": 28018991,
+          "sha256": "5c7265d598ec27abd353fa355dd6830b346c4f564701fea6db373b661af4f349",
+          "download_status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "issuer_collection_count": 5,
+    "document_count": 5,
+    "total_downloaded_bytes": 70828938
+  }
+}

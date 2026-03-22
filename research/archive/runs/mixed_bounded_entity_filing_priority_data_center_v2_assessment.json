@@ -1,0 +1,21 @@
+{
+  "name": "mixed_bounded_entity_filing_priority_data_center_v2_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_priority_data_center_v2.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "supported_priority_count": 9,
+    "high_priority_count": 9
+  },
+  "filing_backed_high_priority": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Eaton",
+    "Mitsubishi Electric",
+    "Schneider Electric",
+    "FirstEnergy",
+    "DTE",
+    "Exelon",
+    "Southern"
+  ],
+  "decision": "advance the full nine-entity queue with filing-backed weight ordering because every active entity is now supported"
+}
