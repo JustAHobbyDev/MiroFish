@@ -1,0 +1,48 @@
+{
+  "archive_id": "third_historical_mixed_corpus_photonics_v1",
+  "date": "2026-03-22",
+  "manifest": "research/archive/manifests/third-historical-mixed-corpus-photonics-v1.json",
+  "raw_output": "research/archive/raw/historical_mixed/third_historical_mixed_corpus_photonics_raw_v1.json",
+  "prefilter_output": "research/archive/normalized/historical_mixed/third_historical_mixed_corpus_photonics_prefilter_v1.json",
+  "facts": {
+    "manifest_entry_count": 7,
+    "fetched_entry_count": 4,
+    "fetch_failure_count": 3,
+    "raw_source_class_counts": {
+      "company_release": 4
+    },
+    "prefilter_kept_count": 2,
+    "prefilter_review_count": 2,
+    "prefilter_dropped_count": 0
+  },
+  "fetch_failures": [
+    {
+      "corpus_entry_id": "axt_10q_2025_03_31_inp_ai",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "corpus_entry_id": "axt_10k_2024_12_31_export_controls",
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "corpus_entry_id": "broadcom_cpo_2025_05_15",
+      "error_type": "TimeoutError"
+    }
+  ],
+  "judgment": {
+    "corpus_build_result": "pass_with_partial_coverage",
+    "blind_ready": false,
+    "why_not_blind_ready": [
+      "The corpus is seeded from previously identified public evidence rather than broad source-universe collection.",
+      "Critical filing evidence from SEC was blocked by 403 responses in this environment.",
+      "Broadcom coverage is still missing due to timeout on the first fetch path."
+    ],
+    "usable_strength": "moderate",
+    "why": [
+      "The corpus still preserves a coherent photonics demand and capacity-response pack.",
+      "It includes NVIDIA, Lumentum, Coherent, and JX evidence across demand, device, and capacity-response layers."
+    ]
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "name": "second_historical_mixed_corpus_hbm_raw_v1_prefilter_v1",
+  "source_class": "mixed_source",
+  "source_classes": [
+    "company_filing",
+    "company_release"
+  ],
+  "processed_artifact_count": 7,
+  "kept_artifacts": [
+    {
+      "artifact_id": "historical_web_ed35a2746d86c64b",
+      "source_class": "company_release",
+      "publisher_or_author": "Micron",
+      "issuing_company_name": "Micron",
+      "published_at": "2025-01-08",
+      "title": "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore | Micron Technology",
+      "headline": "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore | Micron Technology",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "HBM",
+        "advanced packaging",
+        "AI infrastructure"
+      ],
+      "source_url": "https://investors.micron.com/news-releases/news-release-details/micron-breaks-ground-new-hbm-advanced-packaging-facility",
+      "body_text": "PDF Version January 8, 2025 at 9:00 PM EST Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore Approximate $7 billion investment over the next several years to meet AI data center demand SINGAPORE, Jan. 08, 2025 (GLOBE NEWSWIRE) -- Micron Technology, Inc. (Nasdaq: MU) broke ground today on a new High-Bandwidth Memory (HBM) advanced packaging facility adjacent to the company’s current facilities in Singapore. Micron marked the occasion with a ceremony attended by Gan Kim Yong, Deputy Prime Minister and Minister for Trade and Industry of Singapore, Png Cheong Boon, Chairman of the Singapore Economic Development Board, Pee Beng Kong, Executive Vice President of the Singapore Economic Development Board, and Tan Boon Khai, CEO of JTC Corporation. The new HBM advanced packaging facility will be the first facility of its kind in Singapore. Operations for the new facility are scheduled to begin in 2026, with meaningful expansion of Micron’s total advanced packaging capacity beginning in calendar 2027 to meet the demands of AI growth. The launch of this facility will further strengthen Singapore’s local semiconductor ecosystem and innovation. “As AI adoption proliferates across industries, the demand for advanced memory and storage solutions will continue to increase robustly,” said Sanjay Mehrotra, president and CEO of Micron. “With the continued support of the Singapore government, our investment in this HBM advanced packaging facility strengthens our position to address the expanding AI opportunities ahead.” Micron’s HBM advanced packaging investment of approximately US $7 billion (SG$9.5 billion) through the end of the decade and beyond will initially create around 1,400 jobs, with site expansion plans to reach an estimated 3,000 jobs in the future. These new roles will include functions such as packaging development, assembly and test operations. Png Cheong Boon, Chairman of the Singapore Economic Development Board, said, “We welcome this significant investment by Micron, which reflects its confidence in Singapore’s competitiveness as a critical node in the global semiconductor supply chain. This is Singapore’s first high-bandwidth memory advanced packaging facility, allowing us to contribute to global AI growth. It expands Singapore’s partnership with Micron and further strengthens the semiconductor ecosystem in Singapore.” Micron’s future expansion plans in Singapore will also support long-term manufacturing requirements for NAND. Micron will maintain flexibility in managing the pace of capacity ramps in both the HBM and NAND facilities to align with market demand. Micron’s current facility in Singapore is the first front-end semiconductor fab in the world to be recognized as the Advanced Fourth Industrial Revolution Lighthouse and Sustainability Lighthouse by the World Economic Forum. The new HBM advanced packaging facility will be built in alignment with Micron’s sustainability commitments. It will feature technologies such as a greenhouse gas abatement, water recycling and waste circularity (reduce, reuse, recycle, recover). The new building will be highly automated through AI-based intelligent solutions and designed to meet the Leadership in Energy and Environmental Design (LEED) certification requirements. About Micron Technology, Inc. We are an industry leader in innovative memory and storage solutions transforming how the world uses information to enrich life for all. With a relentless focus on our customers, technology leadership, and manufacturing and operational excellence, Micron delivers a rich portfolio of high-performance DRAM, NAND and NOR memory and storage products through our Micron® and Crucial® brands. Every day, the innovations that our people create fuel the data economy, enabling advances in artificial intelligence (AI) and compute-intensive applications that unleash opportunities — from the data center to the intelligent edge and across the client and mobile user experience. To learn more about Micron Technology, Inc. (Nasdaq: MU), visit micron.com. © 2025 Micron Technology, Inc. All rights reserved. Information, products, and/or specifications are subject to change without notice. Micron, the Micron logo, and all other Micron trademarks are the property of Micron Technology, Inc. All other trademarks are the property of their respective owners. Micron Media Relations Contact Mark Plungy Micron Technology, Inc. +1 (408) 203-2910 mplungy@micron.com Micron Investor Relations Contact Satya Kumar Micron Technology, Inc. +1 (408) 450-6199 satyakumar@micron.com",
+      "artifact_metadata": {
+        "source_type": "company press release",
+        "corpus_entry_id": "micron_hbm_packaging_groundbreaking_2025_01_08",
+        "fetched_via": "historical_web_archive_v1"
+      },
+      "_prefilter": {
+        "artifact_id": "historical_web_ed35a2746d86c64b",
+        "source_class": "company_release",
+        "triage": "keep",
+        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "matched_families": [
+          "construction_and_deployment",
+          "facility_and_capacity_expansion"
+        ],
+        "field_hits": {
+          "title": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          },
+          "headline": {
+            "facility_and_capacity_expansion": [
+              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bbreaks? ground\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b",
+          "title:construction_and_deployment:\\bbreaks? ground\\b",
+          "headline:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b",
+          "headline:construction_and_deployment:\\bbreaks? ground\\b"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "historical_web_184998e750d6ed07",
+      "source_class": "company_filing",
+      "publisher_or_author": "TSMC",
+      "issuing_company_name": "TSMC",
+      "published_at": "2025-04-17",
+      "title": "TSMC 2024 Annual Report",
+      "headline": "TSMC 2024 Annual Report",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "advanced packaging",
+        "AI demand",
+        "annual report"
+      ],
+      "source_url": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page8.html",
+      "body_text": "Basic HTML Version Table of Contents View Full Version Page 8 - TSMC 2024 Annual Report P. 8 006 Dear Shareholders 2024 was an an an outstanding year for TSMC Supported by our strong technology leadership and and broad customer base we observed robust AI-related demand from our customers throughout 2024 Other applications experienced only a a a a a very mild recovery as macroeconomic conditions continued to weigh on on on on on on on consumer sentiment Fueled by strong demand for our leading-edge logic and advanced packaging technologies TSMC’s revenue increased 30% year-over-year in in in in US dollar terms outperforming the Foundry industry’s 6% growth and and both our revenue and and EPS reached record highs We continued to to to invest in in in R&D and technology development to to to support our customers’ growth In its second year of volume ramp demand for our industry-leading 3-nanometer technology continued to be robust driven by smartphone and and High Performance Computing (HPC) applications and represented 18% of our total wafer revenue in in 2024 Our 2-nanometer technology leads the industry in in in in in addressing our customers’ insatiable need for energy-efficient computing and almost all the the IC innovators are working with TSMC Our N2 process technology is on on track for volume production in in in the the second half of of 2025 We also introduced A16 as as a a a a a a a a a a a a separate offering that features an innovative best-in-class backside power delivery solution best-suited for for for High Performance Computing (HPC) products Volume production of A16 is scheduled for for for the second half of 2026 We are also developing advanced packaging and 3D chip stacking technologies including CoWoS® InFO TSMC-SoIC® (System on on on on on on Integrated Chips) and silicon photonics to to enable large-scale interconnectivity for lower power consumption at at affordable costs to to support our customers’ needs On mature nodes we are working closely with strategic customers to to develop specialty technology solutions that meet their specific requirement These partnerships enable us to to create technology differentiation and provide long-lasting value to to customers We believe N3 N2 A16 and and and their derivatives our our specialty technologies and and and our our advanced packaging and and and chip stacking solutions will further extend our technology leadership position and enable TSMC to capture the the growth opportunities well into the future Our customers look to to TSMC not only for for the the most most advanced technologies but also for for the the most most efficient and cost-effective manufacturing at scale To address the the structural increase in in in in the the long-term market demand profile TSMC is working closely with our our customers to to to plan our our capacity and and investing in in in in in leading edge specialty and and advanced packaging technologies to to to support their demand We employ a a a a a a a a a a disciplined and and thorough capacity planning system to evaluate and and judge the the structural increase in in in in the the long-term market demand profile to to determine the appropriate capacity to to build At the same time we are committed to to to to earning a a a a a a a a a a sustainable and healthy return that enables us us to to to to continue to to to to invest to to to to support our our customers’ growth growth while delivering profitable growth growth for our our shareholders 6 7 8 9 10",
+      "artifact_metadata": {
+        "source_type": "company annual report",
+        "corpus_entry_id": "tsmc_annual_report_page_8_2025_04_17",
+        "fetched_via": "historical_web_archive_v1"
+      },
+      "_prefilter": {
+        "artifact_id": "historical_web_184998e750d6ed07",
+        "source_class": "company_filing",
+        "triage": "keep",
+        "reason": "Historical filing-aware override matched capacity, investment, or demand language in a filing artifact.",
+        "matched_families": [
+          "historical_filing_keep"
+        ],
+        "field_hits": {},
+        "fired_rules": [
+          "historical_filing_keep"
+        ],
+        "excluded_generic_hits": [
+          "\\bai\\b"
+        ],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "historical_web_3c21a4bef609b95c",
+      "source_class": "company_filing",
+      "publisher_or_author": "TSMC",
+      "issuing_company_name": "TSMC",
+      "published_at": "2025-04-17",
+      "title": "TSMC 2024 Annual Report",
+      "headline": "TSMC 2024 Annual Report",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "",
+      "category_tags": [
+        "advanced packaging",
+        "CoWoS",
+        "annual report"
+      ],
+      "source_url": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page100.html",
+      "body_text": "Basic HTML Version Table of Contents View Full Version Page 100 - TSMC 2024 Annual Report P. 100 098 memory bandwidth Chip on on on Wafer on on on Substrate with Silicon Interposer (CoWoS®-S) technology service featuring high interconnect routing density and embedded deep trench capacitor (eDTC) has been in volume production for several years ● Chip on on on Wafer on on on Substrate with Redistribution Layer Interposer (CoWoS®-R) technology service featuring multiple redistribution layers (RDL) to enable product design simplicity supports larger HPC products This technology entered its second year of volume production in 2024 ● CoWoS®-L technology service combining Chip on on Wafer on on Substrate with RDL-based interposer and embedded local silicon interconnect (LSI) improves product design flexibility by integrating a a a variety of embedded chips LSI with higher routing density and eDTC facilitates the expansion of HPC products to larger sizes This technology started volume production in 2024 ● TSMC-SoWTM system on wafer technology service enables wafer-level heterogeneous integration for next-generation data center computing chips with better power efficiency higher bandwidth and and greater chip density The first generation (logic only) technology entered volume production in 2024 ● Integrated Fan-Out Multi-chips with Package-on-Package (InFO-M-PoP) technology which integrates multiple heterogeneous chips with package stacking for wearable products entered its second year of volume production in 2024 ● Fine pitch copper (Cu) bump technology for flip chip packaging on on on 2nm silicon completed qualification in in 2024 5 1 2 Customer Applications TSMC manufactured 11 878 different products for 522 customers in 2024 These chips were used across a a a broad spectrum of electronic applications including artificial intelligence (AI) and high-performance computing servers wired and and wireless communication systems automotive and and industrial equipment personal computers and and peripherals and and information appliances as as as well as as as consumer electronics such as as as digital digital TVs game consoles digital digital cameras AI-enabled IoT and wearables and many others The rapid ongoing evolution of end products prompts customers to to pursue product differentiation using TSMC’s innovative technologies and and services and and at at the same time spurs TSMC’s own development of technology As always TSMC believes success depends on leading rather than following industry trends 5 2 Technology Leadership 5 2 1 R&D Organization and Investment The semiconductor industry is characterized by rapid technological change frequently resulting in in in the introduction of new technologies to to meet customer demand To stay technologically ahead of its its competitors and to to maintain its its strong market position in the foundry segment TSMC believes it it must continue its technology lead across the semiconductor industry In 2024 TSMC continued to invest in in in research and development with total R&D expenditures amounting to to 7 1% of revenue a a a level that equals or exceeds the R&D investment of many other leading high-tech companies The Company continuously invests significant amounts in in in R&D to maintain its leading position in in in in the advancement of process technologies These efforts have allowed customers to to access certain advanced process technologies such as 7nm 5nm and 3nm technology for volume production ahead of competitors and many integrated device manufacturers In addition the Company is committed to developing more advanced process technologies to the the 2-nanometer level and below in the the coming years to sustain its technology leadership In 2024 as the development of 2nm technology progressed from baseline setup to yield enhancement stage TSMC made good progress in the development of TSMC’s 16 Angstrom (A16) and 14 14 Angstrom (A14) technologies which aim to further improve speed power density and cost In addition the Company’s research efforts continued to push forward with exploratory studies for nodes beyond A14 The Company will also continue to to invest in in in R&D for mature technologies to to provide function-rich process capabilities to to its customers TSMC’s research and development efforts are divided into two areas: centralized activities and those undertaken by individual fabs Centralized R&D focuses primarily on the development of new logic SoC derivatives and package/system-in-package (SIP) technologies along with cost-effective 3D wafer-level system integration solutions including InFO CoWoS® and TSMC-SoIC® technologies R&D at the fab level is mainly concentrated on on improving and upgrading manufacturing process technologies 98 99 100 101 102",
+      "artifact_metadata": {
+        "source_type": "company annual report",
+        "corpus_entry_id": "tsmc_annual_report_page_100_2025_04_17",
+        "fetched_via": "historical_web_archive_v1"
+      },
+      "_prefilter": {
+        "artifact_id": "historical_web_3c21a4bef609b95c",
+        "source_class": "company_filing",
+        "triage": "keep",
+        "reason": "Historical filing-aware override matched capacity, investment, or demand language in a filing artifact.",
+        "matched_families": [
+          "historical_filing_keep"
+        ],
+        "field_hits": {},
+        "fired_rules": [
+          "historical_filing_keep"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    }
+  ],
+  "review_artifacts": [],
+  "dropped_audit_records": [
+    {
+      "artifact_id": "historical_web_24d33f69e9bf52cf",
+      "source_class": "company_release",
+      "publisher_or_author": "Micron",
+      "published_at": "2025-06-12",
+      "title": "マイクロン、主要顧客への HBM4 出荷を開始　次世代 AI プラットフォームの強化を支援 | Micron Technology",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_29cb770f26fcd942",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-07-23T22:37:26+00:00",
+      "title": "SK hynix Announces Q2 2025 Financial Results",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_3d6435437ded8cf3",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-09-12T00:36:47+00:00",
+      "title": "SK hynix Completes World-First HBM4 Development",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    },
+    {
+      "artifact_id": "historical_web_fdb63407fbe38652",
+      "source_class": "company_release",
+      "publisher_or_author": "SK hynix",
+      "published_at": "2025-10-29T01:00:00+00:00",
+      "title": "SK hynix Announces Q3 2025 Financial Results",
+      "triage": "drop",
+      "reason": "No qualifying event-form evidence was detected in allowed fields.",
+      "matched_families": [],
+      "fired_rules": [],
+      "excluded_generic_hits": [
+        "\\bai\\b"
+      ]
+    }
+  ],
+  "metrics": {
+    "processed_artifact_count": 7,
+    "kept_count": 3,
+    "review_count": 0,
+    "dropped_count": 4
+  }
+}

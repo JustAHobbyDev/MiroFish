@@ -1,0 +1,24 @@
+{
+  "archive_id": "second_historical_mixed_corpus_hbm_v1",
+  "date": "2026-03-22",
+  "prefilter_output": "research/archive/normalized/historical_mixed/second_historical_mixed_corpus_hbm_prefilter_v2.json",
+  "facts": {
+    "raw_entry_count": 7,
+    "prefilter_kept_count": 3,
+    "prefilter_review_count": 0,
+    "prefilter_dropped_count": 4,
+    "filing_aware_override_enabled": true
+  },
+  "kept_artifacts": [
+    "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore | Micron Technology",
+    "TSMC 2024 Annual Report",
+    "TSMC 2024 Annual Report"
+  ],
+  "judgment": {
+    "corpus_usability_for_mixed_source_replay": "improved",
+    "why": [
+      "The filing-aware override allows strategic annual-report evidence to survive prefiltering.",
+      "The HBM corpus now contains both event-form company release evidence and corroborating filing evidence."
+    ]
+  }
+}

@@ -38,12 +38,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("raw_corpus_json", type=Path)
     parser.add_argument("--output-json", type=Path, required=True)
+    parser.add_argument("--filing-aware", action="store_true")
     args = parser.parse_args()
 
     module = _load_module("historical_web_archive")
     payload = module.build_historical_web_prefilter_batch(
         json.loads(args.raw_corpus_json.read_text(encoding="utf-8")).get("entries", []),
         batch_name=f"{args.raw_corpus_json.stem}_prefilter_v1",
+        filing_aware=args.filing_aware,
     )
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

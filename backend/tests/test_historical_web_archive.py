@@ -74,3 +74,26 @@ def test_build_historical_web_prefilter_batch_returns_mixed_source_classes() -> 
     assert batch["source_classes"] == ["company_filing", "company_release"]
     assert batch["metrics"]["processed_artifact_count"] == 2
     assert batch["metrics"]["kept_count"] >= 1
+
+
+def test_build_historical_web_prefilter_batch_filing_aware_keeps_filing_capacity_language() -> None:
+    batch = module.build_historical_web_prefilter_batch(
+        [
+            {
+                "source_class": "company_filing",
+                "publisher_or_author": "TSMC",
+                "issuing_company_name": "TSMC",
+                "published_at": "2025-04-17",
+                "title": "TSMC 2024 Annual Report",
+                "source_url": "https://example.com/tsmc",
+                "body_text": "Strong AI demand boosted advanced packaging and CoWoS, requiring continued capacity expansion and capital investment.",
+                "source_type": "company annual report",
+                "corpus_entry_id": "tsmc_1",
+            }
+        ],
+        batch_name="historical_web_filing_aware_test",
+        filing_aware=True,
+    )
+
+    assert batch["metrics"]["kept_count"] == 1
+    assert batch["kept_artifacts"][0]["_prefilter"]["reason"].startswith("Historical filing-aware override")

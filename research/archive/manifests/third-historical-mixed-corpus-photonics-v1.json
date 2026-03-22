@@ -1,0 +1,100 @@
+{
+  "archive_id": "third_historical_mixed_corpus_photonics_v1",
+  "archive_version": "v1",
+  "status": "collected_partial_v1",
+  "created_at": "2026-03-22T00:00:00Z",
+  "owner": "Codex + user",
+  "purpose": "Third historical mixed corpus focused on AI photonics and InP using real pre-cutoff company-release and company-filing sources.",
+  "corpus_start_date": "2025-03-01",
+  "corpus_end_date": "2025-12-22",
+  "time_bucket_rule": "weekly",
+  "source_classes": [
+    "company_release",
+    "company_filing"
+  ],
+  "coverage_status": "retrospective_seeded_not_blind_ready",
+  "coverage_notes": [
+    "This corpus is seeded from previously identified pre-cutoff public evidence, not from a broad blind collection sweep.",
+    "The corpus is intended as a real historical mixed source pack for replay and comparison work, not a true blind-run source universe.",
+    "The authoritative collected output is research/archive/raw/historical_mixed/third_historical_mixed_corpus_photonics_raw_v1.json."
+  ],
+  "entries": [
+    {
+      "corpus_entry_id": "axt_10q_2025_03_31_inp_ai",
+      "source_class": "company_filing",
+      "source_type": "company filing",
+      "publisher_or_author": "AXT",
+      "issuing_company_name": "AXT",
+      "published_at": "2025-03-31",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1051627/000155837025007751/axti-20250331x10q.htm",
+      "title_hint": "AXT 10-Q 2025-03-31",
+      "category_tags": ["InP", "photonics", "AI infrastructure"]
+    },
+    {
+      "corpus_entry_id": "axt_10k_2024_12_31_export_controls",
+      "source_class": "company_filing",
+      "source_type": "company filing",
+      "publisher_or_author": "AXT",
+      "issuing_company_name": "AXT",
+      "published_at": "2025-02-26",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1051627/000155837025003004/axti-20241231x10k.htm",
+      "title_hint": "AXT 10-K 2024-12-31",
+      "category_tags": ["InP", "export controls", "AI infrastructure"]
+    },
+    {
+      "corpus_entry_id": "nvidia_photonics_switches_2025_03_18",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "NVIDIA",
+      "issuing_company_name": "NVIDIA",
+      "published_at": "2025-03-18",
+      "source_url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Spectrum-X-Photonics-Co-Packaged-Optics-Networking-Switches-to-Scale-AI-Factories-to-Millions-of-GPUs/default.aspx",
+      "title_hint": "NVIDIA Announces Spectrum-X Photonics Networking Switches",
+      "category_tags": ["photonics", "AI networking", "co-packaged optics"]
+    },
+    {
+      "corpus_entry_id": "coherent_inp_capacity_2024_03_25",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Coherent",
+      "issuing_company_name": "Coherent",
+      "published_at": "2024-03-25",
+      "source_url": "https://www.coherent.com/news/press-releases/worlds-first-6-inch-inp-scalable-wafer-fabs-paving-the-way-for-the-next-generation-of-lasers-for-ai-transceivers-and-6g-wireless-networks",
+      "title_hint": "World's first 6-inch InP scalable wafer fabs",
+      "category_tags": ["InP", "capacity expansion", "AI transceivers"]
+    },
+    {
+      "corpus_entry_id": "broadcom_cpo_2025_05_15",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Broadcom",
+      "issuing_company_name": "Broadcom",
+      "published_at": "2025-05-15",
+      "source_url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo",
+      "title_hint": "Broadcom announces third-generation co-packaged optics",
+      "category_tags": ["co-packaged optics", "AI networking", "photonics"]
+    },
+    {
+      "corpus_entry_id": "jx_inp_capacity_2025_07_23",
+      "source_class": "company_release",
+      "source_type": "company notice",
+      "publisher_or_author": "JX Advanced Metals",
+      "issuing_company_name": "JX Advanced Metals",
+      "published_at": "2025-07-23",
+      "source_url": "https://www.jx-nmm.com/english/newsrelease/2025/07/23/upload_files/Notice_Regarding_Capital_Investment_for_Increased_Production_of_Crystal_Materials_%28Acquisition_of_Fixed_Assets%29.pdf",
+      "title_hint": "Notice Regarding Capital Investment for Increased Production of Crystal Materials",
+      "category_tags": ["InP", "capacity expansion", "AI demand"]
+    },
+    {
+      "corpus_entry_id": "lumentum_inp_cpo_2025_08_07",
+      "source_class": "company_release",
+      "source_type": "company press release",
+      "publisher_or_author": "Lumentum",
+      "issuing_company_name": "Lumentum",
+      "published_at": "2025-08-07",
+      "source_url": "https://investor.lumentum.com/financial-news-releases/news-details/2025/Lumentum-Expands-U-S--Manufacturing-for-AI-Driven-Co-Packaged-Optics/",
+      "title_hint": "Lumentum expands U.S. manufacturing for AI-driven co-packaged optics",
+      "category_tags": ["InP", "co-packaged optics", "AI data centers"]
+    }
+  ]
+}

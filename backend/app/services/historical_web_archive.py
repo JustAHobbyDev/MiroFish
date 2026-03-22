@@ -19,6 +19,23 @@ from .capital_flow_prefilter import (
     triage_capital_flow_artifact,
 )
 
+_FILING_KEEP_PATTERNS = (
+    r"\badvanced packaging\b.*\b(expansion|facility|capacity|operations)\b",
+    r"\bcapacity\b.*\b(expansion|increase|ramp|investment)\b",
+    r"\b(ai|hbm|memory|packaging|photonics|indium phosphide|co-packaged optics|cpo)\b.*\b(demand|growth|expansion|investment|capacity)\b",
+    r"\b(data center|ai)\b.*\b(connectivity|optics|photonics|memory|packaging)\b",
+)
+
+_FILING_REVIEW_PATTERNS = (
+    r"\badvanced packaging\b",
+    r"\bhbm\d*\b",
+    r"\bcowos\b",
+    r"\bphotonics\b",
+    r"\bindium phosphide\b",
+    r"\bsubstrate(?:s)?\b",
+    r"\boptical\b",
+)
+
 
 _USER_AGENT = "Mozilla/5.0 (compatible; MiroFishHistoricalCorpus/1.0)"
 
@@ -178,6 +195,7 @@ def build_historical_web_prefilter_batch(
     records: Iterable[Dict[str, Any]],
     *,
     batch_name: str = "historical_web_prefilter_batch_v1",
+    filing_aware: bool = False,
 ) -> Dict[str, Any]:
     kept_artifacts: List[Dict[str, Any]] = []
     review_artifacts: List[Dict[str, Any]] = []
@@ -186,6 +204,8 @@ def build_historical_web_prefilter_batch(
     for raw_record in records:
         artifact = normalize_historical_web_artifact(raw_record)
         triage = triage_capital_flow_artifact(artifact)
+        if filing_aware:
+            triage = _apply_filing_aware_override(artifact, triage)
         artifact_with_triage = {**artifact, "_prefilter": triage}
         if triage["triage"] == TRIAGE_KEEP:
             kept_artifacts.append(artifact_with_triage)
@@ -220,3 +240,42 @@ def build_historical_web_prefilter_batch(
 def load_manifest_entries(path: str) -> List[Dict[str, Any]]:
     data = json.loads(open(path, "r", encoding="utf-8").read())
     return list(data.get("entries", []))
+
+
+def _apply_filing_aware_override(
+    artifact: Dict[str, Any],
+    triage: Dict[str, Any],
+) -> Dict[str, Any]:
+    if _coerce_string(artifact.get("source_class")) != "company_filing":
+        return triage
+
+    text = " ".join(
+        [
+            _coerce_string(artifact.get("title")),
+            _coerce_string(artifact.get("body_text")),
+            _coerce_string(artifact.get("section_name")),
+            " ".join(_normalize_list(artifact.get("category_tags"))),
+        ]
+    ).lower()
+
+    if any(re.search(pattern, text) for pattern in _FILING_KEEP_PATTERNS):
+        return {
+            **triage,
+            "triage": TRIAGE_KEEP,
+            "reason": "Historical filing-aware override matched capacity, investment, or demand language in a filing artifact.",
+            "matched_families": sorted(set(triage.get("matched_families", [])) | {"historical_filing_keep"}),
+            "fired_rules": list(triage.get("fired_rules", []))
+            + ["historical_filing_keep"],
+        }
+
+    if triage.get("triage") == TRIAGE_DROP and any(re.search(pattern, text) for pattern in _FILING_REVIEW_PATTERNS):
+        return {
+            **triage,
+            "triage": TRIAGE_REVIEW,
+            "reason": "Historical filing-aware override matched strategic system language in a filing artifact.",
+            "matched_families": sorted(set(triage.get("matched_families", [])) | {"historical_filing_review"}),
+            "fired_rules": list(triage.get("fired_rules", []))
+            + ["historical_filing_review"],
+        }
+
+    return triage
