@@ -1,7 +1,9 @@
 import pytest
+from pathlib import Path
 
 from app.services.businesswire_company_release_collector import (
     BusinessWireAccessDeniedError,
+    build_businesswire_browser_capture_records,
     fetch_businesswire_company_release_records,
     parse_businesswire_article_html,
 )
@@ -73,3 +75,66 @@ def test_fetch_businesswire_company_release_records_uses_injected_fetcher() -> N
     assert len(records) == 2
     assert records[0]["source_url"].endswith("/one")
     assert records[1]["source_url"].endswith("/two")
+
+
+def test_build_businesswire_browser_capture_records_reads_relative_article_paths(
+    tmp_path: Path,
+) -> None:
+    article_path = tmp_path / "articles" / "mitsu.html"
+    article_path.parent.mkdir(parents=True, exist_ok=True)
+    article_path.write_text(
+        """
+        <html>
+          <head>
+            <meta property="og:title" content="Mitsubishi Electric Invests in Elephantech" />
+            <meta property="article:published_time" content="2026-03-22T10:00:00Z" />
+          </head>
+          <body>
+            <h1>Mitsubishi Electric Invests in Elephantech</h1>
+            <article>
+              <p>TOKYO--(BUSINESS WIRE)--Mitsubishi Electric Corporation announced a strategic investment in Elephantech.</p>
+            </article>
+          </body>
+        </html>
+        """,
+        encoding="utf-8",
+    )
+
+    records = build_businesswire_browser_capture_records(
+        {
+            "results": [
+                {
+                    "capture_status": "captured",
+                    "result_index": 0,
+                    "title": "Mitsubishi Electric Invests in Elephantech",
+                    "url": "https://www.businesswire.com/news/home/example/en/test-release",
+                    "article_final_url": "https://www.businesswire.com/news/home/example/en/test-release",
+                    "article_path": "articles/mitsu.html",
+                    "published_label": "2026-03-22T10:00:00Z",
+                    "teaser": "Strategic investment in Elephantech.",
+                }
+            ]
+        },
+        capture_root=tmp_path,
+    )
+
+    assert len(records) == 1
+    assert records[0]["publisher"] == "Business Wire"
+    assert records[0]["title"] == "Mitsubishi Electric Invests in Elephantech"
+    assert records[0]["summary"] == "Strategic investment in Elephantech."
+
+
+def test_build_businesswire_browser_capture_records_skips_failed_results() -> None:
+    records = build_businesswire_browser_capture_records(
+        {
+            "results": [
+                {
+                    "capture_status": "capture_failed",
+                    "url": "https://www.businesswire.com/news/home/example/en/test-release",
+                    "article_html": "<html></html>",
+                }
+            ]
+        }
+    )
+
+    assert records == []

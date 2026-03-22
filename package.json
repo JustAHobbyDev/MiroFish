@@ -13,6 +13,7 @@
     "frontend": "cd frontend && npm run dev",
     "build": "cd frontend && npm run build",
     "options:capture": "node scripts/capture_options_chain_playwright.mjs",
+    "businesswire:capture": "node scripts/capture_businesswire_presspass_playwright.mjs",
     "sync:upstream": "bash ./scripts/sync-upstream.sh",
     "sync:upstream:ff": "bash ./scripts/sync-upstream.sh ff"
   },

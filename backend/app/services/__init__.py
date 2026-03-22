@@ -99,6 +99,7 @@ from .company_release_archive import (
 )
 from .businesswire_company_release_collector import (
     BusinessWireAccessDeniedError,
+    build_businesswire_browser_capture_records,
     fetch_businesswire_article,
     fetch_businesswire_company_release_records,
     parse_businesswire_article_html,
@@ -299,6 +300,11 @@ __all__ = [
     'triage_capital_flow_artifact',
     'build_company_release_prefilter_batch',
     'normalize_company_release_artifact',
+    'BusinessWireAccessDeniedError',
+    'build_businesswire_browser_capture_records',
+    'fetch_businesswire_article',
+    'fetch_businesswire_company_release_records',
+    'parse_businesswire_article_html',
     'build_trade_press_prefilter_batch',
     'normalize_trade_press_artifact',
     'build_policy_feed_prefilter_batch',

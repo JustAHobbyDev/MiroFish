@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import json
 import re
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 import requests
@@ -202,4 +203,65 @@ def fetch_businesswire_company_release_records(
         if not cleaned_url:
             continue
         records.append(fetch_one(cleaned_url))
+    return records
+
+
+def _capture_result_html(
+    result: Dict[str, Any],
+    *,
+    capture_root: Optional[Path] = None,
+) -> str:
+    inline_html = _coerce_string(result.get("article_html"))
+    if inline_html:
+        return inline_html
+
+    article_path = _coerce_string(result.get("article_path"))
+    if not article_path:
+        raise ValueError("Business Wire browser capture result is missing article_html and article_path")
+
+    path = Path(article_path)
+    if not path.is_absolute():
+        if capture_root is None:
+            raise ValueError(
+                "Business Wire browser capture result uses a relative article_path without a capture_root"
+            )
+        path = capture_root / path
+
+    return path.read_text(encoding="utf-8")
+
+
+def build_businesswire_browser_capture_records(
+    capture_payload: Dict[str, Any],
+    *,
+    capture_root: Optional[Path] = None,
+) -> List[Dict[str, Any]]:
+    results = capture_payload.get("results")
+    if not isinstance(results, list):
+        raise ValueError("Business Wire browser capture payload must contain a 'results' list")
+
+    records: List[Dict[str, Any]] = []
+    for result in results:
+        if not isinstance(result, dict):
+            continue
+        if _coerce_string(result.get("capture_status")) not in {"", "captured"}:
+            continue
+
+        html = _capture_result_html(result, capture_root=capture_root)
+        source_url = _coerce_string(result.get("article_final_url") or result.get("url"))
+        if not source_url:
+            raise ValueError("Business Wire browser capture result is missing a source URL")
+
+        record = parse_businesswire_article_html(html, source_url=source_url)
+        if not record.get("published_at"):
+            record["published_at"] = _coerce_string(result.get("published_label"))
+        if _coerce_string(result.get("teaser")):
+            record["summary"] = _coerce_string(result.get("teaser"))
+        record["capture_result_meta"] = {
+            "result_index": result.get("result_index"),
+            "search_title": _coerce_string(result.get("title")),
+            "search_published_label": _coerce_string(result.get("published_label")),
+            "search_teaser": _coerce_string(result.get("teaser")),
+        }
+        records.append(record)
+
     return records
