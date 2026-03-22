@@ -93,3 +93,42 @@ def test_build_bounded_entity_filing_support_batch_adds_utility_specific_summary
     assert row["role_specific_evidence_summary"]["load_and_demand_signal_count"] >= 2
     assert row["role_specific_evidence_summary"]["grid_response_signal_count"] >= 1
     assert row["role_specific_evidence_summary"]["capex_response_signal_count"] == 1
+
+
+def test_build_bounded_entity_filing_support_batch_accepts_candidate_batches() -> None:
+    batch = build_bounded_entity_filing_support_batch(
+        {
+            "candidates": [
+                {
+                    "entity_name": "Rolls-Royce",
+                    "system_label": "data center backup-power equipment buildout",
+                    "priority_tier": "high",
+                    "entity_role": "equipment_or_component_supplier",
+                    "supporting_titles": ["Rolls-Royce invests $75M in South Carolina engine plant"],
+                }
+            ]
+        },
+        {
+            "evidence_collections": [
+                {
+                    "canonical_entity_name": "Rolls-Royce",
+                    "resolved_issuer_name": "Rolls-Royce Holdings plc",
+                    "filing_route_assessment": "rolls_royce_route",
+                    "summary": {
+                        "evidence_item_count": 2,
+                        "strong_evidence_item_count": 2,
+                        "family_counts": {
+                            "component_specific": 1,
+                            "pressure_or_capacity": 0,
+                            "expansion_or_capex": 1,
+                        },
+                    },
+                    "evidence_items": [{"keyword": "engine"}],
+                }
+            ]
+        },
+    )
+
+    assert batch["metrics"]["input_entity_expansion_count"] == 1
+    assert batch["support_rows"][0]["canonical_entity_name"] == "Rolls-Royce"
+    assert batch["support_rows"][0]["filing_support_status"] == "supported"

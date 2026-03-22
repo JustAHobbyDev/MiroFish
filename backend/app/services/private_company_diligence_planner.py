@@ -35,12 +35,16 @@ def build_private_company_diligence_plan_batch(
             continue
         entity_name = _coerce_string(result.get("canonical_entity_name"))
         resolved_issuer_name = _coerce_string(result.get("resolved_issuer_name")) or entity_name
+        system_label = (
+            _coerce_string(result.get("system_label"))
+            or "utility and large-load power buildout"
+        )
         plans.append(
             {
                 "private_company_diligence_plan_id": f"pcd_{entity_name.lower().replace(' ', '_')}",
                 "canonical_entity_name": entity_name,
                 "resolved_issuer_name": resolved_issuer_name,
-                "system_label": "utility and large-load power buildout",
+                "system_label": system_label,
                 "diligence_status": "planned",
                 "route_type": "private_company",
                 "priority_tier": "targeted",

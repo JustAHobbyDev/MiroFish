@@ -78,6 +78,23 @@ def _index_evidence_by_entity(evidence_batch: Dict[str, Any]) -> Dict[str, Dict[
     return index
 
 
+def _entity_rows(entity_batch: Dict[str, Any]) -> List[Dict[str, Any]]:
+    if "expansions" in entity_batch:
+        return list(entity_batch.get("expansions", []))
+    rows: List[Dict[str, Any]] = []
+    for candidate in entity_batch.get("candidates", []):
+        rows.append(
+            {
+                "canonical_entity_name": _coerce_string(candidate.get("entity_name")),
+                "system_label": _coerce_string(candidate.get("system_label")),
+                "priority_tier": _coerce_string(candidate.get("priority_tier")),
+                "entity_role": _coerce_string(candidate.get("entity_role")),
+                "supporting_titles": list(candidate.get("supporting_titles", [])),
+            }
+        )
+    return rows
+
+
 def build_bounded_entity_filing_support_batch(
     entity_expansion_batch: Dict[str, Any],
     evidence_batch: Dict[str, Any],
@@ -85,7 +102,8 @@ def build_bounded_entity_filing_support_batch(
     evidence_index = _index_evidence_by_entity(evidence_batch)
     support_rows: List[Dict[str, Any]] = []
 
-    for expansion in entity_expansion_batch.get("expansions", []):
+    entity_rows = _entity_rows(entity_expansion_batch)
+    for expansion in entity_rows:
         canonical_entity_name = _coerce_string(expansion.get("canonical_entity_name"))
         entity_role = _coerce_string(expansion.get("entity_role"))
         role_lane = _role_lane(expansion)
@@ -139,7 +157,7 @@ def build_bounded_entity_filing_support_batch(
         "support_rows": support_rows,
         "support_rows_by_role_lane": support_rows_by_role_lane,
         "metrics": {
-            "input_entity_expansion_count": len(entity_expansion_batch.get("expansions", [])),
+            "input_entity_expansion_count": len(entity_rows),
             "supported_entity_count": len([row for row in support_rows if row["filing_support_status"] == "supported"]),
             "role_lane_counts": {
                 lane: len(rows) for lane, rows in support_rows_by_role_lane.items()

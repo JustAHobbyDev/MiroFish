@@ -1,0 +1,490 @@
+{
+  "name": "private_company_diligence_parse_batch_v1_d6533561",
+  "origin_collection_batch": "private_company_diligence_collection_batch_v1",
+  "parsed_collections": [
+    {
+      "private_company_diligence_plan_id": "pcd_cyrusone",
+      "canonical_entity_name": "CyrusOne",
+      "resolved_issuer_name": "CyrusOne",
+      "system_label": "utility and large-load power buildout",
+      "route_type": "private_company",
+      "parsed_documents": [
+        {
+          "private_company_parse_document_id": "pcdp_66ebff3e",
+          "document_id": "cyrusone_about_2026",
+          "document_title": "CyrusOne About Us",
+          "document_type": "official_company_page",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/cyrusone/cyrusone_about_us.html",
+          "keywords": [
+            "data center",
+            "hyperscale",
+            "power",
+            "load",
+            "capacity",
+            "campus",
+            "development",
+            "grid",
+            "transmission",
+            "battery",
+            "interconnection",
+            "financing",
+            "issuance",
+            "abs",
+            "megawatt"
+          ],
+          "keyword_counts": {
+            "data center": 4,
+            "hyperscale": 5,
+            "power": 2,
+            "load": 0,
+            "capacity": 0,
+            "campus": 0,
+            "development": 0,
+            "grid": 0,
+            "transmission": 0,
+            "battery": 0,
+            "interconnection": 1,
+            "financing": 0,
+            "issuance": 0,
+            "abs": 0,
+            "megawatt": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "as, Texas, CyrusOne operates more than 60 data centers across North America, EMEA, and APAC. Why Choose CyrusOne? Global Leadership in Digital Infrastructure CyrusOne is a premier data center owner, developer, and operator, providing advanced digital infrastructure solutions across the globe . We specialize in comprehensive solutions for hyperscale and global enterpris"
+            },
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "evolving technological demands. Learn More Hyperscale and Large Enterprises Trust CyrusOne Leading hyperscale companies and global enterprises partner with us to develop scalable data center infrastructure that meets their most demanding technical requirements. Our team brings decades of experience in engineering, construction, and operations, guided by our core value"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": ", MIL1 Milan, MIL2 Netherlands Amsterdam, AMS1 spain Madrid, MAD1 UK London, LON1 London, LON2 London, LON3 London, LON4 London, LON5 London, LON6 apac Japan Osaka, OSK1 SOLUTIONS Hyperscale Build-to-Suit AI Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Company About us About CyrusOne Delivering"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": "rusOne is a premier data center owner, developer, and operator, providing advanced digital infrastructure solutions across the globe . We specialize in comprehensive solutions for hyperscale and global enterprises, enabling organizations to meet their business and sustainability objectives. Our facilities support demanding AI-driven applications and high-density deplo"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "data centers capable of supporting all deployments and emerging technologies while prioritizing sustainability goals . Our engineering and design services encompass comprehensive power planning, strategic floor layouts, connectivity optimization, and detailed implementation scheduling. Through systematic measurement and analysis, we continuously enhance our faci"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "Read Now Data Centers CyrusOne\u2019s Intelliscale\u2013 Ushering in a New Era of Data Center Design to Support AI and High Density Computing Needs Read Now Data Centers 2025 Earth Day: Our Power, Our Responsibility Read Now READY TO BE UNSTOPPABLE? Partner with CyrusOne for scalable, secure data solutions. Global Headquarters 2850 North Harwood Street Suite 2200 Dallas, T"
+            },
+            {
+              "keyword": "interconnection",
+              "page_number": null,
+              "excerpt": "ng AI-driven applications and high-density deployments while providing the flexibility to adapt to rapidly evolving technology requirements. Through build-to-suit , colocation and interconnection solutions, we deliver infrastructure that scales with our customers' needs. Learn More Advanced Design for Tomorrow's Technologies We design and build advanced data centers capabl"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_0fabcff1",
+          "document_id": "cyrusone_abs_issuance_2026",
+          "document_title": "CyrusOne Closes $1.175B ABS Issuance",
+          "document_type": "official_financing_announcement",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/cyrusone/cyrusone_abs_issuance.html",
+          "keywords": [
+            "data center",
+            "hyperscale",
+            "power",
+            "load",
+            "capacity",
+            "campus",
+            "development",
+            "grid",
+            "transmission",
+            "battery",
+            "interconnection",
+            "financing",
+            "issuance",
+            "abs",
+            "megawatt"
+          ],
+          "keyword_counts": {
+            "data center": 4,
+            "hyperscale": 3,
+            "power": 4,
+            "load": 0,
+            "capacity": 0,
+            "campus": 0,
+            "development": 0,
+            "grid": 0,
+            "transmission": 0,
+            "battery": 0,
+            "interconnection": 0,
+            "financing": 0,
+            "issuance": 6,
+            "abs": 6,
+            "megawatt": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "$1.175 Billion ABS Issuance by CyrusOne May 15, 2024 Topics Company CyrusOne Closes $1.175 Billion ABS Issuance Get updates from CyrusOne to your inbox. CyrusOne, a leading global data center developer and operator specializing in delivering state-of-the-art digital infrastructure solutions, closed its $1.175 billion asset-backed securities (\u201cABS\u201d) offering. The issuan"
+            },
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "\u201d) offering. The issuance is structured with five- and seven-year tranches, and the notes are classified as Secured Green Collateral Bonds. This transaction represents the largest data center ABS issuance since 2021. Eric Schwartz, Chief Executive Officer at CyrusOne, remarked, \u201cthe market\u2019s response to our offering is a testament to CyrusOne\u2019s exceptional track record"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": ", MIL1 Milan, MIL2 Netherlands Amsterdam, AMS1 spain Madrid, MAD1 UK London, LON1 London, LON2 London, LON3 London, LON4 London, LON5 London, LON6 apac Japan Osaka, OSK1 SOLUTIONS Hyperscale Build-to-Suit AI Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne Closes $1"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": "eeds. The significant interest from institutional investors provides us with an additional capital source to support our future growth in developing and operating data centers for hyperscale customers.\u201d This is the fourth issuance CyrusOne has completed since launching its securitization program in May 2023. To date, CyrusOne\u2019s ABS program has raised a total of $2.6 b"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "success of our offerings to increase our market share and enhance the solutions we provide to our customers.\u201d Summary Increasing pressures on the data center industry \u2013 including power reliability and sustainability \u2013 are fueling interest in nuclear power, notably SMRs Nuclear power has gained acceptance in recent years as a clean solution to overcome rising pol"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "solutions we provide to our customers.\u201d Summary Increasing pressures on the data center industry \u2013 including power reliability and sustainability \u2013 are fueling interest in nuclear power, notably SMRs Nuclear power has gained acceptance in recent years as a clean solution to overcome rising pollution and climate change while also appealing to those who see it as a"
+            },
+            {
+              "keyword": "issuance",
+              "page_number": null,
+              "excerpt": "CyrusOne Closes $1.175 Billion ABS Issuance This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY About Us Leadership Careers"
+            },
+            {
+              "keyword": "issuance",
+              "page_number": null,
+              "excerpt": "Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne Closes $1.175 Billion ABS Issuance by CyrusOne May 15, 2024 Topics Company CyrusOne Closes $1.175 Billion ABS Issuance Get updates from CyrusOne to your inbox. CyrusOne, a leading global data center developer and o"
+            },
+            {
+              "keyword": "abs",
+              "page_number": null,
+              "excerpt": "CyrusOne Closes $1.175 Billion ABS Issuance This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY About Us Leadershi"
+            },
+            {
+              "keyword": "abs",
+              "page_number": null,
+              "excerpt": "t AI Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne Closes $1.175 Billion ABS Issuance by CyrusOne May 15, 2024 Topics Company CyrusOne Closes $1.175 Billion ABS Issuance Get updates from CyrusOne to your inbox. CyrusOne, a leading global data center develo"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_9e676450",
+          "document_id": "cyrusone_fort_worth_200mw_2026",
+          "document_title": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200MW Data Center Campus in Fort Worth, Texas",
+          "document_type": "official_press_release",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/cyrusone/cyrusone_fort_worth_200mw.html",
+          "keywords": [
+            "data center",
+            "hyperscale",
+            "power",
+            "load",
+            "capacity",
+            "campus",
+            "development",
+            "grid",
+            "transmission",
+            "battery",
+            "interconnection",
+            "financing",
+            "issuance",
+            "abs",
+            "megawatt"
+          ],
+          "keyword_counts": {
+            "data center": 12,
+            "hyperscale": 4,
+            "power": 5,
+            "load": 3,
+            "capacity": 9,
+            "campus": 8,
+            "development": 1,
+            "grid": 8,
+            "transmission": 4,
+            "battery": 3,
+            "interconnection": 1,
+            "financing": 0,
+            "issuance": 0,
+            "abs": 0,
+            "megawatt": 3
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY"
+            },
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "log Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas by CyrusOne January 13, 2026 Topics Company CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Te"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": ", MIL1 Milan, MIL2 Netherlands Amsterdam, AMS1 spain Madrid, MAD1 UK London, LON1 London, LON2 London, LON3 London, LON4 London, LON5 London, LON6 apac Japan Osaka, OSK1 SOLUTIONS Hyperscale Build-to-Suit AI Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne and Eolia"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": "and speed to datacenter growth,\u201d said Aaron Zubaty, Chief Executive Officer of Eolian. \u201cBy developing flexible capacity resources at highly networked grid locations, we can enable hyperscale growth without duplicating facilities, expanding transmission, or utilizing additional industrial real estate. This is exactly how the grid should evolve \u2014 efficiently, quickly, a"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "will provide energy supply to the initial phases of digital infrastructure. \u201cThis project is about problem-solving\u2014 using existing infrastructure intelligently to deliver speed to power and speed to datacenter growth,\u201d said Aaron Zubaty, Chief Executive Officer of Eolian. \u201cBy developing flexible capacity resources at highly networked grid locations, we can enable"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "ket conditions, and other risks. CyrusOne undertakes no obligation to update these forward-looking statements. Summary Increasing pressures on the data center industry \u2013 including power reliability and sustainability \u2013 are fueling interest in nuclear power, notably SMRs Nuclear power has gained acceptance in recent years as a clean solution to overcome rising pol"
+            },
+            {
+              "keyword": "load",
+              "page_number": null,
+              "excerpt": "rt Worth industrial campus to CyrusOne based on its operational experience at the BESS facility and its early identification of the substation as a key piece of infrastructure for load growth in the region. As part of this transaction with CyrusOne, Eolian will modernize and upgrade one of Texas\u2019 first utility-scale BESS systems while the existing infrastructure"
+            },
+            {
+              "keyword": "load",
+              "page_number": null,
+              "excerpt": "cilities, expanding transmission, or utilizing additional industrial real estate. This is exactly how the grid should evolve \u2014 efficiently, quickly, and in direct response to real load growth. Projects like DFW7 prove that the fastest path forward is not necessarily only to construct transmission infrastructure, but also first to more efficiently use what we hav"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "unced a collaborative infrastructure deployment for a new data center campus, DFW7, currently under construction in Fort Worth, Texas, that will provide new digital infrastructure capacity for hyperscaler and enterprise companies. By leveraging existing high-voltage transmission infrastructure and substation capacity adjacent to DFW7, CyrusOne and Eolian have achiev"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "xas, that will provide new digital infrastructure capacity for hyperscaler and enterprise companies. By leveraging existing high-voltage transmission infrastructure and substation capacity adjacent to DFW7, CyrusOne and Eolian have achieved accelerated time-to-market for the strategic site. This innovative collaboration co-locates large-scale data center capacity at"
+            },
+            {
+              "keyword": "campus",
+              "page_number": null,
+              "excerpt": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY About"
+            },
+            {
+              "keyword": "campus",
+              "page_number": null,
+              "excerpt": "leases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas by CyrusOne January 13, 2026 Topics Company CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas Get"
+            },
+            {
+              "keyword": "development",
+              "page_number": null,
+              "excerpt": "20 years, Eolian's founding management has worked together to build the assets at the core of the company, creating unique and proprietary structures that have directly funded the development of nearly 30 GW of operating or under-construction energy storage, solar, and wind generating capacity across the country. Eolian is owned by its employees and funds that are mana"
+            },
+            {
+              "keyword": "grid",
+              "page_number": null,
+              "excerpt": "DFW7, CyrusOne and Eolian have achieved accelerated time-to-market for the strategic site. This innovative collaboration co-locates large-scale data center capacity at an existing grid-scale battery energy storage site. In 2023, having developed and operated battery energy storage systems (BESS) across the US, Eolian identified an opportunity for CyrusOne to dep"
+            },
+            {
+              "keyword": "grid",
+              "page_number": null,
+              "excerpt": "cross the US, Eolian identified an opportunity for CyrusOne to deploy new data center capacity at an accelerated rate by utilizing existing high-voltage infrastructure at Chisholm Grid, a 100MW BESS site seven miles northwest of downtown Fort Worth that began commercial operations in the ERCOT market in 2021. The companies then collaborated on a novel structure,"
+            },
+            {
+              "keyword": "transmission",
+              "page_number": null,
+              "excerpt": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas Get updates from CyrusOne to your inbox. Innovative Use of Existing Transmission Infrastructure Accelerates Data Center Deployment January 13, 2026 FORT WORTH, Texas \u2013 CyrusOne and Eolian, L.P. (\"Eolian\") today announced a collaborative infrastructure deployme"
+            },
+            {
+              "keyword": "transmission",
+              "page_number": null,
+              "excerpt": "rently under construction in Fort Worth, Texas, that will provide new digital infrastructure capacity for hyperscaler and enterprise companies. By leveraging existing high-voltage transmission infrastructure and substation capacity adjacent to DFW7, CyrusOne and Eolian have achieved accelerated time-to-market for the strategic site. This innovative collaboration co-loca"
+            },
+            {
+              "keyword": "battery",
+              "page_number": null,
+              "excerpt": "One and Eolian have achieved accelerated time-to-market for the strategic site. This innovative collaboration co-locates large-scale data center capacity at an existing grid-scale battery energy storage site. In 2023, having developed and operated battery energy storage systems (BESS) across the US, Eolian identified an opportunity for CyrusOne to deploy new data c"
+            },
+            {
+              "keyword": "battery",
+              "page_number": null,
+              "excerpt": "tegic site. This innovative collaboration co-locates large-scale data center capacity at an existing grid-scale battery energy storage site. In 2023, having developed and operated battery energy storage systems (BESS) across the US, Eolian identified an opportunity for CyrusOne to deploy new data center capacity at an accelerated rate by utilizing existing high-vol"
+            },
+            {
+              "keyword": "interconnection",
+              "page_number": null,
+              "excerpt": "nters offer unparalleled flexibility, enabling customers to modernize, simplify, and rapidly respond to changing demands. CyrusOne delivers tailored build-to-suit, colocation, and interconnection solutions that meet the evolving digital needs of its customers. CyrusOne Forward Looking Statement This press release contains forward-looking statements, including statements re"
+            },
+            {
+              "keyword": "megawatt",
+              "page_number": null,
+              "excerpt": "CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers L"
+            },
+            {
+              "keyword": "megawatt",
+              "page_number": null,
+              "excerpt": "SOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fort Worth, Texas by CyrusOne January 13, 2026 Topics Company CyrusOne and Eolian Partner to Enable Rapid Deployment of 200 Megawatt Data Center Campus in Fo"
+            }
+          ],
+          "document_page_count": null
+        },
+        {
+          "private_company_parse_document_id": "pcdp_6642ab8a",
+          "document_id": "cyrusone_calpine_powered_land_2026",
+          "document_title": "CyrusOne and Calpine Announce New Hyperscale Data Center Development in Texas",
+          "document_type": "official_press_release",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/private_company/cyrusone/cyrusone_calpine_powered_land.html",
+          "keywords": [
+            "data center",
+            "hyperscale",
+            "power",
+            "load",
+            "capacity",
+            "campus",
+            "development",
+            "grid",
+            "transmission",
+            "battery",
+            "interconnection",
+            "financing",
+            "issuance",
+            "abs",
+            "megawatt"
+          ],
+          "keyword_counts": {
+            "data center": 14,
+            "hyperscale": 10,
+            "power": 10,
+            "load": 2,
+            "capacity": 4,
+            "campus": 4,
+            "development": 6,
+            "grid": 7,
+            "transmission": 0,
+            "battery": 0,
+            "interconnection": 1,
+            "financing": 0,
+            "issuance": 0,
+            "abs": 0,
+            "megawatt": 2
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "Cyrusone and Calpine Announce New Hyperscale Data Center Development in Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY About"
+            },
+            {
+              "keyword": "data center",
+              "page_number": null,
+              "excerpt": "ers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases Cyrusone and Calpine Announce New Hyperscale Data Center Development in Texas by CyrusOne July 30, 2025 Topics Intelliscale Company|Data Centers Hyperscale Solutions Data Centers AI Cyrusone and Calpine Announce New Hyperscale Data Cent"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": "Cyrusone and Calpine Announce New Hyperscale Data Center Development in Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login CO"
+            },
+            {
+              "keyword": "hyperscale",
+              "page_number": null,
+              "excerpt": ", MIL1 Milan, MIL2 Netherlands Amsterdam, AMS1 spain Madrid, MAD1 UK London, LON1 London, LON2 London, LON3 London, LON4 London, LON5 London, LON6 apac Japan Osaka, OSK1 SOLUTIONS Hyperscale Build-to-Suit AI Data Centers Colocation RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases Cyrusone and Calpi"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "s based CyrusOne, a leading global data center developer and operator, to serve a new data center adjacent to the Thad Hill Energy Center in Bosque County, Texas. The deal secures power, grid connection, and land to support a new state of the art facility that is currently under construction and expected to be operational by the fourth quarter of 2026. \u201cWe\u2019re exc"
+            },
+            {
+              "keyword": "power",
+              "page_number": null,
+              "excerpt": "to the region\u201d said Rick Pe\u00f1a, Executive Vice President of Corporate Development at Calpine. \u201cThis first-of-its-kind project establishes Calpine as a leader in reliable, scalable power solutions for hyperscale customers, leveraging our world-class fleet and Powered Land Capabilities (\u201cPLC\u201d) along with a suite of products and services to support both customer nee"
+            },
+            {
+              "keyword": "load",
+              "page_number": null,
+              "excerpt": "le capacity, and proven operational expertise,\u201d said Mr. Pe\u00f1a. \u201cOur world-class fleet is designed to support fast-paced development and PLC, along with the substantial data center load currently served by our affiliate, Calpine Solutions, puts those capabilities to work for hyperscale customers on the cutting edge.\u201d To commemorate the agreement, Calpine and Cyru"
+            },
+            {
+              "keyword": "load",
+              "page_number": null,
+              "excerpt": "able of delivering up to 400 MWs to data centers located in Bosque, Texas. This PLC solution offers a powerful combination of scale, reliability, and generation capacity for large-load, mission-critical users such as data center operators, and this agreement further cements Calpine\u2019s role as a strategic energy partner to hyperscale data centers while supporting"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "structure Partners (GIP), a part of BlackRock, and KKR. The new multiphase data center campus, which will encompass more than 190,000 square feet in the first phase, with scalable capacity to meet future demand. With a focus on sustainability and reliability, the new CyrusOne campus will feature climate-neutral initiatives, water conservation, biodiversity protectio"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": null,
+              "excerpt": "s and businesses in Texas and beyond.\u201d \u201cFor decades, Calpine has been the premier power solutions provider for industrial-scale customers who need unwavering reliability, scalable capacity, and proven operational expertise,\u201d said Mr. Pe\u00f1a. \u201cOur world-class fleet is designed to support fast-paced development and PLC, along with the substantial data center load curren"
+            },
+            {
+              "keyword": "campus",
+              "page_number": null,
+              "excerpt": "rld-class fleet and Powered Land Capabilities (\u201cPLC\u201d) along with a suite of products and services to support both customer needs and grid reliability across ERCOT and beyond.\u201d The campus, named DFW10, is being constructed by CyrusOne, which is backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR. The new multiphase"
+            },
+            {
+              "keyword": "campus",
+              "page_number": null,
+              "excerpt": "0, is being constructed by CyrusOne, which is backed by leading investment firms Global Infrastructure Partners (GIP), a part of BlackRock, and KKR. The new multiphase data center campus, which will encompass more than 190,000 square feet in the first phase, with scalable capacity to meet future demand. With a focus on sustainability and reliability, the new Cyrus"
+            },
+            {
+              "keyword": "development",
+              "page_number": null,
+              "excerpt": "Cyrusone and Calpine Announce New Hyperscale Data Center Development in Texas This is a search field with an auto-suggest feature attached. There are no suggestions because the search field is empty. Contact Careers Login COMPANY About Us Leadershi"
+            },
+            {
+              "keyword": "development",
+              "page_number": null,
+              "excerpt": "on RESOURCES Blog Press Releases Media Coverage Spec Sheets & White Papers Events Let\u2019s Connect \u00d7 Resources Press releases Cyrusone and Calpine Announce New Hyperscale Data Center Development in Texas by CyrusOne July 30, 2025 Topics Intelliscale Company|Data Centers Hyperscale Solutions Data Centers AI Cyrusone and Calpine Announce New Hyperscale Data Center Developme"
+            },
+            {
+              "keyword": "grid",
+              "page_number": null,
+              "excerpt": "CyrusOne, a leading global data center developer and operator, to serve a new data center adjacent to the Thad Hill Energy Center in Bosque County, Texas. The deal secures power, grid connection, and land to support a new state of the art facility that is currently under construction and expected to be operational by the fourth quarter of 2026. \u201cWe\u2019re excited t"
+            },
+            {
+              "keyword": "grid",
+              "page_number": null,
+              "excerpt": "ons for hyperscale customers, leveraging our world-class fleet and Powered Land Capabilities (\u201cPLC\u201d) along with a suite of products and services to support both customer needs and grid reliability across ERCOT and beyond.\u201d The campus, named DFW10, is being constructed by CyrusOne, which is backed by leading investment firms Global Infrastructure Partners (GIP),"
+            },
+            {
+              "keyword": "interconnection",
+              "page_number": null,
+              "excerpt": "nters offer unparalleled flexibility, enabling customers to modernize, simplify, and rapidly respond to changing demands. CyrusOne delivers tailored build-to-suit, colocation, and interconnection solutions that meet the evolving digital needs of its customers. For more information, please visit cyrusone.com. Don\u2019t forget to share this post! Related Articles Data Centers Cy"
+            },
+            {
+              "keyword": "megawatt",
+              "page_number": null,
+              "excerpt": "e Data Center Development in Texas Get updates from CyrusOne to your inbox. HOUSTON and DALLAS, Texas \u2013 July 30, 2025 \u2013 Houston based Calpine Corporation, today announce a new 190-megawatt (MW) agreement with Dallas based CyrusOne, a leading global data center developer and operator, to serve a new data center adjacent to the Thad Hill Energy Center in Bosque County"
+            },
+            {
+              "keyword": "megawatt",
+              "page_number": null,
+              "excerpt": "erator of electricity from natural gas and geothermal resources with operations in competitive power markets. Our fleet of 79 energy facilities in operation represents over 27,000 megawatts of generation capacity. Through wholesale power operations and our retail businesses, we serve customers in 22 states and Canada. Our clean, efficient, modern and flexible fleet"
+            }
+          ],
+          "document_page_count": null
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_collection_count": 1,
+    "parsed_collection_count": 1,
+    "parsed_document_count": 4
+  }
+}

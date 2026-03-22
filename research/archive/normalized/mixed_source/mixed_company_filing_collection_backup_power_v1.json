@@ -1,0 +1,35 @@
+{
+  "name": "mixed_company_filing_collection_backup_power_v1",
+  "origin_live_resolution_file": "research/archive/normalized/mixed_source/mixed_issuer_resolution_live_backup_power_v1.json",
+  "collections": [
+    {
+      "company_filing_collection_id": "cfc_rolls_royce_backup_power_v1",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "system_label": "data center backup-power equipment buildout",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "collection_scope": "first_real_foreign_public_route_pass",
+      "collection_status": "downloaded_and_ready_for_parse",
+      "next_action": "Parse the annual report for engine, generator, backup-power, manufacturing-expansion, and capacity-language evidence relevant to data-center backup power.",
+      "collected_documents": [
+        {
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "source_url": "https://www.rolls-royce.com/~/media/Files/R/Rolls-Royce/documents/annual-report/2026/2025-annual-report.pdf",
+          "source_last_modified": "Thu, 05 Mar 2026 09:08:59 GMT",
+          "content_type": "application/pdf",
+          "content_length_bytes": 7077708,
+          "sha256": "c9741d73dba1f52ff4fc48380bf602fb9e422c829a1b47a3d4a5462bdca6d739",
+          "local_path": "research/archive/raw/company_filing/rolls_royce/rolls_royce_2025_annual_report.pdf",
+          "download_status": "downloaded"
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "issuer_collection_count": 1,
+    "document_count": 1,
+    "total_downloaded_bytes": 7077708
+  }
+}

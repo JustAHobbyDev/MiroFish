@@ -97,6 +97,29 @@ def test_build_company_filing_parse_batch(tmp_path: Path) -> None:
     assert parsed_document["keyword_counts"]["transformer"] >= 1
 
 
+def test_parse_company_filing_document_backup_power_keywords(tmp_path: Path) -> None:
+    html_path = tmp_path / "rolls.html"
+    html_path.write_text(
+        "<html><body><p>Engine manufacturing expansion supports backup power capacity for data centers.</p></body></html>",
+        encoding="utf-8",
+    )
+
+    parsed = parse_company_filing_document(
+        {
+            "document_id": "doc_html_backup",
+            "document_title": "Backup Power HTML",
+            "filing_type": "annual_report_html",
+            "local_path": str(html_path),
+        },
+        "data center backup-power equipment buildout",
+    )
+
+    assert parsed["parse_status"] == "parsed"
+    assert parsed["keyword_counts"]["engine"] >= 1
+    assert parsed["keyword_counts"]["backup power"] >= 1
+    assert parsed["keyword_counts"]["manufacturing"] >= 1
+
+
 def test_parse_company_filing_document_resolves_repo_relative_path(tmp_path: Path, monkeypatch) -> None:
     pdf_path = tmp_path / "sample.pdf"
     doc = fitz.open()

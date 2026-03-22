@@ -39,6 +39,18 @@ DEFAULT_KEYWORDS_BY_SYSTEM = {
         "backlog",
         "expansion",
     ],
+    "data center backup-power equipment buildout": [
+        "generator",
+        "engine",
+        "backup power",
+        "data center",
+        "power",
+        "capacity",
+        "manufacturing",
+        "expansion",
+        "plant",
+        "enclosure",
+    ],
 }
 
 

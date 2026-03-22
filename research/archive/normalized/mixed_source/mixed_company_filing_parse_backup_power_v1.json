@@ -1,0 +1,135 @@
+{
+  "name": "company_filing_parse_batch_v1_c4646665",
+  "origin_collection_batch": "mixed_company_filing_collection_backup_power_v1",
+  "parsed_collections": [
+    {
+      "company_filing_collection_id": "cfc_rolls_royce_backup_power_v1",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "system_label": "data center backup-power equipment buildout",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "parsed_documents": [
+        {
+          "company_filing_parse_document_id": "cfp_cd143064",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "parse_status": "parsed",
+          "local_path": "/Users/danielschmidt/dev/MiroFish/research/archive/raw/company_filing/rolls_royce/rolls_royce_2025_annual_report.pdf",
+          "keywords": [
+            "generator",
+            "engine",
+            "backup power",
+            "data center",
+            "power",
+            "capacity",
+            "manufacturing",
+            "expansion",
+            "plant",
+            "enclosure"
+          ],
+          "keyword_counts": {
+            "generator": 2,
+            "engine": 305,
+            "backup power": 2,
+            "data center": 0,
+            "power": 205,
+            "capacity": 32,
+            "manufacturing": 16,
+            "expansion": 14,
+            "plant": 49,
+            "enclosure": 0
+          },
+          "evidence_snippets": [
+            {
+              "keyword": "engine",
+              "page_number": 3,
+              "excerpt": "Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non-core asset disposals \u2014 Growing Civil LTSA margins for in-production engines \u2014 Time on wing targets raised to >100% with more than half delivered \u2014 Fur"
+            },
+            {
+              "keyword": "power",
+              "page_number": 3,
+              "excerpt": "viours\b 10 Our strategy\b 11 External environment\b 13 Business model\b 14 Key performance indicators\b 16 Financial review\b 19 Our divisions\b \u2013 Civil Aerospace\b 25 \u2013 Defence\b 27 \u2013 Power Systems\b 29 People and culture\b 31 Ethics and compliance\b 37 Sustainability\b 38 \u2013 Non-financial and sustainability information statement\b 38 \u2013 Energy transition and environment"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 3,
+              "excerpt": "r are summarised opposite. CONTINUED STRATEGIC PROGRESS Portfolio choices and partnerships Strategic initiatives \u2014 Strategic investment by \u010cEZ Group in Rolls-Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non"
+            },
+            {
+              "keyword": "expansion",
+              "page_number": 3,
+              "excerpt": "mmarised opposite. CONTINUED STRATEGIC PROGRESS Portfolio choices and partnerships Strategic initiatives \u2014 Strategic investment by \u010cEZ Group in Rolls-Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non-core asse"
+            },
+            {
+              "keyword": "engine",
+              "page_number": 4,
+              "excerpt": "Civil Aerospace is a major manufacturer of aero engines for the large commercial aircraft, regional jets and business aviation markets. The division uses its engineering expertise, in-depth knowledge and capabilities to provide th"
+            },
+            {
+              "keyword": "power",
+              "page_number": 4,
+              "excerpt": "for a reconciliation of gross R&D expenditure to total R&D expenditure \u0007See note 2 on page 136 for a reconciliation between underlying and statutory results Group at a glance Power Systems, with its product and solutions brand mtu, is a global provider of high-performance energy and propulsion solutions for a wide range of applications in the power gene"
+            },
+            {
+              "keyword": "plant",
+              "page_number": 4,
+              "excerpt": "y transport and patrol aircraft, with strong positions in combat applications. It has significant scale in naval and also designs, supplies and supports the nuclear propulsion plant for all of the UK Royal Navy\u2019s nuclear submarines. \u0007See page 27 for the Defence divisional review DEFENCE 2 ROLLS-ROYCE HOLDINGS PLC ANNUAL REPORT 2025 POWER SYSTEMS"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 6,
+              "excerpt": "optimise our portfolio of large engine programmes to meet growing demand in the widebody aircraft market, and the steps we are taking to deliver operational excellence in our manufacturing and aftermarket operations. We also focused on the safety of our people and products, and learnt how we are nurturing talent and developing future leaders in the Civil Aerospa"
+            },
+            {
+              "keyword": "capacity",
+              "page_number": 7,
+              "excerpt": "representatives of local governments and authorities at all times, and particularly as we plan capacity expansion to meet future growth opportunities. Where we do not interact directly with, for example, our commercial customers and suppliers, we hear regularly from Tufan and me"
+            },
+            {
+              "keyword": "expansion",
+              "page_number": 7,
+              "excerpt": "representatives of local governments and authorities at all times, and particularly as we plan capacity expansion to meet future growth opportunities. Where we do not interact directly with, for example, our commercial customers and suppliers, we hear regularly from Tufan and members of"
+            },
+            {
+              "keyword": "manufacturing",
+              "page_number": 9,
+              "excerpt": "1% in service. In addition, we completed materials, component and engine testing on the Trent XWB-97 developments, progressing our durability package on that engine. Additive manufacturing offers enormous potential and is set to be used in many of our products across the portfolio. In an important breakthrough, Power Systems has redesigned, optimised, printed an"
+            },
+            {
+              "keyword": "plant",
+              "page_number": 10,
+              "excerpt": "ta centre demand soared, as well as in governmental. Consequently, we committed to significant investment at both our Mankato, Minnesota facility and our Aiken, South Carolina plant in the US. Another benefit of our granular strategy is our focus on battery energy storage systems (BESS), designed for grid-scale performance, long term reliability and seam"
+            },
+            {
+              "keyword": "backup power",
+              "page_number": 11,
+              "excerpt": "nticipate sustained power generation growth driven by data centres. We are uniquely positioned to help the hyperscalers with their future data centre power demands, including backup power, prime power and with SMRs. Our next generation Series 4000 engine, which will be released in 2028, targets the ever-increasing power demands of AI data centres with a 20% hig"
+            },
+            {
+              "keyword": "generator",
+              "page_number": 14,
+              "excerpt": "able transitional fuel for backup power in data centres. The use of HVO can reduce lifecycle CO\u2082 emissions by up to 90% compared to fossil diesel and is compatible with existing generator infrastructure. Rolls-Royce SMR made significant advances in 2025, having been chosen as the preferred technology in the Great British Energy \u2013 Nuclear small modular reactor comp"
+            },
+            {
+              "keyword": "backup power",
+              "page_number": 14,
+              "excerpt": "oncept. Our Power Systems division released a position paper with Microsoft highlighting the potential of Hydrotreated Vegetable Oil (HVO) as a sustainable transitional fuel for backup power in data centres. The use of HVO can reduce lifecycle CO\u2082 emissions by up to 90% compared to fossil diesel and is compatible with existing generator infrastructure. Rolls-Royce S"
+            },
+            {
+              "keyword": "generator",
+              "page_number": 46,
+              "excerpt": "and reduce overall engine environmental impact. Power Systems has developed and published third-party verified Environmental Product Declarations (EPD) for mtu emergency power generator sets. These reports enable Power Systems to demonstrate the environmental footprint of mtu emergency power systems of the mtu 16V4000 DS2500 type and of the 10V1600. The EPDs"
+            }
+          ],
+          "document_page_count": 220
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_collection_count": 1,
+    "parsed_collection_count": 1,
+    "parsed_document_count": 1
+  }
+}

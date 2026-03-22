@@ -1,0 +1,230 @@
+{
+  "name": "bounded_entity_filing_support_batch_v1",
+  "support_rows": [
+    {
+      "canonical_entity_name": "Rolls-Royce",
+      "system_label": "data center backup-power equipment buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "filing_evidence_item_count": 16,
+      "filing_strong_evidence_item_count": 10,
+      "filing_component_specific_count": 4,
+      "filing_pressure_or_capacity_count": 2,
+      "filing_expansion_or_capex_count": 4,
+      "filing_support_status": "supported",
+      "role_specific_evidence_summary": {},
+      "top_filing_evidence_items": [
+        {
+          "company_filing_evidence_id": "cfe_ee9b42b53a",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "engine",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 3,
+          "excerpt": "Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non-core asset disposals \u2014 Growing Civil LTSA margins for in-production engines \u2014 Time on wing targets raised to >100% with more than half delivered \u2014 Fur"
+        },
+        {
+          "company_filing_evidence_id": "cfe_f0071b0e89",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "engine",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 4,
+          "excerpt": "Civil Aerospace is a major manufacturer of aero engines for the large commercial aircraft, regional jets and business aviation markets. The division uses its engineering expertise, in-depth knowledge and capabilities to provide th"
+        },
+        {
+          "company_filing_evidence_id": "cfe_e3cfb89e38",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "generator",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 14,
+          "excerpt": "able transitional fuel for backup power in data centres. The use of HVO can reduce lifecycle CO\u2082 emissions by up to 90% compared to fossil diesel and is compatible with existing generator infrastructure. Rolls-Royce SMR made significant advances in 2025, having been chosen as the preferred technology in the Great British Energy \u2013 Nuclear small modular reactor comp"
+        },
+        {
+          "company_filing_evidence_id": "cfe_d82d1f5cba",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "generator",
+          "keyword_family": "component_specific",
+          "evidence_strength": "high",
+          "page_number": 46,
+          "excerpt": "and reduce overall engine environmental impact. Power Systems has developed and published third-party verified Environmental Product Declarations (EPD) for mtu emergency power generator sets. These reports enable Power Systems to demonstrate the environmental footprint of mtu emergency power systems of the mtu 16V4000 DS2500 type and of the 10V1600. The EPDs"
+        },
+        {
+          "company_filing_evidence_id": "cfe_6d04ac3d23",
+          "resolved_issuer_name": "Rolls-Royce Holdings plc",
+          "canonical_entity_name": "Rolls-Royce",
+          "system_label": "data center backup-power equipment buildout",
+          "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+          "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+          "filing_type": "annual_report_pdf",
+          "keyword": "capacity",
+          "keyword_family": "pressure_or_capacity",
+          "evidence_strength": "high",
+          "page_number": 3,
+          "excerpt": "r are summarised opposite. CONTINUED STRATEGIC PROGRESS Portfolio choices and partnerships Strategic initiatives \u2014 Strategic investment by \u010cEZ Group in Rolls-Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non"
+        }
+      ]
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "system_label": "data center backup-power equipment buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "resolved_issuer_name": "",
+      "filing_route_assessment": "",
+      "filing_evidence_item_count": 0,
+      "filing_strong_evidence_item_count": 0,
+      "filing_component_specific_count": 0,
+      "filing_pressure_or_capacity_count": 0,
+      "filing_expansion_or_capex_count": 0,
+      "filing_support_status": "not_yet_supported",
+      "role_specific_evidence_summary": {},
+      "top_filing_evidence_items": []
+    }
+  ],
+  "support_rows_by_role_lane": {
+    "equipment_supplier": [
+      {
+        "canonical_entity_name": "Rolls-Royce",
+        "system_label": "data center backup-power equipment buildout",
+        "priority_tier": "high",
+        "entity_role": "equipment_or_component_supplier",
+        "role_lane": "equipment_supplier",
+        "resolved_issuer_name": "Rolls-Royce Holdings plc",
+        "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+        "filing_evidence_item_count": 16,
+        "filing_strong_evidence_item_count": 10,
+        "filing_component_specific_count": 4,
+        "filing_pressure_or_capacity_count": 2,
+        "filing_expansion_or_capex_count": 4,
+        "filing_support_status": "supported",
+        "role_specific_evidence_summary": {},
+        "top_filing_evidence_items": [
+          {
+            "company_filing_evidence_id": "cfe_ee9b42b53a",
+            "resolved_issuer_name": "Rolls-Royce Holdings plc",
+            "canonical_entity_name": "Rolls-Royce",
+            "system_label": "data center backup-power equipment buildout",
+            "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+            "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+            "filing_type": "annual_report_pdf",
+            "keyword": "engine",
+            "keyword_family": "component_specific",
+            "evidence_strength": "high",
+            "page_number": 3,
+            "excerpt": "Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non-core asset disposals \u2014 Growing Civil LTSA margins for in-production engines \u2014 Time on wing targets raised to >100% with more than half delivered \u2014 Fur"
+          },
+          {
+            "company_filing_evidence_id": "cfe_f0071b0e89",
+            "resolved_issuer_name": "Rolls-Royce Holdings plc",
+            "canonical_entity_name": "Rolls-Royce",
+            "system_label": "data center backup-power equipment buildout",
+            "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+            "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+            "filing_type": "annual_report_pdf",
+            "keyword": "engine",
+            "keyword_family": "component_specific",
+            "evidence_strength": "high",
+            "page_number": 4,
+            "excerpt": "Civil Aerospace is a major manufacturer of aero engines for the large commercial aircraft, regional jets and business aviation markets. The division uses its engineering expertise, in-depth knowledge and capabilities to provide th"
+          },
+          {
+            "company_filing_evidence_id": "cfe_e3cfb89e38",
+            "resolved_issuer_name": "Rolls-Royce Holdings plc",
+            "canonical_entity_name": "Rolls-Royce",
+            "system_label": "data center backup-power equipment buildout",
+            "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+            "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+            "filing_type": "annual_report_pdf",
+            "keyword": "generator",
+            "keyword_family": "component_specific",
+            "evidence_strength": "high",
+            "page_number": 14,
+            "excerpt": "able transitional fuel for backup power in data centres. The use of HVO can reduce lifecycle CO\u2082 emissions by up to 90% compared to fossil diesel and is compatible with existing generator infrastructure. Rolls-Royce SMR made significant advances in 2025, having been chosen as the preferred technology in the Great British Energy \u2013 Nuclear small modular reactor comp"
+          },
+          {
+            "company_filing_evidence_id": "cfe_d82d1f5cba",
+            "resolved_issuer_name": "Rolls-Royce Holdings plc",
+            "canonical_entity_name": "Rolls-Royce",
+            "system_label": "data center backup-power equipment buildout",
+            "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+            "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+            "filing_type": "annual_report_pdf",
+            "keyword": "generator",
+            "keyword_family": "component_specific",
+            "evidence_strength": "high",
+            "page_number": 46,
+            "excerpt": "and reduce overall engine environmental impact. Power Systems has developed and published third-party verified Environmental Product Declarations (EPD) for mtu emergency power generator sets. These reports enable Power Systems to demonstrate the environmental footprint of mtu emergency power systems of the mtu 16V4000 DS2500 type and of the 10V1600. The EPDs"
+          },
+          {
+            "company_filing_evidence_id": "cfe_6d04ac3d23",
+            "resolved_issuer_name": "Rolls-Royce Holdings plc",
+            "canonical_entity_name": "Rolls-Royce",
+            "system_label": "data center backup-power equipment buildout",
+            "document_id": "rrfl_rolls_royce_2025_annual_report_pdf",
+            "document_title": "Rolls-Royce Holdings plc Annual Report 2025",
+            "filing_type": "annual_report_pdf",
+            "keyword": "capacity",
+            "keyword_family": "pressure_or_capacity",
+            "evidence_strength": "high",
+            "page_number": 3,
+            "excerpt": "r are summarised opposite. CONTINUED STRATEGIC PROGRESS Portfolio choices and partnerships Strategic initiatives \u2014 Strategic investment by \u010cEZ Group in Rolls-Royce SMR \u2014 MRO capacity expansion across the network \u2014 New platforms in business aviation \u2014 G800 and Falcon 10X \u2014 Power Systems investment in increased capacity and new engine development \u2014 Non"
+          }
+        ]
+      },
+      {
+        "canonical_entity_name": "AVL",
+        "system_label": "data center backup-power equipment buildout",
+        "priority_tier": "high",
+        "entity_role": "equipment_or_component_supplier",
+        "role_lane": "equipment_supplier",
+        "resolved_issuer_name": "",
+        "filing_route_assessment": "",
+        "filing_evidence_item_count": 0,
+        "filing_strong_evidence_item_count": 0,
+        "filing_component_specific_count": 0,
+        "filing_pressure_or_capacity_count": 0,
+        "filing_expansion_or_capex_count": 0,
+        "filing_support_status": "not_yet_supported",
+        "role_specific_evidence_summary": {},
+        "top_filing_evidence_items": []
+      }
+    ],
+    "utility_or_operator": [],
+    "general_beneficiary": []
+  },
+  "metrics": {
+    "input_entity_expansion_count": 2,
+    "supported_entity_count": 1,
+    "role_lane_counts": {
+      "equipment_supplier": 2,
+      "utility_or_operator": 0,
+      "general_beneficiary": 0
+    }
+  }
+}

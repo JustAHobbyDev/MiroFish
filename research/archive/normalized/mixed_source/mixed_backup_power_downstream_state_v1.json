@@ -1,0 +1,38 @@
+{
+  "name": "mixed_backup_power_downstream_state_v1",
+  "rows": [
+    {
+      "canonical_entity_name": "Rolls-Royce",
+      "system_label": "data center backup-power equipment buildout",
+      "entity_role": "equipment_or_component_supplier",
+      "priority_tier": "high",
+      "followup_status": "already_supported",
+      "downstream_status": "public_filing_supported",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "filing_support_status": "supported",
+      "filing_strong_evidence_item_count": 10,
+      "private_diligence_plan_id": "",
+      "next_action": "reuse_existing_filing_support"
+    },
+    {
+      "canonical_entity_name": "AVL",
+      "system_label": "data center backup-power equipment buildout",
+      "entity_role": "equipment_or_component_supplier",
+      "priority_tier": "high",
+      "followup_status": "private_route_resolved",
+      "downstream_status": "private_company_diligence_required",
+      "resolved_issuer_name": "AVL List GmbH",
+      "filing_route_assessment": "private_company_official_company_route",
+      "filing_support_status": "not_yet_supported",
+      "filing_strong_evidence_item_count": 0,
+      "private_diligence_plan_id": "pcd_avl",
+      "next_action": "run_private_company_diligence"
+    }
+  ],
+  "metrics": {
+    "input_queue_count": 2,
+    "public_filing_supported_count": 1,
+    "private_company_diligence_required_count": 1
+  }
+}

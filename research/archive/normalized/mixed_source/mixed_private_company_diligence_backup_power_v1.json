@@ -1,0 +1,56 @@
+{
+  "name": "private_company_diligence_plan_batch_v1",
+  "plans": [
+    {
+      "private_company_diligence_plan_id": "pcd_avl",
+      "canonical_entity_name": "AVL",
+      "resolved_issuer_name": "AVL List GmbH",
+      "system_label": "data center backup-power equipment buildout",
+      "diligence_status": "planned",
+      "route_type": "private_company",
+      "priority_tier": "targeted",
+      "source_priorities": [
+        "official_company_site",
+        "official_press_releases",
+        "financing_announcements",
+        "private_credit_or_abs_materials",
+        "trade_press"
+      ],
+      "query_terms": [
+        "AVL List GmbH",
+        "AVL List GmbH financing",
+        "AVL List GmbH debt issuance",
+        "AVL List GmbH private placement",
+        "AVL List GmbH investor",
+        "AVL List GmbH press release",
+        "AVL List GmbH capacity expansion"
+      ],
+      "next_actions": [
+        "Collect official company press releases and financing announcements.",
+        "Look for debt, ABS, private placement, and campus-capacity materials.",
+        "Do not route this issuer into public-company filing collection."
+      ],
+      "origin_live_resolution_result": {
+        "canonical_entity_name": "AVL",
+        "live_resolution_status": "resolved_private_company_route",
+        "filing_route_assessment": "private_company_official_company_route"
+      },
+      "evidence": [
+        {
+          "evidence_type": "official_company_legal_source",
+          "source_url": "https://www.avl.com/en-it/imprint",
+          "note": "Official AVL imprint page identifying AVL LIST GMBH, Austrian commercial-register details, and private-company legal form."
+        },
+        {
+          "evidence_type": "official_company_source",
+          "source_url": "https://www.avl.com/en/press/press-release/avl-opens-new-hydrogen-and-fuel-cell-test-center-graz",
+          "note": "Official AVL company press page describing AVL as a large operating company and confirming the corporate site as the primary diligence route rather than a public filing route."
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "input_live_resolution_count": 2,
+    "private_company_plan_count": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "backup_power_live_resolution": {
+    "evaluated_real_entity_count": 2,
+    "resolved_direct_foreign_public_route_count": 1,
+    "resolved_private_company_route_count": 1,
+    "unresolved_count": 0
+  },
+  "backup_power_downstream_state": {
+    "input_queue_count": 2,
+    "public_filing_supported_count": 1,
+    "private_company_diligence_required_count": 1
+  },
+  "rolls_royce_filing_support": {
+    "filing_support_status": "supported",
+    "filing_strong_evidence_item_count": 10,
+    "filing_component_specific_count": 4,
+    "filing_expansion_or_capex_count": 4
+  },
+  "avl_private_route": {
+    "resolved_issuer_name": "AVL List GmbH",
+    "followup_status": "private_route_resolved",
+    "next_action": "run_private_company_diligence"
+  },
+  "cyrusone_private_diligence": {
+    "parsed_document_count": 4,
+    "evidence_item_count": 58,
+    "strong_evidence_item_count": 51,
+    "financing_or_capital_count": 4
+  },
+  "known_limitations": [
+    "Private-company HTML parsing is intentionally lightweight and still admits some low-strength site-navigation noise.",
+    "AVL has route resolution and a private diligence plan, but no collected AVL diligence documents yet."
+  ]
+}

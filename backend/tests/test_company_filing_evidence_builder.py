@@ -43,3 +43,43 @@ def test_build_company_filing_evidence_batch() -> None:
     assert collection["summary"]["family_counts"]["component_specific"] == 1
     assert collection["summary"]["family_counts"]["system_context"] == 1
     assert collection["evidence_items"][0]["keyword_family"] == "component_specific"
+
+
+def test_build_company_filing_evidence_batch_backup_power_terms() -> None:
+    batch = build_company_filing_evidence_batch(
+        {
+            "name": "parse_batch_v1",
+            "parsed_collections": [
+                {
+                    "resolved_issuer_name": "Rolls-Royce Holdings plc",
+                    "canonical_entity_name": "Rolls-Royce",
+                    "system_label": "data center backup-power equipment buildout",
+                    "filing_route_assessment": "rolls_royce_route",
+                    "parsed_documents": [
+                        {
+                            "document_id": "doc1",
+                            "document_title": "Annual Report",
+                            "filing_type": "annual_report",
+                            "parse_status": "parsed",
+                            "evidence_snippets": [
+                                {
+                                    "keyword": "engine",
+                                    "page_number": 6,
+                                    "excerpt": "Engine manufacturing capacity expanded.",
+                                },
+                                {
+                                    "keyword": "backup power",
+                                    "page_number": 8,
+                                    "excerpt": "Backup power demand increased for data center growth.",
+                                },
+                            ],
+                        }
+                    ],
+                }
+            ],
+        }
+    )
+
+    collection = batch["evidence_collections"][0]
+    assert collection["summary"]["family_counts"]["component_specific"] == 1
+    assert collection["summary"]["family_counts"]["system_context"] == 1

@@ -9,10 +9,10 @@ import re
 from typing import Any, Dict, List
 
 
-COMPONENT_KEYWORDS = {"transformer", "switchgear", "substation"}
+COMPONENT_KEYWORDS = {"transformer", "switchgear", "substation", "generator", "engine", "enclosure"}
 PRESSURE_KEYWORDS = {"backlog", "shortage", "capacity"}
 EXPANSION_KEYWORDS = {"manufacturing", "expansion", "capex"}
-SYSTEM_KEYWORDS = {"power", "grid", "load", "hyperscale", "data center"}
+SYSTEM_KEYWORDS = {"power", "grid", "load", "hyperscale", "data center", "backup power"}
 
 
 def _coerce_string(value: Any) -> str:

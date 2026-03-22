@@ -149,6 +149,12 @@ from .bounded_entity_filing_support import build_bounded_entity_filing_support_b
 from .bounded_entity_filing_priority import build_bounded_entity_filing_priority_batch
 from .issuer_resolution_planner import build_issuer_resolution_batch
 from .private_company_diligence_planner import build_private_company_diligence_plan_batch
+from .private_company_diligence_parser import build_private_company_diligence_parse_batch
+from .private_company_diligence_evidence_builder import (
+    build_private_company_diligence_evidence_batch,
+)
+from .bounded_entity_downstream_state_builder import build_bounded_entity_downstream_state
+from .backup_power_live_resolution_builder import build_backup_power_live_resolution_batch
 from .utility_lane_downstream_state_builder import build_utility_lane_downstream_state
 from .structural_pressure_narrower import build_structural_pressure_narrowing_batch
 from .narrowed_bounded_universe_adapter import build_narrowed_bounded_universe_candidate_batch
@@ -285,6 +291,10 @@ __all__ = [
     'parse_company_filing_document',
     'build_issuer_resolution_batch',
     'build_private_company_diligence_plan_batch',
+    'build_private_company_diligence_parse_batch',
+    'build_private_company_diligence_evidence_batch',
+    'build_bounded_entity_downstream_state',
+    'build_backup_power_live_resolution_batch',
     'build_utility_lane_downstream_state',
     'build_structural_pressure_narrowing_batch',
     'build_narrowed_bounded_universe_candidate_batch',
