@@ -165,6 +165,9 @@ from .bottleneck_role_classifier import build_bottleneck_role_classification_bat
 from .filing_priority_review_surface_adapter import build_filing_priority_review_surface_batch
 from .public_market_research_row_builder import build_public_market_research_row_batch
 from .public_market_scan_candidate_builder import build_public_market_scan_candidate_batch
+from .public_market_pick_assessment_builder import (
+    build_public_market_pick_assessment_batch,
+)
 from .public_symbol_followup_builder import build_public_symbol_followup_batch
 from .public_symbol_followup_resolution_builder import (
     build_public_symbol_followup_resolution_batch,

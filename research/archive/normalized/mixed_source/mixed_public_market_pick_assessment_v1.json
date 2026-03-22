@@ -1,0 +1,143 @@
+{
+  "name": "public_market_pick_assessment_batch_v1",
+  "assessment_rows": [
+    {
+      "name": "GE Vernova on grid equipment and transformer buildout",
+      "underlying": "GEV",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "exchange_scope": "direct_public_market_symbol",
+      "promotion_status": "pick_candidate",
+      "final_expression": "shares",
+      "ranking_score": 85.39
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "exchange_scope": "foreign_home_market_code",
+      "promotion_status": "pick_candidate",
+      "final_expression": "shares",
+      "ranking_score": 83.98
+    },
+    {
+      "name": "Eaton on grid equipment and transformer buildout",
+      "underlying": "ETN",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "exchange_scope": "direct_public_market_symbol",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "shares",
+      "ranking_score": 66.0
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "exchange_scope": "foreign_home_market_code",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "shares",
+      "ranking_score": 65.29
+    },
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "role_label": "supply_chain_beneficiary",
+      "exchange_scope": "foreign_home_market_symbol",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "shares",
+      "ranking_score": 65.29
+    },
+    {
+      "name": "DTE on data center utility response buildout",
+      "underlying": "DTE",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "exchange_scope": "direct_public_market_symbol",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "reject",
+      "ranking_score": 53.05
+    },
+    {
+      "name": "FirstEnergy on data center utility response buildout",
+      "underlying": "FE",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "exchange_scope": "direct_public_market_symbol",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "reject",
+      "ranking_score": 53.05
+    },
+    {
+      "name": "Exelon on data center utility response buildout",
+      "underlying": "EXC",
+      "market_theme": "data center utility response buildout",
+      "role_label": "capacity_response_operator",
+      "exchange_scope": "direct_public_market_symbol",
+      "promotion_status": "watchlist_candidate",
+      "final_expression": "reject",
+      "ranking_score": 51.55
+    }
+  ],
+  "metrics": {
+    "input_pick_row_count": 8,
+    "shares_count": 5,
+    "leaps_call_count": 0,
+    "reject_count": 3,
+    "foreign_home_market_expression_count": 3
+  },
+  "role_expression_counts": {
+    "bottleneck_candidate": {
+      "shares": 2,
+      "leaps_call": 0,
+      "reject": 0
+    },
+    "supply_chain_beneficiary": {
+      "shares": 3,
+      "leaps_call": 0,
+      "reject": 0
+    },
+    "capacity_response_operator": {
+      "shares": 0,
+      "leaps_call": 0,
+      "reject": 3
+    }
+  },
+  "market_theme_expression_counts": {
+    "grid equipment and transformer buildout": {
+      "shares": 4,
+      "leaps_call": 0,
+      "reject": 0
+    },
+    "data center backup-power equipment buildout": {
+      "shares": 1,
+      "leaps_call": 0,
+      "reject": 0
+    },
+    "data center utility response buildout": {
+      "shares": 0,
+      "leaps_call": 0,
+      "reject": 3
+    }
+  },
+  "exchange_scope_expression_counts": {
+    "direct_public_market_symbol": {
+      "shares": 2,
+      "leaps_call": 0,
+      "reject": 3
+    },
+    "foreign_home_market_code": {
+      "shares": 2,
+      "leaps_call": 0,
+      "reject": 0
+    },
+    "foreign_home_market_symbol": {
+      "shares": 1,
+      "leaps_call": 0,
+      "reject": 0
+    }
+  }
+}
