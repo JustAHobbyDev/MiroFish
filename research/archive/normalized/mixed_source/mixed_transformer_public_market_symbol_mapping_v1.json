@@ -1,0 +1,85 @@
+{
+  "name": "public_market_symbol_mapping_batch_v1",
+  "symbol_rows": [
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "resolved_issuer_name": "GE Vernova Inc.",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 95,
+      "mapped_public_symbol": "GEV",
+      "symbol_mapping_status": "mapped_public_symbol",
+      "exchange_scope": "direct_public_market_symbol",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.gevernova.com/news/press-releases/ge-vernova-reports-third-quarter-2025-financial",
+        "note": "Official GE Vernova release identifying the issuer as GE Vernova Inc. (NYSE: GEV)."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "ge_vernova_ir_and_sec_edgar",
+      "live_resolution_status": "resolved_direct_public_route"
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "resolved_issuer_name": "Eaton Corporation plc",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 83,
+      "mapped_public_symbol": "ETN",
+      "symbol_mapping_status": "mapped_public_symbol",
+      "exchange_scope": "direct_public_market_symbol",
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.eaton.com/us/en-us/company/news-insights/news-releases/2025/eaton-reports-record-third-quarter-2025-results-with-accelerating-orders.html",
+        "note": "Official Eaton release identifying the issuer as Eaton Corporation plc (NYSE: ETN)."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "eaton_ir_and_sec_edgar",
+      "live_resolution_status": "resolved_direct_public_route"
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "resolved_issuer_name": "Mitsubishi Electric Corporation",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 90,
+      "mapped_public_symbol": "6503",
+      "symbol_mapping_status": "mapped_foreign_public_symbol",
+      "exchange_scope": "foreign_home_market_code",
+      "symbol_mapping_basis": "official_ir_stock_code_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.mitsubishielectric.com/investors/stock/info/",
+        "note": "Official Mitsubishi Electric stock information page showing Tokyo Stock Exchange stock code 6503."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "mitsubishi_electric_ir_and_annual_securities_report",
+      "live_resolution_status": "resolved_direct_foreign_public_route"
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 112,
+      "mapped_public_symbol": "",
+      "symbol_mapping_status": "public_symbol_followup_required",
+      "exchange_scope": "public_route_unmapped",
+      "symbol_mapping_basis": "",
+      "symbol_mapping_evidence": {},
+      "symbol_mapping_action": "resolve_primary_listing_or_market_symbol_before_market_research_row",
+      "filing_route_assessment": "hitachi_ir_and_edinet",
+      "live_resolution_status": "resolved_parent_route"
+    }
+  ],
+  "metrics": {
+    "input_handoff_row_count": 5,
+    "public_investable_input_count": 4,
+    "mapped_public_symbol_count": 2,
+    "mapped_foreign_public_symbol_count": 1,
+    "followup_required_count": 1
+  }
+}

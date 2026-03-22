@@ -1,0 +1,111 @@
+{
+  "name": "bottleneck_role_classification_batch_v1",
+  "classification_rows": [
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "GE Vernova",
+      "resolved_issuer_name": "GE Vernova Inc.",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "bottleneck_candidate",
+      "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 95,
+      "support_strong_evidence_item_count": 16,
+      "support_component_specific_count": 6,
+      "support_pressure_or_capacity_count": 5,
+      "support_expansion_or_capex_count": 4,
+      "source_classes": [
+        "company_filing"
+      ]
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "resolved_issuer_name": "Mitsubishi Electric Corporation",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "bottleneck_candidate",
+      "classification_reason": "supplier_in_constrained_component_layer_with_strong_component_pressure_and_expansion_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 90,
+      "support_strong_evidence_item_count": 12,
+      "support_component_specific_count": 4,
+      "support_pressure_or_capacity_count": 4,
+      "support_expansion_or_capex_count": 4,
+      "source_classes": [
+        "company_filing"
+      ]
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "resolved_issuer_name": "Hitachi, Ltd.",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "supply_chain_beneficiary",
+      "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 112,
+      "support_strong_evidence_item_count": 18,
+      "support_component_specific_count": 1,
+      "support_pressure_or_capacity_count": 10,
+      "support_expansion_or_capex_count": 7,
+      "source_classes": [
+        "company_filing"
+      ]
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Eaton",
+      "resolved_issuer_name": "Eaton Corporation plc",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "supply_chain_beneficiary",
+      "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 83,
+      "support_strong_evidence_item_count": 11,
+      "support_component_specific_count": 2,
+      "support_pressure_or_capacity_count": 6,
+      "support_expansion_or_capex_count": 3,
+      "source_classes": [
+        "company_filing"
+      ]
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "canonical_entity_name": "Westrafo",
+      "resolved_issuer_name": "",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "supply_chain_beneficiary",
+      "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+      "market_handoff_status": "hold_for_more_corroboration",
+      "support_route_type": "",
+      "support_status": "not_yet_supported",
+      "route_aware_priority_score": 20,
+      "support_strong_evidence_item_count": 0,
+      "support_component_specific_count": 0,
+      "support_pressure_or_capacity_count": 0,
+      "support_expansion_or_capex_count": 0,
+      "source_classes": [
+        "company_filing"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_review_row_count": 5,
+    "bottleneck_candidate_count": 2,
+    "capacity_response_operator_count": 0,
+    "supply_chain_beneficiary_count": 3
+  }
+}
