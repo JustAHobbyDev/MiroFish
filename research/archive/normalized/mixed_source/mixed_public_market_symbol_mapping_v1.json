@@ -1,0 +1,85 @@
+{
+  "name": "public_market_symbol_mapping_batch_v1",
+  "symbol_rows": [
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_supplier_expression",
+      "route_aware_priority_score": 98,
+      "mapped_public_symbol": "",
+      "symbol_mapping_status": "public_symbol_followup_required_foreign_route",
+      "exchange_scope": "foreign_public_route_unmapped",
+      "symbol_mapping_basis": "",
+      "symbol_mapping_evidence": {},
+      "symbol_mapping_action": "resolve_primary_listing_or_market_symbol_before_market_research_row",
+      "filing_route_assessment": "rolls_royce_ir_and_annual_report_route",
+      "live_resolution_status": "resolved_direct_foreign_public_route"
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "DTE",
+      "resolved_issuer_name": "DTE Energy Company",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_operator_expression",
+      "route_aware_priority_score": 98,
+      "mapped_public_symbol": "DTE",
+      "symbol_mapping_status": "mapped_public_symbol",
+      "exchange_scope": "direct_public_market_symbol",
+      "symbol_mapping_basis": "official_sec_lookup_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=DTE&type=10-k&owner=exclude&count=10&output=atom",
+        "note": "Official SEC ticker lookup for DTE showing the current 10-K filing route."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "dte_sec_edgar_combined_parent_route",
+      "live_resolution_status": "resolved_direct_public_route"
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "FirstEnergy",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_operator_expression",
+      "route_aware_priority_score": 97,
+      "mapped_public_symbol": "FE",
+      "symbol_mapping_status": "mapped_public_symbol",
+      "exchange_scope": "direct_public_market_symbol",
+      "symbol_mapping_basis": "official_sec_lookup_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=FE&type=10-k&owner=exclude&count=10&output=atom",
+        "note": "Official SEC ticker lookup for FE showing the current 10-K filing route."
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "firstenergy_sec_edgar_combined_parent_route",
+      "live_resolution_status": "resolved_direct_public_route"
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "Exelon",
+      "resolved_issuer_name": "Exelon Corporation",
+      "market_handoff_status": "public_investable_now",
+      "market_expression_scope": "public_operator_expression",
+      "route_aware_priority_score": 75,
+      "mapped_public_symbol": "EXC",
+      "symbol_mapping_status": "mapped_public_symbol",
+      "exchange_scope": "direct_public_market_symbol",
+      "symbol_mapping_basis": "official_filing_document_url",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.sec.gov/Archives/edgar/data/8192/000110935726000018/exc-20251231.htm",
+        "document_title": "Exelon Corporation Form 10-K for fiscal year ended December 31, 2025"
+      },
+      "symbol_mapping_action": "build_market_research_row_from_mapped_public_symbol",
+      "filing_route_assessment": "exelon_ir_and_sec_edgar_combined_parent_route",
+      "live_resolution_status": "resolved_direct_public_route"
+    }
+  ],
+  "metrics": {
+    "input_handoff_row_count": 6,
+    "public_investable_input_count": 4,
+    "mapped_public_symbol_count": 3,
+    "mapped_foreign_public_symbol_count": 0,
+    "followup_required_count": 1
+  }
+}

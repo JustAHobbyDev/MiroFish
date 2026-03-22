@@ -1,0 +1,49 @@
+{
+  "name": "private_market_followup_batch_v1",
+  "followup_rows": [
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "AVL",
+      "resolved_issuer_name": "AVL List GmbH",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "market_handoff_status": "supplier_chain_followup",
+      "private_followup_status": "private_supplier_chain_followup",
+      "private_followup_action": "map_public_customers_suppliers_and_parent_expressions",
+      "priority_source_classes": [
+        "official_company_site",
+        "official_press_releases",
+        "trade_press",
+        "public_customer_filings",
+        "public_supplier_filings"
+      ],
+      "route_aware_priority_score": 89,
+      "route_aware_priority_tier": "high"
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "CyrusOne",
+      "resolved_issuer_name": "CyrusOne",
+      "entity_role": "capacity_operator_or_owner",
+      "role_lane": "utility_or_operator",
+      "market_handoff_status": "private_watchlist_only",
+      "private_followup_status": "private_capacity_watchlist_followup",
+      "private_followup_action": "track_private_capacity_financing_and_public_counterparties",
+      "priority_source_classes": [
+        "official_company_site",
+        "financing_announcements",
+        "private_credit_or_abs_materials",
+        "trade_press",
+        "public_utility_counterparty_filings"
+      ],
+      "route_aware_priority_score": 207,
+      "route_aware_priority_tier": "high"
+    }
+  ],
+  "metrics": {
+    "input_handoff_row_count": 6,
+    "private_followup_count": 2,
+    "private_supplier_chain_followup_count": 1,
+    "private_capacity_watchlist_followup_count": 1
+  }
+}
