@@ -1,0 +1,23 @@
+{
+  "name": "mixed_bounded_entity_filing_priority_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_priority_data_center_v1.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "supported_priority_count": 4,
+    "high_priority_count": 4
+  },
+  "filing_backed_high_priority": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Eaton",
+    "Mitsubishi Electric"
+  ],
+  "resolve_and_collect_queue": [
+    "Schneider Electric",
+    "DTE",
+    "Exelon",
+    "FirstEnergy",
+    "Southern"
+  ],
+  "decision": "advance the supported overlap names immediately and use the unresolved queue for the next live filing collection pass"
+}

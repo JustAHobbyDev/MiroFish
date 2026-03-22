@@ -1,0 +1,28 @@
+{
+  "name": "mixed_bounded_entity_candidates_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_candidates_v2.json",
+  "first_downstream_entity_expansion_test": {
+    "system_label": "data center power demand buildout",
+    "initial_priority_entities": [
+      "Eaton",
+      "Hitachi Energy",
+      "Schneider Electric",
+      "Exelon",
+      "DTE",
+      "FirstEnergy",
+      "Southern",
+      "Mitsubishi Electric",
+      "GE Vernova"
+    ],
+    "holdout_entities": [
+      "ABB",
+      "CyrusOne",
+      "EdgeCore",
+      "Jabil",
+      "Rolls-Royce",
+      "Rowan Digital",
+      "Westrafo"
+    ]
+  },
+  "decision": "use this real-only data-center set for the first filing-expansion pass"
+}

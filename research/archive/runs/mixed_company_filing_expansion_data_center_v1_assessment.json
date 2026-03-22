@@ -1,0 +1,24 @@
+{
+  "name": "mixed_company_filing_expansion_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_company_filing_expansion_data_center_v1.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "company_filing_expansion_plan_count": 9
+  },
+  "high_priority": [
+    "Eaton",
+    "Hitachi Energy",
+    "Schneider Electric"
+  ],
+  "medium_priority": [
+    "DTE",
+    "Exelon",
+    "FirstEnergy",
+    "Mitsubishi Electric"
+  ],
+  "low_priority": [
+    "GE Vernova",
+    "Southern"
+  ],
+  "decision": "use this as the first real-only filing-expansion queue for the data-center power lane"
+}

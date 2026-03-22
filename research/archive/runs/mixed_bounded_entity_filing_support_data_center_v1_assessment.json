@@ -1,0 +1,22 @@
+{
+  "name": "mixed_bounded_entity_filing_support_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_support_data_center_v1.json",
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "supported_entity_count": 4
+  },
+  "inherited_supported_entities": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Mitsubishi Electric",
+    "Eaton"
+  ],
+  "unresolved_collection_targets": [
+    "Schneider Electric",
+    "DTE",
+    "Exelon",
+    "FirstEnergy",
+    "Southern"
+  ],
+  "decision": "use the inherited supported set as filing-backed data-center anchors and the unresolved set as the next live collection queue"
+}

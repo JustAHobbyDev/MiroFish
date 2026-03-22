@@ -1,0 +1,33 @@
+{
+  "name": "mixed_issuer_resolution_data_center_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_issuer_resolution_data_center_v1.json",
+  "metrics": {
+    "input_company_filing_expansion_plan_count": 9,
+    "issuer_resolution_plan_count": 9
+  },
+  "route_hints": {
+    "Eaton": "domestic_route_hint",
+    "Hitachi Energy": "route_unknown",
+    "Schneider Electric": "domestic_route_hint",
+    "DTE": "route_unknown",
+    "Exelon": "domestic_route_hint",
+    "FirstEnergy": "route_unknown",
+    "Mitsubishi Electric": "route_unknown",
+    "GE Vernova": "domestic_route_hint",
+    "Southern": "route_unknown"
+  },
+  "resolve_first": [
+    "Eaton",
+    "Hitachi Energy",
+    "Schneider Electric"
+  ],
+  "resolve_after_high": [
+    "DTE",
+    "Exelon",
+    "FirstEnergy",
+    "Mitsubishi Electric",
+    "GE Vernova",
+    "Southern"
+  ],
+  "decision": "use this issuer-resolution queue for the next live data-center filing pass"
+}

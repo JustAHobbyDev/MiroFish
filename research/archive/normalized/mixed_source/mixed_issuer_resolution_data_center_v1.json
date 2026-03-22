@@ -1,0 +1,281 @@
+{
+  "name": "issuer_resolution_batch_v1",
+  "plans": [
+    {
+      "issuer_resolution_plan_id": "irp_eaton_b566943c",
+      "origin_company_filing_expansion_plan_id": "cfep_eaton_b566943c",
+      "canonical_entity_name": "Eaton",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "Eaton",
+        "Eaton investor relations",
+        "Eaton annual report",
+        "Eaton SEC EDGAR",
+        "Eaton 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_hitachi_energy_616f4176",
+      "origin_company_filing_expansion_plan_id": "cfep_hitachi_energy_616f4176",
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Hitachi Energy",
+        "Hitachi Energy investor relations",
+        "Hitachi Energy annual report",
+        "Hitachi Energy SEC EDGAR",
+        "Hitachi Energy 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_schneider_electric_f076feef",
+      "origin_company_filing_expansion_plan_id": "cfep_schneider_electric_f076feef",
+      "canonical_entity_name": "Schneider Electric",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "member_entities": [
+        "Schneider Electric"
+      ],
+      "supporting_titles": [
+        "Schneider Electric to invest $700M in US manufacturing"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "Schneider Electric",
+        "Schneider Electric investor relations",
+        "Schneider Electric annual report",
+        "Schneider Electric SEC EDGAR",
+        "Schneider Electric 10-K"
+      ],
+      "resolution_queue_group": "resolve_first",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_dte_9cd99f0f",
+      "origin_company_filing_expansion_plan_id": "cfep_dte_9cd99f0f",
+      "canonical_entity_name": "DTE",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "DTE"
+      ],
+      "supporting_titles": [
+        "DTE inks first data center deal to grow electric load 25%"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "DTE",
+        "DTE investor relations",
+        "DTE annual report",
+        "DTE SEC EDGAR",
+        "DTE 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_exelon_6585a7eb",
+      "origin_company_filing_expansion_plan_id": "cfep_exelon_6585a7eb",
+      "canonical_entity_name": "Exelon",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Exelon"
+      ],
+      "supporting_titles": [
+        "US utility Exelon reports data center pipeline of 33GW"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "Exelon",
+        "Exelon investor relations",
+        "Exelon annual report",
+        "Exelon SEC EDGAR",
+        "Exelon 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_firstenergy_403fefcc",
+      "origin_company_filing_expansion_plan_id": "cfep_firstenergy_403fefcc",
+      "canonical_entity_name": "FirstEnergy",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "FirstEnergy"
+      ],
+      "supporting_titles": [
+        "FirstEnergy expects peak load to grow 45% by 2035 on data centers"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "FirstEnergy",
+        "FirstEnergy investor relations",
+        "FirstEnergy annual report",
+        "FirstEnergy SEC EDGAR",
+        "FirstEnergy 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_mitsubishi_electric_11b8ea5e",
+      "origin_company_filing_expansion_plan_id": "cfep_mitsubishi_electric_11b8ea5e",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "member_entities": [
+        "Mitsubishi Electric"
+      ],
+      "supporting_titles": [
+        "Mitsubishi Electric subsidiary invests $86M in switchgear factory"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Mitsubishi Electric",
+        "Mitsubishi Electric investor relations",
+        "Mitsubishi Electric annual report",
+        "Mitsubishi Electric SEC EDGAR",
+        "Mitsubishi Electric 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_ge_vernova_a951b772",
+      "origin_company_filing_expansion_plan_id": "cfep_ge_vernova_a951b772",
+      "canonical_entity_name": "GE Vernova",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "low",
+      "member_entities": [
+        "GE Vernova"
+      ],
+      "supporting_titles": [
+        "GE Vernova to invest nearly $600M in US factories"
+      ],
+      "route_hypothesis": "domestic_route_hint",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "10-K / 10-Q / 8-K if public"
+      ],
+      "issuer_resolution_query_terms": [
+        "GE Vernova",
+        "GE Vernova investor relations",
+        "GE Vernova annual report",
+        "GE Vernova SEC EDGAR",
+        "GE Vernova 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    },
+    {
+      "issuer_resolution_plan_id": "irp_southern_7845ef03",
+      "origin_company_filing_expansion_plan_id": "cfep_southern_7845ef03",
+      "canonical_entity_name": "Southern",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "low",
+      "member_entities": [
+        "Southern"
+      ],
+      "supporting_titles": [
+        "As load grows, Southern raises spending plan to $81B"
+      ],
+      "route_hypothesis": "route_unknown",
+      "foreign_geography_hints": [],
+      "candidate_resolution_paths": [
+        "corporate website or investor relations",
+        "SEC EDGAR issuer search",
+        "annual report or equivalent"
+      ],
+      "issuer_resolution_query_terms": [
+        "Southern",
+        "Southern investor relations",
+        "Southern annual report",
+        "Southern SEC EDGAR",
+        "Southern 10-K"
+      ],
+      "resolution_queue_group": "resolve_after_high",
+      "issuer_resolution_status": "planned_not_resolved",
+      "resolution_note": "No live issuer-resolution performed in v1."
+    }
+  ],
+  "metrics": {
+    "input_company_filing_expansion_plan_count": 9,
+    "issuer_resolution_plan_count": 9
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "name": "company_filing_expansion_batch_v1",
+  "plans": [
+    {
+      "company_filing_expansion_plan_id": "cfep_eaton_b566943c",
+      "canonical_entity_name": "Eaton",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_eaton_2025-11-21_07e13373",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_eaton_2025-11-21_07e13373"
+      ],
+      "member_entities": [
+        "Eaton"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_08976a2c7918a320"
+      ],
+      "supporting_titles": [
+        "Eaton invests $340M in US transformer production"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Eaton.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_hitachi_energy_616f4176",
+      "canonical_entity_name": "Hitachi Energy",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_hitachi_energy_2025-11-21_3fb9e1c1",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_hitachi_2025-11-21_1a5fa047",
+        "bec_data_center_power_demand_buildout_hitachi_energy_2025-11-21_3fb9e1c1"
+      ],
+      "member_entities": [
+        "Hitachi",
+        "Hitachi Energy"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_921740cadac635c6",
+        "trade_press_c906877e7f8ac2bc"
+      ],
+      "supporting_titles": [
+        "Hitachi Energy commits $250M to address transformer shortage",
+        "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Hitachi Energy.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_schneider_electric_f076feef",
+      "canonical_entity_name": "Schneider Electric",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "high",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_schneider_electric_2025-11-21_b522e1b9",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_schneider_electric_2025-11-21_b522e1b9"
+      ],
+      "member_entities": [
+        "Schneider Electric"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_c838cb21478bfff1",
+        "trade_press_cac8ad2ff3742510"
+      ],
+      "supporting_titles": [
+        "Schneider Electric to invest $700M in US manufacturing"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Schneider Electric.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_dte_9cd99f0f",
+      "canonical_entity_name": "DTE",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_dte_2025-11-21_a03ac167",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_dte_2025-11-21_a03ac167"
+      ],
+      "member_entities": [
+        "DTE"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_8af4de468aa71b03"
+      ],
+      "supporting_titles": [
+        "DTE inks first data center deal to grow electric load 25%"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for DTE.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_exelon_6585a7eb",
+      "canonical_entity_name": "Exelon",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_exelon_2025-11-21_0d76a543",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_exelon_2025-11-21_0d76a543"
+      ],
+      "member_entities": [
+        "Exelon"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_099f9d0368e5000f"
+      ],
+      "supporting_titles": [
+        "US utility Exelon reports data center pipeline of 33GW"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Exelon.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_firstenergy_403fefcc",
+      "canonical_entity_name": "FirstEnergy",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_firstenergy_2025-11-21_fec4cb15",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_firstenergy_2025-11-21_fec4cb15"
+      ],
+      "member_entities": [
+        "FirstEnergy"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_8434daa99144e894"
+      ],
+      "supporting_titles": [
+        "FirstEnergy expects peak load to grow 45% by 2035 on data centers"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for FirstEnergy.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_mitsubishi_electric_11b8ea5e",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "medium",
+      "entity_role": "equipment_or_component_supplier",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_mitsubishi_electric_2025-11-21_eaf80c76",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_mitsubishi_electric_2025-11-21_eaf80c76"
+      ],
+      "member_entities": [
+        "Mitsubishi Electric"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_9f4a057076b0ca77"
+      ],
+      "supporting_titles": [
+        "Mitsubishi Electric subsidiary invests $86M in switchgear factory"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Mitsubishi Electric.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_ge_vernova_a951b772",
+      "canonical_entity_name": "GE Vernova",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "low",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_ge_vernova_2025-11-21_7788e8b6",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_ge_vernova_2025-11-21_7788e8b6"
+      ],
+      "member_entities": [
+        "GE Vernova"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_3d1582c75dda6698"
+      ],
+      "supporting_titles": [
+        "GE Vernova to invest nearly $600M in US factories"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for GE Vernova.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    },
+    {
+      "company_filing_expansion_plan_id": "cfep_southern_7845ef03",
+      "canonical_entity_name": "Southern",
+      "system_label": "data center power demand buildout",
+      "priority_tier": "low",
+      "entity_role": "capacity_operator_or_owner",
+      "origin_corporate_family_candidate_id": "cf_data_center_power_demand_buildout_southern_2025-11-21_aad9a802",
+      "origin_bounded_entity_candidate_ids": [
+        "bec_data_center_power_demand_buildout_southern_2025-11-21_aad9a802"
+      ],
+      "member_entities": [
+        "Southern"
+      ],
+      "supporting_artifact_ids": [
+        "trade_press_7cab8b3aa2571296"
+      ],
+      "supporting_titles": [
+        "As load grows, Southern raises spending plan to $81B"
+      ],
+      "local_source_classes": [
+        "trade_press"
+      ],
+      "local_coverage_status": "single_source_local",
+      "issuer_resolution_status": "unresolved",
+      "company_filing_status": "not_collected",
+      "candidate_filing_form_sets": {
+        "domestic_public": [
+          "10-K",
+          "10-Q",
+          "8-K"
+        ],
+        "foreign_public": [
+          "20-F"
+        ]
+      },
+      "resolution_tasks": [
+        "Resolve the legal issuer identity for Southern.",
+        "Determine whether the issuer is public, private, or foreign-listed.",
+        "If public, map the issuer to the appropriate filing route before collection."
+      ],
+      "next_priority_source_classes": [
+        "company_filing",
+        "company_release",
+        "government"
+      ],
+      "collection_gate": "resolve_issuer_before_filing_fetch",
+      "ready_for_live_resolution": true,
+      "blocking_reason": "issuer identity and listing status unresolved"
+    }
+  ],
+  "metrics": {
+    "input_entity_expansion_count": 9,
+    "company_filing_expansion_plan_count": 9
+  }
+}

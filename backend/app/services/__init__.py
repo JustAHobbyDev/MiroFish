@@ -146,6 +146,7 @@ from .company_filing_parser import (
 )
 from .company_filing_evidence_builder import build_company_filing_evidence_batch
 from .bounded_entity_filing_support import build_bounded_entity_filing_support_batch
+from .bounded_entity_filing_priority import build_bounded_entity_filing_priority_batch
 from .issuer_resolution_planner import build_issuer_resolution_batch
 from .mispricing_screening import (
     DEFAULT_MISPRICING_WEIGHTS,
@@ -272,6 +273,7 @@ __all__ = [
     'build_company_filing_parse_batch',
     'build_company_filing_evidence_batch',
     'build_bounded_entity_filing_support_batch',
+    'build_bounded_entity_filing_priority_batch',
     'parse_company_filing_document',
     'build_issuer_resolution_batch',
     'DEFAULT_MISPRICING_WEIGHTS',

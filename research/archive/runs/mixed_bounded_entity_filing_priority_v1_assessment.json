@@ -1,0 +1,26 @@
+{
+  "name": "mixed_bounded_entity_filing_priority_v1_assessment",
+  "evaluated_batch": "research/archive/normalized/mixed_source/mixed_bounded_entity_filing_priority_v1.json",
+  "metrics": {
+    "input_entity_expansion_count": 5,
+    "supported_priority_count": 4,
+    "high_priority_count": 4
+  },
+  "filing_backed_order": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Mitsubishi Electric",
+    "Eaton",
+    "Westrafo"
+  ],
+  "supported_entities": [
+    "Hitachi Energy",
+    "GE Vernova",
+    "Mitsubishi Electric",
+    "Eaton"
+  ],
+  "resolve_and_collect_entities": [
+    "Westrafo"
+  ],
+  "decision": "use this filing-backed order for the active transformer-lane downstream queue"
+}
