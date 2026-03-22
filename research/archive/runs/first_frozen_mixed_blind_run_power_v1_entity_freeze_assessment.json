@@ -1,0 +1,49 @@
+{
+  "run_id": "first_frozen_mixed_blind_run_power_v1",
+  "assessment_version": "entity_freeze_v1",
+  "date": "2026-03-22",
+  "entity_freeze_output": "research/archive/normalized/mixed_source/first_frozen_mixed_blind_run_power_entity_freeze_v1.json",
+  "facts": {
+    "input_bounded_universe_candidate_count": 3,
+    "bounded_research_set_count": 3,
+    "bounded_entity_candidate_count": 25,
+    "real_only_entity_candidate_count": 8,
+    "synthetic_only_entity_candidate_count": 17
+  },
+  "by_universe": [
+    {
+      "system_label": "data center campus buildout",
+      "matched_artifact_count": 12,
+      "entity_candidate_count": 11,
+      "real_only_entity_count": 4,
+      "real_only_entities": ["DTE", "FirstEnergy", "Southern", "Rockwell Automation"]
+    },
+    {
+      "system_label": "grid equipment and transformer buildout",
+      "matched_artifact_count": 6,
+      "entity_candidate_count": 6,
+      "real_only_entity_count": 1,
+      "real_only_entities": ["Hitachi"]
+    },
+    {
+      "system_label": "utility and large-load power buildout",
+      "matched_artifact_count": 9,
+      "entity_candidate_count": 8,
+      "real_only_entity_count": 3,
+      "real_only_entities": ["DTE", "Southern", "FirstEnergy"]
+    }
+  ],
+  "judgment": {
+    "entity_surfacing_result": "partial_pass",
+    "why": [
+      "The blind run now freezes concrete entity surfacing rather than stopping at universes only.",
+      "Real entities did surface inside all three promotion-ready universes.",
+      "The transformer lane, which matters most for bottleneck-style final expressions, surfaced only one real supplier name in the frozen corpus."
+    ],
+    "final_expression_implication": "still_not_proven",
+    "final_expression_reason": [
+      "Synthetic-only entities still dominate the raw surfaced set.",
+      "The strongest real constrained-layer supplier surfaced was Hitachi, but the later U.S.-executable names like GEV and ETN do not emerge from the frozen corpus alone."
+    ]
+  }
+}

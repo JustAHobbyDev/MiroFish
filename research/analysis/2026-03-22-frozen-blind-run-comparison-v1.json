@@ -1,0 +1,46 @@
+{
+  "name": "frozen_blind_run_comparison_v1",
+  "date": "2026-03-22",
+  "cases": [
+    {
+      "case_name": "first_frozen_mixed_blind_run_power_v1",
+      "case_type": "true_mixed_corpus_blind_run",
+      "universe_discovery_result": "blind_pass",
+      "narrowing_count": 3,
+      "final_expression_result": "not_proven",
+      "entity_surfacing_result": "partial_pass",
+      "key_strength": "strong_mixed_source_universe_formation",
+      "key_weakness": "real_only_final_expression_surfacing_remains_thin"
+    },
+    {
+      "case_name": "Photonics -> AXTI",
+      "case_type": "curated_historical_calibration",
+      "universe_discovery_result": "blind_pass",
+      "narrowing_count": 1,
+      "final_expression_result": "not_proven",
+      "entity_surfacing_result": "upstream_clue_present",
+      "key_strength": "visible_beneficiary_to_upstream_clue_path_present",
+      "key_weakness": "full_bottleneck_proof_not_in_blind_pass"
+    },
+    {
+      "case_name": "Memory -> SNDK",
+      "case_type": "curated_historical_calibration",
+      "universe_discovery_result": "blind_pass",
+      "narrowing_count": 1,
+      "final_expression_result": "not_proven",
+      "entity_surfacing_result": "candidate_expression_visible_but_not_strong",
+      "key_strength": "cycle_universe_discovery_is_clean",
+      "key_weakness": "preferred_expression_not_confidently_selected"
+    }
+  ],
+  "comparison_judgment": {
+    "mixed_run_now_matches_curated_cases_on_universe_discovery": true,
+    "mixed_run_still_lags_curated_cases_on_expression_specificity": true,
+    "best_current_read": "the true mixed blind run materially strengthens the universe-discovery claim, but the final-expression claim is still behind even the curated calibrations"
+  },
+  "second_true_mixed_run_status": {
+    "executed": false,
+    "blocker": "no second frozen historical mixed corpus currently exists under research/archive",
+    "reason": "the photonics and memory materials on disk are calibration memos and claim audits, not frozen source archives suitable for an honest second mixed blind run"
+  }
+}
