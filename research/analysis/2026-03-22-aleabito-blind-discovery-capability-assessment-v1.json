@@ -1,0 +1,44 @@
+{
+  "name": "aleabito_blind_discovery_capability_assessment_v1",
+  "date": "2026-03-22",
+  "question": "Can the system rediscover AleaBito-style expressions blindly given only approximate historical time windows and public information?",
+  "case_rollup": [
+    {
+      "case_name": "Photonics -> AXTI",
+      "case_type": "positive_case",
+      "blind_result": "blind_pass",
+      "blind_narrowing_justified": true,
+      "blind_role_coverage_ratio": "5/6",
+      "blind_recall_ratio": 0.53,
+      "current_read": "blind_universe_discovery_success_but_not_full_hidden_bottleneck_proof"
+    },
+    {
+      "case_name": "Memory -> SNDK",
+      "case_type": "positive_case",
+      "blind_result": "blind_pass",
+      "blind_narrowing_justified": true,
+      "blind_role_coverage_ratio": "4.5/6",
+      "blind_recall_ratio": 0.46,
+      "current_read": "blind_cycle_universe_discovery_success_but_not_final_expression_certainty"
+    },
+    {
+      "case_name": "POET standalone workaround branch",
+      "case_type": "control_case",
+      "blind_result": "blind_fail",
+      "blind_narrowing_justified": false,
+      "blind_role_coverage_ratio": "2/6",
+      "current_read": "correct_rejection_of_adjacent_but_weak_standalone_branch"
+    }
+  ],
+  "aggregate_judgment": {
+    "can_justify_correct_narrowing_in_some_cases": true,
+    "can_reject_some_false_standalone_narrowing": true,
+    "can_consistently_identify_final_best_expression": false,
+    "can_claim_general_early_edge_already": false,
+    "best_current_answer": "partially_yes_for_universe_discovery_not_yet_proven_for_general_final_expression_discovery"
+  },
+  "recommended_next_step": {
+    "step": "frozen_historical_mixed_corpus_blind_run",
+    "reason": "current_casework_supports_architecture_direction_but_not_general_edge_claim"
+  }
+}
