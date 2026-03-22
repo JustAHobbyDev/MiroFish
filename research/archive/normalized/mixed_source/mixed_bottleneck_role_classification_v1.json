@@ -1,0 +1,131 @@
+{
+  "name": "bottleneck_role_classification_batch_v1",
+  "classification_rows": [
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "resolved_issuer_name": "Rolls-Royce Holdings plc",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "supply_chain_beneficiary",
+      "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 98,
+      "support_strong_evidence_item_count": 10,
+      "support_component_specific_count": 4,
+      "support_pressure_or_capacity_count": 2,
+      "support_expansion_or_capex_count": 4,
+      "source_classes": [
+        "trade_press"
+      ]
+    },
+    {
+      "system_label": "data center backup-power equipment buildout",
+      "canonical_entity_name": "AVL",
+      "resolved_issuer_name": "AVL List GmbH",
+      "entity_role": "equipment_or_component_supplier",
+      "role_lane": "equipment_supplier",
+      "bottleneck_role_label": "supply_chain_beneficiary",
+      "classification_reason": "supplier_or_adjacent_name_with_relevance_but_without_strict_bottleneck_evidence",
+      "market_handoff_status": "supplier_chain_followup",
+      "support_route_type": "private_company",
+      "support_status": "supported_private_company",
+      "route_aware_priority_score": 89,
+      "support_strong_evidence_item_count": 10,
+      "support_component_specific_count": 4,
+      "support_pressure_or_capacity_count": 6,
+      "support_expansion_or_capex_count": 0,
+      "source_classes": [
+        "trade_press"
+      ]
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "CyrusOne",
+      "resolved_issuer_name": "CyrusOne",
+      "entity_role": "capacity_operator_or_owner",
+      "role_lane": "utility_or_operator",
+      "bottleneck_role_label": "capacity_response_operator",
+      "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+      "market_handoff_status": "private_watchlist_only",
+      "support_route_type": "private_company",
+      "support_status": "supported_private_company",
+      "route_aware_priority_score": 207,
+      "support_strong_evidence_item_count": 33,
+      "support_component_specific_count": 2,
+      "support_pressure_or_capacity_count": 20,
+      "support_expansion_or_capex_count": 3,
+      "source_classes": [
+        "trade_press"
+      ]
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "DTE",
+      "resolved_issuer_name": "DTE Energy Company",
+      "entity_role": "capacity_operator_or_owner",
+      "role_lane": "utility_or_operator",
+      "bottleneck_role_label": "capacity_response_operator",
+      "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 98,
+      "support_strong_evidence_item_count": 7,
+      "support_component_specific_count": 3,
+      "support_pressure_or_capacity_count": 2,
+      "support_expansion_or_capex_count": 2,
+      "source_classes": [
+        "trade_press"
+      ]
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "FirstEnergy",
+      "resolved_issuer_name": "FirstEnergy Corp.",
+      "entity_role": "capacity_operator_or_owner",
+      "role_lane": "utility_or_operator",
+      "bottleneck_role_label": "capacity_response_operator",
+      "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 97,
+      "support_strong_evidence_item_count": 8,
+      "support_component_specific_count": 3,
+      "support_pressure_or_capacity_count": 2,
+      "support_expansion_or_capex_count": 2,
+      "source_classes": [
+        "trade_press"
+      ]
+    },
+    {
+      "system_label": "data center utility response buildout",
+      "canonical_entity_name": "Exelon",
+      "resolved_issuer_name": "Exelon Corporation",
+      "entity_role": "capacity_operator_or_owner",
+      "role_lane": "utility_or_operator",
+      "bottleneck_role_label": "capacity_response_operator",
+      "classification_reason": "operator_or_capacity_owner_with_pressure_and_response_evidence",
+      "market_handoff_status": "public_investable_now",
+      "support_route_type": "public_filing",
+      "support_status": "supported_public_filing",
+      "route_aware_priority_score": 75,
+      "support_strong_evidence_item_count": 6,
+      "support_component_specific_count": 3,
+      "support_pressure_or_capacity_count": 2,
+      "support_expansion_or_capex_count": 1,
+      "source_classes": [
+        "trade_press"
+      ]
+    }
+  ],
+  "metrics": {
+    "input_review_row_count": 6,
+    "bottleneck_candidate_count": 0,
+    "capacity_response_operator_count": 4,
+    "supply_chain_beneficiary_count": 2
+  }
+}
