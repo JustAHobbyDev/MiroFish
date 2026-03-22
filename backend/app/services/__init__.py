@@ -158,6 +158,7 @@ from .bounded_entity_route_priority import build_bounded_entity_route_priority_b
 from .bounded_entity_route_review_surface_builder import (
     build_bounded_entity_route_review_surface,
 )
+from .bounded_market_handoff_builder import build_bounded_market_handoff_batch
 from .bounded_entity_lane_narrower import build_bounded_entity_lane_narrowing_batch
 from .bounded_entity_downstream_state_builder import build_bounded_entity_downstream_state
 from .backup_power_live_resolution_builder import build_backup_power_live_resolution_batch
