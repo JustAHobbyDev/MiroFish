@@ -175,6 +175,7 @@ from .public_market_review_surface_builder import build_public_market_review_sur
 from .public_market_execution_policy_builder import (
     build_public_market_execution_policy_batch,
 )
+from .public_market_execution_queue_builder import build_public_market_execution_queue
 from .public_market_us_accessibility_builder import (
     build_public_market_us_accessibility_batch,
 )
