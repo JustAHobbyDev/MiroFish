@@ -1,0 +1,121 @@
+{
+  "name": "public_market_foreign_execution_handoff_v1",
+  "handoff_rows": [
+    {
+      "name": "Rolls-Royce on data center backup-power equipment buildout",
+      "canonical_entity_name": "Rolls-Royce",
+      "underlying": "RR.",
+      "market_theme": "data center backup-power equipment buildout",
+      "role_label": "supply_chain_beneficiary",
+      "foreign_review_priority": "highest",
+      "followup_type": "us_secondary_access_followup",
+      "followup_action": "confirm_adr_or_otc_symbol_and_check_basic_liquidity",
+      "exchange_scope": "foreign_home_market_symbol",
+      "us_accessibility_status": "foreign_home_with_us_reference",
+      "final_expression": "shares",
+      "ranking_score": 65.29,
+      "thesis": "Rolls-Royce appears to be a relevant beneficiary of data center backup-power equipment buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "data center backup-power equipment buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "data-center backup-power order growth"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure"
+      ],
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.rolls-royce.com/investors/shareholder-information.aspx",
+        "note": "Official Rolls-Royce shareholder information page identifying Rolls-Royce Holdings plc (LSE: RR., ADR: RYCEY)."
+      }
+    },
+    {
+      "name": "Mitsubishi Electric on grid equipment and transformer buildout",
+      "canonical_entity_name": "Mitsubishi Electric",
+      "underlying": "6503",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "bottleneck_candidate",
+      "foreign_review_priority": "high",
+      "followup_type": "home_market_or_proxy_followup",
+      "followup_action": "decide_home_market_execution_or_find_us_proxy_expression",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "final_expression": "shares",
+      "ranking_score": 83.98,
+      "thesis": "Mitsubishi Electric appears to sit in a constrained grid equipment and transformer buildout layer, with filing-backed component specificity, pressure signals, and capacity-expansion evidence that may still be underappreciated.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Constrained upstream component supplier with system-level leverage",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "market attention is concentrated on downstream power and AI beneficiaries",
+        "constrained component-layer suppliers are less obvious from headline buildout coverage",
+        "primary listing is outside the default U.S. ticker workflow"
+      ],
+      "symbol_mapping_basis": "official_ir_stock_code_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.mitsubishielectric.com/investors/stock/info/",
+        "note": "Official Mitsubishi Electric stock information page showing Tokyo Stock Exchange stock code 6503."
+      }
+    },
+    {
+      "name": "Hitachi Energy on grid equipment and transformer buildout",
+      "canonical_entity_name": "Hitachi Energy",
+      "underlying": "6501",
+      "market_theme": "grid equipment and transformer buildout",
+      "role_label": "supply_chain_beneficiary",
+      "foreign_review_priority": "high",
+      "followup_type": "home_market_or_proxy_followup",
+      "followup_action": "decide_home_market_execution_or_find_us_proxy_expression",
+      "exchange_scope": "foreign_home_market_code",
+      "us_accessibility_status": "foreign_home_market_only",
+      "final_expression": "shares",
+      "ranking_score": 65.29,
+      "thesis": "Hitachi Energy appears to be a relevant beneficiary of grid equipment and transformer buildout, but the current evidence supports a beneficiary posture more cleanly than a strict bottleneck claim.",
+      "bottleneck_layer": "grid equipment and transformer buildout",
+      "value_capture_layer": "Relevant supply-chain beneficiary without strict bottleneck proof",
+      "top_catalysts": [
+        "additional capacity announcements",
+        "order backlog conversion into reported revenue",
+        "transformer and switchgear lead-time commentary"
+      ],
+      "top_invalidations": [
+        "capacity expansion arrives without meaningful demand conversion",
+        "component or backlog signals fade in subsequent company reporting",
+        "downstream demand shifts to substitute suppliers or adjacent architectures"
+      ],
+      "why_missed": [
+        "beneficiary role is real but not yet framed as a strict chokepoint thesis",
+        "supplier relevance is easier to miss when coverage emphasizes end-market demand instead of component exposure",
+        "primary listing is outside the default U.S. ticker workflow"
+      ],
+      "symbol_mapping_basis": "official_company_or_ir_note",
+      "symbol_mapping_evidence": {
+        "source_url": "https://www.hitachi.com/IR-e/stock/index.html",
+        "note": "Official Hitachi stock page identifying Hitachi, Ltd. (TSE: 6501)."
+      }
+    }
+  ],
+  "metrics": {
+    "input_review_row_count": 3,
+    "handoff_count": 3,
+    "highest_priority_count": 1,
+    "high_priority_count": 2
+  }
+}
