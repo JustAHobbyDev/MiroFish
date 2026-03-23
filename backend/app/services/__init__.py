@@ -139,6 +139,9 @@ from .bounded_universe_builder import build_bounded_universe_candidate_batch
 from .bounded_universe_expander import build_bounded_universe_expansion_batch
 from .bounded_research_set_builder import build_bounded_research_set_batch
 from .bounded_entity_candidate_builder import build_bounded_entity_candidate_batch
+from .anchor_expression_builder import build_anchor_expression_batch
+from .photonics_dependency_graph_builder import build_photonics_dependency_graph
+from .anchor_first_blind_replay_builder import build_anchor_first_blind_replay_batch
 from .artifact_provenance import (
     artifact_provenance_classes,
     classify_artifact_provenance,

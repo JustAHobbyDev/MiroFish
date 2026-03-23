@@ -1,0 +1,28 @@
+{
+  "name": "third_historical_mixed_corpus_photonics_anchor_first_replay_v1_assessment",
+  "date": "2026-03-22",
+  "corpus_label": "third_historical_mixed_corpus_photonics_v1",
+  "judgment": {
+    "anchor_clue_detection": "pass",
+    "adjacent_expression_surfacing": "pass",
+    "upstream_dependency_surfacing": "pass",
+    "hidden_chokepoint_recovery": "fail"
+  },
+  "key_outputs": {
+    "anchor_expression_names": [
+      "Lumentum",
+      "Coherent",
+      "JX Advanced Metals"
+    ],
+    "role_counts": {
+      "anchor_expression": 1,
+      "adjacent_anchor": 1,
+      "upstream_dependency": 1
+    }
+  },
+  "limitations": [
+    "retrospective_seeded_not_blind_ready",
+    "axt_direct_evidence_missing",
+    "does_not_prove_final_expression_recovery"
+  ]
+}
