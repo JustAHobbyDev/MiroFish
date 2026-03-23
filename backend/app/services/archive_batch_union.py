@@ -6,6 +6,8 @@ from __future__ import annotations
 
 from typing import Any, Dict, Iterable, List
 
+from .artifact_provenance import filter_real_artifacts
+
 
 def _coerce_string(value: Any) -> str:
     if value is None:
@@ -32,10 +34,20 @@ def union_prefilter_batches(
     batches: List[Dict[str, Any]],
     *,
     name: str,
+    include_synthetic: bool = False,
 ) -> Dict[str, Any]:
     kept_artifacts = [artifact for batch in batches for artifact in batch.get("kept_artifacts", [])]
     review_artifacts = [artifact for batch in batches for artifact in batch.get("review_artifacts", [])]
     dropped_audit_records = [record for batch in batches for record in batch.get("dropped_audit_records", [])]
+
+    if not include_synthetic:
+        original_kept_count = len(kept_artifacts)
+        original_review_count = len(review_artifacts)
+        kept_artifacts = filter_real_artifacts(kept_artifacts)
+        review_artifacts = filter_real_artifacts(review_artifacts)
+        excluded_count = (original_kept_count - len(kept_artifacts)) + (original_review_count - len(review_artifacts))
+    else:
+        excluded_count = 0
 
     _require_unique_artifact_ids(kept_artifacts + review_artifacts, "prefilter union")
 
@@ -57,6 +69,7 @@ def union_prefilter_batches(
             "kept_count": len(kept_artifacts),
             "review_count": len(review_artifacts),
             "dropped_count": len(dropped_audit_records),
+            "excluded_synthetic_artifact_count": excluded_count,
         },
     }
 

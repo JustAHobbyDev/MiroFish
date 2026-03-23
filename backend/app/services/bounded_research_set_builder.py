@@ -8,6 +8,8 @@ import hashlib
 import re
 from typing import Any, Dict, Iterable, List, Tuple
 
+from .artifact_provenance import filter_real_artifacts
+
 
 STOPWORDS = {
     "and",
@@ -235,8 +237,12 @@ def _entity_candidates(matches: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 def build_bounded_research_set_batch(
     expansion_batch: Dict[str, Any],
     prefilter_batches: List[Dict[str, Any]],
+    *,
+    include_synthetic: bool = False,
 ) -> Dict[str, Any]:
     artifacts = _artifact_iter(prefilter_batches)
+    if not include_synthetic:
+        artifacts = filter_real_artifacts(artifacts)
     research_sets: List[Dict[str, Any]] = []
 
     for plan in expansion_batch.get("plans", []):

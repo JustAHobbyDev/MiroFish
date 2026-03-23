@@ -136,40 +136,6 @@
       "system_label": "data center campus buildout",
       "matched_artifacts": [
         {
-          "artifact_id": "company_release_699b2a49df49cc9e",
-          "source_class": "company_release",
-          "title": "Summit Compute Parks advances 250MW data center campus construction",
-          "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
-          "entity_hint": "Summit Compute Parks",
-          "match_score": 6,
-          "matched_terms": [
-            "campus",
-            "center",
-            "data",
-            "campus",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_79386cedd20ceb6a",
-          "source_class": "company_release",
-          "title": "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase",
-          "source_url": "https://example.com/releases/2025-11-21-hyperscale-campus-phase-two",
-          "entity_hint": "NorthRiver Digital Infrastructure",
-          "match_score": 6,
-          "matched_terms": [
-            "campus",
-            "center",
-            "data",
-            "campus",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
           "artifact_id": "trade_press_8de0a080761e2c3b",
           "source_class": "trade_press",
           "title": "Rowan secures $500m for 300MW Texas data center project",
@@ -181,81 +147,6 @@
             "center",
             "data",
             "campus",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_628ba329dfe7d2b1",
-          "source_class": "company_release",
-          "title": "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules",
-          "source_url": "https://example.com/releases/2025-10-22-cooling-modules-supply",
-          "entity_hint": "ThermaLoop Systems",
-          "match_score": 4,
-          "matched_terms": [
-            "center",
-            "data",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_7434d169b6d086b9",
-          "source_class": "company_release",
-          "title": "PrimeForge Power to expand generator package factory for data center and utility resilience demand",
-          "source_url": "https://example.com/releases/2025-12-02-generator-factory",
-          "entity_hint": "PrimeForge Power",
-          "match_score": 4,
-          "matched_terms": [
-            "center",
-            "data",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_99d3a8bd7a7d6651",
-          "source_class": "company_release",
-          "title": "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects",
-          "source_url": "https://example.com/releases/2025-10-30-cable-factory",
-          "entity_hint": "ConductorWorks",
-          "match_score": 4,
-          "matched_terms": [
-            "center",
-            "data",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_a39925a36c9535e7",
-          "source_class": "company_release",
-          "title": "Lamina Grid Products adds core and coil line to support transformer backlog",
-          "source_url": "https://example.com/releases/2025-11-19-transformer-components",
-          "entity_hint": "Lamina Grid Products",
-          "match_score": 4,
-          "matched_terms": [
-            "center",
-            "data",
-            "center",
-            "data"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_c57077dab862393a",
-          "source_class": "company_release",
-          "title": "PeakSpan Power Systems expands generator module assembly for utility and data center demand",
-          "source_url": "https://example.com/releases/2025-11-25-generator-module-expansion",
-          "entity_hint": "PeakSpan Power Systems",
-          "match_score": 4,
-          "matched_terms": [
-            "center",
-            "data",
             "center",
             "data"
           ],
@@ -321,30 +212,13 @@
         }
       ],
       "matched_artifact_ids": [
-        "company_release_699b2a49df49cc9e",
-        "company_release_79386cedd20ceb6a",
         "trade_press_8de0a080761e2c3b",
-        "company_release_628ba329dfe7d2b1",
-        "company_release_7434d169b6d086b9",
-        "company_release_99d3a8bd7a7d6651",
-        "company_release_a39925a36c9535e7",
-        "company_release_c57077dab862393a",
         "trade_press_7cab8b3aa2571296",
         "trade_press_8434daa99144e894",
         "trade_press_8af4de468aa71b03",
         "trade_press_10e5144776b5598c"
       ],
       "entity_candidates": [
-        {
-          "entity_name": "ConductorWorks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_99d3a8bd7a7d6651"
-          ]
-        },
         {
           "entity_name": "DTE",
           "source_classes": [
@@ -366,46 +240,6 @@
           ]
         },
         {
-          "entity_name": "Lamina Grid Products",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_a39925a36c9535e7"
-          ]
-        },
-        {
-          "entity_name": "NorthRiver Digital Infrastructure",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_79386cedd20ceb6a"
-          ]
-        },
-        {
-          "entity_name": "PeakSpan Power Systems",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_c57077dab862393a"
-          ]
-        },
-        {
-          "entity_name": "PrimeForge Power",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_7434d169b6d086b9"
-          ]
-        },
-        {
           "entity_name": "Rockwell Automation",
           "source_classes": [
             "trade_press"
@@ -424,35 +258,14 @@
           "artifact_ids": [
             "trade_press_7cab8b3aa2571296"
           ]
-        },
-        {
-          "entity_name": "Summit Compute Parks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_699b2a49df49cc9e"
-          ]
-        },
-        {
-          "entity_name": "ThermaLoop Systems",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_628ba329dfe7d2b1"
-          ]
         }
       ],
       "coverage_metrics": {
-        "matched_artifact_count": 12,
+        "matched_artifact_count": 5,
         "matched_source_classes": [
-          "company_release",
           "trade_press"
         ],
-        "entity_candidate_count": 11
+        "entity_candidate_count": 4
       },
       "source_classes_priority": [
         "company_release",
@@ -472,29 +285,6 @@
       "system_label": "grid equipment and transformer buildout",
       "matched_artifacts": [
         {
-          "artifact_id": "company_release_a39925a36c9535e7",
-          "source_class": "company_release",
-          "title": "Lamina Grid Products adds core and coil line to support transformer backlog",
-          "source_url": "https://example.com/releases/2025-11-19-transformer-components",
-          "entity_hint": "Lamina Grid Products",
-          "match_score": 16,
-          "matched_terms": [
-            "grid",
-            "substation",
-            "transformer",
-            "core and coil manufacturing",
-            "transformer backlog",
-            "backlog",
-            "capacity",
-            "coil",
-            "core",
-            "grid",
-            "substation",
-            "transformer"
-          ],
-          "negative_hits": []
-        },
-        {
           "artifact_id": "trade_press_921740cadac635c6",
           "source_class": "trade_press",
           "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
@@ -511,102 +301,12 @@
             "transformers"
           ],
           "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_328fad99416fbef1",
-          "source_class": "company_release",
-          "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
-          "source_url": "https://example.com/releases/2025-09-18-grid-transformers-expansion",
-          "entity_hint": "GridCore Manufacturing",
-          "match_score": 8,
-          "matched_terms": [
-            "grid",
-            "substation",
-            "transformer",
-            "capacity",
-            "core",
-            "grid",
-            "substation",
-            "transformer"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_088c813f7e093143",
-          "source_class": "company_release",
-          "title": "MeterWave Technologies expands smart meter production lines for utility modernization programs",
-          "source_url": "https://example.com/releases/2025-12-18-smart-meter-lines",
-          "entity_hint": "MeterWave Technologies",
-          "match_score": 5,
-          "matched_terms": [
-            "grid",
-            "capacity",
-            "grid",
-            "lead",
-            "times"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_99d3a8bd7a7d6651",
-          "source_class": "company_release",
-          "title": "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects",
-          "source_url": "https://example.com/releases/2025-10-30-cable-factory",
-          "entity_hint": "ConductorWorks",
-          "match_score": 5,
-          "matched_terms": [
-            "grid",
-            "substation",
-            "capacity",
-            "grid",
-            "substation"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_699b2a49df49cc9e",
-          "source_class": "company_release",
-          "title": "Summit Compute Parks advances 250MW data center campus construction",
-          "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
-          "entity_hint": "Summit Compute Parks",
-          "match_score": 3,
-          "matched_terms": [
-            "substation",
-            "capacity",
-            "substation"
-          ],
-          "negative_hits": []
         }
       ],
       "matched_artifact_ids": [
-        "company_release_a39925a36c9535e7",
-        "trade_press_921740cadac635c6",
-        "company_release_328fad99416fbef1",
-        "company_release_088c813f7e093143",
-        "company_release_99d3a8bd7a7d6651",
-        "company_release_699b2a49df49cc9e"
+        "trade_press_921740cadac635c6"
       ],
       "entity_candidates": [
-        {
-          "entity_name": "ConductorWorks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_99d3a8bd7a7d6651"
-          ]
-        },
-        {
-          "entity_name": "GridCore Manufacturing",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_328fad99416fbef1"
-          ]
-        },
         {
           "entity_name": "Hitachi",
           "source_classes": [
@@ -616,45 +316,14 @@
           "artifact_ids": [
             "trade_press_921740cadac635c6"
           ]
-        },
-        {
-          "entity_name": "Lamina Grid Products",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_a39925a36c9535e7"
-          ]
-        },
-        {
-          "entity_name": "MeterWave Technologies",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_088c813f7e093143"
-          ]
-        },
-        {
-          "entity_name": "Summit Compute Parks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_699b2a49df49cc9e"
-          ]
         }
       ],
       "coverage_metrics": {
-        "matched_artifact_count": 6,
+        "matched_artifact_count": 1,
         "matched_source_classes": [
-          "company_release",
           "trade_press"
         ],
-        "entity_candidate_count": 6
+        "entity_candidate_count": 1
       },
       "source_classes_priority": [
         "company_release",
@@ -719,43 +388,6 @@
           "negative_hits": []
         },
         {
-          "artifact_id": "company_release_699b2a49df49cc9e",
-          "source_class": "company_release",
-          "title": "Summit Compute Parks advances 250MW data center campus construction",
-          "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
-          "entity_hint": "Summit Compute Parks",
-          "match_score": 8,
-          "matched_terms": [
-            "substation",
-            "substations",
-            "center",
-            "data",
-            "substation",
-            "substations"
-          ],
-          "negative_hits": [
-            "campus construction"
-          ]
-        },
-        {
-          "artifact_id": "company_release_99d3a8bd7a7d6651",
-          "source_class": "company_release",
-          "title": "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects",
-          "source_url": "https://example.com/releases/2025-10-30-cable-factory",
-          "entity_hint": "ConductorWorks",
-          "match_score": 7,
-          "matched_terms": [
-            "load",
-            "substation",
-            "center",
-            "data",
-            "large",
-            "load",
-            "substation"
-          ],
-          "negative_hits": []
-        },
-        {
           "artifact_id": "trade_press_8434daa99144e894",
           "source_class": "trade_press",
           "title": "FirstEnergy expects peak load to grow 45% by 2035 on data centers",
@@ -769,52 +401,6 @@
             "center",
             "data",
             "load",
-            "plan"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_2779831d9e413245",
-          "source_class": "company_release",
-          "title": "TurbineWorks Energy opens service and assembly hub for gas turbine packages",
-          "source_url": "https://example.com/releases/2025-12-11-gasturbine-service-hub",
-          "entity_hint": "TurbineWorks Energy",
-          "match_score": 5,
-          "matched_terms": [
-            "generation",
-            "load",
-            "generation",
-            "load",
-            "service"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_c57077dab862393a",
-          "source_class": "company_release",
-          "title": "PeakSpan Power Systems expands generator module assembly for utility and data center demand",
-          "source_url": "https://example.com/releases/2025-11-25-generator-module-expansion",
-          "entity_hint": "PeakSpan Power Systems",
-          "match_score": 5,
-          "matched_terms": [
-            "generation",
-            "center",
-            "data",
-            "generation",
-            "response"
-          ],
-          "negative_hits": []
-        },
-        {
-          "artifact_id": "company_release_eac17ce201345043",
-          "source_class": "company_release",
-          "title": "MacroFab Holdings announces $600 million U.S. industrial expansion plan",
-          "source_url": "https://example.com/releases/2025-12-21-broad-industrial-investment",
-          "entity_hint": "MacroFab Holdings",
-          "match_score": 3,
-          "matched_terms": [
-            "capital",
-            "capital",
             "plan"
           ],
           "negative_hits": []
@@ -837,25 +423,10 @@
       "matched_artifact_ids": [
         "trade_press_7cab8b3aa2571296",
         "trade_press_8af4de468aa71b03",
-        "company_release_699b2a49df49cc9e",
-        "company_release_99d3a8bd7a7d6651",
         "trade_press_8434daa99144e894",
-        "company_release_2779831d9e413245",
-        "company_release_c57077dab862393a",
-        "company_release_eac17ce201345043",
         "policy_feed_313e87f5ee6bcd9f"
       ],
       "entity_candidates": [
-        {
-          "entity_name": "ConductorWorks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_99d3a8bd7a7d6651"
-          ]
-        },
         {
           "entity_name": "DTE",
           "source_classes": [
@@ -877,26 +448,6 @@
           ]
         },
         {
-          "entity_name": "MacroFab Holdings",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_eac17ce201345043"
-          ]
-        },
-        {
-          "entity_name": "PeakSpan Power Systems",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_c57077dab862393a"
-          ]
-        },
-        {
           "entity_name": "Southern",
           "source_classes": [
             "trade_press"
@@ -905,36 +456,15 @@
           "artifact_ids": [
             "trade_press_7cab8b3aa2571296"
           ]
-        },
-        {
-          "entity_name": "Summit Compute Parks",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_699b2a49df49cc9e"
-          ]
-        },
-        {
-          "entity_name": "TurbineWorks Energy",
-          "source_classes": [
-            "company_release"
-          ],
-          "artifact_support_count": 1,
-          "artifact_ids": [
-            "company_release_2779831d9e413245"
-          ]
         }
       ],
       "coverage_metrics": {
-        "matched_artifact_count": 9,
+        "matched_artifact_count": 4,
         "matched_source_classes": [
-          "company_release",
           "government_policy_enforcement",
           "trade_press"
         ],
-        "entity_candidate_count": 8
+        "entity_candidate_count": 3
       },
       "source_classes_priority": [
         "company_release",
@@ -954,112 +484,6 @@
     }
   ],
   "entity_candidates": [
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_northriver_digital_infrastructure_2025-11-21_b650d7a9",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "NorthRiver Digital Infrastructure",
-      "entity_role": "capacity_operator_or_owner",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_79386cedd20ceb6a"
-      ],
-      "supporting_titles": [
-        "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase"
-      ],
-      "matched_terms": [
-        "campus",
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 6,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing",
-        "government"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_summit_compute_parks_2025-11-21_c0f6c81b",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "Summit Compute Parks",
-      "entity_role": "capacity_operator_or_owner",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_699b2a49df49cc9e"
-      ],
-      "supporting_titles": [
-        "Summit Compute Parks advances 250MW data center campus construction"
-      ],
-      "matched_terms": [
-        "campus",
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 6,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing",
-        "government"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_conductorworks_2025-11-21_9025a780",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "ConductorWorks",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_99d3a8bd7a7d6651"
-      ],
-      "supporting_titles": [
-        "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects"
-      ],
-      "matched_terms": [
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 4,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
     {
       "bounded_entity_candidate_id": "bec_data_center_campus_buildout_dte_2025-11-21_5fd19252",
       "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
@@ -1131,108 +555,6 @@
       ]
     },
     {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_lamina_grid_products_2025-11-21_76359651",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "Lamina Grid Products",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_a39925a36c9535e7"
-      ],
-      "supporting_titles": [
-        "Lamina Grid Products adds core and coil line to support transformer backlog"
-      ],
-      "matched_terms": [
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 4,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_peakspan_power_systems_2025-11-21_53caa045",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "PeakSpan Power Systems",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_c57077dab862393a"
-      ],
-      "supporting_titles": [
-        "PeakSpan Power Systems expands generator module assembly for utility and data center demand"
-      ],
-      "matched_terms": [
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 4,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_primeforge_power_2025-11-21_22f6b0ca",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "PrimeForge Power",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_7434d169b6d086b9"
-      ],
-      "supporting_titles": [
-        "PrimeForge Power to expand generator package factory for data center and utility resilience demand"
-      ],
-      "matched_terms": [
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 4,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
       "bounded_entity_candidate_id": "bec_data_center_campus_buildout_southern_2025-11-21_edd838f6",
       "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
       "system_label": "data center campus buildout",
@@ -1265,40 +587,6 @@
         "trade_press",
         "company_filing",
         "government"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_data_center_campus_buildout_thermaloop_systems_2025-11-21_9228277a",
-      "origin_bounded_research_set_id": "brs_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "as_of_date": "2025-11-21",
-      "entity_name": "ThermaLoop Systems",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_628ba329dfe7d2b1"
-      ],
-      "supporting_titles": [
-        "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules"
-      ],
-      "matched_terms": [
-        "center",
-        "data"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 4,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
       ]
     },
     {
@@ -1336,47 +624,6 @@
       ]
     },
     {
-      "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_lamina_grid_products_2025-12-17_2e9dcc02",
-      "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "as_of_date": "2025-12-17",
-      "entity_name": "Lamina Grid Products",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_a39925a36c9535e7"
-      ],
-      "supporting_titles": [
-        "Lamina Grid Products adds core and coil line to support transformer backlog"
-      ],
-      "matched_terms": [
-        "backlog",
-        "capacity",
-        "coil",
-        "core",
-        "core and coil manufacturing",
-        "grid",
-        "substation",
-        "transformer",
-        "transformer backlog"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "high",
-      "max_match_score": 16,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
       "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_hitachi_2025-12-17_b6b2e0c1",
       "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
       "system_label": "grid equipment and transformer buildout",
@@ -1405,148 +652,6 @@
       "support_provenance_status": "real_only",
       "priority_tier": "high",
       "max_match_score": 9,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_gridcore_manufacturing_2025-12-17_432495e7",
-      "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "as_of_date": "2025-12-17",
-      "entity_name": "GridCore Manufacturing",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_328fad99416fbef1"
-      ],
-      "supporting_titles": [
-        "GridCore Manufacturing breaks ground on new power transformer production plant"
-      ],
-      "matched_terms": [
-        "capacity",
-        "core",
-        "grid",
-        "substation",
-        "transformer"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "high",
-      "max_match_score": 8,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_conductorworks_2025-12-17_6071f180",
-      "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "as_of_date": "2025-12-17",
-      "entity_name": "ConductorWorks",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_99d3a8bd7a7d6651"
-      ],
-      "supporting_titles": [
-        "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects"
-      ],
-      "matched_terms": [
-        "capacity",
-        "grid",
-        "substation"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 5,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_meterwave_technologies_2025-12-17_ee9a1b5a",
-      "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "as_of_date": "2025-12-17",
-      "entity_name": "MeterWave Technologies",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_088c813f7e093143"
-      ],
-      "supporting_titles": [
-        "MeterWave Technologies expands smart meter production lines for utility modernization programs"
-      ],
-      "matched_terms": [
-        "capacity",
-        "grid",
-        "lead",
-        "times"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 5,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_grid_equipment_and_transformer_buildout_summit_compute_parks_2025-12-17_6b33c940",
-      "origin_bounded_research_set_id": "brs_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "as_of_date": "2025-12-17",
-      "entity_name": "Summit Compute Parks",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_699b2a49df49cc9e"
-      ],
-      "supporting_titles": [
-        "Summit Compute Parks advances 250MW data center campus construction"
-      ],
-      "matched_terms": [
-        "capacity",
-        "substation"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 3,
       "recommended_next_source_classes": [
         "company_release",
         "trade_press",
@@ -1633,79 +738,6 @@
       ]
     },
     {
-      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_summit_compute_parks_2026-02-25_b17bacf5",
-      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "as_of_date": "2026-02-25",
-      "entity_name": "Summit Compute Parks",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_699b2a49df49cc9e"
-      ],
-      "supporting_titles": [
-        "Summit Compute Parks advances 250MW data center campus construction"
-      ],
-      "matched_terms": [
-        "center",
-        "data",
-        "substation",
-        "substations"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "high",
-      "max_match_score": 8,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_conductorworks_2026-02-25_a9d87152",
-      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "as_of_date": "2026-02-25",
-      "entity_name": "ConductorWorks",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_99d3a8bd7a7d6651"
-      ],
-      "supporting_titles": [
-        "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects"
-      ],
-      "matched_terms": [
-        "center",
-        "data",
-        "large",
-        "load",
-        "substation"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 7,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
       "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_firstenergy_2026-02-25_fc6354a4",
       "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
       "system_label": "utility and large-load power buildout",
@@ -1742,117 +774,12 @@
         "company_filing",
         "government"
       ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_peakspan_power_systems_2026-02-25_2c76be9e",
-      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "as_of_date": "2026-02-25",
-      "entity_name": "PeakSpan Power Systems",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_c57077dab862393a"
-      ],
-      "supporting_titles": [
-        "PeakSpan Power Systems expands generator module assembly for utility and data center demand"
-      ],
-      "matched_terms": [
-        "center",
-        "data",
-        "generation",
-        "response"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 5,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_turbineworks_energy_2026-02-25_6071ae35",
-      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "as_of_date": "2026-02-25",
-      "entity_name": "TurbineWorks Energy",
-      "entity_role": "equipment_or_component_supplier",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_2779831d9e413245"
-      ],
-      "supporting_titles": [
-        "TurbineWorks Energy opens service and assembly hub for gas turbine packages"
-      ],
-      "matched_terms": [
-        "generation",
-        "load",
-        "service"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "medium",
-      "max_match_score": 5,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
-    },
-    {
-      "bounded_entity_candidate_id": "bec_utility_and_large_load_power_buildout_macrofab_holdings_2026-02-25_697076ef",
-      "origin_bounded_research_set_id": "brs_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "as_of_date": "2026-02-25",
-      "entity_name": "MacroFab Holdings",
-      "entity_role": "power_or_utility_operator",
-      "artifact_support_count": 1,
-      "source_classes": [
-        "company_release"
-      ],
-      "source_class_diversity_count": 1,
-      "supporting_artifact_ids": [
-        "company_release_eac17ce201345043"
-      ],
-      "supporting_titles": [
-        "MacroFab Holdings announces $600 million U.S. industrial expansion plan"
-      ],
-      "matched_terms": [
-        "capital",
-        "plan"
-      ],
-      "artifact_provenance_classes": [
-        "synthetic_example"
-      ],
-      "support_provenance_status": "synthetic_only",
-      "priority_tier": "low",
-      "max_match_score": 3,
-      "recommended_next_source_classes": [
-        "company_release",
-        "trade_press",
-        "company_filing"
-      ]
     }
   ],
   "metrics": {
     "input_bounded_universe_candidate_count": 3,
     "expansion_plan_count": 3,
     "bounded_research_set_count": 3,
-    "bounded_entity_candidate_count": 25
+    "bounded_entity_candidate_count": 8
   }
 }

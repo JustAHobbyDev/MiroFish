@@ -10,7 +10,7 @@
       "final_expression_result": "not_proven",
       "entity_surfacing_result": "partial_pass",
       "key_strength": "strong_mixed_source_universe_formation",
-      "key_weakness": "real_only_final_expression_surfacing_remains_thin"
+      "key_weakness": "real_only_expression_specificity_remains_thin"
     },
     {
       "case_name": "Photonics -> AXTI",
@@ -36,11 +36,11 @@
   "comparison_judgment": {
     "mixed_run_now_matches_curated_cases_on_universe_discovery": true,
     "mixed_run_still_lags_curated_cases_on_expression_specificity": true,
-    "best_current_read": "the true mixed blind run materially strengthens the universe-discovery claim, but the final-expression claim is still behind even the curated calibrations"
+    "best_current_read": "the true mixed blind run still materially supports universe discovery, but final-expression proof remains thin even after synthetic cleanup"
   },
   "second_true_mixed_run_status": {
     "executed": false,
-    "blocker": "no second frozen historical mixed corpus currently exists under research/archive",
-    "reason": "the photonics and memory materials on disk are calibration memos and claim audits, not frozen source archives suitable for an honest second mixed blind run"
+    "blocker": "a second historical mixed corpus now exists, but it is retrospective-seeded rather than blind-ready",
+    "reason": "the HBM and photonics corpora are useful for comparison and stress testing, but they are not honest frozen blind universes"
   }
 }

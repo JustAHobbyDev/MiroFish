@@ -4,9 +4,8 @@ Date: March 22, 2026
 
 ## Purpose
 
-Extend the first frozen mixed blind run through deterministic entity surfacing
-so the project can judge whether the run is getting closer to final-expression
-recovery.
+Re-evaluate the frozen entity surface after removing synthetic archive inputs from
+blind-run evaluation.
 
 ## Facts
 
@@ -21,17 +20,17 @@ recovery.
 2. Bounded research sets:
    - `3`
 3. Bounded entity candidates:
-   - `25`
+   - `8`
 4. `real_only` entity candidates:
    - `8`
 5. `synthetic_only` entity candidates:
-   - `17`
+   - `0`
 
 ### By universe
 
 1. `data center campus buildout`
-   - matched artifacts: `12`
-   - entity candidates: `11`
+   - matched artifacts: `5`
+   - entity candidates: `4`
    - real-only entities:
      - `DTE`
      - `FirstEnergy`
@@ -39,14 +38,14 @@ recovery.
      - `Rockwell Automation`
 
 2. `grid equipment and transformer buildout`
-   - matched artifacts: `6`
-   - entity candidates: `6`
+   - matched artifacts: `1`
+   - entity candidates: `1`
    - real-only entities:
      - `Hitachi`
 
 3. `utility and large-load power buildout`
-   - matched artifacts: `9`
-   - entity candidates: `8`
+   - matched artifacts: `4`
+   - entity candidates: `3`
    - real-only entities:
      - `DTE`
      - `Southern`
@@ -56,20 +55,19 @@ recovery.
 
 ### What improved
 
-1. The blind-run output set now includes deterministic entity surfacing.
-2. The run no longer stops at universe formation alone.
-3. Real entities do appear inside all three promotion-ready universes.
+1. The blind-run entity surface is now measured on real-only evidence.
+2. Synthetic archive names no longer dominate the surfaced set.
+3. The resulting measurement is more defensible for final-expression evaluation.
 
-### What did not improve enough
+### What still does not improve enough
 
-1. Synthetic-only names still dominate the raw surfaced set.
-2. The transformer lane, which matters most for bottleneck-style final picks,
-   surfaced only one real supplier name:
+1. The transformer lane still surfaces only one real supplier name:
    - `Hitachi`
-3. The later downstream public-market names:
+2. The later downstream public-market names:
    - `GE Vernova`
    - `Eaton`
    do not emerge from this frozen corpus alone.
+3. So the system is cleaner to evaluate now, but still weak on final-expression recovery.
 
 ## Judgment
 
@@ -77,24 +75,13 @@ Result:
 - `partial_pass`
 
 Meaning:
-1. entity surfacing is now real and frozen
+1. entity surfacing now survives a real-only cleanup
 2. final-expression recovery is still not proven
-
-This does strengthen the overall system claim a little:
-
-1. universe discovery is not the only thing working
-2. some candidate-expression surfacing exists
-
-But it does **not** yet change the top-line conclusion:
-
-- the system is still better at bounded-universe formation than final best
-  expression discovery
 
 ## Implication
 
 The next proof step should require:
 
-1. a second true mixed-corpus blind run
-2. with entity freeze included from the start
-3. and with enough real-source coverage that synthetic-only names do not
-   dominate the surfaced set
+1. real-only entity surfacing by default
+2. a second true mixed-corpus blind run
+3. enough real-source coverage that constrained-layer suppliers surface before downstream hindsight fills the gap

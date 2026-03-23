@@ -26,12 +26,12 @@ def test_union_prefilter_batches_combines_source_classes_and_metrics():
     result = module.union_prefilter_batches(
         [
             {
-                "kept_artifacts": [{"artifact_id": "a1", "source_class": "trade_press"}],
-                "review_artifacts": [{"artifact_id": "a2", "source_class": "trade_press"}],
+                "kept_artifacts": [{"artifact_id": "a1", "source_class": "trade_press", "source_url": "https://news.example.org/a1"}],
+                "review_artifacts": [{"artifact_id": "a2", "source_class": "trade_press", "source_url": "https://news.example.org/a2"}],
                 "dropped_audit_records": [{"artifact_id": "a3"}],
             },
             {
-                "kept_artifacts": [{"artifact_id": "b1", "source_class": "company_release"}],
+                "kept_artifacts": [{"artifact_id": "b1", "source_class": "company_release", "source_url": "https://ir.example.org/b1"}],
                 "review_artifacts": [],
                 "dropped_audit_records": [],
             },
@@ -45,6 +45,29 @@ def test_union_prefilter_batches_combines_source_classes_and_metrics():
     assert result["metrics"]["kept_count"] == 2
     assert result["metrics"]["review_count"] == 1
     assert result["metrics"]["dropped_count"] == 1
+    assert result["metrics"]["excluded_synthetic_artifact_count"] == 0
+
+
+def test_union_prefilter_batches_excludes_synthetic_by_default():
+    result = module.union_prefilter_batches(
+        [
+            {
+                "kept_artifacts": [
+                    {"artifact_id": "real1", "source_class": "trade_press", "source_url": "https://news.example.org/real1"},
+                    {"artifact_id": "syn1", "source_class": "company_release", "source_url": "https://example.com/releases/syn1"},
+                ],
+                "review_artifacts": [
+                    {"artifact_id": "syn2", "source_class": "company_release", "source_url": "https://example.com/releases/syn2"},
+                ],
+                "dropped_audit_records": [],
+            }
+        ],
+        name="mixed_prefilter",
+    )
+
+    assert [item["artifact_id"] for item in result["kept_artifacts"]] == ["real1"]
+    assert result["review_artifacts"] == []
+    assert result["metrics"]["excluded_synthetic_artifact_count"] == 2
 
 
 def test_union_signal_batches_combines_results_and_metrics():

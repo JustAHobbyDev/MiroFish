@@ -8,7 +8,11 @@ import hashlib
 import re
 from typing import Any, Dict, List
 
-from .artifact_provenance import artifact_provenance_classes, support_provenance_status
+from .artifact_provenance import (
+    artifact_provenance_classes,
+    filter_real_artifacts,
+    support_provenance_status,
+)
 
 
 def _coerce_string(value: Any) -> str:
@@ -102,8 +106,10 @@ def build_bounded_entity_candidate_batch(research_set_batch: Dict[str, Any]) -> 
                 for item in artifact_ids
                 if item in matched_artifacts_by_id
             ]
+            supporting_artifacts = filter_real_artifacts(supporting_artifacts)
             if not supporting_artifacts:
                 continue
+            artifact_ids = [_coerce_string(item.get("artifact_id")) for item in supporting_artifacts if _coerce_string(item.get("artifact_id"))]
 
             source_classes = sorted(
                 {

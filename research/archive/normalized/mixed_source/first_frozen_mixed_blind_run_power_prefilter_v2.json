@@ -2,162 +2,35 @@
   "name": "first_frozen_mixed_blind_run_power_prefilter_v2",
   "source_class": "mixed_source",
   "source_classes": [
-    "company_release",
     "government_policy_enforcement",
     "trade_press"
   ],
   "kept_artifacts": [
     {
-      "artifact_id": "company_release_328fad99416fbef1",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "issuing_company_name": "GridCore Manufacturing",
-      "published_at": "2025-09-18T13:00:00Z",
-      "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
+      "artifact_id": "trade_press_10e5144776b5598c",
+      "source_class": "trade_press",
+      "publisher_or_author": "Manufacturing Dive",
+      "author_name": "Nathan Owens",
+      "published_at": "2025-11-20",
+      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
       "headline": "",
-      "subheadline": "Expansion is intended to increase domestic output for utility and grid modernization projects.",
+      "subheadline": "",
       "deck": "",
-      "section_name": "",
+      "section_name": "Openings & Expansions",
       "category_tags": [
-        "Manufacturing",
-        "Expansion"
+        "automation",
+        "factory",
+        "expansion"
       ],
       "publisher_metadata": {
-        "raw_category": "",
+        "raw_section": "Openings & Expansions",
         "raw_source": ""
       },
-      "source_url": "https://example.com/releases/2025-09-18-grid-transformers-expansion",
-      "body_text": "GridCore Manufacturing today announced that it has broken ground on a new power transformer production plant in Oklahoma. The facility is expected to increase output for utility customers pursuing grid modernization, substation replacement, and transmission buildout. The company said the new site will add significant annual manufacturing capacity once fully operational.",
+      "source_url": "https://www.manufacturingdive.com/news/rockwell-automation-greenfield-wisconsin-largest-factory-2b-investment/806033/",
+      "body_text": "Rockwell Automation plans to build a new factory in Wisconsin as part of a $2 billion effort to strengthen its U.S. operations. The campus will include more than 1 million square feet of manufacturing and warehouse space.",
       "_prefilter": {
-        "artifact_id": "company_release_328fad99416fbef1",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "construction_and_deployment",
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
-            ],
-            "construction_and_deployment": [
-              "\\bbreaks? ground\\b"
-            ]
-          },
-          "subheadline": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          },
-          "category_tags": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b",
-          "title:construction_and_deployment:\\bbreaks? ground\\b",
-          "subheadline:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_628ba329dfe7d2b1",
-      "source_class": "company_release",
-      "publisher_or_author": "GlobeNewswire",
-      "issuing_company_name": "ThermaLoop Systems",
-      "published_at": "2025-10-22T12:00:00Z",
-      "title": "ThermaLoop Systems signs multi-year supply agreement for data center cooling modules",
-      "headline": "",
-      "subheadline": "Agreement supports accelerated shipments for AI infrastructure deployments.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Supply Agreement",
-        "Data Centers"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-10-22-cooling-modules-supply",
-      "body_text": "ThermaLoop Systems announced a multi-year supply agreement covering liquid cooling modules and distribution units for large AI data center deployments. The company said the agreement supports a planned production increase at its existing thermal management operations.",
-      "_prefilter": {
-        "artifact_id": "company_release_628ba329dfe7d2b1",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "contracts_and_orders"
-        ],
-        "field_hits": {
-          "title": {
-            "contracts_and_orders": [
-              "\\bsupply agreement(?:s)?\\b"
-            ]
-          },
-          "category_tags": {
-            "contracts_and_orders": [
-              "\\bsupply agreement(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:contracts_and_orders:\\bsupply agreement(?:s)?\\b",
-          "category_tags:contracts_and_orders:\\bsupply agreement(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [
-          "\\bai\\b"
-        ],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_7434d169b6d086b9",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "issuing_company_name": "PrimeForge Power",
-      "published_at": "2025-12-02T15:00:00Z",
-      "title": "PrimeForge Power to expand generator package factory for data center and utility resilience demand",
-      "headline": "",
-      "subheadline": "Company cites backup power demand from digital infrastructure and utility customers.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Expansion",
-        "Energy Infrastructure"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-12-02-generator-factory",
-      "body_text": "PrimeForge Power announced an expansion of its generator package factory to support rising demand from data center operators and utility resilience programs. The company said the project will add new production capacity for backup-power systems, switchboards and related balance-of-system equipment.",
-      "_prefilter": {
-        "artifact_id": "company_release_7434d169b6d086b9",
-        "source_class": "company_release",
+        "artifact_id": "trade_press_10e5144776b5598c",
+        "source_class": "trade_press",
         "triage": "keep",
         "reason": "Strong-field event-form hit in an explicit capital-flow family.",
         "matched_families": [
@@ -166,64 +39,11 @@
         "field_hits": {
           "title": {
             "facility_and_capacity_expansion": [
-              "\\bexpand(?:ing|ed|s)?\\b",
+              "\\bexpansion(?:s)?\\b",
               "\\bfactor(?:y|ies)\\b"
             ]
           },
-          "category_tags": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
-          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_a39925a36c9535e7",
-      "source_class": "company_release",
-      "publisher_or_author": "GlobeNewswire",
-      "issuing_company_name": "Lamina Grid Products",
-      "published_at": "2025-11-19T09:30:00Z",
-      "title": "Lamina Grid Products adds core and coil line to support transformer backlog",
-      "headline": "",
-      "subheadline": "Expansion targets utility and data center transformer demand.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Capacity Expansion",
-        "Grid Equipment"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-11-19-transformer-components",
-      "body_text": "Lamina Grid Products announced a new core and coil manufacturing line intended to support rising transformer backlog and utility procurement activity. The company said the expansion will supply domestic transformer OEMs serving substation, data center and industrial power projects.",
-      "_prefilter": {
-        "artifact_id": "company_release_a39925a36c9535e7",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "subheadline": {
+          "section_name": {
             "facility_and_capacity_expansion": [
               "\\bexpansion(?:s)?\\b"
             ]
@@ -231,142 +51,22 @@
           "category_tags": {
             "facility_and_capacity_expansion": [
               "\\bexpansion(?:s)?\\b",
-              "\\bcapacity(?: increase| expansion| additions?)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "subheadline:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_efeb81c2826a0b9b",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "issuing_company_name": "MotionArc Controls",
-      "published_at": "2026-01-09T10:00:00Z",
-      "title": "MotionArc Controls enters joint venture for industrial automation systems",
-      "headline": "",
-      "subheadline": "JV will expand product development, assembly and go-to-market efforts.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Joint Venture",
-        "Industrial Automation"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2026-01-09-industrial-automation-jv",
-      "body_text": "MotionArc Controls announced a joint venture focused on industrial automation systems. The company said the partnership will support expanded product development, assembly and marketing for factory automation offerings.",
-      "_prefilter": {
-        "artifact_id": "company_release_efeb81c2826a0b9b",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "facility_and_capacity_expansion",
-          "partnerships_with_buildout_implications"
-        ],
-        "field_hits": {
-          "title": {
-            "partnerships_with_buildout_implications": [
-              "\\bjoint venture(?:s)?\\b"
+              "\\bfactor(?:y|ies)\\b"
             ]
           },
-          "subheadline": {
-            "facility_and_capacity_expansion": [
-              "\\bexpand(?:ing|ed|s)?\\b"
-            ]
-          },
-          "category_tags": {
-            "partnerships_with_buildout_implications": [
-              "\\bjoint venture(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:partnerships_with_buildout_implications:\\bjoint venture(?:s)?\\b",
-          "subheadline:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
-          "category_tags:partnerships_with_buildout_implications:\\bjoint venture(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_088c813f7e093143",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "issuing_company_name": "MeterWave Technologies",
-      "published_at": "2025-12-18T13:15:00Z",
-      "title": "MeterWave Technologies expands smart meter production lines for utility modernization programs",
-      "headline": "",
-      "subheadline": "Project supports grid modernization and utility rollout schedules.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Expansion",
-        "Utilities"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-12-18-smart-meter-lines",
-      "body_text": "MeterWave Technologies announced an expansion of its smart meter production lines to support utility modernization programs and advanced metering deployments. The company said the project increases output capacity and shortens lead times for utility customers.",
-      "_prefilter": {
-        "artifact_id": "company_release_088c813f7e093143",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "construction_and_deployment",
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bexpand(?:ing|ed|s)?\\b"
-            ]
-          },
-          "subheadline": {
-            "construction_and_deployment": [
-              "\\brollout\\b"
-            ]
-          },
-          "category_tags": {
+          "publisher_metadata": {
             "facility_and_capacity_expansion": [
               "\\bexpansion(?:s)?\\b"
             ]
           }
         },
         "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
-          "subheadline:construction_and_deployment:\\brollout\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+          "title:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
         ],
         "excluded_generic_hits": [],
         "allowed_fields_examined": [
@@ -381,43 +81,125 @@
       }
     },
     {
-      "artifact_id": "company_release_99d3a8bd7a7d6651",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "issuing_company_name": "ConductorWorks",
-      "published_at": "2025-10-30T08:45:00Z",
-      "title": "ConductorWorks invests in new medium-voltage cable factory for utility and data center projects",
+      "artifact_id": "trade_press_8de0a080761e2c3b",
+      "source_class": "trade_press",
+      "publisher_or_author": "Data Center Dynamics",
+      "author_name": "Dan Swinhoe",
+      "published_at": "2026-02-12",
+      "title": "Rowan secures $500m for 300MW Texas data center project",
       "headline": "",
-      "subheadline": "Facility will increase output for grid upgrades and large-load connections.",
+      "subheadline": "",
       "deck": "",
-      "section_name": "",
+      "section_name": "Finance",
       "category_tags": [
-        "Investment",
-        "Grid Infrastructure"
+        "construction financing",
+        "Texas",
+        "campus"
       ],
       "publisher_metadata": {
-        "raw_category": "",
+        "raw_section": "Finance",
         "raw_source": ""
       },
-      "source_url": "https://example.com/releases/2025-10-30-cable-factory",
-      "body_text": "ConductorWorks announced an investment in a new medium-voltage cable factory designed to support utility grid upgrades, substation work and large-load connection projects. The company said the site will add domestic output capacity as project demand increases.",
+      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-secures-500m-for-300mw-texas-data-center-project/",
+      "body_text": "Rowan Digital Infrastructure secured approximately $550 million of construction financing for the first development phase of its 300MW Cinco campus outside San Antonio.",
       "_prefilter": {
-        "artifact_id": "company_release_99d3a8bd7a7d6651",
-        "source_class": "company_release",
+        "artifact_id": "trade_press_8de0a080761e2c3b",
+        "source_class": "trade_press",
         "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "reason": "Multiple distinct event-form families were detected across allowed fields.",
         "matched_families": [
-          "facility_and_capacity_expansion"
+          "awards_and_funding",
+          "construction_and_deployment"
+        ],
+        "field_hits": {
+          "section_name": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "category_tags": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ],
+            "construction_and_deployment": [
+              "\\bconstruction\\b"
+            ]
+          },
+          "publisher_metadata": {
+            "awards_and_funding": [
+              "\\bfinanc(?:e|ing|ed)\\b"
+            ]
+          },
+          "title": {}
+        },
+        "fired_rules": [
+          "section_name:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
+          "category_tags:construction_and_deployment:\\bconstruction\\b",
+          "publisher_metadata:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "trade_press_921740cadac635c6",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Robert Walton",
+      "published_at": "2025-09-04",
+      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
+      "headline": "",
+      "subheadline": "",
+      "deck": "",
+      "section_name": "Transmission & Distribution",
+      "category_tags": [
+        "transformers",
+        "factory",
+        "manufacturing investment"
+      ],
+      "publisher_metadata": {
+        "raw_section": "Transmission & Distribution",
+        "raw_source": ""
+      },
+      "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
+      "body_text": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia, and make more than $500 million in other investments to meet growing need for U.S. grid equipment amid transformer bottlenecks.",
+      "_prefilter": {
+        "artifact_id": "trade_press_921740cadac635c6",
+        "source_class": "trade_press",
+        "triage": "keep",
+        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
+        "matched_families": [
+          "facility_and_capacity_expansion",
+          "trade_press_investment_and_factory"
         ],
         "field_hits": {
           "title": {
+            "facility_and_capacity_expansion": [
+              "\\bfactor(?:y|ies)\\b"
+            ],
+            "trade_press_investment_and_factory": [
+              "trade_press:investment+factory"
+            ]
+          },
+          "category_tags": {
             "facility_and_capacity_expansion": [
               "\\bfactor(?:y|ies)\\b"
             ]
           }
         },
         "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b"
+          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
+          "title:trade_press_investment_and_factory:trade_press:investment+factory"
         ],
         "excluded_generic_hits": [],
         "allowed_fields_examined": [
@@ -432,280 +214,48 @@
       }
     },
     {
-      "artifact_id": "company_release_eac17ce201345043",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "issuing_company_name": "MacroFab Holdings",
-      "published_at": "2025-12-21T12:10:00Z",
-      "title": "MacroFab Holdings announces $600 million U.S. industrial expansion plan",
+      "artifact_id": "trade_press_7cab8b3aa2571296",
+      "source_class": "trade_press",
+      "publisher_or_author": "Utility Dive",
+      "author_name": "Diana DiGangi",
+      "published_at": "2026-02-20",
+      "title": "As load grows, Southern raises spending plan to $81B",
       "headline": "",
-      "subheadline": "Capital program spans multiple facilities and business lines.",
+      "subheadline": "",
       "deck": "",
-      "section_name": "",
+      "section_name": "Corporate News",
       "category_tags": [
-        "Investment",
-        "Industrial Manufacturing"
+        "load growth",
+        "capex",
+        "generation"
       ],
       "publisher_metadata": {
-        "raw_category": "",
+        "raw_section": "Corporate News",
         "raw_source": ""
       },
-      "source_url": "https://example.com/releases/2025-12-21-broad-industrial-investment",
-      "body_text": "MacroFab Holdings announced a $600 million U.S. industrial expansion plan spanning multiple facilities and business lines. The company described the move as a broad domestic manufacturing growth initiative without tying it to one specific physical system.",
+      "source_url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
+      "body_text": "Southern Company raised its five-year spending plan to $81 billion, driven by substantial new growth infrastructure investments as large-load and data center demand increases. The company is working on adding 10GW of approved new generation.",
       "_prefilter": {
-        "artifact_id": "company_release_eac17ce201345043",
-        "source_class": "company_release",
+        "artifact_id": "trade_press_7cab8b3aa2571296",
+        "source_class": "trade_press",
         "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
+        "reason": "Trade-press headline indicates an explicit increase in planned capital spending.",
         "matched_families": [
-          "facility_and_capacity_expansion"
+          "trade_press_spending_plan"
         ],
         "field_hits": {
           "title": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
+            "trade_press_spending_plan": [
+              "trade_press:spending_plan"
             ]
           }
         },
         "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
+          "title:trade_press_spending_plan:trade_press:spending_plan"
         ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_79386cedd20ceb6a",
-      "source_class": "company_release",
-      "publisher_or_author": "GlobeNewswire",
-      "issuing_company_name": "NorthRiver Digital Infrastructure",
-      "published_at": "2025-11-21T14:00:00Z",
-      "title": "NorthRiver Digital Infrastructure breaks ground on second hyperscale data center campus phase",
-      "headline": "",
-      "subheadline": "New phase adds power-delivery, cooling and shell capacity.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Data Centers",
-        "Construction"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-11-21-hyperscale-campus-phase-two",
-      "body_text": "NorthRiver Digital Infrastructure announced groundbreaking for the second phase of its hyperscale data center campus. The company said the project adds new shell space, cooling infrastructure, and power-delivery systems as it expands campus capacity.",
-      "_prefilter": {
-        "artifact_id": "company_release_79386cedd20ceb6a",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "construction_and_deployment",
-          "facility_and_capacity_expansion"
+        "excluded_generic_hits": [
+          "\\bgrowth\\b"
         ],
-        "field_hits": {
-          "title": {
-            "construction_and_deployment": [
-              "\\bbreaks? ground\\b"
-            ]
-          },
-          "subheadline": {
-            "facility_and_capacity_expansion": [
-              "\\bcapacity(?: increase| expansion| additions?)?\\b"
-            ]
-          },
-          "category_tags": {
-            "construction_and_deployment": [
-              "\\bconstruction\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:construction_and_deployment:\\bbreaks? ground\\b",
-          "subheadline:facility_and_capacity_expansion:\\bcapacity(?: increase| expansion| additions?)?\\b",
-          "category_tags:construction_and_deployment:\\bconstruction\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_699b2a49df49cc9e",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "issuing_company_name": "Summit Compute Parks",
-      "published_at": "2025-12-17T10:30:00Z",
-      "title": "Summit Compute Parks advances 250MW data center campus construction",
-      "headline": "",
-      "subheadline": "Project includes dedicated substations and on-site power infrastructure.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Data Centers",
-        "Construction"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-12-17-data-center-campus-mw",
-      "body_text": "Summit Compute Parks announced continued construction of a 250MW data center campus. The company said the project includes dedicated substations, on-site power infrastructure, and supporting cooling systems to bring new campus capacity online.",
-      "_prefilter": {
-        "artifact_id": "company_release_699b2a49df49cc9e",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "construction_and_deployment"
-        ],
-        "field_hits": {
-          "title": {
-            "construction_and_deployment": [
-              "\\bconstruction\\b"
-            ]
-          },
-          "category_tags": {
-            "construction_and_deployment": [
-              "\\bconstruction\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:construction_and_deployment:\\bconstruction\\b",
-          "category_tags:construction_and_deployment:\\bconstruction\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_c57077dab862393a",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "issuing_company_name": "PeakSpan Power Systems",
-      "published_at": "2025-11-25T09:45:00Z",
-      "title": "PeakSpan Power Systems expands generator module assembly for utility and data center demand",
-      "headline": "",
-      "subheadline": "Expansion is aimed at fast-response power projects and backup systems.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Power Generation",
-        "Expansion"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-11-25-generator-module-expansion",
-      "body_text": "PeakSpan Power Systems announced an expansion of its generator module assembly operations to serve utility response projects and data center backup-power demand. The company said the expansion increases package throughput for gas and dual-fuel generator systems.",
-      "_prefilter": {
-        "artifact_id": "company_release_c57077dab862393a",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bexpand(?:ing|ed|s)?\\b"
-            ]
-          },
-          "subheadline": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          },
-          "category_tags": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bexpand(?:ing|ed|s)?\\b",
-          "subheadline:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "company_release_71c6dc59027b9138",
-      "source_class": "company_release",
-      "publisher_or_author": "GlobeNewswire",
-      "issuing_company_name": "FlexGen Turbine Packages",
-      "published_at": "2025-12-12T11:20:00Z",
-      "title": "FlexGen Turbine Packages invests in new manufacturing line for fast-start power equipment",
-      "headline": "",
-      "subheadline": "Project supports utility balancing needs and digital infrastructure resilience.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Power Generation",
-        "Investment"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-12-12-turbine-packages-manufacturing",
-      "body_text": "FlexGen Turbine Packages announced an investment in a new manufacturing line for fast-start power equipment and associated balance-of-plant systems. The company said the line will support utility balancing needs and resilience demand from digital infrastructure operators.",
-      "_prefilter": {
-        "artifact_id": "company_release_71c6dc59027b9138",
-        "source_class": "company_release",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bnew [\\w-]+(?: [\\w-]+){0,3} (?:facility|plant|fab|line)\\b"
-        ],
-        "excluded_generic_hits": [],
         "allowed_fields_examined": [
           "title",
           "headline",
@@ -1796,409 +1346,9 @@
           "publisher_metadata"
         ]
       }
-    },
-    {
-      "artifact_id": "trade_press_10e5144776b5598c",
-      "source_class": "trade_press",
-      "publisher_or_author": "Manufacturing Dive",
-      "author_name": "Nathan Owens",
-      "published_at": "2025-11-20",
-      "title": "Rockwell Automation confirms Wisconsin factory location, part of $2B US expansion",
-      "headline": "",
-      "subheadline": "",
-      "deck": "",
-      "section_name": "Openings & Expansions",
-      "category_tags": [
-        "automation",
-        "factory",
-        "expansion"
-      ],
-      "publisher_metadata": {
-        "raw_section": "Openings & Expansions",
-        "raw_source": ""
-      },
-      "source_url": "https://www.manufacturingdive.com/news/rockwell-automation-greenfield-wisconsin-largest-factory-2b-investment/806033/",
-      "body_text": "Rockwell Automation plans to build a new factory in Wisconsin as part of a $2 billion effort to strengthen its U.S. operations. The campus will include more than 1 million square feet of manufacturing and warehouse space.",
-      "_prefilter": {
-        "artifact_id": "trade_press_10e5144776b5598c",
-        "source_class": "trade_press",
-        "triage": "keep",
-        "reason": "Strong-field event-form hit in an explicit capital-flow family.",
-        "matched_families": [
-          "facility_and_capacity_expansion"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b",
-              "\\bfactor(?:y|ies)\\b"
-            ]
-          },
-          "section_name": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          },
-          "category_tags": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b",
-              "\\bfactor(?:y|ies)\\b"
-            ]
-          },
-          "publisher_metadata": {
-            "facility_and_capacity_expansion": [
-              "\\bexpansion(?:s)?\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
-          "section_name:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b",
-          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
-          "publisher_metadata:facility_and_capacity_expansion:\\bexpansion(?:s)?\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "trade_press_8de0a080761e2c3b",
-      "source_class": "trade_press",
-      "publisher_or_author": "Data Center Dynamics",
-      "author_name": "Dan Swinhoe",
-      "published_at": "2026-02-12",
-      "title": "Rowan secures $500m for 300MW Texas data center project",
-      "headline": "",
-      "subheadline": "",
-      "deck": "",
-      "section_name": "Finance",
-      "category_tags": [
-        "construction financing",
-        "Texas",
-        "campus"
-      ],
-      "publisher_metadata": {
-        "raw_section": "Finance",
-        "raw_source": ""
-      },
-      "source_url": "https://www.datacenterdynamics.com/en/news/rowan-secures-500m-for-300mw-texas-data-center-project/",
-      "body_text": "Rowan Digital Infrastructure secured approximately $550 million of construction financing for the first development phase of its 300MW Cinco campus outside San Antonio.",
-      "_prefilter": {
-        "artifact_id": "trade_press_8de0a080761e2c3b",
-        "source_class": "trade_press",
-        "triage": "keep",
-        "reason": "Multiple distinct event-form families were detected across allowed fields.",
-        "matched_families": [
-          "awards_and_funding",
-          "construction_and_deployment"
-        ],
-        "field_hits": {
-          "section_name": {
-            "awards_and_funding": [
-              "\\bfinanc(?:e|ing|ed)\\b"
-            ]
-          },
-          "category_tags": {
-            "awards_and_funding": [
-              "\\bfinanc(?:e|ing|ed)\\b"
-            ],
-            "construction_and_deployment": [
-              "\\bconstruction\\b"
-            ]
-          },
-          "publisher_metadata": {
-            "awards_and_funding": [
-              "\\bfinanc(?:e|ing|ed)\\b"
-            ]
-          },
-          "title": {}
-        },
-        "fired_rules": [
-          "section_name:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
-          "category_tags:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b",
-          "category_tags:construction_and_deployment:\\bconstruction\\b",
-          "publisher_metadata:awards_and_funding:\\bfinanc(?:e|ing|ed)\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "trade_press_921740cadac635c6",
-      "source_class": "trade_press",
-      "publisher_or_author": "Utility Dive",
-      "author_name": "Robert Walton",
-      "published_at": "2025-09-04",
-      "title": "Hitachi unveils $1B grid manufacturing investment, including Virginia transformer factory",
-      "headline": "",
-      "subheadline": "",
-      "deck": "",
-      "section_name": "Transmission & Distribution",
-      "category_tags": [
-        "transformers",
-        "factory",
-        "manufacturing investment"
-      ],
-      "publisher_metadata": {
-        "raw_section": "Transmission & Distribution",
-        "raw_source": ""
-      },
-      "source_url": "https://www.utilitydive.com/news/hitachi-unveils-1b-grid-manufacturing-investment-including-virginia-trans/759219/",
-      "body_text": "Hitachi Energy will build a $457 million transformer production facility in South Boston, Virginia, and make more than $500 million in other investments to meet growing need for U.S. grid equipment amid transformer bottlenecks.",
-      "_prefilter": {
-        "artifact_id": "trade_press_921740cadac635c6",
-        "source_class": "trade_press",
-        "triage": "keep",
-        "reason": "Trade-press headline indicates direct investment tied to manufacturing or facility expansion.",
-        "matched_families": [
-          "facility_and_capacity_expansion",
-          "trade_press_investment_and_factory"
-        ],
-        "field_hits": {
-          "title": {
-            "facility_and_capacity_expansion": [
-              "\\bfactor(?:y|ies)\\b"
-            ],
-            "trade_press_investment_and_factory": [
-              "trade_press:investment+factory"
-            ]
-          },
-          "category_tags": {
-            "facility_and_capacity_expansion": [
-              "\\bfactor(?:y|ies)\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
-          "category_tags:facility_and_capacity_expansion:\\bfactor(?:y|ies)\\b",
-          "title:trade_press_investment_and_factory:trade_press:investment+factory"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "trade_press_7cab8b3aa2571296",
-      "source_class": "trade_press",
-      "publisher_or_author": "Utility Dive",
-      "author_name": "Diana DiGangi",
-      "published_at": "2026-02-20",
-      "title": "As load grows, Southern raises spending plan to $81B",
-      "headline": "",
-      "subheadline": "",
-      "deck": "",
-      "section_name": "Corporate News",
-      "category_tags": [
-        "load growth",
-        "capex",
-        "generation"
-      ],
-      "publisher_metadata": {
-        "raw_section": "Corporate News",
-        "raw_source": ""
-      },
-      "source_url": "https://www.utilitydive.com/news/southern-co-load-data-center-earnings/812681/",
-      "body_text": "Southern Company raised its five-year spending plan to $81 billion, driven by substantial new growth infrastructure investments as large-load and data center demand increases. The company is working on adding 10GW of approved new generation.",
-      "_prefilter": {
-        "artifact_id": "trade_press_7cab8b3aa2571296",
-        "source_class": "trade_press",
-        "triage": "keep",
-        "reason": "Trade-press headline indicates an explicit increase in planned capital spending.",
-        "matched_families": [
-          "trade_press_spending_plan"
-        ],
-        "field_hits": {
-          "title": {
-            "trade_press_spending_plan": [
-              "trade_press:spending_plan"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:trade_press_spending_plan:trade_press:spending_plan"
-        ],
-        "excluded_generic_hits": [
-          "\\bgrowth\\b"
-        ],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
     }
   ],
   "review_artifacts": [
-    {
-      "artifact_id": "company_release_2779831d9e413245",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "issuing_company_name": "TurbineWorks Energy",
-      "published_at": "2025-12-11T11:00:00Z",
-      "title": "TurbineWorks Energy opens service and assembly hub for gas turbine packages",
-      "headline": "",
-      "subheadline": "New site is intended to shorten delivery cycles for flexible power projects.",
-      "deck": "",
-      "section_name": "",
-      "category_tags": [
-        "Facility Opening",
-        "Power Generation"
-      ],
-      "publisher_metadata": {
-        "raw_category": "",
-        "raw_source": ""
-      },
-      "source_url": "https://example.com/releases/2025-12-11-gasturbine-service-hub",
-      "body_text": "TurbineWorks Energy announced the opening of a new U.S. service and light-assembly hub for gas turbine packages and related auxiliary systems. The company said the site is designed to support flexible power projects serving industrial loads and digital infrastructure.",
-      "_prefilter": {
-        "artifact_id": "company_release_2779831d9e413245",
-        "source_class": "company_release",
-        "triage": "review",
-        "reason": "Only medium/weak-field event-form evidence was detected.",
-        "matched_families": [
-          "construction_and_deployment"
-        ],
-        "field_hits": {
-          "category_tags": {
-            "construction_and_deployment": [
-              "\\bopening\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "category_tags:construction_and_deployment:\\bopening\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "policy_feed_43e47ef2865c42a1",
-      "source_class": "government_policy_enforcement",
-      "publisher_or_author": "Federal Register",
-      "published_at": "2026-02-25",
-      "title": "Notice of Availability of the 2025 Record of Decision for the Final Environmental Impact Statement for the National Petroleum Reserve-Alaska, Integrated Activity Plan",
-      "source_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03784/notice-of-availability-of-the-2025-record-of-decision-for-the-final-environmental-impact-statement",
-      "body_text": "The Bureau of Land Management (BLM), Alaska State Office, announces the availability of the record of decision (ROD) for the final environmental impact statement (EIS) for the National Petroleum Reserve--Alaska, Integrated Activity Plan (NPR-A IAP).\n\nThe Bureau of Land Management (BLM), Alaska State Office, announces the availability of the record of decision (ROD) for the final environmental impact statement (EIS) for the National Petroleum Reserve--Alaska, Integrated Activity Plan (NPR-A IAP).\n\nNormalized from live Federal Register API response.\n\nAgencies: Interior Department, Land Management Bureau\n\nRelevance: noise (0)",
-      "artifact_metadata": {
-        "document_id": "federal_register_2026-03784",
-        "source_target_id": "src_target_federal_register_notices",
-        "source_target_name": "Federal Register Notices"
-      },
-      "_prefilter": {
-        "artifact_id": "policy_feed_43e47ef2865c42a1",
-        "source_class": "government_policy_enforcement",
-        "triage": "review",
-        "reason": "Only review-only event-form language was detected without explicit buildout form.",
-        "matched_families": [
-          "planning_and_land_access_enablement"
-        ],
-        "field_hits": {
-          "title": {
-            "planning_and_land_access_enablement": [
-              "\\brecord of decision\\b",
-              "\\bintegrated activity plan\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:planning_and_land_access_enablement:\\brecord of decision\\b",
-          "title:planning_and_land_access_enablement:\\bintegrated activity plan\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
-    {
-      "artifact_id": "policy_feed_77b674eb72edfd04",
-      "source_class": "government_policy_enforcement",
-      "publisher_or_author": "Federal Register",
-      "published_at": "2026-02-25",
-      "title": "Gulf of America, Outer Continental Shelf, Record of Decision To Reaffirm Decisions for Gulf of Mexico Outer Continental Shelf Oil and Gas Lease Sales 259 and 261 and Gulf of America Regional OCS Oil and Gas Lease Sales and Post-Lease Activities: Final Programmatic Environmental Impact Statement",
-      "source_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03727/gulf-of-america-outer-continental-shelf-record-of-decision-to-reaffirm-decisions-for-gulf-of-mexico",
-      "body_text": "The Bureau of Ocean Energy Management (BOEM) announces the availability of the record of decision (ROD) to reaffirm decisions for Gulf of Mexico (GOM) Outer Continental Shelf (OCS) Oil and Gas Lease Sales 259 and 261 (Lease Sales 259 and 261) and its intent to use the Gulf of America Regional OCS Oil and Gas Lease Sales and Post-Lease Activities: Final Programmatic Environmental Impact Statement (GOA Oil and Gas Programmatic EIS) for, among other things, a National Environmental Policy Act (NEPA) analysis that can be tiered to when conducting post-lease and site-specific reviews of plans, permits and other approvals. This ROD concludes the programmatic NEPA process for the GOA Oil and Gas Programmatic EIS.\n\nThe Bureau of Ocean Energy Management (BOEM) announces the availability of the record of decision (ROD) to reaffirm decisions for Gulf of Mexico (GOM) Outer Continental Shelf (OCS) Oil and Gas Lease Sales 259 and 261 (Lease Sales 259 and 261) and its...\n\nNormalized from live Federal Register API response.\n\nAgencies: Interior Department, Ocean Energy Management Bureau\n\nRelevance: noise (0)",
-      "artifact_metadata": {
-        "document_id": "federal_register_2026-03727",
-        "source_target_id": "src_target_federal_register_notices",
-        "source_target_name": "Federal Register Notices"
-      },
-      "_prefilter": {
-        "artifact_id": "policy_feed_77b674eb72edfd04",
-        "source_class": "government_policy_enforcement",
-        "triage": "review",
-        "reason": "Only review-only event-form language was detected without explicit buildout form.",
-        "matched_families": [
-          "planning_and_land_access_enablement"
-        ],
-        "field_hits": {
-          "title": {
-            "planning_and_land_access_enablement": [
-              "\\brecord of decision\\b"
-            ]
-          }
-        },
-        "fired_rules": [
-          "title:planning_and_land_access_enablement:\\brecord of decision\\b"
-        ],
-        "excluded_generic_hits": [],
-        "allowed_fields_examined": [
-          "title",
-          "headline",
-          "subheadline",
-          "deck",
-          "section_name",
-          "category_tags",
-          "publisher_metadata"
-        ]
-      }
-    },
     {
       "artifact_id": "trade_press_8af4de468aa71b03",
       "source_class": "trade_press",
@@ -2304,71 +1454,97 @@
           "publisher_metadata"
         ]
       }
+    },
+    {
+      "artifact_id": "policy_feed_43e47ef2865c42a1",
+      "source_class": "government_policy_enforcement",
+      "publisher_or_author": "Federal Register",
+      "published_at": "2026-02-25",
+      "title": "Notice of Availability of the 2025 Record of Decision for the Final Environmental Impact Statement for the National Petroleum Reserve-Alaska, Integrated Activity Plan",
+      "source_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03784/notice-of-availability-of-the-2025-record-of-decision-for-the-final-environmental-impact-statement",
+      "body_text": "The Bureau of Land Management (BLM), Alaska State Office, announces the availability of the record of decision (ROD) for the final environmental impact statement (EIS) for the National Petroleum Reserve--Alaska, Integrated Activity Plan (NPR-A IAP).\n\nThe Bureau of Land Management (BLM), Alaska State Office, announces the availability of the record of decision (ROD) for the final environmental impact statement (EIS) for the National Petroleum Reserve--Alaska, Integrated Activity Plan (NPR-A IAP).\n\nNormalized from live Federal Register API response.\n\nAgencies: Interior Department, Land Management Bureau\n\nRelevance: noise (0)",
+      "artifact_metadata": {
+        "document_id": "federal_register_2026-03784",
+        "source_target_id": "src_target_federal_register_notices",
+        "source_target_name": "Federal Register Notices"
+      },
+      "_prefilter": {
+        "artifact_id": "policy_feed_43e47ef2865c42a1",
+        "source_class": "government_policy_enforcement",
+        "triage": "review",
+        "reason": "Only review-only event-form language was detected without explicit buildout form.",
+        "matched_families": [
+          "planning_and_land_access_enablement"
+        ],
+        "field_hits": {
+          "title": {
+            "planning_and_land_access_enablement": [
+              "\\brecord of decision\\b",
+              "\\bintegrated activity plan\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:planning_and_land_access_enablement:\\brecord of decision\\b",
+          "title:planning_and_land_access_enablement:\\bintegrated activity plan\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
+    },
+    {
+      "artifact_id": "policy_feed_77b674eb72edfd04",
+      "source_class": "government_policy_enforcement",
+      "publisher_or_author": "Federal Register",
+      "published_at": "2026-02-25",
+      "title": "Gulf of America, Outer Continental Shelf, Record of Decision To Reaffirm Decisions for Gulf of Mexico Outer Continental Shelf Oil and Gas Lease Sales 259 and 261 and Gulf of America Regional OCS Oil and Gas Lease Sales and Post-Lease Activities: Final Programmatic Environmental Impact Statement",
+      "source_url": "https://www.federalregister.gov/documents/2026/02/25/2026-03727/gulf-of-america-outer-continental-shelf-record-of-decision-to-reaffirm-decisions-for-gulf-of-mexico",
+      "body_text": "The Bureau of Ocean Energy Management (BOEM) announces the availability of the record of decision (ROD) to reaffirm decisions for Gulf of Mexico (GOM) Outer Continental Shelf (OCS) Oil and Gas Lease Sales 259 and 261 (Lease Sales 259 and 261) and its intent to use the Gulf of America Regional OCS Oil and Gas Lease Sales and Post-Lease Activities: Final Programmatic Environmental Impact Statement (GOA Oil and Gas Programmatic EIS) for, among other things, a National Environmental Policy Act (NEPA) analysis that can be tiered to when conducting post-lease and site-specific reviews of plans, permits and other approvals. This ROD concludes the programmatic NEPA process for the GOA Oil and Gas Programmatic EIS.\n\nThe Bureau of Ocean Energy Management (BOEM) announces the availability of the record of decision (ROD) to reaffirm decisions for Gulf of Mexico (GOM) Outer Continental Shelf (OCS) Oil and Gas Lease Sales 259 and 261 (Lease Sales 259 and 261) and its...\n\nNormalized from live Federal Register API response.\n\nAgencies: Interior Department, Ocean Energy Management Bureau\n\nRelevance: noise (0)",
+      "artifact_metadata": {
+        "document_id": "federal_register_2026-03727",
+        "source_target_id": "src_target_federal_register_notices",
+        "source_target_name": "Federal Register Notices"
+      },
+      "_prefilter": {
+        "artifact_id": "policy_feed_77b674eb72edfd04",
+        "source_class": "government_policy_enforcement",
+        "triage": "review",
+        "reason": "Only review-only event-form language was detected without explicit buildout form.",
+        "matched_families": [
+          "planning_and_land_access_enablement"
+        ],
+        "field_hits": {
+          "title": {
+            "planning_and_land_access_enablement": [
+              "\\brecord of decision\\b"
+            ]
+          }
+        },
+        "fired_rules": [
+          "title:planning_and_land_access_enablement:\\brecord of decision\\b"
+        ],
+        "excluded_generic_hits": [],
+        "allowed_fields_examined": [
+          "title",
+          "headline",
+          "subheadline",
+          "deck",
+          "section_name",
+          "category_tags",
+          "publisher_metadata"
+        ]
+      }
     }
   ],
   "dropped_audit_records": [
-    {
-      "artifact_id": "company_release_0fbbb9d2960b9b22",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "published_at": "2025-11-06T14:30:00Z",
-      "title": "VoltAxis Systems invests $180 million in U.S. switchgear and substation equipment campus",
-      "triage": "drop",
-      "reason": "No qualifying event-form evidence was detected in allowed fields.",
-      "matched_families": [],
-      "fired_rules": [],
-      "excluded_generic_hits": []
-    },
-    {
-      "artifact_id": "company_release_70784c2fd5abbd5f",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "published_at": "2025-11-28T14:20:00Z",
-      "title": "ForgeLine Components selects Tennessee site for advanced industrial manufacturing campus",
-      "triage": "drop",
-      "reason": "No qualifying event-form evidence was detected in allowed fields.",
-      "matched_families": [],
-      "fired_rules": [],
-      "excluded_generic_hits": []
-    },
-    {
-      "artifact_id": "company_release_c13ba7e038f705e6",
-      "source_class": "company_release",
-      "publisher_or_author": "GlobeNewswire",
-      "published_at": "2025-10-07T16:00:00Z",
-      "title": "RiverState Electric signs first large-load service agreement with hyperscale data center customer",
-      "triage": "drop",
-      "reason": "No qualifying event-form evidence was detected in allowed fields.",
-      "matched_families": [],
-      "fired_rules": [],
-      "excluded_generic_hits": []
-    },
-    {
-      "artifact_id": "company_release_b281baa51080df94",
-      "source_class": "company_release",
-      "publisher_or_author": "Business Wire",
-      "published_at": "2025-11-14T13:00:00Z",
-      "title": "HighPlains Electric launches substation and feeder upgrade program for large-load customer growth",
-      "triage": "drop",
-      "reason": "No qualifying event-form evidence was detected in allowed fields.",
-      "matched_families": [],
-      "fired_rules": [],
-      "excluded_generic_hits": [
-        "\\bgrowth\\b"
-      ]
-    },
-    {
-      "artifact_id": "company_release_bff0047ae0beda24",
-      "source_class": "company_release",
-      "publisher_or_author": "PR Newswire",
-      "published_at": "2025-12-05T12:15:00Z",
-      "title": "Prairie Grid Utility signs electric service agreement with large-load campus project",
-      "triage": "drop",
-      "reason": "No qualifying event-form evidence was detected in allowed fields.",
-      "matched_families": [],
-      "fired_rules": [],
-      "excluded_generic_hits": []
-    },
     {
       "artifact_id": "policy_feed_b2b25cfec5c99202",
       "source_class": "government_policy_enforcement",
@@ -5651,9 +4827,10 @@
     }
   ],
   "metrics": {
-    "processed_artifact_count": 324,
-    "kept_count": 41,
-    "review_count": 5,
-    "dropped_count": 278
+    "processed_artifact_count": 306,
+    "kept_count": 29,
+    "review_count": 4,
+    "dropped_count": 273,
+    "excluded_synthetic_artifact_count": 0
   }
 }

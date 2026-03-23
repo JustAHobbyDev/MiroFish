@@ -43,12 +43,14 @@ def main() -> int:
     parser.add_argument("bounded_universe_batch_json", type=Path)
     parser.add_argument("prefilter_batch_json", nargs="+", type=Path)
     parser.add_argument("--output-json", type=Path, required=True)
+    parser.add_argument("--include-synthetic", action="store_true")
     args = parser.parse_args()
 
     module = _load_module("blind_run_entity_freeze_builder")
     payload = module.build_blind_run_entity_freeze_batch(
         _load_json(args.bounded_universe_batch_json),
         [_load_json(path) for path in args.prefilter_batch_json],
+        include_synthetic=args.include_synthetic,
     )
     args.output_json.parent.mkdir(parents=True, exist_ok=True)
     args.output_json.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

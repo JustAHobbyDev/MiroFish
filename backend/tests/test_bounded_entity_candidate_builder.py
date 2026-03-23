@@ -104,3 +104,41 @@ def test_build_bounded_entity_candidate_batch_marks_backup_power_suppliers_as_eq
     roles = {item["entity_name"]: item["entity_role"] for item in result["candidates"]}
     assert roles["Rolls-Royce"] == "equipment_or_component_supplier"
     assert roles["AVL"] == "equipment_or_component_supplier"
+
+
+def test_build_bounded_entity_candidate_batch_excludes_synthetic_supporting_artifacts():
+    research_set_batch = {
+        "research_sets": [
+            {
+                "bounded_research_set_id": "brs_grid",
+                "system_label": "grid equipment and transformer buildout",
+                "as_of_date": "2025-12-17",
+                "matched_artifacts": [
+                    {
+                        "artifact_id": "syn1",
+                        "source_class": "company_release",
+                        "source_url": "https://example.com/releases/syn1",
+                        "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
+                        "matched_terms": ["transformer production expansion", "transformers"],
+                        "match_score": 7,
+                    },
+                    {
+                        "artifact_id": "real1",
+                        "source_class": "trade_press",
+                        "source_url": "https://news.example.org/real1",
+                        "title": "Hitachi Energy commits $250M to address transformer shortage",
+                        "matched_terms": ["transformers"],
+                        "match_score": 8,
+                    },
+                ],
+                "entity_candidates": [
+                    {"entity_name": "GridCore Manufacturing", "artifact_ids": ["syn1"]},
+                    {"entity_name": "Hitachi Energy", "artifact_ids": ["real1"]},
+                ],
+            }
+        ]
+    }
+
+    result = module.build_bounded_entity_candidate_batch(research_set_batch)
+
+    assert [item["entity_name"] for item in result["candidates"]] == ["Hitachi Energy"]

@@ -43,13 +43,18 @@ def main() -> int:
     parser.add_argument("--batch-type", choices=("prefilter", "signal"), required=True)
     parser.add_argument("--name", required=True)
     parser.add_argument("--output-json", type=Path, required=True)
+    parser.add_argument("--include-synthetic", action="store_true")
     parser.add_argument("input_json", nargs="+", type=Path)
     args = parser.parse_args()
 
     module = _load_module("archive_batch_union")
     inputs = [_load_json(path) for path in args.input_json]
     if args.batch_type == "prefilter":
-        payload = module.union_prefilter_batches(inputs, name=args.name)
+        payload = module.union_prefilter_batches(
+            inputs,
+            name=args.name,
+            include_synthetic=args.include_synthetic,
+        )
     else:
         payload = module.union_signal_batches(inputs, name=args.name)
 

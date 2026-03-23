@@ -44,7 +44,7 @@ def test_build_blind_run_entity_freeze_batch_returns_expansions_research_sets_an
                     "issuing_company_name": "GridCore Manufacturing",
                     "title": "GridCore Manufacturing breaks ground on new power transformer production plant",
                     "body_text": "The new site will increase transformer output for utility projects.",
-                    "source_url": "https://example.com/a1",
+                    "source_url": "https://news.example.org/a1",
                 }
             ],
             "review_artifacts": [],
