@@ -1,0 +1,64 @@
+{
+  "artifact_id": "2026-03-22-aleabitoreddit-photonics-anchor-workflow-v1",
+  "date": "2026-03-22",
+  "source_archive": "research/analysis/aleabitoreddit-daily-archive-v1.json",
+  "chronology": [
+    {
+      "expression": "LITE",
+      "role": "anchor_expression",
+      "first_exact_mention_at": "2025-10-25T06:17:21.000Z",
+      "post_id": "1981968303271592379",
+      "reason": "first visible photonics-specific company clue"
+    },
+    {
+      "expression": "TPU_v7_Ironwood",
+      "role": "system_demand_driver",
+      "first_exact_mention_at": "2025-11-29T01:23:36.000Z",
+      "post_id": "1994577956598141333",
+      "reason": "system research becomes explicit before upstream bottleneck language"
+    },
+    {
+      "expression": "COHR",
+      "role": "adjacent_anchor",
+      "first_exact_mention_at": "2025-12-05T05:14:28.000Z",
+      "post_id": "1996810382875177099",
+      "reason": "appears as part of photonics field, not as first bottleneck"
+    },
+    {
+      "expression": "AAOI",
+      "role": "levered_adjacent_expression",
+      "first_exact_mention_at": "2025-12-11T22:18:06.000Z",
+      "post_id": "1999242313735016715",
+      "reason": "introduced through direct hyperscaler customer leverage to MSFT and AMZN"
+    },
+    {
+      "expression": "AXTI",
+      "role": "hidden_upstream_chokepoint",
+      "first_exact_mention_at": "2025-12-22T09:48:57.000Z",
+      "post_id": "2003040048930074770",
+      "reason": "introduced only after LITE thesis is explicit, as material supplier to photonics"
+    }
+  ],
+  "workflow_hypothesis": [
+    "anchor_clue_detection",
+    "system_demand_mapping",
+    "anchor_expression_confirmation",
+    "adjacent_expression_expansion",
+    "upstream_chokepoint_tracing",
+    "second_order_refinement"
+  ],
+  "product_implication": {
+    "recommended_shift": "anchor_first",
+    "current_problem": "blind workflow is too bottleneck_first on sparse real corpus",
+    "recommended_path": [
+      "detect anchor expressions from real in-window evidence",
+      "build dependency map from anchor",
+      "generate adjacent expressions and upstream chokepoints",
+      "rank final expressions only after the chain is coherent"
+    ]
+  },
+  "confidence": {
+    "chronology_confidence": "high",
+    "workflow_inference_confidence": "medium"
+  }
+}
