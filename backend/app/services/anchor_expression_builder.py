@@ -17,6 +17,11 @@ PHOTONICS_SYSTEM_DRIVERS = {
     "tsmc",
 }
 
+PHOTONICS_UPSTREAM_ISSUERS = {
+    "axt",
+    "jx advanced metals",
+}
+
 PHOTONICS_TERMS = {
     "photonics",
     "optics",
@@ -105,9 +110,24 @@ def _photonics_anchor_role(artifact: Dict[str, Any]) -> str:
 
     if lowered_issuer in PHOTONICS_SYSTEM_DRIVERS:
         return "system_demand_driver"
+    if lowered_issuer in PHOTONICS_UPSTREAM_ISSUERS:
+        return "upstream_dependency"
     if any(term in title for term in ("crystal materials", "substrate", "substrates", "feedstock")):
         return "upstream_dependency"
     if "metals" in lowered_issuer:
+        return "upstream_dependency"
+    if any(
+        term in text
+        for term in (
+            "indium phosphide substrate",
+            "indium phosphide substrates",
+            "inp substrate",
+            "inp substrates",
+            "substrate materials",
+            "semiconductor substrate",
+            "semiconductor substrates",
+        )
+    ):
         return "upstream_dependency"
     if "wafer fab" in text or "6-inch inp" in text or "6-inch indium phosphide" in text:
         return "adjacent_anchor"

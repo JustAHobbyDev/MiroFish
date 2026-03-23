@@ -7,7 +7,9 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import subprocess
 import urllib.request
+from urllib.error import HTTPError, URLError
 from html import unescape
 from typing import Any, Dict, Iterable, List, Optional
 
@@ -37,7 +39,52 @@ _FILING_REVIEW_PATTERNS = (
 )
 
 
-_USER_AGENT = "Mozilla/5.0 (compatible; MiroFishHistoricalCorpus/1.0)"
+_USER_AGENT = "MiroFishResearch/1.0 (historical corpus collection; ops@mirofish.local)"
+_DEFAULT_FETCH_TIMEOUT_SECONDS = 60
+
+
+def _request_headers(source_url: str) -> Dict[str, str]:
+    headers = {
+        "User-Agent": _USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+    }
+    if "sec.gov" in source_url:
+        headers["Referer"] = "https://www.sec.gov/"
+    return headers
+
+
+def _fetch_via_urllib(source_url: str) -> str:
+    request = urllib.request.Request(source_url, headers=_request_headers(source_url))
+    with urllib.request.urlopen(request, timeout=_DEFAULT_FETCH_TIMEOUT_SECONDS) as response:
+        return response.read().decode("utf-8", errors="ignore")
+
+
+def _fetch_via_curl(source_url: str) -> str:
+    command = [
+        "curl",
+        "-L",
+        "-A",
+        _USER_AGENT,
+        "-H",
+        "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "--max-time",
+        str(_DEFAULT_FETCH_TIMEOUT_SECONDS),
+        source_url,
+    ]
+    if "sec.gov" in source_url:
+        command[6:6] = ["-H", "Referer: https://www.sec.gov/"]
+    result = subprocess.run(command, capture_output=True, check=True)
+    return result.stdout.decode("utf-8", errors="ignore")
+
+
+def _fetch_html(source_url: str) -> str:
+    try:
+        return _fetch_via_urllib(source_url)
+    except (HTTPError, TimeoutError, URLError):
+        return _fetch_via_curl(source_url)
 
 
 def _coerce_string(value: Any) -> str:
@@ -130,9 +177,7 @@ def _extract_body_text(html: str) -> str:
 
 def fetch_historical_web_record(entry: Dict[str, Any]) -> Dict[str, Any]:
     source_url = _coerce_string(entry.get("source_url"))
-    request = urllib.request.Request(source_url, headers={"User-Agent": _USER_AGENT})
-    with urllib.request.urlopen(request, timeout=30) as response:
-        html = response.read().decode("utf-8", errors="ignore")
+    html = _fetch_html(source_url)
 
     meta_map = _extract_meta_map(html)
     title = _extract_title(html, meta_map, _coerce_string(entry.get("title_hint")))

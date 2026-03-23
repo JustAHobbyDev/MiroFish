@@ -1,0 +1,109 @@
+{
+  "name": "anchor_first_blind_replay_batch_v1",
+  "corpus_label": "third_historical_mixed_corpus_photonics_v2",
+  "profile_name": "photonics",
+  "coverage_status": "retrospective_seeded_not_blind_ready",
+  "anchors": [
+    {
+      "anchor_expression_candidate_id": "aec_photonics_lumentum_588bd09e",
+      "canonical_entity_name": "Lumentum",
+      "profile_name": "photonics",
+      "anchor_role": "anchor_expression",
+      "source_classes": [
+        "company_release"
+      ],
+      "supporting_artifact_ids": [
+        "historical_web_e0bd931931f266a7"
+      ],
+      "supporting_titles": [
+        "Lumentum Expands U.S. Manufacturing for AI-Driven Co-Packaged Optics"
+      ],
+      "mentioned_entities": [
+        "NVIDIA"
+      ],
+      "support_count": 1,
+      "max_anchor_score": 7
+    },
+    {
+      "anchor_expression_candidate_id": "aec_photonics_coherent_3de992d2",
+      "canonical_entity_name": "Coherent",
+      "profile_name": "photonics",
+      "anchor_role": "adjacent_anchor",
+      "source_classes": [
+        "company_release"
+      ],
+      "supporting_artifact_ids": [
+        "historical_web_fc3fe765325fc510"
+      ],
+      "supporting_titles": [
+        "6-inch InP Scalable Wafer Fabs for AI Transceivers &amp; 6G Networks"
+      ],
+      "mentioned_entities": [],
+      "support_count": 1,
+      "max_anchor_score": 6
+    },
+    {
+      "anchor_expression_candidate_id": "aec_photonics_axt_b169c022",
+      "canonical_entity_name": "AXT",
+      "profile_name": "photonics",
+      "anchor_role": "upstream_dependency",
+      "source_classes": [
+        "company_filing"
+      ],
+      "supporting_artifact_ids": [
+        "historical_web_0f78e02bc3529d45",
+        "historical_web_d1a3158e761e7e3c"
+      ],
+      "supporting_titles": [
+        "AXT INC_December 31, 2024",
+        "AXT INC_March 31, 2025"
+      ],
+      "mentioned_entities": [],
+      "support_count": 2,
+      "max_anchor_score": 7
+    },
+    {
+      "anchor_expression_candidate_id": "aec_photonics_jx_advanced_metals_c0855c30",
+      "canonical_entity_name": "JX Advanced Metals",
+      "profile_name": "photonics",
+      "anchor_role": "upstream_dependency",
+      "source_classes": [
+        "company_release"
+      ],
+      "supporting_artifact_ids": [
+        "historical_web_59f4e32bae8edbc0"
+      ],
+      "supporting_titles": [
+        "Notice Regarding Capital Investment for Increased Production of Crystal Materials"
+      ],
+      "mentioned_entities": [],
+      "support_count": 1,
+      "max_anchor_score": 6
+    }
+  ],
+  "judgment": {
+    "anchor_clue_detection": "pass",
+    "adjacent_expression_surfacing": "pass",
+    "upstream_dependency_surfacing": "pass",
+    "hidden_chokepoint_recovery": "pass"
+  },
+  "limitations": [
+    "This replay uses a retrospective-seeded corpus, not a true blind source universe.",
+    "A pass on hidden chokepoint recovery here means the named upstream chokepoint surfaced inside the seeded corpus, not that blind discovery is proven.",
+    "The result tests anchor-first surfacing only; it does not prove final-expression discovery in a true blind corpus."
+  ],
+  "metrics": {
+    "anchor_expression_count": 4,
+    "anchor_expression_role_counts": {
+      "anchor_expression": 1,
+      "adjacent_anchor": 1,
+      "upstream_dependency": 2
+    },
+    "anchor_expression_names": [
+      "Lumentum",
+      "Coherent",
+      "AXT",
+      "JX Advanced Metals"
+    ]
+  }
+}

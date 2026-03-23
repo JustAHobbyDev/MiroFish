@@ -1,0 +1,37 @@
+{
+  "artifact_id": "2026-03-22-anchor-workflow-comparison-photonics-memory-v1",
+  "date": "2026-03-22",
+  "cases": {
+    "photonics": {
+      "workflow_family": "anchor_dependency_workflow",
+      "sequence": [
+        "anchor_clue_detection",
+        "system_demand_mapping",
+        "anchor_expression_confirmation",
+        "adjacent_expression_expansion",
+        "upstream_chokepoint_tracing"
+      ]
+    },
+    "memory": {
+      "workflow_family": "cycle_expression_workflow",
+      "sequence": [
+        "cycle_clue_detection",
+        "anchor_set_formation",
+        "stress_confirmation",
+        "expression_selection",
+        "second_order_followon_mapping"
+      ]
+    }
+  },
+  "comparison_judgment": {
+    "same_sequence_holds": false,
+    "reason": "photonics starts from a single anchor company while memory starts from a visible cycle and anchor set"
+  },
+  "product_implication": {
+    "recommended_architecture": "lane_family_routing",
+    "workflow_families": [
+      "anchor_dependency_workflow",
+      "cycle_expression_workflow"
+    ]
+  }
+}

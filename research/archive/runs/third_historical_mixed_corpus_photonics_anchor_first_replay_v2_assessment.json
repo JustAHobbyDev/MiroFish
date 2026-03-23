@@ -1,0 +1,43 @@
+{
+  "artifact_id": "third_historical_mixed_corpus_photonics_anchor_first_replay_v2_assessment",
+  "date": "2026-03-22",
+  "inputs": [
+    "research/archive/normalized/historical_mixed/third_historical_mixed_corpus_photonics_prefilter_v2.json",
+    "research/archive/normalized/historical_mixed/third_historical_mixed_corpus_photonics_anchor_expressions_v2.json",
+    "research/archive/normalized/historical_mixed/third_historical_mixed_corpus_photonics_anchor_first_replay_v2.json",
+    "research/analysis/2026-03-22-photonics-dependency-graph-v1.json"
+  ],
+  "facts": {
+    "anchor_expression_count": 4,
+    "anchor_expression_names": [
+      "Lumentum",
+      "Coherent",
+      "AXT",
+      "JX Advanced Metals"
+    ],
+    "anchor_expression_role_counts": {
+      "anchor_expression": 1,
+      "adjacent_anchor": 1,
+      "upstream_dependency": 2
+    },
+    "judgment": {
+      "anchor_clue_detection": "pass",
+      "adjacent_expression_surfacing": "pass",
+      "upstream_dependency_surfacing": "pass",
+      "hidden_chokepoint_recovery": "pass"
+    }
+  },
+  "boundary": {
+    "blind_ready": false,
+    "reason": [
+      "retrospective_seeded_corpus",
+      "missing_broadcom_release",
+      "not_broad_historical_crawl"
+    ]
+  },
+  "product_implication": {
+    "workflow_family": "anchor_first",
+    "status": "supported_in_seeded_replay",
+    "remaining_problem": "real broad corpus acquisition"
+  }
+}

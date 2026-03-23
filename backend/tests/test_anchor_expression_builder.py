@@ -75,3 +75,27 @@ def test_build_anchor_expression_batch_excludes_system_driver_rows() -> None:
     )
 
     assert batch["anchors"] == []
+
+
+def test_build_anchor_expression_batch_marks_axt_as_upstream_dependency() -> None:
+    batch = build_anchor_expression_batch(
+        [
+            {
+                "kept_artifacts": [
+                    {
+                        "artifact_id": "axt_1",
+                        "source_class": "company_filing",
+                        "issuing_company_name": "AXT",
+                        "title": "AXT INC_March 31, 2025",
+                        "body_text": "Demand for indium phosphide substrates and optical networking components increased with AI data center deployments.",
+                        "category_tags": ["InP", "photonics", "AI infrastructure"],
+                    }
+                ],
+                "review_artifacts": [],
+            }
+        ],
+        profile_name="photonics",
+    )
+
+    assert batch["anchors"][0]["canonical_entity_name"] == "AXT"
+    assert batch["anchors"][0]["anchor_role"] == "upstream_dependency"

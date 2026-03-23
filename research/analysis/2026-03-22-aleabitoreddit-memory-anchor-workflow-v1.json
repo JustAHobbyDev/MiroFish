@@ -1,0 +1,85 @@
+{
+  "artifact_id": "2026-03-22-aleabitoreddit-memory-anchor-workflow-v1",
+  "date": "2026-03-22",
+  "source_archive": "research/analysis/aleabitoreddit-daily-archive-v1.json",
+  "chronology": [
+    {
+      "expression": "MU",
+      "role": "anchor_expression",
+      "first_exact_mention_at": "2025-10-04T22:58:03.000Z",
+      "post_id": "1974609994617442735",
+      "reason": "first serious memory-specific valuation clue"
+    },
+    {
+      "expression": "MEMORY_BUCKET",
+      "role": "system_demand_driver",
+      "first_exact_mention_at": "2025-11-04T18:04:54.000Z",
+      "post_id": "1985770241532838347",
+      "reason": "memory becomes a named monitored sector before SNDK is selected"
+    },
+    {
+      "expression": "SK_HYNIX",
+      "role": "system_grounding_anchor_set",
+      "first_exact_mention_at": "2025-11-03T05:23:17.000Z",
+      "post_id": "1985216187245248650",
+      "reason": "visible memory leader used to ground the system"
+    },
+    {
+      "expression": "SAMSUNG",
+      "role": "system_grounding_anchor_set",
+      "first_exact_mention_at": "2025-12-05T05:14:28.000Z",
+      "post_id": "1996810382875177099",
+      "reason": "joins the memory anchor set rather than acting as a hidden dependency"
+    },
+    {
+      "expression": "SNDK",
+      "role": "later_expression_selection",
+      "first_exact_mention_at": "2025-12-14T23:58:49.000Z",
+      "post_id": "2000354823435420024",
+      "reason": "appears after the cycle is already visible and is later chosen as the preferred expression"
+    },
+    {
+      "expression": "MEMORY_SUPERCYCLE",
+      "role": "stress_confirmation",
+      "first_exact_mention_at": "2026-01-21T19:04:34.000Z",
+      "post_id": "2014051512142668047",
+      "reason": "explicit cycle and pricing-power framing"
+    },
+    {
+      "expression": "KIOXIA",
+      "role": "second_order_followon",
+      "first_exact_mention_at": "2026-01-25T22:16:17.000Z",
+      "post_id": "2015549311732658520",
+      "reason": "later partner / proxy mapping after SNDK is already legible"
+    },
+    {
+      "expression": "PHISON",
+      "role": "second_order_followon",
+      "first_exact_mention_at": "2026-01-29T01:13:15.000Z",
+      "post_id": "2016681010793153018",
+      "reason": "later controller follow-on after the cycle and expression are already explicit"
+    }
+  ],
+  "workflow_hypothesis": [
+    "cycle_clue_detection",
+    "anchor_set_formation",
+    "stress_confirmation",
+    "expression_selection",
+    "second_order_followon_mapping"
+  ],
+  "product_implication": {
+    "workflow_family": "cycle_expression_selection",
+    "current_problem": "forcing photonics-style upstream tracing onto cycle-driven memory lanes",
+    "recommended_path": [
+      "detect visible cycle anchors",
+      "form an anchor set for the system",
+      "confirm pricing or supply stress",
+      "select the preferred expression inside the visible cycle",
+      "map second-order follow-ons only after the cycle is coherent"
+    ]
+  },
+  "confidence": {
+    "chronology_confidence": "high",
+    "workflow_inference_confidence": "medium"
+  }
+}

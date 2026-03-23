@@ -2,6 +2,7 @@ import sys
 import types
 from importlib.util import module_from_spec, spec_from_file_location
 from pathlib import Path
+from urllib.error import HTTPError
 
 
 APP_ROOT = Path(__file__).resolve().parents[1] / "app"
@@ -97,3 +98,48 @@ def test_build_historical_web_prefilter_batch_filing_aware_keeps_filing_capacity
 
     assert batch["metrics"]["kept_count"] == 1
     assert batch["kept_artifacts"][0]["_prefilter"]["reason"].startswith("Historical filing-aware override")
+
+
+def test_fetch_historical_web_record_falls_back_to_curl_for_sec_403(monkeypatch) -> None:
+    def _raise_http_error(*args, **kwargs):
+        raise HTTPError(
+            url="https://www.sec.gov/example",
+            code=403,
+            msg="Forbidden",
+            hdrs=None,
+            fp=None,
+        )
+
+    def _fake_curl(source_url: str) -> str:
+        assert "sec.gov" in source_url
+        return """
+        <html>
+          <head>
+            <title>AXT 10-Q 2025-03-31</title>
+            <meta name="article:published_time" content="2025-05-01" />
+          </head>
+          <body>
+            <article>AXT reported indium phosphide demand tied to AI infrastructure.</article>
+          </body>
+        </html>
+        """
+
+    monkeypatch.setattr(module, "_fetch_via_urllib", _raise_http_error)
+    monkeypatch.setattr(module, "_fetch_via_curl", _fake_curl)
+
+    record = module.fetch_historical_web_record(
+        {
+            "source_class": "company_filing",
+            "source_type": "company filing",
+            "publisher_or_author": "AXT",
+            "issuing_company_name": "AXT",
+            "published_at": "2025-03-31",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1051627/example.htm",
+            "title_hint": "AXT 10-Q 2025-03-31",
+            "corpus_entry_id": "axt_10q_test",
+        }
+    )
+
+    assert record["title"] == "AXT 10-Q 2025-03-31"
+    assert record["published_at"] == "2025-05-01"
+    assert "indium phosphide demand" in record["body_text"].lower()
