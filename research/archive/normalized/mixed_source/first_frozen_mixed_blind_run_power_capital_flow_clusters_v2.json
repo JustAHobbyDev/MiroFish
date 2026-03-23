@@ -3,147 +3,12 @@
   "source_class": "mixed_source",
   "clusters": [
     {
-      "capital_flow_cluster_id": "cfc_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "as_of_date": "2025-11-21",
-      "status": "candidate",
-      "system_label": "data center campus buildout",
-      "cluster_statement": "Multiple artifacts imply recurring financing and construction activity in data-center campus buildout.",
-      "supporting_capital_flow_signal_ids": [
-        "trade_press_8af4de468aa71b03:capital:0",
-        "trade_press_8af4de468aa71b03:capital:1",
-        "trade_press_8af4de468aa71b03:capital:2",
-        "company_release_79386cedd20ceb6a:capital:0",
-        "company_release_79386cedd20ceb6a:capital:1",
-        "company_release_79386cedd20ceb6a:capital:2"
-      ],
-      "signal_count": 6,
-      "artifact_count": 2,
-      "source_classes": [
-        "company_release",
-        "trade_press"
-      ],
-      "publisher_or_authors": [
-        "GlobeNewswire",
-        "Utility Dive"
-      ],
-      "publisher_diversity_count": 2,
-      "publisher_diversity_status": "multi_publisher",
-      "time_window": {
-        "start_date": "2025-10-30",
-        "end_date": "2025-11-21"
-      },
-      "geography_hints": [
-        "United States"
-      ],
-      "demand_driver_summary": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity.",
-      "confidence": "medium",
-      "capital_flow_implication_types_present": [
-        "capacity_response",
-        "direct_capital_allocation",
-        "procurement_or_commitment_pull"
-      ]
-    },
-    {
-      "capital_flow_cluster_id": "cfc_general_industrial_buildout_2026-02-25_7a698504",
-      "as_of_date": "2026-02-25",
-      "status": "candidate",
-      "system_label": "general industrial buildout",
-      "cluster_statement": "Multiple artifacts imply recurring buildout or committed spend in one industrial system.",
-      "supporting_capital_flow_signal_ids": [
-        "company_release_2779831d9e413245:capital:1",
-        "policy_feed_bc247dbbfe437ede:capital:1",
-        "policy_feed_bc247dbbfe437ede:capital:2"
-      ],
-      "signal_count": 3,
-      "artifact_count": 2,
-      "source_classes": [
-        "company_release",
-        "government_policy_enforcement"
-      ],
-      "publisher_or_authors": [
-        "Federal Register",
-        "PR Newswire"
-      ],
-      "publisher_diversity_count": 2,
-      "publisher_diversity_status": "multi_publisher",
-      "time_window": {
-        "start_date": "2025-12-11",
-        "end_date": "2026-02-25"
-      },
-      "geography_hints": [
-        "United States"
-      ],
-      "demand_driver_summary": "Multiple artifacts suggest recurring industrial buildout activity in one provisional lane.",
-      "confidence": "medium",
-      "capital_flow_implication_types_present": [
-        "capacity_response",
-        "procurement_or_commitment_pull"
-      ]
-    },
-    {
-      "capital_flow_cluster_id": "cfc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "as_of_date": "2025-12-17",
-      "status": "candidate",
-      "system_label": "grid equipment and transformer buildout",
-      "cluster_statement": "Multiple artifacts imply recurring spend and buildout around transformers, switchgear, and adjacent grid-equipment capacity.",
-      "supporting_capital_flow_signal_ids": [
-        "trade_press_921740cadac635c6:capital:0",
-        "trade_press_921740cadac635c6:capital:1",
-        "company_release_328fad99416fbef1:capital:0",
-        "company_release_328fad99416fbef1:capital:1",
-        "company_release_328fad99416fbef1:capital:2",
-        "company_release_99d3a8bd7a7d6651:capital:0",
-        "company_release_99d3a8bd7a7d6651:capital:1",
-        "company_release_a39925a36c9535e7:capital:0",
-        "company_release_a39925a36c9535e7:capital:1",
-        "company_release_699b2a49df49cc9e:capital:0",
-        "company_release_699b2a49df49cc9e:capital:1"
-      ],
-      "signal_count": 11,
-      "artifact_count": 5,
-      "source_classes": [
-        "company_release",
-        "trade_press"
-      ],
-      "publisher_or_authors": [
-        "Business Wire",
-        "GlobeNewswire",
-        "PR Newswire",
-        "Utility Dive"
-      ],
-      "publisher_diversity_count": 4,
-      "publisher_diversity_status": "multi_publisher",
-      "time_window": {
-        "start_date": "2025-09-04",
-        "end_date": "2025-12-17"
-      },
-      "geography_hints": [
-        "United States",
-        "Virginia"
-      ],
-      "demand_driver_summary": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment.",
-      "confidence": "high",
-      "capital_flow_implication_types_present": [
-        "capacity_response",
-        "direct_capital_allocation",
-        "procurement_or_commitment_pull"
-      ]
-    },
-    {
       "capital_flow_cluster_id": "cfc_industrial_manufacturing_expansion_2026-02-27_fefd13a5",
       "as_of_date": "2026-02-27",
       "status": "candidate",
       "system_label": "industrial manufacturing expansion",
       "cluster_statement": "Multiple artifacts imply recurring manufacturing plant and capacity expansion in one industrial lane.",
       "supporting_capital_flow_signal_ids": [
-        "company_release_628ba329dfe7d2b1:capital:0",
-        "company_release_628ba329dfe7d2b1:capital:1",
-        "trade_press_10e5144776b5598c:capital:0",
-        "trade_press_10e5144776b5598c:capital:1",
-        "company_release_2779831d9e413245:capital:0",
-        "company_release_eac17ce201345043:capital:0",
-        "company_release_efeb81c2826a0b9b:capital:0",
-        "company_release_efeb81c2826a0b9b:capital:1",
         "policy_feed_1594c8731870caa4:capital:0",
         "policy_feed_43e47ef2865c42a1:capital:0",
         "policy_feed_77b674eb72edfd04:capital:0",
@@ -154,34 +19,27 @@
         "policy_feed_e2aa283fbc50515b:capital:0",
         "policy_feed_a20888efd28ad300:capital:0"
       ],
-      "signal_count": 17,
-      "artifact_count": 12,
+      "signal_count": 9,
+      "artifact_count": 7,
       "source_classes": [
-        "company_release",
-        "government_policy_enforcement",
-        "trade_press"
+        "government_policy_enforcement"
       ],
       "publisher_or_authors": [
-        "Business Wire",
-        "Federal Register",
-        "GlobeNewswire",
-        "Manufacturing Dive",
-        "PR Newswire"
+        "Federal Register"
       ],
-      "publisher_diversity_count": 5,
-      "publisher_diversity_status": "multi_publisher",
+      "publisher_diversity_count": 1,
+      "publisher_diversity_status": "single_publisher",
       "time_window": {
-        "start_date": "2025-10-22",
+        "start_date": "2026-02-24",
         "end_date": "2026-02-27"
       },
       "geography_hints": [
         "United States"
       ],
       "demand_driver_summary": "Industrial capacity additions are driving recurring manufacturing buildout and plant expansion signals.",
-      "confidence": "high",
+      "confidence": "medium",
       "capital_flow_implication_types_present": [
         "capacity_response",
-        "direct_capital_allocation",
         "procurement_or_commitment_pull"
       ]
     },
@@ -192,86 +50,37 @@
       "system_label": "power generation and backup equipment buildout",
       "cluster_statement": "Multiple artifacts imply recurring investment in generation and backup-power equipment expansion.",
       "supporting_capital_flow_signal_ids": [
-        "company_release_c57077dab862393a:capital:0",
-        "company_release_c57077dab862393a:capital:1",
-        "company_release_7434d169b6d086b9:capital:0",
-        "company_release_7434d169b6d086b9:capital:1",
-        "company_release_7434d169b6d086b9:capital:2",
         "policy_feed_d3426979d9550bb1:capital:0",
         "policy_feed_867f2a0e00c994c3:capital:0",
         "policy_feed_867f2a0e00c994c3:capital:1"
       ],
-      "signal_count": 8,
-      "artifact_count": 4,
+      "signal_count": 3,
+      "artifact_count": 2,
       "source_classes": [
-        "company_release",
         "government_policy_enforcement"
       ],
       "publisher_or_authors": [
-        "Business Wire",
-        "Federal Register",
-        "PR Newswire"
+        "Federal Register"
       ],
-      "publisher_diversity_count": 3,
-      "publisher_diversity_status": "multi_publisher",
+      "publisher_diversity_count": 1,
+      "publisher_diversity_status": "single_publisher",
       "time_window": {
-        "start_date": "2025-11-25",
+        "start_date": "2026-02-24",
         "end_date": "2026-02-27"
       },
       "geography_hints": [
         "United States"
       ],
       "demand_driver_summary": "Rising power demand and resilience needs are driving investment into generation and backup-power equipment.",
-      "confidence": "high",
-      "capital_flow_implication_types_present": [
-        "capacity_response",
-        "direct_capital_allocation",
-        "procurement_or_commitment_pull"
-      ]
-    },
-    {
-      "capital_flow_cluster_id": "cfc_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "as_of_date": "2026-02-25",
-      "status": "candidate",
-      "system_label": "utility and large-load power buildout",
-      "cluster_statement": "Multiple artifacts imply recurring utility and large-load power-system spend, financing, or infrastructure response.",
-      "supporting_capital_flow_signal_ids": [
-        "company_release_71c6dc59027b9138:capital:0",
-        "company_release_71c6dc59027b9138:capital:1",
-        "company_release_71c6dc59027b9138:capital:2",
-        "company_release_088c813f7e093143:capital:0",
-        "company_release_088c813f7e093143:capital:1",
-        "policy_feed_a288137bb1f016cb:capital:0"
-      ],
-      "signal_count": 6,
-      "artifact_count": 3,
-      "source_classes": [
-        "company_release",
-        "government_policy_enforcement"
-      ],
-      "publisher_or_authors": [
-        "Federal Register",
-        "GlobeNewswire",
-        "PR Newswire"
-      ],
-      "publisher_diversity_count": 3,
-      "publisher_diversity_status": "multi_publisher",
-      "time_window": {
-        "start_date": "2025-12-12",
-        "end_date": "2026-02-25"
-      },
-      "geography_hints": [],
-      "demand_driver_summary": "Large-load and utility response needs are driving spend into power-system expansion and supporting infrastructure.",
       "confidence": "medium",
       "capital_flow_implication_types_present": [
         "capacity_response",
-        "direct_capital_allocation",
         "procurement_or_commitment_pull"
       ]
     }
   ],
   "metrics": {
-    "input_signal_count": 53,
-    "cluster_count": 6
+    "input_signal_count": 24,
+    "cluster_count": 2
   }
 }

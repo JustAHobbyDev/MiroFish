@@ -3,72 +3,36 @@
   "name": "first_frozen_mixed_blind_run_power_narrowing_decisions_v1",
   "decisions": [
     {
-      "pressure_candidate_id": "spc_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "system_label": "data center campus buildout",
-      "narrowing_decision": "enough_to_narrow",
-      "decision_basis": "bounded_multi_source_corroborated",
-      "rationale": "Bounded system label with corroborated company_release and trade_press support.",
-      "boundedness_status": "bounded",
-      "source_diversity_corroboration_satisfied": true
-    },
-    {
-      "pressure_candidate_id": "spc_general_industrial_buildout_2026-02-25_7a698504",
-      "system_label": "general industrial buildout",
-      "narrowing_decision": "not_enough_to_narrow",
-      "decision_basis": "broad_system_label",
-      "rationale": "Corroborated but still too broad to justify a bounded research universe.",
-      "boundedness_status": "broad_review_required",
-      "source_diversity_corroboration_satisfied": true
-    },
-    {
-      "pressure_candidate_id": "spc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "system_label": "grid equipment and transformer buildout",
-      "narrowing_decision": "enough_to_narrow",
-      "decision_basis": "bounded_multi_source_corroborated",
-      "rationale": "Bounded constrained-layer system label with corroborated company_release and trade_press support.",
-      "boundedness_status": "bounded",
-      "source_diversity_corroboration_satisfied": true
-    },
-    {
       "pressure_candidate_id": "spc_industrial_manufacturing_expansion_2026-02-27_fefd13a5",
       "system_label": "industrial manufacturing expansion",
       "narrowing_decision": "not_enough_to_narrow",
       "decision_basis": "broad_system_label",
-      "rationale": "Multi-source corroboration is present, but the lane remains an over-broad industrial aggregate.",
+      "rationale": "The lane is visible in the cleaned run, but remains too broad to justify bounded promotion.",
       "boundedness_status": "broad_review_required",
-      "source_diversity_corroboration_satisfied": true
+      "source_diversity_corroboration_satisfied": false
     },
     {
       "pressure_candidate_id": "spc_power_generation_and_backup_equipment_buildout_2026-02-27_74d24618",
       "system_label": "power generation and backup equipment buildout",
       "narrowing_decision": "not_enough_to_narrow",
       "decision_basis": "broad_system_label",
-      "rationale": "The lane is real and corroborated, but still too broad to promote without a narrower subsystem cut.",
+      "rationale": "The lane is visible in the cleaned run, but remains too broad to justify bounded promotion.",
       "boundedness_status": "broad_review_required",
-      "source_diversity_corroboration_satisfied": true
-    },
-    {
-      "pressure_candidate_id": "spc_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "system_label": "utility and large-load power buildout",
-      "narrowing_decision": "enough_to_narrow",
-      "decision_basis": "bounded_multi_source_corroborated",
-      "rationale": "Bounded utility-system label with corroborated company_release and government support.",
-      "boundedness_status": "bounded",
-      "source_diversity_corroboration_satisfied": true
+      "source_diversity_corroboration_satisfied": false
     },
     {
       "pressure_candidate_id": "spc_utility_and_large_load_power_demand_pressure_2025-10-30_c23ed0b5",
       "system_label": "utility and large-load power demand pressure",
       "narrowing_decision": "not_enough_to_narrow",
       "decision_basis": "single_source_uncorroborated",
-      "rationale": "The label is bounded, but the candidate remained single-source trade_press and failed the corroboration gate.",
+      "rationale": "The label is bounded, but it failed corroboration after synthetic cleanup.",
       "boundedness_status": "bounded",
       "source_diversity_corroboration_satisfied": false
     }
   ],
   "metrics": {
-    "structural_pressure_candidate_count": 7,
-    "enough_to_narrow_count": 3,
-    "not_enough_to_narrow_count": 4
+    "structural_pressure_candidate_count": 3,
+    "enough_to_narrow_count": 0,
+    "not_enough_to_narrow_count": 3
   }
 }

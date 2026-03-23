@@ -1,31 +1,23 @@
 {
   "run_id": "first_frozen_mixed_blind_run_power_v1",
-  "assessment_version": "v1",
+  "assessment_version": "v1_real_only_baseline",
   "date": "2026-03-22",
   "facts": {
-    "mixed_prefilter_processed_artifact_count": 324,
-    "mixed_prefilter_kept_count": 41,
-    "mixed_prefilter_review_count": 5,
-    "mixed_capital_signal_artifacts_sent_to_llm": 46,
-    "mixed_capital_signal_successful_extractions": 43,
-    "mixed_capital_signal_total_candidate_count": 53,
-    "capital_cluster_count": 6,
+    "mixed_prefilter_processed_artifact_count": 306,
+    "mixed_prefilter_kept_count": 29,
+    "mixed_prefilter_review_count": 4,
+    "mixed_capital_signal_artifacts_sent_to_llm": 33,
+    "mixed_capital_signal_successful_extractions": 30,
+    "mixed_capital_signal_total_candidate_count": 24,
+    "capital_cluster_count": 2,
     "energy_cluster_count": 1,
-    "structural_pressure_candidate_count": 7,
-    "enough_to_narrow_count": 3,
-    "not_enough_to_narrow_count": 4,
-    "promotion_ready_bounded_universe_count": 3
+    "structural_pressure_candidate_count": 3,
+    "enough_to_narrow_count": 0,
+    "not_enough_to_narrow_count": 3,
+    "promotion_ready_bounded_universe_count": 0
   },
-  "promotion_ready_universes": [
-    "data center campus buildout",
-    "grid equipment and transformer buildout",
-    "utility and large-load power buildout"
-  ],
+  "promotion_ready_universes": [],
   "blocked_or_held_universes": [
-    {
-      "system_label": "general industrial buildout",
-      "block_reason": "broad_system_label"
-    },
     {
       "system_label": "industrial manufacturing expansion",
       "block_reason": "broad_system_label"
@@ -40,17 +32,17 @@
     }
   ],
   "judgment": {
-    "universe_discovery_result": "blind_pass",
-    "universe_discovery_strength": "strong_for_first_partial_run",
+    "universe_discovery_result": "not_proven_after_cleanup",
+    "universe_discovery_strength": "insufficient_real_only_signal_for_this_window",
     "final_expression_result": "not_proven",
-    "why_universe_discovery_passed": [
-      "The run surfaced three coherent bounded universes from mixed-source evidence without benchmark-seeded renaming.",
-      "The run also blocked four weaker or broader lanes instead of promoting everything with corroboration.",
-      "The strongest surfaced universe was the constrained-layer transformer and grid-equipment lane."
+    "why_universe_discovery_did_not_pass": [
+      "After synthetic cleanup, the frozen run produces zero promotion-ready bounded universes.",
+      "The remaining structural candidates are either broad or uncorroborated.",
+      "So the earlier blind-pass result cannot stand as the authoritative real-only baseline."
     ],
     "why_final_expression_not_proven": [
-      "The blind-run freeze stops at bounded-universe formation rather than final public-expression ranking.",
-      "Trade-press coverage inside the frozen window was sparse, so the power-demand branch stayed broader than later downstream work."
+      "The run does not even reach promotion-ready bounded universes after cleanup.",
+      "Entity surfacing therefore collapses to zero at the authoritative real-only evaluation boundary."
     ]
   }
 }

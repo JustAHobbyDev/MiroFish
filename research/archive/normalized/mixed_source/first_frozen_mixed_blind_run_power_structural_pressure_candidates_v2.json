@@ -3,138 +3,6 @@
   "candidates": [
     {
       "confidence": "medium",
-      "pressure_candidate_id": "spc_data_center_campus_buildout_2025-11-21_be6bfd90",
-      "as_of_date": "2025-11-21",
-      "status": "candidate",
-      "pressure_type": "rising_demand",
-      "system_label": "data center campus buildout",
-      "demand_driver_summary": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity.",
-      "pressure_statement": "Hyperscale and AI data-center expansion is driving recurring physical buildout and financing activity. This is likely to create structural pressure in data center campus buildout.",
-      "supporting_capital_flow_cluster_ids": [
-        "cfc_data_center_campus_buildout_2025-11-21_be6bfd90"
-      ],
-      "supporting_energy_flow_pressure_cluster_ids": [],
-      "merge_basis": {
-        "system_overlap": false,
-        "time_overlap": false,
-        "direction_compatibility": true,
-        "demand_story_overlap": "capital_flow_only"
-      },
-      "signal_count": 6,
-      "source_classes": [
-        "company_release",
-        "trade_press"
-      ],
-      "time_window": {
-        "start_date": "2025-10-30",
-        "end_date": "2025-11-21"
-      },
-      "suspected_stress_layers": [
-        "data center campus buildout"
-      ],
-      "formation_basis": {
-        "capital_flow_cluster_present": true,
-        "energy_flow_pressure_cluster_present": false,
-        "physical_system_grounded": true,
-        "stress_rationale_present": true
-      },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
-      "boundedness_status": "bounded",
-      "requires_system_narrowing": false,
-      "bounded_universe_promotion_ready": true
-    },
-    {
-      "confidence": "medium",
-      "pressure_candidate_id": "spc_general_industrial_buildout_2026-02-25_7a698504",
-      "as_of_date": "2026-02-25",
-      "status": "candidate",
-      "pressure_type": "rising_demand",
-      "system_label": "general industrial buildout",
-      "demand_driver_summary": "Multiple artifacts suggest recurring industrial buildout activity in one provisional lane.",
-      "pressure_statement": "Multiple artifacts suggest recurring industrial buildout activity in one provisional lane. This is likely to create structural pressure in general industrial buildout.",
-      "supporting_capital_flow_cluster_ids": [
-        "cfc_general_industrial_buildout_2026-02-25_7a698504"
-      ],
-      "supporting_energy_flow_pressure_cluster_ids": [],
-      "merge_basis": {
-        "system_overlap": false,
-        "time_overlap": false,
-        "direction_compatibility": true,
-        "demand_story_overlap": "capital_flow_only"
-      },
-      "signal_count": 3,
-      "source_classes": [
-        "company_release",
-        "government_policy_enforcement"
-      ],
-      "time_window": {
-        "start_date": "2025-12-11",
-        "end_date": "2026-02-25"
-      },
-      "suspected_stress_layers": [
-        "general industrial buildout"
-      ],
-      "formation_basis": {
-        "capital_flow_cluster_present": true,
-        "energy_flow_pressure_cluster_present": false,
-        "physical_system_grounded": true,
-        "stress_rationale_present": true
-      },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
-      "boundedness_status": "broad_review_required",
-      "requires_system_narrowing": true,
-      "bounded_universe_promotion_ready": false
-    },
-    {
-      "confidence": "high",
-      "pressure_candidate_id": "spc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae",
-      "as_of_date": "2025-12-17",
-      "status": "candidate",
-      "pressure_type": "rising_demand",
-      "system_label": "grid equipment and transformer buildout",
-      "demand_driver_summary": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment.",
-      "pressure_statement": "Utilities, grid bottlenecks, and large-load demand are driving spend into transformers and adjacent grid equipment. This is likely to create structural pressure in grid equipment and transformer buildout.",
-      "supporting_capital_flow_cluster_ids": [
-        "cfc_grid_equipment_and_transformer_buildout_2025-12-17_133f20ae"
-      ],
-      "supporting_energy_flow_pressure_cluster_ids": [],
-      "merge_basis": {
-        "system_overlap": false,
-        "time_overlap": false,
-        "direction_compatibility": true,
-        "demand_story_overlap": "capital_flow_only"
-      },
-      "signal_count": 11,
-      "source_classes": [
-        "company_release",
-        "trade_press"
-      ],
-      "time_window": {
-        "start_date": "2025-09-04",
-        "end_date": "2025-12-17"
-      },
-      "suspected_stress_layers": [
-        "grid equipment and transformer buildout"
-      ],
-      "formation_basis": {
-        "capital_flow_cluster_present": true,
-        "energy_flow_pressure_cluster_present": false,
-        "physical_system_grounded": true,
-        "stress_rationale_present": true
-      },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
-      "boundedness_status": "bounded",
-      "requires_system_narrowing": false,
-      "bounded_universe_promotion_ready": true
-    },
-    {
-      "confidence": "high",
       "pressure_candidate_id": "spc_industrial_manufacturing_expansion_2026-02-27_fefd13a5",
       "as_of_date": "2026-02-27",
       "status": "candidate",
@@ -152,14 +20,12 @@
         "direction_compatibility": true,
         "demand_story_overlap": "capital_flow_only"
       },
-      "signal_count": 17,
+      "signal_count": 9,
       "source_classes": [
-        "company_release",
-        "government_policy_enforcement",
-        "trade_press"
+        "government_policy_enforcement"
       ],
       "time_window": {
-        "start_date": "2025-10-22",
+        "start_date": "2026-02-24",
         "end_date": "2026-02-27"
       },
       "suspected_stress_layers": [
@@ -171,15 +37,15 @@
         "physical_system_grounded": true,
         "stress_rationale_present": true
       },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "source_diversity_corroboration_satisfied": false,
       "boundedness_status": "broad_review_required",
       "requires_system_narrowing": true,
       "bounded_universe_promotion_ready": false
     },
     {
-      "confidence": "high",
+      "confidence": "medium",
       "pressure_candidate_id": "spc_power_generation_and_backup_equipment_buildout_2026-02-27_74d24618",
       "as_of_date": "2026-02-27",
       "status": "candidate",
@@ -197,13 +63,12 @@
         "direction_compatibility": true,
         "demand_story_overlap": "capital_flow_only"
       },
-      "signal_count": 8,
+      "signal_count": 3,
       "source_classes": [
-        "company_release",
         "government_policy_enforcement"
       ],
       "time_window": {
-        "start_date": "2025-11-25",
+        "start_date": "2026-02-24",
         "end_date": "2026-02-27"
       },
       "suspected_stress_layers": [
@@ -215,56 +80,12 @@
         "physical_system_grounded": true,
         "stress_rationale_present": true
       },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
+      "source_diversity_status": "single_source_class",
+      "requires_source_diversity_corroboration": true,
+      "source_diversity_corroboration_satisfied": false,
       "boundedness_status": "broad_review_required",
       "requires_system_narrowing": true,
       "bounded_universe_promotion_ready": false
-    },
-    {
-      "confidence": "medium",
-      "pressure_candidate_id": "spc_utility_and_large_load_power_buildout_2026-02-25_624db50b",
-      "as_of_date": "2026-02-25",
-      "status": "candidate",
-      "pressure_type": "rising_demand",
-      "system_label": "utility and large-load power buildout",
-      "demand_driver_summary": "Large-load and utility response needs are driving spend into power-system expansion and supporting infrastructure.",
-      "pressure_statement": "Large-load and utility response needs are driving spend into power-system expansion and supporting infrastructure. This is likely to create structural pressure in utility and large-load power buildout.",
-      "supporting_capital_flow_cluster_ids": [
-        "cfc_utility_and_large_load_power_buildout_2026-02-25_624db50b"
-      ],
-      "supporting_energy_flow_pressure_cluster_ids": [],
-      "merge_basis": {
-        "system_overlap": false,
-        "time_overlap": false,
-        "direction_compatibility": true,
-        "demand_story_overlap": "capital_flow_only"
-      },
-      "signal_count": 6,
-      "source_classes": [
-        "company_release",
-        "government_policy_enforcement"
-      ],
-      "time_window": {
-        "start_date": "2025-12-12",
-        "end_date": "2026-02-25"
-      },
-      "suspected_stress_layers": [
-        "utility and large-load power buildout"
-      ],
-      "formation_basis": {
-        "capital_flow_cluster_present": true,
-        "energy_flow_pressure_cluster_present": false,
-        "physical_system_grounded": true,
-        "stress_rationale_present": true
-      },
-      "source_diversity_status": "multi_source_class",
-      "requires_source_diversity_corroboration": false,
-      "source_diversity_corroboration_satisfied": true,
-      "boundedness_status": "bounded",
-      "requires_system_narrowing": false,
-      "bounded_universe_promotion_ready": true
     },
     {
       "confidence": "medium",
@@ -312,9 +133,9 @@
   ],
   "held_upstream_energy_flow_pressure_cluster_ids": [],
   "metrics": {
-    "capital_cluster_count": 6,
+    "capital_cluster_count": 2,
     "energy_cluster_count": 1,
-    "structural_pressure_candidate_count": 7,
+    "structural_pressure_candidate_count": 3,
     "held_upstream_energy_cluster_count": 0
   }
 }

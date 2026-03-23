@@ -5,12 +5,12 @@
     {
       "case_name": "first_frozen_mixed_blind_run_power_v1",
       "case_type": "true_mixed_corpus_blind_run",
-      "universe_discovery_result": "blind_pass",
-      "narrowing_count": 3,
+      "universe_discovery_result": "not_proven_after_cleanup",
+      "narrowing_count": 0,
       "final_expression_result": "not_proven",
-      "entity_surfacing_result": "partial_pass",
-      "key_strength": "strong_mixed_source_universe_formation",
-      "key_weakness": "real_only_expression_specificity_remains_thin"
+      "entity_surfacing_result": "no_real_only_downstream_surface",
+      "key_strength": "cleaned_real_only_measurement",
+      "key_weakness": "no_promotion_ready_universe_after_synthetic_cleanup"
     },
     {
       "case_name": "Photonics -> AXTI",
@@ -34,9 +34,9 @@
     }
   ],
   "comparison_judgment": {
-    "mixed_run_now_matches_curated_cases_on_universe_discovery": true,
+    "mixed_run_now_matches_curated_cases_on_universe_discovery": false,
     "mixed_run_still_lags_curated_cases_on_expression_specificity": true,
-    "best_current_read": "the true mixed blind run still materially supports universe discovery, but final-expression proof remains thin even after synthetic cleanup"
+    "best_current_read": "after synthetic cleanup, the true mixed run no longer supports a blind-pass claim and should be treated as a failed or insufficient real-only baseline"
   },
   "second_true_mixed_run_status": {
     "executed": false,
